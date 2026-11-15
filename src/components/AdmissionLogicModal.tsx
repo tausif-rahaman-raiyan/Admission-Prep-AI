@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { X, BookOpen, CheckCircle2, AlertTriangle, ShieldCheck, HelpCircle, Layers, ArrowRight } from 'lucide-react';
-import { admissionComparisonTable, universityAdmissionRules, UniversityAdmissionRule } from '../data/admissionLogic';
+import React from 'react';
+import { X, CheckCircle2, AlertTriangle, ShieldCheck, HelpCircle, Layers } from 'lucide-react';
+import { universityAdmissionRules, UniversityAdmissionRule } from '../data/admissionLogic';
 
 interface AdmissionLogicModalProps {
   isOpen: boolean;
@@ -15,18 +15,7 @@ export const AdmissionLogicModal: React.FC<AdmissionLogicModalProps> = ({
   initialUniversityId = 'DU',
   onSelectUniversity
 }) => {
-  const [activeTab, setActiveTab] = useState<'comparison' | 'details'>('comparison');
-  const [selectedUnivId, setSelectedUnivId] = useState<string>(
-    initialUniversityId && universityAdmissionRules[initialUniversityId] ? initialUniversityId : 'DU'
-  );
-
-  // When the criteria dialog opens from an exam result, always show that exam's university.
-  useEffect(() => {
-    if (!isOpen) return;
-    const selected = initialUniversityId && universityAdmissionRules[initialUniversityId] ? initialUniversityId : 'DU';
-    setSelectedUnivId(selected);
-    setActiveTab('details');
-  }, [isOpen, initialUniversityId]);
+  const selectedUnivId = initialUniversityId && universityAdmissionRules[initialUniversityId] ? initialUniversityId : 'DU';
 
   if (!isOpen) return null;
 
@@ -65,136 +54,11 @@ export const AdmissionLogicModal: React.FC<AdmissionLogicModalProps> = ({
           </button>
         </div>
 
-        {/* View Switcher Tabs */}
-        <div className="px-4 sm:px-6 pt-3 pb-2 border-b border-slate-200 dark:border-indigo-950 flex items-center justify-between gap-4 bg-slate-50/70 dark:bg-[#070C1A] shrink-0">
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setActiveTab('comparison')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer ${
-                activeTab === 'comparison'
-                  ? 'bg-indigo-600 text-white shadow-sm'
-                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
-              }`}
-            >
-              Summary Comparison Table
-            </button>
-            <button
-              onClick={() => setActiveTab('details')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer ${
-                activeTab === 'details'
-                  ? 'bg-indigo-600 text-white shadow-sm'
-                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
-              }`}
-            >
-              University-by-University Breakdown
-            </button>
-          </div>
-
-          <div className="text-[11px] font-bold text-slate-500 hidden md:block">
-            Physics & Chemistry are universally compulsory for Science units
-          </div>
-        </div>
-
         {/* Modal Scrollable Body */}
         <div className="p-4 sm:p-6 overflow-y-auto flex-1 space-y-6">
           
-          {/* TAB 1: SUMMARY COMPARISON TABLE */}
-          {activeTab === 'comparison' && (
-            <div className="space-y-6">
-              <div className="p-4 rounded-2xl bg-indigo-50/70 dark:bg-[#0F1830] border border-indigo-200 dark:border-indigo-800/60 text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
-                <span className="font-black text-indigo-700 dark:text-sky-300">মূল সারসংক্ষেপ: </span>
-                বাংলাদেশে বিজ্ঞান ইউনিটে ভর্তি পরীক্ষায় পদার্থবিজ্ঞান ও রসায়ন প্রায় সব বিশ্ববিদ্যালয়ে বাধ্যতামূলক। উচ্চতর গণিত এবং জীববিজ্ঞান মূলত ঐচ্ছিক বা পছন্দভিত্তিক বিষয় হিসেবে কাজ করে, যা পরবর্তীতে প্রকৌশল বা জীববিজ্ঞান অনুষদে ভর্তির যোগ্যতা নির্ধারণ করে।
-              </div>
-
-              <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-indigo-950 shadow-xs">
-                <table className="w-full text-left text-xs sm:text-sm divide-y divide-slate-200 dark:divide-indigo-950">
-                  <thead className="bg-slate-100 dark:bg-[#0A1224] text-slate-900 dark:text-slate-200 font-black">
-                    <tr>
-                      <th className="py-3 px-4">University / Cluster</th>
-                      <th className="py-3 px-3">Science Unit(s)</th>
-                      <th className="py-3 px-3">Exam Format</th>
-                      <th className="py-3 px-4">Compulsory Subjects</th>
-                      <th className="py-3 px-4">Optional / Choice Subjects</th>
-                      <th className="py-3 px-3">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200 dark:divide-indigo-950 bg-white dark:bg-[#070D1C] text-slate-700 dark:text-slate-300">
-                    {admissionComparisonTable.map((row, idx) => {
-                      const univKey = row.university.includes('DU') ? 'DU'
-                        : row.university.includes('RU') ? 'RU'
-                        : row.university.includes('JU') ? 'JU'
-                        : row.university.includes('CU') ? 'CU'
-                        : row.university.includes('GST Cluster') ? 'GST'
-                        : row.university.includes('CoU') ? 'CoU'
-                        : row.university.includes('JnU') ? 'JnU'
-                        : row.university.includes('Khulna') ? 'KhU'
-                        : 'AGRI';
-
-                      return (
-                        <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-[#0D1836] transition-colors">
-                          <td className="py-3 px-4 font-extrabold text-slate-900 dark:text-slate-100">
-                            <div>{row.university}</div>
-                          </td>
-                          <td className="py-3 px-3 font-semibold text-slate-600 dark:text-slate-400 whitespace-nowrap">
-                            {row.unit}
-                          </td>
-                          <td className="py-3 px-3 font-semibold text-slate-600 dark:text-slate-400 whitespace-nowrap">
-                            <span className="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-[11px] font-bold">
-                              {row.examFormat}
-                            </span>
-                          </td>
-                          <td className="py-3 px-4 font-semibold text-emerald-700 dark:text-emerald-400">
-                            <div className="whitespace-pre-line leading-relaxed">{row.compulsory}</div>
-                          </td>
-                          <td className="py-3 px-4 font-semibold text-purple-700 dark:text-purple-300">
-                            <div className="whitespace-pre-line leading-relaxed">{row.optional}</div>
-                          </td>
-                          <td className="py-3 px-3 whitespace-nowrap">
-                            <button
-                              onClick={() => {
-                                setSelectedUnivId(univKey);
-                                setActiveTab('details');
-                              }}
-                              className="px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/60 dark:hover:bg-indigo-900/60 text-indigo-600 dark:text-sky-300 font-extrabold text-[11px] flex items-center gap-1 cursor-pointer transition-colors"
-                            >
-                              <span>Details</span>
-                              <ArrowRight className="w-3 h-3" />
-                            </button>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
-
           {/* TAB 2: UNIVERSITY-BY-UNIVERSITY BREAKDOWN */}
-          {activeTab === 'details' && (
-            <div className="space-y-6">
-              {/* University Selector Chips */}
-              <div className="flex flex-wrap items-center gap-2 pb-2">
-                {Object.keys(universityAdmissionRules).map(k => {
-                  const u = universityAdmissionRules[k];
-                  const isSelected = selectedUnivId === k;
-                  return (
-                    <button
-                      key={k}
-                      onClick={() => setSelectedUnivId(k)}
-                      className={`px-3.5 py-1.5 rounded-xl text-xs font-black transition-all cursor-pointer flex items-center gap-1.5 ${
-                        isSelected
-                          ? 'bg-indigo-600 text-white shadow-sm ring-2 ring-indigo-400/40'
-                          : 'bg-slate-100 dark:bg-[#0B1428] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-indigo-950 hover:border-indigo-400'
-                      }`}
-                    >
-                      <span>{u.code}</span>
-                      <span className="font-normal opacity-75 hidden sm:inline">({u.unit.split(' ')[0]})</span>
-                    </button>
-                  );
-                })}
-              </div>
-
+          <div className="space-y-6">
               {/* Current University Overview Card */}
               <div className="p-5 sm:p-6 rounded-3xl bg-slate-50 dark:bg-[#091226] border-2 border-indigo-200 dark:border-indigo-900/80 space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-indigo-950 pb-4">
@@ -318,14 +182,13 @@ export const AdmissionLogicModal: React.FC<AdmissionLogicModalProps> = ({
                   </ul>
                 </div>
               </div>
-            </div>
-          )}
+          </div>
         </div>
 
         {/* Footer */}
         <div className="p-4 border-t border-slate-200 dark:border-indigo-950 flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-50 dark:bg-[#060B16] shrink-0">
           <div className="text-xs text-slate-500 dark:text-slate-400">
-            Based on 2025–26 official admission policies across Bangladesh public universities.
+            {currentRule.nameBn} • {currentRule.unit} — ভর্তি পরীক্ষার মানবণ্টন ও যোগ্যতার নিয়মাবলী
           </div>
           <button
             onClick={onClose}
