@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { ArrowLeft, ArrowRight, Clock, CheckCircle2, AlertTriangle, Send, RefreshCcw, Award, Check, X, ShieldAlert, Sparkles, Key, HelpCircle, Info, ShieldCheck, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Clock, CheckCircle2, RefreshCcw, Award, Check, X, ShieldAlert, Sparkles, Key, HelpCircle, Info } from 'lucide-react';
 import { SessionItem } from '../data/sessions';
 import { getSubjectTheme } from '../data/subjects';
 import { MathText } from './MarkdownMath';
