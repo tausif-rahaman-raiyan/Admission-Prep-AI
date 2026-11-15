@@ -18,7 +18,7 @@ export default function App() {
   const validViews = ['home', 'questionBank', 'exam', 'analytics', 'admissionRules'] as const;
   type AppView = typeof validViews[number];
   const [currentView, setCurrentView] = useState<AppView>(() => {
-    const route = window.location.hash.replace(/^#\\//, '') as AppView;
+    const route = window.location.hash.replace(/^#\//, '') as AppView;
     return validViews.includes(route) ? route : 'home';
   });
   const [isMathTest, setIsMathTest] = useState(() => window.location.hash === '#/math-test');
@@ -58,7 +58,7 @@ export default function App() {
     const syncHash = () => {
       const hash = window.location.hash;
       setIsMathTest(hash === '#/math-test');
-      if (hash !== '#/math-test') { const route = hash.replace(/^#\\//, '') as AppView; if (validViews.includes(route)) setCurrentView(route); }
+      if (hash !== '#/math-test') { const route = hash.replace(/^#\//, '') as AppView; if (validViews.includes(route)) setCurrentView(route); }
     };
     window.addEventListener('hashchange', syncHash);
     return () => window.removeEventListener('hashchange', syncHash);
