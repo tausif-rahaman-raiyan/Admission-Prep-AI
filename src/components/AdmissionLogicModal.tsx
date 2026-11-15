@@ -6,14 +6,12 @@ interface AdmissionLogicModalProps {
   isOpen: boolean;
   onClose: () => void;
   initialUniversityId?: string;
-  onSelectUniversity?: (id: string) => void;
 }
 
 export const AdmissionLogicModal: React.FC<AdmissionLogicModalProps> = ({
   isOpen,
   onClose,
-  initialUniversityId = 'DU',
-  onSelectUniversity
+  initialUniversityId = 'DU'
 }) => {
   const selectedUnivId = initialUniversityId && universityAdmissionRules[initialUniversityId] ? initialUniversityId : 'DU';
 
