@@ -205,7 +205,7 @@ export const Home: React.FC<HomeProps> = ({
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3.5">
+        <div className="space-y-5">
           {universityGroups.map(group => {
             const groupInstitutions = institutions.filter(inst => getUniversity(inst.id)?.group === group.id);
             if (!groupInstitutions.length) return null;
