@@ -68,7 +68,7 @@ export const universities: Uni[] = [
   make('BSFMSTU','BSFMSTU','বঙ্গমাতা শেখ ফজিলাতুন্নেছা মুজিব বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়','Bangamata Sheikh Fojilatunnesa Mujib Science and Technology University','science-tech',['#0369a1','#7dd3fc']),
 
   make('IU','IU','ইসলামী বিশ্ববিদ্যালয়','Islamic University, Bangladesh','general',['#0f766e','#99f6e4']),
-  make('CoU2','CoU-2','বরিশাল বিশ্ববিদ্যালয়','University of Barishal','general',['#0e7490','#67e8f9']),
+  make('BU','BU','বরিশাল বিশ্ববিদ্যালয়','University of Barishal','general',['#0e7490','#67e8f9']),
   make('BUg','UB','বগুড়া বিশ্ববিদ্যালয়','Bogura University','general',['#64748b','#cbd5e1']),
   make('JKKNIU','JKKNIU','জাতীয় কবি কাজী নজরুল ইসলাম বিশ্ববিদ্যালয়','Jatiya Kabi Kazi Nazrul Islam University','general',['#9f1239','#fda4af']),
   make('BRUR','BRUR','বেগম রোকেয়া বিশ্ববিদ্যালয়','Begum Rokeya University','general',['#a21caf','#f0abfc']),
