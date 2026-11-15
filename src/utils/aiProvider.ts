@@ -1,13 +1,21 @@
-export const GEMINI_MODEL_FALLBACKS = ['gemini-3.8-flash', 'gemini-3.1-flash-lite', 'gemini-2.5-flash'] as const;
+export const GEMINI_MODEL_FALLBACKS = ['gemini-3.1-flash-lite', 'gemini-4-hydrogen', 'gemini-2.5-flash-lite'] as const;
 
 type Callbacks = {
   onModel: (model: string, reset: boolean) => void;
   onText: (text: string) => void;
 };
 
-function parseData(block: string): string | null {
-  const data = block.split(/\r?\n/).find(line => line.startsWith('data:'))?.slice(5).trim();
+function parseSseDataLine(line: string): string | null {
+  const trimmed = line.trim();
+  if (!trimmed.startsWith('data:')) return null;
+  const data = trimmed.slice(5).trim();
   return !data || data === '[DONE]' ? null : data;
+}
+
+export function canUseServerTutorEndpoint(): boolean {
+  if (import.meta.env.VITE_API_URL?.trim()) return true;
+  if (typeof window === 'undefined') return false;
+  return !window.location.hostname.endsWith('github.io');
 }
 
 async function expressStream(url: string, prompt: string, apiKey: string, signal: AbortSignal, cb: Callbacks) {
@@ -15,6 +23,10 @@ async function expressStream(url: string, prompt: string, apiKey: string, signal
   if (!response.ok) {
     const body = await response.json().catch(() => ({}));
     throw new Error(body.error || `AI server returned ${response.status}`);
+  }
+  const contentType = response.headers.get('content-type') || '';
+  if (!contentType.includes('text/event-stream')) {
+    throw new Error('AI server endpoint is not streaming SSE');
   }
   if (!response.body) throw new Error('AI server returned an empty stream');
   const reader = response.body.getReader();
@@ -25,11 +37,20 @@ async function expressStream(url: string, prompt: string, apiKey: string, signal
     const { done, value } = await reader.read();
     if (done) break;
     buffer += decoder.decode(value, { stream: true });
-    const blocks = buffer.split(/\r?\n\r?\n/);
-    buffer = blocks.pop() || '';
-    for (const block of blocks) {
-      const raw = parseData(block);
+    const lines = buffer.split(/\r?\n/);
+    buffer = lines.pop() || '';
+    for (const line of lines) {
+      const raw = parseSseDataLine(line);
       if (!raw) continue;
+      const event = JSON.parse(raw);
+      if (event.model) cb.onModel(event.model, Boolean(event.reset));
+      if (event.text) { full += event.text; cb.onText(event.text); }
+      if (event.error) throw new Error(event.error);
+    }
+  }
+  if (buffer.trim()) {
+    const raw = parseSseDataLine(buffer);
+    if (raw) {
       const event = JSON.parse(raw);
       if (event.model) cb.onModel(event.model, Boolean(event.reset));
       if (event.text) { full += event.text; cb.onText(event.text); }
@@ -46,10 +67,19 @@ async function directGemini(prompt: string, apiKey: string, signal: AbortSignal,
     cb.onModel(model, true);
     try {
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${encodeURIComponent(apiKey)}`;
+      const generationConfig = model === 'gemini-3.1-flash-lite'
+        ? { thinkingConfig: { thinkingLevel: 'MINIMAL' } }
+        : model === 'gemini-4-hydrogen'
+          ? { thinkingConfig: { thinkingLevel: 'LOW' } }
+          : { thinkingConfig: { thinkingBudget: 0 } };
+
       const response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.25 } }),
+        body: JSON.stringify({
+          contents: [{ role: 'user', parts: [{ text: prompt }] }],
+          generationConfig,
+        }),
         signal,
       });
       if (!response.ok) {
@@ -65,11 +95,20 @@ async function directGemini(prompt: string, apiKey: string, signal: AbortSignal,
         const { done, value } = await reader.read();
         if (done) break;
         buffer += decoder.decode(value, { stream: true });
-        const blocks = buffer.split(/\r?\n\r?\n/);
-        buffer = blocks.pop() || '';
-        for (const block of blocks) {
-          const raw = parseData(block);
+        const lines = buffer.split(/\r?\n/);
+        buffer = lines.pop() || '';
+        for (const line of lines) {
+          const raw = parseSseDataLine(line);
           if (!raw) continue;
+          const event = JSON.parse(raw);
+          const text = (event.candidates || []).flatMap((candidate: any) => candidate.content?.parts || []).map((part: any) => part.text || '').join('');
+          if (text) { full += text; cb.onText(text); }
+          if (event.error) throw new Error(event.error.message || `${model} stream failed`);
+        }
+      }
+      if (buffer.trim()) {
+        const raw = parseSseDataLine(buffer);
+        if (raw) {
           const event = JSON.parse(raw);
           const text = (event.candidates || []).flatMap((candidate: any) => candidate.content?.parts || []).map((part: any) => part.text || '').join('');
           if (text) { full += text; cb.onText(text); }
@@ -89,8 +128,14 @@ async function directGemini(prompt: string, apiKey: string, signal: AbortSignal,
 export async function streamTutorResponse(prompt: string, apiKey: string, signal: AbortSignal, cb: Callbacks) {
   const apiBase = import.meta.env.VITE_API_URL?.trim().replace(/\/$/, '');
   if (apiBase) {
-    cb.onModel('Express API', true);
     return expressStream(`${apiBase}/api/ai/tutor`, prompt, apiKey, signal, cb);
+  }
+  if (canUseServerTutorEndpoint()) {
+    try {
+      return await expressStream('/api/ai/tutor', prompt, apiKey, signal, cb);
+    } catch (error) {
+      if (signal.aborted || apiKey.trim().length <= 10) throw error;
+    }
   }
   return directGemini(prompt, apiKey, signal, cb);
 }

@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { flushSync } from 'react-dom';
 import { Sparkles, X, Copy, Check, Send, Bot, User, AlertCircle, Key } from 'lucide-react';
 import { MathText } from './MarkdownMath';
 import { storage } from '../utils/storage';
-import { streamTutorResponse, GEMINI_MODEL_FALLBACKS } from '../utils/aiProvider';
+import { streamTutorResponse, GEMINI_MODEL_FALLBACKS, canUseServerTutorEndpoint } from '../utils/aiProvider';
 
 interface AiTutorPanelProps {
   question: any;
@@ -25,6 +26,7 @@ export const AiTutorPanel: React.FC<AiTutorPanelProps> = ({
   const [apiKey, setApiKey] = useState(storage.getApiKey());
   const [loading, setLoading] = useState(false);
   const [streamedText, setStreamedText] = useState('');
+  const [streamingFollowUpText, setStreamingFollowUpText] = useState('');
   const [modelName, setModelName] = useState<string>(GEMINI_MODEL_FALLBACKS[0]);
   const abortController = useRef<AbortController | null>(null);
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
@@ -35,19 +37,28 @@ export const AiTutorPanel: React.FC<AiTutorPanelProps> = ({
   useEffect(() => {
     const key = storage.getApiKey();
     setApiKey(key);
-    if (key.trim().length > 10 || import.meta.env.VITE_API_URL) {
+    if (key.trim().length > 10 || canUseServerTutorEndpoint()) {
       fetchAiExplanation(key);
     }
   }, [question.id]);
 
   useEffect(() => () => abortController.current?.abort(), []);
 
+  useEffect(() => {
+    if (streamingFollowUpText) {
+      chatBottomRef.current?.scrollIntoView({ behavior: 'auto', block: 'nearest' });
+    }
+  }, [streamingFollowUpText]);
+
   const fetchAiExplanation = async (keyToUse: string, followUp?: string) => {
     setLoading(true);
     if (!followUp) {
       setStreamedText('');
+    } else {
+      setStreamingFollowUpText('');
     }
 
+    let fullResponseText = '';
     try {
       const prompt = `Admission Test Question Analysis:
 - Question Number: ${question.number}
@@ -70,27 +81,43 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
       abortController.current?.abort();
       const controller = new AbortController();
       abortController.current = controller;
-      let fullResponseText = '';
       await streamTutorResponse(prompt, keyToUse, controller.signal, {
         onModel: (model, reset) => {
-          setModelName(model);
-          if (reset) { fullResponseText = ''; setStreamedText(''); }
+          flushSync(() => {
+            setModelName(model);
+            if (reset) {
+              fullResponseText = '';
+              if (!followUp) setStreamedText('');
+              else setStreamingFollowUpText('');
+            }
+          });
         },
         onText: chunk => {
           fullResponseText += chunk;
-          setStreamedText(fullResponseText);
+          flushSync(() => {
+            if (!followUp) setStreamedText(fullResponseText);
+            else setStreamingFollowUpText(fullResponseText);
+          });
         },
       });
 
-      if (followUp) {
+      if (followUp && fullResponseText.trim()) {
         setChatMessages(prev => [...prev, { role: 'ai', text: fullResponseText }]);
+        setStreamingFollowUpText('');
       }
     } catch (err: any) {
-      if (err?.name === 'AbortError') return;
+      if (err?.name === 'AbortError') {
+        if (followUp && fullResponseText.trim()) {
+          setChatMessages(prev => [...prev, { role: 'ai', text: fullResponseText }]);
+          setStreamingFollowUpText('');
+        }
+        return;
+      }
       console.error(err);
       if (!followUp) {
         setStreamedText(`❌ **Error:** ${err.message || 'Could not generate AI explanation. Please verify your Gemini API key in Settings.'}`);
       } else {
+        setStreamingFollowUpText('');
         setChatMessages(prev => [...prev, { role: 'ai', text: `❌ Error: ${err.message}` }]);
       }
     } finally {
@@ -127,10 +154,10 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
 
     // Split body into sections on emojis 🎯 📐 ⚡ or numbered steps
     const rawSections = bodyText.split(/(?=[1-3]\.\s*[🎯📐⚡]|[🎯📐⚡])/g).filter(s => s.trim().length > 0);
-    return { answerLine, sections: rawSections.length > 0 ? rawSections : [bodyText] };
+    return { answerLine, sections: rawSections.length > 0 ? rawSections : (bodyText ? [bodyText] : []) };
   };
 
-  if ((!apiKey || apiKey.trim().length <= 10) && !import.meta.env.VITE_API_URL) {
+  if ((!apiKey || apiKey.trim().length <= 10) && !canUseServerTutorEndpoint()) {
     return (
       <div className="mt-4 p-5 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border-2 border-amber-300 dark:border-amber-700/60 text-amber-900 dark:text-amber-200 space-y-3">
         <div className="flex items-center gap-2.5 font-bold text-base">
@@ -162,7 +189,7 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
             <Sparkles className="w-4 h-4" />
           </div>
           <div>
-            <h4 className="text-xs sm:text-sm font-extrabold text-indigo-950 dark:text-sky-200 flex items-center gap-2">
+            <h4 className="text-xs sm:text-sm font-extrabold text-indigo-950 dark:text-sky-200 flex items-center gap-2 flex-wrap">
               <span>AI Tutor Admission Coach</span>
               <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-600/10 dark:bg-sky-500/10 text-indigo-700 dark:text-sky-300 border border-indigo-500/30">
                 ⚡ Fast AI ({modelName})
@@ -172,32 +199,43 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
         </div>
 
         <div className="flex items-center gap-2">
-          {loading && <button onClick={() => abortController.current?.abort()} className="px-2.5 py-1.5 rounded-lg bg-rose-600 text-white text-[11px] font-bold" type="button">Stop</button>}
-          {streamedText && (
+          {loading ? (
             <button
-              onClick={copyToClipboard}
-              title="Copy Solution"
-              className="p-1.5 rounded-lg bg-white/80 dark:bg-slate-800 text-indigo-700 dark:text-sky-300 hover:bg-white dark:hover:bg-slate-700 border border-indigo-200 dark:border-indigo-700 transition-colors cursor-pointer"
+              onClick={() => abortController.current?.abort()}
+              className="px-3.5 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-xs font-black shadow-sm cursor-pointer transition-colors"
+              type="button"
             >
-              {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
+              Stop
             </button>
+          ) : (
+            <>
+              {streamedText && (
+                <button
+                  onClick={copyToClipboard}
+                  title="Copy Solution"
+                  className="p-1.5 rounded-lg bg-white/80 dark:bg-slate-800 text-indigo-700 dark:text-sky-300 hover:bg-white dark:hover:bg-slate-700 border border-indigo-200 dark:border-indigo-700 transition-colors cursor-pointer"
+                >
+                  {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
+                </button>
+              )}
+              <button
+                onClick={onClose}
+                className="p-1.5 rounded-lg bg-white/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-rose-100 hover:text-rose-700 dark:hover:bg-rose-950 dark:hover:text-rose-300 border border-slate-200 dark:border-slate-700 transition-colors cursor-pointer text-xs font-bold flex items-center gap-1"
+              >
+                <X className="w-4 h-4" />
+                <span className="hidden sm:inline">বন্ধ করুন</span>
+              </button>
+            </>
           )}
-          <button
-            onClick={onClose}
-            className="p-1.5 rounded-lg bg-white/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-rose-100 hover:text-rose-700 dark:hover:bg-rose-950 dark:hover:text-rose-300 border border-slate-200 dark:border-slate-700 transition-colors cursor-pointer text-xs font-bold flex items-center gap-1"
-          >
-            <X className="w-4 h-4" />
-            <span className="hidden sm:inline">বন্ধ করুন</span>
-          </button>
         </div>
       </div>
 
       {/* Body Content */}
       <div className="p-4 sm:p-5 space-y-4">
-        {loading && !streamedText && (
+        {loading && !streamedText && !streamingFollowUpText && (
           <div className="flex items-center gap-3 py-6 justify-center text-indigo-600 dark:text-sky-400 font-semibold text-sm">
             <div className="w-5 h-5 border-2 border-indigo-600 dark:border-sky-400 border-t-transparent rounded-full animate-spin" />
-            <span>AI Coach is solving the problem independently...</span>
+            <span>Streaming answer in real time...</span>
           </div>
         )}
 
@@ -209,26 +247,21 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
         )}
 
         {/* Sections */}
-        <div className="space-y-3">
-          {sections.map((sec, idx) => (
-            <div
-              key={idx}
-              className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#070D1D] border border-indigo-100 dark:border-indigo-900/60 shadow-xs"
-            >
-              <MathText content={sec} fontSize={explanationFontSize} />
-            </div>
-          ))}
-        </div>
-
-        {loading && streamedText && (
-          <div className="flex items-center gap-2 text-xs text-indigo-600 dark:text-sky-400 font-bold animate-pulse">
-            <div className="w-2 h-2 rounded-full bg-indigo-600 dark:bg-sky-400 animate-ping" />
-            <span>Generating next part...</span>
+        {sections.length > 0 && (
+          <div className="space-y-3">
+            {sections.map((sec, idx) => (
+              <div
+                key={idx}
+                className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#070D1D] border border-indigo-100 dark:border-indigo-900/60 shadow-xs"
+              >
+                <MathText content={sec} fontSize={explanationFontSize} />
+              </div>
+            ))}
           </div>
         )}
 
         {/* Chat Thread for Follow-ups */}
-        {chatMessages.length > 0 && (
+        {(chatMessages.length > 0 || streamingFollowUpText) && (
           <div className="space-y-3 pt-3 border-t border-indigo-200/60 dark:border-indigo-900/60">
             {chatMessages.map((msg, i) => (
               <div
@@ -256,29 +289,47 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
                 )}
               </div>
             ))}
+            {streamingFollowUpText && (
+              <div className="flex gap-3 text-xs sm:text-sm justify-start">
+                <div className="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0">
+                  <Bot className="w-4 h-4" />
+                </div>
+                <div className="p-3 rounded-2xl max-w-[85%] bg-white dark:bg-[#0C152B] border border-indigo-200 dark:border-indigo-800 text-slate-800 dark:text-slate-200 rounded-bl-xs">
+                  <MathText content={streamingFollowUpText} fontSize={explanationFontSize} />
+                </div>
+              </div>
+            )}
             <div ref={chatBottomRef} />
           </div>
         )}
 
-        {/* Follow-up Form */}
-        <form onSubmit={handleSendFollowUp} className="flex gap-2 pt-2">
-          <input
-            type="text"
-            value={followUpInput}
-            onChange={e => setFollowUpInput(e.target.value)}
-            placeholder="Any other shortcut or question about this problem?"
-            disabled={loading}
-            className="flex-1 px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#070D1D] border border-indigo-200 dark:border-indigo-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
-          <button
-            type="submit"
-            disabled={loading || !followUpInput.trim()}
-            className="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white font-bold rounded-xl text-xs sm:text-sm flex items-center gap-1.5 shadow-sm cursor-pointer transition-colors"
-          >
-            <span>Ask</span>
-            <Send className="w-3.5 h-3.5" />
-          </button>
-        </form>
+        {loading && (streamedText || streamingFollowUpText) && (
+          <div className="flex items-center gap-2 text-xs text-indigo-600 dark:text-sky-400 font-bold">
+            <div className="w-2 h-2 rounded-full bg-indigo-600 dark:bg-sky-400 animate-ping" />
+            <span>Streaming live...</span>
+          </div>
+        )}
+
+        {/* Follow-up Form (hidden while streaming so only Stop is shown) */}
+        {!loading && (
+          <form onSubmit={handleSendFollowUp} className="flex gap-2 pt-2">
+            <input
+              type="text"
+              value={followUpInput}
+              onChange={e => setFollowUpInput(e.target.value)}
+              placeholder="Any other shortcut or question about this problem?"
+              className="flex-1 px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#070D1D] border border-indigo-200 dark:border-indigo-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+            <button
+              type="submit"
+              disabled={!followUpInput.trim()}
+              className="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white font-bold rounded-xl text-xs sm:text-sm flex items-center gap-1.5 shadow-sm cursor-pointer transition-colors"
+            >
+              <span>Ask</span>
+              <Send className="w-3.5 h-3.5" />
+            </button>
+          </form>
+        )}
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import { getAdmissionRule, UniversityAdmissionRule } from '../data/admissionLogi
 import { AdmissionLogicModal } from './AdmissionLogicModal';
 import { normalizeQuestionData } from '../utils/questionData';
 import { QuestionImage } from './QuestionImage';
+import { canUseServerTutorEndpoint } from '../utils/aiProvider';
 
 interface ExamViewProps {
   session: SessionItem;
@@ -136,7 +137,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<string, boolean>>(() => {
     return shouldRestoreActiveExam ? (initialSavedExam?.flaggedQuestions || {}) : {};
   });
-  const [openAiTutorId, setOpenAiTutorId] = useState<string | null>(null);
+  const [openAiTutorIds, setOpenAiTutorIds] = useState<Record<string, boolean>>({});
   const [apiKeyToast, setApiKeyToast] = useState(false);
 
   useEffect(() => {
@@ -359,7 +360,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
     setEndTimestamp(Date.now() + session.durationMinutes * 60_000);
     setTimeRemaining(session.durationMinutes * 60);
     try { localStorage.removeItem('admission_app_exam_' + session.id); } catch {}
-    setOpenAiTutorId(null);
+    setOpenAiTutorIds({});
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   };
 
@@ -1395,24 +1396,24 @@ export const ExamView: React.FC<ExamViewProps> = ({
                       <button
                         onClick={() => {
                           const key = storage.getApiKey();
-                          if (!key || key.trim().length <= 10) {
+                          if ((!key || key.trim().length <= 10) && !canUseServerTutorEndpoint()) {
                             setApiKeyToast(true);
                             setTimeout(() => setApiKeyToast(false), 6000);
                             return;
                           }
-                          setOpenAiTutorId(prev => prev === q.id ? null : q.id);
+                          setOpenAiTutorIds(prev => ({ ...prev, [q.id]: !prev[q.id] }));
                         }}
                         className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-sky-600 hover:from-indigo-500 hover:to-sky-500 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm cursor-pointer transition-colors"
                       >
                         <Sparkles className="w-3.5 h-3.5" />
-                        <span>{openAiTutorId === q.id ? 'Close AI Tutor' : 'Ask AI Tutor'}</span>
+                        <span>{openAiTutorIds[q.id] ? 'Close AI Tutor' : 'Ask AI Tutor'}</span>
                       </button>
 
-                      {openAiTutorId === q.id && (
+                      {openAiTutorIds[q.id] && (
                         <div className="mt-3">
                           <AiTutorPanel
                             question={q}
-                            onClose={() => setOpenAiTutorId(null)}
+                            onClose={() => setOpenAiTutorIds(prev => ({ ...prev, [q.id]: false }))}
                             onOpenApiKeyModal={onOpenApiKeyModal}
                             explanationFontSize={uiSettings.explanationFontPx}
                           />
@@ -1511,19 +1512,19 @@ export const ExamView: React.FC<ExamViewProps> = ({
                 Exiting pauses the timer and keeps your answers saved. When you return later, you can resume from here or start a new exam.
               </div>
 
-              {/* Action Buttons: Yes Exit in red box first, No Continue at the last */}
+              {/* Action Buttons: No Continue Exam first (indigo box), Yes Exit Exam last (red box) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
-                <button
-                  onClick={saveAndExit}
-                  className="min-h-12 w-full rounded-xl border-2 border-rose-600 bg-rose-600 px-4 py-2.5 text-sm font-black text-white shadow-md shadow-rose-600/20 hover:bg-rose-500 hover:border-rose-500 transition-colors cursor-pointer"
-                >
-                  Yes, Exit Exam
-                </button>
                 <button
                   onClick={continueExam}
                   className="min-h-12 w-full rounded-xl border-2 border-indigo-600 bg-indigo-600 px-4 py-2.5 text-sm font-black text-white shadow-md shadow-indigo-600/20 hover:bg-indigo-500 hover:border-indigo-500 transition-colors cursor-pointer"
                 >
                   No, Continue Exam
+                </button>
+                <button
+                  onClick={saveAndExit}
+                  className="min-h-12 w-full rounded-xl border-2 border-rose-600 bg-rose-600 px-4 py-2.5 text-sm font-black text-white shadow-md shadow-rose-600/20 hover:bg-rose-500 hover:border-rose-500 transition-colors cursor-pointer"
+                >
+                  Yes, Exit Exam
                 </button>
               </div>
             </div>

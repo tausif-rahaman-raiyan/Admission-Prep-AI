@@ -9,6 +9,7 @@ import { storage, UiSettings } from '../utils/storage';
 import { getAdmissionRule } from '../data/admissionLogic';
 import { normalizeQuestionData } from '../utils/questionData';
 import { QuestionImage } from './QuestionImage';
+import { canUseServerTutorEndpoint } from '../utils/aiProvider';
 
 interface QuestionBankProps {
   session: SessionItem;
@@ -34,11 +35,12 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSubject, setSelectedSubject] = useState<string>('ALL');
   const [bilingualLang, setBilingualLang] = useState<'bn' | 'en'>('bn');
-  const [openAiTutorId, setOpenAiTutorId] = useState<string | null>(null);
+  const [openAiTutorIds, setOpenAiTutorIds] = useState<Record<string, boolean>>({});
   const [apiKeyToast, setApiKeyToast] = useState(false);
 
   useLayoutEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    setOpenAiTutorIds({});
   }, [session.id]);
 
   useEffect(() => {
@@ -96,12 +98,12 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
 
   const handleToggleAiTutor = (qId: string) => {
     const key = storage.getApiKey();
-    if (!key || key.trim().length <= 10) {
+    if ((!key || key.trim().length <= 10) && !canUseServerTutorEndpoint()) {
       setApiKeyToast(true);
       setTimeout(() => setApiKeyToast(false), 6000);
       return;
     }
-    setOpenAiTutorId(prev => prev === qId ? null : qId);
+    setOpenAiTutorIds(prev => ({ ...prev, [qId]: !prev[qId] }));
   };
 
   return (
@@ -296,7 +298,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
           )}
           {filteredQuestions.map((q, idx) => {
             const theme = getSubjectTheme(q.subject);
-            const isAiOpen = openAiTutorId === q.id;
+            const isAiOpen = Boolean(openAiTutorIds[q.id]);
             const labels = ['ক', 'খ', 'গ', 'ঘ', 'ঙ'];
 
             return (
@@ -413,7 +415,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                 {isAiOpen && (
                   <AiTutorPanel
                     question={q}
-                    onClose={() => setOpenAiTutorId(null)}
+                    onClose={() => setOpenAiTutorIds(prev => ({ ...prev, [q.id]: false }))}
                     onOpenApiKeyModal={onOpenApiKeyModal}
                     explanationFontSize={uiSettings.explanationFontPx}
                   />
