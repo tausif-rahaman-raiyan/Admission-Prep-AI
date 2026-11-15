@@ -35,10 +35,12 @@ export const AiTutorPanel: React.FC<AiTutorPanelProps> = ({
   useEffect(() => {
     const key = storage.getApiKey();
     setApiKey(key);
-    if (key.trim().length > 10) {
+    if (key.trim().length > 10 || import.meta.env.VITE_API_URL) {
       fetchAiExplanation(key);
     }
   }, [question.id]);
+
+  useEffect(() => () => abortController.current?.abort(), []);
 
   const fetchAiExplanation = async (keyToUse: string, followUp?: string) => {
     setLoading(true);
@@ -128,7 +130,7 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
     return { answerLine, sections: rawSections.length > 0 ? rawSections : [bodyText] };
   };
 
-  if (!apiKey || apiKey.trim().length <= 10) {
+  if ((!apiKey || apiKey.trim().length <= 10) && !import.meta.env.VITE_API_URL) {
     return (
       <div className="mt-4 p-5 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border-2 border-amber-300 dark:border-amber-700/60 text-amber-900 dark:text-amber-200 space-y-3">
         <div className="flex items-center gap-2.5 font-bold text-base">
@@ -136,7 +138,7 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
           <span>Gemini API Key Required</span>
         </div>
         <p className="text-xs sm:text-sm text-amber-800 dark:text-amber-300">
-          To use the AI Tutor Admission Coach, please add your Gemini API Key in Settings.
+          Add your Gemini API key in Settings. Without VITE_API_URL, the key stays in this browser's local storage and is sent directly to Google Gemini.
         </p>
         <button
           onClick={onOpenApiKeyModal}
