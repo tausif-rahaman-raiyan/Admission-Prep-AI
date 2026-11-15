@@ -31,6 +31,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
 
   // Modal for full admission rules
   const [rulesModalOpen, setRulesModalOpen] = useState(false);
+  const [exitPromptOpen, setExitPromptOpen] = useState(false);
 
   // Initial subjects setup based on admission rule
   const compulsoryNames = useMemo(() => {
@@ -96,7 +97,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
 
   // Absolute end timestamp keeps the timer accurate when the tab sleeps.
   useEffect(() => {
-    if (!examStarted || submitted || loading) return;
+    if (!examStarted || submitted || loading || exitPromptOpen) return;
     const tick = () => {
       const remaining = Math.max(0, Math.ceil((endTimestamp - Date.now()) / 1000));
       setTimeRemaining(remaining);
@@ -105,7 +106,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
     tick();
     const timer = window.setInterval(tick, 1000);
     return () => window.clearInterval(timer);
-  }, [examStarted, submitted, loading, endTimestamp]);
+  }, [examStarted, submitted, loading, endTimestamp, exitPromptOpen]);
 
   useEffect(() => {
     if (submitted) return;
@@ -131,7 +132,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
   };
 
   const handleSelectOption = (qId: string, optIdx: number) => {
-    if (submitted) return;
+    if (submitted || answers[qId] !== undefined || lockedQuestions[qId]) return;
     setAnswers(prev => ({ ...prev, [qId]: optIdx }));
     setLockedQuestions(prev => ({ ...prev, [qId]: true }));
   };
@@ -249,6 +250,28 @@ export const ExamView: React.FC<ExamViewProps> = ({
 
 
   const answeredCount = Object.keys(answers).length;
+
+  const requestExit = () => {
+    const remaining = Math.max(0, Math.ceil((endTimestamp - Date.now()) / 1000));
+    setTimeRemaining(remaining);
+    setEndTimestamp(Date.now() + remaining * 1000);
+    setExitPromptOpen(true);
+  };
+
+  const continueExam = () => {
+    setEndTimestamp(Date.now() + timeRemaining * 1000);
+    setExitPromptOpen(false);
+  };
+
+  const saveAndExit = () => {
+    const pausedEnd = Date.now() + timeRemaining * 1000;
+    try {
+      localStorage.setItem('admission_app_exam_' + session.id, JSON.stringify({ answers, endTimestamp: pausedEnd, started: true }));
+    } catch {}
+    setEndTimestamp(pausedEnd);
+    setExitPromptOpen(false);
+    onBack();
+  };
 
   // Eligibility evaluation based on selected subjects
   const eligibilityStatus = useMemo(() => {
@@ -607,7 +630,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
         <AdmissionLogicModal
           isOpen={rulesModalOpen}
           onClose={() => setRulesModalOpen(false)}
-          initialUniversityId={session.institution}
+          initialUniversityId={admissionRule.id}
         />
       </div>
     );
@@ -623,7 +646,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
         <div className="max-w-7xl mx-auto h-16 px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <button
-              onClick={onBack}
+              onClick={requestExit}
               className="p-2 rounded-xl bg-slate-100 dark:bg-[#0F172A] text-slate-700 dark:text-slate-200 hover:bg-slate-200 transition-colors cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -814,18 +837,13 @@ export const ExamView: React.FC<ExamViewProps> = ({
           </div>
         )}
 
-        {/* Mobile one-question navigation; desktop keeps the full review list. */}
-        {!submitted && <div className="flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-[#080E1E] sm:hidden">
-          <button disabled={activeQuestionIndex === 0} onClick={() => setActiveQuestionIndex(index => Math.max(0, index - 1))} className="min-h-11 rounded-xl bg-slate-100 px-4 text-sm font-bold disabled:opacity-40 dark:bg-slate-800">আগেরটি</button>
-          <span className="text-sm font-black tabular-nums">{Math.min(activeQuestionIndex + 1, filteredQuestions.length)} / {filteredQuestions.length}</span>
-          <button disabled={activeQuestionIndex >= filteredQuestions.length - 1} onClick={() => setActiveQuestionIndex(index => Math.min(filteredQuestions.length - 1, index + 1))} className="min-h-11 rounded-xl bg-indigo-600 px-4 text-sm font-bold text-white disabled:opacity-40">পরেরটি</button>
-        </div>}
+        {/* All filtered questions remain visible on both mobile and desktop. */}
         {/* Question Cards List */}
         <div className="space-y-6">
           {filteredQuestions.map((q, qIndex) => {
             const chosenOpt = answers[q.id];
             const isAnswered = chosenOpt !== undefined;
-            const isLocked = lockedQuestions[q.id];
+            const isLocked = lockedQuestions[q.id] || isAnswered;
             const hasOptions = q.options && q.options.length > 0;
             const isCorrect = isAnswered && chosenOpt === q.correctAnswer;
             const theme = getSubjectTheme(q.subject);
@@ -833,7 +851,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
             return (
               <div
                 key={q.id || qIndex}
-                className={`${!submitted && qIndex !== activeQuestionIndex ? 'hidden sm:block' : ''} p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#080E1E] border-2 transition-all space-y-4 ${
+                className={`p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#080E1E] border-2 transition-all space-y-4 ${
                   submitted
                     ? isCorrect
                       ? 'border-emerald-400 dark:border-emerald-600/80 shadow-md shadow-emerald-500/5'
@@ -1040,6 +1058,17 @@ export const ExamView: React.FC<ExamViewProps> = ({
           <button onClick={() => setApiKeyToast(false)} className="text-slate-400 hover:text-white">
             <X className="w-4 h-4" />
           </button>
+        </div>
+      )}
+
+      {exitPromptOpen && (
+        <div className="fixed inset-0 z-[120] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-sm">
+          <div role="dialog" aria-modal="true" aria-labelledby="exit-exam-title" className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl dark:border-slate-700 dark:bg-[#0A1224] space-y-4">
+            <div className="flex items-center gap-3"><div className="grid h-11 w-11 place-items-center rounded-2xl bg-amber-100 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300"><ShieldAlert className="h-5 w-5" /></div><div><h2 id="exit-exam-title" className="text-lg font-black text-slate-900 dark:text-white">পরীক্ষা থেকে বের হতে চান?</h2><p className="text-xs text-slate-500 dark:text-slate-400">আপনার উত্তরগুলো সংরক্ষিত থাকবে।</p></div></div>
+            <div className="rounded-2xl bg-slate-50 p-4 dark:bg-slate-900/70"><div className="text-sm font-bold text-slate-800 dark:text-slate-200">Answered: {answeredCount} / {questions.length}</div><div className="mt-1 text-xs text-slate-500">বাকি সময়: {formatTimer(timeRemaining)}</div></div>
+            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">বের হলে পরীক্ষাটি বিরতি অবস্থায় থাকবে। পরে আবার খুললে একই উত্তর ও বাকি সময় থেকে চালিয়ে যেতে পারবেন।</p>
+            <div className="flex flex-col-reverse gap-2 sm:flex-row sm:justify-end"><button onClick={continueExam} className="min-h-11 rounded-xl bg-indigo-600 px-5 text-sm font-black text-white hover:bg-indigo-500">না, পরীক্ষা চালিয়ে যাব</button><button onClick={saveAndExit} className="min-h-11 rounded-xl border border-slate-300 px-5 text-sm font-bold text-slate-700 dark:border-slate-700 dark:text-slate-200">হ্যাঁ, বের হব</button></div>
+          </div>
         </div>
       )}
 
