@@ -4,7 +4,7 @@ import { Search, Sparkles, Key, BookOpen, ArrowRight, Layers, FileText, Info } f
 import { siteConfig } from '../data/siteConfig';
 import { institutions } from '../data/institutions';
 import { sessions, SessionItem } from '../data/sessions';
-import { getUniversity } from '../data/universities';
+import { getUniversity, universities } from '../data/universities';
 
 interface HomeProps {
   manifestPapers: Record<string, any>;
@@ -94,6 +94,8 @@ export const Home: React.FC<HomeProps> = ({
 }) => {
   const [showUniversitySheet, setShowUniversitySheet] = useState(false);
   const [universitySearch, setUniversitySearch] = useState('');
+  const [agriFilter, setAgriFilter] = useState('ALL');
+  const [otherFilter, setOtherFilter] = useState('all');
   const sessionSectionRef = useRef<HTMLElement>(null);
   const firstRender = useRef(true);
   const universityFuse = useMemo(() => new Fuse(institutions, {
@@ -101,19 +103,25 @@ export const Home: React.FC<HomeProps> = ({
     threshold: 0.34,
     ignoreLocation: true,
   }), []);
-  const otherUniversities = useMemo(() => institutions.filter(uni => !MAIN_UNIVERSITIES.includes(uni.id)), []);
+  const otherUniversities = useMemo(
+    () => institutions.filter(uni => !MAIN_UNIVERSITIES.includes(uni.id) && !['GST-Agri','GAU','BAU','SAU','CVASU','SYLAU','KAU','HAU','KuriAU','BSMRAU'].includes(uni.id)),
+    []
+  );
+  const filteredOtherUniversities = otherFilter === 'all'
+    ? otherUniversities
+    : otherUniversities.filter(item => getUniversity(item.id)?.group === otherFilter);
   const searchableUniversities = universitySearch.trim()
-    ? universityFuse.search(universitySearch).map(result => result.item).filter(item => !MAIN_UNIVERSITIES.includes(item.id))
-    : otherUniversities;
+    ? universityFuse.search(universitySearch).map(result => result.item).filter(item => filteredOtherUniversities.some(other => other.id === item.id))
+    : filteredOtherUniversities;
 
 
   const currentUniversity = getUniversity(selectedInstitution);
   useEffect(() => {
-    if (!currentUniversity) {
+    if (!currentUniversity && !['AGRI', 'ALL'].includes(selectedInstitution)) {
       onSelectInstitution('DU');
       onSelectUnit(null);
     }
-  }, [currentUniversity, onSelectInstitution, onSelectUnit]);
+  }, [currentUniversity, selectedInstitution, onSelectInstitution, onSelectUnit]);
   const availableUnits = useMemo(() => {
     const rules = currentUniversity?.units.filter(rule => rule.unit !== 'যাচাই করা হয়নি').map(rule => rule.unit) || [];
     const papers = sessions.filter(session => (currentUniversity?.dataIds || [selectedInstitution]).includes(session.institution))
@@ -122,17 +130,28 @@ export const Home: React.FC<HomeProps> = ({
   }, [currentUniversity, selectedInstitution]);
 
   const filteredSessions = useMemo(() => {
-    if (!currentUniversity?.hasQuestions) return [];
-    return sessions.filter(session => {
-      if (!(currentUniversity.dataIds || [currentUniversity.id]).includes(session.institution)) return false;
-      if (selectedUnit && session.unit !== selectedUnit) return false;
-      if (searchQuery.trim()) {
-        const query = searchQuery.toLowerCase();
-        if (![session.title, session.session, session.description, session.institution].some(value => value.toLowerCase().includes(query))) return false;
+    let source = sessions;
+    if (selectedInstitution === 'AGRI') {
+      const agriIds = ['GSTAGRI', 'GAU', 'BAU', 'SAU', 'CVASU', 'SYLAU'];
+      source = source.filter(session => agriIds.includes(session.institution));
+      if (agriFilter !== 'ALL') {
+        const id = agriFilter === 'GST-Agri' ? 'GSTAGRI' : agriFilter;
+        source = source.filter(session => session.institution === id);
       }
-      return true;
-    });
-  }, [currentUniversity, selectedUnit, searchQuery]);
+    } else if (selectedInstitution === 'ALL') {
+      const ids = filteredOtherUniversities.map(item => item.id);
+      source = source.filter(session => ids.includes(session.institution));
+    } else {
+      if (!currentUniversity?.hasQuestions) return [];
+      source = source.filter(session => (currentUniversity.dataIds || [currentUniversity.id]).includes(session.institution));
+    }
+    if (selectedUnit) source = source.filter(session => session.unit === selectedUnit);
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      source = source.filter(session => [session.title, session.session, session.description, session.institution].some(value => value.toLowerCase().includes(query)));
+    }
+    return source;
+  }, [selectedInstitution, currentUniversity, selectedUnit, searchQuery, agriFilter, filteredOtherUniversities]);
 
   const firstAvailableSession = useMemo(() => {
     return filteredSessions.find(s => manifestPapers[s.id]);
@@ -233,46 +252,80 @@ export const Home: React.FC<HomeProps> = ({
         </div>
       </section>
 
-      {/* Compact university selector */}
-      <section className="space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
-          <div>
-            <h2 className="text-lg sm:text-2xl font-black text-slate-900 dark:text-slate-100 flex items-center gap-2"><Layers className="w-5 h-5 text-indigo-600 dark:text-sky-400" /><span>বিশ্ববিদ্যালয় নির্বাচন করুন</span></h2>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">বিশ্ববিদ্যালয় নির্বাচন করে ভর্তি পরীক্ষার প্রশ্ন দেখুন</p>
-          </div>
-          <button onClick={() => setShowUniversitySheet(true)} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-indigo-300 bg-indigo-50 px-4 py-2 text-xs font-extrabold text-indigo-700 hover:bg-indigo-100 dark:border-indigo-900 dark:bg-indigo-950/40 dark:text-sky-300"><Layers className="h-4 w-4" /> Other Uni</button>
+      {/* University and collection selector */}
+      <section className="space-y-5">
+        <div className="space-y-1">
+          <h2 className="text-lg sm:text-2xl font-black text-slate-900 dark:text-slate-100">বিশ্ববিদ্যালয় ও ইউনিট নির্বাচন করুন</h2>
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Select an institution card below to filter admission papers &amp; question banks</p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {institutions.filter(inst => MAIN_UNIVERSITIES.includes(inst.id)).map(inst => {
-            const uni = getUniversity(inst.id);
-            const active = selectedInstitution === inst.id;
-            return <button key={inst.id} type="button" onClick={() => selectUniversity(inst.id)} aria-pressed={active} className={"min-h-[82px] rounded-2xl border-2 p-3 text-left transition-all " + (active ? "border-indigo-500 bg-indigo-50 shadow-md dark:border-sky-400 dark:bg-indigo-950/60" : "border-slate-200 bg-white hover:border-indigo-300 dark:border-slate-800 dark:bg-[#0B1325] dark:hover:border-indigo-700")}>
-              <div className="flex items-center justify-between gap-2"><span className="rounded-lg px-2.5 py-1 text-xs font-black text-white" style={{ background: "linear-gradient(135deg, " + (uni?.brand[0] || "#475569") + ", " + (uni?.brand[1] || "#94a3b8") + ")" }}>{inst.code}</span><span className={"text-[9px] font-bold " + (inst.hasQuestions ? "text-emerald-600 dark:text-emerald-400" : "text-slate-400")}>{inst.hasQuestions ? "প্রশ্ন আছে" : ""}</span></div>
-              <div className="mt-2 text-xs sm:text-sm font-extrabold text-slate-900 dark:text-slate-100 line-clamp-1">{inst.nameBn}</div>
-            </button>;
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3">
+          {[
+            {id:'DU',code:'DU',name:'ঢাকা বিশ্ববিদ্যালয়',desc:'A Unit • 2000-01 to 2025-26'},
+            {id:'RU',code:'RU',name:'রাজশাহী বিশ্ববিদ্যালয়',desc:'2010-11 to 2025-26'},
+            {id:'JU',code:'JUA • D',name:'জাহাঙ্গীরনগর বিশ্ববিদ্যালয়',desc:'A & D Units • Set-wise papers'},
+            {id:'CU',code:'CU',name:'চট্টগ্রাম বিশ্ববিদ্যালয়',desc:'A Unit • 2010-11 to 2025-26'},
+            {id:'GST',code:'GST',name:'জিএসটি গুচ্ছ',desc:'A Unit • 2020-21 to 2025-26'},
+            {id:'CoU',code:'CoU',name:'কুমিল্লা বিশ্ববিদ্যালয়',desc:'2006-07 to 2025-26'},
+            {id:'JnU',code:'JnU',name:'জগন্নাথ বিশ্ববিদ্যালয়',desc:'A Unit • Shift-wise MCQ + Written'},
+            {id:'KU',code:'KhUA • B',name:'খুলনা বিশ্ববিদ্যালয়',desc:'A & B Units • MCQ + Written'}
+          ].map((card, index) => {
+            const active = selectedInstitution === card.id;
+            const uni = getUniversity(card.id);
+            const palette = PALETTES[index % 5];
+            return <div key={card.id} className={`rounded-2xl border-2 p-3 sm:p-4 transition-all ${active ? 'border-indigo-500 bg-indigo-50 shadow-md dark:border-sky-400 dark:bg-indigo-950/50' : 'border-slate-200 bg-white dark:border-slate-800 dark:bg-[#0B1325]'}`}>
+              <button type="button" onClick={() => selectUniversity(card.id)} aria-pressed={active} className="w-full text-left">
+                <span className={`inline-flex rounded-lg px-2.5 py-1 text-[10px] sm:text-xs font-black text-white ${palette.badge}`}>{card.code}</span>
+                <span className="mt-2 block text-xs sm:text-sm font-black text-slate-900 dark:text-slate-100">{card.name}</span>
+                <span className="mt-1 block text-[10px] sm:text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">{card.desc}</span>
+              </button>
+              <div className="mt-2 flex items-center justify-between gap-2">
+                <span className="text-[9px] font-bold text-slate-400">{uni?.hasQuestions ? 'Question bank' : ''}</span>
+                <button onClick={() => onOpenRulesModal(card.id)} className="text-[10px] font-extrabold text-indigo-600 hover:underline dark:text-sky-400">Details</button>
+              </div>
+            </div>;
           })}
+          <button type="button" onClick={() => { onSelectInstitution('AGRI'); onSelectUnit(null); setAgriFilter('ALL'); }} aria-pressed={selectedInstitution === 'AGRI'} className={`rounded-2xl border-2 p-3 sm:p-4 text-left transition-all ${selectedInstitution === 'AGRI' ? 'border-emerald-500 bg-emerald-50 shadow-md dark:border-emerald-400 dark:bg-emerald-950/30' : 'border-slate-200 bg-white dark:border-slate-800 dark:bg-[#0B1325]'}`}>
+            <span className="inline-flex rounded-lg bg-emerald-700 px-2.5 py-1 text-[10px] sm:text-xs font-black text-white">AGRI</span>
+            <span className="mt-2 block text-xs sm:text-sm font-black text-slate-900 dark:text-slate-100">কৃষি ভর্তি প্রশ্নব্যাংক</span>
+            <span className="mt-1 block text-[10px] sm:text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">GST-Agri, GAU, BAU, SAU, CVASU, SYLAU</span>
+          </button>
+          <button type="button" onClick={() => { onSelectInstitution('ALL'); onSelectUnit(null); setOtherFilter('all'); }} aria-pressed={selectedInstitution === 'ALL'} className={`rounded-2xl border-2 p-3 sm:p-4 text-left transition-all ${selectedInstitution === 'ALL' ? 'border-indigo-500 bg-indigo-50 shadow-md dark:border-sky-400 dark:bg-indigo-950/50' : 'border-slate-200 bg-white dark:border-slate-800 dark:bg-[#0B1325]'}`}>
+            <span className="inline-flex rounded-lg bg-slate-700 px-2.5 py-1 text-[10px] sm:text-xs font-black text-white">ALL</span>
+            <span className="mt-2 block text-xs sm:text-sm font-black text-slate-900 dark:text-slate-100">অন্যান্য বিশ্ববিদ্যালয়</span>
+            <span className="mt-1 block text-[10px] sm:text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">BUET, SUST, BUTEX, BUP সহ অন্যান্য বিশ্ববিদ্যালয়</span>
+          </button>
         </div>
 
-        {availableUnits.length > 1 && (
-          <div className="flex flex-wrap items-center gap-2 pt-1" aria-label="University unit selector">
-            <span className="text-xs font-bold text-slate-500">ইউনিট</span>
-            {availableUnits.map(unit => <button key={unit} onClick={() => onSelectUnit(selectedUnit === unit ? null : unit)} aria-pressed={selectedUnit === unit} className={"min-h-10 px-4 py-2 rounded-xl text-xs font-bold " + (selectedUnit === unit ? "bg-indigo-600 text-white" : "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700")}>{unit} Unit</button>)}
+        {selectedInstitution === 'AGRI' && (
+          <div className="space-y-2 rounded-2xl border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/60 dark:bg-emerald-950/20">
+            <h3 className="text-xs font-black text-emerald-800 dark:text-emerald-300">কৃষি বিশ্ববিদ্যালয় সাব-ফিল্টার (Agri Cluster Filter)</h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                ['ALL','All (সকল)'],['GST-Agri','GST-AGRI — কৃষি গুচ্ছ (GST Agri)'],['GAU','GAU — গাজীপুর কৃষি বিশ্ববিদ্যালয়'],['BAU','BAU — বাংলাদেশ কৃষি বিশ্ববিদ্যালয়'],['SAU','SAU — শেরেবাংলা কৃষি বিশ্ববিদ্যালয়'],['CVASU','CVASU — চট্টগ্রাম ভেটেরিনারি ও অ্যানিম্যাল সায়েন্সেস'],['SYLAU','SYLAU — সিলেট কৃষি বিশ্ববিদ্যালয়']
+              ].map(([id,label]) => <button key={id} onClick={() => setAgriFilter(id)} aria-pressed={agriFilter === id} className={`rounded-xl border px-3 py-2 text-[10px] sm:text-xs font-bold transition-colors ${agriFilter === id ? 'border-emerald-600 bg-emerald-700 text-white' : 'border-emerald-200 bg-white text-emerald-900 dark:border-emerald-900 dark:bg-[#071B14] dark:text-emerald-200'}`}>{label}</button>)}
+            </div>
           </div>
         )}
+
+        {selectedInstitution === 'ALL' && (
+          <div className="space-y-2 rounded-2xl border border-indigo-200 bg-indigo-50/60 p-3 dark:border-indigo-900/60 dark:bg-indigo-950/20">
+            <div className="flex items-center justify-between gap-2"><h3 className="text-xs font-black text-indigo-800 dark:text-sky-300">Other University Filter</h3><button onClick={() => setShowUniversitySheet(true)} className="text-[10px] font-extrabold text-indigo-700 underline dark:text-sky-300">Browse all</button></div>
+            <div className="flex flex-wrap gap-2">
+              {[
+                ['all','All (সকল)'],['engineering','Engineering'],['science-tech','Science & Technology'],['textile','Textile'],['military','Specialized'],['general','Other Public Universities']
+              ].map(([id,label]) => <button key={id} onClick={() => {setOtherFilter(id); setUniversitySearch('');}} aria-pressed={otherFilter === id} className={`rounded-xl border px-3 py-2 text-[10px] sm:text-xs font-bold ${otherFilter === id ? 'border-indigo-600 bg-indigo-600 text-white' : 'border-indigo-200 bg-white text-indigo-900 dark:border-indigo-900 dark:bg-[#0A1224] dark:text-slate-200'}`}>{label}</button>)}
+            </div>
+          </div>
+        )}
+
+        {availableUnits.length > 1 && !['AGRI','ALL'].includes(selectedInstitution) && <div className="flex flex-wrap items-center gap-2 pt-1" aria-label="University unit selector"><span className="text-xs font-bold text-slate-500">ইউনিট</span>{availableUnits.map(unit => <button key={unit} onClick={() => onSelectUnit(selectedUnit === unit ? null : unit)} aria-pressed={selectedUnit === unit} className={`min-h-10 px-4 py-2 rounded-xl text-xs font-bold ${selectedUnit === unit ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700'}`}>{unit} Unit</button>)}</div>}
 
         {currentUniversity?.hasQuestions && currentUniversity.units.length > 0 && (
           <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-indigo-50/90 via-sky-50/60 to-white dark:from-[#0B152C] dark:via-[#091122] dark:to-[#070D1A] border border-indigo-200 dark:border-indigo-900/70 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="space-y-1.5 flex-1">
-              <div className="flex items-center gap-2 flex-wrap">
-                <span className="px-2.5 py-0.5 rounded-full bg-indigo-600 text-white text-[10px] sm:text-xs font-black">{currentUniversity.short} • {currentUniversity.units.find(unit => unit.unit === (selectedUnit || currentUniversity.units[0].unit))?.label}</span>
-                <span className="text-xs font-black text-slate-800 dark:text-slate-200">বিষয় বণ্টন ও অনুষদ যোগ্যতা ({currentUniversity.units[0].year})</span>
-              </div>
-              {(() => {
-                const rule = currentUniversity.units.find(unit => unit.unit === (selectedUnit || currentUniversity.units[0].unit));
-                if (!rule?.verified) return <p className="text-xs text-amber-700 dark:text-amber-300">এই ইউনিটের বিষয় ও নম্বর বণ্টন যাচাই করা হয়নি।</p>;
-                return <div className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed"><b className="text-emerald-700 dark:text-emerald-400">আবশ্যিক: </b>{rule.compulsory.map(subject => subject.subject + " (" + subject.marks + ")").join(", ")} <b className="ml-2 text-purple-700 dark:text-purple-400">ঐচ্ছিক: </b>{rule.optionalPick?.note || "প্রযোজ্য নয়"}</div>;
-              })()}
+              <div className="flex items-center gap-2 flex-wrap"><span className="px-2.5 py-0.5 rounded-full bg-indigo-600 text-white text-[10px] sm:text-xs font-black">{currentUniversity.short} • {currentUniversity.units.find(unit => unit.unit === (selectedUnit || currentUniversity.units[0].unit))?.label}</span><span className="text-xs font-black text-slate-800 dark:text-slate-200">বিষয় বণ্টন ও অনুষদ যোগ্যতা ({currentUniversity.units[0].year})</span></div>
+              {(() => { const rule = currentUniversity.units.find(unit => unit.unit === (selectedUnit || currentUniversity.units[0].unit)); if (!rule?.verified) return <p className="text-xs text-amber-700 dark:text-amber-300">এই ইউনিটের বিষয় ও নম্বর বণ্টন যাচাই করা হয়নি।</p>; return <div className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed"><b className="text-emerald-700 dark:text-emerald-400">আবশ্যিক: </b>{rule.compulsory.map(subject => subject.subject + ' (' + subject.marks + ')').join(', ')} <b className="ml-2 text-purple-700 dark:text-purple-400">ঐচ্ছিক: </b>{rule.optionalPick?.note || 'প্রযোজ্য নয়'}</div>; })()}
             </div>
             <button onClick={() => onOpenRulesModal(selectedInstitution)} className="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold rounded-xl text-xs flex items-center gap-2 cursor-pointer"><Info className="w-3.5 h-3.5" />সম্পূর্ণ মানবণ্টন নির্দেশিকা দেখুন</button>
           </div>
@@ -281,12 +334,14 @@ export const Home: React.FC<HomeProps> = ({
 
       {/* University session list */}
       <section ref={sessionSectionRef} className="scroll-mt-24 space-y-6">
-        <div className="flex items-center justify-between gap-3"><h2 className="text-base sm:text-lg font-black text-slate-900 dark:text-slate-100">{currentUniversity?.nameBn || 'ভর্তি পরীক্ষার প্রশ্ন'}</h2>{selectedUnit && <span className="rounded-lg bg-indigo-100 px-2.5 py-1 text-xs font-bold text-indigo-700 dark:bg-indigo-950 dark:text-sky-300">{selectedUnit} Unit</span>}</div>
+        <div className="flex items-center justify-between gap-3"><h2 className="text-base sm:text-lg font-black text-slate-900 dark:text-slate-100">{selectedInstitution === 'AGRI' ? 'কৃষি ভর্তি প্রশ্নব্যাংক' : selectedInstitution === 'ALL' ? 'অন্যান্য বিশ্ববিদ্যালয়ের প্রশ্নব্যাংক' : currentUniversity?.nameBn || 'ভর্তি পরীক্ষার প্রশ্ন'}</h2>{selectedUnit && <span className="rounded-lg bg-indigo-100 px-2.5 py-1 text-xs font-bold text-indigo-700 dark:bg-indigo-950 dark:text-sky-300">{selectedUnit} Unit</span>}</div>
 
         {/* Session Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {filteredSessions.map((session, index) => {
-            const palette = PALETTES[index % PALETTES.length];
+            const subjectKey = session.unit || session.institution;
+            const paletteIndex = Math.abs(Array.from(subjectKey).reduce((sum, char) => sum + char.charCodeAt(0), 0)) % 5;
+            const palette = PALETTES[paletteIndex];
             const hasQuestions = Boolean(manifestPapers[session.id]);
 
             return (
@@ -345,8 +400,8 @@ export const Home: React.FC<HomeProps> = ({
         {filteredSessions.length === 0 && (
           <div className="text-center py-16 space-y-3 bg-slate-50 dark:bg-[#070D1D] rounded-3xl border border-slate-200 dark:border-indigo-950">
             <FileText className="w-12 h-12 text-slate-400 mx-auto" />
-            <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">{currentUniversity?.hasQuestions ? 'No matching sessions found' : 'এই বিশ্ববিদ্যালয়ের প্রশ্ন শীঘ্রই যুক্ত হবে'}</h3>
-            <p className="text-xs text-slate-500">{currentUniversity?.hasQuestions ? 'Try changing your search keywords.' : 'প্রশ্নপত্র যুক্ত হলে এখানে দেখা যাবে।'}</p>
+            <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">{selectedInstitution === 'AGRI' ? 'এই কৃষি সাব-ফিল্টারে এখনো কোনো প্রশ্ন পাওয়া যায়নি' : selectedInstitution === 'ALL' ? 'এই ফিল্টারে এখনো কোনো প্রশ্ন যুক্ত হয়নি' : currentUniversity?.hasQuestions ? 'No matching sessions found' : 'এই বিশ্ববিদ্যালয়ের প্রশ্ন এখনো যুক্ত করা হয়নি'}</h3>
+            <p className="text-xs text-slate-500">{selectedInstitution === 'AGRI' || selectedInstitution === 'ALL' ? 'অন্য ফিল্টার নির্বাচন করে দেখুন।' : currentUniversity?.hasQuestions ? 'Try changing your search keywords.' : 'প্রশ্নপত্র যুক্ত হলে এখানে দেখা যাবে।'}</p>
           </div>
         )}
       </section>
