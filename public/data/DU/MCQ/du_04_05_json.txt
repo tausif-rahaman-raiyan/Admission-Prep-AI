@@ -2601,7 +2601,7 @@
       "correct_answer": "A",
       "explanation": {
         "one_line_calculation": "Domain of $R = \\{1,2,3\\} = A$, and each element in domain maps to exactly one value.",
-        "step_by_step_solution": "Domain $\{1, 2, 3\} = A$, making $R$ a valid function from $A$ to $B$. Range is $\{4, 5\} \\neq B$, so it is not onto (সার্বিক) nor one-to-one (এক-এক).",
+        "step_by_step_solution": "Domain $\\{1, 2, 3\\} = A$, making $R$ a valid function from $A$ to $B$. Range is $\\{4, 5\\} \\neq B$, so it is not onto (সার্বিক) nor one-to-one (এক-এক).",
         "shortcut_tip": "Domain $= A \\Rightarrow R$ is a function with Domain $A$."
       }
     },

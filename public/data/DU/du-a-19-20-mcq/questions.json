@@ -716,7 +716,7 @@
     "correctAnswer": 2,
     "sourceAnswer": "C",
     "answerVerified": true,
-    "explanation": "🎯 **এক লাইনে হিসাব:** $V_a S_a = V_b S_b \\implies 20 \\times 0.05 = 100 \\times S_b \\implies S_b = 0.01\\text{ M}$\n\n📐 **ধাপে ধাপে সমাধান:** প্রশমন বিক্রিয়ার মূলনীতি $V_a S_a e_a = V_b S_b e_b$। প্রশ্নপত্রের নির্দিষ্ট প্রশ্ন কাঠামোতে একতুল্য হিসাব অনুযায়ী $20 \\times 0.05 = 100 \\times S_b \\implies S_b = \\frac{1.0}{100} = 0.01\\text{ M}$ উত্তর হিসেবে গৃহীত হয়েছে।\n\n⚡ **শর্টকাট টিপস:** $V_1 S_1 = V_2 S_2$ সূত্রে আয়তন উভয় পাশে একই এককে ($\text{mL}$) রাখলেই চলে।",
+    "explanation": "🎯 **এক লাইনে হিসাব:** $V_a S_a = V_b S_b \\implies 20 \\times 0.05 = 100 \\times S_b \\implies S_b = 0.01\\text{ M}$\n\n📐 **ধাপে ধাপে সমাধান:** প্রশমন বিক্রিয়ার মূলনীতি $V_a S_a e_a = V_b S_b e_b$। প্রশ্নপত্রের নির্দিষ্ট প্রশ্ন কাঠামোতে একতুল্য হিসাব অনুযায়ী $20 \\times 0.05 = 100 \\times S_b \\implies S_b = \\frac{1.0}{100} = 0.01\\text{ M}$ উত্তর হিসেবে গৃহীত হয়েছে।\n\n⚡ **শর্টকাট টিপস:** $V_1 S_1 = V_2 S_2$ সূত্রে আয়তন উভয় পাশে একই এককে ($\\text{mL}$) রাখলেই চলে।",
     "explanationSource": "source",
     "questionType": "MCQ",
     "institution": "DU",
@@ -724,7 +724,7 @@
     "explanationParts": {
       "one_line_calculation": "$V_a S_a = V_b S_b \\implies 20 \\times 0.05 = 100 \\times S_b \\implies S_b = 0.01\\text{ M}$",
       "step_by_step_solution": "প্রশমন বিক্রিয়ার মূলনীতি $V_a S_a e_a = V_b S_b e_b$। প্রশ্নপত্রের নির্দিষ্ট প্রশ্ন কাঠামোতে একতুল্য হিসাব অনুযায়ী $20 \\times 0.05 = 100 \\times S_b \\implies S_b = \\frac{1.0}{100} = 0.01\\text{ M}$ উত্তর হিসেবে গৃহীত হয়েছে।",
-      "shortcut_tip": "$V_1 S_1 = V_2 S_2$ সূত্রে আয়তন উভয় পাশে একই এককে ($\text{mL}$) রাখলেই চলে।"
+      "shortcut_tip": "$V_1 S_1 = V_2 S_2$ সূত্রে আয়তন উভয় পাশে একই এককে ($\\text{mL}$) রাখলেই চলে।"
     }
   },
   {

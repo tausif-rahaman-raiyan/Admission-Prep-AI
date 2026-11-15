@@ -1704,14 +1704,14 @@
     "correctAnswer": 1,
     "sourceAnswer": "B",
     "answerVerified": true,
-    "explanation": "🎯 **এক লাইনে হিসাব:** Lenticel -> Gas exchange & Lenticular transpiration\n\n📐 **ধাপে ধাপে সমাধান:** উদ্ভিদের কাণ্ডের বাকলে অবস্থিত ক্ষুদ্র ছিদ্র বা লেন্টিসেলের প্রধান কাজ হলো পরিবেশের সাথে অভ্যন্তরীণ টিস্যুর গ্যাসীয় বিনিময় ($\text{O}_2$ ও $\text{CO}_2$) ঘটানো।\n\n⚡ **শর্টকাট টিপস:** লেন্টিসেল = কাণ্ডের শ্বাসছিদ্র (গ্যাস বিনিময়)।",
+    "explanation": "🎯 **এক লাইনে হিসাব:** Lenticel -> Gas exchange & Lenticular transpiration\n\n📐 **ধাপে ধাপে সমাধান:** উদ্ভিদের কাণ্ডের বাকলে অবস্থিত ক্ষুদ্র ছিদ্র বা লেন্টিসেলের প্রধান কাজ হলো পরিবেশের সাথে অভ্যন্তরীণ টিস্যুর গ্যাসীয় বিনিময় ($\\text{O}_2$ ও $\\text{CO}_2$) ঘটানো।\n\n⚡ **শর্টকাট টিপস:** লেন্টিসেল = কাণ্ডের শ্বাসছিদ্র (গ্যাস বিনিময়)।",
     "explanationSource": "source",
     "questionType": "MCQ",
     "institution": "DU",
     "session": "05-06",
     "explanationParts": {
       "one_line_calculation": "Lenticel -> Gas exchange & Lenticular transpiration",
-      "step_by_step_solution": "উদ্ভিদের কাণ্ডের বাকলে অবস্থিত ক্ষুদ্র ছিদ্র বা লেন্টিসেলের প্রধান কাজ হলো পরিবেশের সাথে অভ্যন্তরীণ টিস্যুর গ্যাসীয় বিনিময় ($\text{O}_2$ ও $\text{CO}_2$) ঘটানো।",
+      "step_by_step_solution": "উদ্ভিদের কাণ্ডের বাকলে অবস্থিত ক্ষুদ্র ছিদ্র বা লেন্টিসেলের প্রধান কাজ হলো পরিবেশের সাথে অভ্যন্তরীণ টিস্যুর গ্যাসীয় বিনিময় ($\\text{O}_2$ ও $\\text{CO}_2$) ঘটানো।",
       "shortcut_tip": "লেন্টিসেল = কাণ্ডের শ্বাসছিদ্র (গ্যাস বিনিময়)।"
     }
   },

@@ -1083,7 +1083,7 @@
     "correctAnswer": 2,
     "sourceAnswer": "C",
     "answerVerified": true,
-    "explanation": "🎯 **এক লাইনে হিসাব:** $\\text{CaC}_2 + 2\\text{H}_2\\text{O} \\rightarrow \\text{C}_2\\text{H}_2 (\\text{Acetylene}) + \\text{Ca(OH)}_2$\n\n📐 **ধাপে ধাপে সমাধান:** ক্যালসিয়াম কার্বাইডে ফোঁটায় ফোঁটায় পানি যোগ করলে ইথাইন বা অ্যাসিটিলিন গ্যাস উৎপন্ন হয়।\n\n⚡ **শর্টকাট টিপস:** কার্বাইড + পানি = অ্যাসিটিলিন ($\text{C}_2\text{H}_2$)।",
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\text{CaC}_2 + 2\\text{H}_2\\text{O} \\rightarrow \\text{C}_2\\text{H}_2 (\\text{Acetylene}) + \\text{Ca(OH)}_2$\n\n📐 **ধাপে ধাপে সমাধান:** ক্যালসিয়াম কার্বাইডে ফোঁটায় ফোঁটায় পানি যোগ করলে ইথাইন বা অ্যাসিটিলিন গ্যাস উৎপন্ন হয়।\n\n⚡ **শর্টকাট টিপস:** কার্বাইড + পানি = অ্যাসিটিলিন ($\\text{C}_2\\text{H}_2$)।",
     "explanationSource": "source",
     "questionType": "MCQ",
     "institution": "DU",
@@ -1091,7 +1091,7 @@
     "explanationParts": {
       "one_line_calculation": "$\\text{CaC}_2 + 2\\text{H}_2\\text{O} \\rightarrow \\text{C}_2\\text{H}_2 (\\text{Acetylene}) + \\text{Ca(OH)}_2$",
       "step_by_step_solution": "ক্যালসিয়াম কার্বাইডে ফোঁটায় ফোঁটায় পানি যোগ করলে ইথাইন বা অ্যাসিটিলিন গ্যাস উৎপন্ন হয়।",
-      "shortcut_tip": "কার্বাইড + পানি = অ্যাসিটিলিন ($\text{C}_2\text{H}_2$)।"
+      "shortcut_tip": "কার্বাইড + পানি = অ্যাসিটিলিন ($\\text{C}_2\\text{H}_2$)।"
     }
   },
   {
@@ -1447,15 +1447,15 @@
     "correctAnswer": 2,
     "sourceAnswer": "C",
     "answerVerified": true,
-    "explanation": "🎯 **এক লাইনে হিসাব:** $\\text{Ar} \\approx 0.93\\% \\text{ in air}$\n\n📐 **ধাপে ধাপে সমাধান:** বায়ুমণ্ডলে আয়তন হিসেবে প্রায় $0.93\\%$ আর্গন ($\text{Ar}$) গ্যাস বিদ্যমান, যা নিষ্ক্রিয় গ্যাসগুলোর মধ্যে সর্বোচ্চ।\n\n⚡ **শর্টকাট টিপস:** বাতাসে তৃতীয় সর্বাধিক গ্যাস এবং সর্বাধিক নিষ্ক্রিয় গ্যাস = আর্গন ($\text{Ar}$)।",
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\text{Ar} \\approx 0.93\\% \\text{ in air}$\n\n📐 **ধাপে ধাপে সমাধান:** বায়ুমণ্ডলে আয়তন হিসেবে প্রায় $0.93\\%$ আর্গন ($\\text{Ar}$) গ্যাস বিদ্যমান, যা নিষ্ক্রিয় গ্যাসগুলোর মধ্যে সর্বোচ্চ।\n\n⚡ **শর্টকাট টিপস:** বাতাসে তৃতীয় সর্বাধিক গ্যাস এবং সর্বাধিক নিষ্ক্রিয় গ্যাস = আর্গন ($\\text{Ar}$)।",
     "explanationSource": "source",
     "questionType": "MCQ",
     "institution": "DU",
     "session": "03-04",
     "explanationParts": {
       "one_line_calculation": "$\\text{Ar} \\approx 0.93\\% \\text{ in air}$",
-      "step_by_step_solution": "বায়ুমণ্ডলে আয়তন হিসেবে প্রায় $0.93\\%$ আর্গন ($\text{Ar}$) গ্যাস বিদ্যমান, যা নিষ্ক্রিয় গ্যাসগুলোর মধ্যে সর্বোচ্চ।",
-      "shortcut_tip": "বাতাসে তৃতীয় সর্বাধিক গ্যাস এবং সর্বাধিক নিষ্ক্রিয় গ্যাস = আর্গন ($\text{Ar}$)।"
+      "step_by_step_solution": "বায়ুমণ্ডলে আয়তন হিসেবে প্রায় $0.93\\%$ আর্গন ($\\text{Ar}$) গ্যাস বিদ্যমান, যা নিষ্ক্রিয় গ্যাসগুলোর মধ্যে সর্বোচ্চ।",
+      "shortcut_tip": "বাতাসে তৃতীয় সর্বাধিক গ্যাস এবং সর্বাধিক নিষ্ক্রিয় গ্যাস = আর্গন ($\\text{Ar}$)।"
     }
   },
   {

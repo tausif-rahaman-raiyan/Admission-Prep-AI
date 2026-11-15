@@ -74,7 +74,7 @@
       "correct_answer": "D",
       "explanation": {
         "one_line_calculation": "$E^\\circ_{\\text{F}_2/\\text{F}^-} = +2.87\\text{ V} > E^\\circ_{\\text{Cu}^{2+}/\\text{Cu}} = +0.34\\text{ V} > E^\\circ_{\\text{H}^+/\\text{H}_2} = 0.00\\text{ V} > E^\\circ_{\\text{Na}^+/\\text{Na}} = -2.71\\text{ V}$",
-        "step_by_step_solution": "ফ্লোরিন ($\text{F}_2$) সবচেয়ে তড়িৎ ঋণাত্মক এবং সবচেয়ে শক্তিশালী জারক পদার্থ হওয়ায় এর ইলেকট্রন গ্রহণের প্রবণতা সবচেয়ে বেশি। ফলে $\\text{F}_2/\\text{F}^-$ ইলেকট্রোডের প্রমাণ বিজারণ বিভব সবচেয়ে বেশি ($+2.87\\text{ V}$)।",
+        "step_by_step_solution": "ফ্লোরিন ($\\text{F}_2$) সবচেয়ে তড়িৎ ঋণাত্মক এবং সবচেয়ে শক্তিশালী জারক পদার্থ হওয়ায় এর ইলেকট্রন গ্রহণের প্রবণতা সবচেয়ে বেশি। ফলে $\\text{F}_2/\\text{F}^-$ ইলেকট্রোডের প্রমাণ বিজারণ বিভব সবচেয়ে বেশি ($+2.87\\text{ V}$)।",
         "shortcut_tip": "সবচেয়ে শক্তিশালী জারকের প্রমাণ বিজারণ পটেনশিয়াল সর্বোচ্চ হয়; হ্যালোজেনের মধ্যে $\\text{F}_2$ শীর্ষে।"
       }
     },
@@ -151,7 +151,7 @@
       "explanation": {
         "one_line_calculation": "$\\text{Fe}^{3+}$ has high charge density ($+3$ charge, small ionic radius) $\\implies$ strong polarization (Fajan's rule)",
         "step_by_step_solution": "ফাজানের নীতি অনুসারে, ক্যাটায়নের চার্জ বেশি ও আকার ছোট হলে অ্যানায়নকে বিকৃত করে সমযোজী বৈশিষ্ট্য বাড়ায়। প্রদত্ত অপশনগুলোর মধ্যে $\\text{FeCl}_3$-এ $\\text{Fe}^{3+}$ আয়নের উচ্চ চার্জ ঘনত্ব সমযোজী ধর্ম বৃদ্ধি করে।",
-        "shortcut_tip": "একই অ্যানায়ন ($\text{Cl}^-$) থাকলে ক্যাটায়নের চার্জ বেশি ও আকার ছোট হলে সমযোজী ধর্ম বাড়ে।"
+        "shortcut_tip": "একই অ্যানায়ন ($\\text{Cl}^-$) থাকলে ক্যাটায়নের চার্জ বেশি ও আকার ছোট হলে সমযোজী ধর্ম বাড়ে।"
       }
     },
     {
@@ -169,7 +169,7 @@
       "correct_answer": "D",
       "explanation": {
         "one_line_calculation": "$\\text{Cu}(29): [\\text{Ar}]\\,3d^{10}\\,4s^1$ (full $3d$ subshell provides extra stability)",
-        "step_by_step_solution": "কপার ($\text{Cu}, 29$)-এর স্বাভাবিক ইলেকট্রন বিন্যাস $[\text{Ar}]\\,3d^9\\,4s^2$ হওয়ার কথা থাকলেও পূর্ণ $3d^{10}$ অরবিটালের অতিরিক্ত স্থিতিশীলতার জন্য একটি ইলেকট্রন $4s$ থেকে $3d$-তে স্থানান্তরিত হয়ে $3d^{10}4s^1$ হয়।",
+        "step_by_step_solution": "কপার ($\\text{Cu}, 29$)-এর স্বাভাবিক ইলেকট্রন বিন্যাস $[\\text{Ar}]\\,3d^9\\,4s^2$ হওয়ার কথা থাকলেও পূর্ণ $3d^{10}$ অরবিটালের অতিরিক্ত স্থিতিশীলতার জন্য একটি ইলেকট্রন $4s$ থেকে $3d$-তে স্থানান্তরিত হয়ে $3d^{10}4s^1$ হয়।",
         "shortcut_tip": "ব্যতিক্রমী ইলেকট্রন বিন্যাস $\\text{Cr}(24)$ ও $\\text{Cu}(29)$-এর $4s$ অরবিটালে $1$টি ইলেকট্রন থাকে।"
       }
     },
@@ -208,7 +208,7 @@
       "explanation": {
         "one_line_calculation": "$\\text{XeF}_2$: valence electrons on $\\text{Xe} = 8 + 2 = 10$ (expanded octet)",
         "step_by_step_solution": "$\\text{CCl}_4$, $\\text{H}_2\\text{O}$ এবং $\\text{NF}_3$-এর কেন্দ্রীয় পরমাণুর যোজ্যতা স্তরে $8$টি করে ইলেকট্রন থাকে। কিন্তু $\\text{XeF}_2$-এ কেন্দ্রীয় $\\text{Xe}$ পরমাণুর $8$টি যোজ্যতা ইলেকট্রনের সাথে $2$টি $\\text{F}$ পরমাণু যুক্ত হয়ে মোট $10$টি ইলেকট্রন সৃষ্টি করে, যা অষ্টক সম্প্রসারণ।",
-        "shortcut_tip": "নিষ্ক্রিয় গ্যাসের যৌগ ($\text{XeF}_2, \text{XeF}_4$ ইত্যাদি) সাধারণত অষ্টক সম্প্রসারিত করে।"
+        "shortcut_tip": "নিষ্ক্রিয় গ্যাসের যৌগ ($\\text{XeF}_2, \\text{XeF}_4$ ইত্যাদি) সাধারণত অষ্টক সম্প্রসারিত করে।"
       }
     },
     {
@@ -264,7 +264,7 @@
       "correct_answer": "A",
       "explanation": {
         "one_line_calculation": "$M_1 V_1 e_1 = M_2 V_2 e_2 \\implies M_1 \\times 8.0 \\times 2 = 1.0 \\times 10.0 \\times 1 \\implies M_1 = \\frac{10}{16} = 0.625\\text{ M}$",
-        "step_by_step_solution": "$\\text{Na}_2\\text{CO}_3 + 2\\text{HCl} \\to 2\\text{NaCl} + \\text{H}_2\\text{O} + \\text{CO}_2$ বিক্রিয়ায় $\\text{Na}_2\\text{CO}_3$-এর তুল্য সংখ্যা $e_1 = 2$ এবং $\\text{HCl}$-এর $e_2 = 1$। প্রশমন সূত্র $V_1 S_1 e_1 = V_2 S_2 e_2$ ব্যবহার করে $S_1 = \\frac{10.0 \\times 1.0 \\times 1}{8.0 \times 2} = 0.625\\text{ M}$।",
+        "step_by_step_solution": "$\\text{Na}_2\\text{CO}_3 + 2\\text{HCl} \\to 2\\text{NaCl} + \\text{H}_2\\text{O} + \\text{CO}_2$ বিক্রিয়ায় $\\text{Na}_2\\text{CO}_3$-এর তুল্য সংখ্যা $e_1 = 2$ এবং $\\text{HCl}$-এর $e_2 = 1$। প্রশমন সূত্র $V_1 S_1 e_1 = V_2 S_2 e_2$ ব্যবহার করে $S_1 = \\frac{10.0 \\times 1.0 \\times 1}{8.0 \\times 2} = 0.625\\text{ M}$।",
         "shortcut_tip": "$\\text{Na}_2\\text{CO}_3$-এ $2$টি $\\text{Na}^+$ থাকায় তুল্য সংখ্যা $2$; তাই নিচে $2$ দিয়ে গুণ করতে ভুলো না।"
       }
     },
@@ -283,8 +283,8 @@
       "correct_answer": "A",
       "explanation": {
         "one_line_calculation": "\\text{Stainless steel} \\approx \\text{Fe} + \\text{Cr} + \\text{Ni} (+\\text{C})",
-        "step_by_step_solution": "স্টেইনলেস স্টীল মূলত লোহা ($\text{Fe}$)-এর একটি সংকর ধাতু, যাতে মরিচা প্রতিরোধী ধর্ম আনার জন্য ক্রোমিয়াম ($\text{Cr}$) এবং নিকেল ($\text{Ni}$) যুক্ত করা হয়।",
-        "shortcut_tip": "স্টেইনলেস স্টীল = লোহা ($\text{Fe}$) + ক্রোমিয়াম ($\text{Cr}$) + নিকেল ($\text{Ni}$)।"
+        "step_by_step_solution": "স্টেইনলেস স্টীল মূলত লোহা ($\\text{Fe}$)-এর একটি সংকর ধাতু, যাতে মরিচা প্রতিরোধী ধর্ম আনার জন্য ক্রোমিয়াম ($\\text{Cr}$) এবং নিকেল ($\\text{Ni}$) যুক্ত করা হয়।",
+        "shortcut_tip": "স্টেইনলেস স্টীল = লোহা ($\\text{Fe}$) + ক্রোমিয়াম ($\\text{Cr}$) + নিকেল ($\\text{Ni}$)।"
       }
     },
     {
@@ -302,7 +302,7 @@
       "correct_answer": "B",
       "explanation": {
         "one_line_calculation": "\\text{PF}_3: sp^3 \\text{ hybridization with } 1 \\text{ lone pair} \\implies \\text{trigonal pyramidal (non-planar)}",
-        "step_by_step_solution": "$\\text{BCl}_3$ ও $\\text{AlCl}_3$ ত্রিকোণাকার সমতলীয় (trigonal planar) এবং বেনজিন ($\text{C}_6\\text{H}_6$) সমতলীয় বলয়। কিন্তু $\\text{PF}_3$-এ $\\text{P}$ পরমাণুর $sp^3$ সংকরায়ন ও একটি মুক্তজোড় ইলেকট্রন থাকায় এর আকৃতি ত্রিকোণাকার পিরামিডীয় (trigonal pyramidal), ফলে সব পরমাণু এক সমতলে থাকে না।",
+        "step_by_step_solution": "$\\text{BCl}_3$ ও $\\text{AlCl}_3$ ত্রিকোণাকার সমতলীয় (trigonal planar) এবং বেনজিন ($\\text{C}_6\\text{H}_6$) সমতলীয় বলয়। কিন্তু $\\text{PF}_3$-এ $\\text{P}$ পরমাণুর $sp^3$ সংকরায়ন ও একটি মুক্তজোড় ইলেকট্রন থাকায় এর আকৃতি ত্রিকোণাকার পিরামিডীয় (trigonal pyramidal), ফলে সব পরমাণু এক সমতলে থাকে না।",
         "shortcut_tip": "পিরামিডীয় (যেমন $\\text{NH}_3, \\text{PF}_3$) বা চতুস্তলকীয় আকৃতির অণু সমতলীয় হয় না।"
       }
     },
@@ -322,7 +322,7 @@
       "explanation": {
         "one_line_calculation": "\\text{Al}^{3+} \\text{ has } +3 \\text{ charge and small } 2s^2 2p^6 \\text{ core} \\implies \\text{highest ionization energy}",
         "step_by_step_solution": "$\\text{Al}^{3+}$ আয়নের চার্জ $+3$ এবং এর ইলেকট্রন বিন্যাস স্থিতিশীল নিওনের মতো ($1s^2 2s^2 2p^6$) হলেও প্রোটনের তুলনায় ইলেকট্রনের সংখ্যা কম থাকায় নিউক্লিয়াসের আকর্ষণ অত্যন্ত প্রবল। তাই এখান থেকে ইলেকট্রন সরাতে সবচেয়ে বেশি আয়নীকরণ শক্তি লাগে।",
-        "shortcut_tip": "উচ্চ ধনাত্মক চার্জযুক্ত ক্যাটায়ন ($\text{Al}^{3+}$) থেকে ইলেকট্রন সরাতে সবচেয়ে বেশি শক্তি লাগে।"
+        "shortcut_tip": "উচ্চ ধনাত্মক চার্জযুক্ত ক্যাটায়ন ($\\text{Al}^{3+}$) থেকে ইলেকট্রন সরাতে সবচেয়ে বেশি শক্তি লাগে।"
       }
     },
     {
@@ -340,7 +340,7 @@
       "correct_answer": "B",
       "explanation": {
         "one_line_calculation": "\\text{CH}_3\\text{CH}_2\\text{CH(OH)CH}_3 + \\text{I}_2/\\text{OH}^- \\to \\text{CH}_3\\text{CH}_2\\text{COO}^-\\text{Na}^+ + \\text{CHI}_3\\downarrow",
-        "step_by_step_solution": "বিউটান-২-অল ($\text{CH}_3\\text{CH}_2\\text{CH(OH)CH}_3$)-এ $\\text{CH}_3\\text{CH(OH)}-$ গ্রুপ থাকায় এটি হ্যালোফর্ম (আয়োডোফর্ম) বিক্রিয়া দেয়। এতে হলুদ অধঃক্ষেপ হিসেবে আয়োডোফর্ম ($\text{CHI}_3$) এবং দ্রবণে প্রোপানোয়েট আয়ন ($\\text{CH}_3\\text{CH}_2\\text{COO}^-$) উৎপন্ন হয়।",
+        "step_by_step_solution": "বিউটান-২-অল ($\\text{CH}_3\\text{CH}_2\\text{CH(OH)CH}_3$)-এ $\\text{CH}_3\\text{CH(OH)}-$ গ্রুপ থাকায় এটি হ্যালোফর্ম (আয়োডোফর্ম) বিক্রিয়া দেয়। এতে হলুদ অধঃক্ষেপ হিসেবে আয়োডোফর্ম ($\\text{CHI}_3$) এবং দ্রবণে প্রোপানোয়েট আয়ন ($\\text{CH}_3\\text{CH}_2\\text{COO}^-$) উৎপন্ন হয়।",
         "shortcut_tip": "$\\text{CH}_3\\text{CH(OH)}-$ থাকলে $\\text{I}_2/\\text{OH}^-$ বিক্রিয়ায় $\\text{CHI}_3$ ও এক কার্বন কম কার্বক্সিলেট আয়ন পাওয়া যায়।"
       }
     },
@@ -359,7 +359,7 @@
       "correct_answer": "B",
       "explanation": {
         "one_line_calculation": "\\text{C}_2\\text{H}_5\\text{OH} \\xrightarrow{[\\text{O}]} \\text{CH}_3\\text{CHO} \\xrightarrow{[\\text{O}]} \\text{CH}_3\\text{COOH} (\\text{Z})",
-        "step_by_step_solution": "ইথানল ($\text{C}_2\\text{H}_5\\text{OH}$) সম্পূর্ণ জারিত হয়ে ইথানয়িক অ্যাসিড ($\\text{CH}_3\\text{COOH}$) গঠন করে। এটি পুনরায় ইথানলের সাথে বিক্রিয়া করে ইথাইল ইথানোয়েট নামক এস্টার উৎপন্ন করে।",
+        "step_by_step_solution": "ইথানল ($\\text{C}_2\\text{H}_5\\text{OH}$) সম্পূর্ণ জারিত হয়ে ইথানয়িক অ্যাসিড ($\\text{CH}_3\\text{COOH}$) গঠন করে। এটি পুনরায় ইথানলের সাথে বিক্রিয়া করে ইথাইল ইথানোয়েট নামক এস্টার উৎপন্ন করে।",
         "shortcut_tip": "$2$ কার্বনের অ্যালকোহল জারিত হয়ে $2$ কার্বনের কার্বক্সিলিক অ্যাসিড ($\\text{CH}_3\\text{COOH}$) দেয়।"
       }
     },
@@ -378,7 +378,7 @@
       "correct_answer": "A",
       "explanation": {
         "one_line_calculation": "\\text{R-MgX} + \\text{CH}_3\\text{OH} \\to \\text{R-H} (\\text{Alkane}) + \\text{Mg(OCH}_3\\text{)X}",
-        "step_by_step_solution": "মিথানল ($\\text{CH}_3\\text{OH}$)-এর $-\\text{OH}$ গ্রুপে সক্রিয় হাইড্রোজেন থাকায় গ্রিগনার্ড বিকারক ($\\text{R-MgX}$) সেখান থেকে $\\text{H}^+$ গ্রহণ করে সংশ্লিষ্ট অ্যালকেন ($\text{R-H}$) তৈরি করে।",
+        "step_by_step_solution": "মিথানল ($\\text{CH}_3\\text{OH}$)-এর $-\\text{OH}$ গ্রুপে সক্রিয় হাইড্রোজেন থাকায় গ্রিগনার্ড বিকারক ($\\text{R-MgX}$) সেখান থেকে $\\text{H}^+$ গ্রহণ করে সংশ্লিষ্ট অ্যালকেন ($\\text{R-H}$) তৈরি করে।",
         "shortcut_tip": "গ্রিগনার্ড বিকারক + সক্রিয় $\\text{H}$ যুক্ত যৌগ (জল, অ্যালকোহল, অ্যাসিড) $\\to$ অ্যালকেন।"
       }
     },
@@ -398,7 +398,7 @@
       "explanation": {
         "one_line_calculation": "\\text{Alkane formula: } \\text{C}_n\\text{H}_{2n+2} \\implies \\text{C}_{10}\\text{H}_{2(10)+2} = \\text{C}_{10}\\text{H}_{22} (\\text{only single bonds} \\implies \\text{all } \\sigma)",
         "step_by_step_solution": "খোলা শিকল সম্পৃক্ত হাইড্রোকার্বন বা অ্যালকেনে কেবল একক বন্ধন থাকে, যার সবগুলোই $\\sigma$ বন্ধন। অ্যালকেনের সাধারণ সংকেত $\\text{C}_n\\text{H}_{2n+2}$ অনুযায়ী $n=10$ হলে সংকেত হয় $\\text{C}_{10}\\text{H}_{22}$।",
-        "shortcut_tip": "সব বন্ধন $\\sigma$ হতে হলে যৌগটি অ্যালকেন ($\text{C}_n\\text{H}_{2n+2}$) হতে হবে।"
+        "shortcut_tip": "সব বন্ধন $\\sigma$ হতে হলে যৌগটি অ্যালকেন ($\\text{C}_n\\text{H}_{2n+2}$) হতে হবে।"
       }
     },
     {
@@ -474,7 +474,7 @@
       "explanation": {
         "one_line_calculation": "\\text{sp character: } \\text{CH}\\equiv\\text{CH } (50\\%) > \\text{CH}_2=\\text{CH}_2 (33.3\\%) > \\text{CH}_3\\text{CH}_3 (25\\%)",
         "step_by_step_solution": "ইথাইন ($\\text{CH}\\equiv\\text{CH}$)-এর কার্বন পরমাণু $sp$ সংকরায়িত হওয়ায় এতে $50\\%$ $s$-চরিত্র রয়েছে। উচ্চ $s$-চরিত্রের কারণে কার্বনের তড়িৎ ঋণাত্মকতা বেড়ে যায় এবং প্রান্তীয় হাইড্রোজেন $\\text{H}^+$ হিসেবে দান করার প্রবণতা সৃষ্টি হয়।",
-        "shortcut_tip": "টার্মিনাল অ্যালকাইন ($\text{CH}\\equiv\\text{CH}$) দুর্বল অ্যাসিড ধর্ম প্রদর্শন করে।"
+        "shortcut_tip": "টার্মিনাল অ্যালকাইন ($\\text{CH}\\equiv\\text{CH}$) দুর্বল অ্যাসিড ধর্ম প্রদর্শন করে।"
       }
     },
     {
