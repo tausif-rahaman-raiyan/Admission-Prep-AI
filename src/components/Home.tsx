@@ -68,15 +68,6 @@ const PALETTES = [
     startBtn: "bg-cyan-600 hover:bg-cyan-500 text-white shadow-cyan-600/20",
     seeBtn: "bg-white hover:bg-cyan-50 dark:bg-[#082635] text-cyan-800 dark:text-cyan-300 border border-cyan-300 dark:border-cyan-700/60"
   },
-  {
-    cardBg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/60 to-white dark:from-[#07261C] dark:via-[#051A13] dark:to-[#030E0A]",
-    border: "border-2 border-emerald-300 dark:border-emerald-500/50 hover:border-emerald-500 dark:hover:border-emerald-400 shadow-md shadow-emerald-500/10",
-    badge: "bg-emerald-600 text-white",
-    metricBox: "bg-emerald-50/90 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/50",
-    accentText: "text-emerald-700 dark:text-emerald-300",
-    startBtn: "bg-emerald-600 hover:bg-emerald-500 text-white shadow-emerald-600/20",
-    seeBtn: "bg-white hover:bg-emerald-50 dark:bg-[#07261C] text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700/60"
-  }
 ];
 
 export const Home: React.FC<HomeProps> = ({
@@ -338,7 +329,7 @@ export const Home: React.FC<HomeProps> = ({
 
         {/* Session Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {filteredSessions.map((session, index) => {
+          {filteredSessions.map(session => {
             const subjectKey = session.unit || session.institution;
             const paletteIndex = Math.abs(Array.from(subjectKey).reduce((sum, char) => sum + char.charCodeAt(0), 0)) % 5;
             const palette = PALETTES[paletteIndex];
