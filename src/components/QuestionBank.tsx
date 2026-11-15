@@ -350,7 +350,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                             {label}
                           </span>
                           <div className="flex-1 text-slate-800 dark:text-slate-200 space-y-2">
-                            {opt && <MarkdownMath content={opt} />}
+                            {opt && <MathText content={opt} />}
                             {optImgs.length > 0 && (
                               <div className="flex flex-wrap gap-2">
                                 {optImgs.map((imgUrl: string, imgI: number) => (
@@ -380,7 +380,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                       <BookOpen className="w-4 h-4" />
                       <span>Explanation & Solution</span>
                     </div>
-                    <MarkdownMath content={q.explanation} fontSize={uiSettings.explanationFontPx} />
+                    <MathText content={q.explanation} fontSize={uiSettings.explanationFontPx} />
                   </div>
                 )}
 
