@@ -239,16 +239,11 @@ export const Home: React.FC<HomeProps> = ({
                   </p>
                 </div>
 
-                {inst.id === 'KU' && (
-                  <button
-                    onClick={(e) => { e.stopPropagation(); setKhuDetailsModal('B'); }}
-                    className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-teal-600 hover:bg-teal-500 text-white text-[10px] font-bold shadow-xs cursor-pointer"
-                  >
-                    Details
-                  </button>
-                )}
               </div>
             );
+          })}
+              </div>
+            </section>;
           })}
         </div>
 
