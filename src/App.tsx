@@ -9,13 +9,23 @@ import { ApiKeyModal } from './components/ApiKeyModal';
 import { AdmissionLogicModal } from './components/AdmissionLogicModal';
 import { AdmissionRulesPage } from './components/AdmissionRulesPage';
 import { siteConfig } from './data/siteConfig';
-import { SessionItem } from './data/sessions';
+import { MathTestPage } from './components/MathTestPage';
+import { SessionItem, sessions } from './data/sessions';
 import { storage, UiSettings } from './utils/storage';
 import { GraduationCap, Heart, Github, Instagram, Shield, FileText } from 'lucide-react';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'questionBank' | 'exam' | 'analytics' | 'admissionRules'>('home');
-  const [selectedSession, setSelectedSession] = useState<SessionItem | null>(null);
+  const validViews = ['home', 'questionBank', 'exam', 'analytics', 'admissionRules'] as const;
+  type AppView = typeof validViews[number];
+  const [currentView, setCurrentView] = useState<AppView>(() => {
+    const route = window.location.hash.replace(/^#\\//, '') as AppView;
+    return validViews.includes(route) ? route : 'home';
+  });
+  const [isMathTest, setIsMathTest] = useState(() => window.location.hash === '#/math-test');
+  const [selectedSession, setSelectedSession] = useState<SessionItem | null>(() => {
+    try { const id = localStorage.getItem('admission_app_selected_session'); return sessions.find(session => session.id === id) || null; }
+    catch { return null; }
+  });
 
   // Theme state
   const [theme, setTheme] = useState<'dark' | 'light'>(() => storage.getTheme());
@@ -37,11 +47,24 @@ export default function App() {
 
   // Filter states
   const [manifestPapers, setManifestPapers] = useState<Record<string, any>>({});
-  const [selectedInstitution, setSelectedInstitution] = useState<string>('ALL');
+  const [selectedInstitution, setSelectedInstitution] = useState<string>(() => {
+    try { return localStorage.getItem('admission_app_selected_university') || 'DU'; } catch { return 'DU'; }
+  });
   const [selectedUnit, setSelectedUnit] = useState<string | null>(null);
-  const [selectedGroupChild, setSelectedGroupChild] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [typeFilter, setTypeFilter] = useState<'All' | 'MCQ' | 'Written'>('All');
+
+  useEffect(() => { try { localStorage.setItem('admission_app_selected_university', selectedInstitution); } catch {} }, [selectedInstitution]);
+  useEffect(() => {
+    const syncHash = () => {
+      const hash = window.location.hash;
+      setIsMathTest(hash === '#/math-test');
+      if (hash !== '#/math-test') { const route = hash.replace(/^#\\//, '') as AppView; if (validViews.includes(route)) setCurrentView(route); }
+    };
+    window.addEventListener('hashchange', syncHash);
+    return () => window.removeEventListener('hashchange', syncHash);
+  }, []);
+  useEffect(() => { if (!isMathTest && window.location.hash !== '#/' + currentView) window.location.hash = '#/' + currentView; }, [currentView, isMathTest]);
+  useEffect(() => { try { if (selectedSession) localStorage.setItem('admission_app_selected_session', selectedSession.id); else localStorage.removeItem('admission_app_selected_session'); } catch {} }, [selectedSession]);
 
   // Load manifest.json at startup
   useEffect(() => {
@@ -95,6 +118,8 @@ export default function App() {
     setCurrentView('questionBank');
   };
 
+  if (isMathTest) return <MathTestPage />;
+
   return (
     <div className={`min-h-screen bg-white dark:bg-[#060913] text-slate-900 dark:text-[#f1f5f9] font-${uiSettings.fontStyle} transition-colors duration-200 flex flex-col justify-between selection:bg-indigo-600 selection:text-white`}>
       {/* Navbar */}
@@ -115,12 +140,8 @@ export default function App() {
             onSelectInstitution={setSelectedInstitution}
             selectedUnit={selectedUnit}
             onSelectUnit={setSelectedUnit}
-            selectedGroupChild={selectedGroupChild}
-            onSelectGroupChild={setSelectedGroupChild}
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
-            typeFilter={typeFilter}
-            onTypeFilterChange={setTypeFilter}
             onStartExam={handleStartExam}
             onOpenQuestionBank={handleOpenQuestionBank}
             onOpenApiKeyModal={() => setApiKeyModalOpen(true)}
