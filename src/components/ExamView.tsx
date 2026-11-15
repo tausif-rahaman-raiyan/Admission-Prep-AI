@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { ArrowLeft, ArrowRight, Clock, CheckCircle2, AlertTriangle, Send, RefreshCcw, Award, Check, X, ShieldAlert, Sparkles, Key, HelpCircle, Info, ShieldCheck, ChevronRight } from 'lucide-react';
 import { SessionItem } from '../data/sessions';
 import { getSubjectTheme } from '../data/subjects';
-import { MarkdownMath } from './MarkdownMath';
+import { MathText } from './MarkdownMath';
 import { AiTutorPanel } from './AiTutorPanel';
 import { storage, UiSettings, ExamAttempt } from '../utils/storage';
 import { getAdmissionRule, UniversityAdmissionRule } from '../data/admissionLogic';
@@ -858,7 +858,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
 
                 {/* Question Body */}
                 <div style={{ fontSize: `${uiSettings.questionFontPx}px` }} className="text-slate-900 dark:text-slate-100 font-medium leading-relaxed">
-                  <MarkdownMath content={q.question || ''} />
+                  <MathText content={q.question || ''} />
                 </div>
 
                 {/* Question Images if any */}
