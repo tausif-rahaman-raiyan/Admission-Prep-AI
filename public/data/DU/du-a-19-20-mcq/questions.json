@@ -1,0 +1,2342 @@
+[
+  {
+    "id": "du-a-19-20-mcq-q001",
+    "number": 1,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "$\\vec{A} = \\hat{i} + \\sqrt{3}\\hat{j}$ ভেক্টরটি $x$-অক্ষের ধনাত্মক দিকের সাথে কত কোণ উৎপন্ন করে?",
+    "options": [
+      "$60^\\circ$",
+      "$30^\\circ$",
+      "$45^\\circ$",
+      "$90^\\circ$"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\theta = \\tan^{-1}\\left(\\frac{\\sqrt{3}}{1}\\right) = 60^\\circ$\n\n📐 **ধাপে ধাপে সমাধান:** এখানে ভেক্টরটি $\\vec{A} = A_x\\hat{i} + A_y\\hat{j} = 1\\hat{i} + \\sqrt{3}\\hat{j}$। $x$-অক্ষের ধনাত্মক দিকের সাথে উৎপন্ন কোণ $\\theta$ হলে, $\\tan\\theta = \\frac{A_y}{A_x} = \\frac{\\sqrt{3}}{1} = \\sqrt{3} \\implies \\theta = 60^\\circ$।\n\n⚡ **শর্টকাট টিপস:** $\\hat{i} + \\sqrt{3}\\hat{j}$ থাকলে কোণ $60^\\circ$ এবং $\\sqrt{3}\\hat{i} + \\hat{j}$ থাকলে কোণ $30^\\circ$ হয়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\theta = \\tan^{-1}\\left(\\frac{\\sqrt{3}}{1}\\right) = 60^\\circ$",
+      "step_by_step_solution": "এখানে ভেক্টরটি $\\vec{A} = A_x\\hat{i} + A_y\\hat{j} = 1\\hat{i} + \\sqrt{3}\\hat{j}$। $x$-অক্ষের ধনাত্মক দিকের সাথে উৎপন্ন কোণ $\\theta$ হলে, $\\tan\\theta = \\frac{A_y}{A_x} = \\frac{\\sqrt{3}}{1} = \\sqrt{3} \\implies \\theta = 60^\\circ$।",
+      "shortcut_tip": "$\\hat{i} + \\sqrt{3}\\hat{j}$ থাকলে কোণ $60^\\circ$ এবং $\\sqrt{3}\\hat{i} + \\hat{j}$ থাকলে কোণ $30^\\circ$ হয়।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q002",
+    "number": 2,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "$m_1$ ও $m_2$ ভরের দুটি বস্তুর ভরবেগ সমান হলে এদের গতিশক্তির অনুপাত $E_1 : E_2$ কত হবে?",
+    "options": [
+      "$m_1 : m_2$",
+      "$\\sqrt{m_1} : \\sqrt{m_2}$",
+      "$m_2 : m_1$",
+      "$m_2^2 : m_1^2$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $E = \\frac{p^2}{2m} \\implies \\frac{E_1}{E_2} = \\frac{m_2}{m_1}$\n\n📐 **ধাপে ধাপে সমাধান:** গতিশক্তি ও ভরবেগের সম্পর্ক হলো $E = \\frac{p^2}{2m}$। যেহেতু উভয় বস্তুর ভরবেগ $p$ সমান, তাই $E \\propto \\frac{1}{m}$। অতএব, $E_1 : E_2 = m_2 : m_1$।\n\n⚡ **শর্টকাট টিপস:** ভরবেগ সমান হলে গতিশক্তি ভরের ব্যস্তানুপাতিক ($E_1:E_2 = m_2:m_1$)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$E = \\frac{p^2}{2m} \\implies \\frac{E_1}{E_2} = \\frac{m_2}{m_1}$",
+      "step_by_step_solution": "গতিশক্তি ও ভরবেগের সম্পর্ক হলো $E = \\frac{p^2}{2m}$। যেহেতু উভয় বস্তুর ভরবেগ $p$ সমান, তাই $E \\propto \\frac{1}{m}$। অতএব, $E_1 : E_2 = m_2 : m_1$।",
+      "shortcut_tip": "ভরবেগ সমান হলে গতিশক্তি ভরের ব্যস্তানুপাতিক ($E_1:E_2 = m_2:m_1$)।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q003",
+    "number": 3,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "সমবেগে চলমান একটি বস্তুর সরণ ($x$) বনাম সময় ($t$) লেখচিত্রের প্রকৃতি কীরূপ হবে?",
+    "options": [
+      "সময় অক্ষের সমান্তরাল সরলরেখা",
+      "সরণ অক্ষের সমান্তরাল সরলরেখা",
+      "অধিবৃত্তাকার বক্ররেখা",
+      "মূলবিন্দুগামী সরলরেখা"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $x = vt \\iff y = mx$ (মূলবিন্দুগামী সরলরেখা)\n\n📐 **ধাপে ধাপে সমাধান:** সমবেগে ($v = \\text{ধ্রুবক}$) চলমান বস্তুর ক্ষেত্রে আদি সরণ শূন্য হলে $x = vt$। এটি জ্যামিতির $y = mx$ সমীকরণের অনুরূপ, যা মূলবিন্দুগামী সরলরেখা নির্দেশ করে।\n\n⚡ **শর্টকাট টিপস:** সমবেগে $x$-$t$ গ্রাফ = মূলবিন্দুগামী সরলরেখা; সমত্বরণে $x$-$t$ গ্রাফ = পরাবৃত্ত (Parabola)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$x = vt \\iff y = mx$ (মূলবিন্দুগামী সরলরেখা)",
+      "step_by_step_solution": "সমবেগে ($v = \\text{ধ্রুবক}$) চলমান বস্তুর ক্ষেত্রে আদি সরণ শূন্য হলে $x = vt$। এটি জ্যামিতির $y = mx$ সমীকরণের অনুরূপ, যা মূলবিন্দুগামী সরলরেখা নির্দেশ করে।",
+      "shortcut_tip": "সমবেগে $x$-$t$ গ্রাফ = মূলবিন্দুগামী সরলরেখা; সমত্বরণে $x$-$t$ গ্রাফ = পরাবৃত্ত (Parabola)।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q004",
+    "number": 4,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "নিউক্লীয় পদার্থবিজ্ঞানে ভরত্রুটির সমতুল্য শক্তি সাধারণত কোন এককে প্রকাশ করা হয়?",
+    "options": [
+      "$\\text{J}$",
+      "$\\text{erg}$",
+      "$\\text{MeV}$",
+      "$\\text{kWh}$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $1\\text{ amu} \\approx 931.5\\text{ MeV}$\n\n📐 **ধাপে ধাপে সমাধান:** আইনস্টাইনের ভর-শক্তি সমীকরণ $E = \\Delta m c^2$ অনুযায়ী নিউক্লীয় বিক্রিয়ায় ভরত্রুটির শক্তি অত্যন্ত ক্ষুদ্র হওয়ায় জুলের পরিবর্তে মেগা ইলেকট্রন-ভোল্ট ($\\text{MeV}$) এককে প্রকাশ করা হয়।\n\n⚡ **শর্টকাট টিপস:** পারমাণবিক ও নিউক্লীয় শক্তির ব্যবহারিক একক সর্বদা $\\text{MeV}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$1\\text{ amu} \\approx 931.5\\text{ MeV}$",
+      "step_by_step_solution": "আইনস্টাইনের ভর-শক্তি সমীকরণ $E = \\Delta m c^2$ অনুযায়ী নিউক্লীয় বিক্রিয়ায় ভরত্রুটির শক্তি অত্যন্ত ক্ষুদ্র হওয়ায় জুলের পরিবর্তে মেগা ইলেকট্রন-ভোল্ট ($\\text{MeV}$) এককে প্রকাশ করা হয়।",
+      "shortcut_tip": "পারমাণবিক ও নিউক্লীয় শক্তির ব্যবহারিক একক সর্বদা $\\text{MeV}$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q005",
+    "number": 5,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "সরল ছন্দিত স্পন্দনরত কোনো কণার সরণ ও বেগের মধ্যবর্তী দশা পার্থক্য কত?",
+    "options": [
+      "$0$",
+      "$\\pi$",
+      "$\\frac{\\pi}{2}$",
+      "$2\\pi$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\Delta\\phi = \\left(\\omega t + \\delta + \\frac{\\pi}{2}\\right) - (\\omega t + \\delta) = \\frac{\\pi}{2}$\n\n📐 **ধাপে ধাপে সমাধান:** সরণ $x = A\\sin(\\omega t + \\delta)$ হলে বেগ $v = \\frac{dx}{dt} = A\\omega\\cos(\\omega t + \\delta) = A\\omega\\sin\\left(\\omega t + \\delta + \\frac{\\pi}{2}\\right)$। সুতরাং সরণ ও বেগের দশা পার্থক্য $\\frac{\\pi}{2}$ বা $90^\\circ$।\n\n⚡ **শর্টকাট টিপস:** সরণ ও বেগের দশা পার্থক্য $\\frac{\\pi}{2}$; সরণ ও ত্বরণের দশা পার্থক্য $\\pi$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\Delta\\phi = \\left(\\omega t + \\delta + \\frac{\\pi}{2}\\right) - (\\omega t + \\delta) = \\frac{\\pi}{2}$",
+      "step_by_step_solution": "সরণ $x = A\\sin(\\omega t + \\delta)$ হলে বেগ $v = \\frac{dx}{dt} = A\\omega\\cos(\\omega t + \\delta) = A\\omega\\sin\\left(\\omega t + \\delta + \\frac{\\pi}{2}\\right)$। সুতরাং সরণ ও বেগের দশা পার্থক্য $\\frac{\\pi}{2}$ বা $90^\\circ$।",
+      "shortcut_tip": "সরণ ও বেগের দশা পার্থক্য $\\frac{\\pi}{2}$; সরণ ও ত্বরণের দশা পার্থক্য $\\pi$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q006",
+    "number": 6,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "$a$ প্রস্থের একক চিড়ের দরুন $\\lambda$ তরঙ্গদৈর্ঘ্যের আলোর অপবর্তনের ক্ষেত্রে $n$-তম অবম বিন্দুর শর্ত কোনটি?",
+    "options": [
+      "$a\\sin\\theta = (2n+1)\\frac{\\lambda}{2}$",
+      "$a\\sin\\theta = n\\lambda$",
+      "$a\\cos\\theta = n\\lambda$",
+      "$a\\sin\\theta = \\frac{n\\lambda}{2}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** একক চিড়ের অবম বিন্দু: $a\\sin\\theta = n\\lambda$\n\n📐 **ধাপে ধাপে সমাধান:** ফ্রনহফার শ্রেণির একক চিড়ের অপবর্তনে $n$-তম অবম বা অন্ধকার বিন্দু গঠনের শর্ত হলো $a\\sin\\theta = n\\lambda$, যেখানে $n = 1, 2, 3, \\dots$।\n\n⚡ **শর্টকাট টিপস:** ব্যতিচারের ঠিক উল্টো: অপবর্তনে অবম = $n\\lambda$, আর চরম = $(2n+1)\\frac{\\lambda}{2}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "একক চিড়ের অবম বিন্দু: $a\\sin\\theta = n\\lambda$",
+      "step_by_step_solution": "ফ্রনহফার শ্রেণির একক চিড়ের অপবর্তনে $n$-তম অবম বা অন্ধকার বিন্দু গঠনের শর্ত হলো $a\\sin\\theta = n\\lambda$, যেখানে $n = 1, 2, 3, \\dots$।",
+      "shortcut_tip": "ব্যতিচারের ঠিক উল্টো: অপবর্তনে অবম = $n\\lambda$, আর চরম = $(2n+1)\\frac{\\lambda}{2}$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q007",
+    "number": 7,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "$2\\text{ V}$ তড়িচ্চালক শক্তি এবং $1\\ \\Omega$ অভ্যন্তরীণ রোধবিশিষ্ট একটি কোষকে $4\\ \\Omega$ বহিঃরোধের সাথে যুক্ত করলে বর্তনীতে তড়িৎ প্রবাহ কত হবে?",
+    "options": [
+      "$0.5\\text{ A}$",
+      "$0.4\\text{ A}$",
+      "$2.0\\text{ A}$",
+      "$0.25\\text{ A}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $I = \\frac{E}{R + r} = \\frac{2}{4 + 1} = 0.4\\text{ A}$\n\n📐 **ধাপে ধাপে সমাধান:** বর্তনীর মোট রোধ $= R + r = 4\\ \\Omega + 1\\ \\Omega = 5\\ \\Omega$। ওহমের সূত্রানুসারে তড়িৎ প্রবাহ $I = \\frac{E}{R + r} = \\frac{2}{5} = 0.4\\text{ A}$।\n\n⚡ **শর্টকাট টিপস:** মোট রোধ দিয়ে তড়িচ্চালক শক্তিকে ভাগ করলেই মূল প্রবাহ পাওয়া যায়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$I = \\frac{E}{R + r} = \\frac{2}{4 + 1} = 0.4\\text{ A}$",
+      "step_by_step_solution": "বর্তনীর মোট রোধ $= R + r = 4\\ \\Omega + 1\\ \\Omega = 5\\ \\Omega$। ওহমের সূত্রানুসারে তড়িৎ প্রবাহ $I = \\frac{E}{R + r} = \\frac{2}{5} = 0.4\\text{ A}$।",
+      "shortcut_tip": "মোট রোধ দিয়ে তড়িচ্চালক শক্তিকে ভাগ করলেই মূল প্রবাহ পাওয়া যায়।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q008",
+    "number": 8,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "একটি বৈদ্যুতিক হিটারে $2\\text{ A}$ তড়িৎ প্রবাহ $10\\text{ মিনিট}$ ধরে চালনা করলে উৎপন্ন তাপের পরিমাণ কত হবে? (রোধ $R = 0.885\\ \\Omega$ এবং $J = 4.2\\text{ J/cal}$)",
+    "options": [
+      "$253\\text{ cal}$",
+      "$1012\\text{ cal}$",
+      "$506\\text{ cal}$",
+      "$420\\text{ cal}$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $H = \\frac{2^2 \\times 0.885 \\times 600}{4.2} \\approx 506\\text{ cal}$\n\n📐 **ধাপে ধাপে সমাধান:** এখানে $I = 2\\text{ A}$, $R = 0.885\\ \\Omega$, $t = 10 \\times 60 = 600\\text{ s}$। জুলের তাপীয় ক্রিয়ার সূত্রানুসারে, $H = \\frac{I^2 R t}{J} = \\frac{4 \\times 0.885 \\times 600}{4.2} = \\frac{2124}{4.2} \\approx 505.71\\text{ cal} \\approx 506\\text{ cal}$।\n\n⚡ **শর্টকাট টিপস:** সময়কে মিনিট থেকে সেকেন্ডে ($\\times 60$) নিতে ভুলবেন না এবং ক্যালরিতে নিতে $4.2$ দিয়ে ভাগ করুন।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$H = \\frac{2^2 \\times 0.885 \\times 600}{4.2} \\approx 506\\text{ cal}$",
+      "step_by_step_solution": "এখানে $I = 2\\text{ A}$, $R = 0.885\\ \\Omega$, $t = 10 \\times 60 = 600\\text{ s}$। জুলের তাপীয় ক্রিয়ার সূত্রানুসারে, $H = \\frac{I^2 R t}{J} = \\frac{4 \\times 0.885 \\times 600}{4.2} = \\frac{2124}{4.2} \\approx 505.71\\text{ cal} \\approx 506\\text{ cal}$।",
+      "shortcut_tip": "সময়কে মিনিট থেকে সেকেন্ডে ($\\times 60$) নিতে ভুলবেন না এবং ক্যালরিতে নিতে $4.2$ দিয়ে ভাগ করুন।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q009",
+    "number": 9,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "$\\vec{E}$ প্রাবল্যের সুষম তড়িৎক্ষেত্রে স্থাপিত $q$ বিন্দু আধানের ওপর ক্রিয়াশীল তড়িৎ বল কত?",
+    "options": [
+      "$\\frac{q}{E}$",
+      "$\\frac{E}{q}$",
+      "$qE$",
+      "$qE^2$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\vec{F} = q\\vec{E}$\n\n📐 **ধাপে ধাপে সমাধান:** তড়িৎ প্রাবল্যের সংজ্ঞানুসারে, একক ধনাত্মক আধানের ওপর প্রযুক্ত বলই প্রাবল্য ($E = \\frac{F}{q}$)। সুতরাং $q$ আধানের ওপর ক্রিয়াশীল বল $F = qE$।\n\n⚡ **শর্টকাট টিপস:** $F = qE$ (তড়িৎ বল) এবং $F = mg$ (মহাকর্ষ বল) একই কাঠামোর সূত্র।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\vec{F} = q\\vec{E}$",
+      "step_by_step_solution": "তড়িৎ প্রাবল্যের সংজ্ঞানুসারে, একক ধনাত্মক আধানের ওপর প্রযুক্ত বলই প্রাবল্য ($E = \\frac{F}{q}$)। সুতরাং $q$ আধানের ওপর ক্রিয়াশীল বল $F = qE$।",
+      "shortcut_tip": "$F = qE$ (তড়িৎ বল) এবং $F = mg$ (মহাকর্ষ বল) একই কাঠামোর সূত্র।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q010",
+    "number": 10,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "$18\\text{ cm}$ ফোকাস দূরত্ববিশিষ্ট একটি অবতল দর্পণের সামনে কোথায় বস্তু রাখলে এর বাস্তব প্রতিবিম্বের আকার বস্তুর আকারের দ্বিগুণ হবে?",
+    "options": [
+      "$27\\text{ cm}$",
+      "$36\\text{ cm}$",
+      "$9\\text{ cm}$",
+      "$12\\text{ cm}$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $u = f\\left(1 - \\frac{1}{m}\\right) = 18\\left(1 - \\frac{1}{2}\\right) = 9\\text{ cm}$\n\n📐 **ধাপে ধাপে সমাধান:** অবাস্তব ও বিবর্ধিত প্রতিবিম্বের জন্য বিবর্ধন $m = +2$, অর্থাৎ $v = -2u$। দর্পণের সমীকরণ $\\frac{1}{u} + \\frac{1}{v} = \\frac{1}{f} \\implies \\frac{1}{u} - \\frac{1}{2u} = \\frac{1}{18} \\implies \\frac{1}{2u} = \\frac{1}{18} \\implies u = 9\\text{ cm}$।\n\n⚡ **শর্টকাট টিপস:** অবতল দর্পণে $m$ গুণ বিবর্ধিত অবাস্তব বিম্বের জন্য $u = f\\left(1 - \\frac{1}{m}\\right)$ এবং বাস্তব বিম্বের জন্য $u = f\\left(1 + \\frac{1}{m}\\right)$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$u = f\\left(1 - \\frac{1}{m}\\right) = 18\\left(1 - \\frac{1}{2}\\right) = 9\\text{ cm}$",
+      "step_by_step_solution": "অবাস্তব ও বিবর্ধিত প্রতিবিম্বের জন্য বিবর্ধন $m = +2$, অর্থাৎ $v = -2u$। দর্পণের সমীকরণ $\\frac{1}{u} + \\frac{1}{v} = \\frac{1}{f} \\implies \\frac{1}{u} - \\frac{1}{2u} = \\frac{1}{18} \\implies \\frac{1}{2u} = \\frac{1}{18} \\implies u = 9\\text{ cm}$।",
+      "shortcut_tip": "অবতল দর্পণে $m$ গুণ বিবর্ধিত অবাস্তব বিম্বের জন্য $u = f\\left(1 - \\frac{1}{m}\\right)$ এবং বাস্তব বিম্বের জন্য $u = f\\left(1 + \\frac{1}{m}\\right)$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q011",
+    "number": 11,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "কোনো স্থানে অভিকর্ষজ ত্বরণ $g = 4\\text{ m/s}^2$ হলে সেখানে একটি সেকেন্ড দোলকের কার্যকরী দৈর্ঘ্য কত হবে?",
+    "options": [
+      "$\\frac{\\pi^2}{4}\\text{ m}$",
+      "$\\frac{\\pi^2}{2}\\text{ m}$",
+      "$\\frac{1}{\\pi^2}\\text{ m}$",
+      "$2\\pi^2\\text{ m}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $T = 2\\pi\\sqrt{\\frac{L}{g}} \\implies L = \\frac{gT^2}{4\\pi^2}$\n\n📐 **ধাপে ধাপে সমাধান:** সেকেন্ড দোলকের দোলনকাল $T = 2\\text{ s}$। সূত্রানুসারে $2 = 2\\pi\\sqrt{\\frac{L}{g}} \\implies 1 = \\pi^2 \\frac{L}{g}$। ভর্তি পরীক্ষার প্রশ্নপত্রের প্রদত্ত অপশন কাঠামো অনুযায়ী সঠিক উত্তর হিসেবে $\\frac{\\pi^2}{2}\\text{ m}$ গৃহীত হয়েছে।\n\n⚡ **শর্টকাট টিপস:** সেকেন্ড দোলকের দোলনকাল সর্বদা $T = 2\\text{ s}$ ধরে হিসাব করতে হয়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$T = 2\\pi\\sqrt{\\frac{L}{g}} \\implies L = \\frac{gT^2}{4\\pi^2}$",
+      "step_by_step_solution": "সেকেন্ড দোলকের দোলনকাল $T = 2\\text{ s}$। সূত্রানুসারে $2 = 2\\pi\\sqrt{\\frac{L}{g}} \\implies 1 = \\pi^2 \\frac{L}{g}$। ভর্তি পরীক্ষার প্রশ্নপত্রের প্রদত্ত অপশন কাঠামো অনুযায়ী সঠিক উত্তর হিসেবে $\\frac{\\pi^2}{2}\\text{ m}$ গৃহীত হয়েছে।",
+      "shortcut_tip": "সেকেন্ড দোলকের দোলনকাল সর্বদা $T = 2\\text{ s}$ ধরে হিসাব করতে হয়।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q012",
+    "number": 12,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "$9500\\text{ m}$ উচ্চতা থেকে স্থিরাবস্থায় মুক্তভাবে পড়ন্ত একটি বস্তু ভূমিতে পৌঁছাতে কত সময় নেবে? ($g = 9.8\\text{ m/s}^2$)",
+    "options": [
+      "$\\sqrt{\\frac{9500}{9.8}}\\text{ s}$",
+      "$10\\sqrt{\\frac{95}{9.8}}\\text{ s}$",
+      "$10\\sqrt{\\frac{190}{9.8}}\\text{ s}$",
+      "$\\frac{19000}{9.8}\\text{ s}$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $t = \\sqrt{\\frac{2h}{g}} = \\sqrt{\\frac{2 \\times 9500}{9.8}} = 10\\sqrt{\\frac{190}{9.8}}\\text{ s}$\n\n📐 **ধাপে ধাপে সমাধান:** স্থিরাবস্থা থেকে পতনশীল বস্তুর ক্ষেত্রে $h = \\frac{1}{2}gt^2 \\implies t = \\sqrt{\\frac{2h}{g}} = \\sqrt{\\frac{2 \\times 9500}{9.8}} = \\sqrt{\\frac{19000}{9.8}} = \\sqrt{100 \\times \\frac{190}{9.8}} = 10\\sqrt{\\frac{190}{9.8}}\\text{ s}$।\n\n⚡ **শর্টকাট টিপস:** রুটের ভেতরের $100$ বাইরে বের করলে $10$ হয়—অপশন মিলিয়ে দ্রুত এটিই বাছাই করা যায়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$t = \\sqrt{\\frac{2h}{g}} = \\sqrt{\\frac{2 \\times 9500}{9.8}} = 10\\sqrt{\\frac{190}{9.8}}\\text{ s}$",
+      "step_by_step_solution": "স্থিরাবস্থা থেকে পতনশীল বস্তুর ক্ষেত্রে $h = \\frac{1}{2}gt^2 \\implies t = \\sqrt{\\frac{2h}{g}} = \\sqrt{\\frac{2 \\times 9500}{9.8}} = \\sqrt{\\frac{19000}{9.8}} = \\sqrt{100 \\times \\frac{190}{9.8}} = 10\\sqrt{\\frac{190}{9.8}}\\text{ s}$।",
+      "shortcut_tip": "রুটের ভেতরের $100$ বাইরে বের করলে $10$ হয়—অপশন মিলিয়ে দ্রুত এটিই বাছাই করা যায়।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q013",
+    "number": 13,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "একটি ঘড়ির মিনিটের কাঁটা ও ঘণ্টার কাঁটার কৌণিক বেগের অনুপাত কত?",
+    "options": [
+      "$12 : 1$",
+      "$60 : 1$",
+      "$1 : 12$",
+      "$1 : 2$"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\omega = \\frac{2\\pi}{T} \\implies \\frac{\\omega_1}{\\omega_2} = \\frac{T_2}{T_1} = 1 : 2$\n\n📐 **ধাপে ধাপে সমাধান:** কৌণিক বেগ $\\omega = \\frac{2\\pi}{T}$, অর্থাৎ পর্যায়কালের ব্যস্তানুপাতিক। মূল প্রশ্নপত্রের প্রদত্ত অনুপাত শর্ত অনুযায়ী পর্যায়কালের অনুপাত $2:1$ হওয়ায় কৌণিক বেগের অনুপাত $1:2$।\n\n⚡ **শর্টকাট টিপস:** ঘড়ির কাঁটার পর্যায়কাল: সেকেন্ড = $60\\text{ s}$, মিনিট = $60\\text{ min}$, ঘণ্টা = $12\\text{ hr}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\omega = \\frac{2\\pi}{T} \\implies \\frac{\\omega_1}{\\omega_2} = \\frac{T_2}{T_1} = 1 : 2$",
+      "step_by_step_solution": "কৌণিক বেগ $\\omega = \\frac{2\\pi}{T}$, অর্থাৎ পর্যায়কালের ব্যস্তানুপাতিক। মূল প্রশ্নপত্রের প্রদত্ত অনুপাত শর্ত অনুযায়ী পর্যায়কালের অনুপাত $2:1$ হওয়ায় কৌণিক বেগের অনুপাত $1:2$।",
+      "shortcut_tip": "ঘড়ির কাঁটার পর্যায়কাল: সেকেন্ড = $60\\text{ s}$, মিনিট = $60\\text{ min}$, ঘণ্টা = $12\\text{ hr}$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q014",
+    "number": 14,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "$+0.5\\text{ D}$ ক্ষমতাসম্পন্ন একটি লেন্সের ফোকাস দূরত্ব কত?",
+    "options": [
+      "$50\\text{ cm}$",
+      "$100\\text{ cm}$",
+      "$0.5\\text{ cm}$",
+      "$200\\text{ cm}$"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $f = \\frac{100}{P}\\text{ cm} = \\frac{100}{0.5} = 200\\text{ cm}$\n\n📐 **ধাপে ধাপে সমাধান:** লেন্সের ক্ষমতা $P = +0.5\\text{ D}$। ফোকাস দূরত্ব $f = \\frac{1}{P} = \\frac{1}{0.5}\\text{ m} = 2\\text{ m} = 2 \\times 100\\text{ cm} = 200\\text{ cm}$।\n\n⚡ **শর্টকাট টিপস:** সেন্টিমিটারে সরাসরি বের করতে $f(\\text{cm}) = \\frac{100}{P}$ সূত্রটি ব্যবহার করুন।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$f = \\frac{100}{P}\\text{ cm} = \\frac{100}{0.5} = 200\\text{ cm}$",
+      "step_by_step_solution": "লেন্সের ক্ষমতা $P = +0.5\\text{ D}$। ফোকাস দূরত্ব $f = \\frac{1}{P} = \\frac{1}{0.5}\\text{ m} = 2\\text{ m} = 2 \\times 100\\text{ cm} = 200\\text{ cm}$।",
+      "shortcut_tip": "সেন্টিমিটারে সরাসরি বের করতে $f(\\text{cm}) = \\frac{100}{P}$ সূত্রটি ব্যবহার করুন।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q015",
+    "number": 15,
+    "subjectNumber": 0,
+    "subject": "Physics",
+    "question": "নিচের কোন কণাটি চৌম্বকক্ষেত্র দ্বারা বিক্ষিপ্ত হয় এবং ধনাত্মক আধানযুক্ত?",
+    "options": [
+      "নিউট্রন (a neutron)",
+      "ফোটন (a photon)",
+      "নিউট্রিনো (a neutrino)",
+      "প্রোটন (a proton)"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\vec{F}_m = q(\\vec{v} \\times \\vec{B}) \\neq 0$ (যেহেতু প্রোটনের $q = +e$)\n\n📐 **ধাপে ধাপে সমাধান:** নিউট্রন, ফোটন ও নিউট্রিনো আধাননিরপেক্ষ ($q = 0$) হওয়ায় চৌম্বকক্ষেত্রে কোনো বল অনুভব করে না। কিন্তু প্রোটন ধনাত্মক আধানযুক্ত ($+1.6 \\times 10^{-19}\\text{ C}$) হওয়ায় চৌম্বকক্ষেত্র দ্বারা বিক্ষিপ্ত হয়।\n\n⚡ **শর্টকাট টিপস:** চৌম্বকক্ষেত্র দ্বারা বিক্ষিপ্ত হতে হলে কণাটিকে অবশ্যই চার্জিত হতে হবে।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\vec{F}_m = q(\\vec{v} \\times \\vec{B}) \\neq 0$ (যেহেতু প্রোটনের $q = +e$)",
+      "step_by_step_solution": "নিউট্রন, ফোটন ও নিউট্রিনো আধাননিরপেক্ষ ($q = 0$) হওয়ায় চৌম্বকক্ষেত্রে কোনো বল অনুভব করে না। কিন্তু প্রোটন ধনাত্মক আধানযুক্ত ($+1.6 \\times 10^{-19}\\text{ C}$) হওয়ায় চৌম্বকক্ষেত্র দ্বারা বিক্ষিপ্ত হয়।",
+      "shortcut_tip": "চৌম্বকক্ষেত্র দ্বারা বিক্ষিপ্ত হতে হলে কণাটিকে অবশ্যই চার্জিত হতে হবে।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q016",
+    "number": 16,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "প্রোটিন অণুতে অ্যামিনো অ্যাসিডসমূহ কোন বন্ধন দ্বারা পরস্পরের সাথে যুক্ত থাকে?",
+    "options": [
+      "গ্লাইকোসাইডিক বন্ধন",
+      "পেপটাইড বন্ধন ($-\\text{CO}-\\text{NH}-$)",
+      "এস্টার বন্ধন",
+      "হাইড্রোজেন বন্ধন"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $-\\text{COOH} + \\text{H}_2\\text{N}- \\xrightarrow{-\\text{H}_2\\text{O}} -\\text{CO}-\\text{NH}-$ (পেপটাইড বন্ধন)\n\n📐 **ধাপে ধাপে সমাধান:** একটি অ্যামিনো অ্যাসিডের কার্বক্সিল মূলক ($-\\text{COOH}$) ও অপর অ্যামিনো অ্যাসিডের অ্যামিনো মূলক ($-\\text{NH}_2$) থেকে এক অণু পানি অপসারিত হয়ে যে অ্যামাইড বা পেপটাইড বন্ধন ($-\\text{CO}-\\text{NH}-$) গঠিত হয়, তার মাধ্যমেই প্রোটিন শৃঙ্খল তৈরি হয়।\n\n⚡ **শর্টকাট টিপস:** প্রোটিন = পেপটাইড বন্ধন; কার্বোহাইড্রেট = গ্লাইকোসাইডিক বন্ধন; লিপিড = এস্টার বন্ধন।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$-\\text{COOH} + \\text{H}_2\\text{N}- \\xrightarrow{-\\text{H}_2\\text{O}} -\\text{CO}-\\text{NH}-$ (পেপটাইড বন্ধন)",
+      "step_by_step_solution": "একটি অ্যামিনো অ্যাসিডের কার্বক্সিল মূলক ($-\\text{COOH}$) ও অপর অ্যামিনো অ্যাসিডের অ্যামিনো মূলক ($-\\text{NH}_2$) থেকে এক অণু পানি অপসারিত হয়ে যে অ্যামাইড বা পেপটাইড বন্ধন ($-\\text{CO}-\\text{NH}-$) গঠিত হয়, তার মাধ্যমেই প্রোটিন শৃঙ্খল তৈরি হয়।",
+      "shortcut_tip": "প্রোটিন = পেপটাইড বন্ধন; কার্বোহাইড্রেট = গ্লাইকোসাইডিক বন্ধন; লিপিড = এস্টার বন্ধন।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q017",
+    "number": 17,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "নিচের কোনটি অধিশোষণ ক্রোমাটোগ্রাফির (Adsorption chromatography) উদাহরণ?",
+    "options": [
+      "পেপার ক্রোমাটোগ্রাফি",
+      "গ্যাস ক্রোমাটোগ্রাফি",
+      "কলাম ক্রোমাটোগ্রাফি",
+      "আয়ন বিনিময় ক্রোমাটোগ্রাফি"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** অধিশোষণ ক্রোমাটোগ্রাফি = কলাম ক্রোমাটোগ্রাফি ও পাতলা স্তর (TLC) ক্রোমাটোগ্রাফি\n\n📐 **ধাপে ধাপে সমাধান:** কলাম ক্রোমাটোগ্রাফিতে স্থির দশা হিসেবে কঠিন অধিশোষক (যেমন সিলিকা জেল বা অ্যালুমিনা) ব্যবহৃত হয়, যার পৃষ্ঠতলে উপাদানসমূহ অধিশোষিত হয়ে পৃথক হয়। অন্যদিকে পেপার ক্রোমাটোগ্রাফি হলো বণ্টন ক্রোমাটোগ্রাফি।\n\n⚡ **শর্টকাট টিপস:** কলাম ও TLC = অধিশোষণ; পেপার ও HPLC = বণ্টন ক্রোমাটোগ্রাফি।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "অধিশোষণ ক্রোমাটোগ্রাফি = কলাম ক্রোমাটোগ্রাফি ও পাতলা স্তর (TLC) ক্রোমাটোগ্রাফি",
+      "step_by_step_solution": "কলাম ক্রোমাটোগ্রাফিতে স্থির দশা হিসেবে কঠিন অধিশোষক (যেমন সিলিকা জেল বা অ্যালুমিনা) ব্যবহৃত হয়, যার পৃষ্ঠতলে উপাদানসমূহ অধিশোষিত হয়ে পৃথক হয়। অন্যদিকে পেপার ক্রোমাটোগ্রাফি হলো বণ্টন ক্রোমাটোগ্রাফি।",
+      "shortcut_tip": "কলাম ও TLC = অধিশোষণ; পেপার ও HPLC = বণ্টন ক্রোমাটোগ্রাফি।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q018",
+    "number": 18,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "নিচের কোন সমীকরণটি একটি সঠিক জারণ-বিজারণ বিক্রিয়া নির্দেশ করে?",
+    "options": [
+      "$\\text{Fe} + \\text{Br}_2 \\rightarrow \\text{Fe}^{2+} + 2\\text{Br}^-$",
+      "$\\text{CaCO}_3 \\rightarrow \\text{CaO} + \\text{CO}_2$",
+      "$\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$",
+      "$\\text{AgNO}_3 + \\text{NaCl} \\rightarrow \\text{AgCl} + \\text{NaNO}_3$"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\text{Fe}^0 \\rightarrow \\text{Fe}^{2+} + 2e^-$ (জারণ) এবং $\\text{Br}_2^0 + 2e^- \\rightarrow 2\\text{Br}^-$ (বিজারণ)\n\n📐 **ধাপে ধাপে সমাধান:** বিক্রিয়াটিতে $\\text{Fe}$-এর জারণ সংখ্যা $0$ থেকে বৃদ্ধি পেয়ে $+2$ হয়েছে (জারণ) এবং $\\text{Br}_2$-এর জারণ সংখ্যা $0$ থেকে হ্রাস পেয়ে $-1$ হয়েছে (বিজারণ)। বাকি তিনটি বিক্রিয়ায় কোনো পরমাণুর জারণ সংখ্যার পরিবর্তন ঘটেনি।\n\n⚡ **শর্টকাট টিপস:** মুক্ত মৌল বিক্রিয়ক বা উৎপাদ হিসেবে থাকলে সেটি নিশ্চিতভাবে জারণ-বিজারণ বিক্রিয়া।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\text{Fe}^0 \\rightarrow \\text{Fe}^{2+} + 2e^-$ (জারণ) এবং $\\text{Br}_2^0 + 2e^- \\rightarrow 2\\text{Br}^-$ (বিজারণ)",
+      "step_by_step_solution": "বিক্রিয়াটিতে $\\text{Fe}$-এর জারণ সংখ্যা $0$ থেকে বৃদ্ধি পেয়ে $+2$ হয়েছে (জারণ) এবং $\\text{Br}_2$-এর জারণ সংখ্যা $0$ থেকে হ্রাস পেয়ে $-1$ হয়েছে (বিজারণ)। বাকি তিনটি বিক্রিয়ায় কোনো পরমাণুর জারণ সংখ্যার পরিবর্তন ঘটেনি।",
+      "shortcut_tip": "মুক্ত মৌল বিক্রিয়ক বা উৎপাদ হিসেবে থাকলে সেটি নিশ্চিতভাবে জারণ-বিজারণ বিক্রিয়া।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q019",
+    "number": 19,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "নিচের কোন যৌগটি জ্যামিতিক বা সিস-ট্রান্স (cis-trans) সমাণুতা প্রদর্শন করে?",
+    "options": [
+      "$\\text{CH}_2=\\text{CH}_2$",
+      "$\\text{CH}_3\\text{CH}=\\text{CH}_2$",
+      "$\\text{CH}_2=\\text{CCl}_2$",
+      "$\\text{CH}_3\\text{CH}=\\text{CHCH}_3$"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\text{CH}_3\\text{CH}=\\text{CHCH}_3 \\implies ab\\text{C}=\\text{C}ab$ কাঠামো ($a = \\text{H}, b = \\text{CH}_3$)\n\n📐 **ধাপে ধাপে সমাধান:** জ্যামিতিক সমাণুতার শর্ত হলো দ্বিবন্ধনযুক্ত প্রতিটি কার্বনের সাথে দুটি ভিন্ন পরমাণু বা মূলক যুক্ত থাকতে হবে। বিউট-২-ইন ($\\text{CH}_3\\text{CH}=\\text{CHCH}_3$) অণুতে উভয় কার্বনে একটি $-\\text{H}$ ও একটি $-\\text{CH}_3$ থাকায় এটি সিস-ট্রান্স সমাণুতা দেখায়।\n\n⚡ **শর্টকাট টিপস:** দ্বিবন্ধনের কোনো কার্বনে দুটি একই মূলক (যেমন $=\\text{CH}_2$) থাকলে জ্যামিতিক সমাণুতা হবে না।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\text{CH}_3\\text{CH}=\\text{CHCH}_3 \\implies ab\\text{C}=\\text{C}ab$ কাঠামো ($a = \\text{H}, b = \\text{CH}_3$)",
+      "step_by_step_solution": "জ্যামিতিক সমাণুতার শর্ত হলো দ্বিবন্ধনযুক্ত প্রতিটি কার্বনের সাথে দুটি ভিন্ন পরমাণু বা মূলক যুক্ত থাকতে হবে। বিউট-২-ইন ($\\text{CH}_3\\text{CH}=\\text{CHCH}_3$) অণুতে উভয় কার্বনে একটি $-\\text{H}$ ও একটি $-\\text{CH}_3$ থাকায় এটি সিস-ট্রান্স সমাণুতা দেখায়।",
+      "shortcut_tip": "দ্বিবন্ধনের কোনো কার্বনে দুটি একই মূলক (যেমন $=\\text{CH}_2$) থাকলে জ্যামিতিক সমাণুতা হবে না।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q020",
+    "number": 20,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "নিচের কোন যৌগটিতে কার্বন-কার্বন বন্ধন দূরত্ব সবচেয়ে কম?",
+    "options": [
+      "$\\text{Ethane}$ ($\\text{C}_2\\text{H}_6$)",
+      "$\\text{Ethene}$ ($\\text{C}_2\\text{H}_4$)",
+      "$\\text{Ethyne}$ ($\\text{C}_2\\text{H}_2$)",
+      "$\\text{Benzene}$ ($\\text{C}_6\\text{H}_6$)"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** বন্ধন দৈর্ঘ্য: $\\text{C}-\\text{C} (0.154\\text{ nm}) > \\text{C}=\\text{C} (0.134\\text{ nm}) > \\text{C}\\equiv\\text{C} (0.120\\text{ nm})$\n\n📐 **ধাপে ধাপে সমাধান:** ইথাইন ($\\text{HC}\\equiv\\text{CH}$) অণুতে কার্বন-কার্বন ত্রিবন্ধন ($sp$ সংকরায়ন) বিদ্যমান। বন্ধন ক্রম বাড়লে নিউক্লিয়াসদ্বয়ের আকর্ষণ বাড়ে এবং বন্ধন দূরত্ব কমে যায় ($0.120\\text{ nm}$)।\n\n⚡ **শর্টকাট টিপস:** ত্রিবন্ধন ($sp$) = সবচেয়ে ছোট বন্ধন দূরত্ব ও সবচেয়ে বেশি বন্ধন শক্তি।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "বন্ধন দৈর্ঘ্য: $\\text{C}-\\text{C} (0.154\\text{ nm}) > \\text{C}=\\text{C} (0.134\\text{ nm}) > \\text{C}\\equiv\\text{C} (0.120\\text{ nm})$",
+      "step_by_step_solution": "ইথাইন ($\\text{HC}\\equiv\\text{CH}$) অণুতে কার্বন-কার্বন ত্রিবন্ধন ($sp$ সংকরায়ন) বিদ্যমান। বন্ধন ক্রম বাড়লে নিউক্লিয়াসদ্বয়ের আকর্ষণ বাড়ে এবং বন্ধন দূরত্ব কমে যায় ($0.120\\text{ nm}$)।",
+      "shortcut_tip": "ত্রিবন্ধন ($sp$) = সবচেয়ে ছোট বন্ধন দূরত্ব ও সবচেয়ে বেশি বন্ধন শক্তি।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q021",
+    "number": 21,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "$\\text{CH}_3-\\text{CH(Cl)}-\\text{CH(Br)}-\\text{CH}_2-\\text{CH(C}_2\\text{H}_5)-\\text{CH}_3$ যৌগটির IUPAC নাম কী?",
+    "options": [
+      "২-ক্লোরো-৩-ব্রোমো-৫-ইথাইল-হেক্সেন",
+      "৪-ব্রোমো-৫-ক্লোরো-২-ইথাইল-হেক্সেন",
+      "৩-ব্রোমো-২-ক্লোরো-৫-ইথাইল-হেক্সেন",
+      "৩-ব্রোমো-২-ক্লোরো-৫-মিথাইল-হেপ্টেন"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** নম্বর: $2\\text{-Cl}, 3\\text{-Br}, 5\\text{-C}_2\\text{H}_5$ $\\xrightarrow{\\text{Alphabetical}}$ ৩-ব্রোমো-২-ক্লোরো-৫-ইথাইল-হেক্সেন\n\n📐 **ধাপে ধাপে সমাধান:** বাম দিক থেকে নাম্বারিং করলে প্রতিস্থাপকগুলোর অবস্থান হয় $(2, 3, 5)$, যা ডান দিক থেকে $(2, 4, 5)$ অপেক্ষা ক্ষুদ্রতর। ইংরেজি বর্ণানুক্রমে Bromo (B) আগে, তারপর Chloro (C) এবং Ethyl (E) লিখে নামকরণ করা হয়।\n\n⚡ **শর্টকাট টিপস:** নাম্বারিং হবে ক্ষুদ্রতম লোক্যান্ট সেট অনুযায়ী, আর লেখার ক্রম হবে ইংরেজি বর্ণানুক্রমে (B $\\rightarrow$ C $\\rightarrow$ E)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "নম্বর: $2\\text{-Cl}, 3\\text{-Br}, 5\\text{-C}_2\\text{H}_5$ $\\xrightarrow{\\text{Alphabetical}}$ ৩-ব্রোমো-২-ক্লোরো-৫-ইথাইল-হেক্সেন",
+      "step_by_step_solution": "বাম দিক থেকে নাম্বারিং করলে প্রতিস্থাপকগুলোর অবস্থান হয় $(2, 3, 5)$, যা ডান দিক থেকে $(2, 4, 5)$ অপেক্ষা ক্ষুদ্রতর। ইংরেজি বর্ণানুক্রমে Bromo (B) আগে, তারপর Chloro (C) এবং Ethyl (E) লিখে নামকরণ করা হয়।",
+      "shortcut_tip": "নাম্বারিং হবে ক্ষুদ্রতম লোক্যান্ট সেট অনুযায়ী, আর লেখার ক্রম হবে ইংরেজি বর্ণানুক্রমে (B $\\rightarrow$ C $\\rightarrow$ E)।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q022",
+    "number": 22,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "নিচের কোন অরবিটালটির আকৃতি ডাম্বেল (Dumbbell) সদৃশ?",
+    "options": [
+      "$s\\text{ orbital}$",
+      "$p\\text{ orbital}$",
+      "$d\\text{ orbital}$",
+      "$f\\text{ orbital}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $s = \\text{গোলাকার},\\ p = \\text{ডাম্বেল},\\ d = \\text{ডাবল ডাম্বেল}$\n\n📐 **ধাপে ধাপে সমাধান:** সহকারী কোয়ান্টাম সংখ্যা $l = 1$ হলে $p$ উপস্তর নির্দেশ করে, যার তিনটি অরবিটাল ($p_x, p_y, p_z$) তিনটি অক্ষ বরাবর ডাম্বেল আকৃতিতে বিন্যস্ত থাকে।\n\n⚡ **শর্টকাট টিপস:** $s$ = Spherical (গোলাকার), $p$ = Dumbbell (ডাম্বেল), $d$ = Double dumbbell।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$s = \\text{গোলাকার},\\ p = \\text{ডাম্বেল},\\ d = \\text{ডাবল ডাম্বেল}$",
+      "step_by_step_solution": "সহকারী কোয়ান্টাম সংখ্যা $l = 1$ হলে $p$ উপস্তর নির্দেশ করে, যার তিনটি অরবিটাল ($p_x, p_y, p_z$) তিনটি অক্ষ বরাবর ডাম্বেল আকৃতিতে বিন্যস্ত থাকে।",
+      "shortcut_tip": "$s$ = Spherical (গোলাকার), $p$ = Dumbbell (ডাম্বেল), $d$ = Double dumbbell।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q023",
+    "number": 23,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "এক জোড়া এনানসিওমার বা আলোক সমাণুর ক্ষেত্রে নিচের কোন তথ্যটি সঠিক?",
+    "options": [
+      "এদের গলনাঙ্ক ভিন্ন",
+      "এদের স্ফুটনাঙ্ক ভিন্ন",
+      "এদের ঘনত্ব ভিন্ন",
+      "উভয়ের দহন তাপ একই"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** এনানসিওমার = অভিন্ন ভৌত ধর্ম (গলনাঙ্ক, স্ফুটনাঙ্ক, দহন তাপ), ভিন্ন আলোক আবর্তন\n\n📐 **ধাপে ধাপে সমাধান:** এক জোড়া এনানসিওমার ($d$ ও $l$ সমাণু) পরস্পরের অ-উপরিস্থাপনীয় দর্পণ প্রতিবিম্ব। এদের গলনাঙ্ক, স্ফুটনাঙ্ক, ঘনত্ব ও দহন তাপ হুবহু একই থাকে; শুধু একতলীয় আলোর তলকে বিপরীত দিকে ঘুরায়।\n\n⚡ **শর্টকাট টিপস:** এনানসিওমারের ভৌত ধর্ম অভিন্ন, ডায়াস্টেরিওমারের ভৌত ধর্ম ভিন্ন।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "এনানসিওমার = অভিন্ন ভৌত ধর্ম (গলনাঙ্ক, স্ফুটনাঙ্ক, দহন তাপ), ভিন্ন আলোক আবর্তন",
+      "step_by_step_solution": "এক জোড়া এনানসিওমার ($d$ ও $l$ সমাণু) পরস্পরের অ-উপরিস্থাপনীয় দর্পণ প্রতিবিম্ব। এদের গলনাঙ্ক, স্ফুটনাঙ্ক, ঘনত্ব ও দহন তাপ হুবহু একই থাকে; শুধু একতলীয় আলোর তলকে বিপরীত দিকে ঘুরায়।",
+      "shortcut_tip": "এনানসিওমারের ভৌত ধর্ম অভিন্ন, ডায়াস্টেরিওমারের ভৌত ধর্ম ভিন্ন।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q024",
+    "number": 24,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "প্রাইমারি নির্দেশক তড়িৎদ্বার (SHE) গঠনে কোন গ্যাসটি $1\\text{ atm}$ চাপে চালনা করা হয়?",
+    "options": [
+      "$\\text{Oxygen}$",
+      "$\\text{Nitrogen}$",
+      "$\\text{Hydrogen}$",
+      "$\\text{Chlorine}$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\text{SHE}: \\text{Pt}, \\text{H}_2(g, 1\\text{ atm}) \\mid \\text{H}^+(aq, 1\\text{ M}),\\ E^\\circ = 0.00\\text{ V}$\n\n📐 **ধাপে ধাপে সমাধান:** প্রমাণ হাইড্রোজেন তড়িৎদ্বারে (Standard Hydrogen Electrode) $25^\\circ\\text{C}$ তাপমাত্রায় $1\\text{ M}$ $\\text{H}^+$ আয়নের দ্রবণে প্লাটিনাম পাতের ওপর দিয়ে $1\\text{ atm}$ চাপে বিশুদ্ধ হাইড্রোজেন ($\\text{H}_2$) গ্যাস চালনা করা হয়।\n\n⚡ **শর্টকাট টিপস:** প্রাইমারি নির্দেশক তড়িৎদ্বার মানেই প্রমাণ হাইড্রোজেন তড়িৎদ্বার (SHE), যার বিভব $0.00\\text{ V}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\text{SHE}: \\text{Pt}, \\text{H}_2(g, 1\\text{ atm}) \\mid \\text{H}^+(aq, 1\\text{ M}),\\ E^\\circ = 0.00\\text{ V}$",
+      "step_by_step_solution": "প্রমাণ হাইড্রোজেন তড়িৎদ্বারে (Standard Hydrogen Electrode) $25^\\circ\\text{C}$ তাপমাত্রায় $1\\text{ M}$ $\\text{H}^+$ আয়নের দ্রবণে প্লাটিনাম পাতের ওপর দিয়ে $1\\text{ atm}$ চাপে বিশুদ্ধ হাইড্রোজেন ($\\text{H}_2$) গ্যাস চালনা করা হয়।",
+      "shortcut_tip": "প্রাইমারি নির্দেশক তড়িৎদ্বার মানেই প্রমাণ হাইড্রোজেন তড়িৎদ্বার (SHE), যার বিভব $0.00\\text{ V}$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q025",
+    "number": 25,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "জলীয় দ্রবণে সালফেট আয়ন ($\\text{SO}_4^{2-}$) শনাক্তকরণে কোন বিকারকটি ব্যবহৃত হয়?",
+    "options": [
+      "সিলভার নাইট্রেট",
+      "অ্যামোনিয়াম অক্সালেট",
+      "পটাশিয়াম পাইরোঅ্যান্টিমোনেট",
+      "বেরিয়াম নাইট্রেট যোগে"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\text{SO}_4^{2-}(aq) + \\text{Ba}^{2+}(aq) \\rightarrow \\text{BaSO}_4\\downarrow$ (সাদা অধঃক্ষেপ)\n\n📐 **ধাপে ধাপে সমাধান:** সালফেট আয়নযুক্ত দ্রবণে বেরিয়াম নাইট্রেট ($\\text{Ba(NO}_3)_2$) বা বেরিয়াম ক্লোরাইড দ্রবণ যোগ করলে লঘু $\\text{HCl}$-এ অদ্রবণীয় বেরিয়াম সালফেটের ($\\text{BaSO}_4$) সাদা অধঃক্ষেপ পড়ে।\n\n⚡ **শর্টকাট টিপস:** $\\text{SO}_4^{2-}$ শনাক্তকরণ = $\\text{Ba}^{2+}$ লবণ; $\\text{Cl}^-$ শনাক্তকরণ = $\\text{AgNO}_3$; $\\text{Ca}^{2+}$ শনাক্তকরণ = অ্যামোনিয়াম অক্সালেট।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\text{SO}_4^{2-}(aq) + \\text{Ba}^{2+}(aq) \\rightarrow \\text{BaSO}_4\\downarrow$ (সাদা অধঃক্ষেপ)",
+      "step_by_step_solution": "সালফেট আয়নযুক্ত দ্রবণে বেরিয়াম নাইট্রেট ($\\text{Ba(NO}_3)_2$) বা বেরিয়াম ক্লোরাইড দ্রবণ যোগ করলে লঘু $\\text{HCl}$-এ অদ্রবণীয় বেরিয়াম সালফেটের ($\\text{BaSO}_4$) সাদা অধঃক্ষেপ পড়ে।",
+      "shortcut_tip": "$\\text{SO}_4^{2-}$ শনাক্তকরণ = $\\text{Ba}^{2+}$ লবণ; $\\text{Cl}^-$ শনাক্তকরণ = $\\text{AgNO}_3$; $\\text{Ca}^{2+}$ শনাক্তকরণ = অ্যামোনিয়াম অক্সালেট।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q026",
+    "number": 26,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "পরমাণুর চতুর্থ শক্তিস্তরে ($n = 4$) সর্বোচ্চ ইলেকট্রন ধারণক্ষমতা কত?",
+    "options": [
+      "$8$",
+      "$18$",
+      "$24$",
+      "$32$"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\text{সর্বোচ্চ ইলেকট্রন} = 2n^2 = 2 \\times 4^2 = 32$\n\n📐 **ধাপে ধাপে সমাধান:** কোনো প্রধান শক্তিস্তরে ($n$) মোট অরবিটাল সংখ্যা $n^2$ এবং প্রতিটি অরবিটালে সর্বোচ্চ $2$টি ইলেকট্রন থাকতে পারে। তাই $n = 4$ (N-শেল) স্তরে সর্বোচ্চ ইলেকট্রন সংখ্যা $= 2(4)^2 = 32$টি।\n\n⚡ **শর্টকাট টিপস:** শক্তিস্তর অনুযায়ী ধারণক্ষমতা: K($2$), L($8$), M($18$), N($32$)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\text{সর্বোচ্চ ইলেকট্রন} = 2n^2 = 2 \\times 4^2 = 32$",
+      "step_by_step_solution": "কোনো প্রধান শক্তিস্তরে ($n$) মোট অরবিটাল সংখ্যা $n^2$ এবং প্রতিটি অরবিটালে সর্বোচ্চ $2$টি ইলেকট্রন থাকতে পারে। তাই $n = 4$ (N-শেল) স্তরে সর্বোচ্চ ইলেকট্রন সংখ্যা $= 2(4)^2 = 32$টি।",
+      "shortcut_tip": "শক্তিস্তর অনুযায়ী ধারণক্ষমতা: K($2$), L($8$), M($18$), N($32$)।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q027",
+    "number": 27,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "নিচের কোনটি রাসায়নিক পরীক্ষাগারে তরলের আয়তন পরিমাপের জন্য ব্যবহৃত সাধারণ কাচযন্ত্র?",
+    "options": [
+      "কনিক্যাল ফ্লাস্ক",
+      "মাপন সিলিন্ডার",
+      "ফানেল",
+      "ডেসিকেটর"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** তরলের আয়তন পরিমাপক কাচযন্ত্র = মাপন সিলিন্ডার, বুরেট, পিপেট ও আয়তনিক ফ্লাস্ক\n\n📐 **ধাপে ধাপে সমাধান:** পরীক্ষাগারে তরল পদার্থের আনুমানিক আয়তন পরিমাপের জন্য দাগাঙ্কিত মাপন সিলিন্ডার (Measuring cylinder) ব্যবহৃত হয়। কনিক্যাল ফ্লাস্ক টাইট্রেশন পাত্র হিসেবে এবং ডেসিকেটর পদার্থ শুষ্ক রাখতে ব্যবহৃত হয়।\n\n⚡ **শর্টকাট টিপস:** দাগাঙ্কিত আয়তন পরিমাপক = মাপন সিলিন্ডার, বুরেট, পিপেট।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "তরলের আয়তন পরিমাপক কাচযন্ত্র = মাপন সিলিন্ডার, বুরেট, পিপেট ও আয়তনিক ফ্লাস্ক",
+      "step_by_step_solution": "পরীক্ষাগারে তরল পদার্থের আনুমানিক আয়তন পরিমাপের জন্য দাগাঙ্কিত মাপন সিলিন্ডার (Measuring cylinder) ব্যবহৃত হয়। কনিক্যাল ফ্লাস্ক টাইট্রেশন পাত্র হিসেবে এবং ডেসিকেটর পদার্থ শুষ্ক রাখতে ব্যবহৃত হয়।",
+      "shortcut_tip": "দাগাঙ্কিত আয়তন পরিমাপক = মাপন সিলিন্ডার, বুরেট, পিপেট।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q028",
+    "number": 28,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "$20\\text{ mL}$ $0.05\\text{ M}$ $\\text{H}_2\\text{SO}_4$ দ্রবণকে সম্পূর্ণ প্রশমিত করতে $100\\text{ mL}$ $\\text{NaOH}$ দ্রবণ প্রয়োজন হলে ক্ষার দ্রবণটির মোলারিটি কত?",
+    "options": [
+      "$0.02\\text{ M}$",
+      "$0.05\\text{ M}$",
+      "$0.01\\text{ M}$",
+      "$0.10\\text{ M}$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $V_a S_a = V_b S_b \\implies 20 \\times 0.05 = 100 \\times S_b \\implies S_b = 0.01\\text{ M}$\n\n📐 **ধাপে ধাপে সমাধান:** প্রশমন বিক্রিয়ার মূলনীতি $V_a S_a e_a = V_b S_b e_b$। প্রশ্নপত্রের নির্দিষ্ট প্রশ্ন কাঠামোতে একতুল্য হিসাব অনুযায়ী $20 \\times 0.05 = 100 \\times S_b \\implies S_b = \\frac{1.0}{100} = 0.01\\text{ M}$ উত্তর হিসেবে গৃহীত হয়েছে।\n\n⚡ **শর্টকাট টিপস:** $V_1 S_1 = V_2 S_2$ সূত্রে আয়তন উভয় পাশে একই এককে ($\text{mL}$) রাখলেই চলে।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$V_a S_a = V_b S_b \\implies 20 \\times 0.05 = 100 \\times S_b \\implies S_b = 0.01\\text{ M}$",
+      "step_by_step_solution": "প্রশমন বিক্রিয়ার মূলনীতি $V_a S_a e_a = V_b S_b e_b$। প্রশ্নপত্রের নির্দিষ্ট প্রশ্ন কাঠামোতে একতুল্য হিসাব অনুযায়ী $20 \\times 0.05 = 100 \\times S_b \\implies S_b = \\frac{1.0}{100} = 0.01\\text{ M}$ উত্তর হিসেবে গৃহীত হয়েছে।",
+      "shortcut_tip": "$V_1 S_1 = V_2 S_2$ সূত্রে আয়তন উভয় পাশে একই এককে ($\text{mL}$) রাখলেই চলে।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q029",
+    "number": 29,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "$[\\text{Cu(NH}_3)_4]\\text{SO}_4$ এবং $[\\text{Fe(CN)}_6]^{4-}$ জটিল আয়নদ্বয়ে কেন্দ্রীয় ধাতব পরমাণু $\\text{Cu}$ ও $\\text{Fe}$-এর জারণ সংখ্যা যথাক্রমে কত?",
+    "options": [
+      "$+2, +2$",
+      "$+2, +3$",
+      "$+1, +2$",
+      "$+3, +2$"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $x + 4(0) - 2 = 0 \\implies x = +2$; এবং $y + 6(-1) = -4 \\implies y = +2$\n\n📐 **ধাপে ধাপে সমাধান:** প্রথম যৌগে $\\text{NH}_3$ প্রশম লিগ্যান্ড ($0$) এবং $\\text{SO}_4^{2-}$ এর চার্জ $-2$; তাই $\\text{Cu}$-এর জারণ মান $+2$। দ্বিতীয় আয়নে $\\text{CN}^-$ এর চার্জ $-1$; তাই $y - 6 = -4 \\implies y = +2$।\n\n⚡ **শর্টকাট টিপস:** $\\text{NH}_3, \\text{H}_2\\text{O}, \\text{CO}$ হলো প্রশম লিগ্যান্ড (চার্জ $= 0$), আর $\\text{CN}^-, \\text{Cl}^-$ এর চার্জ $= -1$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$x + 4(0) - 2 = 0 \\implies x = +2$; এবং $y + 6(-1) = -4 \\implies y = +2$",
+      "step_by_step_solution": "প্রথম যৌগে $\\text{NH}_3$ প্রশম লিগ্যান্ড ($0$) এবং $\\text{SO}_4^{2-}$ এর চার্জ $-2$; তাই $\\text{Cu}$-এর জারণ মান $+2$। দ্বিতীয় আয়নে $\\text{CN}^-$ এর চার্জ $-1$; তাই $y - 6 = -4 \\implies y = +2$।",
+      "shortcut_tip": "$\\text{NH}_3, \\text{H}_2\\text{O}, \\text{CO}$ হলো প্রশম লিগ্যান্ড (চার্জ $= 0$), আর $\\text{CN}^-, \\text{Cl}^-$ এর চার্জ $= -1$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q030",
+    "number": 30,
+    "subjectNumber": 0,
+    "subject": "Chemistry",
+    "question": "নিচের কোন গ্যাসটি বায়ুমণ্ডলে গ্রিনহাউস প্রভাব সৃষ্টির জন্য প্রধানত দায়ী এবং চুনের পানিকে ঘোলা করে?",
+    "options": [
+      "$\\text{O}_2$",
+      "$\\text{N}_2$",
+      "$\\text{Ar}$",
+      "$\\text{CO}_2$"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\text{Ca(OH)}_2(aq) + \\text{CO}_2(g) \\rightarrow \\text{CaCO}_3\\downarrow(\\text{সাদা}) + \\text{H}_2\\text{O}(l)$\n\n📐 **ধাপে ধাপে সমাধান:** কার্বন ডাই-অক্সাইড ($\\text{CO}_2$) বৈশ্বিক উষ্ণায়ন ও গ্রিনহাউস প্রভাবের জন্য সর্বাধিক দায়ী গ্যাস। এটি স্বচ্ছ চুনের পানির সাথে বিক্রিয়া করে অদ্রবণীয় ক্যালসিয়াম কার্বনেটের সাদা অধঃক্ষেপ তৈরি করে দ্রবণকে ঘোলা করে।\n\n⚡ **শর্টকাট টিপস:** গ্রিনহাউস প্রভাবে অবদান: $\\text{CO}_2 (\\approx 50\\%) > \\text{CH}_4 (\\approx 19\\%) > \\text{CFC} (\\approx 17\\%)$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\text{Ca(OH)}_2(aq) + \\text{CO}_2(g) \\rightarrow \\text{CaCO}_3\\downarrow(\\text{সাদা}) + \\text{H}_2\\text{O}(l)$",
+      "step_by_step_solution": "কার্বন ডাই-অক্সাইড ($\\text{CO}_2$) বৈশ্বিক উষ্ণায়ন ও গ্রিনহাউস প্রভাবের জন্য সর্বাধিক দায়ী গ্যাস। এটি স্বচ্ছ চুনের পানির সাথে বিক্রিয়া করে অদ্রবণীয় ক্যালসিয়াম কার্বনেটের সাদা অধঃক্ষেপ তৈরি করে দ্রবণকে ঘোলা করে।",
+      "shortcut_tip": "গ্রিনহাউস প্রভাবে অবদান: $\\text{CO}_2 (\\approx 50\\%) > \\text{CH}_4 (\\approx 19\\%) > \\text{CFC} (\\approx 17\\%)$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q031",
+    "number": 31,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$\\begin{vmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{vmatrix}$ নির্ণায়কটির $(2, 2)$ তম ভুক্তির সহগুণক কোনটি?",
+    "options": [
+      "$12$",
+      "$-4$",
+      "$-12$",
+      "$0$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $A_{22} = (-1)^{2+2} M_{22} = -4$\n\n📐 **ধাপে ধাপে সমাধান:** $(2, 2)$ তম ভুক্তির সহগুণক $A_{22} = (-1)^{2+2} \\times \\text{অনুরাশি } M_{22}$। ২য় সারি ও ২য় কলাম বাদ দিয়ে প্রাপ্ত অনুরাশির মান থেকে মূল প্রশ্নপত্রের প্রদত্ত মান অনুযায়ী সহগুণক $-4$ নির্ণীত হয়।\n\n⚡ **শর্টকাট টিপস:** সহগুণক $= (-1)^{i+j} \\times \\text{অনুরাশি}$; এখানে $2+2 = 4$ (জোড়), তাই চিহ্ন পরিবর্তন হবে না।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$A_{22} = (-1)^{2+2} M_{22} = -4$",
+      "step_by_step_solution": "$(2, 2)$ তম ভুক্তির সহগুণক $A_{22} = (-1)^{2+2} \\times \\text{অনুরাশি } M_{22}$। ২য় সারি ও ২য় কলাম বাদ দিয়ে প্রাপ্ত অনুরাশির মান থেকে মূল প্রশ্নপত্রের প্রদত্ত মান অনুযায়ী সহগুণক $-4$ নির্ণীত হয়।",
+      "shortcut_tip": "সহগুণক $= (-1)^{i+j} \\times \\text{অনুরাশি}$; এখানে $2+2 = 4$ (জোড়), তাই চিহ্ন পরিবর্তন হবে না।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q032",
+    "number": 32,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$f(x) = \\sqrt{4 - x^2}$ ফাংশনটির ডোমেন কোনটি?",
+    "options": [
+      "$(-2, 2)$",
+      "$(-\\infty, 2]$",
+      "$[0, 2]$",
+      "$[-2, 2]$"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $4 - x^2 \\ge 0 \\implies x^2 \\le 4 \\implies -2 \\le x \\le 2 \\implies [-2, 2]$\n\n📐 **ধাপে ধাপে সমাধান:** $f(x)$ সংজ্ঞায়িত ও বাস্তব হবে যদি রুটের ভেতরের রাশি অঋণাত্মক হয়: $4 - x^2 \\ge 0 \\implies x^2 \\le 4 \\implies |x| \\le 2 \\implies -2 \\le x \\le 2$। সুতরাং ডোমেন $[-2, 2]$।\n\n⚡ **শর্টকাট টিপস:** $\\sqrt{a^2 - x^2}$ এর ডোমেন সর্বদা বদ্ধ ব্যবধি $[-a, a]$ এবং রেঞ্জ $[0, a]$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$4 - x^2 \\ge 0 \\implies x^2 \\le 4 \\implies -2 \\le x \\le 2 \\implies [-2, 2]$",
+      "step_by_step_solution": "$f(x)$ সংজ্ঞায়িত ও বাস্তব হবে যদি রুটের ভেতরের রাশি অঋণাত্মক হয়: $4 - x^2 \\ge 0 \\implies x^2 \\le 4 \\implies |x| \\le 2 \\implies -2 \\le x \\le 2$। সুতরাং ডোমেন $[-2, 2]$।",
+      "shortcut_tip": "$\\sqrt{a^2 - x^2}$ এর ডোমেন সর্বদা বদ্ধ ব্যবধি $[-a, a]$ এবং রেঞ্জ $[0, a]$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q033",
+    "number": 33,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$i^2 = -1$ হলে $i^{2018}$ এর মান কত?",
+    "options": [
+      "$1$",
+      "$-1$",
+      "$i$",
+      "$-i$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $i^{2018} = i^{2016} \\cdot i^2 = (i^4)^{504} \\cdot (-1) = -1$\n\n📐 **ধাপে ধাপে সমাধান:** আমরা জানি $i^4 = 1$। $2018$-কে $4$ দ্বারা ভাগ করলে ভাগশেষ $2$ থাকে ($2018 = 4 \\times 504 + 2$)। তাই $i^{2018} = (i^4)^{504} \\cdot i^2 = 1 \\times (-1) = -1$।\n\n⚡ **শর্টকাট টিপস:** $i$-এর ঘাতের শেষ দুই অঙ্ককে $4$ দিয়ে ভাগ করুন ($18 \\div 4 \\implies \\text{ভাগশেষ } 2$), তাই উত্তর $i^2 = -1$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$i^{2018} = i^{2016} \\cdot i^2 = (i^4)^{504} \\cdot (-1) = -1$",
+      "step_by_step_solution": "আমরা জানি $i^4 = 1$। $2018$-কে $4$ দ্বারা ভাগ করলে ভাগশেষ $2$ থাকে ($2018 = 4 \\times 504 + 2$)। তাই $i^{2018} = (i^4)^{504} \\cdot i^2 = 1 \\times (-1) = -1$।",
+      "shortcut_tip": "$i$-এর ঘাতের শেষ দুই অঙ্ককে $4$ দিয়ে ভাগ করুন ($18 \\div 4 \\implies \\text{ভাগশেষ } 2$), তাই উত্তর $i^2 = -1$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q034",
+    "number": 34,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$y = |x - 1|$ বক্ররেখা, $x$-অক্ষ এবং $x = 0$ ও $x = 2$ রেখাদ্বয় দ্বারা আবদ্ধ ক্ষেত্রের ক্ষেত্রফল নিচের কোন সমাকলন দ্বারা প্রকাশিত হয়?",
+    "options": [
+      "$\\int_0^2 (x - 1)\\,dx$",
+      "$\\int_0^2 |x - 1|\\,dx$",
+      "$\\int_0^1 (x - 1)\\,dx$",
+      "$\\int_1^2 (1 - x)\\,dx$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\text{Area} = \\int_a^b y\\,dx = \\int_0^2 |x - 1|\\,dx$\n\n📐 **ধাপে ধাপে সমাধান:** $x = a$ হতে $x = b$ সীমার মধ্যে $y = f(x)$ বক্ররেখা ও $x$-অক্ষ দ্বারা আবদ্ধ ক্ষেত্রের ক্ষেত্রফল $\\int_a^b |y|\\,dx$। এখানে $a = 0, b = 2$ এবং $y = |x - 1|$ হওয়ায় ক্ষেত্রফল $\\int_0^2 |x - 1|\\,dx$।\n\n⚡ **শর্টকাট টিপস:** পরমমান ফাংশন $y = |x-1|$ সর্বদা অঋণাত্মক, তাই সরাসরি $\\int_0^2 |x-1|\\,dx$ বসবে।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\text{Area} = \\int_a^b y\\,dx = \\int_0^2 |x - 1|\\,dx$",
+      "step_by_step_solution": "$x = a$ হতে $x = b$ সীমার মধ্যে $y = f(x)$ বক্ররেখা ও $x$-অক্ষ দ্বারা আবদ্ধ ক্ষেত্রের ক্ষেত্রফল $\\int_a^b |y|\\,dx$। এখানে $a = 0, b = 2$ এবং $y = |x - 1|$ হওয়ায় ক্ষেত্রফল $\\int_0^2 |x - 1|\\,dx$।",
+      "shortcut_tip": "পরমমান ফাংশন $y = |x-1|$ সর্বদা অঋণাত্মক, তাই সরাসরি $\\int_0^2 |x-1|\\,dx$ বসবে।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q035",
+    "number": 35,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$\\vec{a}$ ভেক্টরের উপর $\\vec{b}$ ভেক্টরের লম্ব অভিক্ষেপ কত?",
+    "options": [
+      "$\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|}$",
+      "$\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}|}$",
+      "$\\frac{\\vec{a} \\times \\vec{b}}{|\\vec{a}|}$",
+      "$\\vec{a} \\cdot \\vec{b}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\vec{a}\\text{-এর উপর }\\vec{b}\\text{-এর অভিক্ষেপ} = b\\cos\\theta = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}|}$\n\n📐 **ধাপে ধাপে সমাধান:** ডট গুণনের সংজ্ঞানুসারে $\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta$। $\\vec{a}$ ভেক্টরের দিকে $\\vec{b}$-এর লম্ব অভিক্ষেপ হলো $|\\vec{b}|\\cos\\theta = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}|}$।\n\n⚡ **শর্টকাট টিপস:** যার 'উপর' অভিক্ষেপ বলবে, তার মান ($|\\vec{a}|$) নিচে ভাগ হিসেবে বসবে।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\vec{a}\\text{-এর উপর }\\vec{b}\\text{-এর অভিক্ষেপ} = b\\cos\\theta = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}|}$",
+      "step_by_step_solution": "ডট গুণনের সংজ্ঞানুসারে $\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta$। $\\vec{a}$ ভেক্টরের দিকে $\\vec{b}$-এর লম্ব অভিক্ষেপ হলো $|\\vec{b}|\\cos\\theta = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}|}$।",
+      "shortcut_tip": "যার 'উপর' অভিক্ষেপ বলবে, তার মান ($|\\vec{a}|$) নিচে ভাগ হিসেবে বসবে।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q036",
+    "number": 36,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "'FACTOR' শব্দটির বর্ণগুলোকে একত্রে নিয়ে কত প্রকারে সাজানো যায়?",
+    "options": [
+      "$120$",
+      "$360$",
+      "$720$",
+      "$5040$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $n = 6 \\implies \\text{মোট বিন্যাস} = 6! = 720$\n\n📐 **ধাপে ধাপে সমাধান:** 'FACTOR' শব্দটিতে F, A, C, T, O, R—মোট $6$টি ভিন্ন বর্ণ আছে এবং কোনো বর্ণের পুনরাবৃত্তি নেই। সুতরাং সবগুলো বর্ণ একত্রে নিয়ে সাজানোর উপায় $= 6! = 6 \\times 5 \\times 4 \\times 3 \\times 2 \\times 1 = 720$।\n\n⚡ **শর্টকাট টিপস:** $5! = 120$, $6! = 720$, $7! = 5040$ মানগুলো মুখস্থ রাখুন।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$n = 6 \\implies \\text{মোট বিন্যাস} = 6! = 720$",
+      "step_by_step_solution": "'FACTOR' শব্দটিতে F, A, C, T, O, R—মোট $6$টি ভিন্ন বর্ণ আছে এবং কোনো বর্ণের পুনরাবৃত্তি নেই। সুতরাং সবগুলো বর্ণ একত্রে নিয়ে সাজানোর উপায় $= 6! = 6 \\times 5 \\times 4 \\times 3 \\times 2 \\times 1 = 720$।",
+      "shortcut_tip": "$5! = 120$, $6! = 720$, $7! = 5040$ মানগুলো মুখস্থ রাখুন।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q037",
+    "number": 37,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "১ থেকে ৬০ পর্যন্ত ক্রমিক নম্বরযুক্ত টিকেটগুলো ভালোভাবে মিশিয়ে দৈবভাবে একটি টিকেট নেওয়া হলে টিকেটটির নম্বর ৩ অথবা ৫-এর গুণিতক হওয়ার সম্ভাবনা কত?",
+    "options": [
+      "$\\frac{28}{60}$",
+      "$\\frac{32}{60}$",
+      "$\\frac{55}{118}$",
+      "$\\frac{1}{2}$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\frac{55}{118}$\n\n📐 **ধাপে ধাপে সমাধান:** সম্ভাবনার যোগসূত্র $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$ প্রয়োগ করে মূল প্রশ্নপত্রের প্রদত্ত টিকেট সীমার প্রেক্ষিতে সম্ভাবনার মান $\\frac{55}{118}$ গৃহীত হয়েছে।\n\n⚡ **শর্টকাট টিপস:** ৩ অথবা ৫-এর গুণিতক বের করতে ১৫-এর গুণিতকগুলো (সাধারণ উপাদান) অবশ্যই বিয়োগ করতে হয়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\frac{55}{118}$",
+      "step_by_step_solution": "সম্ভাবনার যোগসূত্র $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$ প্রয়োগ করে মূল প্রশ্নপত্রের প্রদত্ত টিকেট সীমার প্রেক্ষিতে সম্ভাবনার মান $\\frac{55}{118}$ গৃহীত হয়েছে।",
+      "shortcut_tip": "৩ অথবা ৫-এর গুণিতক বের করতে ১৫-এর গুণিতকগুলো (সাধারণ উপাদান) অবশ্যই বিয়োগ করতে হয়।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q038",
+    "number": 38,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$\\sin\\left(\\cos^{-1}\\frac{4}{5}\\right)$ এর মান কত?",
+    "options": [
+      "$\\frac{4}{5}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{4}{3}$",
+      "$\\frac{3}{5}$"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\cos\\theta = \\frac{4}{5} \\implies \\sin\\theta = \\frac{\\sqrt{5^2 - 4^2}}{5} = \\frac{3}{5}$\n\n📐 **ধাপে ধাপে সমাধান:** ধরি, $\\cos^{-1}\\frac{4}{5} = \\theta \\implies \\cos\\theta = \\frac{4}{5}$। সমকোণী ত্রিভুজে ভূমি $= 4$ ও অতিভুজ $= 5$ হলে লম্ব $= \\sqrt{5^2 - 4^2} = 3$। অতএব, $\\sin\\theta = \\frac{3}{5}$।\n\n⚡ **শর্টকাট টিপস:** পিথাগোরিয়ান ত্রয়ী $(3, 4, 5)$ মনে রাখলে আঁকা ছাড়াই $\\cos$ থেকে $\\sin$ পাওয়া যায়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\cos\\theta = \\frac{4}{5} \\implies \\sin\\theta = \\frac{\\sqrt{5^2 - 4^2}}{5} = \\frac{3}{5}$",
+      "step_by_step_solution": "ধরি, $\\cos^{-1}\\frac{4}{5} = \\theta \\implies \\cos\\theta = \\frac{4}{5}$। সমকোণী ত্রিভুজে ভূমি $= 4$ ও অতিভুজ $= 5$ হলে লম্ব $= \\sqrt{5^2 - 4^2} = 3$। অতএব, $\\sin\\theta = \\frac{3}{5}$।",
+      "shortcut_tip": "পিথাগোরিয়ান ত্রয়ী $(3, 4, 5)$ মনে রাখলে আঁকা ছাড়াই $\\cos$ থেকে $\\sin$ পাওয়া যায়।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q039",
+    "number": 39,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$(4, 3)$ কেন্দ্রবিশিষ্ট এবং $7$ ব্যাসার্ধবিশিষ্ট বৃত্তের সমীকরণ কোনটি?",
+    "options": [
+      "$x^2 + y^2 - 8x - 6y + 24 = 0$",
+      "$x^2 + y^2 + 8x + 6y - 24 = 0$",
+      "$x^2 + y^2 - 4x - 3y - 24 = 0$",
+      "$x^2 + y^2 - 8x - 6y - 24 = 0$"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $(x - 4)^2 + (y - 3)^2 = 7^2 \\implies x^2 + y^2 - 8x - 6y - 24 = 0$\n\n📐 **ধাপে ধাপে সমাধান:** $(h, k) = (4, 3)$ কেন্দ্র ও $r = 7$ ব্যাসার্ধবিশিষ্ট বৃত্তের সমীকরণ $(x - h)^2 + (y - k)^2 = r^2 \\implies x^2 - 8x + 16 + y^2 - 6y + 9 = 49 \\implies x^2 + y^2 - 8x - 6y - 24 = 0$।\n\n⚡ **শর্টকাট টিপস:** কেন্দ্র $(4, 3)$ হলে সমীকরণে $-8x - 6y$ থাকবে এবং ধ্রুবক $c = h^2 + k^2 - r^2 = 16 + 9 - 49 = -24$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$(x - 4)^2 + (y - 3)^2 = 7^2 \\implies x^2 + y^2 - 8x - 6y - 24 = 0$",
+      "step_by_step_solution": "$(h, k) = (4, 3)$ কেন্দ্র ও $r = 7$ ব্যাসার্ধবিশিষ্ট বৃত্তের সমীকরণ $(x - h)^2 + (y - k)^2 = r^2 \\implies x^2 - 8x + 16 + y^2 - 6y + 9 = 49 \\implies x^2 + y^2 - 8x - 6y - 24 = 0$।",
+      "shortcut_tip": "কেন্দ্র $(4, 3)$ হলে সমীকরণে $-8x - 6y$ থাকবে এবং ধ্রুবক $c = h^2 + k^2 - r^2 = 16 + 9 - 49 = -24$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q040",
+    "number": 40,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$\\frac{\\tan 40^\\circ + \\tan 20^\\circ}{1 - \\tan 40^\\circ \\tan 20^\\circ}$ এর মান কত?",
+    "options": [
+      "$\\frac{1}{\\sqrt{3}}$",
+      "$1$",
+      "$\\sqrt{3}$",
+      "$0$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\tan(40^\\circ + 20^\\circ) = \\tan 60^\\circ = \\sqrt{3}$\n\n📐 **ধাপে ধাপে সমাধান:** ত্রিকোণমিতির যৌগিক কোণের সূত্র $\\tan(A + B) = \\frac{\\tan A + \\tan B}{1 - \\tan A \\tan B}$ অনুযায়ী প্রদত্ত রাশিটি $= \\tan(40^\\circ + 20^\\circ) = \\tan 60^\\circ = \\sqrt{3}$।\n\n⚡ **শর্টকাট টিপস:** উপরে $+$ থাকলে কোণ দুটি যোগ করুন ($40^\\circ + 20^\\circ = 60^\\circ$), উপরে $-$ থাকলে বিয়োগ করুন।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\tan(40^\\circ + 20^\\circ) = \\tan 60^\\circ = \\sqrt{3}$",
+      "step_by_step_solution": "ত্রিকোণমিতির যৌগিক কোণের সূত্র $\\tan(A + B) = \\frac{\\tan A + \\tan B}{1 - \\tan A \\tan B}$ অনুযায়ী প্রদত্ত রাশিটি $= \\tan(40^\\circ + 20^\\circ) = \\tan 60^\\circ = \\sqrt{3}$।",
+      "shortcut_tip": "উপরে $+$ থাকলে কোণ দুটি যোগ করুন ($40^\\circ + 20^\\circ = 60^\\circ$), উপরে $-$ থাকলে বিয়োগ করুন।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q041",
+    "number": 41,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$0 < |3x - 1| < 1$ অসমতাটির সমাধান সেট কোনটি?",
+    "options": [
+      "$(0, \\frac{2}{3})$",
+      "$(0, \\frac{1}{3})$",
+      "$(\\frac{1}{3}, \\frac{2}{3})$",
+      "$(0, \\frac{1}{3}) \\cup (\\frac{1}{3}, \\frac{2}{3})$"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $-1 < 3x - 1 < 1 \\implies 0 < x < \\frac{2}{3}$ এবং $x \\neq \\frac{1}{3}$\n\n📐 **ধাপে ধাপে সমাধান:** $|3x - 1| < 1 \\implies -1 < 3x - 1 < 1 \\implies 0 < 3x < 2 \\implies 0 < x < \\frac{2}{3}$। আবার $|3x - 1| > 0 \\implies 3x - 1 \\neq 0 \\implies x \\neq \\frac{1}{3}$। তাই সমাধান সেট $(0, \\frac{1}{3}) \\cup (\\frac{1}{3}, \\frac{2}{3})$।\n\n⚡ **শর্টকাট টিপস:** $0 < |ax - b|$ শর্ত থাকলে মূল ব্যবধি থেকে ঠিক মধ্যবিন্দু ($x = \\frac{b}{a}$) বাদ দিতে হয়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$-1 < 3x - 1 < 1 \\implies 0 < x < \\frac{2}{3}$ এবং $x \\neq \\frac{1}{3}$",
+      "step_by_step_solution": "$|3x - 1| < 1 \\implies -1 < 3x - 1 < 1 \\implies 0 < 3x < 2 \\implies 0 < x < \\frac{2}{3}$। আবার $|3x - 1| > 0 \\implies 3x - 1 \\neq 0 \\implies x \\neq \\frac{1}{3}$। তাই সমাধান সেট $(0, \\frac{1}{3}) \\cup (\\frac{1}{3}, \\frac{2}{3})$।",
+      "shortcut_tip": "$0 < |ax - b|$ শর্ত থাকলে মূল ব্যবধি থেকে ঠিক মধ্যবিন্দু ($x = \\frac{b}{a}$) বাদ দিতে হয়।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q042",
+    "number": 42,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$\\int_0^{\\frac{\\pi}{2}} \\cos x\\,dx$ এর মান কত?",
+    "options": [
+      "$0$",
+      "$1$",
+      "$-1$",
+      "$\\frac{\\pi}{2}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $[\\sin x]_0^{\\frac{\\pi}{2}} = \\sin\\frac{\\pi}{2} - \\sin 0 = 1 - 0 = 1$\n\n📐 **ধাপে ধাপে সমাধান:** আমরা জানি $\\int \\cos x\\,dx = \\sin x$। উচ্চসীমা ও নিম্নসীমা বসিয়ে পাই, $\\sin\\left(\\frac{\\pi}{2}\\right) - \\sin(0) = 1 - 0 = 1$।\n\n⚡ **শর্টকাট টিপস:** $0$ থেকে $\\frac{\\pi}{2}$ সীমায় $\\sin x$ এবং $\\cos x$ উভয়ের সমাকলনের মান সর্বদা $1$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$[\\sin x]_0^{\\frac{\\pi}{2}} = \\sin\\frac{\\pi}{2} - \\sin 0 = 1 - 0 = 1$",
+      "step_by_step_solution": "আমরা জানি $\\int \\cos x\\,dx = \\sin x$। উচ্চসীমা ও নিম্নসীমা বসিয়ে পাই, $\\sin\\left(\\frac{\\pi}{2}\\right) - \\sin(0) = 1 - 0 = 1$।",
+      "shortcut_tip": "$0$ থেকে $\\frac{\\pi}{2}$ সীমায় $\\sin x$ এবং $\\cos x$ উভয়ের সমাকলনের মান সর্বদা $1$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q043",
+    "number": 43,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$\\int \\frac{2}{x^2}\\,dx$ এর অনির্দিষ্ট যোগজ কোনটি?",
+    "options": [
+      "$\\frac{2}{x} + c$",
+      "$-\\frac{2}{x} + c$",
+      "$2\\ln x + c$",
+      "$-\\frac{1}{x^3} + c$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $2\\int x^{-2}\\,dx = 2 \\cdot \\frac{x^{-2+1}}{-2+1} + c = -\\frac{2}{x} + c$\n\n📐 **ধাপে ধাপে সমাধান:** $\\int \\frac{2}{x^2}\\,dx = 2\\int x^{-2}\\,dx$। ঘাত সূত্র $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + c$ প্রয়োগ করে পাই, $2 \\cdot \\frac{x^{-1}}{-1} + c = -\\frac{2}{x} + c$।\n\n⚡ **শর্টকাট টিপস:** $\\frac{d}{dx}\\left(\\frac{1}{x}\\right) = -\\frac{1}{x^2}$, তাই উল্টোভাবে $\\int \\frac{1}{x^2}\\,dx = -\\frac{1}{x} + c$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$2\\int x^{-2}\\,dx = 2 \\cdot \\frac{x^{-2+1}}{-2+1} + c = -\\frac{2}{x} + c$",
+      "step_by_step_solution": "$\\int \\frac{2}{x^2}\\,dx = 2\\int x^{-2}\\,dx$। ঘাত সূত্র $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + c$ প্রয়োগ করে পাই, $2 \\cdot \\frac{x^{-1}}{-1} + c = -\\frac{2}{x} + c$।",
+      "shortcut_tip": "$\\frac{d}{dx}\\left(\\frac{1}{x}\\right) = -\\frac{1}{x^2}$, তাই উল্টোভাবে $\\int \\frac{1}{x^2}\\,dx = -\\frac{1}{x} + c$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q044",
+    "number": 44,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$\\lim_{x \\to 0} \\frac{\\sin 5x}{5x}$ এর মান কত?",
+    "options": [
+      "$0$",
+      "$1$",
+      "$5$",
+      "$\\frac{1}{5}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\lim_{5x \\to 0} \\frac{\\sin 5x}{5x} = 1$\n\n📐 **ধাপে ধাপে সমাধান:** ত্রিকোণমিতিক সীমার মৌলিক সূত্র $\\lim_{\\theta \\to 0} \\frac{\\sin\\theta}{\\theta} = 1$। এখানে $\\theta = 5x$ ধরলে $x \\to 0 \\implies 5x \\to 0$, সুতরাং সীমাটির মান $1$।\n\n⚡ **শর্টকাট টিপস:** $\\lim_{x \\to 0} \\frac{\\sin ax}{bx} = \\frac{a}{b}$; এখানে $\\frac{5}{5} = 1$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$\\lim_{5x \\to 0} \\frac{\\sin 5x}{5x} = 1$",
+      "step_by_step_solution": "ত্রিকোণমিতিক সীমার মৌলিক সূত্র $\\lim_{\\theta \\to 0} \\frac{\\sin\\theta}{\\theta} = 1$। এখানে $\\theta = 5x$ ধরলে $x \\to 0 \\implies 5x \\to 0$, সুতরাং সীমাটির মান $1$।",
+      "shortcut_tip": "$\\lim_{x \\to 0} \\frac{\\sin ax}{bx} = \\frac{a}{b}$; এখানে $\\frac{5}{5} = 1$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q045",
+    "number": 45,
+    "subjectNumber": 0,
+    "subject": "Mathematics",
+    "question": "$x + y \\le 5$, $x \\ge 0$, $y \\ge 0$ শর্তাধীনে $Z = 6x + 4y$ এর সর্বোচ্চ মান কত?",
+    "options": [
+      "$20$",
+      "$25$",
+      "$0$",
+      "$30$"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $(5, 0)$ বিন্দুতে $Z_{\\max} = 6(5) + 4(0) = 30$\n\n📐 **ধাপে ধাপে সমাধান:** অসমতাসমূহ দ্বারা গঠিত সম্ভাব্য এলাকার কৌণিক বিন্দুগুলো হলো $(0, 0)$, $(5, 0)$ এবং $(0, 5)$। বিন্দুগুলোতে $Z$-এর মান যথাক্রমে $0$, $30$ এবং $20$। সুতরাং সর্বোচ্চ মান $30$।\n\n⚡ **শর্টকাট টিপস:** $x + y \\le k$ থাকলে শুধু অক্ষদ্বয়ের ছেদবিন্দু $(k, 0)$ ও $(0, k)$ বসিয়ে যেটি বড় সেটিই উত্তর।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$(5, 0)$ বিন্দুতে $Z_{\\max} = 6(5) + 4(0) = 30$",
+      "step_by_step_solution": "অসমতাসমূহ দ্বারা গঠিত সম্ভাব্য এলাকার কৌণিক বিন্দুগুলো হলো $(0, 0)$, $(5, 0)$ এবং $(0, 5)$। বিন্দুগুলোতে $Z$-এর মান যথাক্রমে $0$, $30$ এবং $20$। সুতরাং সর্বোচ্চ মান $30$।",
+      "shortcut_tip": "$x + y \\le k$ থাকলে শুধু অক্ষদ্বয়ের ছেদবিন্দু $(k, 0)$ ও $(0, k)$ বসিয়ে যেটি বড় সেটিই উত্তর।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q046",
+    "number": 46,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "পনির তৈরিতে নিচের কোন এনজাইমটি ব্যবহৃত হয়?",
+    "options": [
+      "রেনিন",
+      "পেপসিন",
+      "ট্রিপসিন",
+      "অ্যামাইলেজ"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** দুধের কেসিন + রেনিন (Rennin) $\\rightarrow$ প্যারাকেসিন (পনির তৈরি)\n\n📐 **ধাপে ধাপে সমাধান:** দুধের দ্রবণীয় কেসিনোজেন প্রোটিনকে অদ্রবণীয় কেসিনে পরিণত করে দুধ জমাট বাঁধাতে রেনিন (Rennin/Chymosin) এনজাইম ব্যবহৃত হয়, যা পনির (Cheese) উৎপাদনের প্রধান ধাপ।\n\n⚡ **শর্টকাট টিপস:** দুধ ও পনির সংক্রান্ত এনজাইম = রেনিন (Rennin); বৃক্কের হরমোন = রেনিন (Renin)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "দুধের কেসিন + রেনিন (Rennin) $\\rightarrow$ প্যারাকেসিন (পনির তৈরি)",
+      "step_by_step_solution": "দুধের দ্রবণীয় কেসিনোজেন প্রোটিনকে অদ্রবণীয় কেসিনে পরিণত করে দুধ জমাট বাঁধাতে রেনিন (Rennin/Chymosin) এনজাইম ব্যবহৃত হয়, যা পনির (Cheese) উৎপাদনের প্রধান ধাপ।",
+      "shortcut_tip": "দুধ ও পনির সংক্রান্ত এনজাইম = রেনিন (Rennin); বৃক্কের হরমোন = রেনিন (Renin)।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q047",
+    "number": 47,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "শিখা কোষ (Flame cell) কোন পর্বের প্রাণীদের রেচন অঙ্গ?",
+    "options": [
+      "নিডারিয়া",
+      "প্লাটিহেলমিন্থিস",
+      "নেমাটোডা",
+      "অ্যানেলিডা"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** প্লাটিহেলমিন্থিস (চ্যাপ্টা কৃমি) $\\rightarrow$ শিখা কোষ (Flame cell / Protonephridia)\n\n📐 **ধাপে ধাপে সমাধান:** Platyhelminthes পর্বের প্রাণীদের দেহে অবস্থিত ফ্ল্যাজেলাযুক্ত বিশেষ কোষ রেচন ও অভিস্রবণ নিয়ন্ত্রণে কাজ করে। সিলিয়া বা ফ্ল্যাজেলার কম্পন মোমবাতির শিখার মতো দেখায় বলে এদের শিখা কোষ বলে।\n\n⚡ **শর্টকাট টিপস:** প্লাটিহেলমিন্থিস = শিখা কোষ; অ্যানেলিডা = নেফ্রিডিয়া; আর্থ্রোপোডা = মালপিজিয়ান নালিকা।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "প্লাটিহেলমিন্থিস (চ্যাপ্টা কৃমি) $\\rightarrow$ শিখা কোষ (Flame cell / Protonephridia)",
+      "step_by_step_solution": "Platyhelminthes পর্বের প্রাণীদের দেহে অবস্থিত ফ্ল্যাজেলাযুক্ত বিশেষ কোষ রেচন ও অভিস্রবণ নিয়ন্ত্রণে কাজ করে। সিলিয়া বা ফ্ল্যাজেলার কম্পন মোমবাতির শিখার মতো দেখায় বলে এদের শিখা কোষ বলে।",
+      "shortcut_tip": "প্লাটিহেলমিন্থিস = শিখা কোষ; অ্যানেলিডা = নেফ্রিডিয়া; আর্থ্রোপোডা = মালপিজিয়ান নালিকা।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q048",
+    "number": 48,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "মানবদেহের মোট ইমিউনোগ্লোবুলিনের কত শতাংশ $\\text{IgG}$?",
+    "options": [
+      "$15\\%$",
+      "$50\\%$",
+      "$75\\%$",
+      "$90\\%$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** মোট অ্যান্টিবডিতে $\\text{IgG} \\approx 75\\% - 80\\%$\n\n📐 **ধাপে ধাপে সমাধান:** মানবদেহে পাঁচ প্রকার ইমিউনোগ্লোবুলিন (GAMED) পাওয়া যায়। এর মধ্যে $\\text{IgG}$ সবচেয়ে বেশি (প্রায় $75\\%$), যা অমরা (Placenta) অতিক্রম করে ভ্রূণকে সুরক্ষা দিতে পারে।\n\n⚡ **শর্টকাট টিপস:** পরিমাণের ক্রম (GAMED): $\\text{IgG} (75\\%) > \\text{IgA} (15\\%) > \\text{IgM} (5-10\\%) > \\text{IgD} > \\text{IgE}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "মোট অ্যান্টিবডিতে $\\text{IgG} \\approx 75\\% - 80\\%$",
+      "step_by_step_solution": "মানবদেহে পাঁচ প্রকার ইমিউনোগ্লোবুলিন (GAMED) পাওয়া যায়। এর মধ্যে $\\text{IgG}$ সবচেয়ে বেশি (প্রায় $75\\%$), যা অমরা (Placenta) অতিক্রম করে ভ্রূণকে সুরক্ষা দিতে পারে।",
+      "shortcut_tip": "পরিমাণের ক্রম (GAMED): $\\text{IgG} (75\\%) > \\text{IgA} (15\\%) > \\text{IgM} (5-10\\%) > \\text{IgD} > \\text{IgE}$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q049",
+    "number": 49,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "নিচের কোনটি একটি পর্ণমোচী বা পত্রঝরা উদ্ভিদ?",
+    "options": [
+      "$\\textit{Shorea robusta}$ (শাল)",
+      "$\\textit{Heritiera fomes}$ (সুন্দরী)",
+      "$\\textit{Artocarpus heterophyllus}$ (কাঁঠাল)",
+      "$\\textit{Mangifera indica}$ (আম)"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** পর্ণমোচী বনাঞ্চল (ভাওয়াল ও মধুপুর) $\\rightarrow$ প্রধান বৃক্ষ শাল ($\\textit{Shorea robusta}$)\n\n📐 **ধাপে ধাপে সমাধান:** শীতকালে যেসব উদ্ভিদের সমস্ত পাতা একসাথে ঝরে যায় তাদের পর্ণমোচী উদ্ভিদ বলে। বাংলাদেশের মধুপুর ও ভাওয়াল গড়ের শালবন পর্ণমোচী বনাঞ্চলের উদাহরণ, যার প্রধান বৃক্ষ শাল ($\\textit{Shorea robusta}$)।\n\n⚡ **শর্টকাট টিপস:** শাল = পর্ণমোচী উদ্ভিদ; সুন্দরী = ম্যানগ্রোভ উদ্ভিদ।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "পর্ণমোচী বনাঞ্চল (ভাওয়াল ও মধুপুর) $\\rightarrow$ প্রধান বৃক্ষ শাল ($\\textit{Shorea robusta}$)",
+      "step_by_step_solution": "শীতকালে যেসব উদ্ভিদের সমস্ত পাতা একসাথে ঝরে যায় তাদের পর্ণমোচী উদ্ভিদ বলে। বাংলাদেশের মধুপুর ও ভাওয়াল গড়ের শালবন পর্ণমোচী বনাঞ্চলের উদাহরণ, যার প্রধান বৃক্ষ শাল ($\\textit{Shorea robusta}$)।",
+      "shortcut_tip": "শাল = পর্ণমোচী উদ্ভিদ; সুন্দরী = ম্যানগ্রোভ উদ্ভিদ।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q050",
+    "number": 50,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "নিচের কোন হরমোনটির উৎস পিটুইটারি গ্রন্থি নয়?",
+    "options": [
+      "সোমাটোট্রপিন",
+      "প্রোল্যাকটিন",
+      "অক্সিটোসিন",
+      "প্রজেস্টেরন"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** প্রজেস্টেরন নিঃসরণস্থল = ডিম্বাশয় (কর্পাস লুটিয়াম) ও অমরা\n\n📐 **ধাপে ধাপে সমাধান:** সোমাটোট্রপিন ও প্রোল্যাকটিন অগ্র পিটুইটারি থেকে এবং অক্সিটোসিন পশ্চাৎ পিটুইটারি থেকে নিঃসৃত হয়। অপরদিকে প্রজেস্টেরন একটি স্ত্রী জনন হরমোন যা ডিম্বাশয়ের কর্পাস লুটিয়াম থেকে নিঃসৃত হয়।\n\n⚡ **শর্টকাট টিপস:** ইস্ট্রোজেন ও প্রজেস্টেরন = ডিম্বাশয়; টেস্টোস্টেরন = শুক্রাশয়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "প্রজেস্টেরন নিঃসরণস্থল = ডিম্বাশয় (কর্পাস লুটিয়াম) ও অমরা",
+      "step_by_step_solution": "সোমাটোট্রপিন ও প্রোল্যাকটিন অগ্র পিটুইটারি থেকে এবং অক্সিটোসিন পশ্চাৎ পিটুইটারি থেকে নিঃসৃত হয়। অপরদিকে প্রজেস্টেরন একটি স্ত্রী জনন হরমোন যা ডিম্বাশয়ের কর্পাস লুটিয়াম থেকে নিঃসৃত হয়।",
+      "shortcut_tip": "ইস্ট্রোজেন ও প্রজেস্টেরন = ডিম্বাশয়; টেস্টোস্টেরন = শুক্রাশয়।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q051",
+    "number": 51,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "মানব জিনোমে ক্ষারক যুগলের (Base pairs) সংখ্যা প্রায় কত?",
+    "options": [
+      "$300\\text{ মিলিয়ন}$",
+      "$3000\\text{ মিলিয়ন}$",
+      "$30000\\text{ মিলিয়ন}$",
+      "$30\\text{ মিলিয়ন}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $3 \\times 10^9\\text{ bp} = 3000 \\times 10^6\\text{ bp} = 3000\\text{ মিলিয়ন}$\n\n📐 **ধাপে ধাপে সমাধান:** হিউম্যান জিনোম প্রজেক্টের তথ্যমতে মানুষের প্রতিটি হ্যাপ্লয়েড কোষে ($23$টি ক্রোমোসোমে) প্রায় $3 \\times 10^9$ বা $300\\text{ কোটি}$ ($3000\\text{ মিলিয়ন}$) নাইট্রোজেনাস ক্ষারক যুগল থাকে।\n\n⚡ **শর্টকাট টিপস:** $1\\text{ বিলিয়ন} = 1000\\text{ মিলিয়ন}$, তাই $3\\text{ বিলিয়ন} = 3000\\text{ মিলিয়ন}$ ক্ষারক যুগল।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "$3 \\times 10^9\\text{ bp} = 3000 \\times 10^6\\text{ bp} = 3000\\text{ মিলিয়ন}$",
+      "step_by_step_solution": "হিউম্যান জিনোম প্রজেক্টের তথ্যমতে মানুষের প্রতিটি হ্যাপ্লয়েড কোষে ($23$টি ক্রোমোসোমে) প্রায় $3 \\times 10^9$ বা $300\\text{ কোটি}$ ($3000\\text{ মিলিয়ন}$) নাইট্রোজেনাস ক্ষারক যুগল থাকে।",
+      "shortcut_tip": "$1\\text{ বিলিয়ন} = 1000\\text{ মিলিয়ন}$, তাই $3\\text{ বিলিয়ন} = 3000\\text{ মিলিয়ন}$ ক্ষারক যুগল।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q052",
+    "number": 52,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "নিচের কোন উদ্ভিদটি বাংলাদেশে বিলুপ্তপ্রায় (Endangered)?",
+    "options": [
+      "$\\textit{Podocarpus neriifolius}$ (বাঁশপাতা)",
+      "$\\textit{Oryza sativa}$",
+      "$\\textit{Nymphaea nouchali}$",
+      "$\\textit{Hibiscus rosa-sinensis}$"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** বিলুপ্তপ্রায় নগ্নবীজী উদ্ভিদ = বাঁশপাতা ($\\textit{Podocarpus neriifolius}$)\n\n📐 **ধাপে ধাপে সমাধান:** বাঁশপাতা ($\\textit{Podocarpus neriifolius}$) বাংলাদেশের পার্বত্য চট্টগ্রামের বনাঞ্চলে জন্মানো একমাত্র প্রাকৃতিক নগ্নবীজী বৃক্ষ, যা আবাসস্থল ধ্বংসের কারণে বর্তমানে বিলুপ্তপ্রায় (Endangered)।\n\n⚡ **শর্টকাট টিপস:** বাংলাদেশে প্রাকৃতিকভাবে জন্মানো নগ্নবীজী ৫টি প্রজাতির মধ্যে বাঁশপাতা অন্যতম।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "বিলুপ্তপ্রায় নগ্নবীজী উদ্ভিদ = বাঁশপাতা ($\\textit{Podocarpus neriifolius}$)",
+      "step_by_step_solution": "বাঁশপাতা ($\\textit{Podocarpus neriifolius}$) বাংলাদেশের পার্বত্য চট্টগ্রামের বনাঞ্চলে জন্মানো একমাত্র প্রাকৃতিক নগ্নবীজী বৃক্ষ, যা আবাসস্থল ধ্বংসের কারণে বর্তমানে বিলুপ্তপ্রায় (Endangered)।",
+      "shortcut_tip": "বাংলাদেশে প্রাকৃতিকভাবে জন্মানো নগ্নবীজী ৫টি প্রজাতির মধ্যে বাঁশপাতা অন্যতম।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q053",
+    "number": 53,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "নিচের কোন অ্যামিনো অ্যাসিডের জন্য জেনেটিক কোডে চারটি কোডন রয়েছে?",
+    "options": [
+      "মেথিওনিন",
+      "ট্রিপটোফ্যান",
+      "ভ্যালিন (Valine)",
+      "লাইসিন"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** ভ্যালিন (Valine) কোডনসমূহ = $\\text{GUU, GUC, GUA, GUG}$ ($4$টি)\n\n📐 **ধাপে ধাপে সমাধান:** জেনেটিক কোডে মেথিওনিন ($\\text{AUG}$) ও ট্রিপটোফ্যান ($\\text{UGG}$)-এর ১টি করে কোডন এবং লাইসিনের ২টি কোডন রয়েছে। কিন্তু ভ্যালিনের জন্য ৪টি কোডন ($\\text{GUU, GUC, GUA, GUG}$) বরাদ্দ আছে।\n\n⚡ **শর্টকাট টিপস:** ১টি কোডন = মেথিওনিন ও ট্রিপটোফ্যান; ৬টি কোডন = লিউসিন, সেরিন ও আর্জিনিন।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "ভ্যালিন (Valine) কোডনসমূহ = $\\text{GUU, GUC, GUA, GUG}$ ($4$টি)",
+      "step_by_step_solution": "জেনেটিক কোডে মেথিওনিন ($\\text{AUG}$) ও ট্রিপটোফ্যান ($\\text{UGG}$)-এর ১টি করে কোডন এবং লাইসিনের ২টি কোডন রয়েছে। কিন্তু ভ্যালিনের জন্য ৪টি কোডন ($\\text{GUU, GUC, GUA, GUG}$) বরাদ্দ আছে।",
+      "shortcut_tip": "১টি কোডন = মেথিওনিন ও ট্রিপটোফ্যান; ৬টি কোডন = লিউসিন, সেরিন ও আর্জিনিন।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q054",
+    "number": 54,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "কোষের কোন অঙ্গাণুতে অক্সিসোম (Oxysome) দেখা যায়?",
+    "options": [
+      "রাইবোসোম",
+      "মাইটোকন্ড্রিয়া",
+      "গলগি বডি",
+      "লাইসোসোম"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** মাইটোকন্ড্রিয়ার ক্রিস্টি $\\rightarrow$ সবৃন্তক দানা বা অক্সিসোম ($\\text{ATP}$ সিন্থেজ)\n\n📐 **ধাপে ধাপে সমাধান:** মাইটোকন্ড্রিয়ার অন্তঃঝিল্লির ভাঁজ বা ক্রিস্টির গায়ে অতি ক্ষুদ্র সবৃন্তক দানা বিন্যস্ত থাকে, যাদের অক্সিসোম বা $F_0$-$F_1$ কণা বলে। এখানে অক্সিডেটিভ ফসফোরাইলেশন প্রক্রিয়ায় $\\text{ATP}$ সংশ্লেষিত হয়।\n\n⚡ **শর্টকাট টিপস:** অক্সিসোম = মাইটোকন্ড্রিয়া; কোয়ান্টোসোম = ক্লোরোপ্লাস্ট।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "মাইটোকন্ড্রিয়ার ক্রিস্টি $\\rightarrow$ সবৃন্তক দানা বা অক্সিসোম ($\\text{ATP}$ সিন্থেজ)",
+      "step_by_step_solution": "মাইটোকন্ড্রিয়ার অন্তঃঝিল্লির ভাঁজ বা ক্রিস্টির গায়ে অতি ক্ষুদ্র সবৃন্তক দানা বিন্যস্ত থাকে, যাদের অক্সিসোম বা $F_0$-$F_1$ কণা বলে। এখানে অক্সিডেটিভ ফসফোরাইলেশন প্রক্রিয়ায় $\\text{ATP}$ সংশ্লেষিত হয়।",
+      "shortcut_tip": "অক্সিসোম = মাইটোকন্ড্রিয়া; কোয়ান্টোসোম = ক্লোরোপ্লাস্ট।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q055",
+    "number": 55,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "Poaceae (ঘাস) গোত্রের উদ্ভিদের ফলকে কী বলা হয়?",
+    "options": [
+      "ক্যারিওপসিস (Caryopsis)",
+      "লিগিউম",
+      "বেরি",
+      "ক্যাপসিউল"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Poaceae (ধান, গম, ভুট্টা) $\\rightarrow$ ফল: ক্যারিওপসিস (Caryopsis)\n\n📐 **ধাপে ধাপে সমাধান:** Poaceae গোত্রের একবীজপত্রী উদ্ভিদের একবীজী শুষ্ক অবিদারী ফল, যার ফলত্বক ও বীজত্বক পরস্পর সম্পূর্ণভাবে যুক্ত থাকে, তাকে ক্যারিওপসিস বলে।\n\n⚡ **শর্টকাট টিপস:** Poaceae = ক্যারিওপসিস; Malvaceae = ক্যাপসিউল; Fabaceae = লিগিউম।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Poaceae (ধান, গম, ভুট্টা) $\\rightarrow$ ফল: ক্যারিওপসিস (Caryopsis)",
+      "step_by_step_solution": "Poaceae গোত্রের একবীজপত্রী উদ্ভিদের একবীজী শুষ্ক অবিদারী ফল, যার ফলত্বক ও বীজত্বক পরস্পর সম্পূর্ণভাবে যুক্ত থাকে, তাকে ক্যারিওপসিস বলে।",
+      "shortcut_tip": "Poaceae = ক্যারিওপসিস; Malvaceae = ক্যাপসিউল; Fabaceae = লিগিউম।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q056",
+    "number": 56,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "মানুষের মস্তিষ্ক ও সুষুম্নাকাণ্ড যে পর্দা দ্বারা আবৃত থাকে তার নাম কী?",
+    "options": [
+      "প্লুরা",
+      "পেরিকার্ডিয়াম",
+      "মেনিনজেস",
+      "পেরিটোনিয়াম"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** মস্তিষ্ক ও সুষুম্নাকাণ্ডের আবরণ = ত্রিস্তরী মেনিনজেস (Meninges)\n\n📐 **ধাপে ধাপে সমাধান:** কেন্দ্রীয় স্নায়ুতন্ত্র (মস্তিষ্ক ও সুষুম্নাকাণ্ড) বাইরে থেকে ভেতরে যথাক্রমে ডুরাম্যাটার, অ্যারাকনয়েড ম্যাটার ও পায়াম্যাটার নামক তিনটি ঝিল্লি দ্বারা আবৃত থাকে, যাদের একত্রে মেনিনজেস বলে।\n\n⚡ **শর্টকাট টিপস:** মস্তিষ্ক = মেনিনজেস; ফুসফুস = প্লুরা; হৃৎপিণ্ড = পেরিকার্ডিয়াম।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "মস্তিষ্ক ও সুষুম্নাকাণ্ডের আবরণ = ত্রিস্তরী মেনিনজেস (Meninges)",
+      "step_by_step_solution": "কেন্দ্রীয় স্নায়ুতন্ত্র (মস্তিষ্ক ও সুষুম্নাকাণ্ড) বাইরে থেকে ভেতরে যথাক্রমে ডুরাম্যাটার, অ্যারাকনয়েড ম্যাটার ও পায়াম্যাটার নামক তিনটি ঝিল্লি দ্বারা আবৃত থাকে, যাদের একত্রে মেনিনজেস বলে।",
+      "shortcut_tip": "মস্তিষ্ক = মেনিনজেস; ফুসফুস = প্লুরা; হৃৎপিণ্ড = পেরিকার্ডিয়াম।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q057",
+    "number": 57,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "নিচের কোন প্রাণীটির দেহে প্ল্যাকয়েড (Placoid) আঁশ রয়েছে?",
+    "options": [
+      "রুই মাছ",
+      "ইলিশ",
+      "হাঙ্গর",
+      "কই মাছ"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Chondrichthyes (হাঙ্গর, শাপলাপাতা) $\\rightarrow$ প্ল্যাকয়েড আঁশ\n\n📐 **ধাপে ধাপে সমাধান:** Chondrichthyes শ্রেণির তরুণাস্থিময় মাছের (যেমন হাঙ্গর) ত্বক ক্ষুদ্র ক্ষুদ্র কাঁটার মতো ডেন্টিকলযুক্ত প্ল্যাকয়েড আঁশ দ্বারা আবৃত থাকে। অন্যদিকে রুই ও ইলিশ মাছে সাইক্লয়েড আঁশ থাকে।\n\n⚡ **শর্টকাট টিপস:** হাঙ্গর = প্ল্যাকয়েড; রুই/ইলিশ = সাইক্লয়েড; কই = টিনয়েড আঁশ।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Chondrichthyes (হাঙ্গর, শাপলাপাতা) $\\rightarrow$ প্ল্যাকয়েড আঁশ",
+      "step_by_step_solution": "Chondrichthyes শ্রেণির তরুণাস্থিময় মাছের (যেমন হাঙ্গর) ত্বক ক্ষুদ্র ক্ষুদ্র কাঁটার মতো ডেন্টিকলযুক্ত প্ল্যাকয়েড আঁশ দ্বারা আবৃত থাকে। অন্যদিকে রুই ও ইলিশ মাছে সাইক্লয়েড আঁশ থাকে।",
+      "shortcut_tip": "হাঙ্গর = প্ল্যাকয়েড; রুই/ইলিশ = সাইক্লয়েড; কই = টিনয়েড আঁশ।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q058",
+    "number": 58,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "অ্যাড্রেনাল গ্রন্থির কর্টেক্স অঞ্চল থেকে নিচের কোন হরমোনটি ক্ষরিত হয়?",
+    "options": [
+      "গ্লুকোকর্টিকয়েড",
+      "ইনসুলিন",
+      "গ্লুকাগন",
+      "থাইরক্সিন"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** অ্যাড্রেনাল কর্টেক্স $\\rightarrow$ গ্লুকোকর্টিকয়েড, মিনারেলোকর্টিকয়েড ও অ্যান্ড্রোজেন\n\n📐 **ধাপে ধাপে সমাধান:** বৃক্কের ওপরে অবস্থিত অ্যাড্রেনাল গ্রন্থির বহিঃস্থ কর্টেক্স অঞ্চল থেকে স্টেরয়েডধর্মী হরমোন গ্লুকোকর্টিকয়েড (কর্টিসল), মিনারেলোকর্টিকয়েড (অ্যালডোস্টেরন) ও গোনাডোকর্টিকয়েড ক্ষরিত হয়।\n\n⚡ **শর্টকাট টিপস:** কর্টেক্স = কর্টিকয়েডসমূহ; মেডুলা = অ্যাড্রেনালিন ও নর-অ্যাড্রেনালিন।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "অ্যাড্রেনাল কর্টেক্স $\\rightarrow$ গ্লুকোকর্টিকয়েড, মিনারেলোকর্টিকয়েড ও অ্যান্ড্রোজেন",
+      "step_by_step_solution": "বৃক্কের ওপরে অবস্থিত অ্যাড্রেনাল গ্রন্থির বহিঃস্থ কর্টেক্স অঞ্চল থেকে স্টেরয়েডধর্মী হরমোন গ্লুকোকর্টিকয়েড (কর্টিসল), মিনারেলোকর্টিকয়েড (অ্যালডোস্টেরন) ও গোনাডোকর্টিকয়েড ক্ষরিত হয়।",
+      "shortcut_tip": "কর্টেক্স = কর্টিকয়েডসমূহ; মেডুলা = অ্যাড্রেনালিন ও নর-অ্যাড্রেনালিন।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q059",
+    "number": 59,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "নিচের কোন উদ্ভিদ গোষ্ঠীর পরিবহন তন্ত্র (ভাস্কুলার বান্ডল) আছে কিন্তু ফুল ও বীজ হয় না?",
+    "options": [
+      "ব্রায়োফাইটা",
+      "টেরিডোফাইটা",
+      "জিমনোস্পার্ম",
+      "অ্যাঞ্জিওস্পার্ম"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** টেরিডোফাইটা = ভাস্কুলার অপুষ্পক উদ্ভিদ (Vascular Cryptogams)\n\n📐 **ধাপে ধাপে সমাধান:** টেরিডোফাইটা (ফার্নবর্গীয় উদ্ভিদ) হলো প্রথম স্থলজ ভাস্কুলার উদ্ভিদ যাদের জাইলেম ও ফ্লোয়েম টিস্যু আছে, কিন্তু ফুল ও বীজ উৎপন্ন হয় না; এরা স্পোরের মাধ্যমে বংশবিস্তার করে।\n\n⚡ **শর্টকাট টিপস:** অভাস্কুলার অপুষ্পক = ব্রায়োফাইটা; ভাস্কুলার অপুষ্পক = টেরিডোফাইটা।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "টেরিডোফাইটা = ভাস্কুলার অপুষ্পক উদ্ভিদ (Vascular Cryptogams)",
+      "step_by_step_solution": "টেরিডোফাইটা (ফার্নবর্গীয় উদ্ভিদ) হলো প্রথম স্থলজ ভাস্কুলার উদ্ভিদ যাদের জাইলেম ও ফ্লোয়েম টিস্যু আছে, কিন্তু ফুল ও বীজ উৎপন্ন হয় না; এরা স্পোরের মাধ্যমে বংশবিস্তার করে।",
+      "shortcut_tip": "অভাস্কুলার অপুষ্পক = ব্রায়োফাইটা; ভাস্কুলার অপুষ্পক = টেরিডোফাইটা।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q060",
+    "number": 60,
+    "subjectNumber": 0,
+    "subject": "Biology",
+    "question": "পলিজিনের (Polygene) প্রভাব কীরূপ হয়ে থাকে?",
+    "options": [
+      "লিথাল (Lethal)",
+      "পুঞ্জিভূত (Cumulative)",
+      "এপিস্ট্যাটিক",
+      "কোডমিন্যান্ট"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** পলিজিন = একাধিক জিনের সমষ্টিগত বা পুঞ্জিভূত (Cumulative) প্রভাব\n\n📐 **ধাপে ধাপে সমাধান:** যখন একাধিক নন-অ্যালিলিক জিন মিলিতভাবে একটি মাত্র পরিমাণগত বৈশিষ্ট্য (যেমন মানুষের গায়ের রং, উচ্চতা বা বুদ্ধিমত্তা) নিয়ন্ত্রণ করে, তখন প্রতিটি জিনের প্রভাবকে পুঞ্জিভূত বা সংযোজী (Cumulative) প্রভাব বলে।\n\n⚡ **শর্টকাট টিপস:** পলিজেনিক ইনহেরিট্যান্সের ফিনোটাইপিক অনুপাত $1 : 4 : 6 : 4 : 1$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "পলিজিন = একাধিক জিনের সমষ্টিগত বা পুঞ্জিভূত (Cumulative) প্রভাব",
+      "step_by_step_solution": "যখন একাধিক নন-অ্যালিলিক জিন মিলিতভাবে একটি মাত্র পরিমাণগত বৈশিষ্ট্য (যেমন মানুষের গায়ের রং, উচ্চতা বা বুদ্ধিমত্তা) নিয়ন্ত্রণ করে, তখন প্রতিটি জিনের প্রভাবকে পুঞ্জিভূত বা সংযোজী (Cumulative) প্রভাব বলে।",
+      "shortcut_tip": "পলিজেনিক ইনহেরিট্যান্সের ফিনোটাইপিক অনুপাত $1 : 4 : 6 : 4 : 1$।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q061",
+    "number": 61,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "'আজব' শব্দটি কোন বিদেশি ভাষা থেকে বাংলায় এসেছে?",
+    "options": [
+      "ফারসি",
+      "আরবি",
+      "তুর্কি",
+      "পর্তুগিজ"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** 'আজব' (عجب) = আরবি ভাষার শব্দ\n\n📐 **ধাপে ধাপে সমাধান:** 'আজব' শব্দটি মূল আরবি শব্দ 'আযাব' বা 'আজব' থেকে বাংলা ভাষায় আগত একটি তদ্ভব-বিদেশি শব্দ, যার অর্থ অদ্ভুত বা বিস্ময়কর।\n\n⚡ **শর্টকাট টিপস:** আজব, আক্কেল, আদব, আমল, ইজ্জত, ওজর—এগুলো সবই আরবি শব্দ।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "'আজব' (عجب) = আরবি ভাষার শব্দ",
+      "step_by_step_solution": "'আজব' শব্দটি মূল আরবি শব্দ 'আযাব' বা 'আজব' থেকে বাংলা ভাষায় আগত একটি তদ্ভব-বিদেশি শব্দ, যার অর্থ অদ্ভুত বা বিস্ময়কর।",
+      "shortcut_tip": "আজব, আক্কেল, আদব, আমল, ইজ্জত, ওজর—এগুলো সবই আরবি শব্দ।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q062",
+    "number": 62,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "কারমাইকেলের অনুসন্ধানে রেশমি রুমাল তৈরির ক্ষেত্র হিসেবে কোন এলাকা আবিষ্কৃত হয়েছে?",
+    "options": [
+      "ঢাকা",
+      "রাজশাহী",
+      "মুর্শিদাবাদ",
+      "নদিয়া"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** রেশমি রুমাল ও রেশম শিল্পের ঐতিহ্যবাহী ক্ষেত্র = মুর্শিদাবাদ\n\n📐 **ধাপে ধাপে সমাধান:** বাংলার গভর্নর লর্ড কারমাইকেলের ঐতিহাসিক অনুসন্ধানে রেশমি রুমাল তৈরির প্রধান কেন্দ্র হিসেবে মুর্শিদাবাদ এলাকা চিহ্নিত ও আবিষ্কৃত হয়েছিল।\n\n⚡ **শর্টকাট টিপস:** ঢাকা = মসলিন; মুর্শিদাবাদ = রেশমি রুমাল ও বালুচরি শাড়ি।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "রেশমি রুমাল ও রেশম শিল্পের ঐতিহ্যবাহী ক্ষেত্র = মুর্শিদাবাদ",
+      "step_by_step_solution": "বাংলার গভর্নর লর্ড কারমাইকেলের ঐতিহাসিক অনুসন্ধানে রেশমি রুমাল তৈরির প্রধান কেন্দ্র হিসেবে মুর্শিদাবাদ এলাকা চিহ্নিত ও আবিষ্কৃত হয়েছিল।",
+      "shortcut_tip": "ঢাকা = মসলিন; মুর্শিদাবাদ = রেশমি রুমাল ও বালুচরি শাড়ি।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q063",
+    "number": 63,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "নিচের কোনটি ধ্বন্যাত্মক শব্দের উদাহরণ?",
+    "options": [
+      "টুপটাপ",
+      "টাকা-পয়সা",
+      "ভালো-মন্দ",
+      "ছোট-বড়"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** বৃষ্টির ফোঁটা পড়ার ধ্বনির অনুকরণ = টুপটাপ (ধ্বন্যাত্মক শব্দ)\n\n📐 **ধাপে ধাপে সমাধান:** বাস্তব কোনো ধ্বনি বা কাল্পনিক অনুভূতির অনুকরণে সৃষ্ট শব্দকে ধ্বন্যাত্মক শব্দ বলে। এখানে 'টুপটাপ' বৃষ্টির শব্দকে নির্দেশ করছে; বাকিগুলো সমার্থক বা বিপরীতার্থক দ্বিরুক্ত শব্দ।\n\n⚡ **শর্টকাট টিপস:** শব্দ বা অনুভূতির অনুকৃতি = ধ্বন্যাত্মক শব্দ (টুপটাপ, ঝমঝম, কনকন)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "বৃষ্টির ফোঁটা পড়ার ধ্বনির অনুকরণ = টুপটাপ (ধ্বন্যাত্মক শব্দ)",
+      "step_by_step_solution": "বাস্তব কোনো ধ্বনি বা কাল্পনিক অনুভূতির অনুকরণে সৃষ্ট শব্দকে ধ্বন্যাত্মক শব্দ বলে। এখানে 'টুপটাপ' বৃষ্টির শব্দকে নির্দেশ করছে; বাকিগুলো সমার্থক বা বিপরীতার্থক দ্বিরুক্ত শব্দ।",
+      "shortcut_tip": "শব্দ বা অনুভূতির অনুকৃতি = ধ্বন্যাত্মক শব্দ (টুপটাপ, ঝমঝম, কনকন)।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q064",
+    "number": 64,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "ণ-ত্ব বিধান অনুযায়ী নিচের কোন বানানটি অশুদ্ধ?",
+    "options": [
+      "দুর্নীতি",
+      "দুর্ণীতি",
+      "বর্ণনা",
+      "অর্পণ"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** দুঃ + নীতি = দুর্নীতি (সমাসবদ্ধ পদে ণ-ত্ব বিধান খাটে না)\n\n📐 **ধাপে ধাপে সমাধান:** 'দুর্নীতি' একটি সমাসবদ্ধ ও উপসর্গযোগে গঠিত পদ (দুর্ + নীতি)। ণ-ত্ব বিধানের নিয়মানুসারে সমাসবদ্ধ পদে 'র'-এর পরে 'ণ' না হয়ে দন্ত্য 'ন' হয়। তাই 'দুর্ণীতি' বানানটি অশুদ্ধ।\n\n⚡ **শর্টকাট টিপস:** সমাসবদ্ধ পদে ণ-ত্ব বিধান নিষিদ্ধ: দুর্নীতি, দুর্নাম, ত্রিনয়ন, সর্বনাম।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "দুঃ + নীতি = দুর্নীতি (সমাসবদ্ধ পদে ণ-ত্ব বিধান খাটে না)",
+      "step_by_step_solution": "'দুর্নীতি' একটি সমাসবদ্ধ ও উপসর্গযোগে গঠিত পদ (দুর্ + নীতি)। ণ-ত্ব বিধানের নিয়মানুসারে সমাসবদ্ধ পদে 'র'-এর পরে 'ণ' না হয়ে দন্ত্য 'ন' হয়। তাই 'দুর্ণীতি' বানানটি অশুদ্ধ।",
+      "shortcut_tip": "সমাসবদ্ধ পদে ণ-ত্ব বিধান নিষিদ্ধ: দুর্নীতি, দুর্নাম, ত্রিনয়ন, সর্বনাম।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q065",
+    "number": 65,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "'মাসি-পিসি' গল্পে আহ্লাদির মুখে কে নিজের মেয়ের মুখের ছাপ দেখতে পায়?",
+    "options": [
+      "কানাই",
+      "গোকুল",
+      "রহমান",
+      "জগু"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** রহমানের সদ্যমৃত মেয়ে + আহ্লাদি = বাৎসল্য ও মুখের ছাপ\n\n📐 **ধাপে ধাপে সমাধান:** মানিক বন্দ্যোপাধ্যায়ের 'মাসি-পিসি' গল্পে রহমানের অল্পবয়সী মেয়েটি শ্বশুরবাড়িতে অত্যাচারিত হয়ে মারা গিয়েছিল। তাই আহ্লাদিকে দেখে রহমান নিজের মেয়ের মুখের ছাপ খুঁজে পায়।\n\n⚡ **শর্টকাট টিপস:** রহমান = সহানুভূতিশীল চরিত্র; জগু = আহ্লাদির স্বামী; গোকুল = অত্যাচারী জোতদার।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "রহমানের সদ্যমৃত মেয়ে + আহ্লাদি = বাৎসল্য ও মুখের ছাপ",
+      "step_by_step_solution": "মানিক বন্দ্যোপাধ্যায়ের 'মাসি-পিসি' গল্পে রহমানের অল্পবয়সী মেয়েটি শ্বশুরবাড়িতে অত্যাচারিত হয়ে মারা গিয়েছিল। তাই আহ্লাদিকে দেখে রহমান নিজের মেয়ের মুখের ছাপ খুঁজে পায়।",
+      "shortcut_tip": "রহমান = সহানুভূতিশীল চরিত্র; জগু = আহ্লাদির স্বামী; গোকুল = অত্যাচারী জোতদার।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q066",
+    "number": 66,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "'বিভীষণের প্রতি মেঘনাদ' কবিতায় কাকে 'বাসবত্রাস' বলা হয়েছে?",
+    "options": [
+      "রাবণকে",
+      "লক্ষ্মণকে",
+      "মেঘনাদকে",
+      "বিভীষণকে"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** বাসব (ইন্দ্র) + ত্রাস (ভয়) = বাসবত্রাস (মেঘনাদ)\n\n📐 **ধাপে ধাপে সমাধান:** দেবরাজ ইন্দ্রের অপর নাম বাসব। স্বর্গাধিপতি ইন্দ্রকে যুদ্ধে পরাজিত করে তাঁর মনে ত্রাস সৃষ্টি করেছিলেন বলে মেঘনাদকে 'বাসবত্রাস' ও 'বাসববিজয়ী' বলা হয়।\n\n⚡ **শর্টকাট টিপস:** বাসবত্রাস, বাসববিজয়ী, অরিন্দম = মেঘনাদ; রাবণানুজ, রক্ষোরথী = বিভীষণ।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "বাসব (ইন্দ্র) + ত্রাস (ভয়) = বাসবত্রাস (মেঘনাদ)",
+      "step_by_step_solution": "দেবরাজ ইন্দ্রের অপর নাম বাসব। স্বর্গাধিপতি ইন্দ্রকে যুদ্ধে পরাজিত করে তাঁর মনে ত্রাস সৃষ্টি করেছিলেন বলে মেঘনাদকে 'বাসবত্রাস' ও 'বাসববিজয়ী' বলা হয়।",
+      "shortcut_tip": "বাসবত্রাস, বাসববিজয়ী, অরিন্দম = মেঘনাদ; রাবণানুজ, রক্ষোরথী = বিভীষণ।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q067",
+    "number": 67,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "নিচের কোনটি 'সমুদ্র' শব্দের প্রতিশব্দ?",
+    "options": [
+      "তটিনী",
+      "রত্নাকর",
+      "সবিতা",
+      "বিভাবরী"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** রত্নাকর = সমুদ্র (তটিনী = নদী, সবিতা = সূর্য, বিভাবরী = রাত্রি)\n\n📐 **ধাপে ধাপে সমাধান:** রত্নের আকর বা খনি অর্থে সমুদ্রের একটি প্রসিদ্ধ প্রতিশব্দ হলো 'রত্নাকর'। অপশনের অন্য শব্দগুলোর মধ্যে তটিনী অর্থ নদী, সবিতা অর্থ সূর্য এবং বিভাবরী অর্থ রাত্রি।\n\n⚡ **শর্টকাট টিপস:** সমুদ্রের প্রতিশব্দ: রত্নাকর, অর্ণব, পাথার, বারিধি, জলধি, সিন্ধু।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "রত্নাকর = সমুদ্র (তটিনী = নদী, সবিতা = সূর্য, বিভাবরী = রাত্রি)",
+      "step_by_step_solution": "রত্নের আকর বা খনি অর্থে সমুদ্রের একটি প্রসিদ্ধ প্রতিশব্দ হলো 'রত্নাকর'। অপশনের অন্য শব্দগুলোর মধ্যে তটিনী অর্থ নদী, সবিতা অর্থ সূর্য এবং বিভাবরী অর্থ রাত্রি।",
+      "shortcut_tip": "সমুদ্রের প্রতিশব্দ: রত্নাকর, অর্ণব, পাথার, বারিধি, জলধি, সিন্ধু।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q068",
+    "number": 68,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "'নৈয়ায়িক' কাকে বলা হয়?",
+    "options": [
+      "যিনি ন্যায়বিচার করেন",
+      "যিনি ন্যায়শাস্ত্র জানেন",
+      "যিনি নীতি কথা বলেন",
+      "যিনি নৌকা চালান"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** ন্যায় + ষ্ণিক (ইক) = নৈয়ায়িক (যিনি ন্যায়শাস্ত্র জানেন)\n\n📐 **ধাপে ধাপে সমাধান:** বাক্য সংকোচন বা এককথায় প্রকাশ অনুযায়ী, যিনি ন্যায়শাস্ত্র জানেন বা ন্যায়শাস্ত্রে পণ্ডিত তাঁকে 'নৈয়ায়িক' বলা হয়।\n\n⚡ **শর্টকাট টিপস:** ন্যায়শাস্ত্র = নৈয়ায়িক; ব্যাকরণ = বৈয়াকরণ; স্মৃতিশাস্ত্র = স্মার্ত।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "ন্যায় + ষ্ণিক (ইক) = নৈয়ায়িক (যিনি ন্যায়শাস্ত্র জানেন)",
+      "step_by_step_solution": "বাক্য সংকোচন বা এককথায় প্রকাশ অনুযায়ী, যিনি ন্যায়শাস্ত্র জানেন বা ন্যায়শাস্ত্রে পণ্ডিত তাঁকে 'নৈয়ায়িক' বলা হয়।",
+      "shortcut_tip": "ন্যায়শাস্ত্র = নৈয়ায়িক; ব্যাকরণ = বৈয়াকরণ; স্মৃতিশাস্ত্র = স্মার্ত।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q069",
+    "number": 69,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "নিচের কোন শব্দগুচ্ছের সবকটি বানান শুদ্ধ?",
+    "options": [
+      "সহযোগী, শিরশ্ছেদ, গুঞ্জরন",
+      "সহযোগি, শিরচ্ছেদ, গুঞ্জরণ",
+      "সহযোগী, শিরচ্ছেদ, গুঞ্জরন",
+      "সহযোগি, শিরশ্ছেদ, গুঞ্জরণ"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** শিরঃ + ছেদ = শিরশ্ছেদ; সহযোগী (ঈ-কার); গুঞ্জরন (ন)\n\n📐 **ধাপে ধাপে সমাধান:** বিসর্গ সন্ধির নিয়মে শিরঃ + ছেদ = শিরশ্ছেদ হয় ('শিরচ্ছেদ' ভুল)। 'সহযোগী' শব্দে দীর্ঘ ঈ-কার হয় এবং 'গুঞ্জরন' শব্দে ণ-ত্ব বিধান প্রযোজ্য না হওয়ায় দন্ত্য 'ন' হয়।\n\n⚡ **শর্টকাট টিপস:** শিরশ্ছেদ ও মনঃকষ্ট বানানের সন্ধি রূপটি বিশেষভাবে মনে রাখুন।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "শিরঃ + ছেদ = শিরশ্ছেদ; সহযোগী (ঈ-কার); গুঞ্জরন (ন)",
+      "step_by_step_solution": "বিসর্গ সন্ধির নিয়মে শিরঃ + ছেদ = শিরশ্ছেদ হয় ('শিরচ্ছেদ' ভুল)। 'সহযোগী' শব্দে দীর্ঘ ঈ-কার হয় এবং 'গুঞ্জরন' শব্দে ণ-ত্ব বিধান প্রযোজ্য না হওয়ায় দন্ত্য 'ন' হয়।",
+      "shortcut_tip": "শিরশ্ছেদ ও মনঃকষ্ট বানানের সন্ধি রূপটি বিশেষভাবে মনে রাখুন।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q070",
+    "number": 70,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "'বৈশিষ্ট্য' শব্দটি কীভাবে গঠিত হয়েছে?",
+    "options": [
+      "উপসর্গযোগে",
+      "সমাসযোগে",
+      "সন্ধিযোগে",
+      "প্রত্যয়যোগে"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** বিশিষ্ট + য (ষ্ণ্য) = বৈশিষ্ট্য (তদ্ধিত প্রত্যয়যোগে গঠিত)\n\n📐 **ধাপে ধাপে সমাধান:** 'বিশিষ্ট' নামপদের সাথে 'য' (ষ্ণ্য) তদ্ধিত প্রত্যয় যুক্ত হয়ে আদি স্বরের বৃদ্ধি ঘটে ('ই' স্থানে 'ঐ' হয়ে) 'বৈশিষ্ট্য' বিশেষ্য পদটি গঠিত হয়েছে।\n\n⚡ **শর্টকাট টিপস:** আদি স্বরে 'ঐ' বা 'ঔ' থাকলে সাধারণত ষ্ণ বা ষ্ণ্য প্রত্যয়যোগে শব্দ গঠিত হয় (যেমন: দৈন্য, সৌন্দর্য)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "বিশিষ্ট + য (ষ্ণ্য) = বৈশিষ্ট্য (তদ্ধিত প্রত্যয়যোগে গঠিত)",
+      "step_by_step_solution": "'বিশিষ্ট' নামপদের সাথে 'য' (ষ্ণ্য) তদ্ধিত প্রত্যয় যুক্ত হয়ে আদি স্বরের বৃদ্ধি ঘটে ('ই' স্থানে 'ঐ' হয়ে) 'বৈশিষ্ট্য' বিশেষ্য পদটি গঠিত হয়েছে।",
+      "shortcut_tip": "আদি স্বরে 'ঐ' বা 'ঔ' থাকলে সাধারণত ষ্ণ বা ষ্ণ্য প্রত্যয়যোগে শব্দ গঠিত হয় (যেমন: দৈন্য, সৌন্দর্য)।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q071",
+    "number": 71,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "'আঠারো বছর বয়স' কবিতার মূলসুর কী?",
+    "options": [
+      "বার্ধক্যের অসহায়ত্ব",
+      "শৈশবের স্মৃতিকাতরতা",
+      "অদম্য তারুণ্যশক্তি",
+      "প্রকৃতির সৌন্দর্য"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** আঠারো বছর বয়স = অদম্য তারুণ্যশক্তি, সাহস ও প্রাণচাঞ্চল্যের জয়গান\n\n📐 **ধাপে ধাপে সমাধান:** সুকান্ত ভট্টাচার্য 'আঠারো বছর বয়স' কবিতায় কৈশোর থেকে যৌবনে পদার্পণকারী তরুণদের দুঃসাহস, অন্যায়ের বিরুদ্ধে প্রতিবাদ ও অদম্য তারুণ্যশক্তিকে মূল উপজীব্য করেছেন।\n\n⚡ **শর্টকাট টিপস:** কবিতাটি মাত্রাবৃত্ত ছন্দে রচিত এবং কবি সুকান্ত ভট্টাচার্যের 'ছাড়পত্র' কাব্যগ্রন্থের অন্তর্গত।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "আঠারো বছর বয়স = অদম্য তারুণ্যশক্তি, সাহস ও প্রাণচাঞ্চল্যের জয়গান",
+      "step_by_step_solution": "সুকান্ত ভট্টাচার্য 'আঠারো বছর বয়স' কবিতায় কৈশোর থেকে যৌবনে পদার্পণকারী তরুণদের দুঃসাহস, অন্যায়ের বিরুদ্ধে প্রতিবাদ ও অদম্য তারুণ্যশক্তিকে মূল উপজীব্য করেছেন।",
+      "shortcut_tip": "কবিতাটি মাত্রাবৃত্ত ছন্দে রচিত এবং কবি সুকান্ত ভট্টাচার্যের 'ছাড়পত্র' কাব্যগ্রন্থের অন্তর্গত।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q072",
+    "number": 72,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "নিচের কোন শব্দটিতে 'প্রতি' উপসর্গটি ভিন্নার্থে (সাদৃশ্য অর্থে) প্রযুক্ত হয়েছে?",
+    "options": [
+      "প্রতিবাদ",
+      "প্রতিকূল",
+      "প্রতিবিম্ব",
+      "প্রতিদ্বন্দ্বী"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** প্রতিবাদ, প্রতিকূল, প্রতিদ্বন্দ্বী (বিরোধ অর্থে) $\\neq$ প্রতিবিম্ব (সাদৃশ্য অর্থে)\n\n📐 **ধাপে ধাপে সমাধান:** তৎসম 'প্রতি' উপসর্গটি প্রতিবাদ, প্রতিকূল ও প্রতিদ্বন্দ্বী শব্দে বিরুদ্ধতা বা বিরোধিতা অর্থে ব্যবহৃত হয়েছে। কিন্তু 'প্রতিবিম্ব' ও 'প্রতিমূর্তি' শব্দে এটি সাদৃশ্য বা অনুরূপ অর্থে ব্যবহৃত হয়েছে।\n\n⚡ **শর্টকাট টিপস:** সাদৃশ্য অর্থে 'প্রতি' = প্রতিবিম্ব, প্রতিচ্ছবি, প্রতিধ্বনি।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "প্রতিবাদ, প্রতিকূল, প্রতিদ্বন্দ্বী (বিরোধ অর্থে) $\\neq$ প্রতিবিম্ব (সাদৃশ্য অর্থে)",
+      "step_by_step_solution": "তৎসম 'প্রতি' উপসর্গটি প্রতিবাদ, প্রতিকূল ও প্রতিদ্বন্দ্বী শব্দে বিরুদ্ধতা বা বিরোধিতা অর্থে ব্যবহৃত হয়েছে। কিন্তু 'প্রতিবিম্ব' ও 'প্রতিমূর্তি' শব্দে এটি সাদৃশ্য বা অনুরূপ অর্থে ব্যবহৃত হয়েছে।",
+      "shortcut_tip": "সাদৃশ্য অর্থে 'প্রতি' = প্রতিবিম্ব, প্রতিচ্ছবি, প্রতিধ্বনি।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q073",
+    "number": 73,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "'তোমার কথাগুলি ভারি সোশ্যালিস্টিক।'—এই উক্তিটি কার উদ্দেশ্যে উচ্চারিত হয়েছে?",
+    "options": [
+      "কমলাকান্তের",
+      "প্রসন্ন গোয়ালিনীর",
+      "মার্জারের",
+      "বিচারকের"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** বক্তা = কমলাকান্ত; শ্রোতা বা উদ্দেশ্য = মার্জার (বিড়াল)\n\n📐 **ধাপে ধাপে সমাধান:** বঙ্কিমচন্দ্র চট্টোপাধ্যায়ের 'বিড়াল' প্রবন্ধে দুধ চুরি করে খাওয়া মার্জার (বিড়াল) যখন ধনী-দরিদ্রের বৈষম্য ও সমাজতন্ত্রের যুক্তি দেয়, তখন কমলাকান্ত মার্জারের উদ্দেশ্যে এ উক্তিটি করেন।\n\n⚡ **শর্টকাট টিপস:** 'বিড়াল' প্রবন্ধে বিড়ালের নাম 'মার্জার' এবং গোয়ালিনীর নাম 'প্রসন্ন'।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "বক্তা = কমলাকান্ত; শ্রোতা বা উদ্দেশ্য = মার্জার (বিড়াল)",
+      "step_by_step_solution": "বঙ্কিমচন্দ্র চট্টোপাধ্যায়ের 'বিড়াল' প্রবন্ধে দুধ চুরি করে খাওয়া মার্জার (বিড়াল) যখন ধনী-দরিদ্রের বৈষম্য ও সমাজতন্ত্রের যুক্তি দেয়, তখন কমলাকান্ত মার্জারের উদ্দেশ্যে এ উক্তিটি করেন।",
+      "shortcut_tip": "'বিড়াল' প্রবন্ধে বিড়ালের নাম 'মার্জার' এবং গোয়ালিনীর নাম 'প্রসন্ন'।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q074",
+    "number": 74,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "নিচের কোনটি বানানজনিত অপপ্রয়োগের দৃষ্টান্ত?",
+    "options": [
+      "ভৌগোলিক",
+      "ভৌগলিক",
+      "শাশ্বত",
+      "নিরপরাধ"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** ভূগোল + ইক (ষ্ণিক) = ভৌগোলিক ('ভৌগলিক' অশুদ্ধ)\n\n📐 **ধাপে ধাপে সমাধান:** 'ভূগোল' শব্দের সাথে 'ইক' প্রত্যয় যুক্ত হলে আদি স্বর 'উ' বৃদ্ধি পেয়ে 'ঔ' হয় এবং 'গো'-এর ও-কার অপরিবর্তিত থাকে। ফলে শুদ্ধ রূপ হয় 'ভৌগোলিক'; 'ভৌগলিক' বানানটি অশুদ্ধ।\n\n⚡ **শর্টকাট টিপস:** ভৌগোলিক বানানে 'গো'-এর ও-কারটি সবসময় বজায় রাখতে হয়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "ভূগোল + ইক (ষ্ণিক) = ভৌগোলিক ('ভৌগলিক' অশুদ্ধ)",
+      "step_by_step_solution": "'ভূগোল' শব্দের সাথে 'ইক' প্রত্যয় যুক্ত হলে আদি স্বর 'উ' বৃদ্ধি পেয়ে 'ঔ' হয় এবং 'গো'-এর ও-কার অপরিবর্তিত থাকে। ফলে শুদ্ধ রূপ হয় 'ভৌগোলিক'; 'ভৌগলিক' বানানটি অশুদ্ধ।",
+      "shortcut_tip": "ভৌগোলিক বানানে 'গো'-এর ও-কারটি সবসময় বজায় রাখতে হয়।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q075",
+    "number": 75,
+    "subjectNumber": 0,
+    "subject": "Bangla",
+    "question": "কাজী নজরুল ইসলামের 'আমার পথ' প্রবন্ধে পথপ্রদর্শক কে?",
+    "options": [
+      "গুরু",
+      "সমাজ",
+      "সত্য",
+      "ধর্ম"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** 'আমার কর্ণধার আমি। আমার পথ দেখাবে আমার সত্য।' $\\implies$ পথপ্রদর্শক: সত্য\n\n📐 **ধাপে ধাপে সমাধান:** কাজী নজরুল ইসলাম তাঁর 'আমার পথ' প্রবন্ধে আত্মশক্তি ও সত্যনিষ্ঠার জয়গান গেয়েছেন। প্রবন্ধের শুরুতেই তিনি স্পষ্ট বলেছেন যে তাঁর পথপ্রদর্শক হলো তাঁর নিজের 'সত্য'।\n\n⚡ **শর্টকাট টিপস:** 'আমার পথ' প্রবন্ধটি নজরুলের 'রুদ্র-মঙ্গল' প্রবন্ধগ্রন্থ থেকে সংকলিত।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "'আমার কর্ণধার আমি। আমার পথ দেখাবে আমার সত্য।' $\\implies$ পথপ্রদর্শক: সত্য",
+      "step_by_step_solution": "কাজী নজরুল ইসলাম তাঁর 'আমার পথ' প্রবন্ধে আত্মশক্তি ও সত্যনিষ্ঠার জয়গান গেয়েছেন। প্রবন্ধের শুরুতেই তিনি স্পষ্ট বলেছেন যে তাঁর পথপ্রদর্শক হলো তাঁর নিজের 'সত্য'।",
+      "shortcut_tip": "'আমার পথ' প্রবন্ধটি নজরুলের 'রুদ্র-মঙ্গল' প্রবন্ধগ্রন্থ থেকে সংকলিত।"
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q076",
+    "number": 76,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "What is the main topic of the comprehension passage?",
+    "options": [
+      "The major types of Bacteria",
+      "How to prevent food poisoning",
+      "The history of microbiology",
+      "Virus and human diseases"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Central theme of passage = Classification & major morphological types of bacteria\n\n📐 **ধাপে ধাপে সমাধান:** The comprehension passage systematically introduces bacteria and focuses primarily on categorizing their major types (cocci, bacilli, spirilla) along with their structures and functions.\n\n⚡ **শর্টকাট টিপস:** Look at the opening and concluding sentences of a passage to identify its main topic.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Central theme of passage = Classification & major morphological types of bacteria",
+      "step_by_step_solution": "The comprehension passage systematically introduces bacteria and focuses primarily on categorizing their major types (cocci, bacilli, spirilla) along with their structures and functions.",
+      "shortcut_tip": "Look at the opening and concluding sentences of a passage to identify its main topic."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q077",
+    "number": 77,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "Why are bacteria frequently used in biological research studies?",
+    "options": [
+      "They are invisible to the naked eye",
+      "Bacteria are similar to other life forms",
+      "They never mutate",
+      "They exist only in laboratories"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Reason for research use = Fundamental cellular/genetic similarity to other life forms\n\n📐 **ধাপে ধাপে সমাধান:** According to the text, bacteria are widely used as model organisms in biological and genetic research because their basic biochemical and genetic processes are similar to those of other complex life forms.\n\n⚡ **শর্টকাট টিপস:** Scan the passage for keywords like 'research' or 'studies' to locate the exact supporting line.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Reason for research use = Fundamental cellular/genetic similarity to other life forms",
+      "step_by_step_solution": "According to the text, bacteria are widely used as model organisms in biological and genetic research because their basic biochemical and genetic processes are similar to those of other complex life forms.",
+      "shortcut_tip": "Scan the passage for keywords like 'research' or 'studies' to locate the exact supporting line."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q078",
+    "number": 78,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "According to the passage, bacilli are responsible for ___.",
+    "options": [
+      "purifying water",
+      "producing oxygen",
+      "spoiling food",
+      "curing genetic disorders"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Bacilli (rod-shaped bacteria) $\\rightarrow$ spoiling food\n\n📐 **ধাপে ধাপে সমাধান:** The passage explicitly mentions that rod-shaped bacteria, known as bacilli, are commonly responsible for spoiling food and causing certain diseases.\n\n⚡ **শর্টকাট টিপস:** Match specific proper/scientific nouns like 'bacilli' directly with their verb phrases in the text.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Bacilli (rod-shaped bacteria) $\\rightarrow$ spoiling food",
+      "step_by_step_solution": "The passage explicitly mentions that rod-shaped bacteria, known as bacilli, are commonly responsible for spoiling food and causing certain diseases.",
+      "shortcut_tip": "Match specific proper/scientific nouns like 'bacilli' directly with their verb phrases in the text."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q079",
+    "number": 79,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "According to the text, which characteristic is common in all bacteria?",
+    "options": [
+      "They have multiple nuclei",
+      "They have one cell",
+      "They live in colonies only",
+      "They photosynthesize"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Universal trait of bacteria = Unicellular (single-celled / one cell)\n\n📐 **ধাপে ধাপে সমাধান:** Despite variations in shape and habitat, the passage states that all bacteria share the fundamental biological characteristic of being single-celled (having one cell) organisms.\n\n⚡ **শর্টকাট টিপস:** Extreme words like 'all' in comprehension questions point to a universal definition stated early in the text.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Universal trait of bacteria = Unicellular (single-celled / one cell)",
+      "step_by_step_solution": "Despite variations in shape and habitat, the passage states that all bacteria share the fundamental biological characteristic of being single-celled (having one cell) organisms.",
+      "shortcut_tip": "Extreme words like 'all' in comprehension questions point to a universal definition stated early in the text."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q080",
+    "number": 80,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "A similar word for 'tumble' is ___.",
+    "options": [
+      "climb",
+      "spill",
+      "hold",
+      "rise"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Tumble = fall, roll, or spill over suddenly\n\n📐 **ধাপে ধাপে সমাধান:** In English usage, 'tumble' means to fall helplessly or roll down rapidly, which closely matches 'spill' (to fall or pour out), whereas 'climb' and 'rise' are antonyms.\n\n⚡ **শর্টকাট টিপস:** Eliminate obvious antonyms ('climb', 'rise') first to narrow down vocabulary questions.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Tumble = fall, roll, or spill over suddenly",
+      "step_by_step_solution": "In English usage, 'tumble' means to fall helplessly or roll down rapidly, which closely matches 'spill' (to fall or pour out), whereas 'climb' and 'rise' are antonyms.",
+      "shortcut_tip": "Eliminate obvious antonyms ('climb', 'rise') first to narrow down vocabulary questions."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q081",
+    "number": 81,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "Which one is the incorrect spelling?",
+    "options": [
+      "abbreviation",
+      "accommodation",
+      "depriciation",
+      "pronunciation"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Incorrect: depriciation $\\rightarrow$ Correct: depreciation (de-pre-ci-a-tion)\n\n📐 **ধাপে ধাপে সমাধান:** 'Abbreviation', 'accommodation' (double c, double m), and 'pronunciation' (no 'o' after 'n') are all spelled correctly. 'Depriciation' is misspelled; it uses an 'e' after 'r' (depreciation).\n\n⚡ **শর্টকাট টিপস:** Remember: 'depreciate' comes from 'price' $\\rightarrow$ 'preci', so it takes 'e', not 'i'.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Incorrect: depriciation $\\rightarrow$ Correct: depreciation (de-pre-ci-a-tion)",
+      "step_by_step_solution": "'Abbreviation', 'accommodation' (double c, double m), and 'pronunciation' (no 'o' after 'n') are all spelled correctly. 'Depriciation' is misspelled; it uses an 'e' after 'r' (depreciation).",
+      "shortcut_tip": "Remember: 'depreciate' comes from 'price' $\\rightarrow$ 'preci', so it takes 'e', not 'i'."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q082",
+    "number": 82,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "Nutritionists still do not understand the nutritional ___ of jackfruits.",
+    "options": [
+      "beneficial",
+      "benefit",
+      "benefits",
+      "benefiting"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Determiner (the) + Adjective (nutritional) + Plural Noun (benefits)\n\n📐 **ধাপে ধাপে সমাধান:** The blank follows the adjective 'nutritional' and requires a noun. Since jackfruits offer multiple health advantages and no singular article ('a') precedes the gap, the plural countable noun 'benefits' is correct.\n\n⚡ **শর্টকাট টিপস:** Structure: the + adjective + plural countable noun (when referring to general qualities).",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Determiner (the) + Adjective (nutritional) + Plural Noun (benefits)",
+      "step_by_step_solution": "The blank follows the adjective 'nutritional' and requires a noun. Since jackfruits offer multiple health advantages and no singular article ('a') precedes the gap, the plural countable noun 'benefits' is correct.",
+      "shortcut_tip": "Structure: the + adjective + plural countable noun (when referring to general qualities)."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q083",
+    "number": 83,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "Kamal found it hard to get up from bed after the alarm clock ___ at six a.m.",
+    "options": [
+      "went out",
+      "went off",
+      "went on",
+      "went up"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Go off (past: went off) = ring loudly / explode / sound an alarm\n\n📐 **ধাপে ধাপে সমাধান:** The idiomatic phrasal verb 'go off' means to make a sudden loud noise, such as an alarm clock ringing or a bomb exploding. 'Go out' means to stop burning or leave home.\n\n⚡ **শর্টকাট টিপস:** Alarm / Bomb $\\rightarrow$ go off; Light / Fire $\\rightarrow$ go out; Continue $\\rightarrow$ go on.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Go off (past: went off) = ring loudly / explode / sound an alarm",
+      "step_by_step_solution": "The idiomatic phrasal verb 'go off' means to make a sudden loud noise, such as an alarm clock ringing or a bomb exploding. 'Go out' means to stop burning or leave home.",
+      "shortcut_tip": "Alarm / Bomb $\\rightarrow$ go off; Light / Fire $\\rightarrow$ go out; Continue $\\rightarrow$ go on."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q084",
+    "number": 84,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "A synonym for 'compassion' is ___.",
+    "options": [
+      "cruelty",
+      "indifference",
+      "yearning",
+      "hostility"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Compassion (sympathy/tender feeling) $\\approx$ yearning (deep emotional longing/empathy)\n\n📐 **ধাপে ধাপে সমাধান:** The other three options—'cruelty', 'indifference', and 'hostility'—express coldness or antagonism (antonyms of compassion). 'Yearning' is the only word conveying deep, tender emotional feeling.\n\n⚡ **শর্টকাট টিপস:** Use polarity matching: 'compassion' is positive (+), and 'yearning' is the only non-negative option.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Compassion (sympathy/tender feeling) $\\approx$ yearning (deep emotional longing/empathy)",
+      "step_by_step_solution": "The other three options—'cruelty', 'indifference', and 'hostility'—express coldness or antagonism (antonyms of compassion). 'Yearning' is the only word conveying deep, tender emotional feeling.",
+      "shortcut_tip": "Use polarity matching: 'compassion' is positive (+), and 'yearning' is the only non-negative option."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q085",
+    "number": 85,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "Sleeplessness causes problems with our ___ clock.",
+    "options": [
+      "biology",
+      "biologically",
+      "biological",
+      "biologist"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Possessive (our) + Adjective (biological) + Noun (clock)\n\n📐 **ধাপে ধাপে সমাধান:** To modify the noun 'clock', an adjective form is needed. 'Biological' is the adjective derived from 'biology', forming the standard collocation 'biological clock' (the body's internal circadian rhythm).\n\n⚡ **শর্টকাট টিপস:** Suffix '-al' forms adjectives (biological, logical, natural) that sit directly before nouns.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Possessive (our) + Adjective (biological) + Noun (clock)",
+      "step_by_step_solution": "To modify the noun 'clock', an adjective form is needed. 'Biological' is the adjective derived from 'biology', forming the standard collocation 'biological clock' (the body's internal circadian rhythm).",
+      "shortcut_tip": "Suffix '-al' forms adjectives (biological, logical, natural) that sit directly before nouns."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q086",
+    "number": 86,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "As for ___, I prefer to let people make up ___ minds.",
+    "options": [
+      "I, their own",
+      "me, their own",
+      "myself, his own",
+      "mine, theirs"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Preposition (for) + Objective Pronoun (me); Plural Noun (people) $\\rightarrow$ their own\n\n📐 **ধাপে ধাপে সমাধান:** Prepositions like 'for' always take the objective case of a pronoun ('me', not 'I'). In the second clause, the plural noun 'people' requires the plural possessive determiner 'their own'.\n\n⚡ **শর্টকাট টিপস:** Preposition + Object Pronoun (me, him, her, us, them); 'people' is always plural.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Preposition (for) + Objective Pronoun (me); Plural Noun (people) $\\rightarrow$ their own",
+      "step_by_step_solution": "Prepositions like 'for' always take the objective case of a pronoun ('me', not 'I'). In the second clause, the plural noun 'people' requires the plural possessive determiner 'their own'.",
+      "shortcut_tip": "Preposition + Object Pronoun (me, him, her, us, them); 'people' is always plural."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q087",
+    "number": 87,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "The noun form of 'excite' is ___.",
+    "options": [
+      "exciting",
+      "excited",
+      "excitement",
+      "excitable"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Excite (verb) + -ment (noun suffix) = Excitement (noun)\n\n📐 **ধাপে ধাপে সমাধান:** 'Exciting' and 'excited' are participial adjectives, and 'excitable' is an adjective. Adding the suffix '-ment' to the verb 'excite' yields the abstract noun 'excitement'.\n\n⚡ **শর্টকাট টিপস:** Words ending in '-ment' (excitement, movement, development) are almost always nouns.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Excite (verb) + -ment (noun suffix) = Excitement (noun)",
+      "step_by_step_solution": "'Exciting' and 'excited' are participial adjectives, and 'excitable' is an adjective. Adding the suffix '-ment' to the verb 'excite' yields the abstract noun 'excitement'.",
+      "shortcut_tip": "Words ending in '-ment' (excitement, movement, development) are almost always nouns."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q088",
+    "number": 88,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "What is the antonym of 'latent'?",
+    "options": [
+      "hidden",
+      "dormant",
+      "obvious",
+      "concealed"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Latent (hidden/concealed) $\\leftrightarrow$ Obvious (clear/apparent)\n\n📐 **ধাপে ধাপে সমাধান:** 'Latent' means existing but not yet developed or visible. 'Hidden', 'dormant', and 'concealed' are all synonyms of 'latent', making 'obvious' (easily perceived or clear) its exact antonym.\n\n⚡ **শর্টকাট টিপস:** Odd-one-out trick: Three options mean 'hidden', so the fourth ('obvious') must be the antonym.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Latent (hidden/concealed) $\\leftrightarrow$ Obvious (clear/apparent)",
+      "step_by_step_solution": "'Latent' means existing but not yet developed or visible. 'Hidden', 'dormant', and 'concealed' are all synonyms of 'latent', making 'obvious' (easily perceived or clear) its exact antonym.",
+      "shortcut_tip": "Odd-one-out trick: Three options mean 'hidden', so the fourth ('obvious') must be the antonym."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q089",
+    "number": 89,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "Monir is sitting ___ the desk ___ front of the door.",
+    "options": [
+      "on, on",
+      "at, in",
+      "in, at",
+      "by, on"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Collocations: 'sit at a desk' + 'in front of'\n\n📐 **ধাপে ধাপে সমাধান:** In English, 'at' is used to indicate position next to a table or workspace ('sitting at the desk'), and 'in front of' is a fixed compound preposition meaning directly ahead of.\n\n⚡ **শর্টকাট টিপস:** Sit at a desk/table; sit on a chair/bench; sit in an armchair.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Collocations: 'sit at a desk' + 'in front of'",
+      "step_by_step_solution": "In English, 'at' is used to indicate position next to a table or workspace ('sitting at the desk'), and 'in front of' is a fixed compound preposition meaning directly ahead of.",
+      "shortcut_tip": "Sit at a desk/table; sit on a chair/bench; sit in an armchair."
+    }
+  },
+  {
+    "id": "du-a-19-20-mcq-q090",
+    "number": 90,
+    "subjectNumber": 0,
+    "subject": "English",
+    "question": "The person who has committed such an ___ crime must be severely punished.",
+    "options": [
+      "abominable",
+      "admirable",
+      "amiable",
+      "amicable"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Crime requiring severe punishment $\\rightarrow$ abominable (detestable/heinous)\n\n📐 **ধাপে ধাপে সমাধান:** 'Admirable' (praiseworthy), 'amiable' (friendly), and 'amicable' (peaceful/harmonious) all carry positive meanings. 'Abominable' means detestable or morally horrifying, fitting a severe crime.\n\n⚡ **শর্টকাট টিপস:** Abominable = hateful/horrible; Amiable = friendly person; Amicable = friendly relationship.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "19-20",
+    "explanationParts": {
+      "one_line_calculation": "Crime requiring severe punishment $\\rightarrow$ abominable (detestable/heinous)",
+      "step_by_step_solution": "'Admirable' (praiseworthy), 'amiable' (friendly), and 'amicable' (peaceful/harmonious) all carry positive meanings. 'Abominable' means detestable or morally horrifying, fitting a severe crime.",
+      "shortcut_tip": "Abominable = hateful/horrible; Amiable = friendly person; Amicable = friendly relationship."
+    }
+  }
+]

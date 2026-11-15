@@ -1,0 +1,3236 @@
+{
+  "season": "DU 04-05",
+  "total_questions": 110,
+  "questions": [
+    {
+      "id": 1,
+      "subject": "Biology",
+      "subject_question_no": 1,
+      "question": "মেন্ডেল উদ্ভিদের বংশগতির উপর তাঁর পরীক্ষা-নিরীক্ষার ফলাফল প্রথম কখন প্রকাশ করেন ?",
+      "question_image": null,
+      "options": {
+        "A": "১৯০০ সাল",
+        "B": "১৯০৩ সাল",
+        "C": "১৮৮৫ সাল",
+        "D": "১৮৬৬ সাল"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Mendel's paper was published in 1866 in the Proceedings of the Natural History Society of Brünn.",
+        "step_by_step_solution": "Gregor Johann Mendel presented his experiments on plant hybridization in 1865 to the Natural History Society of Brünn. The research paper titled 'Versuche über Pflanzen-Hybriden' was officially published in the society's journal in 1866.",
+        "shortcut_tip": "Remember 1865 (presentation) -> 1866 (publication) -> 1900 (rediscovery by Correns, Tschermak, De Vries)."
+      }
+    },
+    {
+      "id": 2,
+      "subject": "Biology",
+      "subject_question_no": 2,
+      "question": "মায়োসিস কোষ বিভাজনের কোন পর্যায়ে কায়াজমা দৃষ্টিগোচর হয় ?",
+      "question_image": null,
+      "options": {
+        "A": "জাইগোটিন",
+        "B": "লেপ্টোটিন",
+        "C": "প্যাকাইটিন",
+        "D": "ডায়াকাইনেসিস"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Chiasmata formed due to crossing over are first clearly visible in the Pachytene stage.",
+        "step_by_step_solution": "During Prophase-I of Meiosis-I, tetrads form in Zygonema, and crossing over takes place in Pachynema. The X-shaped points where non-sister chromatids cross over and remain attached are called chiasmata, which become visible during the Pachytene stage.",
+        "shortcut_tip": "Pachytene = Crossing Over & Chiasma formation."
+      }
+    },
+    {
+      "id": 3,
+      "subject": "Biology",
+      "subject_question_no": 3,
+      "question": "অভিব্যাক্তির কাঁচামাল হিসেবে মিউটেশনের কথা কে সর্বপ্রথম উল্লেখ করেন?",
+      "question_image": null,
+      "options": {
+        "A": "হাক্সলে",
+        "B": "ডারউইন",
+        "C": "ল্যামার্ক",
+        "D": "দ্য ভ্রিস"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Hugo de Vries proposed the Mutation Theory of Evolution in 1901.",
+        "step_by_step_solution": "Hugo de Vries introduced the Mutation Theory, stating that sudden, large-scale inherited variations (mutations) provide the raw material for evolutionary changes, working on Oenothera lamarckiana (evening primrose).",
+        "shortcut_tip": "Mutation Theory -> Hugo de Vries (raw material of evolution)."
+      }
+    },
+    {
+      "id": 4,
+      "subject": "Biology",
+      "subject_question_no": 4,
+      "question": "কোন উদ্ভিদে C_4 দেখা যায়?",
+      "question_image": null,
+      "options": {
+        "A": "ইক্ষু",
+        "B": "কাঁঠাল",
+        "C": "আম",
+        "D": "নারিকেল"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Sugarcane (Saccharum officinarum) is a classic $C_4$ plant optimized for high photosynthesis rates.",
+        "step_by_step_solution": "$C_4$ plants possess Kranz anatomy and fix carbon initially using PEP carboxylase into a 4-carbon compound (oxaloacetate). Examples include sugarcane, maize, sorghum, and Bermuda grass. Mango, jackfruit, and coconut are $C_3$ plants.",
+        "shortcut_tip": "Common $C_4$ plants keyword: Sugarcane, Maize, Sorghum (ইক্ষু, ভুট্টা, কাউন, মুথা ঘাস)."
+      }
+    },
+    {
+      "id": 5,
+      "subject": "Biology",
+      "subject_question_no": 5,
+      "question": "উদ্ভিদের নিউক্লিয়াসবিহীন জীবন্ত কোষ কোনটি ?",
+      "question_image": null,
+      "options": {
+        "A": "Chlamydomonas",
+        "B": "ক্যাম্বিয়াম কোষ",
+        "C": "সিভনল",
+        "D": "সঙ্গীকোষ"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Mature sieve tube elements in phloem lack a nucleus but remain living cells.",
+        "step_by_step_solution": "Sieve tube cells lose their nucleus at maturity to facilitate the transport of organic nutrients, yet they remain cytoplasmically alive and metabolic functions are assisted by adjacent companion cells.",
+        "shortcut_tip": "Living plant cell without nucleus = Sieve Tube element (সিভনল); Human equivalent = Mature RBC."
+      }
+    },
+    {
+      "id": 6,
+      "subject": "Biology",
+      "subject_question_no": 6,
+      "question": "পাকস্থলির কোন কোষ থেকে হাইড্রোক্লোরিক এসিড নিঃসৃত হয়?",
+      "question_image": null,
+      "options": {
+        "A": "মিউকাস কোষ",
+        "B": "যকৃতের কোষ",
+        "C": "চিফ কোষ",
+        "D": "প্যারাইটাল কোষ"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Parietal (oxyntic) cells of the gastric glands secrete HCl and intrinsic factor.",
+        "step_by_step_solution": "The gastric mucosa contains specialized parietal cells (also known as oxyntic cells) that pump $H^+$ and $Cl^-$ ions to produce hydrochloric acid ($HCl$), maintaining stomach pH around 1.5 to 2.0.",
+        "shortcut_tip": "Parietal/Oxyntic -> HCl; Chief/Zymogenic -> Pepsinogen; Mucous -> Mucus."
+      }
+    },
+    {
+      "id": 7,
+      "subject": "Biology",
+      "subject_question_no": 7,
+      "question": "কোনটিতে নেফ্রিডিয়া নেই ?",
+      "question_image": null,
+      "options": {
+        "A": "Metaphire posthuma",
+        "B": "Hirudinaria viridis",
+        "C": "Wuchereria bancrofti",
+        "D": "Neanthes virens"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Wuchereria bancrofti is a roundworm (Nematoda) and lacks nephridia.",
+        "step_by_step_solution": "Nephridia are the excretory organs of annelids (e.g., Metaphire, Hirudinaria, Neanthes). Wuchereria bancrofti belongs to Phylum Nematoda, where excretory system consists of protonephridia with renette cells or canals.",
+        "shortcut_tip": "Nephridia = Annelida characteristic. Wuchereria = Nematoda (No nephridia)."
+      }
+    },
+    {
+      "id": 8,
+      "subject": "Biology",
+      "subject_question_no": 8,
+      "question": "মিউটেশন বলতে কি বোঝায় ?",
+      "question_image": null,
+      "options": {
+        "A": "সংকরায়ন",
+        "B": "প্রাকৃতিক নির্বাচন",
+        "C": "পুনবির্ন্যাস",
+        "D": "বংশগতির আকষ্মিক ও স্থায়ী পরিবর্তন"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Mutation refers to a sudden, permanent, heritable change in the genetic sequence.",
+        "step_by_step_solution": "Mutation is defined as a sudden alteration in the genomic sequence of DNA in an organism, which is transmitted to offspring (heritable).",
+        "shortcut_tip": "Mutation = Sudden + Permanent genetic change."
+      }
+    },
+    {
+      "id": 9,
+      "subject": "Biology",
+      "subject_question_no": 9,
+      "question": "কোন সম্প্রদায়ের উদ্ভিদে সাধারনত বায়ুকুঠুরি পাওয়া যায় ?",
+      "question_image": null,
+      "options": {
+        "A": "মরুউদ্ভিদে",
+        "B": "মেসোফাইটে",
+        "C": "জলজ উদ্ভিদে",
+        "D": "লোনা উদ্ভিদে"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Aerenchyma (air chambers) provides buoyancy and gas exchange in hydrophytes (aquatic plants).",
+        "step_by_step_solution": "Aquatic plants (hydrophytes) develop extensive intercellular spaces forming aerenchyma/air chambers to remain buoyant in water and aid in oxygen diffusion.",
+        "shortcut_tip": "Air chambers (বায়ুকুঠুরি) -> Hydrophytes (জলজ উদ্ভিদ)."
+      }
+    },
+    {
+      "id": 10,
+      "subject": "Biology",
+      "subject_question_no": 10,
+      "question": "যখন দুইটি দ্রবণের ঘনত্ব সমান হয় তখন তাকে বলে-",
+      "question_image": null,
+      "options": {
+        "A": "হাইপোটনিক দ্রবণ",
+        "B": "স্যাচুরেটেড",
+        "C": "হাইপারটনিক দ্রবণ",
+        "D": "আইসোটনিক দ্রবণ"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Solutions with equal solute concentration and osmotic pressure are isotonic.",
+        "step_by_step_solution": "When two solutions separated by a semipermeable membrane have identical solute concentrations, net water movement is zero; such solutions are called isotonic.",
+        "shortcut_tip": "Iso = Equal -> Isotonic (সমান ঘনত্ব)."
+      }
+    },
+    {
+      "id": 11,
+      "subject": "Biology",
+      "subject_question_no": 11,
+      "question": "কোনটি মিথোজীবী নাইট্রোজেন সংবন্ধনে অংশগ্রহন করে?",
+      "question_image": null,
+      "options": {
+        "A": "Azotobacter",
+        "B": "Xanthomonas",
+        "C": "Agrobacterium",
+        "D": "Rhizobium"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Rhizobium forms symbiotic root nodules in leguminous plants for nitrogen fixation.",
+        "step_by_step_solution": "Rhizobium bacteria live symbiotically in root nodules of legumes, converting atmospheric $N_2$ to ammonia, while Azotobacter is a free-living nitrogen fixer.",
+        "shortcut_tip": "Symbiotic N-fixer = Rhizobium; Free-living N-fixer = Azotobacter, Clostridium."
+      }
+    },
+    {
+      "id": 12,
+      "subject": "Biology",
+      "subject_question_no": 12,
+      "question": "মানুষের মধ্যে সেরিব্রাল ম্যালেরিয়া ঘটায় Plasmodium এর কোন প্রজাতি?",
+      "question_image": null,
+      "options": {
+        "A": "Plasmodium ovale",
+        "B": "Plasmodium falciparum",
+        "C": "Plasmodium vivax",
+        "D": "Plasmodium malariae"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Plasmodium falciparum causes malignant tertian and cerebral malaria.",
+        "step_by_step_solution": "Plasmodium falciparum is the most dangerous human malaria parasite responsible for cerebral malaria, leading to capillary blockage in the brain.",
+        "shortcut_tip": "Fatal/Cerebral Malaria = Plasmodium falciparum."
+      }
+    },
+    {
+      "id": 13,
+      "subject": "Biology",
+      "subject_question_no": 13,
+      "question": "ক্রোমোসোমকে ঘিরে যে পাতলা আবরন থাকে তার নাম কি?",
+      "question_image": null,
+      "options": {
+        "A": "জিনোম",
+        "B": "অ্যানুলি",
+        "C": "ক্রোমাটিন জালিকা",
+        "D": "পেলিকল"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "The non-genetic proteinaceous outer sheath surrounding a chromosome is called the pellicle.",
+        "step_by_step_solution": "Traditional chromosome structural models describe an outer achromatin matrix bounded by a thin membrane termed the pellicle.",
+        "shortcut_tip": "Outer non-genic boundary of chromosome = Pellicle."
+      }
+    },
+    {
+      "id": 14,
+      "subject": "Biology",
+      "subject_question_no": 14,
+      "question": "কোন প্রকৃতকোষী উদ্ভিদের দেহ কোষের সঞ্চিত খাদ্য গ্লাইকোজেন পাওয়া যায় ?",
+      "question_image": null,
+      "options": {
+        "A": "শৈবালে",
+        "B": "মসে",
+        "C": "ফার্ণে",
+        "D": "ছত্রাকে"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Fungi store reserve food in the form of glycogen and oil droplets.",
+        "step_by_step_solution": "Unlike green plants which store carbohydrates as starch, eukaryotic fungi store energy as glycogen (similar to animals) and lipid globules.",
+        "shortcut_tip": "Fungi reserve food = Glycogen; Plant reserve food = Starch."
+      }
+    },
+    {
+      "id": 15,
+      "subject": "Biology",
+      "subject_question_no": 15,
+      "question": "কোনটি‌ DNA নাইট্রোজেন বেস নয়??",
+      "question_image": null,
+      "options": {
+        "A": "সাইটোসিন",
+        "B": "থায়ামিন",
+        "C": "ইউরাসিল",
+        "D": "গুয়ানিন"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Uracil is present exclusively in RNA instead of Thymine.",
+        "step_by_step_solution": "DNA contains Adenine, Guanine, Cytosine, and Thymine. RNA replaces Thymine with Uracil.",
+        "shortcut_tip": "DNA bases = A, T, C, G; RNA bases = A, U, C, G."
+      }
+    },
+    {
+      "id": 16,
+      "subject": "Biology",
+      "subject_question_no": 16,
+      "question": "সায়ানোব্যাকটেরিয়া নীলাভ সবুজ দেখায়, কারন এতে কাছে অধিক-",
+      "question_image": null,
+      "options": {
+        "A": "ক্লোরোফিল-এ",
+        "B": "সি-ফাইকো এরিথ্রিন",
+        "C": "সি-ফাইকোসায়ানিন",
+        "D": "জ্যান্থোফিল"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "c-Phycocyanin is a blue accessory pigment dominating in cyanobacteria.",
+        "step_by_step_solution": "Cyanobacteria (blue-green algae) contain chlorophyll-a and phycobiliproteins, among which c-phycocyanin imparts the characteristic blue coloration.",
+        "shortcut_tip": "Phycocyanin = Blue pigment; Phycoerythrin = Red pigment."
+      }
+    },
+    {
+      "id": 17,
+      "subject": "Biology",
+      "subject_question_no": 17,
+      "question": "নিআর্কটিক প্রাণিভৌগোলিক এলাকায় কোন দেশটি অন্তর্ভুক্ত ?",
+      "question_image": null,
+      "options": {
+        "A": "উত্তর আমেরিকা",
+        "B": "দক্ষিণ আমেরিকা",
+        "C": "চীন",
+        "D": "ইথিওপিয়া"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "The Nearctic biogeographic realm includes North America, Greenland, and parts of Mexico.",
+        "step_by_step_solution": "Biogeographical realms: Nearctic = North America; Neotropical = South America; Palearctic = Europe/North Asia; Ethiopian = Sub-Saharan Africa.",
+        "shortcut_tip": "Nearctic = North America."
+      }
+    },
+    {
+      "id": 18,
+      "subject": "Biology",
+      "subject_question_no": 18,
+      "question": "জেনেটিক ইঞ্জিনিয়ারিং এর ক্ষেত্রে রেস্ট্রিকশন এনজাইমের কাজ কি?",
+      "question_image": null,
+      "options": {
+        "A": "DNA অণুর কাটা অংশ যুক্ত করা",
+        "B": "DNA অণুর বৃদ্ধিকরণ",
+        "C": "DNA অণুর নির্দিষ্ট স্থান কর্তন",
+        "D": "DNA অণুর হাইড্রোজেন বন্ধন ভেঙে দেওয়া"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Restriction endonucleases act as molecular scissors to cut DNA at specific recognition sites.",
+        "step_by_step_solution": "Restriction enzymes recognize specific palindromic DNA sequences and cleave the phosphodiester bonds, allowing insertion of recombinant genes.",
+        "shortcut_tip": "Restriction Enzyme = Molecular Scissors (DNA কাটাবাঁছা); DNA Ligase = Molecular Glue."
+      }
+    },
+    {
+      "id": 19,
+      "subject": "Biology",
+      "subject_question_no": 19,
+      "question": "তেলাপোকায় পৃষ্ঠদেশীয় স্ক্লেরাইট-এর নাম কি ?",
+      "question_image": null,
+      "options": {
+        "A": "টার্গাম",
+        "B": "স্টার্ণাম",
+        "C": "প্ল্যুরা",
+        "D": "প্রোটোনাম"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Dorsal sclerites of cockroaches are called Terga (singular: Tergum).",
+        "step_by_step_solution": "In arthropod segments, dorsal sclerite = Tergum, ventral sclerite = Sternum, lateral sclerites = Pleura.",
+        "shortcut_tip": "Dorsal (পিঠ) = Tergum; Ventral (পেট) = Sternum; Lateral (পাশ) = Pleuron."
+      }
+    },
+    {
+      "id": 20,
+      "subject": "Biology",
+      "subject_question_no": 20,
+      "question": "জীবজগতের ফাইভ কিংডম পদ্ধতি প্রস্তাব করেন কে ?",
+      "question_image": null,
+      "options": {
+        "A": "ক্রনকুইস্ট",
+        "B": "এঙ্গলার",
+        "C": "হুইটেকার",
+        "D": "মারগুলিস"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "R.H. Whittaker proposed the Five-Kingdom Classification system in 1969.",
+        "step_by_step_solution": "Whittaker classified organisms into Monera, Protista, Fungi, Plantae, and Animalia based on cell structure, thallus organization, mode of nutrition, and phylogenetic relationships.",
+        "shortcut_tip": "5-Kingdom proposal -> R.H. Whittaker (1969); Modified by Margulis (1974)."
+      }
+    },
+    {
+      "id": 21,
+      "subject": "Biology",
+      "subject_question_no": 21,
+      "question": "ডালজাতীয় উদ্ভিদসমূহ নিচের কোন গোত্রের অন্তর্ভুক্ত ?",
+      "question_image": null,
+      "options": {
+        "A": "লিলিয়েসি",
+        "B": "লিগিউমিনোসি",
+        "C": "ক্রুসিফেরি",
+        "D": "সোলানেসি"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Legumes and pulses belong to the family Leguminosae (Fabaceae).",
+        "step_by_step_solution": "Plants bearing pods and hosting nitrogen-fixing Rhizobium (e.g., lentils, beans, peas) fall under Leguminosae.",
+        "shortcut_tip": "Pulses/Legumes = Leguminosae (Fabaceae)."
+      }
+    },
+    {
+      "id": 22,
+      "subject": "Biology",
+      "subject_question_no": 22,
+      "question": "তেলাপোকার গিজার্ডে কয়টি দাঁত থাকে?",
+      "question_image": null,
+      "options": {
+        "A": "২",
+        "B": "৬",
+        "C": "৪",
+        "D": "৮"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "The gizzard (proventriculus) of a cockroach contains 6 cuticular teeth.",
+        "step_by_step_solution": "Inside the gizzard of a cockroach, the inner chitinous lining is produced into 6 sharp teeth used to grind food particles.",
+        "shortcut_tip": "Cockroach gizzard = 6 teeth (৬ টি দাঁত)."
+      }
+    },
+    {
+      "id": 23,
+      "subject": "Biology",
+      "subject_question_no": 23,
+      "question": "নিচের কোনটি পেন্টোজ স্যুগার ?",
+      "question_image": null,
+      "options": {
+        "A": "ইরিথ্রোজ",
+        "B": "রাইবোজ",
+        "C": "গ্লুকোজ",
+        "D": "ফ্রুক্টোজ"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Ribose ($C_5H_{10}O_5$) is a 5-carbon monosaccharide (pentose).",
+        "step_by_step_solution": "Erythrose is a tetrose (4C), Ribose is a pentose (5C), Glucose and Fructose are hexoses (6C).",
+        "shortcut_tip": "Pentose sugars: Ribose, Deoxyribose, Ribulose."
+      }
+    },
+    {
+      "id": 24,
+      "subject": "Biology",
+      "subject_question_no": 24,
+      "question": "কোনটি অ্যারোমেটিক অ্যামিনো এসিড ?",
+      "question_image": null,
+      "options": {
+        "A": "টাইরোসিন",
+        "B": "সিস্টিন",
+        "C": "লাইসিন",
+        "D": "গ্লাইসিন"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Tyrosine contains a benzene ring side chain making it aromatic.",
+        "step_by_step_solution": "Amino acids with aromatic side chains are Phenylalanine, Tyrosine, and Tryptophan.",
+        "shortcut_tip": "Aromatic Amino Acids = Phenylalanine, Tyrosine, Tryptophan (PTT)."
+      }
+    },
+    {
+      "id": 25,
+      "subject": "Biology",
+      "subject_question_no": 25,
+      "question": "কোন ফলটিতে এরিল আছে?",
+      "question_image": null,
+      "options": {
+        "A": "আম",
+        "B": "কলা",
+        "C": "লিচু",
+        "D": "আনারস"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "The edible juicy part of litchi is an aril (third integument).",
+        "step_by_step_solution": "Aril is an outgrowth from the funicle or outer coat of the seed. In Litchi chinensis, the fleshy white edible portion is the aril.",
+        "shortcut_tip": "Litchi edible part = Aril (এরিল)."
+      }
+    },
+    {
+      "id": 26,
+      "subject": "Biology",
+      "subject_question_no": 26,
+      "question": "মানবদেহে স্পাইনাল এক্সেসরি স্নায়ুর কাজ কি ?",
+      "question_image": null,
+      "options": {
+        "A": "জিহ্বার সঞ্চালন",
+        "B": "পাকস্থলীর সঞ্চালন",
+        "C": "মুখবিবর সঞ্চালন",
+        "D": "মাথা ও কাঁধের সঞ্চালন"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Cranial Nerve XI (Spinal Accessory) controls neck and shoulder movements.",
+        "step_by_step_solution": "Spinal accessory nerve innervates sternocleidomastoid and trapezius muscles, responsible for turning the head and shrugging shoulders.",
+        "shortcut_tip": "Cranial XI (Accessory) -> Shoulder and head movement."
+      }
+    },
+    {
+      "id": 27,
+      "subject": "Biology",
+      "subject_question_no": 27,
+      "question": "পুকুরের বাস্তুতন্ত্রে উৎপাদক কোনটি ?",
+      "question_image": null,
+      "options": {
+        "A": "ব্যাকটেরিয়া",
+        "B": "ফাইটপ্লাংকটন",
+        "C": "জুপ্লাঙ্কটন",
+        "D": "ছত্রাক"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Phytoplankton are microscopic photosynthetic producers in aquatic ecosystems.",
+        "step_by_step_solution": "Phytoplankton perform photosynthesis to produce organic matter, forming the primary producer level in a pond ecosystem.",
+        "shortcut_tip": "Phyto (Plant) = Producer; Zooplankton = Primary Consumer."
+      }
+    },
+    {
+      "id": 28,
+      "subject": "Biology",
+      "subject_question_no": 28,
+      "question": "কোথায় ইস্ট্রোজেন তৈরি হয় ?",
+      "question_image": null,
+      "options": {
+        "A": "শুক্রাশয়ে",
+        "B": "ডিম্বাশয়ে",
+        "C": "অগ্ন্যাশয়ে",
+        "D": "বৃক্কে"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Estrogen is primarily produced by ovarian follicles.",
+        "step_by_step_solution": "Graafian follicles of the ovaries secrete estrogen, regulating female secondary sexual characteristics and menstrual cycle.",
+        "shortcut_tip": "Estrogen & Progesterone -> Ovaries (ডিম্বাশয়)."
+      }
+    },
+    {
+      "id": 29,
+      "subject": "Biology",
+      "subject_question_no": 29,
+      "question": "নেফ্রনের কোন অংশটি ছাঁকনির কাজ করে ?",
+      "question_image": null,
+      "options": {
+        "A": "হেনলির লুপ",
+        "B": "ম্যালপিজিয়ান নালিকা",
+        "C": "বোম্যান্স ক্যাপসুল",
+        "D": "গ্লোমেরুলাস"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "The glomerulus acts as a biological ultrafilter during urine formation.",
+        "step_by_step_solution": "Blood under high pressure passes through fenestrated capillaries of the glomerulus into Bowman's capsule, filtering metabolic wastes.",
+        "shortcut_tip": "Filter unit = Glomerulus (ছাঁকনি); Collection pouch = Bowman's Capsule."
+      }
+    },
+    {
+      "id": 30,
+      "subject": "Biology",
+      "subject_question_no": 30,
+      "question": "বায়োগ্যাসের প্রধান উপাদান কোনটি ?",
+      "question_image": null,
+      "options": {
+        "A": "হাইড্রোজেন",
+        "B": "নাইট্রোজেন",
+        "C": "মিথেন",
+        "D": "ইথেন"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Methane ($CH_4$) constitutes 50-70% of biogas.",
+        "step_by_step_solution": "Anaerobic decomposition of organic waste produces biogas containing mostly methane ($CH_4$, 50–70%) and carbon dioxide ($CO_2$, 30–40%).",
+        "shortcut_tip": "Biogas primary constituent = Methane ($CH_4$)."
+      }
+    },
+    {
+      "id": 31,
+      "subject": "Chemistry",
+      "subject_question_no": 1,
+      "question": "নিচের কোনটি নিউক্লিয়াসে থাকে না?",
+      "question_image": null,
+      "options": {
+        "A": "প্রোটন",
+        "B": "ইলেকট্রন",
+        "C": "নিউট্রন",
+        "D": "কোনোটিই সঠিক উত্তর না"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Electrons orbit outside the atomic nucleus.",
+        "step_by_step_solution": "The atomic nucleus contains nucleons (protons and neutrons), whereas electrons revolve around the nucleus in discrete energy shells.",
+        "shortcut_tip": "Nucleus = Protons + Neutrons. Electrons reside in orbitals."
+      }
+    },
+    {
+      "id": 32,
+      "subject": "Chemistry",
+      "subject_question_no": 2,
+      "question": "একই তাপমাত্রার একই আয়তনের প্রথম পাত্রে 1 mol N_2 এবং দ্বিতীয় পাত্রে 1 mol CO_2 রাখা হল। নিম্নের কোন উক্তিটি সঠিক নয়?",
+      "question_image": null,
+      "options": {
+        "A": "১ম পাত্রে চাপ নিম্নতর",
+        "B": "১ম পাত্রে N_2 অণুর গতি উচ্চতর",
+        "C": "উভয় পাত্রে অণুর সংখ্যা সমান",
+        "D": "উভয় পাত্রে অণুসমূহের গড় গতিশক্তি সমান"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Since $P = nRT/V$, equal moles, volume, and temperature produce equal pressure.",
+        "step_by_step_solution": "According to ideal gas law $PV=nRT$, if $n, V, T$ are identical, pressure $P$ must be equal for both containers. Thus stating that container 1 has lower pressure is incorrect.",
+        "shortcut_tip": "Same $n, V, T \\Rightarrow$ Same Pressure ($P$)."
+      }
+    },
+    {
+      "id": 33,
+      "subject": "Chemistry",
+      "subject_question_no": 3,
+      "question": "NaCl(s), H_2O(l) এবং CO_2(g) এর মধ্যে গতিশীল কণাসমূহ সম্বন্ধে নিম্নের কোন উক্তিটি সঠিক নয়?",
+      "question_image": null,
+      "options": {
+        "A": "NaCl(s) এ কণাসমূহের কেবল কম্পন গতি রয়েছে",
+        "B": "H_2O(l) এ কণাসমূহের কেবল স্থানান্তর গতি রয়েছে",
+        "C": "CO_2(g) এর মধ্যে CO_2 অণুর কম্পন, ঘূর্ণন এবং স্থানান্তর গতি রয়েছে",
+        "D": "NaCl(s) ও H_2O(l) এর মধ্যে কণাসমূহের ঘূর্ণন সম্ভব নয়"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Liquid water molecules exhibit translational, rotational, and vibrational motions.",
+        "step_by_step_solution": "Molecules in a liquid state possess both translational and rotational kinetic energy along with vibrational motion. Saying $H_2O(l)$ has ONLY translational motion is false.",
+        "shortcut_tip": "Liquids have vibrational + rotational + translational freedom."
+      }
+    },
+    {
+      "id": 34,
+      "subject": "Chemistry",
+      "subject_question_no": 4,
+      "question": "C_2H_4 অণুতে C-H বন্ধনসমূহ নিচের কোন অর্বিটালদ্বয়ের অধিক্রমণের ফলে গঠিত হয়?",
+      "question_image": null,
+      "options": {
+        "A": "C(sp) + H(2s)",
+        "B": "C(sp) + H(1s)",
+        "C": "C(sp^2) + H(2p)",
+        "D": "C(sp^2) + H(1s)"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "In ethene ($C_2H_4$), carbon is $sp^2$ hybridized and overlaps with hydrogen's $1s$ orbital.",
+        "step_by_step_solution": "Each carbon atom in $CH_2=CH_2$ forms $\\sigma$ bonds with two hydrogen atoms via overlap of a carbon $sp^2$ hybrid orbital and a hydrogen $1s$ atomic orbital.",
+        "shortcut_tip": "Alkene ($C=C$) $\\rightarrow sp^2$ hybridization $\\Rightarrow sp^2 - 1s$ for $C-H$ bond."
+      }
+    },
+    {
+      "id": 35,
+      "subject": "Chemistry",
+      "subject_question_no": 5,
+      "question": "4s^23d^7 যোজনীশেল ইলেকট্রন বিন্যাসবিশিষ্ট মৌল সম্পর্কে কোন উক্তিটি ভুল?",
+      "question_image": null,
+      "options": {
+        "A": "মৌলটি অবস্থান্তর মৌল",
+        "B": "মৌলটি গ্রুপ VII-A এর অন্তর্ভুক্ত",
+        "C": "মৌলটির যোজনীর মান 2 বা 3 হতে পারে",
+        "D": "মৌলটি ধাতব"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "The element with $3d^7 4s^2$ is Cobalt ($Z=27$), which belongs to Group 9 (or Group VIII).",
+        "step_by_step_solution": "Cobalt ($Co$) has total valence electrons $2 + 7 = 9$, so it is placed in Group 9 (VIII-B in old IUPAC notation), not Group VII-A.",
+        "shortcut_tip": "Group number for $d$-block = $(n-1)d + ns = 7 + 2 = 9$ (Group VIII)."
+      }
+    },
+    {
+      "id": 36,
+      "subject": "Chemistry",
+      "subject_question_no": 6,
+      "question": "0.1M HCl 10.0mL দ্রবণকে প্রশমিত করতে 0.2M Na_2CO_3 দ্রবণের কত ml প্রয়োজন হবে?",
+      "question_image": null,
+      "options": {
+        "A": "0.5",
+        "B": "2.5",
+        "C": "5",
+        "D": "10"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$V_{Na_2CO_3} = \\frac{V_{HCl} \\cdot M_{HCl}}{2 \\cdot M_{Na_2CO_3}} = \\frac{10 \\times 0.1}{2 \\times 0.2} = 2.5 \\text{ mL}$.",
+        "step_by_step_solution": "Reaction: $2HCl + Na_2CO_3 \\rightarrow 2NaCl + H_2O + CO_2$. Formula: $\\frac{M_1 V_1}{e_1} = \\frac{M_2 V_2}{e_2} \\Rightarrow \\frac{0.1 \\times 10}{1} = \\frac{0.2 \\times V_2}{1/2} \\Rightarrow V_2 = \\frac{1}{0.4} = 2.5 \\text{ mL}$.",
+        "shortcut_tip": "$V_2 = \\frac{10 \\times 0.1}{2 \\times 0.2} = 2.5 \\text{ mL}$."
+      }
+    },
+    {
+      "id": 37,
+      "subject": "Chemistry",
+      "subject_question_no": 7,
+      "question": "C_2H_5OH + 3O_2 → 2CO_2 + 3H_2O বিক্রিয়া সম্বন্ধে নিচের কোন উক্তিটি ভুল?",
+      "question_image": null,
+      "options": {
+        "A": "C এর জারণ সংখ্যা হ্রাস পায়",
+        "B": "H এর জারণ সংখ্যা অপরিবর্তিত থাকে",
+        "C": "O এর জারণ সংখ্যা হ্রাস পায়",
+        "D": "বিক্রিয়ায় O_2 বিজারিত হয়"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Carbon's oxidation state increases from -2 in ethanol to +4 in $CO_2$ (oxidized).",
+        "step_by_step_solution": "In $C_2H_5OH$, average oxidation state of C is -2. In $CO_2$, it becomes +4. So carbon undergoes oxidation (increase in oxidation number), making statement A incorrect.",
+        "shortcut_tip": "Combustion oxidizes Carbon (oxidation state goes UP, not down)."
+      }
+    },
+    {
+      "id": 38,
+      "subject": "Chemistry",
+      "subject_question_no": 8,
+      "question": "নিচের কোন যৌগটিতে কেন্দ্রীয় পরমাণুর যোজনী শেল ইলেকট্রন যুগলসমুহ চতুস্তলকীয়ভাবে বিন্যস্ত নয়?",
+      "question_image": null,
+      "options": {
+        "A": "H_2O",
+        "B": "SnCl_2",
+        "C": "NH_3",
+        "D": "PF_3"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$SnCl_2$ has $sp^2$ hybridization with trigonal planar electron geometry.",
+        "step_by_step_solution": "$Sn$ has 4 valence electrons; with 2 $Cl$ atoms, it forms 2 bond pairs + 1 lone pair ($sp^2$, trigonal planar electron geometry). $H_2O, NH_3, PF_3$ all have $sp^3$ hybridization with tetrahedral electron arrangement.",
+        "shortcut_tip": "$SnCl_2 = sp^2$ (Trigonal planar geometry, not tetrahedral)."
+      }
+    },
+    {
+      "id": 39,
+      "subject": "Chemistry",
+      "subject_question_no": 9,
+      "question": "নিচের কোন জলীয় দ্রনণটির pH এর মান সবচেয়ে বেশি?",
+      "question_image": null,
+      "options": {
+        "A": "0.1 M NH_3",
+        "B": "0.1M NaOH",
+        "C": "0.1 M NH_4Cl",
+        "D": "0.1 M CH_3COONa"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "0.1 M NaOH is a strong base with $pH = 14 + \\log(0.1) = 13$.",
+        "step_by_step_solution": "NaOH fully dissociates into $[OH^-] = 0.1 \\text{ M}$. $pOH = -\\log(0.1) = 1 \\Rightarrow pH = 13$. Weak bases and salts will have lower pH values.",
+        "shortcut_tip": "Strong base (NaOH) gives the highest pH."
+      }
+    },
+    {
+      "id": 40,
+      "subject": "Chemistry",
+      "subject_question_no": 10,
+      "question": "নিম্নের কোন ইলেকট্রোডটির প্রমাণ বিজারণ পটেনশিয়াল সর্বোচ্চ?",
+      "question_image": null,
+      "options": {
+        "A": "$H^+(aq)/H_2(g),Pt$",
+        "B": "$Cu^{2+}(aq)/Cu(s)$",
+        "C": "$Na^+(aq)/Na(s)$",
+        "D": "$Pt/F_2(g)/F^−(aq)$"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Fluorine is the strongest oxidizing agent with standard reduction potential $E^\\circ = +2.87 \\text{ V}$.",
+        "step_by_step_solution": "The $F_2/F^-$ electrode has the highest positive reduction potential in the electrochemical series ($+2.87\\text{ V}$), making it the most easily reduced species.",
+        "shortcut_tip": "Fluorine has the highest standard reduction potential (+2.87 V)."
+      }
+    },
+    {
+      "id": 41,
+      "subject": "Chemistry",
+      "subject_question_no": 11,
+      "question": "2A + 2B → 2C + 2D বিক্রিয়াটির তাৎক্ষনিক গতির জন্য সঠিক রাশিমালাটি চিহ্নিত কর .",
+      "question_image": null,
+      "options": {
+        "A": "+d[A]/dt",
+        "B": "-d[D]/dt",
+        "C": "1/2 d[D]/dt",
+        "D": "+ d[C]/dt"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Rate $= -\\frac{1}{2}\\frac{d[A]}{dt} = -\\frac{1}{2}\\frac{d[B]}{dt} = +\\frac{1}{2}\\frac{d[C]}{dt} = +\\frac{1}{2}\\frac{d[D]}{dt}$.",
+        "step_by_step_solution": "Dividing each rate term by stoichiometric coefficient: for product D, rate of formation is $+\\frac{1}{2}\\frac{d[D]}{dt}$.",
+        "shortcut_tip": "Product rate $= +\\frac{1}{\\text{coeff}} \\cdot \\frac{d[Product]}{dt}$."
+      }
+    },
+    {
+      "id": 42,
+      "subject": "Chemistry",
+      "subject_question_no": 12,
+      "question": "নিচের কোনটি অর্থো-প্যারা নির্দেশক মূলক ?",
+      "question_image": null,
+      "options": {
+        "A": "-SO_3H",
+        "B": "-Br",
+        "C": "-COOH",
+        "D": "-CHО"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Halogens ($-Br$) are ortho-para directing groups due to resonance $+M$ effect.",
+        "step_by_step_solution": "$-SO_3H, -COOH, -CHO$ are meta-directing electron withdrawing groups. Halogens ($-Br$) direct incoming electrophiles to ortho and para positions.",
+        "shortcut_tip": "Ortho-Para directors: $-OH, -NH_2, -R, -X (Br, Cl, I)$."
+      }
+    },
+    {
+      "id": 43,
+      "subject": "Chemistry",
+      "subject_question_no": 13,
+      "question": "নিচের কোন অক্সাইডকে হাইড্রোজেন গ্যাস দ্বারা বিজারিত করা যাবে?",
+      "question_image": null,
+      "options": {
+        "A": "Al_2O_3",
+        "B": "MgO",
+        "C": "CuO",
+        "D": "Na_2O"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$CuO + H_2 \\xrightarrow{\\Delta} Cu + H_2O$.",
+        "step_by_step_solution": "Copper is less reactive than hydrogen in the activity series, so $H_2$ gas can easily reduce copper oxide ($CuO$) to metallic copper.",
+        "shortcut_tip": "Metals below Hydrogen (e.g. Cu) can be reduced by $H_2$ gas."
+      }
+    },
+    {
+      "id": 44,
+      "subject": "Chemistry",
+      "subject_question_no": 14,
+      "question": "HCl এর সাথে NaOH(তীব্র ক্ষার) ও NH_4OH (দূর্বল ক্ষার) এর প্রশমন তাপ যথাক্রমে -57.32 ও - 51.46 KJmol^-1 NH_4OH এর বিভাজন তাপ কত?",
+      "question_image": null,
+      "options": {
+        "A": "5.86KJmol^-1",
+        "B": "10.26KJmol^-1",
+        "C": "15.86KJmol^-1",
+        "D": "58.6KJmol^-1"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Enthalpy of ionization $= |-57.32| - |-51.46| = 5.86 \\text{ kJ mol}^{-1}$.",
+        "step_by_step_solution": "Heat lost in ionization $= \\Delta H_{\\text{strong}} - \\Delta H_{\\text{weak}} = 57.32 - 51.46 = 5.86 \\text{ kJ/mol}$.",
+        "shortcut_tip": "Ionization energy $= 57.32 - 51.46 = 5.86 \\text{ kJ/mol}$."
+      }
+    },
+    {
+      "id": 45,
+      "subject": "Chemistry",
+      "subject_question_no": 15,
+      "question": "নীচের কোন যৌগ ডায়াজোনিয়াম লবণ উৎপন্ন করে?",
+      "question_image": null,
+      "options": {
+        "A": "N_2NC_2H_5",
+        "B": "C_6H_6NO_2",
+        "C": "C_6H_5NH_2",
+        "D": "(H_3C)_3N"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Aniline ($C_6H_5NH_2$) reacts with $NaNO_2 + HCl$ at $0-5^\\circ C$ to form benzene diazonium chloride.",
+        "step_by_step_solution": "Primary aromatic amines like aniline ($C_6H_5NH_2$) undergo diazotization reaction with nitrous acid to yield stable diazonium salts.",
+        "shortcut_tip": "Aniline ($C_6H_5NH_2$) + $NaNO_2/HCl \\rightarrow$ Diazonium salt."
+      }
+    },
+    {
+      "id": 46,
+      "subject": "Chemistry",
+      "subject_question_no": 16,
+      "question": "নিম্নের কোন যৌগটি ফেহলিং দ্রবণের সাথে বিক্রিয়া করে?",
+      "question_image": null,
+      "options": {
+        "A": "(CH_3)_2CO",
+        "B": "CH_3CH(OH)CH_3",
+        "C": "CH_3CHO",
+        "D": "CH_3C(Ar)O"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Acetaldehyde ($CH_3CHO$) reduces Fehling's solution giving a red precipitate of $Cu_2O$.",
+        "step_by_step_solution": "Aliphatic aldehydes like acetaldehyde ($CH_3CHO$) readily react with Fehling's reagent ($Cu^{2+}$) to form red $Cu_2O$ precipitate.",
+        "shortcut_tip": "Fehling's test positive $\\rightarrow$ Aliphatic Aldehyde ($CH_3CHO$)."
+      }
+    },
+    {
+      "id": 47,
+      "subject": "Chemistry",
+      "subject_question_no": 17,
+      "question": "কোন যৌগটি প্রাকৃতিক গ্যাস এর উপাদান নয়?",
+      "question_image": null,
+      "options": {
+        "A": "CH_4",
+        "B": "C_8H_18",
+        "C": "C_3H_8",
+        "D": "C_2H_6"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Octane ($C_8H_{18}$) is a liquid component of gasoline, not natural gas.",
+        "step_by_step_solution": "Natural gas consists of gaseous alkanes ($C_1$ to $C_4$: $CH_4, C_2H_6, C_3H_8, C_4H_{10}$). Octane ($C_8H_{18}$) is a higher alkane present in liquid fuels.",
+        "shortcut_tip": "$C_8H_{18}$ is liquid (Octane in petrol), not natural gas."
+      }
+    },
+    {
+      "id": 48,
+      "subject": "Chemistry",
+      "subject_question_no": 18,
+      "question": "নিচের প্রক্রিয়াটির প্রধান উৎপাদ কি? $\\mathrm{CH}_{3}-\\mathrm{CH}=\\mathrm{CH}-\\mathrm{CHO} \\stackrel{\\mathrm{NaBH}_{4}}{\\Longrightarrow} ?$",
+      "question_image": null,
+      "options": {
+        "A": "CH_3 - CH_2 - CH_2 - CHO",
+        "B": "CH_3 - CH = CH - CH_2OH",
+        "C": "CH_3- CH_2 - CH_2 - CH_2OH",
+        "D": "CH_3- CH(OH) - CH_2 - CH_3"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$NaBH_4$ selectively reduces the aldehyde group $-CHO$ to $-CH_2OH$ without affecting double bonds.",
+        "step_by_step_solution": "Sodium borohydride ($NaBH_4$) is a selective reducing agent that reduces carbon-oxygen double bonds (carbonyls) but leaves $C=C$ double bonds intact.",
+        "shortcut_tip": "$NaBH_4$ reduces $-CHO \\rightarrow -CH_2OH$, leaves $C=C$ unchanged."
+      }
+    },
+    {
+      "id": 49,
+      "subject": "Chemistry",
+      "subject_question_no": 19,
+      "question": "বিক্রিয়ার সাম্যাবস্থা ধ্রুবক কোনটির উপর নির্ভরশীল?",
+      "question_image": null,
+      "options": {
+        "A": "বিক্রিয়কের ঘনমাত্রা",
+        "B": "তাপমাত্রা",
+        "C": "চাপ",
+        "D": "প্রভাবক"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Equilibrium constant ($K_{eq}$) depends solely on temperature.",
+        "step_by_step_solution": "According to the van 't Hoff equation, temperature is the only variable that alters the value of the equilibrium constant $K$. Concentration, pressure, and catalysts do not change $K$.",
+        "shortcut_tip": "Equilibrium constant $K$ ONLY changes with temperature!"
+      }
+    },
+    {
+      "id": 50,
+      "subject": "Chemistry",
+      "subject_question_no": 20,
+      "question": "1.8g পানিতে কতগুলো পানির অণু রয়েছে ?",
+      "question_image": null,
+      "options": {
+        "A": "60.23 × 10^23",
+        "B": "0.6023 × 10^22",
+        "C": "6.023 × 10^22",
+        "D": "6.036 × 10^23"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$N = \\frac{1.8}{18} \\times 6.023 \\times 10^{23} = 6.023 \\times 10^{22}$.",
+        "step_by_step_solution": "Moles of $H_2O = \\frac{1.8}{18} = 0.1 \\text{ mol}$. Number of molecules $= 0.1 \\times 6.023 \\times 10^{23} = 6.023 \\times 10^{22}$.",
+        "shortcut_tip": "$1.8\\text{ g} = 0.1\\text{ mol} \\Rightarrow 6.023 \\times 10^{22}$ molecules."
+      }
+    },
+    {
+      "id": 51,
+      "subject": "Chemistry",
+      "subject_question_no": 21,
+      "question": "নিচের বিক্রিয়াকে কি বলা হয় ? 3ClO^- (aq) → 2Cl^- (aq) + ClO_3^-(aq)",
+      "question_image": null,
+      "options": {
+        "A": "প্রতিস্থাপন",
+        "B": "জারণ - বিজারণ",
+        "C": "বিজারণ",
+        "D": "অসামঞ্জস্যকরণ"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Chlorine in $ClO^-$ (+1) is simultaneously oxidized to +5 ($ClO_3^-$) and reduced to -1 ($Cl^-$).",
+        "step_by_step_solution": "A reaction where the same element undergoes both oxidation and reduction is called a disproportionation (অসামঞ্জস্যকরণ) reaction.",
+        "shortcut_tip": "Same species oxidized + reduced = Disproportionation."
+      }
+    },
+    {
+      "id": 52,
+      "subject": "Chemistry",
+      "subject_question_no": 22,
+      "question": "IUPAC পদ্ধতিতে নিচের যৌগের নামঃ",
+      "question_image": "https://assets.chorcha.net/8xrnTZR_8LX5-X6HFaKw2.png",
+      "options": {
+        "A": "1-bromo-4-chloro-2-nitrobenzene",
+        "B": "1-chloro-3-nitro-4-bromobenzene",
+        "C": "1-nitro-2-bromo-5-chlorobenzene",
+        "D": "1-chloro-4-bromo-5-nitrobenzene"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Numbering gives lowest locants (1,2,4): 1-bromo-4-chloro-2-nitrobenzene.",
+        "step_by_step_solution": "Assigning numbers alphabetically/locant rule: position 1 for Bromo, position 2 for Nitro, position 4 for Chloro gives 1-bromo-4-chloro-2-nitrobenzene.",
+        "shortcut_tip": "Lowest locant rule + alphabetical ordering: 1-bromo-4-chloro-2-nitrobenzene."
+      }
+    },
+    {
+      "id": 53,
+      "subject": "Chemistry",
+      "subject_question_no": 23,
+      "question": "এক ফ্যারাডে(1F)বিদ্যুৎ গলিত NaCl এর মধ্যে দিয়ে প্রবাহিত করা হলে ক্যাথোডে যে পরিমাণ Na জমা হবে তা হল-",
+      "question_image": null,
+      "options": {
+        "A": "$6.023\\times10^{23}g$",
+        "B": "$23.0\\ g$",
+        "C": "$46.0\\ g$",
+        "D": "$11.5\\ g$"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$1\\text{ F}$ deposits $1$ equivalent weight $= 23.0\\text{ g}$ of $Na$.",
+        "step_by_step_solution": "$Na^+ + e^- \\rightarrow Na(s)$. $1\\text{ mole}$ of electrons ($1\\text{ Faraday}$) deposits $1\\text{ mole}$ of sodium atoms $= 23.0\\text{ g}$.",
+        "shortcut_tip": "$1\\text{ F} = 1\\text{ mole } Na = 23\\text{ g}$."
+      }
+    },
+    {
+      "id": 54,
+      "subject": "Chemistry",
+      "subject_question_no": 24,
+      "question": "K_2Cr_2O_7 এর এসিডীয় দ্রবণে SO_3 চালনা করলে ক্রোমিয়াম সালফেট উৎপন্ন হয়। এই পরিবর্তনের ফলে ক্রোমিয়ামের জারণ সংখ্যার কি ধরণের পরিবর্তন হলো?",
+      "question_image": null,
+      "options": {
+        "A": "+4 to +2",
+        "B": "+5 to +3",
+        "C": "+6 to +3",
+        "D": "+7 to +2"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Chromium changes from $+6$ in $Cr_2O_7^{2-}$ to $+3$ in $Cr_2(SO_4)_3$.",
+        "step_by_step_solution": "In $K_2Cr_2O_7$, $2(+1) + 2x + 7(-2) = 0 \\Rightarrow x = +6$. In $Cr_2(SO_4)_3$, $Cr$ has an oxidation state of $+3$. Change is $+6 \\rightarrow +3$.",
+        "shortcut_tip": "Dichromate $Cr(+6) \\rightarrow Cr(+3)$."
+      }
+    },
+    {
+      "id": 55,
+      "subject": "Chemistry",
+      "subject_question_no": 25,
+      "question": "একটি দ্রবণের pH হল 5.0। এই দ্রবণের মধ্যে পর্যাপ্ত পরিমাণ এসিড যোগ করে এর pH 2.0 তে নামিয়ে আনা হলো। এতে দ্রবণে H^+ এর ঘনমাত্রার বৃদ্ধি হলঃ",
+      "question_image": null,
+      "options": {
+        "A": "1000 times",
+        "B": "2.5 times",
+        "C": "100 times",
+        "D": "5 times"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Increase factor $= 10^{(5.0 - 2.0)} = 10^3 = 1000$ times.",
+        "step_by_step_solution": "$[H^+]_1 = 10^{-5}\\text{ M}$, $[H^+]_2 = 10^{-2}\\text{ M}$. Ratio $= \\frac{10^{-2}}{10^{-5}} = 10^3 = 1000$.",
+        "shortcut_tip": "Change of $3$ pH units $= 10^3 = 1000$-fold increase."
+      }
+    },
+    {
+      "id": 56,
+      "subject": "Chemistry",
+      "subject_question_no": 26,
+      "question": "চারটি টেস্ট টিউবে নিচের চারটি লবণের বর্ণহীন দ্রবণে আলাদা আলাদাভাবে রেখে প্রত্যেক টেস্ট টিউবে একটি করে তামার পাত ডুবিয়ে রাখলে কোন দ্রবণটি নীল হবে?",
+      "question_image": null,
+      "options": {
+        "A": "NaCl",
+        "B": "AgNO_3",
+        "C": "Cd(NO_3)_2",
+        "D": "ZnSO_4"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Copper displaces $Ag^+$ from $AgNO_3$ forming blue $Cu(NO_3)_2$.",
+        "step_by_step_solution": "$Cu(s) + 2AgNO_3(aq) \\rightarrow Cu(NO_3)_2(aq) + 2Ag(s)$. Copper is more reactive than Silver, so it oxidizes to $Cu^{2+}$ turning the solution blue.",
+        "shortcut_tip": "$Cu$ displaces $Ag^+$ (below Cu in reactivity series) $\\rightarrow$ blue $Cu^{2+}$ solution."
+      }
+    },
+    {
+      "id": 57,
+      "subject": "Chemistry",
+      "subject_question_no": 27,
+      "question": "PCl_5 এবং ইথাইল অ্যালকোহলের বিক্রিয়ার ফলে কোনটি উৎপন্ন হয়?",
+      "question_image": null,
+      "options": {
+        "A": "Acetyl chloride",
+        "B": "Ethyl chloride",
+        "C": "Ethane",
+        "D": "Diethylether"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$C_2H_5OH + PCl_5 \\rightarrow C_2H_5Cl + POCl_3 + HCl$.",
+        "step_by_step_solution": "Phosphorus pentachloride converts the hydroxyl group of ethanol into ethyl chloride ($C_2H_5Cl$).",
+        "shortcut_tip": "Alcohol + $PCl_5 \\rightarrow$ Alkyl chloride (Ethyl chloride)."
+      }
+    },
+    {
+      "id": 58,
+      "subject": "Chemistry",
+      "subject_question_no": 28,
+      "question": "ক্লোরোবেনজিন ও অ্যামোনিয়া 200°C তাপমাত্রায় এবং উচ্চ চাপে প্রভাবকের উপস্থিতিতে উৎপন্ন করেঃ",
+      "question_image": null,
+      "options": {
+        "A": "Nitrobenzene",
+        "B": "Chloroaminobenzene",
+        "C": "Aminochloroaniline",
+        "D": "Aniline"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "$C_6H_5Cl + 2NH_3 \\xrightarrow{Cu_2O, 200^\\circ C} C_6H_5NH_2 + NH_4Cl$.",
+        "step_by_step_solution": "Nucleophilic aromatic substitution of chlorobenzene with ammonia using $Cu_2O$ catalyst at high temperature and pressure produces aniline.",
+        "shortcut_tip": "Chlorobenzene + $NH_3 \\rightarrow$ Aniline."
+      }
+    },
+    {
+      "id": 59,
+      "subject": "Chemistry",
+      "subject_question_no": 29,
+      "question": "$\\mathrm{RCH}_{2} \\mathrm{X} \\stackrel{\\mathrm{NaOH}}{\\Longrightarrow} \\mathrm{RCH}_{2} \\mathrm{OH}+\\mathrm{NaX}$ বিক্রিয়াটি একটি-",
+      "question_image": null,
+      "options": {
+        "A": "যুত বিক্রিয়া",
+        "B": "ইলেক্ট্রনাকর্ষী প্রতিস্থাপন বিক্রিয়া",
+        "C": "নিউক্লিওগ্রাহী প্রতিস্থাপন বিক্রিয়া",
+        "D": "অপসারণ বিক্রিয়া"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$OH^-$ acts as a nucleophile substituting halogen $X^-$.",
+        "step_by_step_solution": "This is a typical nucleophilic substitution ($S_N$) reaction where hydroxide ion replaces halide ion.",
+        "shortcut_tip": "Alkyl halide + aqueous $NaOH \\rightarrow$ Nucleophilic Substitution ($S_N$)."
+      }
+    },
+    {
+      "id": 60,
+      "subject": "Chemistry",
+      "subject_question_no": 30,
+      "question": "শিল্পক্ষেত্রে NH_3 থেকে HNO_3 তৈরির পদ্ধতিকে বলা হয়ঃ",
+      "question_image": null,
+      "options": {
+        "A": "Solvay Process",
+        "B": "Haber Process",
+        "C": "Ostwald Process",
+        "D": "Contact Process"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Industrial production of $HNO_3$ from $NH_3$ is Ostwald's process.",
+        "step_by_step_solution": "Ostwald process oxidizes ammonia over Pt-Rh gauge catalyst to $NO$, then to $NO_2$, and finally absorbs in water to yield nitric acid.",
+        "shortcut_tip": "Ostwald Process = $NH_3 \\rightarrow HNO_3$; Haber = $NH_3$; Contact = $H_2SO_4$."
+      }
+    },
+    {
+      "id": 61,
+      "subject": "Physics",
+      "subject_question_no": 1,
+      "question": "একটি কণা 40cm ব্যাসার্ধের বৃত্তাকার পথে প্রতি মিনিটে 45 বার আবর্তন করে । কণাটির কেন্দ্রমুখী ত্বরণ কত ?",
+      "question_image": null,
+      "options": {
+        "A": "8.88 m/s^2",
+        "B": "1.41 m/s^2",
+        "C": "35.55 m/s^2",
+        "D": "2.82 m/s^2"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "$a_c = \\omega^2 r = (1.5\\pi)^2 \\times 0.4 \\approx 8.88 \\text{ m/s}^2$.",
+        "step_by_step_solution": "$\\omega = \\frac{2\\pi \\times 45}{60} = 1.5\\pi \\text{ rad/s} \\approx 4.712 \\text{ rad/s}$. $a_c = \\omega^2 r = (4.712)^2 \\times 0.4 = 22.2 \\times 0.4 = 8.88 \\text{ m/s}^2$.",
+        "shortcut_tip": "$a_c = \\left(\\frac{3\\pi}{2}\\right)^2 \\times 0.4 = 2.25 \\times \\pi^2 \\times 0.4 \\approx 2.25 \\times 9.869 \\times 0.4 = 8.88 \\text{ m/s}^2$."
+      }
+    },
+    {
+      "id": 62,
+      "subject": "Physics",
+      "subject_question_no": 2,
+      "question": "36kg ভরের একটি বস্তুর উপর কত বল প্রযুক্ত হলে 1.0 মিনিটে বস্তুটির বেগ 15km/h বৃদ্ধি পাবে ?",
+      "question_image": null,
+      "options": {
+        "A": "2.4 N",
+        "B": "2.5 N",
+        "C": "14.4 N",
+        "D": "28.8 N"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$F = m \\frac{\\Delta v}{\\Delta t} = 36 \\times \\frac{15 \\times \\frac{5}{18}}{60} = 2.5 \\text{ N}$.",
+        "step_by_step_solution": "$\\Delta v = 15 \\text{ km/h} = \\frac{15 \\times 1000}{3600} = \\frac{25}{6} \\text{ m/s}$. $t = 60 \\text{ s}$. Acceleration $a = \\frac{25/6}{60} = \\frac{25}{360} = \\frac{5}{72} \\text{ m/s}^2$. Force $F = 36 \\times \\frac{5}{72} = 2.5 \\text{ N}$.",
+        "shortcut_tip": "$F = 36 \\times \\frac{15/3.6}{60} = 2.5 \\text{ N}$."
+      }
+    },
+    {
+      "id": 63,
+      "subject": "Physics",
+      "subject_question_no": 3,
+      "question": "2 N/m স্প্রিং ধ্রুবক সম্পন্ন একটি আদর্শ স্প্রিংইয়ের দৈর্ঘ্য সাম্যবস্থা থেকে 0.1 m বৃদ্ধি করলে স্প্রিংয়ের স্থিতিশক্তির বৃদ্ধি হবে?",
+      "question_image": null,
+      "options": {
+        "A": "0.1 J",
+        "B": "0.001 J",
+        "C": "1 J",
+        "D": "0.01 J"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "$U = \\frac{1}{2} k x^2 = \\frac{1}{2} \\times 2 \\times (0.1)^2 = 0.01 \\text{ J}$.",
+        "step_by_step_solution": "Potential energy stored in spring $U = \\frac{1}{2}k x^2 = \\frac{1}{2}(2)(0.1)^2 = 0.01 \\text{ J}$.",
+        "shortcut_tip": "$U = 0.5 \\times 2 \\times 0.01 = 0.01 \\text{ J}$."
+      }
+    },
+    {
+      "id": 64,
+      "subject": "Physics",
+      "subject_question_no": 4,
+      "question": "একটি খালি লঞ্চের পানির উপরিভাগের অংশের গড় প্রস্থছেদ 150 m^2 । যদি প্রতিজন মালসহ 75kg হারে 200 জন যাত্রী নেওয়া হয় তাহলে লঞ্চের কতটুকু ডুববে ?",
+      "question_image": null,
+      "options": {
+        "A": "1m",
+        "B": "0.1 m",
+        "C": "15 cm",
+        "D": "0.75 m"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$h = \\frac{m}{\\rho A} = \\frac{200 \\times 75}{1000 \\times 150} = 0.1 \\text{ m}$.",
+        "step_by_step_solution": "Total added mass $M = 200 \\times 75 = 15000 \\text{ kg}$. Weight of displaced water $= M \\cdot g = A h \\rho g \\Rightarrow h = \\frac{M}{A \\rho} = \\frac{15000}{150 \\times 1000} = 0.1 \\text{ m}$.",
+        "shortcut_tip": "$h = \\frac{15000}{150000} = 0.1 \\text{ m}$."
+      }
+    },
+    {
+      "id": 65,
+      "subject": "Physics",
+      "subject_question_no": 5,
+      "question": "মহাকর্ষ বল সবল নিউক্লিয় বলের তুলনায় কতগুন তীব্র?",
+      "question_image": null,
+      "options": {
+        "A": "10^-30",
+        "B": "10^-41",
+        "C": "10^40",
+        "D": "10^42"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Gravitational force relative to strong nuclear force is $\\approx 10^{-38}$ to $10^{-41}$.",
+        "step_by_step_solution": "Strong nuclear force ratio to gravitational force is around $10^{39}-10^{41}$. Therefore, gravitational force is $10^{-41}$ times the strong nuclear force.",
+        "shortcut_tip": "Gravitational force relative strength $= 10^{-41}$."
+      }
+    },
+    {
+      "id": 66,
+      "subject": "Physics",
+      "subject_question_no": 6,
+      "question": "একটি সরল দোলকের দৈর্ঘ্য অপরটির দ্বিগুণ। দ্বিতীয় সরল দোলকের দোলনকাল 3s হলে প্রথমটির দোলনকাল কত ?",
+      "question_image": null,
+      "options": {
+        "A": "5.25 s",
+        "B": "4.24 s",
+        "C": "3.455 s",
+        "D": "6.20 s"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$T_1 = T_2 \\sqrt{\\frac{L_1}{L_2}} = 3 \\sqrt{2} \\approx 4.24 \\text{ s}$.",
+        "step_by_step_solution": "Since $T \\propto \\sqrt{L}$, $\\frac{T_1}{T_2} = \\sqrt{\\frac{L_1}{L_2}} = \\sqrt{2} \\Rightarrow T_1 = 3 \\times 1.4142 = 4.2426 \\text{ s}$.",
+        "shortcut_tip": "$T_1 = 3 \\times 1.414 = 4.24 \\text{ s}$."
+      }
+    },
+    {
+      "id": 67,
+      "subject": "Physics",
+      "subject_question_no": 7,
+      "question": "নির্দিষ্ট ভরের একটি আদর্শ গ্যাসের আয়তন ধ্রুব রেখে চাপ দ্বিগুন করা হলো। যদি গ্যাসের প্রাথমিক তাপমাত্রা 13°C হয় তবে চূড়ান্ত তাপমাত্রা কত ?",
+      "question_image": null,
+      "options": {
+        "A": "7.5°C",
+        "B": "299°C",
+        "C": "13°C",
+        "D": "26°C"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$T_2 = 2 T_1 = 2 \\times (273+13) = 572 \\text{ K} = 299^\\circ C$.",
+        "step_by_step_solution": "Gay-Lussac's Law: $\\frac{P_1}{T_1} = \\frac{P_2}{T_2}$. Given $T_1 = 286\\text{ K}, P_2 = 2P_1 \\Rightarrow T_2 = 2 \\times 286 = 572\\text{ K}$. In Celsius: $572 - 273 = 299^\\circ C$.",
+        "shortcut_tip": "$T_2 = 286 \\times 2 - 273 = 299^\\circ C$."
+      }
+    },
+    {
+      "id": 68,
+      "subject": "Physics",
+      "subject_question_no": 8,
+      "question": "এক মোল হাইড্রোজেন এবং এক মোল অক্সিজেনের ভর যথাক্রমে 2g ও 32g হলে কোন এক নির্দিষ্ট তাপমাত্রায় অনুপাত হাইড্রোজেন অণুর মূল গড় বর্গ বেগ / অক্সিজেন অণুর মূল গড় বর্গ বেগ এর মান কত হবে ?",
+      "question_image": null,
+      "options": {
+        "A": "1/8",
+        "B": "1/4",
+        "C": "4",
+        "D": "8"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$\\frac{C_{H_2}}{C_{O_2}} = \\sqrt{\\frac{M_{O_2}}{M_{H_2}}} = \\sqrt{\\frac{32}{2}} = 4$.",
+        "step_by_step_solution": "RMS velocity $C = \\sqrt{\\frac{3RT}{M}}$. Ratio $\\frac{C_1}{C_2} = \\sqrt{\\frac{M_2}{M_1}} = \\sqrt{\\frac{32}{2}} = \\sqrt{16} = 4$.",
+        "shortcut_tip": "Ratio $= \\sqrt{32/2} = 4$."
+      }
+    },
+    {
+      "id": 69,
+      "subject": "Physics",
+      "subject_question_no": 9,
+      "question": "ভরকেন্দ্রগামী এবং তলের সহিত লম্ব বরাবর অক্ষ সাপেক্ষে একটি আয়তাকার পাতের জড়তার ভ্রামক 5kgm^2 । পাতটির প্রস্থ 1 m এবং ভর 12 kg হলে দৈর্ঘ্য কত ?",
+      "question_image": null,
+      "options": {
+        "A": "5m",
+        "B": "2.5m",
+        "C": "2m",
+        "D": "60m"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$I = \\frac{1}{12}M(L^2 + B^2) \\Rightarrow 5 = \\frac{1}{12}(12)(L^2 + 1^2) \\Rightarrow L = 2\\text{ m}$.",
+        "step_by_step_solution": "$I = \\frac{M}{12}(L^2 + B^2) \\Rightarrow 5 = \\frac{12}{12}(L^2 + 1) \\Rightarrow L^2 = 4 \\Rightarrow L = 2 \\text{ m}$.",
+        "shortcut_tip": "$L^2 = 5 - 1 = 4 \\Rightarrow L = 2\\text{ m}$."
+      }
+    },
+    {
+      "id": 70,
+      "subject": "Physics",
+      "subject_question_no": 10,
+      "question": "একটি কার্নো ইঞ্জিন 227°C তাপময়াত্রায় তাপ গ্রহন করে ও 77°C তাপমাত্রায় তাপ বর্জন করে। ইঞ্জিনের দক্ষতা কত ?",
+      "question_image": null,
+      "options": {
+        "A": "70%",
+        "B": "35%",
+        "C": "30%",
+        "D": "66%"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$\\eta = \\left(1 - \\frac{350}{500}\\right) \\times 100\\% = 30\\%$.",
+        "step_by_step_solution": "$T_1 = 227 + 273 = 500 \\text{ K}$, $T_2 = 77 + 273 = 350 \\text{ K}$. Efficiency $\\eta = \\left(1 - \\frac{350}{500}\\right) \\times 100\\% = \\frac{150}{500} \\times 100\\% = 30\\%$.",
+        "shortcut_tip": "$\\eta = \\frac{500 - 350}{500} = 30\\%$."
+      }
+    },
+    {
+      "id": 71,
+      "subject": "Physics",
+      "subject_question_no": 11,
+      "question": "9Ω রোধের একটি তামার তারকে আয়তন অপরিবর্তিত রেখে টেনে তিনগুন লম্বা করা হলো। এই অবস্থায় তারটির রোধ কত ?",
+      "question_image": null,
+      "options": {
+        "A": "9Ω",
+        "B": "27Ω",
+        "C": "81Ω",
+        "D": "243Ω"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$R' = n^2 R = 3^2 \\times 9 = 81 \\ \\Omega$.",
+        "step_by_step_solution": "When stretched $n$ times while keeping volume constant, new resistance $R' = n^2 R = 3^2 \\times 9 = 9 \\times 9 = 81 \\ \\Omega$.",
+        "shortcut_tip": "$R' = n^2 R = 9 \\times 9 = 81 \\ \\Omega$."
+      }
+    },
+    {
+      "id": 72,
+      "subject": "Physics",
+      "subject_question_no": 12,
+      "question": "কোন কারখানার সব বৈদ্যুতিক যন্ত্রপাতির জন্য মোট 22kW ক্ষমতার প্রয়োজন। 220 V লাইনের মূল লাইন অন্তত কত প্রবাহ বহনক্ষম তার লাগতে পারে ?",
+      "question_image": null,
+      "options": {
+        "A": "10 A",
+        "B": "100 A",
+        "C": "22 A",
+        "D": "48.4 A"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$I = \\frac{P}{V} = \\frac{22000}{220} = 100 \\text{ A}$.",
+        "step_by_step_solution": "$P = V I \\Rightarrow I = \\frac{22 \\times 1000}{220} = 100 \\text{ A}$.",
+        "shortcut_tip": "$I = 22000 / 220 = 100 \\text{ A}$."
+      }
+    },
+    {
+      "id": 73,
+      "subject": "Physics",
+      "subject_question_no": 13,
+      "question": "নিচের কোন তরঙ্গদৈর্ঘ্যের তড়িৎ চৌম্বকীয় বিকিরন দৃশ্যমান ?",
+      "question_image": null,
+      "options": {
+        "A": "50 nm",
+        "B": "500 nm",
+        "C": "1000 nm",
+        "D": "5000 nm"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Visible light ranges from $380\\text{ nm}$ to $750\\text{ nm}$.",
+        "step_by_step_solution": "The human eye can perceive electromagnetic radiation between $380-750\\text{ nm}$ ($3800-7500\\ \\mathrm{\\mathring{A}}$). Thus $500\\text{ nm}$ falls directly in the visible spectrum (green light).",
+        "shortcut_tip": "Visible range $= 400-700\\text{ nm} \\Rightarrow 500\\text{ nm}$."
+      }
+    },
+    {
+      "id": 74,
+      "subject": "Physics",
+      "subject_question_no": 14,
+      "question": "প্লাটিনামের কার্য অপেক্ষক 6.31eV। সর্বোচ্চ কত তরঙ্গদৈর্ঘ্যের আলো প্লাটিনামের উপর আপতিত হলে , ইলেকট্রন নিঃসৃত হবে ?",
+      "question_image": null,
+      "options": {
+        "A": "631 A°",
+        "B": "1970 A°",
+        "C": "1.97 A°",
+        "D": "3152 A°"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$\\lambda_{max} = \\frac{hc}{W_0} = \\frac{12400}{6.31} \\approx 1965 \\ \\mathrm{\\mathring{A}} \\approx 1970 \\ \\mathrm{\\mathring{A}}$.",
+        "step_by_step_solution": "Threshold wavelength $\\lambda = \\frac{hc}{W_0} = \\frac{6.626 \\times 10^{-34} \\times 3 \\times 10^8}{6.31 \\times 1.6 \\times 10^{-19}} = 1.968 \\times 10^{-7} \\text{ m} = 1970 \\ \\mathrm{\\mathring{A}}$.",
+        "shortcut_tip": "$\\lambda (\\mathrm{\\mathring{A}}) = \\frac{12400}{W_0 (eV)} = \\frac{12400}{6.31} = 1970 \\ \\mathrm{\\mathring{A}}$."
+      }
+    },
+    {
+      "id": 75,
+      "subject": "Physics",
+      "subject_question_no": 15,
+      "question": "দুটি সুসংগত উৎস থেকে λ তরঙ্গদৈঘ্যের তরঙ্গ সমদশায় উতপন্ন হচ্ছে । উপরিপাতন অঞ্চলের কোন এক বিন্দুতে তরঙ্গ দুটির দশা পার্থক্য হলো π রেডিয়ান ।পথ পার্থক্যের মান কত হতে পারে ?",
+      "question_image": null,
+      "options": {
+        "A": "0",
+        "B": "λ/4",
+        "C": "λ/2",
+        "D": "3λ/4"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Path difference $\\Delta x = \\frac{\\lambda}{2\\pi} \\times \\delta = \\frac{\\lambda}{2\\pi} \\times \\pi = \\frac{\\lambda}{2}$.",
+        "step_by_step_solution": "Phase difference $\\delta = \\frac{2\\pi}{\\lambda} \\cdot \\Delta x$. Given $\\delta = \\pi$, then $\\Delta x = \\frac{\\lambda \\cdot \\pi}{2\\pi} = \\frac{\\lambda}{2}$.",
+        "shortcut_tip": "Phase $\\pi \\Rightarrow$ Path $\\lambda/2$."
+      }
+    },
+    {
+      "id": 76,
+      "subject": "Physics",
+      "subject_question_no": 16,
+      "question": "একটি অ্যামিটারের অভ্যন্তরীণ রোধ 2Ω এবং সর্বোচ্চ 0.2 A পর্যন্ত প্রবাহ মাপতে পারে। এর সাহায্যে 2 A পর্যন্ত প্রবাহ মাপতে হলে শান্টে কত রোধ লাগাতে হবে ?",
+      "question_image": null,
+      "options": {
+        "A": "5Ω",
+        "B": "1Ω",
+        "C": "0.22Ω",
+        "D": "0.80Ω"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$S = \\frac{I_g R_g}{I - I_g} = \\frac{0.2 \\times 2}{2 - 0.2} = \\frac{0.4}{1.8} \\approx 0.22 \\ \\Omega$.",
+        "step_by_step_solution": "$S = \\frac{R_g}{n - 1}$, where $n = \\frac{I}{I_g} = \\frac{2}{0.2} = 10$. So $S = \\frac{2}{10 - 1} = \\frac{2}{9} = 0.222 \\ \\Omega$.",
+        "shortcut_tip": "$S = \\frac{R_g}{n-1} = \\frac{2}{9} = 0.22 \\ \\Omega$."
+      }
+    },
+    {
+      "id": 77,
+      "subject": "Physics",
+      "subject_question_no": 17,
+      "question": "n- টাইপ অর্ধপরিবাহী তৈরির জন্য যে পরমানুর দ্বারা ডোপায়ন করা হয় তারা -",
+      "question_image": null,
+      "options": {
+        "A": "ত্রিযোজী",
+        "B": "দ্বিযোজী",
+        "C": "চতুযোজী",
+        "D": "পঞ্চযোজী"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Doping silicon/germanium with pentavalent impurities (P, As, Sb) creates n-type semiconductors.",
+        "step_by_step_solution": "Pentavalent atoms have 5 valence electrons. 4 form covalent bonds with silicon, leaving 1 free electron to conduct charge.",
+        "shortcut_tip": "n-type $\\rightarrow$ Pentavalent (পঞ্চযোজী); p-type $\\rightarrow$ Trivalent (ত্রিযোজী)."
+      }
+    },
+    {
+      "id": 78,
+      "subject": "Physics",
+      "subject_question_no": 18,
+      "question": "যদি কোনো আনবিক বোমার ফিশন প্রক্রিয়ায় 1kg ভর লোপ পায়, তাহলে নির্গত শক্তি হবে -",
+      "question_image": null,
+      "options": {
+        "A": "9 x 10^-10 J",
+        "B": "9 x 10^16 J",
+        "C": "4.5 x 10^16 J",
+        "D": "3 x 10^16 J"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$E = m c^2 = 1 \\times (3 \\times 10^8)^2 = 9 \\times 10^{16} \\text{ J}$.",
+        "step_by_step_solution": "Einstein's mass-energy equivalence formula $E = m c^2 = 1 \\text{ kg} \\times (3 \\times 10^8 \\text{ m/s})^2 = 9 \\times 10^{16} \\text{ J}$.",
+        "shortcut_tip": "$1 \\text{ kg} \\rightarrow 9 \\times 10^{16} \\text{ J}$."
+      }
+    },
+    {
+      "id": 79,
+      "subject": "Physics",
+      "subject_question_no": 19,
+      "question": "পানির পৃষ্ঠটান 72 x 10^-3 N/m। 0.2mm ব্যাসের নলে পানির আরোহন হবে?",
+      "question_image": null,
+      "options": {
+        "A": "14.694 m",
+        "B": "14.694 x 10^-2 m",
+        "C": "10.0 cm",
+        "D": "7.347 cm"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$h = \\frac{2T}{r \\rho g} = \\frac{2 \\times 72 \\times 10^{-3}}{10^{-4} \\times 1000 \\times 9.8} \\approx 0.1469 \\text{ m} = 14.694 \\times 10^{-2} \\text{ m}$.",
+        "step_by_step_solution": "$r = 0.1\\text{ mm} = 10^{-4}\\text{ m}$. $h = \\frac{2 \\times 72 \\times 10^{-3}}{10^{-4} \\times 1000 \\times 9.8} = \\frac{144 \\times 10^{-3}}{0.98} = 0.14694\\text{ m} = 14.694 \\times 10^{-2}\\text{ m}$.",
+        "shortcut_tip": "$h = \\frac{144 \\times 10^{-3}}{0.98} = 0.1469\\text{ m}$."
+      }
+    },
+    {
+      "id": 80,
+      "subject": "Physics",
+      "subject_question_no": 20,
+      "question": "একটি সমান্তরাল - প্লেট ক্যাপাসিটরের প্লেটের ক্ষেত্রফল 2m^2 । প্লেট দুইটির মধ্যে পরাবৈদ্যুতিক বস্তু প্রবেশ করানো হলো যার আপেক্ষিক পারমিটিভিটি 6। এখন ধারকত্ব পূর্বের তুলনায় কতগুন হবে ?",
+      "question_image": null,
+      "options": {
+        "A": "6",
+        "B": "1/6",
+        "C": "12",
+        "D": "3"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "$C' = k C = 6 C$, so capacitance increases by a factor of 6.",
+        "step_by_step_solution": "Capacitance with dielectric medium $C' = k \\frac{\\varepsilon_0 A}{d} = k C$. When relative permittivity $k=6$, new capacitance becomes 6 times original.",
+        "shortcut_tip": "Capacitance increases by factor $k = 6$."
+      }
+    },
+    {
+      "id": 81,
+      "subject": "Physics",
+      "subject_question_no": 21,
+      "question": "শব্দের তীব্রতা লেভেল বা স্তর মাপার একক কি ?",
+      "question_image": null,
+      "options": {
+        "A": "Hertz",
+        "B": "Wm^-2",
+        "C": "dB",
+        "D": "W/m"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Sound intensity level is measured in decibels (dB).",
+        "step_by_step_solution": "Sound intensity is measured in $W/m^2$, whereas Sound Intensity Level $\\beta = 10 \\log_{10}(I/I_0)$ is measured in decibels (dB).",
+        "shortcut_tip": "Intensity Level $\\rightarrow$ Decibel (dB); Intensity $\\rightarrow W/m^2$."
+      }
+    },
+    {
+      "id": 82,
+      "subject": "Physics",
+      "subject_question_no": 22,
+      "question": "কোনো মাধ্যমের ঘনত্ব বায়ুর 1000 গুন এবং স্থিতিস্থাপকতা 25,000 গুন। সেই মাধ্যমে শব্দের বেগ বায়ুতে বেগের কত গুণ ?",
+      "question_image": null,
+      "options": {
+        "A": "25",
+        "B": "5",
+        "C": "1/5",
+        "D": "1/25"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$v_m / v_a = \\sqrt{\\frac{E_m/E_a}{\\rho_m/\\rho_a}} = \\sqrt{\\frac{25000}{1000}} = \\sqrt{25} = 5$.",
+        "step_by_step_solution": "$v = \\sqrt{\\frac{E}{\\rho}} \\Rightarrow \\frac{v_m}{v_a} = \\sqrt{\\frac{E_m}{E_a} \\cdot \\frac{\\rho_a}{\\rho_m}} = \\sqrt{25000 \\cdot \\frac{1}{1000}} = \\sqrt{25} = 5$.",
+        "shortcut_tip": "$\\sqrt{25000 / 1000} = 5$."
+      }
+    },
+    {
+      "id": 83,
+      "subject": "Physics",
+      "subject_question_no": 23,
+      "question": "একটি আদর্শ ট্রান্সফরমার মুখ্য ও গৌণ কুন্ডলীর পাকের সংখ্যা যথাক্রমে 200 এবং 100। মুখ্য কুন্ডলীতে 50V (AC) প্রয়োগ করলে গৌণ কুন্ডলীতে কত বিভব পাওয়া যাবে ?",
+      "question_image": null,
+      "options": {
+        "A": "200 V",
+        "B": "50 V",
+        "C": "25 V",
+        "D": "100 V"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$V_s = V_p \\times \\frac{N_s}{N_p} = 50 \\times \\frac{100}{200} = 25 \\text{ V}$.",
+        "step_by_step_solution": "Transformer formula: $\\frac{V_s}{V_p} = \\frac{N_s}{N_p} \\Rightarrow V_s = 50 \\times \\frac{100}{200} = 25 \\text{ V}$.",
+        "shortcut_tip": "Half the turns $\\Rightarrow$ Half the voltage $= 25\\text{ V}$."
+      }
+    },
+    {
+      "id": 84,
+      "subject": "Physics",
+      "subject_question_no": 24,
+      "question": "পানি ও কাঁচের পরম প্রতিসরাঙ্ক যথাক্রমে 1.33 এবং 1.5 হলো, পানির সাপেক্ষে কাঁচের প্রতিসরাঙ্ক হবে ?",
+      "question_image": null,
+      "options": {
+        "A": "1.13",
+        "B": "1.5",
+        "C": "1.33",
+        "D": "1.693"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "$_w\\mu_g = \\frac{\\mu_g}{\\mu_w} = \\frac{1.5}{1.33} \\approx 1.1278 \\approx 1.13$.",
+        "step_by_step_solution": "Refractive index of glass with respect to water $= \\frac{\\mu_{\\text{glass}}}{\\mu_{\\text{water}}} = \\frac{1.5}{4/3} = \\frac{4.5}{4} = 1.125 \\approx 1.13$.",
+        "shortcut_tip": "$1.5 / 1.33 = 1.13$."
+      }
+    },
+    {
+      "id": 85,
+      "subject": "Physics",
+      "subject_question_no": 25,
+      "question": "ভূ-চুম্বক মেরুতে বিনতি কোণ কত?",
+      "question_image": null,
+      "options": {
+        "A": "0",
+        "B": "π/4",
+        "C": "π/2",
+        "D": "π"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Angle of dip at the magnetic poles is $90^\\circ = \\pi/2 \\text{ rad}$.",
+        "step_by_step_solution": "At the magnetic poles, magnetic field lines are completely vertical, so angle of dip $\\delta = 90^\\circ = \\pi/2$. At equator $\\delta = 0$.",
+        "shortcut_tip": "Pole $\\rightarrow 90^\\circ (\\pi/2)$; Equator $\\rightarrow 0^\\circ$."
+      }
+    },
+    {
+      "id": 86,
+      "subject": "Physics",
+      "subject_question_no": 26,
+      "question": "18 cm বক্রতার ব্যাসার্ধ বিশিষ্ট একটি অবতল দর্পন হতে 10 cm দূরে একটি বস্তু রাখা হলো । প্রতিবিম্বটির আকার বস্তুর কত গুন বড় হবে?",
+      "question_image": null,
+      "options": {
+        "A": "50",
+        "B": "9",
+        "C": "20",
+        "D": "15"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$m = \\frac{f}{u - f} = \\frac{-9}{-10 - (-9)} = 9$.",
+        "step_by_step_solution": "$f = R/2 = 18/2 = 9\\text{ cm}$. Concave mirror $f = -9\\text{ cm}, u = -10\\text{ cm}$. $\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = -\\frac{1}{9} + \\frac{1}{10} = -\\frac{1}{90} \\Rightarrow v = -90\\text{ cm}$. Magnification $m = |v/u| = 90/10 = 9$.",
+        "shortcut_tip": "$m = \\frac{f}{u-f} = \\frac{9}{10-9} = 9$."
+      }
+    },
+    {
+      "id": 87,
+      "subject": "Physics",
+      "subject_question_no": 27,
+      "question": "16 বিবর্ধন বিশিষ্ট নভো-দূরবীক্ষন যন্তের লেন্সে দুটির মধ্যে দূরত্ব 85 cm, লেন্স দুইটির ফোকাস দূরত্ব কত?",
+      "question_image": null,
+      "options": {
+        "A": "100 cm, 10 cm",
+        "B": "80 cm, 5 cm",
+        "C": "200 cm, 2 cm",
+        "D": "500 cm, 20 cm"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$f_o + f_e = 85$ and $f_o / f_e = 16 \\Rightarrow 16 f_e + f_e = 85 \\Rightarrow f_e = 5 \\text{ cm}, f_o = 80 \\text{ cm}$.",
+        "step_by_step_solution": "Length $L = f_o + f_e = 85 \\text{ cm}$. Magnification $m = f_o / f_e = 16 \\Rightarrow f_o = 16 f_e$. $17 f_e = 85 \\Rightarrow f_e = 5 \\text{ cm}, f_o = 80 \\text{ cm}$.",
+        "shortcut_tip": "$f_e = 85/17 = 5\\text{ cm}, f_o = 80\\text{ cm}$."
+      }
+    },
+    {
+      "id": 88,
+      "subject": "Physics",
+      "subject_question_no": 28,
+      "question": "নিম্নের নিউক্লিয়ার বিক্রিয়ায় X কে কি বলা হয় ?^226_88Ra → ^222_86Rn + X",
+      "question_image": null,
+      "options": {
+        "A": "ɑ কণা",
+        "B": "β রশ্মি",
+        "C": "ɤ রশ্মি",
+        "D": "নিউট্রন"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "$X = \\text{Mass difference } 4, \\text{ Charge difference } 2 = \\alpha \\text{ particle } (^4_2He)$.",
+        "step_by_step_solution": "Atomic number decreases by 2 ($88 \\rightarrow 86$) and mass number decreases by 4 ($226 \\rightarrow 222$), corresponding to emission of an $\\alpha$-particle ($^4_2He$).",
+        "shortcut_tip": "$-4$ mass, $-2$ atomic number $\\Rightarrow \\alpha$-particle."
+      }
+    },
+    {
+      "id": 89,
+      "subject": "Physics",
+      "subject_question_no": 29,
+      "question": "একটি গাড়ি স্থিতাবস্থা হতে সমত্বরণে চলা শুরু করে 5.0 সেকেন্ডে 75 m/s গতিবেগ প্রাপ্ত হল। গাড়িটির ত্বরণ-",
+      "question_image": null,
+      "options": {
+        "A": "15 ms^-2",
+        "B": "12 ms^-2",
+        "C": "18 ms^-2",
+        "D": "7 ms^-2"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "$a = \\frac{v - u}{t} = \\frac{75 - 0}{5.0} = 15 \\text{ m/s}^2$.",
+        "step_by_step_solution": "Using $v = u + a t \\Rightarrow 75 = 0 + a(5) \\Rightarrow a = 15 \\text{ m/s}^2$.",
+        "shortcut_tip": "$a = 75 / 5 = 15 \\text{ m/s}^2$."
+      }
+    },
+    {
+      "id": 90,
+      "subject": "Physics",
+      "subject_question_no": 30,
+      "question": "দ্বিমিক সংখ্যা 101111 কে দশমিক পদ্ধতিতে প্রকাশ করলে হয়-",
+      "question_image": null,
+      "options": {
+        "A": "61",
+        "B": "47",
+        "C": "45",
+        "D": "49"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$101111_2 = 32 + 0 + 8 + 4 + 2 + 1 = 47_{10}$.",
+        "step_by_step_solution": "$1 \\times 2^5 + 0 \\times 2^4 + 1 \\times 2^3 + 1 \\times 2^2 + 1 \\times 2^1 + 1 \\times 2^0 = 32 + 0 + 8 + 4 + 2 + 1 = 47$.",
+        "shortcut_tip": "$32 + 8 + 4 + 2 + 1 = 47$."
+      }
+    },
+    {
+      "id": 91,
+      "subject": "Bangla",
+      "subject_question_no": 1,
+      "question": "ভুল বানান -",
+      "question_image": null,
+      "options": {
+        "A": "প্রজ্বলন",
+        "B": "পল্বল",
+        "C": "নৈঋত",
+        "D": "মোহ্যমান"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "The correct spelling is 'নৈঋত' -> 'নৈঋত' (incorrectly spelled as 'নৈঋত' in options; correct standard is 'নৈঋত'/ 'নৈঋত' vs 'মুহ্যমান').",
+        "step_by_step_solution": "'নৈঋত' সঠিক বানান হলো 'নৈঋত' বা 'নৈঋত', তবে 'মুহ্যমান' (ম-এ হ্রস্ব উ-কার) সঠিক, 'মোহ্যমান' ভুল। প্রদত্ত অপশনের মধ্যে 'নৈঋত' বানানে সমস্যা চিহ্নিত করা হয়েছে।",
+        "shortcut_tip": "মুহ্যমান (হ্রস্ব উ-কার সঠিক), প্রজ্বলন (এক 'জ' ও 'ব'-ফলা)।"
+      }
+    },
+    {
+      "id": 92,
+      "subject": "Bangla",
+      "subject_question_no": 2,
+      "question": "Hydrologist' এর পরিভাষা কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "জীববিজ্ঞানী",
+        "B": "পানিবিজ্ঞানী",
+        "C": "মৃত্তিকা বিজ্ঞানী",
+        "D": "মহাকাশ বিজ্ঞানী"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Hydrologist means water scientist (পানিবিজ্ঞানী).",
+        "step_by_step_solution": "Hydro means water, so Hydrologist translates to a scientist specializing in water resources (পানিবিজ্ঞানী).",
+        "shortcut_tip": "Hydro = পানি $\\rightarrow$ Hydrologist = পানিবিজ্ঞানী।"
+      }
+    },
+    {
+      "id": 93,
+      "subject": "Bangla",
+      "subject_question_no": 3,
+      "question": "ভবিষ্যৎ'-এর বিপরীত শব্দ কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "পরার্থ",
+        "B": "অতিকায়",
+        "C": "ভূত",
+        "D": "ঐক্য"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "The antonym of 'ভবিষ্যৎ' (future) is 'ভূত' (past).",
+        "step_by_step_solution": "'ভূত' শব্দের একটি অর্থ হলো অতীতকাল। তাই 'ভবিষ্যৎ' এর বিপরীত শব্দ হলো 'ভূত'।",
+        "shortcut_tip": "অতীত = ভূত $\\Rightarrow$ ভবিষ্যৎ $\\leftrightarrow$ ভূত।"
+      }
+    },
+    {
+      "id": 94,
+      "subject": "Bangla",
+      "subject_question_no": 4,
+      "question": "কোনটি অপপ্রয়োগ?",
+      "question_image": null,
+      "options": {
+        "A": "একক",
+        "B": "একত্র",
+        "C": "একত্রিত",
+        "D": "একতা"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "'একত্রিত' is a redundant and incorrect application (অপপ্রয়োগ); correct form is 'একত্র'.",
+        "step_by_step_solution": "'একত্র' নিজেই একটি পূর্ণাঙ্গ শব্দ। এর সাথে 'িত' প্রত্যয় যুক্ত করে 'একত্রিত' লেখা অপপ্রয়োগ।",
+        "shortcut_tip": "একত্র (সঠিক), একত্রিত (অপপ্রয়োগ)।"
+      }
+    },
+    {
+      "id": 95,
+      "subject": "Bangla",
+      "subject_question_no": 5,
+      "question": "'ধুচুনি' হলো—",
+      "question_image": null,
+      "options": {
+        "A": "মাটির পাতিল",
+        "B": "বাঁশের ঝুড়ি",
+        "C": "পিঠা",
+        "D": "চুলা"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "'ধুচুনি' means a small bamboo basket used for washing rice.",
+        "step_by_step_solution": "গ্রামবাংলায় চাল ধোয়ার কাজে ব্যবহৃত বাঁশ দিয়ে তৈরি ঝুড়িকে 'ধুচুনি' বলা হয়।",
+        "shortcut_tip": "ধুচুনি = বাঁশের ঝুড়ি।"
+      }
+    },
+    {
+      "id": 96,
+      "subject": "Bangla",
+      "subject_question_no": 6,
+      "question": "'নীবার' এর শব্দার্থ—",
+      "question_image": null,
+      "options": {
+        "A": "ইক্ষু",
+        "B": "গ্রহণ",
+        "C": "নিবারণ",
+        "D": "তৃণধান্য"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "'নীবার' means wild rice/grain grass (তৃণধান্য).",
+        "step_by_step_solution": "'নীবার' শব্দের আভিধানিক অর্থ হলো উড়ি ধান বা বিনা চাষে উৎপন্ন তৃণধান্য।",
+        "shortcut_tip": "নীবার = উড়ি ধান / তৃণধান্য।"
+      }
+    },
+    {
+      "id": 97,
+      "subject": "Bangla",
+      "subject_question_no": 7,
+      "question": "ক্ষ্ম এর বিশিষ্ট রূপনা-",
+      "question_image": null,
+      "options": {
+        "A": "খ + ষ + ণ",
+        "B": "ক + ষ + ম",
+        "C": "ক্ষ + ম",
+        "D": "ক + ষ + ণ"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "ক্ষ্ম consists of (ক + ষ + ম).",
+        "step_by_step_solution": "যুক্তবর্ণ 'ক্ষ্ম' গঠিত হয়েছে ক্ষ (ক + ষ) এবং ম-ফলা দিয়ে $\\rightarrow$ ক + ষ + ম।",
+        "shortcut_tip": "ক্ষ্ম = ক + ষ + ম (যেমন: সূক্ষ্ম)।"
+      }
+    },
+    {
+      "id": 98,
+      "subject": "Bangla",
+      "subject_question_no": 8,
+      "question": "'ভ্রাতুষ্পুত্র' সন্ধিবিচ্ছেদ করলে পাওয়া যায় -",
+      "question_image": null,
+      "options": {
+        "A": "ভ্রাত + পুত্র",
+        "B": "ভ্রাতঃ + পুত্র",
+        "C": "ভ্রাতুঃ + পুত্র",
+        "D": "ভ্রাতু + পুত্র"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "ভ্রাতুষ্পুত্র = ভ্রাতুঃ + পুত্র।",
+        "step_by_step_solution": "বিসর্গ সন্ধির নিয়ম অনুযায়ী: বিসর্গের (ঃ) পর প্ থাকলে বিসর্গ স্থানে ষ হয়। ভ্রাতুঃ + পুত্র = ভ্রাতুষ্পুত্র।",
+        "shortcut_tip": "ভ্রাতুঃ + পুত্র = ভ্রাতুষ্পুত্র।"
+      }
+    },
+    {
+      "id": 99,
+      "subject": "Bangla",
+      "subject_question_no": 9,
+      "question": "'যে ভবিষ্যত না ভেবেই কাজ করে' এক কথাই হবে -",
+      "question_image": null,
+      "options": {
+        "A": "অবিমৃষ্যকারী",
+        "B": "অবিচারী",
+        "C": "অনাচারী",
+        "D": "অবিবেচক"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "One who acts without considering future consequences is 'অবিমৃষ্যকারী'.",
+        "step_by_step_solution": "বাক্যসংকোচন: যে ভবিষ্যৎ না ভেবে কাজ করে = অবিমৃষ্যকারী। আর যে ভেবেচিন্তে কাজ করে = বিমৃষ্যকারী।",
+        "shortcut_tip": "না ভেবে কাজ করা = অবিমৃষ্যকারী।"
+      }
+    },
+    {
+      "id": 100,
+      "subject": "Bangla",
+      "subject_question_no": 10,
+      "question": "'চিনে জোঁক' বিশিষ্টার্থে বোঝায়—",
+      "question_image": null,
+      "options": {
+        "A": "লোভী",
+        "B": "নিষ্ঠুর",
+        "C": "স্বার্থপর",
+        "D": "নাছোড়বান্দা"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "The idiom 'চিনে জোঁক' means persistent/persistent person (নাছোড়বান্দা).",
+        "step_by_step_solution": "বাগধারা: 'চিনে জোঁক' বলতে বোঝায় অত্যন্ত নাছোড়বান্দা লোক।",
+        "shortcut_tip": "চিনে জোঁক = নাছোড়বান্দা।"
+      }
+    },
+    {
+      "id": 101,
+      "subject": "Bangla",
+      "subject_question_no": 11,
+      "question": "জটিল বাক্যের উদাহরণ -",
+      "question_image": null,
+      "options": {
+        "A": "মা মামার বাড়ি যাবেন এবং সঙ্গে আমাকে নেবেন",
+        "B": "সকাল থেকে সে কাজ করছে",
+        "C": "তার এত বড় আবিষ্কারের কথা কেউ জানল না",
+        "D": "মনে হয়, আজ গাড়ি আসবে না"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "'মনে হয়, আজ গাড়ি আসবে না' contains a principal and dependent clause forming a complex sentence.",
+        "step_by_step_solution": "জটিল বাক্যে একটি প্রধান খণ্ডবাক্য এবং এক বা একাধিক আশ্রিত খণ্ডবাক্য থাকে। অপশন D তে পরোক্ষ সাপেক্ষ সম্পর্ক রয়েছে।",
+        "shortcut_tip": "সাপেক্ষ নির্ভরতা $\\rightarrow$ জটিল বাক্য।"
+      }
+    },
+    {
+      "id": 102,
+      "subject": "Bangla",
+      "subject_question_no": 12,
+      "question": "'Mass education is the crying need of Bangladesh.'বাক্যটির বাংলা তরজমা -",
+      "question_image": null,
+      "options": {
+        "A": "গণশিক্ষার জন্য বাংলাদেশে কান্নায় রোল পড়েছে",
+        "B": "বাংলাদেশের জন্য গণশিক্ষার জরুরি প্রয়োজন",
+        "C": "ব্যাপক শিক্ষার জন্য বাংলাদেশ ক্রন্দন করছে",
+        "D": "বাংলাদেশে গণশিক্ষার জন্য ক্রন্দনই সময়ের দাবি"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "'crying need' means urgent need (জরুরি প্রয়োজন).",
+        "step_by_step_solution": "Idiom 'crying need' translates to 'জরুরি বা একান্ত প্রয়োজন'। Mass education = গণশিক্ষা। সঠিক অনুবাদ: 'বাংলাদেশের জন্য গণশিক্ষার জরুরি প্রয়োজন'।",
+        "shortcut_tip": "crying need = জরুরি প্রয়োজন।"
+      }
+    },
+    {
+      "id": 103,
+      "subject": "Bangla",
+      "subject_question_no": 13,
+      "question": "নিচের কোনটি অশুদ্ধ কিন্তু প্রচলিত?",
+      "question_image": null,
+      "options": {
+        "A": "উপরুদ্ধ",
+        "B": "উপরোক্ত",
+        "C": "উপলক্ষ",
+        "D": "উপদ্রব"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "'উপরোক্ত' is grammatically incorrect (correct: উপর্যুক্ত/উপরিউক্ত) but widely used.",
+        "step_by_step_solution": "উপরি + উক্ত = উপরিউক্ত বা উপর্যুক্ত। 'উপরোক্ত' সন্ধির নিয়মসিদ্ধ নয়, তাই অশুদ্ধ হলেও সমাজে প্রচলিত।",
+        "shortcut_tip": "উপরোক্ত (অশুদ্ধ কিন্তু প্রচলিত); উপর্যুক্ত (সঠিক)।"
+      }
+    },
+    {
+      "id": 104,
+      "subject": "Bangla",
+      "subject_question_no": 14,
+      "question": "‘আনকোরা’ শব্দে কোন উপসর্গ যুক্ত হয়েছে?",
+      "question_image": null,
+      "options": {
+        "A": "বাংলা",
+        "B": "ফারসি",
+        "C": "ইংরেজি",
+        "D": "আরবি"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "'আন' is a native Bengali prefix (বাংলা উপসর্গ).",
+        "step_by_step_solution": "বাংলা ২১টি উপসর্গের মধ্যে 'আন' একটি (অ, অঘা, অজ, অনা, আ, আন, আব, আন)। তাই 'আনকোরা' খাঁটি বাংলা উপসর্গযুক্ত শব্দ।",
+        "shortcut_tip": "আন-কোরা $\\rightarrow$ 'আন' খাঁটি বাংলা উপসর্গ।"
+      }
+    },
+    {
+      "id": 105,
+      "subject": "Bangla",
+      "subject_question_no": 15,
+      "question": "'বিশ্রী' শব্দটি গঠিত হয়েছে -",
+      "question_image": null,
+      "options": {
+        "A": "প্রত্যয়যোগে",
+        "B": "সন্ধিযোগে",
+        "C": "সমাসযোগে",
+        "D": "উপসর্গযোগে"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "'বিশ্রী' = বিগত হয়েছে শ্রী যার (বহুব্রীহি সমাস).",
+        "step_by_step_solution": "ব্যাসবাক্য: বিগত হয়েছে শ্রী যার = বিশ্রী। এটি একটি বহুব্রীহি সমাস দ্বারা গঠিত শব্দ। (ক্ষেত্রবিশেষে 'বি' উপসর্গ ধরা হলেও ব্যাকরণে সমাস নিষ্পন্ন রূপ হিসেবে বিবেচিত)।",
+        "shortcut_tip": "বিগত হয়েছে শ্রী যার = বিশ্রী (সমাসনিষ্পন্ন)।"
+      }
+    },
+    {
+      "id": 106,
+      "subject": "Bangla",
+      "subject_question_no": 16,
+      "question": "'ভারার্পণ' শব্দটির ব্যাসবাক্য -",
+      "question_image": null,
+      "options": {
+        "A": "ভার দ্বারা অর্পণ",
+        "B": "ভার ও অর্পণ",
+        "C": "ভার থেকে অর্পণ",
+        "D": "ভারের অর্পণ"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "ভারার্পণ = ভারের অর্পণ (ষষ্ঠী তৎপুরুষ সমাস).",
+        "step_by_step_solution": "ব্যাসবাক্য: ভারের অর্পণ = ভারার্পণ। ষষ্ঠী বিভক্তি (এর) লোপ পাওয়ায় এটি ষষ্ঠী তৎপুরুষ সমাস।",
+        "shortcut_tip": "ভারের অর্পণ = ভারার্পণ।"
+      }
+    },
+    {
+      "id": 107,
+      "subject": "Bangla",
+      "subject_question_no": 17,
+      "question": "বন্ধনী চিহ্ন ব্যবহৃত হয়?",
+      "question_image": null,
+      "options": {
+        "A": "প্রশ্নে",
+        "B": "ব্যাখ্যায়",
+        "C": "নির্দেশনায়",
+        "D": "বিস্ময়ে"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Brackets () are used to offer extra clarification or explanation (ব্যাখ্যায়).",
+        "step_by_step_solution": "বাক্যে কোনো পদের অতিরিক্ত অর্থ স্পষ্ট করা বা বিশেষ ব্যাখ্যার জন্য বন্ধনী চিহ্ন ( ) ব্যবহৃত হয়।",
+        "shortcut_tip": "বন্ধনী চিহ্ন = অতিরিক্ত ব্যাখ্যা বা স্পষ্টীকরণ।"
+      }
+    },
+    {
+      "id": 108,
+      "subject": "Bangla",
+      "subject_question_no": 18,
+      "question": "'ব্যাঙ্গমা'র প্রতিশব্দ -",
+      "question_image": null,
+      "options": {
+        "A": "বেঙাচি",
+        "B": "পাখি",
+        "C": "বেঙের মা",
+        "D": "ধাই মা"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "'ব্যাঙ্গমা' refers to a mythical bird (পাখি).",
+        "step_by_step_solution": "রূপকথার কল্পিত বিবরণী পাখি বিশেষকে 'ব্যাঙ্গমা' ও 'ব্যাঙ্গমী' বলা হয়।",
+        "shortcut_tip": "ব্যাঙ্গমা-ব্যাঙ্গমী = রূপকথার পাখি।"
+      }
+    },
+    {
+      "id": 109,
+      "subject": "Bangla",
+      "subject_question_no": 19,
+      "question": "“পলিটিকস ও চক্রান্ত যে সমার্থক নয়, এ নূন্যতম বোধবুদ্ধিহীন ব্যক্তিগণের হাতে যখন রাজনৈতিক কর্তৃত্বের দায়িত্ব আসিয়া পড়ে তখনই জাতি চরম দূর্দশায় নিপতিত হয়।” চলিত ভাষার বাক্যটিতে ভুলের সংখ্যা -",
+      "question_image": null,
+      "options": {
+        "A": "পাঁচ",
+        "B": "ছয়",
+        "C": "সাত",
+        "D": "আট"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Errors: নূন্যতম $\\rightarrow$ ন্যূনতম, ব্যক্তিগণের $\\rightarrow$ ব্যক্তির, আসিয়া $\\rightarrow$ এসে, দূর্দশায় $\\rightarrow$ দুর্দশায়, etc.",
+        "step_by_step_solution": "ভুলের তালিকা: ১. নূন্যতম (নূন্যতম $\\rightarrow$ ন্যূনতম), ২. ব্যক্তিগণের (বাহুল্য দোষ), ৩. আসিয়া (সাধু রূপ 'এসে' হবে), ৪. দূর্দশায় (দূর্দশায় $\\rightarrow$ দুর্দশায়)। সাধু-চলিত মিশ্রণ এবং বানান মিলিয়ে মোট ৬টি ভুল বিদ্যমান।",
+        "shortcut_tip": "গণনার ভুল: বানানগত ভুল + গুরুচণ্ডালী দোষ।"
+      }
+    },
+    {
+      "id": 110,
+      "subject": "Bangla",
+      "subject_question_no": 20,
+      "question": "প্রমথ চৌধুরীর মতে সাহিত্যের উদ্দেশ্য কী?",
+      "question_image": null,
+      "options": {
+        "A": "মানুষকে দুঃখ ভোগের শক্তি দেওয়া",
+        "B": "মানুষের মনোরঞ্জন করা",
+        "C": "মানুষের মনের দরজা খুলে দেওয়া",
+        "D": "মানুষকে আনন্দ দান করা"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "According to Pramatha Chaudhuri, the primary purpose of literature is to provide joy (আনন্দ দান করা).",
+        "step_by_step_solution": "প্রমথ চৌধুরী তাঁর 'বই পড়া' প্রবন্ধে উল্লেখ করেছেন, সাহিত্যের উদ্দেশ্য মানুষকে আনন্দ দান করা, নীতি শিক্ষা দেওয়া নয়।",
+        "shortcut_tip": "প্রমথ চৌধুরী $\\rightarrow$ সাহিত্যের উদ্দেশ্য = আনন্দদান।"
+      }
+    },
+    {
+      "id": 111,
+      "subject": "Bangla",
+      "subject_question_no": 21,
+      "question": "'শ্ৰম-কিণাঙ্ক-কঠিন যাদের নির্দয় মুঠি-তলে' চরণটির ‘কিণাঙ্ক' হলো -",
+      "question_image": null,
+      "options": {
+        "A": "শক্ত হওয়া চামড়া",
+        "B": "শ্রমশক্তি",
+        "C": "স্বেদবিন্দু",
+        "D": "শ্রমের মূল্য"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "'কিণাঙ্ক' means hardened calloused skin from hard labor.",
+        "step_by_step_solution": "কঠোর পরিশ্রমের ফলে হাতের তালুতে যে কড়া পড়ে বা চামড়া শক্ত হয়, তাকে 'কিণাঙ্ক' বলা হয়।",
+        "shortcut_tip": "কিণাঙ্ক = কড়া পড়া / শক্ত হওয়া চামড়া।"
+      }
+    },
+    {
+      "id": 112,
+      "subject": "Bangla",
+      "subject_question_no": 22,
+      "question": "'ধন্যবাদ' কবিতায় ডলির জন্মদিনে কত হাজার টাকা খরচ হয়েছিল?",
+      "question_image": null,
+      "options": {
+        "A": "এক হাজার",
+        "B": "দুই হাজার",
+        "C": "তিন হাজার",
+        "D": "চার হাজার"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "In the poem 'ধন্যবাদ', two thousand rupees were spent on Doly's birthday.",
+        "step_by_step_solution": "বিষ্ণু দে-র 'ধন্যবাদ' কবিতায় উল্লিখিত ডলির জন্মদিনের উৎসবে দুই হাজার টাকা খরচ হয়েছিল।",
+        "shortcut_tip": "ডলির জন্মদিন = দুই হাজার টাকা।"
+      }
+    },
+    {
+      "id": 113,
+      "subject": "Bangla",
+      "subject_question_no": 23,
+      "question": "‘তপোবনে প্রবেশ করিবামাত্র, তদীয় দক্ষিণ বাহু স্পন্দিত হইতে লাগিল।' দক্ষিণ বাহুর স্পন্দন কিসের লক্ষণ?",
+      "question_image": null,
+      "options": {
+        "A": "অর্থ লাভের",
+        "B": "বিপদে পড়ার",
+        "C": "পরিণয়সূচক",
+        "D": "জয়লাভের"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Throttling of the right arm in males was traditionally considered a sign of marriage/union (পরিণয়সূচক).",
+        "step_by_step_solution": "ঈশ্বরচন্দ্র বিদ্যাসাগরের 'শকুন্তলা' গদ্যে রাজা দুষ্মন্তের ডান বাহু স্পন্দিত হওয়ার মাধ্যমে সুন্দরী নারী বা স্ত্রী লাভের (পরিণয়সূচক) শুভ লক্ষণ নির্দেশ করা হয়েছে।",
+        "shortcut_tip": "দক্ষিণ বাহু স্পন্দন = মনোরমা নারী লাভ / পরিণয়সূচক।"
+      }
+    },
+    {
+      "id": 114,
+      "subject": "Bangla",
+      "subject_question_no": 24,
+      "question": "'বারেক ভিড়াও তরী কূলেতে এসে'। কাকে আহ্বান করা হয়েছে?",
+      "question_image": null,
+      "options": {
+        "A": "নৌকার মাঝিকে",
+        "B": "অচেনা লোকটিকে",
+        "C": "কৃষককে",
+        "D": "বারেক নামের বালকটিকে"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "The boatman (নৌকার মাঝি) is called upon in Tagore's poem 'সোনার তরী'.",
+        "step_by_step_solution": "রবীন্দ্রনাথ ঠাকুরের 'সোনার তরী' কবিতায় অচেনা নেয়ে বা নৌকার মাঝিকে ঘাটে তরী ভিড়ানোর অনুরোধ জানানো হয়েছে।",
+        "shortcut_tip": "সোনার তরী $\\rightarrow$ আহ্বান $\\rightarrow$ নৌকার মাঝি।"
+      }
+    },
+    {
+      "id": 115,
+      "subject": "Bangla",
+      "subject_question_no": 25,
+      "question": "'অনেক কহিয়া সেবার তাহারে আনিলাম এক শীতে।' 'কবর' কবিতার বৃদ্ধ দাদু কাকে এনেছিলেন?",
+      "question_image": null,
+      "options": {
+        "A": "তার স্ত্রীকে",
+        "B": "তার ছোট মেয়েকে",
+        "C": "তার ছেলের বৌকে",
+        "D": "তার নাতনিকে"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "The grandfather brought his granddaughter's mother/wife in context, but specifically refers to his wife/daughter-in-law.",
+        "step_by_step_solution": "জসিমউদ্দীনের 'কবর' কবিতায় বৃদ্ধ দাদু কষ্ট করে তাঁর ছোট নাতনির জন্য বুড়িকে/নাতনিকে নিয়ে আসার স্মৃতি চারণ করেছেন।",
+        "shortcut_tip": "কবর কবিতা $\\rightarrow$ নাতনি।"
+      }
+    },
+    {
+      "id": 116,
+      "subject": "Bangla",
+      "subject_question_no": 26,
+      "question": "লেনিন আছেন যে রচনায় -",
+      "question_image": null,
+      "options": {
+        "A": "হৈমন্তী",
+        "B": "বিলাসী",
+        "C": "ভাষার কথা",
+        "D": "যৌবনের গান"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Lenin is mentioned in Kazi Nazrul Islam's essay 'যৌবনের গান'.",
+        "step_by_step_solution": "কাজী নজরুলের 'যৌবনের গান' অভিভাষণে বিশ্ববিপ্লবী ব্যক্তিত্ব লেনিনের কথা উল্লেখ রয়েছে।",
+        "shortcut_tip": "যৌবনের গান $\\rightarrow$ লেনিন।"
+      }
+    },
+    {
+      "id": 117,
+      "subject": "Bangla",
+      "subject_question_no": 27,
+      "question": "ভূদেব বাবুর পারিবারিক প্রবন্ধের উল্লেখ রয়েছে কোন রচনায়?",
+      "question_image": null,
+      "options": {
+        "A": "হৈমন্তী",
+        "B": "বিলাসী",
+        "C": "সৌদামিনী মালো",
+        "D": "সহিত্যে খেলা"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Bhudeb Mukhopadhyay's 'পারিবারিক প্রবন্ধ' is mentioned in Sarat Chandra's story 'বিলাসী'.",
+        "step_by_step_solution": "শরৎচন্দ্র চট্টোপাধ্যায়ের 'বিলাসী' গল্পে ন্যাড়ার পড়ালেখার প্রসঙ্গে 'ভূদেব বাবুর পারিবারিক প্রবন্ধ' বইটির কথা উল্লেখ আছে।",
+        "shortcut_tip": "বিলাসী গল্প $\\rightarrow$ ভূদেব বাবুর পারিবারিক প্রবন্ধ।"
+      }
+    },
+    {
+      "id": 118,
+      "subject": "Bangla",
+      "subject_question_no": 28,
+      "question": "'অর্ধাঙ্গী'তে বেগম রোকেয়া কাদের পর্দামোচন হয়েছে বলে জানিয়েছেন?",
+      "question_image": null,
+      "options": {
+        "A": "আরবীয়দের",
+        "B": "পার্সিদের",
+        "C": "হিন্দুদের",
+        "D": "মিশরীয়দের"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "In 'অর্ধাঙ্গী', Begum Rokeya mentions the Parsis (পার্সি) uplifting purdah restrictions.",
+        "step_by_step_solution": "বেগম রোকেয়া তাঁর 'অর্ধাঙ্গী' প্রবন্ধে পার্সি সমাজ থেকে পর্দাপ্রথা দূর হওয়ার কথা উল্লেখ করেছেন।",
+        "shortcut_tip": "অর্ধাঙ্গী $\\rightarrow$ পার্সিদের পর্দামোচন।"
+      }
+    },
+    {
+      "id": 119,
+      "subject": "Bangla",
+      "subject_question_no": 29,
+      "question": "‘একুশের গল্প' এর রেণু মাঝে মাঝে কী ভেজে আনতো?",
+      "question_image": null,
+      "options": {
+        "A": "চিড়া",
+        "B": "মুড়ি",
+        "C": "চানাচুর",
+        "D": "ডালমুট"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "In 'একুশের গল্প', Renu used to fry Dalmut (ডালমুট).",
+        "step_by_step_solution": "জহির রায়হানের 'একুশের গল্প' রচনায় তপুর বোন রেণু মাঝে মাঝে সুস্বাদু 'ডালমুট' ভেজে আনতো।",
+        "shortcut_tip": "একুশের গল্প $\\rightarrow$ রেণু $\\rightarrow$ ডালমুট।"
+      }
+    },
+    {
+      "id": 120,
+      "subject": "Higher Math",
+      "subject_question_no": 1,
+      "question": "নিম্নের চিত্রে $\\vec{p}, \\vec{q}$ ও $\\vec{r}$ এই তিনটি ভেক্টর রাশিকে দেখানো হলো। চিত্র থেকে নির্ণয় করা যায় যে-",
+      "question_image": "Q120_QUESTION_1.jpg",
+      "options": {
+        "A": "$\\vec{p}-\\vec{q}-\\vec{r}=0$",
+        "B": "$\\vec{p}+\\vec{q}-\\vec{r}=0$",
+        "C": "$\\vec{p}+\\vec{q}+\\vec{r}=0$",
+        "D": "$\\vec{p}-\\vec{q}+\\vec{r}=0$"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Vector head-to-tail law gives $\\vec{p} = \\vec{q} + \\vec{r} \\Rightarrow \\vec{p} - \\vec{q} - \\vec{r} = 0$.",
+        "step_by_step_solution": "By triangle law of vector addition, vector $\\vec{p}$ is the resultant of vectors $\\vec{q}$ and $\\vec{r}$. Therefore, $\\vec{p} = \\vec{q} + \\vec{r} \\Rightarrow \\vec{p} - \\vec{q} - \\vec{r} = 0$.",
+        "shortcut_tip": "Resultant vector $=$ sum of component vectors $\\Rightarrow \\vec{p} - \\vec{q} - \\vec{r} = 0$."
+      }
+    },
+    {
+      "id": 121,
+      "subject": "Higher Math",
+      "subject_question_no": 2,
+      "question": "একটি বস্তুকে 196 m/s বেগে খাড়া উপরের দিকে নিক্ষেপ করা হলাে। 20 sec পরে বস্তুটির বেগ হবে- $\\left[g = 9 . 8 m / s^{2}\\right]$",
+      "question_image": null,
+      "options": {
+        "A": "50 m/s",
+        "B": "60 m/s",
+        "C": "0 m/s",
+        "D": "10 m/s"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$v = u - gt = 196 - 9.8 \\times 20 = 196 - 196 = 0 \\text{ m/s}$.",
+        "step_by_step_solution": "Using $v = u - gt$: $v = 196 - (9.8 \\times 20) = 196 - 196 = 0 \\text{ m/s}$. The particle reaches peak height at $t = 20 \\text{ s}$.",
+        "shortcut_tip": "Time to max height $= 196 / 9.8 = 20\\text{ s} \\Rightarrow v = 0$."
+      }
+    },
+    {
+      "id": 122,
+      "subject": "Higher Math",
+      "subject_question_no": 3,
+      "question": "\\lim_{x \\to 0} \\frac{1 - \\cos x}{\\sin^2 2x} - এর মান কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "\\frac{2}{25}",
+        "B": "\\frac{49}{6}",
+        "C": "\\frac{1}{8}",
+        "D": "tan x"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$\\lim_{x \\to 0} \\frac{2 \\sin^2(x/2)}{\\sin^2 2x} = 2 \\times \\frac{(1/4) x^2}{4 x^2} = \\frac{2 \\times 1/4}{4} = \\frac{1}{8}$.",
+        "step_by_step_solution": "Using L'Hôpital or trigonometric limits: $1 - \\cos x = 2 \\sin^2(x/2)$. $\\lim_{x \\to 0} \\frac{2 \\cdot (x^2/4)}{(2x)^2} = \\frac{2/4}{4} = \\frac{1}{8}$.",
+        "shortcut_tip": "Limit formula: $\\frac{1/2}{2^2} = \\frac{1}{8}$."
+      }
+    },
+    {
+      "id": 123,
+      "subject": "Higher Math",
+      "subject_question_no": 4,
+      "question": "3 x^{2}+4 y^{2}=12 উপবৃত্তের উপকেন্দ্রদ্বয়ের দূরত্ব কত?",
+      "question_image": null,
+      "options": {
+        "A": "2",
+        "B": "\\sqrt{3}",
+        "C": "1",
+        "D": "\\frac{2}{\\sqrt{3}}"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Distance between foci $= 2ae = 2 \\sqrt{a^2 - b^2} = 2 \\sqrt{4 - 3} = 2$.",
+        "step_by_step_solution": "Ellipse equation: $\\frac{x^2}{4} + \\frac{y^2}{3} = 1 \\Rightarrow a^2 = 4, b^2 = 3$. Distance between foci $= 2ae = 2 \\sqrt{a^2 - b^2} = 2 \\sqrt{4 - 3} = 2(1) = 2$.",
+        "shortcut_tip": "Focus distance $= 2 \\sqrt{a^2 - b^2} = 2 \\sqrt{4-3} = 2$."
+      }
+    },
+    {
+      "id": 124,
+      "subject": "Higher Math",
+      "subject_question_no": 5,
+      "question": "y=x^{\\frac{1}{3}}+x^{-\\frac{1}{3}} হলে, 3\\left(y^{2}-1\\right) \\frac{d y}{d x} সমান-",
+      "question_image": null,
+      "options": {
+        "A": "1+\\frac{1}{x^{2}}",
+        "B": "\\frac{1}{x^{2}}",
+        "C": "1-\\frac{1}{x^{2}}",
+        "D": "-\\frac{1}{x^{2}}"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Differentiating and simplifying yields $1 - \\frac{1}{x^2}$.",
+        "step_by_step_solution": "Let $u = x^{1/3}$. $y = u + u^{-1} \\Rightarrow y^2 - 1 = u^2 + 1 + u^{-2}$. Differentiating gives $\\frac{dy}{dx} = \\frac{1}{3} x^{-2/3} - \\frac{1}{3} x^{-4/3}$. Multiplying leads to $1 - \\frac{1}{x^2}$.",
+        "shortcut_tip": "$3(y^2-1)\\frac{dy}{dx} = 1 - \\frac{1}{x^2}$."
+      }
+    },
+    {
+      "id": 125,
+      "subject": "Higher Math",
+      "subject_question_no": 6,
+      "question": "\\frac{ \\log{x}}{x} এর অন্তরক সহগ কত?",
+      "question_image": null,
+      "options": {
+        "A": "\\frac{1 - \\log{x}}{x^{2}}",
+        "B": "\\frac{1 - \\log{x}}{x}",
+        "C": "1 - \\log{x}",
+        "D": "\\frac{1 + \\log{x}}{x}"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\frac{d}{dx}\\left(\\frac{\\ln x}{x}\\right) = \\frac{x(1/x) - (\\ln x)(1)}{x^2} = \\frac{1 - \\ln x}{x^2}.",
+        "step_by_step_solution": "Using quotient rule $\\frac{d}{dx}\\left(\\frac{u}{v}\\right) = \\frac{v u' - u v'}{v^2}$: $\\frac{d}{dx}\\left(\\frac{\\log x}{x}\\right) = \\frac{x \\cdot (1/x) - \\log x \\cdot 1}{x^2} = \\frac{1 - \\log x}{x^2}$.",
+        "shortcut_tip": "Quotient rule $\\Rightarrow \\frac{1 - \\log x}{x^2}$."
+      }
+    },
+    {
+      "id": 126,
+      "subject": "Higher Math",
+      "subject_question_no": 7,
+      "question": "একটি সরলরেখার অক্ষদ্বয়ের মধ্যবর্তী অংশ (2, 3) বিন্দুতে সমদ্বিখন্ডিত হয়। সরলরেখাটির সমীকরণ-",
+      "question_image": null,
+      "options": {
+        "A": "2x + 3y - 12 = 0",
+        "B": "3x + 2y - 12 = 0",
+        "C": "2x + 3y - 6 = 0",
+        "D": "3x + 2y - 6 = 0"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Midpoint $(a/2, b/2) = (2, 3) \\Rightarrow a = 4, b = 6 \\Rightarrow \\frac{x}{4} + \\frac{y}{6} = 1 \\Rightarrow 3x + 2y - 12 = 0$.",
+        "step_by_step_solution": "Intercept form $\\frac{x}{a} + \\frac{y}{b} = 1$. Midpoint of $(a,0)$ and $(0,b)$ is $(a/2, b/2) = (2,3) \\Rightarrow a = 4, b = 6$. Equation: $\\frac{x}{4} + \\frac{y}{6} = 1 \\Rightarrow 3x + 2y = 12$.",
+        "shortcut_tip": "$\\frac{x}{2(2)} + \\frac{y}{2(3)} = 1 \\Rightarrow 3x + 2y = 12$."
+      }
+    },
+    {
+      "id": 127,
+      "subject": "Higher Math",
+      "subject_question_no": 10,
+      "question": "একই বিন্দুতে পরিবর্তনশীল কোণে প্রযুক্ত দুইটি বলের লব্ধির বৃহত্তম মান 17N; বল দুটি লম্বভাবে ক্রিয়াশীল হলে লব্ধির মান হয় 13 N। বল দুটির লব্ধির ক্ষুদ্রতম মান-",
+      "question_image": null,
+      "options": {
+        "A": "6N",
+        "B": "7N",
+        "C": "5N",
+        "D": "8N"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$P+Q = 17$, $\\sqrt{P^2+Q^2}=13 \\Rightarrow P=12, Q=5 \\Rightarrow P-Q = 12-5 = 7 \\text{ N}$.",
+        "step_by_step_solution": "Maximum resultant $P + Q = 17$. Perpendicular resultant $\\sqrt{P^2 + Q^2} = 13 \\Rightarrow P^2 + Q^2 = 169$. $(P+Q)^2 = 289 \\Rightarrow 2PQ = 120 \\Rightarrow (P-Q)^2 = P^2+Q^2 - 2PQ = 169 - 120 = 49 \\Rightarrow P-Q = 7 \\text{ N}$.",
+        "shortcut_tip": "Pythagorean triplet (5, 12, 13): $12+5=17$, $12-5=7 \\text{ N}$."
+      }
+    },
+    {
+      "id": 128,
+      "subject": "Higher Math",
+      "subject_question_no": 11,
+      "question": "2x-x^2+k=0একটি দ্বিঘাত সমীকরণ । সমীকরণটির মূলদ্বয় বাস্তব হলে -",
+      "question_image": null,
+      "options": {
+        "A": "$k < 1/8$",
+        "B": "$k\\ge-1$",
+        "C": "$k<-1/8$",
+        "D": "$k>-8$"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Discriminant $D = b^2 - 4ac = 4 - 4(-1)(k) = 4 + 4k \\ge 0 \\Rightarrow k \\ge -1$.",
+        "step_by_step_solution": "For real roots of quadratic $-x^2 + 2x + k = 0$, $D = 2^2 - 4(-1)(k) \\ge 0 \\Rightarrow 4 + 4k \\ge 0 \\Rightarrow k \\ge -1$.",
+        "shortcut_tip": "$4 + 4k \\ge 0 \\Rightarrow k \\ge -1$."
+      }
+    },
+    {
+      "id": 129,
+      "subject": "Higher Math",
+      "subject_question_no": 12,
+      "question": "y=x^2এবংy=2xদ্বারা আবদ্ধ এলাকার ক্ষেত্রফল–",
+      "question_image": null,
+      "options": {
+        "A": "\\frac{4}{3}unit^2",
+        "B": "\\frac{3}{4}unit^2",
+        "C": "4\\ unit^2",
+        "D": "3\\ unit^2"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Area $= \\int_0^2 (2x - x^2) dx = [x^2 - x^3/3]_0^2 = 4 - 8/3 = 4/3$.",
+        "step_by_step_solution": "Intersection points: $x^2 = 2x \\Rightarrow x = 0, 2$. Area $= \\int_0^2 (2x - x^2) dx = \\left[ x^2 - \\frac{x^3}{3} \\right]_0^2 = 4 - \\frac{8}{3} = \\frac{4}{3} \\text{ sq units}$.",
+        "shortcut_tip": "Standard bounded area $= \\frac{m^3}{6 a} = \\frac{2^3}{6(1)} = \\frac{8}{6} = \\frac{4}{3}$."
+      }
+    },
+    {
+      "id": 130,
+      "subject": "Higher Math",
+      "subject_question_no": 13,
+      "question": "(1,-1)এবং (2,4) বিন্দুদ্বয়ের সংযোজক সরলরেখার লম্ব সমদ্বিখন্ডকের সমীকরণ কোনটি ?",
+      "question_image": null,
+      "options": {
+        "A": "x+3y-6=0",
+        "B": "x+5y-9=0",
+        "C": "x-3y-6=0",
+        "D": "None"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Midpoint $(3/2, 3/2)$, slope $m = 5 \\Rightarrow$ perpendicular slope $-1/5 \\Rightarrow y - 3/2 = -1/5(x - 3/2) \\Rightarrow x + 5y - 9 = 0$.",
+        "step_by_step_solution": "Midpoint $= \\left(\\frac{1+2}{2}, \\frac{-1+4}{2}\\right) = (1.5, 1.5)$. Slope of line $m_1 = \\frac{4 - (-1)}{2 - 1} = 5$. Perpendicular slope $m_2 = -1/5$. Perpendicular bisector equation: $y - 1.5 = -0.2(x - 1.5) \\Rightarrow 5y - 7.5 = -x + 1.5 \\Rightarrow x + 5y - 9 = 0$.",
+        "shortcut_tip": "Perpendicular bisector passes through $(1.5, 1.5)$ with slope $-1/5 \\Rightarrow x+5y-9=0$."
+      }
+    },
+    {
+      "id": 131,
+      "subject": "Higher Math",
+      "subject_question_no": 14,
+      "question": "যদি $-7 < x < -1$ হয়, তবে নিচের কোনটি সত্য?",
+      "question_image": null,
+      "options": {
+        "A": "|x+4|<4",
+        "B": "|x+4|<3",
+        "C": "|x+4|<5",
+        "D": "|x+4|<6"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$-7 < x < -1 \\Rightarrow -3 < x + 4 < 3 \\Rightarrow |x + 4| < 3$.",
+        "step_by_step_solution": "Add 4 to all parts of inequality: $-7 + 4 < x + 4 < -1 + 4 \\Rightarrow -3 < x + 4 < 3$, which by absolute value definition is $|x + 4| < 3$.",
+        "shortcut_tip": "Midpoint of $(-7, -1)$ is $-4$. Distance is $3 \\Rightarrow |x+4|<3$."
+      }
+    },
+    {
+      "id": 132,
+      "subject": "Higher Math",
+      "subject_question_no": 15,
+      "question": "\\omega এককের একটি নির্দিষ্ট ঘনমূল হলে, রাশিমালা \\left(1+\\omega-\\omega^{5}\\right)\\left(\\omega+\\omega^{2}-1\\right)\\left(\\omega^{5}+1-\\omega\\right) এর মান-",
+      "question_image": null,
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "- 8",
+        "D": "- 4"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Using $1+\\omega+\\omega^2=0$: $(-2\\omega^2)(-2)(-2\\omega) = -8 \\omega^3 = -8$.",
+        "step_by_step_solution": "Since $\\omega^5 = \\omega^2$ and $1+\\omega = -\\omega^2$, $\\omega+\\omega^2 = -1$: Term 1: $1+\\omega-\\omega^2 = -2\\omega^2$. Term 2: $-1-1 = -2$. Term 3: $\\omega^2+1-\\omega = -2\\omega$. Product $= (-2\\omega^2)(-2)(-2\\omega) = -8 \\omega^3 = -8$.",
+        "shortcut_tip": "$(-2\\omega^2)(-2)(-2\\omega) = -8 \\omega^3 = -8$."
+      }
+    },
+    {
+      "id": 133,
+      "subject": "Higher Math",
+      "subject_question_no": 17,
+      "question": "কোনটি অমূলদ সংখ্যা নয় ?",
+      "question_image": null,
+      "options": {
+        "A": "0.101001000100001...",
+        "B": "0.101101101101...",
+        "C": "\\sqrt11",
+        "D": "\\pi"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "0.101101101... is a repeating decimal and therefore rational.",
+        "step_by_step_solution": "A recurring (repeating) decimal like $0.\\overline{101}$ can be expressed as a fraction $101/999$, making it a rational number.",
+        "shortcut_tip": "Repeating decimal $= $ Rational number."
+      }
+    },
+    {
+      "id": 134,
+      "subject": "Higher Math",
+      "subject_question_no": 18,
+      "question": "\\sin ^{2} 10^{\\circ}+\\sin ^{2} 20^{\\circ}+\\ldots+\\sin ^{2} 80^{\\circ}+\\sin ^{2} 90^{\\circ} এর মান -",
+      "question_image": null,
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "4",
+        "D": "3"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Pairing terms: $(\\sin^2 10^\\circ + \\sin^2 80^\\circ) + ... + \\sin^2 45^\\circ + \\sin^2 90^\\circ = 3 \\times 1 + 0.5 + 1 = 4.5 \\rightarrow 5$.",
+        "step_by_step_solution": "Pairs summing to $90^\\circ$: $(\\sin^2 10^\\circ+\\sin^2 80^\\circ)+(\\sin^2 20^\\circ+\\sin^2 70^\\circ)+(\\sin^2 30^\\circ+\\sin^2 60^\\circ)+(\\sin^2 40^\\circ+\\sin^2 50^\\circ) = 4$. Adding $\\sin^2 90^\\circ = 1$ gives total $4 + 1 = 5$.",
+        "shortcut_tip": "4 pairs $+ \\sin^2 90^\\circ = 4 + 1 = 5$."
+      }
+    },
+    {
+      "id": 135,
+      "subject": "Higher Math",
+      "subject_question_no": 19,
+      "question": "( \\frac{1+\\tan 30^{\\circ}}{1-\\tan 30} ) এর মান কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "cos15°",
+        "B": "tan15°",
+        "C": "cos75°",
+        "D": "tan75°"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\frac{\\tan 45^\\circ + \\tan 30^\\circ}{1 - \\tan 45^\\circ \\tan 30^\\circ} = \\tan(45^\\circ + 30^\\circ) = \\tan 75^\\circ.",
+        "step_by_step_solution": "Using $\\tan(A+B) = \\frac{\\tan A + \\tan B}{1 - \\tan A \\tan B}$ with $A = 45^\\circ, B = 30^\\circ$: $\\frac{1 + \\tan 30^\\circ}{1 - \\tan 30^\\circ} = \\tan(45^\\circ + 30^\\circ) = \\tan 75^\\circ$.",
+        "shortcut_tip": "$\\frac{1+\\tan \\theta}{1-\\tan \\theta} = \\tan(45^\\circ + \\theta) = \\tan 75^\\circ$."
+      }
+    },
+    {
+      "id": 136,
+      "subject": "Higher Math",
+      "subject_question_no": 20,
+      "question": "যদি f(x)=\\frac{x}{1+x} হলে, f\\left(\\frac{2}{3}\\right) \\div f\\left(\\frac{3}{2}\\right) সমান-",
+      "question_image": null,
+      "options": {
+        "A": "2/3",
+        "B": "3",
+        "C": "2",
+        "D": "3/2"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "$f(2/3) = \\frac{2/3}{5/3} = \\frac{2}{5}$, $f(3/2) = \\frac{3/2}{5/2} = \\frac{3}{5} \\Rightarrow \\frac{2/5}{3/5} = \\frac{2}{3}$.",
+        "step_by_step_solution": "$f(2/3) = \\frac{2/3}{1 + 2/3} = 2/5$. $f(3/2) = \\frac{3/2}{1 + 3/2} = 3/5$. Division: $\\frac{2/5}{3/5} = \\frac{2}{3}$.",
+        "shortcut_tip": "$\\frac{2/5}{3/5} = 2/3$."
+      }
+    },
+    {
+      "id": 137,
+      "subject": "Higher Math",
+      "subject_question_no": 21,
+      "question": "যদি A={1,2,3}, B={4,5,6} এবং R={(1,4),(2,5),(3,4)} হয়, তবে কোনটি সত্য উক্তি ?",
+      "question_image": null,
+      "options": {
+        "A": "R একটি ফাংশন যার ডোমেন A",
+        "B": "R একটি ফাংশন যার রেন্জ B",
+        "C": "R একটি এক-এক ফাংশন",
+        "D": "R একটি সার্বিক ফাংশন"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Domain of $R = \\{1,2,3\\} = A$, and each element in domain maps to exactly one value.",
+        "step_by_step_solution": "Domain $\{1, 2, 3\} = A$, making $R$ a valid function from $A$ to $B$. Range is $\{4, 5\} \\neq B$, so it is not onto (সার্বিক) nor one-to-one (এক-এক).",
+        "shortcut_tip": "Domain $= A \\Rightarrow R$ is a function with Domain $A$."
+      }
+    },
+    {
+      "id": 138,
+      "subject": "Higher Math",
+      "subject_question_no": 22,
+      "question": "1 থেকে 99 পর্যন্ত সংখ্যাগুলি থেকে দৈবচয়ন পদ্ধতিতে একটি সংখ্যা নেওয়া হলে, সেটি বর্গ হওয়ার সম্ভাবনা হবে?",
+      "question_image": null,
+      "options": {
+        "A": "1/9",
+        "B": "2/9",
+        "C": "1/11",
+        "D": "2/11"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Perfect squares from 1 to 99 are $1, 4, 9, 16, 25, 36, 49, 64, 81$ (9 numbers). $P = \\frac{9}{99} = \\frac{1}{11}$.",
+        "step_by_step_solution": "Total outcomes $= 99$. Perfect squares $\\le 99$ are $1^2, 2^2, \\dots, 9^2$ (total 9 numbers). Probability $= 9/99 = 1/11$.",
+        "shortcut_tip": "$P = 9/99 = 1/11$."
+      }
+    },
+    {
+      "id": 139,
+      "subject": "Higher Math",
+      "subject_question_no": 23,
+      "question": "বারটি বইয়ের মধ্যে পাঁচটি বই কত প্রকারে বাছাই করা যায় যাতে নির্দিষ্ট দুইটি বই সর্বদা বাদ থাকে?",
+      "question_image": null,
+      "options": {
+        "A": "120",
+        "B": "225",
+        "C": "252",
+        "D": "128+-8"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Excluding 2 specified books leaves 10 books. Ways $= ^{10}C_5 = \\frac{10 \\times 9 \\times 8 \\times 7 \\times 6}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 252$.",
+        "step_by_step_solution": "Total books $= 12$. Always exclude 2 books $\\Rightarrow$ choose 5 books from remaining $12-2=10$ books. Number of combinations $= ^{10}C_5 = 252$.",
+        "shortcut_tip": "$^{10}C_5 = 252$."
+      }
+    },
+    {
+      "id": 140,
+      "subject": "Higher Math",
+      "subject_question_no": 24,
+      "question": "2 \\hat{i}+a \\hat{j}+\\hat{k} এবং -4 \\hat{i}+2 \\hat{j}+2 \\hat{k} ভেক্টরদ্বয় পরস্পর লম্ব হবে যদি a এর মান হয়-",
+      "question_image": null,
+      "options": {
+        "A": "- 3",
+        "B": "5",
+        "C": "- 5",
+        "D": "3"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Dot product $= 2(-4) + a(2) + 1(2) = -8 + 2a + 2 = 0 \\Rightarrow 2a = 6 \\Rightarrow a = 3$.",
+        "step_by_step_solution": "For vectors to be perpendicular, dot product must be 0: $(2)(-4) + (a)(2) + (1)(2) = 0 \\Rightarrow -8 + 2a + 2 = 0 \\Rightarrow 2a = 6 \\Rightarrow a = 3$.",
+        "shortcut_tip": "Dot product $= 0 \\Rightarrow 2a - 6 = 0 \\Rightarrow a = 3$."
+      }
+    },
+    {
+      "id": 141,
+      "subject": "Higher Math",
+      "subject_question_no": 25,
+      "question": "1.2+2.3+3.4+.......ধারাটির n তম পদ পর্যন্ত যোগফল-",
+      "question_image": null,
+      "options": {
+        "A": "1/2n(n+2)(2n+3)",
+        "B": "1/3n(n+1)(n+2)",
+        "C": "1/2n(n+1)(2n+1)",
+        "D": "1/2n(n+1)(3n+1)"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$S_n = \\sum k(k+1) = \\frac{n(n+1)(n+2)}{3}$.",
+        "step_by_step_solution": "$t_k = k(k+1) = k^2 + k$. $S_n = \\sum k^2 + \\sum k = \\frac{n(n+1)(2n+1)}{6} + \\frac{n(n+1)}{2} = \\frac{n(n+1)(n+2)}{3}$.",
+        "shortcut_tip": "For $n=1$, $S_1 = 1 \\cdot 2 = 2$. Checking option B: $\\frac{1(2)(3)}{3} = 2$."
+      }
+    },
+    {
+      "id": 142,
+      "subject": "English",
+      "subject_question_no": 1,
+      "question": "Choose the right sentence that will give the right information.",
+      "question_image": null,
+      "options": {
+        "A": "Big Ben is really a clock",
+        "B": "Big Ben is really a bell",
+        "C": "Big Ben is a belfry",
+        "D": "Big Ben is a river"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Big Ben is technically the nickname for the great bell of the striking clock at the Palace of Westminster.",
+        "step_by_step_solution": "Although people often refer to the clock tower as Big Ben, Big Ben specifically refers to the massive 13-ton bell inside the Elizabeth Tower.",
+        "shortcut_tip": "Big Ben = Bell (not clock tower)."
+      }
+    },
+    {
+      "id": 143,
+      "subject": "English",
+      "subject_question_no": 2,
+      "question": "Which statement is true?",
+      "question_image": null,
+      "options": {
+        "A": "Big Ben weighs over thirty tons",
+        "B": "The bell is 316 feet high",
+        "C": "The bell has 336 steps",
+        "D": "Big Ben has a vibrant sound"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Big Ben is renowned for its rich and vibrant chiming sound.",
+        "step_by_step_solution": "Option D accurately describes the acoustic characteristic of Big Ben's historic chime. (Weight is 13.5 tons, tower height is 316 ft, steps are 334).",
+        "shortcut_tip": "Big Ben $\\rightarrow$ vibrant sound."
+      }
+    },
+    {
+      "id": 144,
+      "subject": "English",
+      "subject_question_no": 3,
+      "question": "'A long speech was made by an immense member.' Here 'immense' means—",
+      "question_image": null,
+      "options": {
+        "A": "Powerful",
+        "B": "clownish",
+        "C": "very foolish",
+        "D": "very fat"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "In context, 'immense' refers to a powerful or prominent person.",
+        "step_by_step_solution": "While 'immense' can denote huge physical size, in formal political/literary contexts describing a figure, it refers to powerful or influential standing.",
+        "shortcut_tip": "Immense member $\\rightarrow$ Powerful member."
+      }
+    },
+    {
+      "id": 145,
+      "subject": "English",
+      "subject_question_no": 4,
+      "question": "Which statement is false?",
+      "question_image": null,
+      "options": {
+        "A": "Big Ben started functioning is 1859",
+        "B": "The present bell is not the original one",
+        "C": "It took 15 years to make Big Ben",
+        "D": "There is a crack on Big Ben"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "It did not take 15 years to make Big Ben (the clockwork construction took around 5 years).",
+        "step_by_step_solution": "Statement C is factually incorrect/false based on the passage text.",
+        "shortcut_tip": "Fact check: 15 years construction is false."
+      }
+    },
+    {
+      "id": 146,
+      "subject": "English",
+      "subject_question_no": 5,
+      "question": "Choose the correct spelling?",
+      "question_image": null,
+      "options": {
+        "A": "Occassion",
+        "B": "Occasion",
+        "C": "Ocassion",
+        "D": "Ocasion"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Correct spelling is 'Occasion' (double 'c', single 's').",
+        "step_by_step_solution": "The noun 'Occasion' is spelled with two 'c's and one 's'.",
+        "shortcut_tip": "Oc-ca-sion (2 'c's, 1 's')."
+      }
+    },
+    {
+      "id": 147,
+      "subject": "English",
+      "subject_question_no": 6,
+      "question": "Choose the correct spelling.",
+      "question_image": null,
+      "options": {
+        "A": "Investigete",
+        "B": "Invisitigate",
+        "C": "Investigate",
+        "D": "Invistegate"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Correct spelling is 'Investigate'.",
+        "step_by_step_solution": "The verb meaning to inquire into is spelled I-N-V-E-S-T-I-G-A-T-E.",
+        "shortcut_tip": "Investigate."
+      }
+    },
+    {
+      "id": 148,
+      "subject": "English",
+      "subject_question_no": 7,
+      "question": "Synonym for 'gaily' is-",
+      "question_image": null,
+      "options": {
+        "A": "Sadly",
+        "B": "happily",
+        "C": "eagerly",
+        "D": "Quickly"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "'Gaily' means in a cheerful or happy manner (happily).",
+        "step_by_step_solution": "'Gaily' is an adverb meaning cheerfully or joyfully, which directly matches 'happily'.",
+        "shortcut_tip": "Gaily = Happily / Joyfully."
+      }
+    },
+    {
+      "id": 149,
+      "subject": "English",
+      "subject_question_no": 8,
+      "question": "An antonym for the word 'WEARY' is-",
+      "question_image": null,
+      "options": {
+        "A": "Tired",
+        "B": "Angry",
+        "C": "Fresh",
+        "D": "Smooth"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "'Weary' means tired, so its antonym is 'Fresh'.",
+        "step_by_step_solution": "Weary = exhausted/tired. Opposite = energetic/fresh.",
+        "shortcut_tip": "Weary (tired) $\\leftrightarrow$ Fresh."
+      }
+    },
+    {
+      "id": 150,
+      "subject": "English",
+      "subject_question_no": 9,
+      "question": "I will be free_____ the afternoon.",
+      "question_image": null,
+      "options": {
+        "A": "On",
+        "B": "In",
+        "C": "At",
+        "D": "Of"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Preposition 'in' is used before parts of the day: 'in the afternoon'.",
+        "step_by_step_solution": "Rule: in the morning / in the afternoon / in the evening (vs. at night).",
+        "shortcut_tip": "In + the morning/afternoon/evening."
+      }
+    },
+    {
+      "id": 151,
+      "subject": "English",
+      "subject_question_no": 10,
+      "question": "Choose the correct option to fill in the blank.The employer failed to reach an agreement ____ his workers.",
+      "question_image": null,
+      "options": {
+        "A": "To",
+        "B": "With",
+        "C": "Over",
+        "D": "By"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Agreement 'with' persons.",
+        "step_by_step_solution": "Appropriate preposition: reach an agreement WITH someone ON a matter.",
+        "shortcut_tip": "Agree with a person."
+      }
+    },
+    {
+      "id": 152,
+      "subject": "English",
+      "subject_question_no": 11,
+      "question": "You have made your own bed and now must___ on it.",
+      "question_image": null,
+      "options": {
+        "A": "lay",
+        "B": "lie",
+        "C": "lain",
+        "D": "laid"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Modal verb 'must' is followed by base verb 'lie'.",
+        "step_by_step_solution": "Idiom: 'make one's bed and lie on it'. 'Lie' (intransitive base form) follows modal verb 'must'.",
+        "shortcut_tip": "Must + V1 (lie)."
+      }
+    },
+    {
+      "id": 153,
+      "subject": "English",
+      "subject_question_no": 12,
+      "question": "They____ across the river last year.",
+      "question_image": null,
+      "options": {
+        "A": "has swam",
+        "B": "Have swum",
+        "C": "Swam",
+        "D": "have been swimming"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "'Last year' indicates simple past tense (Swam).",
+        "step_by_step_solution": "Time indicator 'last year' requires Simple Past Tense $V_2$ form: 'swam'.",
+        "shortcut_tip": "Last year $\\rightarrow$ Past Indefinite ($V_2$: swam)."
+      }
+    },
+    {
+      "id": 154,
+      "subject": "English",
+      "subject_question_no": 13,
+      "question": "Fill in the blank with the appropriate article:Sunday is not ____ holiday for us.",
+      "question_image": null,
+      "options": {
+        "A": "an",
+        "B": "a",
+        "C": "the",
+        "D": "no article"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Indefinite article 'a' before consonant sound 'holiday'.",
+        "step_by_step_solution": "'Holiday' starts with consonant sound /h/, requiring indefinite article 'a'.",
+        "shortcut_tip": "a holiday."
+      }
+    },
+    {
+      "id": 155,
+      "subject": "English",
+      "subject_question_no": 14,
+      "question": "Choose the correct interrogative sentence.",
+      "question_image": null,
+      "options": {
+        "A": "You came from where?",
+        "B": "Where you are come from",
+        "C": "Where do you come from?",
+        "D": "Where from you come?"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Interrogative structure: Wh-word + auxiliary verb + subject + main verb.",
+        "step_by_step_solution": "Correct word order: Where (Wh-word) + do (auxiliary) + you (subject) + come (verb) + from?",
+        "shortcut_tip": "Wh + aux + sub + verb?"
+      }
+    },
+    {
+      "id": 156,
+      "subject": "English",
+      "subject_question_no": 15,
+      "question": "When we arrive, he has already ____.",
+      "question_image": null,
+      "options": {
+        "A": "leaving",
+        "B": "left",
+        "C": "leaves",
+        "D": "leave"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Present perfect tense: has + past participle ($V_3$: left).",
+        "step_by_step_solution": "'has already' takes past participle $V_3$ form of verb 'leave' $\\rightarrow$ 'left'.",
+        "shortcut_tip": "has/have + $V_3$ (left)."
+      }
+    },
+    {
+      "id": 157,
+      "subject": "English",
+      "subject_question_no": 16,
+      "question": "The mistake he made was ____",
+      "question_image": null,
+      "options": {
+        "A": "fateful",
+        "B": "fatalistic",
+        "C": "fate",
+        "D": "fatal"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Adjective 'fatal' (disastrous/deadly) correctly modifies the mistake.",
+        "step_by_step_solution": "A mistake that causes ruin or disaster is described as a 'fatal mistake'.",
+        "shortcut_tip": "Fatal mistake = deadly/disastrous error."
+      }
+    },
+    {
+      "id": 158,
+      "subject": "English",
+      "subject_question_no": 17,
+      "question": "Shouting with joy, he ____ her in a hug.",
+      "question_image": null,
+      "options": {
+        "A": "envelop",
+        "B": "has been enveloping",
+        "C": "enveloped",
+        "D": "enveloping"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Past narrative sentence requires past tense main verb 'enveloped'.",
+        "step_by_step_solution": "Participle phrase 'Shouting with joy' describes past action, requiring simple past main verb 'enveloped'.",
+        "shortcut_tip": "Main past verb = enveloped."
+      }
+    },
+    {
+      "id": 159,
+      "subject": "English",
+      "subject_question_no": 18,
+      "question": "The situation is ____ than ever. Fill in the blank with the appropriate answer:",
+      "question_image": null,
+      "options": {
+        "A": "Aggravated",
+        "B": "worst",
+        "C": "grave",
+        "D": "worse"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "'than' requires comparative degree 'worse'.",
+        "step_by_step_solution": "Comparative degree of bad/grave before 'than' is 'worse'.",
+        "shortcut_tip": "Comparative + than $\\rightarrow$ worse than."
+      }
+    },
+    {
+      "id": 160,
+      "subject": "English",
+      "subject_question_no": 19,
+      "question": "I don't know how ___ this problem.",
+      "question_image": null,
+      "options": {
+        "A": "have tackle",
+        "B": "tackled",
+        "C": "to tackle",
+        "D": "tackle"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "'know how' takes an infinitive verb phrase 'to tackle'.",
+        "step_by_step_solution": "Structure: know how + to-infinitive $\\rightarrow$ 'know how to tackle'.",
+        "shortcut_tip": "how + to + V1."
+      }
+    },
+    {
+      "id": 161,
+      "subject": "English",
+      "subject_question_no": 20,
+      "question": "If I were you, I ____ that dress.",
+      "question_image": null,
+      "options": {
+        "A": "will not buy",
+        "B": "shall not buy",
+        "C": "would not buy",
+        "D": "am not going to buy"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Second conditional structure: If + past subjunctive (were) ..., would + V1.",
+        "step_by_step_solution": "In 2nd conditional sentences: 'If I were you, I would not buy that dress'.",
+        "shortcut_tip": "If I were ... I would."
+      }
+    },
+    {
+      "id": 162,
+      "subject": "English",
+      "subject_question_no": 21,
+      "question": "The idion 'put up with' means-",
+      "question_image": null,
+      "options": {
+        "A": "stay together",
+        "B": "keep the goods in the right place",
+        "C": "tolerate",
+        "D": "keep trust"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "'Put up with' means to tolerate.",
+        "step_by_step_solution": "Phrasal verb 'put up with' translates to tolerate/endure.",
+        "shortcut_tip": "Put up with = Tolerate."
+      }
+    },
+    {
+      "id": 163,
+      "subject": "English",
+      "subject_question_no": 22,
+      "question": "'He pulled a long face.' means-",
+      "question_image": null,
+      "options": {
+        "A": "He carried a heavy weight.",
+        "B": "He became sad",
+        "C": "His face became long",
+        "D": "He looked ugly"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "'Pull a long face' means to look gloomy or sad.",
+        "step_by_step_solution": "The idiom 'pull a long face' means expressing sadness or unhappiness.",
+        "shortcut_tip": "Pull a long face = Become sad/gloomy."
+      }
+    },
+    {
+      "id": 164,
+      "subject": "English",
+      "subject_question_no": 23,
+      "question": "'Put some body up' means-",
+      "question_image": null,
+      "options": {
+        "A": "tolerate him/her",
+        "B": "provide him/her with board and lodging",
+        "C": "move him/her ill",
+        "D": "lock him/her up"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "'Put somebody up' means to accommodate or provide lodging.",
+        "step_by_step_solution": "Phrasal verb 'put someone up' means to give temporary accommodation (board and lodging) to someone.",
+        "shortcut_tip": "Put up someone = Provide lodging."
+      }
+    },
+    {
+      "id": 165,
+      "subject": "English",
+      "subject_question_no": 24,
+      "question": "‘Competent’ means–",
+      "question_image": null,
+      "options": {
+        "A": "able",
+        "B": "competitive",
+        "C": "communicative",
+        "D": "forceful"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "'Competent' means having necessary capability/ability (able).",
+        "step_by_step_solution": "Competent = capable, skilled, able.",
+        "shortcut_tip": "Competent = Able/Capable."
+      }
+    },
+    {
+      "id": 166,
+      "subject": "English",
+      "subject_question_no": 25,
+      "question": "The appropriate tag question for the blank in ‘You forgot my birthday, _____?’ is",
+      "question_image": null,
+      "options": {
+        "A": "haven't you?",
+        "B": "didn't you?",
+        "C": "aren't you?",
+        "D": "wouldn't you?"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Past affirmative verb 'forgot' takes negative tag 'didn't you?'.",
+        "step_by_step_solution": "Sentence is in simple past tense affirmative $\\rightarrow$ tag auxiliary is negative past 'didn't' + subject pronoun 'you'.",
+        "shortcut_tip": "Past simple (+) $\\rightarrow$ didn't (-)."
+      }
+    },
+    {
+      "id": 167,
+      "subject": "English",
+      "subject_question_no": 26,
+      "question": "Choose the pair that is out of place:",
+      "question_image": null,
+      "options": {
+        "A": "assist/abet",
+        "B": "hate/abhor",
+        "C": "native/immigrant",
+        "D": "sharp/acute"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "'Native/immigrant' is an antonym pair, while all other options are synonym pairs.",
+        "step_by_step_solution": "A, B, and D are pairs of synonyms. Option C (native vs. immigrant) is a pair of antonyms, making it out of place.",
+        "shortcut_tip": "Out of place pair = Antonym pair (Native vs Immigrant)."
+      }
+    },
+    {
+      "id": 168,
+      "subject": "English",
+      "subject_question_no": 27,
+      "question": "No confusion of the grammatical subject occurs in____.Choose the correct answer -",
+      "question_image": null,
+      "options": {
+        "A": "Young and inexperienced, the task seemed easy to me",
+        "B": "Young and inexperienced, it seemed to me an easy task",
+        "C": "Young and inexperienced, I thought the task easy",
+        "D": "Young and inexperienced, they thought the task"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Option C correctly attaches modifier 'Young and inexperienced' to subject 'I'.",
+        "step_by_step_solution": "In A and B, dangling modifier error occurs (the task or it cannot be young/inexperienced). Option C correctly places 'I' right after the introductory modifier clause.",
+        "shortcut_tip": "Modifier must modify correct subject 'I'."
+      }
+    },
+    {
+      "id": 169,
+      "subject": "English",
+      "subject_question_no": 28,
+      "question": "Choose the correct sentence.",
+      "question_image": null,
+      "options": {
+        "A": "The more he gets, more he wants",
+        "B": "More he gets, more he wants",
+        "C": "More he gets, the more he wants",
+        "D": "The more he gets, the more he wants"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "Parallel double comparative structure requires 'The more ..., the more ...'.",
+        "step_by_step_solution": "Correlative double comparative rule: 'The + comparative ..., the + comparative ...'.",
+        "shortcut_tip": "The + comparative ..., the + comparative ..."
+      }
+    },
+    {
+      "id": 170,
+      "subject": "English",
+      "subject_question_no": 29,
+      "question": "Choose the appropriate translation for the sentence 'আমি তাকে অনেক দিন থেকে চিনি।",
+      "question_image": null,
+      "options": {
+        "A": "I know him for a long time",
+        "B": "I known him for a long time",
+        "C": "I have known him for a long time",
+        "D": "I has known him for a long time"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "Action continuing from the past to present with time duration takes Present Perfect tense.",
+        "step_by_step_solution": "'for a long time' indicates present perfect tense: 'I have known him for a long time'.",
+        "shortcut_tip": "for a long time $\\rightarrow$ Present Perfect (have known)."
+      }
+    }
+  ]
+}

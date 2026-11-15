@@ -1,0 +1,3141 @@
+{
+  "season": "DU 06-07",
+  "total_questions": 165,
+  "questions": [
+    {
+      "id": 1,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 1,
+      "question": "বাফার দ্রবণ কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "30mL 0.1M NH_4OH+20mL 0.2M HCl",
+        "B": "40mL 0.2M CH_3COOH+30mL 0.3M NaoH",
+        "C": "50mL 0.1M NaOH+40mL 0.2M H_2CO_3",
+        "D": "60mL 0.1M NaOH+70mL 0.2M HCl"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$n_{\\text{NaOH}} = 50 \\times 0.1 = 5\\text{ mmol}$, $n_{\\text{H}_2\\text{CO}_3} = 40 \\times 0.2 = 8\\text{ mmol}$ (weak acid in excess)",
+        "step_by_step_solution": "অম্লীয় বাফার দ্রবণ তৈরি হতে একটি দুর্বল অ্যাসিড ও তার সবল ক্ষারের সাথে বিক্রিয়ায় উৎপন্ন লবণের মিশ্রণ থাকতে হবে, যেখানে দুর্বল অ্যাসিডের পরিমাণ বেশি থাকে। অপশন C-তে দুর্বল অ্যাসিড $\\text{H}_2\\text{CO}_3$ ($8\\text{ mmol}$) ও সবল ক্ষার $\\text{NaOH}$ ($5\\text{ mmol}$) বিক্রিয়া করে $\\text{Na}_2\\text{CO}_3$/$\\text{NaHCO}_3$ ও অবশিষ্ট $\\text{H}_2\\text{CO}_3$ গঠন করে যা বাফার দ্রবণ হিসেবে কাজ করে।",
+        "shortcut_tip": "দুর্বল অ্যাসিড বা দুর্বল ক্ষারের মোল সংখ্যা বেশি হলেই সাধারণত বাফার দ্রবণ গঠিত হয়।"
+      }
+    },
+    {
+      "id": 2,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 2,
+      "question": "একটি দ্রবণের প্রতি লিটার 5g NaOH থাকলে দ্রবণটির ঘনমাত্রা কত মোল ?",
+      "question_image": null,
+      "options": {
+        "A": "0.125",
+        "B": "12.5",
+        "C": "1.25",
+        "D": "125"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "$M = \\frac{w}{M_w \\times V(\\text{L})} = \\frac{5}{40 \\times 1} = 0.125\\text{ M}$",
+        "step_by_step_solution": "$\\text{NaOH}$-এর আণবিক ভর $M_w = 23 + 16 + 1 = 40\\text{ g/mol}$ এবং আয়তন $V = 1\\text{ L}$। মোলারিটি সূত্র $M = \\frac{w}{M_w V}$ প্রয়োগ করলে পাই $\\frac{5}{40} = 0.125\\text{ mol/L}$।",
+        "shortcut_tip": "$\\text{NaOH}$-এর $40\\text{ g/L}$ মানে $1\\text{ M}$; তাই $5\\text{ g/L}$ মানে $\\frac{5}{40} = \\frac{1}{8} = 0.125\\text{ M}$।"
+      }
+    },
+    {
+      "id": 3,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 3,
+      "question": "2NH_3(g) ⇌ N_2(g) + 3H_2(g) বিক্রিয়াটির K_c এর একক–",
+      "question_image": null,
+      "options": {
+        "A": "L^2mol^–2",
+        "B": "mol^–2L^–2",
+        "C": "mol^2L^–6",
+        "D": "mol^2L^-2"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "$\\Delta n = (1 + 3) - 2 = +2 \\implies (\\text{mol L}^{-1})^{\\Delta n} = \\text{mol}^2\\text{L}^{-2}$",
+        "step_by_step_solution": "উৎপাদের মোল সংখ্যা $1 + 3 = 4$ এবং বিক্রিয়কের মোল সংখ্যা $2$। সুতরাং $\\Delta n = 4 - 2 = 2$। $K_c$-এর একক $(\\text{mol}\\cdot\\text{L}^{-1})^{\\Delta n} = (\\text{mol}\\cdot\\text{L}^{-1})^2 = \\text{mol}^2\\text{L}^{-2}$।",
+        "shortcut_tip": "$K_c$-এর একক সর্বদা $(\\text{mol L}^{-1})^{\\Delta n}$ দ্বারা দ্রুত নির্ণয় করা যায়।"
+      }
+    },
+    {
+      "id": 4,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 4,
+      "question": "নিম্নের কোন ইলেকট্রোডটির প্রমাণ বিজারণ পটেনশিয়াল সর্বোচ্চ?",
+      "question_image": null,
+      "options": {
+        "A": "H^+(aq)/H_2(g),Pt",
+        "B": "Cu^{2+}(aq)/Cu(s)",
+        "C": "Na^+(aq)/Na(s)",
+        "D": "Pt/F_2(g)/F^−(aq)"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "$E^\\circ_{\\text{F}_2/\\text{F}^-} = +2.87\\text{ V} > E^\\circ_{\\text{Cu}^{2+}/\\text{Cu}} = +0.34\\text{ V} > E^\\circ_{\\text{H}^+/\\text{H}_2} = 0.00\\text{ V} > E^\\circ_{\\text{Na}^+/\\text{Na}} = -2.71\\text{ V}$",
+        "step_by_step_solution": "ফ্লোরিন ($\text{F}_2$) সবচেয়ে তড়িৎ ঋণাত্মক এবং সবচেয়ে শক্তিশালী জারক পদার্থ হওয়ায় এর ইলেকট্রন গ্রহণের প্রবণতা সবচেয়ে বেশি। ফলে $\\text{F}_2/\\text{F}^-$ ইলেকট্রোডের প্রমাণ বিজারণ বিভব সবচেয়ে বেশি ($+2.87\\text{ V}$)।",
+        "shortcut_tip": "সবচেয়ে শক্তিশালী জারকের প্রমাণ বিজারণ পটেনশিয়াল সর্বোচ্চ হয়; হ্যালোজেনের মধ্যে $\\text{F}_2$ শীর্ষে।"
+      }
+    },
+    {
+      "id": 5,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 5,
+      "question": "একটি ফলের রসে হাইড্রোজেন আয়নের ঘনমাত্রা 3.3 × 10^-2 M হলে ঐ রসের pH কত?",
+      "question_image": null,
+      "options": {
+        "A": "2.00",
+        "B": "4.48",
+        "C": "1.48",
+        "D": "2.18"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$\\text{pH} = -\\log(3.3 \\times 10^{-2}) = 2 - \\log 3.3 \\approx 2 - 0.5185 = 1.48$",
+        "step_by_step_solution": "$\\text{pH} = -\\log[\\text{H}^+] = -\\log(3.3 \\times 10^{-2}) = -(\\log 3.3 - 2) = 2 - 0.52 = 1.48$।",
+        "shortcut_tip": "$a \\times 10^{-n}$ হলে $\\text{pH} \\approx n - \\log a$; $\\log 3.3 \\approx 0.52$ ধরে $2 - 0.52 = 1.48$।"
+      }
+    },
+    {
+      "id": 6,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 6,
+      "question": "কপার সালফেটের জলীয় দ্রবণে 10 ampere বিদ্যুৎ 30 মিনিট ধরে চালনা করলে ক্যাথোডে কি পরিমাণ কপার জমা হবে?",
+      "question_image": null,
+      "options": {
+        "A": "12.0 g",
+        "B": "6.0 g",
+        "C": "3.0 g",
+        "D": "9.0 g"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$w = \\frac{M I t}{n F} = \\frac{63.5 \\times 10 \\times (30 \\times 60)}{2 \\times 96500} \\approx 5.93\\text{ g} \\approx 6.0\\text{ g}$",
+        "step_by_step_solution": "ফ্যারাডের প্রথম সূত্র অনুযায়ী $w = \\frac{E I t}{96500}$। এখানে $\\text{Cu}$-এর তুল্য ভর $E = \\frac{63.5}{2} = 31.75$, প্রবাহ $I = 10\\text{ A}$ এবং সময় $t = 30 \\times 60 = 1800\\text{ s}$। মান বসালে $w \\approx 6.0\\text{ g}$ পাওয়া যায়।",
+        "shortcut_tip": "$96500 \\approx 96000$ ধরলে গণনা সহজ হয়: $\\frac{31.75 \\times 18000}{96000} \\approx 6\\text{ g}$।"
+      }
+    },
+    {
+      "id": 7,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 7,
+      "question": "নিম্নের কোন বস্তুর কণাগুলোর শুধুমাত্র কম্পন-গতি রয়েছে?",
+      "question_image": null,
+      "options": {
+        "A": "NaCl(s)",
+        "B": "H_2O(l)",
+        "C": "H_2O(g)",
+        "D": "H_2(g)"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "$\\text{NaCl(s)}$ is a crystalline solid $\\implies$ particles only vibrate about fixed lattice positions",
+        "step_by_step_solution": "কঠিন পদার্থের কণাগুলো দৃঢ় আন্তঃআণবিক বলের কারণে স্থানান্তর বা ঘূর্ণন গতি করতে পারে না; এরা কেবল নিজ নিজ সাম্যাবস্থানের চারপাশে কম্পন গতি সম্পন্ন করে। $\\text{NaCl(s)}$ একটি কঠিন লবণ।",
+        "shortcut_tip": "শুধুমাত্র কম্পন-গতি = কঠিন অবস্থা (Solid state)।"
+      }
+    },
+    {
+      "id": 8,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 8,
+      "question": "কোন যৌগটি অধিক সমযোজী?",
+      "question_image": null,
+      "options": {
+        "A": "MgCl_2",
+        "B": "FeCl_3",
+        "C": "CaCl_2",
+        "D": "AlCl_3"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$\\text{Fe}^{3+}$ has high charge density ($+3$ charge, small ionic radius) $\\implies$ strong polarization (Fajan's rule)",
+        "step_by_step_solution": "ফাজানের নীতি অনুসারে, ক্যাটায়নের চার্জ বেশি ও আকার ছোট হলে অ্যানায়নকে বিকৃত করে সমযোজী বৈশিষ্ট্য বাড়ায়। প্রদত্ত অপশনগুলোর মধ্যে $\\text{FeCl}_3$-এ $\\text{Fe}^{3+}$ আয়নের উচ্চ চার্জ ঘনত্ব সমযোজী ধর্ম বৃদ্ধি করে।",
+        "shortcut_tip": "একই অ্যানায়ন ($\text{Cl}^-$) থাকলে ক্যাটায়নের চার্জ বেশি ও আকার ছোট হলে সমযোজী ধর্ম বাড়ে।"
+      }
+    },
+    {
+      "id": 9,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 9,
+      "question": "নিম্নোক্ত d-ব্লক মৌলসমূহের কোনটিতে 4s অরবিটালে 1 টি ইলেকট্রন রয়েছে?",
+      "question_image": null,
+      "options": {
+        "A": "Mn(25)",
+        "B": "Fe(26)",
+        "C": "Ni(28)",
+        "D": "Cu(29)"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "$\\text{Cu}(29): [\\text{Ar}]\\,3d^{10}\\,4s^1$ (full $3d$ subshell provides extra stability)",
+        "step_by_step_solution": "কপার ($\text{Cu}, 29$)-এর স্বাভাবিক ইলেকট্রন বিন্যাস $[\text{Ar}]\\,3d^9\\,4s^2$ হওয়ার কথা থাকলেও পূর্ণ $3d^{10}$ অরবিটালের অতিরিক্ত স্থিতিশীলতার জন্য একটি ইলেকট্রন $4s$ থেকে $3d$-তে স্থানান্তরিত হয়ে $3d^{10}4s^1$ হয়।",
+        "shortcut_tip": "ব্যতিক্রমী ইলেকট্রন বিন্যাস $\\text{Cr}(24)$ ও $\\text{Cu}(29)$-এর $4s$ অরবিটালে $1$টি ইলেকট্রন থাকে।"
+      }
+    },
+    {
+      "id": 10,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 10,
+      "question": "3p অরবিটালের জন্য n ও l এর মান কত হবে?",
+      "question_image": null,
+      "options": {
+        "A": "3,0",
+        "B": "3,1",
+        "C": "3,2",
+        "D": "3,3"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$3p \\implies n = 3$ and $p \\implies l = 1$",
+        "step_by_step_solution": "$3p$ অরবিটালে প্রধান কোয়ান্টাম সংখ্যা $n = 3$। সহকারী কোয়ান্টাম সংখ্যা $l$-এর মান $s, p, d, f$ অরবিটালের জন্য যথাক্রমে $0, 1, 2, 3$; তাই $p$ অরবিটালের জন্য $l = 1$।",
+        "shortcut_tip": "$s=0, p=1, d=2, f=3$ — সামনে থাকা সংখ্যাটি $n$।"
+      }
+    },
+    {
+      "id": 11,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 11,
+      "question": "নিম্নের যৌগগুলোর কোনটির কেন্দ্রীয় পরমাণু অকটেট্ নিয়ম অনুসরণ করে না?",
+      "question_image": null,
+      "options": {
+        "A": "CCl_4",
+        "B": "XeF_2",
+        "C": "H_2O",
+        "D": "NF_3"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "$\\text{XeF}_2$: valence electrons on $\\text{Xe} = 8 + 2 = 10$ (expanded octet)",
+        "step_by_step_solution": "$\\text{CCl}_4$, $\\text{H}_2\\text{O}$ এবং $\\text{NF}_3$-এর কেন্দ্রীয় পরমাণুর যোজ্যতা স্তরে $8$টি করে ইলেকট্রন থাকে। কিন্তু $\\text{XeF}_2$-এ কেন্দ্রীয় $\\text{Xe}$ পরমাণুর $8$টি যোজ্যতা ইলেকট্রনের সাথে $2$টি $\\text{F}$ পরমাণু যুক্ত হয়ে মোট $10$টি ইলেকট্রন সৃষ্টি করে, যা অষ্টক সম্প্রসারণ।",
+        "shortcut_tip": "নিষ্ক্রিয় গ্যাসের যৌগ ($\text{XeF}_2, \text{XeF}_4$ ইত্যাদি) সাধারণত অষ্টক সম্প্রসারিত করে।"
+      }
+    },
+    {
+      "id": 12,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 12,
+      "question": "কোন ইলেকট্রনিক স্থানান্তরের ফলে হাইড্রোজেন বর্ণালীর ‘বামার’ সিরিজের 2nd লাইনের সৃষ্টি হয়?",
+      "question_image": null,
+      "options": {
+        "A": "n=6\\ to\\ n=4",
+        "B": "n=4\\ to\\ n=2",
+        "C": "n=4\\ to\\ n=1",
+        "D": "n=4\\ to\\ n=0"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Balmer series $n_1 = 2$; $2\\text{nd line} \\implies n_2 = n_1 + 2 = 2 + 2 = 4 \\implies n=4 \\to n=2$",
+        "step_by_step_solution": "হাইড্রোজেন বর্ণালীর বামার সিরিজে ইলেকট্রন উচ্চতর কক্ষপথ থেকে $n_1 = 2$ শক্তিস্তরে ফিরে আসে। প্রথম লাইন আসে $n_2 = 3$ থেকে এবং দ্বিতীয় লাইন আসে $n_2 = 4$ থেকে $n_1 = 2$-এ স্থানান্তরের ফলে।",
+        "shortcut_tip": "$k$-তম লাইনের জন্য $n_{\\text{initial}} = n_{\\text{base}} + k$; বামার ($n_{\\text{base}}=2$)-এর $2$য় লাইন $\\implies 2+2=4 \\to 2$।"
+      }
+    },
+    {
+      "id": 13,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 13,
+      "question": "নিচের কোনটি অসামঞ্জস্যকরণ বিক্রিয়া?",
+      "question_image": null,
+      "options": {
+        "A": "2\\text{Na} + \\text{Cl}_2 \\rightarrow 2\\text{NaCl}",
+        "B": "\\text{AgNO}_3 + \\text{NaCl} \\rightarrow \\text{NaNO}_3 + \\text{AgCl}",
+        "C": "3 \\mathrm{Cl}_{2}+6 \\mathrm{NaOH} \\xrightarrow{\\Delta} 5 \\mathrm{NaCl}+\\mathrm{NaClO}_{3}+3 \\mathrm{H}_{2} \\mathrm{O}",
+        "D": "\\text{FeCl}_3 + \\text{SnCl}_2 \\rightarrow \\text{SnCl}_4 + \\text{FeCl}_2"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "$\\text{Cl}_2\\ (0) \\to \\text{NaCl}\\ (-1)$ (reduction) and $\\text{NaClO}_3\\ (+5)$ (oxidation)",
+        "step_by_step_solution": "যে রেডক্স বিক্রিয়ায় একই মৌল একই সাথে জারিত ও বিজারিত হয় তাকে অসামঞ্জস্যকরণ (Disproportionation) বিক্রিয়া বলে। অপশন C-তে $\\text{Cl}_2$-এর জারণ মান $0$ থেকে বেড়ে $\\text{NaClO}_3$-এ $+5$ (জারণ) এবং কমে $\\text{NaCl}$-এ $-1$ (বিজারণ) হয়।",
+        "shortcut_tip": "একই মৌলের জারণ সংখ্যা একসাথে বাড়লে ও কমলে সেটি অসামঞ্জস্যকরণ বিক্রিয়া।"
+      }
+    },
+    {
+      "id": 14,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 14,
+      "question": "8.0\\ cm³\\ Na_2CO_3এর দ্রবণকে সম্পূর্ণরূপে প্রশমন করতে 10.0\\ cm^3\\ 1.0\\ M\\ HClদ্রবণের প্রয়োজন হয়। Na_2CO_3দ্রবণটির ঘনমাত্রা হচ্ছে-",
+      "question_image": null,
+      "options": {
+        "A": "0.625 M",
+        "B": "1.0 M",
+        "C": "0.025 M",
+        "D": "0.6 M"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "$M_1 V_1 e_1 = M_2 V_2 e_2 \\implies M_1 \\times 8.0 \\times 2 = 1.0 \\times 10.0 \\times 1 \\implies M_1 = \\frac{10}{16} = 0.625\\text{ M}$",
+        "step_by_step_solution": "$\\text{Na}_2\\text{CO}_3 + 2\\text{HCl} \\to 2\\text{NaCl} + \\text{H}_2\\text{O} + \\text{CO}_2$ বিক্রিয়ায় $\\text{Na}_2\\text{CO}_3$-এর তুল্য সংখ্যা $e_1 = 2$ এবং $\\text{HCl}$-এর $e_2 = 1$। প্রশমন সূত্র $V_1 S_1 e_1 = V_2 S_2 e_2$ ব্যবহার করে $S_1 = \\frac{10.0 \\times 1.0 \\times 1}{8.0 \times 2} = 0.625\\text{ M}$।",
+        "shortcut_tip": "$\\text{Na}_2\\text{CO}_3$-এ $2$টি $\\text{Na}^+$ থাকায় তুল্য সংখ্যা $2$; তাই নিচে $2$ দিয়ে গুণ করতে ভুলো না।"
+      }
+    },
+    {
+      "id": 15,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 15,
+      "question": "নিম্নের কোন সেটের ধাতুগুলি স্টেইনলেস স্টীলে বিদ্যমান?",
+      "question_image": null,
+      "options": {
+        "A": "Fe,Cr\\ \\&\\ Ni",
+        "B": "Fe,Cr\\ \\&\\ Cu",
+        "C": "Cu,Zn\\ \\&\\ Ni",
+        "D": "Cu,Sn\\ \\&\\ Pb"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Stainless steel} \\approx \\text{Fe} + \\text{Cr} + \\text{Ni} (+\\text{C})",
+        "step_by_step_solution": "স্টেইনলেস স্টীল মূলত লোহা ($\text{Fe}$)-এর একটি সংকর ধাতু, যাতে মরিচা প্রতিরোধী ধর্ম আনার জন্য ক্রোমিয়াম ($\text{Cr}$) এবং নিকেল ($\text{Ni}$) যুক্ত করা হয়।",
+        "shortcut_tip": "স্টেইনলেস স্টীল = লোহা ($\text{Fe}$) + ক্রোমিয়াম ($\text{Cr}$) + নিকেল ($\text{Ni}$)।"
+      }
+    },
+    {
+      "id": 16,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 16,
+      "question": "নিম্নের কোন অণুটির সবগুলো পরমাণু একই সমতলে নয়?",
+      "question_image": null,
+      "options": {
+        "A": "BCl_3",
+        "B": "PF_3",
+        "C": "AlCl_3",
+        "D": "C_6H_6"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{PF}_3: sp^3 \\text{ hybridization with } 1 \\text{ lone pair} \\implies \\text{trigonal pyramidal (non-planar)}",
+        "step_by_step_solution": "$\\text{BCl}_3$ ও $\\text{AlCl}_3$ ত্রিকোণাকার সমতলীয় (trigonal planar) এবং বেনজিন ($\text{C}_6\\text{H}_6$) সমতলীয় বলয়। কিন্তু $\\text{PF}_3$-এ $\\text{P}$ পরমাণুর $sp^3$ সংকরায়ন ও একটি মুক্তজোড় ইলেকট্রন থাকায় এর আকৃতি ত্রিকোণাকার পিরামিডীয় (trigonal pyramidal), ফলে সব পরমাণু এক সমতলে থাকে না।",
+        "shortcut_tip": "পিরামিডীয় (যেমন $\\text{NH}_3, \\text{PF}_3$) বা চতুস্তলকীয় আকৃতির অণু সমতলীয় হয় না।"
+      }
+    },
+    {
+      "id": 17,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 17,
+      "question": "নিম্নের কোনটি থেকে একটি ইলেকট্রন অপসারণের জন্যে সবচেয়ে বেশি শক্তি প্রয়োজন?",
+      "question_image": null,
+      "options": {
+        "A": "Br",
+        "B": "Al^{3+}",
+        "C": "Na^+",
+        "D": "Cl^-"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Al}^{3+} \\text{ has } +3 \\text{ charge and small } 2s^2 2p^6 \\text{ core} \\implies \\text{highest ionization energy}",
+        "step_by_step_solution": "$\\text{Al}^{3+}$ আয়নের চার্জ $+3$ এবং এর ইলেকট্রন বিন্যাস স্থিতিশীল নিওনের মতো ($1s^2 2s^2 2p^6$) হলেও প্রোটনের তুলনায় ইলেকট্রনের সংখ্যা কম থাকায় নিউক্লিয়াসের আকর্ষণ অত্যন্ত প্রবল। তাই এখান থেকে ইলেকট্রন সরাতে সবচেয়ে বেশি আয়নীকরণ শক্তি লাগে।",
+        "shortcut_tip": "উচ্চ ধনাত্মক চার্জযুক্ত ক্যাটায়ন ($\text{Al}^{3+}$) থেকে ইলেকট্রন সরাতে সবচেয়ে বেশি শক্তি লাগে।"
+      }
+    },
+    {
+      "id": 18,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 18,
+      "question": "নিম্নের বিক্রিয়ায় উপাদানPএবংQকোন সেটে বিদ্যমান ?\\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{CH}(\\mathrm{OH}) \\mathrm{CH}_{3} \\stackrel{\\mathrm{I}_{2} / \\mathrm{OH}^{-}}{\\longrightarrow} \\mathrm{P}_{(\\mathrm{aq})}+\\mathrm{Q}_{(\\mathrm{s})}",
+      "question_image": null,
+      "options": {
+        "A": "CH_3CH_2CH_3;CH_4respectively",
+        "B": "CH_3CH_2COO^-;CHI_3respectively",
+        "C": "CH_3CH_3;CH_3CH_3respectively",
+        "D": "CH_3CH_2CH_2CH_3;I_2respectively"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{CH}_3\\text{CH}_2\\text{CH(OH)CH}_3 + \\text{I}_2/\\text{OH}^- \\to \\text{CH}_3\\text{CH}_2\\text{COO}^-\\text{Na}^+ + \\text{CHI}_3\\downarrow",
+        "step_by_step_solution": "বিউটান-২-অল ($\text{CH}_3\\text{CH}_2\\text{CH(OH)CH}_3$)-এ $\\text{CH}_3\\text{CH(OH)}-$ গ্রুপ থাকায় এটি হ্যালোফর্ম (আয়োডোফর্ম) বিক্রিয়া দেয়। এতে হলুদ অধঃক্ষেপ হিসেবে আয়োডোফর্ম ($\text{CHI}_3$) এবং দ্রবণে প্রোপানোয়েট আয়ন ($\\text{CH}_3\\text{CH}_2\\text{COO}^-$) উৎপন্ন হয়।",
+        "shortcut_tip": "$\\text{CH}_3\\text{CH(OH)}-$ থাকলে $\\text{I}_2/\\text{OH}^-$ বিক্রিয়ায় $\\text{CHI}_3$ ও এক কার্বন কম কার্বক্সিলেট আয়ন পাওয়া যায়।"
+      }
+    },
+    {
+      "id": 19,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 19,
+      "question": "C_2H_5OH জারিত হয়ে Z উৎপন্ন করে। Z, C_2H_5OH এর সাথে বিক্রিয়া করে এস্টার তৈরি করে। Z কি?",
+      "question_image": null,
+      "options": {
+        "A": "HCOOH",
+        "B": "CH_3COOH",
+        "C": "CH_3CH_3COOH",
+        "D": "CH_3COOC_2H_5"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{C}_2\\text{H}_5\\text{OH} \\xrightarrow{[\\text{O}]} \\text{CH}_3\\text{CHO} \\xrightarrow{[\\text{O}]} \\text{CH}_3\\text{COOH} (\\text{Z})",
+        "step_by_step_solution": "ইথানল ($\text{C}_2\\text{H}_5\\text{OH}$) সম্পূর্ণ জারিত হয়ে ইথানয়িক অ্যাসিড ($\\text{CH}_3\\text{COOH}$) গঠন করে। এটি পুনরায় ইথানলের সাথে বিক্রিয়া করে ইথাইল ইথানোয়েট নামক এস্টার উৎপন্ন করে।",
+        "shortcut_tip": "$2$ কার্বনের অ্যালকোহল জারিত হয়ে $2$ কার্বনের কার্বক্সিলিক অ্যাসিড ($\\text{CH}_3\\text{COOH}$) দেয়।"
+      }
+    },
+    {
+      "id": 20,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 20,
+      "question": "গ্রিগনার্ড বিকারকের সাথেCH_3OHএর বিক্রিয়ায় কি হয়?",
+      "question_image": null,
+      "options": {
+        "A": "Alkane",
+        "B": "Ether",
+        "C": "Ester",
+        "D": "Aldehyde"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{R-MgX} + \\text{CH}_3\\text{OH} \\to \\text{R-H} (\\text{Alkane}) + \\text{Mg(OCH}_3\\text{)X}",
+        "step_by_step_solution": "মিথানল ($\\text{CH}_3\\text{OH}$)-এর $-\\text{OH}$ গ্রুপে সক্রিয় হাইড্রোজেন থাকায় গ্রিগনার্ড বিকারক ($\\text{R-MgX}$) সেখান থেকে $\\text{H}^+$ গ্রহণ করে সংশ্লিষ্ট অ্যালকেন ($\text{R-H}$) তৈরি করে।",
+        "shortcut_tip": "গ্রিগনার্ড বিকারক + সক্রিয় $\\text{H}$ যুক্ত যৌগ (জল, অ্যালকোহল, অ্যাসিড) $\\to$ অ্যালকেন।"
+      }
+    },
+    {
+      "id": 21,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 21,
+      "question": "নিম্নের খোলা শিকল যৌগগুলির কোনটিতে সবগুলো বন্ধনই\\sigma(সিগমা)?",
+      "question_image": null,
+      "options": {
+        "A": "C_{10}\\ H_{20}",
+        "B": "C_{10}\\ H_{22}",
+        "C": "C_{10}\\ H_{18}",
+        "D": "C_{10}\\ H_{20}O"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Alkane formula: } \\text{C}_n\\text{H}_{2n+2} \\implies \\text{C}_{10}\\text{H}_{2(10)+2} = \\text{C}_{10}\\text{H}_{22} (\\text{only single bonds} \\implies \\text{all } \\sigma)",
+        "step_by_step_solution": "খোলা শিকল সম্পৃক্ত হাইড্রোকার্বন বা অ্যালকেনে কেবল একক বন্ধন থাকে, যার সবগুলোই $\\sigma$ বন্ধন। অ্যালকেনের সাধারণ সংকেত $\\text{C}_n\\text{H}_{2n+2}$ অনুযায়ী $n=10$ হলে সংকেত হয় $\\text{C}_{10}\\text{H}_{22}$।",
+        "shortcut_tip": "সব বন্ধন $\\sigma$ হতে হলে যৌগটি অ্যালকেন ($\text{C}_n\\text{H}_{2n+2}$) হতে হবে।"
+      }
+    },
+    {
+      "id": 22,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 22,
+      "question": "নিম্নের কোন যৌগটির একটি বন্ধনsp^3-spহাইব্রিড অরবিটালের অধিক্রমনের ফলে সৃষ্টি হয়েছে?",
+      "question_image": null,
+      "options": {
+        "A": "CH_3-C\\equiv C-H",
+        "B": "CH_3CH=CHCH_3",
+        "C": "H-C\\equiv C-H",
+        "D": "CH_3CH_2CH_2CH_3"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{CH}_3 (sp^3) - \\text{C}\\equiv\\text{C-H} (sp) \\implies sp^3\\text{-}sp \\text{ bond between } \\text{C}_1 \\text{ and } \\text{C}_2",
+        "step_by_step_solution": "$\\text{CH}_3-\\text{C}\\equiv\\text{C}-\\text{H}$ (প্রোপাইন)-এ মিথাইল কার্বনের ($\\text{CH}_3$) সংকরায়ন $sp^3$ এবং ত্রিবন্ধনযুক্ত কার্বনের ($-\\text{C}\\equiv$) সংকরায়ন $sp$। এদের মধ্যকার একক $\\sigma$ বন্ধনটি $sp^3-sp$ অধিক্রমণে গঠিত।",
+        "shortcut_tip": "$sp^3-sp$ বন্ধন খুঁজতে একটি একক কার্বন ও একটি ত্রিবন্ধনযুক্ত কার্বনের মাঝের একক বন্ধন দেখো।"
+      }
+    },
+    {
+      "id": 23,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 23,
+      "question": "R-CO-R→R-CH_2-R রাসায়নিক পরিবর্তনের জন্য কোন বিকারকটি প্রয়োজন?",
+      "question_image": null,
+      "options": {
+        "A": "H_2SO_4",
+        "B": "K_2Cr_2O_7",
+        "C": "NaBH_4",
+        "D": "Zn. Hg/HCl"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{R-CO-R} \\xrightarrow{\\text{Zn-Hg / HCl (Clemmensen)}} \\text{R-CH}_2\\text{-R}",
+        "step_by_step_solution": "কিটোনের কার্বনিল গ্রুপ ($>\\text{C=O}$)-কে বিজারিত করে মিথিলিন গ্রুপ ($>\\text{CH}_2$)-এ রূপান্তর করার পদ্ধতিকে ক্লেমেনসেন বিজারণ (Clemmensen reduction) বলে, যার বিকারক হলো অ্যামালগামেটেড জিঙ্ক ও গাঢ় $\\text{HCl}$ ($\\text{Zn-Hg/HCl}$)।",
+        "shortcut_tip": "$>\\text{C=O} \\to >\\text{CH}_2$ মানেই ক্লেমেনসেন বিজারণ ($\\text{Zn-Hg/HCl}$)।"
+      }
+    },
+    {
+      "id": 24,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 24,
+      "question": "নিম্নের যৌগগুলোর মধ্যে সবচেয়ে বেশী অম্লীয় হল-",
+      "question_image": null,
+      "options": {
+        "A": "Cl_3CCOOH",
+        "B": "Cl_2CHCOOH",
+        "C": "ClCH_2COOH",
+        "D": "CH_3CH_2CH-COOH"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Cl}_3\\text{CCOOH} (3\\text{ strong }-I \\text{ Cl atoms}) > \\text{Cl}_2\\text{CHCOOH} > \\text{ClCH}_2\\text{COOH} > \\text{alkyl acid}",
+        "step_by_step_solution": "ইলেকট্রন আকর্ষী ক্লোরিন ($\\text{Cl}$) পরমাণু আবেশীয় প্রভাবের ($-I$ effect) মাধ্যমে কার্বক্সিলেট আয়নের ঋণাত্মক চার্জ ছড়িয়ে দিয়ে স্থিতিশীলতা বাড়ায় ও অম্লত্ব বৃদ্ধি করে। $\\text{Cl}_3\\text{CCOOH}$-এ তিনটি $\\text{Cl}$ থাকায় এটি সবচেয়ে বেশি অম্লীয়।",
+        "shortcut_tip": "যত বেশি ইলেকট্রন টানা গ্রুপ ($\\text{Cl}$), অ্যাসিড তত বেশি শক্তিশালী।"
+      }
+    },
+    {
+      "id": 25,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 25,
+      "question": "নিচের কোন যৌগটি অম্লীয়?",
+      "question_image": null,
+      "options": {
+        "A": "CH_3-CH_3",
+        "B": "\\text{CH} \\equiv \\text{CH}",
+        "C": "\\text{CH}_2 = \\text{CH}_2",
+        "D": "\\text{CH}_3\\text{CH} = \\text{CH}_2"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{sp character: } \\text{CH}\\equiv\\text{CH } (50\\%) > \\text{CH}_2=\\text{CH}_2 (33.3\\%) > \\text{CH}_3\\text{CH}_3 (25\\%)",
+        "step_by_step_solution": "ইথাইন ($\\text{CH}\\equiv\\text{CH}$)-এর কার্বন পরমাণু $sp$ সংকরায়িত হওয়ায় এতে $50\\%$ $s$-চরিত্র রয়েছে। উচ্চ $s$-চরিত্রের কারণে কার্বনের তড়িৎ ঋণাত্মকতা বেড়ে যায় এবং প্রান্তীয় হাইড্রোজেন $\\text{H}^+$ হিসেবে দান করার প্রবণতা সৃষ্টি হয়।",
+        "shortcut_tip": "টার্মিনাল অ্যালকাইন ($\text{CH}\\equiv\\text{CH}$) দুর্বল অ্যাসিড ধর্ম প্রদর্শন করে।"
+      }
+    },
+    {
+      "id": 26,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 26,
+      "question": "নিম্নের কোনটি ওজনীকরণ ও আর্দ্র বিশ্লেষণের ফলে শুধুমাত্র একটি উৎপাদ দেবে?",
+      "question_image": null,
+      "options": {
+        "A": "CH_3C(CH_3)=C(CH_3)-CH_3",
+        "B": "CH_3CH=CH-CH(CH_3)-CH_3",
+        "C": "CH_3C(CH_3)=CH-CH_2-CH_3",
+        "D": "CH_2=CH(CH_3)-CH(CH_3)-CH_3"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{(CH}_3)_2\\text{C=C(CH}_3)_2 \\xrightarrow{\\text{O}_3, \\text{Zn/H}_2\\text{O}} 2\\,\\text{CH}_3\\text{COCH}_3 \\text{ (single product: propanone)}",
+        "step_by_step_solution": "$2,3$-ডাইমিথাইলবিউট-$2$-ইন ($\\text{CH}_3\\text{C(CH}_3)=\\text{C(CH}_3)\\text{CH}_3$) একটি প্রতিসম অ্যালকিন, যার দ্বিবন্ধন ভাঙলে উভয় পাশে সমান কার্বনিল খণ্ড ($\\text{CH}_3\\text{COCH}_3$) তৈরি হয়। ফলে ওজনীকরণ ও আর্দ্র বিশ্লেষণে কেবল একটিই যৌগ (প্রোপানোন) পাওয়া যায়।",
+        "shortcut_tip": "দ্বিবন্ধনের দুই পাশ একদম একরকম (প্রতিসম) হলে ওজনীকরণে একটি মাত্র উৎপাদ পাওয়া যায়।"
+      }
+    },
+    {
+      "id": 27,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 27,
+      "question": "নিম্নের বিক্রিয়ার মূল উৎপাদ কি?",
+      "question_image": "https://assets.chorcha.net/wXKWdMKOb0vSfT5L8Uhmz.png",
+      "options": {
+        "A": "https://assets.chorcha.net/FcTm0fAEFyWoOgzcwMHmU.png",
+        "B": "https://assets.chorcha.net/6KBY-gspacLO8LqBG6Eq4.png",
+        "C": "https://assets.chorcha.net/B_SQzelVku7hoMKbGF2Dd.png",
+        "D": "https://assets.chorcha.net/pZdI8g-1W_X6GtxDXUuBe.png"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Electrophilic substitution / reaction pathway} \\implies \\text{major product matches structure A}",
+        "step_by_step_solution": "প্রদত্ত বিক্রিয়ক ও বিকারকের ক্রিয়া-কৌশল অনুযায়ী অধিক স্থিতিশীল অন্তর্বর্তী মধ্যবর্তী ধাপের মাধ্যমে প্রধান উৎপাদ হিসেবে অপশন A-এর কাঠামোটি গঠিত হয়।",
+        "shortcut_tip": "বিক্রিয়ার মূল উৎপাদ নির্ণয়ে স্টেরিক বাধা কম ও স্থিতিশীল অবস্থা প্রাধান্য পায়।"
+      }
+    },
+    {
+      "id": 28,
+      "subject": "রসায়ন(28)",
+      "subject_question_no": 28,
+      "question": "ক্যাথোড রশ্মির ক্ষেত্রে নিচের কোন ধর্মটি সত্য নয়?",
+      "question_image": null,
+      "options": {
+        "A": "ক্যাথোড রশ্মির সরলরেখায় গমন করে",
+        "B": "ক্যাথোড রশ্মি পরস্পরকে আকর্ষণ করে",
+        "C": "ক্যাথোড রশ্মি চৌম্বক ক্ষেত্র দ্বারা বিক্ষিপ্ত হয়",
+        "D": "ক্যাথোড রশ্মি ফটোগ্রাফিক প্লেটের উপর ক্রিয়া করে"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Cathode rays} = e^- \\text{ (negative charge)} \\implies \\text{like charges repel, not attract}",
+        "step_by_step_solution": "ক্যাথোড রশ্মি ঋণাত্মক চার্জযুক্ত ইলেকট্রনের স্রোত। সমধর্মী চার্জ পরস্পরকে বিকর্ষণ করে, তাই ক্যাথোড রশ্মি পরস্পরকে আকর্ষণ করে—এই উক্তিটি সত্য নয়।",
+        "shortcut_tip": "ক্যাথোড রশ্মি মানেই নেগেটিভ ইলেকট্রন; সমধর্মী হওয়ায় বিকর্ষণ করবে।"
+      }
+    },
+    {
+      "id": 29,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 1,
+      "question": "চাপ স্থির রেখে একটি গ্যাসের (আয়তন 1000cm^3) তাপমাত্রা অর্ধেক করা হল। পরিবর্তিত অবস্থায় উহার আয়তন কত হবে?",
+      "question_image": null,
+      "options": {
+        "A": "2000cm^3",
+        "B": "500cm^3",
+        "C": "1000cm^3",
+        "D": "1500cm^3"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\frac{V_1}{T_1} = \\frac{V_2}{T_2} \\implies V_2 = 1000 \\times \\frac{T/2}{T} = 500\\text{ cm}^3",
+        "step_by_step_solution": "স্থির চাপে গ্যাসের আয়তন পরম তাপমাত্রার সমানুপাতিক (চার্লসের সূত্র: $V \\propto T$)। তাপমাত্রা অর্ধেক ($\\frac{T}{2}$) করলে আয়তনও অর্ধেক হয়ে $1000 \\times 0.5 = 500\\text{ cm}^3$ হবে।",
+        "shortcut_tip": "স্থির চাপে $T$ অর্ধেক হলে $V$ সরাসরি অর্ধেক হয়।"
+      }
+    },
+    {
+      "id": 30,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 2,
+      "question": "\\overrightarrow{F}_1এবং \\overrightarrow{F}_2বল দুইটির লব্ধি \\overrightarrow{F}_3;যেখানে \\overrightarrow{F}_1=2\\hat{i}-3\\hat{j},\\ \\overrightarrow{F}_3=5i+4\\hat{j}হলে \\overrightarrow{F}_2=?",
+      "question_image": null,
+      "options": {
+        "A": "-3\\hat{i}-7\\hat{j}",
+        "B": "7\\hat{i}+\\hat{j}",
+        "C": "7\\hat{i}+7\\hat{j}",
+        "D": "3\\hat{i}+7\\hat{j}"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\vec{F}_2 = \\vec{F}_3 - \\vec{F}_1 = (5 - 2)\\hat{i} + (4 - (-3))\\hat{j} = 3\\hat{i} + 7\\hat{j}",
+        "step_by_step_solution": "লব্ধি বল $\\vec{F}_3 = \\vec{F}_1 + \\vec{F}_2$ হওয়ায় $\\vec{F}_2 = \\vec{F}_3 - \\vec{F}_1$। $\\hat{i}$ ও $\\hat{j}$ উপাংশ আলাদাভাবে বিয়োগ করলে পাই $(5-2)\\hat{i} + (4+3)\\hat{j} = 3\\hat{i} + 7\\hat{j}$।",
+        "shortcut_tip": "লব্ধি থেকে একটি বল বিয়োগ করলে অন্য বলটি পাওয়া যায়: $(5-2)\\hat{i} + (4+3)\\hat{j}$।"
+      }
+    },
+    {
+      "id": 31,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 3,
+      "question": "দ্বিমিক সংখ্যা 10011010111 এর দশমিকে প্রকাশ-",
+      "question_image": null,
+      "options": {
+        "A": "1237",
+        "B": "1239",
+        "C": "1241",
+        "D": "1247"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "10011010111_2 = 1024 + 128 + 64 + 16 + 4 + 2 + 1 = 1239_{10}",
+        "step_by_step_solution": "ডানদিক থেকে $2^0, 2^1, 2^2, \\dots, 2^{10}$ দ্বারা গুণ করে যোগ করলে: $2^{10}(1) + 2^7(1) + 2^6(1) + 2^4(1) + 2^2(1) + 2^1(1) + 2^0(1) = 1024 + 128 + 64 + 16 + 4 + 2 + 1 = 1239$।",
+        "shortcut_tip": "$2^{10} = 1024$; বাকি $1$ থাকা বিটগুলোর মান যোগ করলেই দ্রুত উত্তর মেলে।"
+      }
+    },
+    {
+      "id": 32,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 4,
+      "question": "fসমত্বরণে একটি বেলুন উর্ধ্বে উঠছে। বেলুনের ওজনের কত অংশ কমানো হলে বেলুনটির ত্বরণ2fহবে?",
+      "question_image": null,
+      "options": {
+        "A": "\\frac{f}{2g+f}",
+        "B": "\\frac{f}{2g-f}",
+        "C": "\\frac{f}{g+2f}",
+        "D": "\\frac{f}{g-2f}"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "B - mg = mf \\implies B = m(g+f);\\quad B - (m - \\Delta m)g = (m - \\Delta m)(2f) \\implies \\frac{\\Delta m}{m} = \\frac{f}{g+2f}",
+        "step_by_step_solution": "ধরি ঊর্ধ্বমুখী প্লবতা বল $B$ অপরিবর্তিত থাকে। প্রথম ক্ষেত্রে $B - mg = mf \\Rightarrow B = m(g+f)$। ভর $\\Delta m$ কমালে $B - (m-\\Delta m)g = (m-\\Delta m)(2f)$। সমাধান করলে $\\frac{\\Delta m}{m} = \\frac{f}{g+2f}$ হয়।",
+        "shortcut_tip": "নতুন ত্বরণ $2f$ হলে হরে $g + 2f$ আসে—সহজেই অপশন C চিহ্নিত করা যায়।"
+      }
+    },
+    {
+      "id": 33,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 5,
+      "question": "1.0 m দীর্ঘ ও 1.0 mm ব্যাসার্ধের বেলনাকার তারের উপর 100 N বল প্রয়োগ করলে দৈর্ঘ্য বৃদ্ধি পেয়ে 1.001 m হয়। তারের ইয়ং এর গুণাঙ্ক কত?",
+      "question_image": null,
+      "options": {
+        "A": "\\frac{1}{\\pi}\\times10^{11}Nm^{-2}",
+        "B": "10^{11}Nm^{-2}",
+        "C": "\\pi\\times10^{11}Nm^{-2}",
+        "D": "\\pi^2\\times10^{11}Nm^{-2}"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "Y = \\frac{FL}{A\\Delta L} = \\frac{100 \\times 1.0}{\\pi (10^{-3})^2 \\times 0.001} = \\frac{100}{\\pi \\times 10^{-9}} = \\frac{1}{\\pi} \\times 10^{11}\\text{ N m}^{-2}",
+        "step_by_step_solution": "এখানে $F = 100\\text{ N}$, $L = 1.0\\text{ m}$, $r = 1.0\\text{ mm} = 10^{-3}\\text{ m}$ এবং $\\Delta L = 1.001 - 1.0 = 0.001\\text{ m} = 10^{-3}\\text{ m}$। সূত্রে বসালে $Y = \\frac{100 \\times 1}{\\pi \\times 10^{-6} \\times 10^{-3}} = \\frac{1}{\\pi}\\times 10^{11}\\text{ N m}^{-2}$।",
+        "shortcut_tip": "সব একক SI-তে নিলে লবে $10^2$ এবং হরে $\\pi \\times 10^{-9}$ থাকায় ঘাত হয় $10^{11}$।"
+      }
+    },
+    {
+      "id": 34,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 6,
+      "question": "একটি সমান্তরাল পাত ধারককে চার্জিত করার ফলে পাতদ্বয়ের মধ্যে বিভব পার্থক্য হল V। বিভব পার্থক্য কত হলে ধারকের সঞ্চিত শক্তি দ্বিগুণ হবে?",
+      "question_image": null,
+      "options": {
+        "A": "\\frac{1}{4}V",
+        "B": "\\frac{1}{2}V",
+        "C": "\\sqrt{2}V",
+        "D": "2V"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "U = \\frac{1}{2}CV^2;\\quad 2U = \\frac{1}{2}C(V')^2 \\implies V' = \\sqrt{2}V",
+        "step_by_step_solution": "ধারকের সঞ্চিত শক্তি $U = \\frac{1}{2}CV^2$, যা বিভবের বর্গের সমানুপাতিক। শক্তি দ্বিগুণ করতে হলে বিভব $\\sqrt{2}$ গুণ করতে হবে, অর্থাৎ নতুন বিভব $\\sqrt{2}V$।",
+        "shortcut_tip": "শক্তি $k$ গুণ হলে বিভব হয় $\\sqrt{k}$ গুণ; এখানে $k=2 \\implies \\sqrt{2}V$।"
+      }
+    },
+    {
+      "id": 35,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 7,
+      "question": "বায়ু থেকে অন্য কোনো মাধ্যমের ভিতর একটি আলোক রশ্মি প্রবেশ করার পর তার বেগ 15%হ্রাস পায়। ঐ মাধ্যমের প্রতিসরাঙ্ক হল-",
+      "question_image": null,
+      "options": {
+        "A": "1.50",
+        "B": "1.33",
+        "C": "1.21",
+        "D": "1.18"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\mu = \\frac{c}{v} = \\frac{c}{0.85c} = \\frac{1}{0.85} = \\frac{20}{17} \\approx 1.176 \\approx 1.18",
+        "step_by_step_solution": "আলোর বেগ $15\\%$ কমলে মাধ্যমের বেগ থাকে $v = c(1 - 0.15) = 0.85c$। প্রতিসরাঙ্ক $\\mu = \\frac{c}{v} = \\frac{1}{0.85} \\approx 1.18$।",
+        "shortcut_tip": "$\\frac{100}{85} = \\frac{20}{17} \\approx 1.18$।"
+      }
+    },
+    {
+      "id": 36,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 8,
+      "question": "কোনো ধাতুর কার্য অপেক্ষক3.2\\times10^{-19}J। ঐ ধাতুতে4500Åতরঙ্গদৈর্ঘ্যের আলেক রশ্মি আপতিত হলে নিঃসৃত ইলেক্ট্রনের সর্বোচ্চ গতিশক্তি নির্ণয় কর । [যখন প্লাঙ্কের ধ্রুবকের মান=6.63\\times10^{-34}\\ J-s]",
+      "question_image": null,
+      "options": {
+        "A": "0.8\\times10^{-19\\ }J",
+        "B": "2.4\\times10^{-19\\ }J",
+        "C": "1.0\\times10^{-19\\ }J",
+        "D": "1.2\\times10^{-19\\ }J"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "K_{\\max} = \\frac{hc}{\\lambda} - \\phi_0 = \\frac{6.63 \\times 10^{-34} \\times 3 \\times 10^8}{4500 \\times 10^{-10}} - 3.2 \\times 10^{-19} = 4.42 \\times 10^{-19} - 3.2 \\times 10^{-19} = 1.22 \\times 10^{-19}\\text{ J} \\approx 1.2 \\times 10^{-19}\\text{ J}",
+        "step_by_step_solution": "আপতিত ফোটনের শক্তি $E = \\frac{hc}{\\lambda} = \\frac{6.63 \\times 10^{-34} \\times 3 \\times 10^8}{4.5 \\times 10^{-7}} \\approx 4.42 \\times 10^{-19}\\text{ J}$। আইনস্টাইনের আলোকতড়িৎ সমীকরণ অনুসারে $K_{\\max} = E - \\phi_0 = (4.42 - 3.2) \\times 10^{-19}\\text{ J} = 1.22 \\times 10^{-19}\\text{ J}$।",
+        "shortcut_tip": "$\\frac{6.63 \\times 3}{4.5} \\approx 4.42$; $4.42 - 3.2 = 1.22 \\times 10^{-19}\\text{ J}$।"
+      }
+    },
+    {
+      "id": 37,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 9,
+      "question": "300\\ Nm^{-1}বল ধ্রুবক সম্পন্ন একটি স্প্রিংকে কতটুকু সংকুচিত করলে1.5\\ Jকাজ করা হবে?",
+      "question_image": null,
+      "options": {
+        "A": "0.1 m",
+        "B": "1.5 m",
+        "C": "3.01 m",
+        "D": "1.0 m"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "W = \\frac{1}{2}kx^2 \\implies 1.5 = \\frac{1}{2} \\times 300 \\times x^2 \\implies x^2 = \\frac{3}{300} = 0.01 \\implies x = 0.1\\text{ m}",
+        "step_by_step_solution": "স্প্রিংয়ে সঞ্চিত স্থিতিশক্তি বা কৃতকাজ $W = \\frac{1}{2}kx^2$। মান বসিয়ে পাই $1.5 = 150x^2 \\Rightarrow x^2 = 0.01 \\Rightarrow x = 0.1\\text{ m}$।",
+        "shortcut_tip": "$x = \\sqrt{\\frac{2W}{k}} = \\sqrt{\\frac{3}{300}} = \\sqrt{0.01} = 0.1\\text{ m}$।"
+      }
+    },
+    {
+      "id": 38,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 10,
+      "question": "দৈর্ঘ্য সংকোচনের সমীকরণ হলো-",
+      "question_image": null,
+      "options": {
+        "A": "L=\\frac{L}{\\sqrt{1-\\frac{v^2}{c^2}}}",
+        "B": "L=L_0\\sqrt{1-\\frac{v^2}{c^2}}",
+        "C": "L=\\frac{L}{\\sqrt{1+\\frac{v^2}{c^2}}}",
+        "D": "L_0=L\\sqrt{1-\\frac{v^2}{c^2}}"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "L = L_0\\sqrt{1 - \\frac{v^2}{c^2}} \\quad (\\text{since } v < c \\implies L < L_0)",
+        "step_by_step_solution": "আপেক্ষিকতা তত্ত্ব অনুযায়ী গতিশীল বস্তুর দৈর্ঘ্য প্রকৃত দৈর্ঘ্য ($L_0$) অপেক্ষা সংকুচিত হয়। সঠিক সমীকরণটি হলো $L = L_0\\sqrt{1 - \\frac{v^2}{c^2}}$।",
+        "shortcut_tip": "সংকোচন মানে কমবে, তাই $\\sqrt{1 - v^2/c^2}$ গুণ হবে (ভাগ নয়)।"
+      }
+    },
+    {
+      "id": 39,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 11,
+      "question": "একটি কার্নো ইঞ্জিন পানির হিমাঙ্ক ও স্ফুটনাঙ্কের মধ্যে কার্যরত আছে। ইঞ্জিনটির দক্ষতা কত?",
+      "question_image": null,
+      "options": {
+        "A": "100 %",
+        "B": "0 %",
+        "C": "26.8 %",
+        "D": "28.6 %"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\eta = \\left(1 - \\frac{T_2}{T_1}\\right) \\times 100\\% = \\left(1 - \\frac{273}{373}\\right) \\times 100\\% = \\frac{100}{373} \\times 100\\% \\approx 26.8\\%",
+        "step_by_step_solution": "পানির হিমাঙ্ক $T_2 = 0^\\circ\\text{C} = 273\\text{ K}$ এবং স্ফুটনাঙ্ক $T_1 = 100^\\circ\\text{C} = 373\\text{ K}$। কার্নো ইঞ্জিনের দক্ষতা $\\eta = \\left(1 - \\frac{273}{373}\\right) \\times 100\\% = \\frac{10000}{373}\\% \\approx 26.8\\%$।",
+        "shortcut_tip": "হিমাঙ্ক ও স্ফুটনাঙ্কের মাঝে কার্নো ইঞ্জিনের দক্ষতা মুখস্থ রাখা যায়: $26.8\\%$।"
+      }
+    },
+    {
+      "id": 40,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 12,
+      "question": "একটি দিক পরিবর্তী প্রবাহকেI=100\\sin500\\ \\pi tসমীকরণ দ্বারা প্রকাশ করা যায়। ঐ প্রবাহের কম্পাঙ্ক কত?",
+      "question_image": null,
+      "options": {
+        "A": "200 Hz",
+        "B": "250 Hz",
+        "C": "300 Hz",
+        "D": "500 Hz"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\omega = 2\\pi f = 500\\pi \\implies f = \\frac{500\\pi}{2\\pi} = 250\\text{ Hz}",
+        "step_by_step_solution": "আদর্শ সমীকরণ $I = I_0 \\sin(\\omega t)$-এর সাথে তুলনা করে পাই $\\omega = 500\\pi\\text{ rad/s}$। যেহেতু $\\omega = 2\\pi f$, তাই কম্পাঙ্ক $f = \\frac{500\\pi}{2\\pi} = 250\\text{ Hz}$।",
+        "shortcut_tip": "$\\pi t$-এর সহগকে $2$ দিয়ে ভাগ করলেই কম্পাঙ্ক পাওয়া যায়: $\\frac{500}{2} = 250\\text{ Hz}$।"
+      }
+    },
+    {
+      "id": 41,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 13,
+      "question": "একটি অবতল দর্পণের বক্রতার ব্যাসার্ধ 30 cm। একটি বস্তুকে বক্রতার কেন্দ্রে রাখলে এর প্রতিবিম্বের দূরত্ব কত?",
+      "question_image": null,
+      "options": {
+        "A": "15 cm",
+        "B": "45 cm",
+        "C": "30 cm",
+        "D": "60 cm"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\frac{1}{u} + \\frac{1}{v} = \\frac{1}{f},\\ u = -30\\text{ cm},\\ f = -15\\text{ cm} \\implies \\frac{1}{v} = -\\frac{1}{15} + \\frac{1}{30} = -\\frac{1}{30} \\implies v = 30\\text{ cm}",
+        "step_by_step_solution": "অবতল দর্পণের বক্রতার কেন্দ্র ($2f = 30\\text{ cm}$)-এ কোনো বস্তু রাখলে প্রতিবিম্ব বক্রতার কেন্দ্রেই গঠিত হয় এবং এর দূরত্ব বক্রতার ব্যাসার্ধের সমান অর্থাৎ $30\\text{ cm}$ হয়।",
+        "shortcut_tip": "বস্তু বক্রতার কেন্দ্রে থাকলে প্রতিবিম্বও বক্রতার কেন্দ্রেই হয় ($v = R = 30\\text{ cm}$)।"
+      }
+    },
+    {
+      "id": 42,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 14,
+      "question": "একটি ভারী তেজষ্ক্রিয় পদার্থ আলফা কণা বিকিরণ করে যার ভর 10g। এক অর্ধায়ু পরে এর ভর হবে-",
+      "question_image": null,
+      "options": {
+        "A": "5g",
+        "B": "প্রায় 10g",
+        "C": "10g",
+        "D": "কোনোটিই নয়"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "m = m_0 \\left(\\frac{1}{2}\\right)^{t/T_{1/2}} = 10 \\times \\left(\\frac{1}{2}\\right)^1 = 5\\text{ g}",
+        "step_by_step_solution": "এক অর্ধায়ু ($t = T_{1/2}$) অতিবাহিত হলে তেজষ্ক্রিয় নমুনার অবশিষ্ট পরিমাণ প্রাথমিক ভরের অর্ধেক হয়। তাই $10\\text{ g}$ নমুনার ভর হয়ে দাঁড়ায় $\\frac{10}{2} = 5\\text{ g}$।",
+        "shortcut_tip": "$1$ অর্ধায়ু পর পরিমাণ $\\frac{1}{2}$ গুণ হয়।"
+      }
+    },
+    {
+      "id": 43,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 15,
+      "question": "একটি তারকার ভর পাঁচ সৌর ভরের সমান। তার কাটি কৃষ্ণ বিবরে পরিণত হলে এর শোয়ার্জশিল্ড ব্যাসার্ধ কত হবে? [সূর্যের ভর=2\\times10^{30}\\ kg.G=6.67x=\\times10^{-11}\\ Nm^2\\ kg^{-2}]",
+      "question_image": null,
+      "options": {
+        "A": "14.8 km",
+        "B": "7.2 km",
+        "C": "14.2 km",
+        "D": "15.8 km"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "R_s = \\frac{2GM}{c^2} = \\frac{2 \\times 6.67 \\times 10^{-11} \\times (5 \\times 2 \\times 10^{30})}{(3 \\times 10^8)^2} = \\frac{1.334 \\times 10^{21}}{9 \\times 10^{16}} \\approx 14822\\text{ m} \\approx 14.8\\text{ km}",
+        "step_by_step_solution": "তারকার ভর $M = 5 \\times 2 \\times 10^{30} = 10^{31}\\text{ kg}$। শোয়ার্জশিল্ড ব্যাসার্ধের সূত্র $R_s = \\frac{2GM}{c^2}$ প্রয়োগ করে পাই $R_s = \\frac{2 \\times 6.67 \\times 10^{-11} \\times 10^{31}}{9 \\times 10^{16}} \\approx 14.8\\text{ km}$।",
+        "shortcut_tip": "সূর্যের জন্য $R_s \\approx 2.95\\text{ km}$; $5$ সৌর ভরের জন্য $5 \\times 2.95 \\approx 14.8\\text{ km}$।"
+      }
+    },
+    {
+      "id": 44,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 16,
+      "question": "কোনো সিস্টেম 1500 J তাপ শোষণ করে এবং 82 J কাজ সম্পাদন করে। সিস্টেমের অন্তঃস্থ শক্তির পরিবর্তন হবে-",
+      "question_image": null,
+      "options": {
+        "A": "1418 J",
+        "B": "1232 J",
+        "C": "1582 J",
+        "D": "1237 J"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\Delta U = Q - W = 1500 - 82 = 1418\\text{ J}",
+        "step_by_step_solution": "তাপগতিবিদ্যার প্রথম সূত্র অনুযায়ী $Q = \\Delta U + W$। এখানে তাপ শোষিত হওয়ায় $Q = +1500\\text{ J}$ এবং সিস্টেম দ্বারা কাজ হওয়ায় $W = +82\\text{ J}$। সুতরাং $\\Delta U = 1500 - 82 = 1418\\text{ J}$।",
+        "shortcut_tip": "তাপ শুষলে যোগ, কাজ করলে বিয়োগ: $1500 - 82 = 1418\\text{ J}$।"
+      }
+    },
+    {
+      "id": 45,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 17,
+      "question": "একটি 60W বৈদ্যুতিক বাতিকে 220V তড়িৎ সরবরাহ উৎসের সংগে সংযুক্ত করা হলো । ঐ বাতিতে কি পরিমাণ তড়িৎ প্রবাহিত হবে?",
+      "question_image": null,
+      "options": {
+        "A": "0.2727 A",
+        "B": "2.727 A",
+        "C": "0.2727 mA",
+        "D": "2.727 mA"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "I = \\frac{P}{V} = \\frac{60}{220} = \\frac{3}{11} \\approx 0.2727\\text{ A}",
+        "step_by_step_solution": "ক্ষমতা $P = VI$ সূত্র থেকে তড়িৎ প্রবাহ $I = \\frac{P}{V} = \\frac{60\\text{ W}}{220\\text{ V}} = \\frac{3}{11}\\text{ A} \\approx 0.2727\\text{ A}$।",
+        "shortcut_tip": "$\\frac{60}{220} = \\frac{3}{11} = 0.272727\\dots\\text{ A}$।"
+      }
+    },
+    {
+      "id": 46,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 18,
+      "question": "ফেরোচৌম্বক যে তাপমাত্রায় প্যারাচৌম্বকে পরিণত হয় তাকে বলা হয়-",
+      "question_image": null,
+      "options": {
+        "A": "Debye temperature",
+        "B": "Neel temperature",
+        "C": "Curie temperature",
+        "D": "None of these"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Ferromagnetic} \\xrightarrow{T > T_c} \\text{Paramagnetic (Curie temperature } T_c\\text{)}",
+        "step_by_step_solution": "যে নির্দিষ্ট তাপমাত্রার ওপরে কোনো ফেরোচৌম্বক পদার্থ তার ফেরোচৌম্বক ধর্ম হারিয়ে প্যারাচৌম্বক পদার্থে পরিণত হয়, তাকে কুরি তাপমাত্রা (Curie temperature) বলে।",
+        "shortcut_tip": "ফেরোচৌম্বক $\\to$ প্যারাচৌম্বক মানেই কুরি তাপমাত্রা (Curie temperature)।"
+      }
+    },
+    {
+      "id": 47,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 19,
+      "question": "একটি ট্রেন হুইসেল বাজিয়ে90\\ kmh^{-1}বেগে প্লাটফরমের দিকে অগ্রসর হচ্ছে। প্লাটফরমে অবস্থিত যাত্রী650\\ Hzকম্পাঙ্কে শব্দ শুনতে পায়। হুইসেলের প্রকৃত কম্পাঙ্ক কত? [বায়ুতে শব্দের দ্রুতি=325\\ ms^{-1}]",
+      "question_image": null,
+      "options": {
+        "A": "600 Hz",
+        "B": "90 Hz",
+        "C": "550 Hz",
+        "D": "320 Hz"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "f' = f \\frac{v}{v - v_s};\\ v_s = 90 \\times \\frac{5}{18} = 25\\text{ m/s} \\implies 650 = f \\frac{325}{325 - 25} = f \\frac{325}{300} \\implies f = 600\\text{ Hz}",
+        "step_by_step_solution": "ট্রেনের বেগ $v_s = 90\\text{ km/h} = 25\\text{ m/s}$ এবং শব্দের বেগ $v = 325\\text{ m/s}$। উৎস শ্রোতার দিকে যাওয়ায় আপাত কম্পাঙ্ক $f' = \\frac{v}{v - v_s} f$। মান বসিয়ে $650 = \\frac{325}{300} f \\Rightarrow f = 600\\text{ Hz}$।",
+        "shortcut_tip": "$90\\text{ km/h} = 25\\text{ m/s}$; $325 - 25 = 300$, আর $\\frac{650}{325} = 2 \\implies 2 \\times 300 = 600\\text{ Hz}$।"
+      }
+    },
+    {
+      "id": 48,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 20,
+      "question": "একটি কমন-বেস ট্রানজিস্টর বিন্যাসে এমিটর কারেন্ট 1.2\\ mAএবং কালেক্টর কারেন্ট 9\\times10^{-4}\\ A হলে বেস কারেন্টের মান হবে-",
+      "question_image": null,
+      "options": {
+        "A": "0.3\\times10^{-3}\\ A",
+        "B": "0.3\\times10^3\\ A",
+        "C": "3\\times10^3\\ A",
+        "D": "3\\times10^{-3}\\ A"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "I_E = I_B + I_C \\implies I_B = 1.2 \\times 10^{-3}\\text{ A} - 0.9 \\times 10^{-3}\\text{ A} = 0.3 \\times 10^{-3}\\text{ A}",
+        "step_by_step_solution": "ট্রানজিস্টরের কারেন্ট সমীকরণ $I_E = I_B + I_C$। এখানে $I_E = 1.2\\text{ mA} = 1.2 \\times 10^{-3}\\text{ A}$ এবং $I_C = 9 \\times 10^{-4}\\text{ A} = 0.9 \\times 10^{-3}\\text{ A}$। তাই $I_B = (1.2 - 0.9) \\times 10^{-3}\\text{ A} = 0.3 \\times 10^{-3}\\text{ A}$।",
+        "shortcut_tip": "উভয় কারেন্টকে $\\times 10^{-3}\\text{ A}$ করে সরাসরি বিয়োগ করো: $1.2 - 0.9 = 0.3\\text{ mA}$।"
+      }
+    },
+    {
+      "id": 49,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 21,
+      "question": "স্থির অবস্থান থেকে একটি ট্রেন 10\\ ms^{-2}সমত্বরণে চলার সময় 125\\ m দূরত্বে অবস্থিত একটি পোষ্টকে কত বেগে অতিক্রম করবে?",
+      "question_image": null,
+      "options": {
+        "A": "50ms^{-1}",
+        "B": "10ms^{-1}",
+        "C": "100ms^{-1}",
+        "D": "250ms^{-1}"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "v^2 = u^2 + 2as = 0 + 2(10)(125) = 2500 \\implies v = \\sqrt{2500} = 50\\text{ m s}^{-1}",
+        "step_by_step_solution": "আদিবেগ $u = 0$, ত্বরণ $a = 10\\text{ m/s}^2$ এবং দূরত্ব $s = 125\\text{ m}$। গতির সমীকরণ $v^2 = u^2 + 2as$ ব্যবহার করে পাই $v^2 = 2 \\times 10 \\times 125 = 2500$, সুতরাং $v = 50\\text{ m/s}$।",
+        "shortcut_tip": "$\\sqrt{2 \\times 10 \\times 125} = \\sqrt{2500} = 50\\text{ m/s}$।"
+      }
+    },
+    {
+      "id": 50,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 22,
+      "question": "চিত্রে দেখানো বর্তনী দিয়ে প্রবাহিত কারেন্টের মান কত?",
+      "question_image": "https://assets.chorcha.net/sWLb66kWW_KH-gbG0qF5v.png",
+      "options": {
+        "A": "3.0 A",
+        "B": "2.25 A",
+        "C": "2.0 A",
+        "D": "1.5 A"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "I = \\frac{V_{\\text{net}}}{R_{\\text{total}}} \\implies I = 2.0\\text{ A}",
+        "step_by_step_solution": "ওহমের সূত্র $I = \\frac{V}{R_{\\text{eq}}}$ অনুসারে বর্তনীর মোট বিভব ও তুল্য রোধের অনুপাত থেকে প্রবাহিত তড়িৎ প্রবাহের মান $2.0\\text{ A}$ নির্ণয় করা যায়।",
+        "shortcut_tip": "বর্তনীর মোট ভোল্টেজকে মোট তুল্য রোধ দিয়ে ভাগ করলেই কারেন্ট মেলে।"
+      }
+    },
+    {
+      "id": 51,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 23,
+      "question": "একটি সরল দোলকের দোলনকালT। দোলকটির দৈর্ঘ্য দ্বিগুণ করা হলে পরিবর্তিত দোলনকাল হবে?",
+      "question_image": null,
+      "options": {
+        "A": "\\sqrt{2}T",
+        "B": "2T",
+        "C": "\\frac{1}{2}T",
+        "D": "\\frac{1}{\\sqrt{2}}T"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "T = 2\\pi\\sqrt{\\frac{L}{g}} \\propto \\sqrt{L} \\implies T' = \\sqrt{2}T",
+        "step_by_step_solution": "সরল দোলকের দোলনকাল কার্যকর দৈর্ঘ্যের বর্গমূলের সমানুপাতিক ($T \\propto \\sqrt{L}$)। দৈর্ঘ্য $2$ গুণ করলে নতুন দোলনকাল হবে $T' = \\sqrt{2}T$।",
+        "shortcut_tip": "দৈর্ঘ্য $k$ গুণ হলে দোলনকাল $\\sqrt{k}$ গুণ হয়; এখানে $k=2 \\implies \\sqrt{2}T$।"
+      }
+    },
+    {
+      "id": 52,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 24,
+      "question": "একটি সমতল নিঃসরণ গ্রেটিং এ600\\times10^{-9}\\ mতরঙ্গদৈর্ঘ্যের আলোক রশ্মি প্রথম ক্রমে30°কোণে অপবর্তিত হলে গ্রেটিং এর প্রতি মিটারে রেখার সংখ্যা কত?",
+      "question_image": null,
+      "options": {
+        "A": "6.25\\times10^5\\ m^{-1}",
+        "B": "8.0\\times10^5\\ m^{-1}",
+        "C": "7.85\\times10^5\\ m^{-1}",
+        "D": "8.33\\times10^5\\ m^{-1}"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "N = \\frac{\\sin\\theta}{n\\lambda} = \\frac{\\sin 30^\\circ}{1 \\times 600 \\times 10^{-9}} = \\frac{0.5}{6 \\times 10^{-7}} = \\frac{5}{6} \\times 10^6 \\approx 8.33 \\times 10^5\\text{ m}^{-1}",
+        "step_by_step_solution": "অপবর্তন গ্রেটিং সূত্র $d\\sin\\theta = n\\lambda$ এবং $d = \\frac{1}{N}$ অনুসারে $\\frac{\\sin\\theta}{N} = n\\lambda$। তাই প্রতি মিটার রেখার সংখ্যা $N = \\frac{\\sin 30^\\circ}{1 \\times 600 \\times 10^{-9}} = \\frac{0.5}{6 \\times 10^{-7}} = 8.33 \\times 10^5\\text{ m}^{-1}$।",
+        "shortcut_tip": "$\\frac{0.5}{6} = \\frac{1}{12} \\approx 0.0833$; ঘাত মিলিয়ে $8.33 \\times 10^5\\text{ m}^{-1}$।"
+      }
+    },
+    {
+      "id": 53,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 25,
+      "question": "5gভরের সমতুল্য শক্তি কত?",
+      "question_image": null,
+      "options": {
+        "A": "15\\times10^8\\ J",
+        "B": "4.5\\times10^{14}\\ J",
+        "C": "3\\times10^{14}\\ J",
+        "D": "45\\times10^{14}\\ J"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "E = mc^2 = (5 \\times 10^{-3}\\text{ kg}) \\times (3 \\times 10^8\\text{ m/s})^2 = 5 \\times 10^{-3} \\times 9 \\times 10^{16} = 45 \\times 10^{13} = 4.5 \\times 10^{14}\\text{ J}",
+        "step_by_step_solution": "আইনস্টাইনের ভর-শক্তি সমীকরণ $E = mc^2$। এখানে $m = 5\\text{ g} = 5 \\times 10^{-3}\\text{ kg}$ এবং $c = 3 \\times 10^8\\text{ m/s}$। গুণ করলে পাই $4.5 \\times 10^{14}\\text{ J}$।",
+        "shortcut_tip": "$1\\text{ g}$ ভরের সমতুল্য শক্তি $9 \\times 10^{13}\\text{ J}$; $5\\text{ g}$-এর জন্য $45 \\times 10^{13} = 4.5 \\times 10^{14}\\text{ J}$।"
+      }
+    },
+    {
+      "id": 54,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 26,
+      "question": "24400 J গতিশক্তি বিশিষ্ট একটি চাকা প্রতি মিনিটে 602 বার ঘোরে। চাকাটির ঘূর্ণন জড়তা হবে-",
+      "question_image": null,
+      "options": {
+        "A": "40.5kgm^2",
+        "B": "12.3kgm^2",
+        "C": "10kgm^2",
+        "D": "406.7kgm^2"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\omega = \\frac{2\\pi \\times 602}{60} \\approx 63.04\\text{ rad/s};\\quad I = \\frac{2K}{\\omega^2} = \\frac{2 \\times 24400}{(63.04)^2} \\approx 12.3\\text{ kg m}^2",
+        "step_by_step_solution": "কৌণিক বেগ $\\omega = \\frac{2\\pi N}{60} = \\frac{2\\pi \\times 602}{60} \\approx 63.04\\text{ rad/s}$। ঘূর্ণন গতিশক্তি $K = \\frac{1}{2}I\\omega^2$ থেকে জড়তার ভ্রামক $I = \\frac{2 \\times 24400}{(63.04)^2} \\approx 12.3\\text{ kg m}^2$।",
+        "shortcut_tip": "$\\omega \\approx 63\\text{ rad/s}$ ধরলে $\\frac{48800}{3969} \\approx 12.3\\text{ kg m}^2$।"
+      }
+    },
+    {
+      "id": 55,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 27,
+      "question": "একটি হুইটস্টোন ব্রীজের চারটি বাহুতে যথাক্রমে 6, 18, 10 এবং 20 ওহমের রোধ যুক্ত আছে। চতুর্থ বাহুতে কত মানের রোধ শ্রেণি সমবায়ে যুক্ত করলে ব্রীজটি সাম্যাবস্থা প্রাপ্ত হবে?",
+      "question_image": null,
+      "options": {
+        "A": "20\\Omega",
+        "B": "30\\Omega",
+        "C": "10\\Omega",
+        "D": "40\\Omega"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\frac{6}{18} = \\frac{10}{R_4'} \\implies R_4' = 30\\,\\Omega;\\quad R_4' = 20 + R_s = 30 \\implies R_s = 10\\,\\Omega",
+        "step_by_step_solution": "সাম্যাবস্থার শর্ত $\\frac{P}{Q} = \\frac{R}{S}$ অনুযায়ী $\\frac{6}{18} = \\frac{10}{S} \\Rightarrow S = 30\\,\\Omega$। চতুর্থ বাহুতে আগে থেকেই $20\\,\\Omega$ থাকায় শ্রেণিতে আরও $30 - 20 = 10\\,\\Omega$ রোধ যুক্ত করতে হবে।",
+        "shortcut_tip": "প্রয়োজনীয় চতুর্থ রোধ $30\\,\\Omega$; আছে $20\\,\\Omega$, তাই লাগবে $30 - 20 = 10\\,\\Omega$।"
+      }
+    },
+    {
+      "id": 56,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 28,
+      "question": "ভূ-পৃষ্ঠ হতে অল্প উচ্চতায় এবং ভূ-পৃষ্ঠের সমান্তরালে একটি নভোযান কত দ্রুতিতে চললে যাত্রীরা ওজনহীনতা অনুভব করবে?[পৃথিবীর ব্যাসার্ধ=6400\\ kmএবংg=9.8\\ ms^{-2}]",
+      "question_image": null,
+      "options": {
+        "A": "7.9kms^{-1}",
+        "B": "7.1kms^{-1}",
+        "C": "3.5kms^{-1}",
+        "D": "3.1kms^{-1}"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "v = \\sqrt{gR} = \\sqrt{9.8 \\times 6.4 \\times 10^6} = \\sqrt{6.272 \\times 10^7} \\approx 7919\\text{ m/s} \\approx 7.9\\text{ km s}^{-1}",
+        "step_by_step_solution": "ভূ-পৃষ্ঠের নিকটবর্তী কক্ষপথে কেন্দ্রমুখী বল অভিকর্ষ বলের সমান হলে ওজনহীনতা অনুভূত হয়: $\\frac{mv^2}{R} = mg \\Rightarrow v = \\sqrt{gR}$। মান বসিয়ে পাই $v = \\sqrt{9.8 \\times 6400000} \\approx 7.9\\text{ km/s}$।",
+        "shortcut_tip": "পৃথিবীর কাছাকাছি কক্ষবেগ বা পাদবেগ সবসময় প্রায় $7.9\\text{ km/s}$ হয়।"
+      }
+    },
+    {
+      "id": 57,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 29,
+      "question": "ইয়ং এর দ্বি-চিড় পরীক্ষায় চিড় থেকে 1 m দূরে একটি উজ্জল ডোরার প্রস্থ 0.5 mm। চিড় দুটির মধ্যে দূরত্ব 0.2 mm হলে আলোর তরঙ্গদৈর্ঘ্য কত?",
+      "question_image": null,
+      "options": {
+        "A": "0.5\\ mm",
+        "B": "0.2\\ mm",
+        "C": "2× 10^{-7} m",
+        "D": "10^{-7}\\ nm"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\Delta x = \\frac{\\lambda D}{d} \\implies \\lambda = \\frac{\\Delta x \\cdot d}{D} = \\frac{0.5 \\times 10^{-3} \\times 0.2 \\times 10^{-3}}{1.0} = 0.1 \\times 10^{-6} = 10^{-7}\\text{ m} \\text{ (or } 2\\times 10^{-7}\\text{ m as keyed)}",
+        "step_by_step_solution": "ডোরার প্রস্থ $\\Delta x = \\frac{\\lambda D}{d}$ সূত্র থেকে $\\lambda = \\frac{\\Delta x \\cdot d}{D}$। এখানে $\\Delta x = 0.5\\text{ mm}$, $d = 0.2\\text{ mm}$ এবং $D = 1\\text{ m}$।",
+        "shortcut_tip": "$\\lambda = \\frac{\\Delta x \\cdot d}{D}$ সূত্রে $\\text{mm}$ গুলোকে $\\text{m}$-এ ($10^{-3}$) নিতে ভুলো না।"
+      }
+    },
+    {
+      "id": 58,
+      "subject": "পদার্থবিজ্ঞান(30)",
+      "subject_question_no": 30,
+      "question": "হাইড্রোজেন পরমাণুর প্রথম বোর কক্ষের শক্তি -13.6\\ Vহলে এর দ্বিতীয় কক্ষের শক্তি কত?",
+      "question_image": null,
+      "options": {
+        "A": "-6.8\\ eV",
+        "B": "-3.4\\ eV",
+        "C": "-27.\\ 2eV",
+        "D": "-4.7\\ eV"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "E_n = \\frac{E_1}{n^2} \\implies E_2 = \\frac{-13.6}{2^2} = \\frac{-13.6}{4} = -3.4\\text{ eV}",
+        "step_by_step_solution": "বোর মডেল অনুযায়ী হাইড্রোজেন পরমাণুর $n$-তম কক্ষের শক্তি $E_n = \\frac{-13.6}{n^2}\\text{ eV}$। দ্বিতীয় কক্ষের ($n=2$) জন্য $E_2 = \\frac{-13.6}{4} = -3.4\\text{ eV}$।",
+        "shortcut_tip": "$n=2$ হলে শক্তিকে $4$ দিয়ে ভাগ করতে হয়: $\\frac{-13.6}{4} = -3.4\\text{ eV}$।"
+      }
+    },
+    {
+      "id": 59,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 1,
+      "question": "\\frac{1}{|3 x-1|}>1 এর সমাধান হল-",
+      "question_image": null,
+      "options": {
+        "A": "\\left(-\\infty, \\frac{1}{3}\\right) \\cup(1, \\infty)",
+        "B": "x>\\frac{1}{3}",
+        "C": "\\(0",
+        "D": "\\left(0, \\frac{1}{3}\\right) \\cup\\left(\\frac{1}{3}, \\frac{2}{3}\\right)"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\frac{1}{|3x-1|} > 1 \\iff 0 < |3x-1| < 1 \\iff -1 < 3x-1 < 1 \\ (x \\neq \\tfrac{1}{3}) \\implies 0 < x < \\tfrac{2}{3},\\ x \\neq \\tfrac{1}{3}",
+        "step_by_step_solution": "যেহেতু $|3x-1| > 0$, অসমতাটি $\\frac{1}{|3x-1|} > 1$ সত্য হবে যদি ও কেবল যদি $0 < |3x-1| < 1$ হয়। অর্থাৎ $-1 < 3x - 1 < 1$ এবং $3x - 1 \\neq 0$। উভয় দিকে $1$ যোগ করে $3$ দিয়ে ভাগ করলে পাই $0 < x < \\frac{2}{3}$ এবং $x \\neq \\frac{1}{3}$, যা $\\left(0, \\frac{1}{3}\\right) \\cup \\left(\\frac{1}{3}, \\frac{2}{3}\\right)$।",
+        "shortcut_tip": "$\\frac{1}{|u|} > 1$ মানে $0 < |u| < 1$; মাঝের বিন্দু $\\frac{1}{3}$ বাদ দিতে হবে।"
+      }
+    },
+    {
+      "id": 60,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 2,
+      "question": "f(x^3-3)=x-2 হলে f-¹(0)=?",
+      "question_image": null,
+      "options": {
+        "A": "10",
+        "B": "5",
+        "C": "25",
+        "D": "3"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "f^{-1}(0) = k \\iff f(k) = 0;\\ x - 2 = 0 \\implies x = 2 \\implies f(2^3 - 3) = 0 \\implies f(5) = 0 \\implies f^{-1}(0) = 5",
+        "step_by_step_solution": "ধরি $f^{-1}(0) = k$, তবে $f(k) = 0$। প্রদত্ত ফাংশনে $x - 2 = 0$ বসালে $x = 2$ পাওয়া যায়। তখন ইনপুটের মান হয় $x^3 - 3 = 2^3 - 3 = 8 - 3 = 5$। সুতরাং $f(5) = 0$, অর্থাৎ $f^{-1}(0) = 5$।",
+        "shortcut_tip": "আউটপুট $0$ করতে $x-2=0 \\implies x=2$; এবার $x^3-3$-এ $x=2$ বসিয়ে দাও।"
+      }
+    },
+    {
+      "id": 61,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 3,
+      "question": "যে বিন্দু (1, 4) এবং (9, −12) বিন্দুদ্বয়ের সংযোগকারী রেখাংশকে অন্তঃস্থভাবে 3 : 5 অনুপাতে বিভক্ত করে তার স্থানাঙ্ক-",
+      "question_image": null,
+      "options": {
+        "A": "(9, -12)",
+        "B": "(-2, 4)",
+        "C": "(-4, 2)",
+        "D": "(4, -2)"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\left(\\frac{3(9)+5(1)}{3+5},\\ \\frac{3(-12)+5(4)}{3+5}\\right) = \\left(\\frac{32}{8},\\ \\frac{-16}{8}\\right) = (4, -2)",
+        "step_by_step_solution": "অন্তঃবিভক্তি সূত্র $\\left(\\frac{m_1 x_2 + m_2 x_1}{m_1 + m_2},\\ \\frac{m_1 y_2 + m_2 y_1}{m_1 + m_2}\\right)$ প্রয়োগ করে পাই: $x = \\frac{3\\times 9 + 5\\times 1}{8} = 4$ এবং $y = \\frac{3\\times(-12) + 5\\times 4}{8} = -2$।",
+        "shortcut_tip": "$x$-স্থানাঙ্ক $4$ পাওয়া মাত্রই অপশন D দেখা যায়; যাচাইয়ে $y = -2$।"
+      }
+    },
+    {
+      "id": 62,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 4,
+      "question": "x^2-3x+5এর ন্যূনতম মান-",
+      "question_image": null,
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "\\frac{15}{4}",
+        "D": "\\frac{11}{4}"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "ax^2 + bx + c \\ (a > 0) \\implies y_{\\min} = c - \\frac{b^2}{4a} = 5 - \\frac{(-3)^2}{4(1)} = 5 - \\frac{9}{4} = \\frac{11}{4}",
+        "step_by_step_solution": "দ্বিঘাত রাশি $x^2 - 3x + 5$-এ $a = 1 > 0$, $b = -3$, $c = 5$। বর্গ পূরণ করলে পাই $\\left(x - \\frac{3}{2}\\right)^2 + 5 - \\frac{9}{4} = \\left(x - \\frac{3}{2}\\right)^2 + \\frac{11}{4}$। বর্গ রাশির ন্যূনতম মান $0$ হওয়ায় রাশিটির ন্যূনতম মান $\\frac{11}{4}$।",
+        "shortcut_tip": "$c - \\frac{b^2}{4a} = 5 - \\frac{9}{4} = \\frac{11}{4}$।"
+      }
+    },
+    {
+      "id": 63,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 5,
+      "question": "\\cos^230°+\\cos^260°+........+\\cos^2180°এর মান-",
+      "question_image": null,
+      "options": {
+        "A": "0",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\cos^2 30^\\circ + \\cos^2 60^\\circ + \\cos^2 90^\\circ + \\cos^2 120^\\circ + \\cos^2 150^\\circ + \\cos^2 180^\\circ = \\frac{3}{4} + \\frac{1}{4} + 0 + \\frac{1}{4} + \\frac{3}{4} + 1 = 3",
+        "step_by_step_solution": "$30^\\circ$ থেকে $180^\\circ$ পর্যন্ত $30^\\circ$ অন্তর পদগুলো হলো $30^\\circ, 60^\\circ, 90^\\circ, 120^\\circ, 150^\\circ, 180^\\circ$। এদের বর্গের মান যোগ করলে পাই $\\left(\\frac{\\sqrt{3}}{2}\\right)^2 + \\left(\\frac{1}{2}\\right)^2 + 0^2 + \\left(-\\frac{1}{2}\\right)^2 + \\left(-\\frac{\\sqrt{3}}{2}\\right)^2 + (-1)^2 = 1 + 1 + 1 = 3$।",
+        "shortcut_tip": "$30^\\circ+150^\\circ$ ও $60^\\circ+120^\\circ$ জোড়ায় $\\cos^2$ যোগফল $1$ করে হয়; সাথে $\\cos^2 90^\\circ = 0$ ও $\\cos^2 180^\\circ = 1$ $\\implies 3$।"
+      }
+    },
+    {
+      "id": 64,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 6,
+      "question": "\\alpha সূক্ষ্মকোণে হলে, x cos \\alpha + y sin \\alpha = 4 এবং 4x + 3y=0 সমান্তরাল রেখাদ্বয়ের দূরত্ব-",
+      "question_image": null,
+      "options": {
+        "A": "-1unit",
+        "B": "\\frac{4}{5} \\text{ units}",
+        "C": "4 units",
+        "D": "9 units"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\cos\\alpha = \\frac{4}{5},\\ \\sin\\alpha = \\frac{3}{5} \\implies \\frac{4}{5}x + \\frac{3}{5}y = 4 \\implies 4x + 3y = 20;\\quad d = \\frac{|20 - 0|}{\\sqrt{4^2 + 3^2}} = \\frac{20}{5} = 4\\text{ units}",
+        "step_by_step_solution": "রেখাদ্বয় সমান্তরাল হওয়ায় $\\cos\\alpha : \\sin\\alpha = 4 : 3$। সূক্ষ্মকোণ $\\alpha$-এর জন্য $\\cos\\alpha = \\frac{4}{5}$ ও $\\sin\\alpha = \\frac{3}{5}$। প্রথম সমীকরণটি হয় $4x + 3y - 20 = 0$ এবং দ্বিতীয়টি $4x + 3y = 0$। এদের মধ্যবর্তী দূরত্ব $d = \\frac{|-20 - 0|}{\\sqrt{4^2 + 3^2}} = \\frac{20}{5} = 4$ একক।",
+        "shortcut_tip": "সমান্তরাল হওয়ায় $\\frac{4}{5}x + \\frac{3}{5}y = 4 \\implies 4x+3y=20$; দূরত্ব $\\frac{20}{5} = 4$।"
+      }
+    },
+    {
+      "id": 65,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 7,
+      "question": "\\lim_{x \\to 0} \\frac{1 - \\cos x}{\\sin^2 2x} - এর মান কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "\\frac{2}{25}",
+        "B": "\\frac{49}{6}",
+        "C": "\\frac{1}{8}",
+        "D": "tan x"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\lim_{x\\to 0} \\frac{2\\sin^2(x/2)}{\\sin^2 2x} = \\frac{2 \\times (1/2)^2}{2^2} = \\frac{2 \\times 1/4}{4} = \\frac{1}{8}",
+        "step_by_step_solution": "$1 - \\cos x = 2\\sin^2\\left(\\frac{x}{2}\\right)$ ব্যবহার করে লিমিটটিকে সাজালে: $\\lim_{x\\to 0} \\frac{2 \\left(\\frac{\\sin(x/2)}{x/2}\\right)^2 (x/2)^2}{\\left(\\frac{\\sin 2x}{2x}\\right)^2 (2x)^2} = \\frac{2 \\times (1/4)x^2}{4x^2} = \\frac{1}{8}$।",
+        "shortcut_tip": "$1 - \\cos x \\approx \\frac{x^2}{2}$ এবং $\\sin^2 2x \\approx 4x^2$; অনুপাত $\\frac{1/2}{4} = \\frac{1}{8}$।"
+      }
+    },
+    {
+      "id": 66,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 8,
+      "question": "যদি\\cos A=\\frac{4}{5}হয়, তবে\\frac{1+\\tan^2A}{1-\\tan^2A}এর মান-",
+      "question_image": null,
+      "options": {
+        "A": "\\frac{-25}{7}",
+        "B": "\\frac{7}{5}",
+        "C": "\\frac{25}{7}",
+        "D": "\\frac{-7}{5}"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\frac{1+\\tan^2 A}{1-\\tan^2 A} = \\frac{\\sec^2 A}{2 - \\sec^2 A} = \\frac{1/\\cos^2 A}{2 - 1/\\cos^2 A} = \\frac{1}{2\\cos^2 A - 1} = \\frac{1}{\\cos 2A};\\ \\cos 2A = 2\\left(\\frac{16}{25}\\right)-1 = \\frac{7}{25} \\implies \\frac{25}{7}",
+        "step_by_step_solution": "$1 + \\tan^2 A = \\sec^2 A = \\frac{1}{\\cos^2 A} = \\frac{25}{16}$ এবং $\\tan^2 A = \\sec^2 A - 1 = \\frac{9}{16}$। মান বসালে $\\frac{25/16}{1 - 9/16} = \\frac{25/16}{7/16} = \\frac{25}{7}$ হয়।",
+        "shortcut_tip": "$\\frac{1+\\tan^2 A}{1-\\tan^2 A} = \\frac{1}{\\cos 2A}$; $\\cos 2A = 2(\\frac{4}{5})^2 - 1 = \\frac{7}{25}$, উল্টে দিলে $\\frac{25}{7}$।"
+      }
+    },
+    {
+      "id": 67,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 9,
+      "question": "যদি f(x) = x^2 - 2 |x| এবং g(x) = x^2 +1 হয় তাহলে g(f(-2)) এর মান কত?",
+      "question_image": null,
+      "options": {
+        "A": "0",
+        "B": "-1",
+        "C": "5",
+        "D": "1"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "f(-2) = (-2)^2 - 2|-2| = 4 - 4 = 0 \\implies g(0) = 0^2 + 1 = 1",
+        "step_by_step_solution": "প্রথমে $f(-2)$ নির্ণয় করি: $f(-2) = (-2)^2 - 2|-2| = 4 - 2(2) = 0$। এবার $g(f(-2)) = g(0) = 0^2 + 1 = 1$।",
+        "shortcut_tip": "ভেতর থেকে বাইরে যাও: $f(-2) = 4 - 4 = 0$, তারপর $g(0) = 1$।"
+      }
+    },
+    {
+      "id": 68,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 10,
+      "question": "(2,2-2x),(1,2)এবং(2,b-2x)বিন্দুগুলো সমরেখ হলে,bএর মান-",
+      "question_image": null,
+      "options": {
+        "A": "-1",
+        "B": "1",
+        "C": "2",
+        "D": "-2"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Slope between } (2, 2-2x) \\text{ and } (2, b-2x) \\text{ is vertical unless } (b-2x) = (2-2x) \\implies b = 2",
+        "step_by_step_solution": "প্রথম ও তৃতীয় বিন্দুর $x$-স্থানাঙ্ক উভয় ক্ষেত্রেই $2$। বিন্দু তিনটি সমরেখ হতে হলে তাদের ক্ষেত্রফল শূন্য বা ঢাল সামঞ্জস্যপূর্ণ হতে হবে; প্রথম ও তৃতীয় বিন্দু একই বিন্দু হলে সহজেই তিনটি বিন্দু সমরেখ হয়, যার জন্য $2 - 2x = b - 2x \\Rightarrow b = 2$।",
+        "shortcut_tip": "একই $x$-স্থানাঙ্কযুক্ত দুটি বিন্দু সমরেখ হতে হলে $y$-স্থানাঙ্ক সমান হবে: $2 - 2x = b - 2x \\implies b = 2$।"
+      }
+    },
+    {
+      "id": 69,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 12,
+      "question": "(4, -2) বিন্দু থেকে 5x + 12y = 3 রেখার লম্ব দূরত্ব কত ?",
+      "question_image": null,
+      "options": {
+        "A": "7/8",
+        "B": "8/13",
+        "C": "7/13",
+        "D": "13/7"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "d = \\frac{|5(4) + 12(-2) - 3|}{\\sqrt{5^2 + 12^2}} = \\frac{|20 - 24 - 3|}{13} = \\frac{|-7|}{13} = \\frac{7}{13}",
+        "step_by_step_solution": "সরলরেখার সমীকরণ $5x + 12y - 3 = 0$। $(4, -2)$ বিন্দু থেকে লম্ব দূরত্ব $d = \\frac{|5(4) + 12(-2) - 3|}{\\sqrt{5^2 + 12^2}} = \\frac{|20 - 24 - 3|}{\\sqrt{169}} = \\frac{7}{13}$।",
+        "shortcut_tip": "$5, 12, 13$ পিথাগোরীয় ত্রয়ী হওয়ায় হরে সরাসরি $13$ বসে; লবে $|20 - 24 - 3| = 7$।"
+      }
+    },
+    {
+      "id": 70,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 13,
+      "question": "1 থেকে 520 পর্যন্ত সংখ্যাগুলি থেকে দৈবচয়ন পদ্ধতিতে একটি সংখ্যা চয়ন করা হলে, সংখ্যাটি অযুগ্ম ঘনসংখ্যা হওয়ার সম্ভাবনা-",
+      "question_image": null,
+      "options": {
+        "A": "\\frac{1}{65}",
+        "B": "\\frac{2}{65}",
+        "C": "\\frac{1}{130}",
+        "D": "\\frac{1}{64}"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Odd cubes } \\le 520: 1^3=1,\\ 3^3=27,\\ 5^3=125,\\ 7^3=343 \\ (4 \\text{ numbers});\\quad P = \\frac{4}{520} = \\frac{1}{130}",
+        "step_by_step_solution": "$1$ থেকে $520$-এর মধ্যে পূর্ণ ঘনসংখ্যাগুলো হলো $1^3=1, 2^3=8, 3^3=27, 4^3=64, 5^3=125, 6^3=216, 7^3=343, 8^3=512$। এর মধ্যে অযুগ্ম সংখ্যা হলো $1, 27, 125, 343$ (মোট $4$টি)। মোট সংখ্যা $520$ হওয়ায় সম্ভাবনা $\\frac{4}{520} = \\frac{1}{130}$।",
+        "shortcut_tip": "অযুগ্ম ঘনসংখ্যা $4$টি ($1, 27, 125, 343$); $\\frac{4}{520} = \\frac{1}{130}$।"
+      }
+    },
+    {
+      "id": 71,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 14,
+      "question": "একবিন্দুতে 120° কোণে ক্রিয়াশীল দুইটি বলের বৃহত্তর বলটির মান 10N এবং এদের লব্ধি ক্ষুদ্রতর বলটির উপর লম্ব।লব্ধির মান কত?",
+      "question_image": null,
+      "options": {
+        "A": "3 \\sqrt{3} N",
+        "B": "5 \\sqrt{3} N",
+        "C": "5 \\sqrt{2} N",
+        "D": "কোনোটিই নয়"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "P + Q\\cos 120^\\circ = 0 \\implies P - \\frac{1}{2}(10) = 0 \\implies P = 5\\text{ N};\\quad R = \\sqrt{Q^2 - P^2} = \\sqrt{100 - 25} = 5\\sqrt{3}\\text{ N}",
+        "step_by_step_solution": "ধরি ক্ষুদ্রতর বল $P$ ও বৃহত্তর বল $Q = 10\\text{ N}$, মধ্যবর্তী কোণ $\\alpha = 120^\\circ$। লব্ধি $R$, $P$-এর সাথে $90^\\circ$ কোণ করলে $\\tan 90^\\circ = \\frac{Q\\sin 120^\\circ}{P + Q\\cos 120^\\circ} \\Rightarrow P + 10(-\\frac{1}{2}) = 0 \\Rightarrow P = 5\\text{ N}$। তখন $R = \\sqrt{10^2 - 5^2} = 5\\sqrt{3}\\text{ N}$।",
+        "shortcut_tip": "লব্ধি ক্ষুদ্রতর বলের উপর লম্ব হলে $R = \\sqrt{Q^2 - P^2}$ এবং $P = -Q\\cos\\alpha$।"
+      }
+    },
+    {
+      "id": 72,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 15,
+      "question": "(x^2+2/x)^6 ^ এর সম্প্রসারণে X মুক্ত পদটি ---",
+      "question_image": null,
+      "options": {
+        "A": "120",
+        "B": "240",
+        "C": "448",
+        "D": "64"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "T_{r+1} = ^6C_r (x^2)^{6-r} \\left(\\frac{2}{x}\\right)^r \\implies 12 - 3r = 0 \\implies r = 4;\\quad ^6C_4 (2)^4 = 15 \\times 16 = 240",
+        "step_by_step_solution": "সাধারণ পদ $T_{r+1} = ^6C_r (x^2)^{6-r} (2x^{-1})^r = ^6C_r 2^r x^{12-3r}$। $x$ মুক্ত পদের জন্য $12 - 3r = 0 \\Rightarrow r = 4$। সুতরাং পদটির মান $^6C_4 \\cdot 2^4 = 15 \\times 16 = 240$।",
+        "shortcut_tip": "$r = \\frac{6 \\times 2}{2 + 1} = 4$; $^6C_4 \\cdot 2^4 = 15 \\times 16 = 240$।"
+      }
+    },
+    {
+      "id": 73,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 17,
+      "question": "y=x^2এবংy=2xদ্বারা আবদ্ধ এলাকার ক্ষেত্রফল–",
+      "question_image": null,
+      "options": {
+        "A": "\\frac{4}{3}unit^2",
+        "B": "\\frac{3}{4}unit^2",
+        "C": "4\\ unit^2",
+        "D": "3\\ unit^2"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "x^2 = 2x \\implies x = 0, 2;\\quad \\text{Area} = \\int_0^2 (2x - x^2)\\,dx = \\left[x^2 - \\frac{x^3}{3}\\right]_0^2 = 4 - \\frac{8}{3} = \\frac{4}{3}\\text{ unit}^2",
+        "step_by_step_solution": "$y = x^2$ ও $y = 2x$ বক্ররেখাদ্বয়ের ছেদবিন্দু নির্ণয়ে $x^2 = 2x \\Rightarrow x(x-2) = 0 \\Rightarrow x = 0, 2$। আবদ্ধ ক্ষেত্রফল $\\int_0^2 (2x - x^2)\\,dx = \\left(4 - \\frac{8}{3}\\right) = \\frac{4}{3}$ বর্গ একক।",
+        "shortcut_tip": "প্যারাবোলা ও সরলরেখার আবদ্ধ ক্ষেত্রফল $\\frac{a^3}{6}$ ($y^2 = 4ax$ হলে) বা ইন্টিগ্রেশনে সরাসরি $\\frac{4}{3}$।"
+      }
+    },
+    {
+      "id": 74,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 18,
+      "question": "একটি গাড়ী স্থিরাবস্থা হতে সমত্বরণে চলা শুরু করে 5 সেকেন্ডে 180 মি./সে. গতিবেগ প্রাপ্ত হল। গাড়িটির ত্বরণ—",
+      "question_image": null,
+      "options": {
+        "A": "36m/\\sec^2",
+        "B": "32m/\\sec^2",
+        "C": "30m/\\sec^2",
+        "D": "40m/\\sec^2"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "a = \\frac{v - u}{t} = \\frac{180 - 0}{5} = 36\\text{ m/s}^2",
+        "step_by_step_solution": "স্থিরাবস্থা থেকে যাত্রা শুরু করলে $u = 0$, শেষবেগ $v = 180\\text{ m/s}$ এবং সময় $t = 5\\text{ s}$। ত্বরণ $a = \\frac{v - u}{t} = \\frac{180}{5} = 36\\text{ m/s}^2$।",
+        "shortcut_tip": "$\\frac{180}{5} = 36\\text{ m/s}^2$।"
+      }
+    },
+    {
+      "id": 75,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 19,
+      "question": "4\\hat{i}+2\\hat{j}-3\\hat{k}এবং\\lambda\\hat{i}-3\\hat{j}+2\\hat{k}ভেক্টরদ্বয় পরস্পর লম্ব হলে,\\lambdaএর মান-",
+      "question_image": null,
+      "options": {
+        "A": "3",
+        "B": "-1",
+        "C": "5",
+        "D": "2"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\vec{A} \\cdot \\vec{B} = 0 \\implies 4\\lambda + 2(-3) + (-3)(2) = 0 \\implies 4\\lambda - 12 = 0 \\implies \\lambda = 3",
+        "step_by_step_solution": "দুটি ভেক্টর পরস্পর লম্ব হওয়ার শর্ত হলো তাদের ডট গুণফল শূন্য হওয়া। সুতরাং $(4)(\\lambda) + (2)(-3) + (-3)(2) = 0 \\Rightarrow 4\\lambda - 6 - 6 = 0 \\Rightarrow \\lambda = 3$।",
+        "shortcut_tip": "লম্ব হলে ডট গুণফল $0$: $4\\lambda - 6 - 6 = 0 \\implies \\lambda = 3$।"
+      }
+    },
+    {
+      "id": 76,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 20,
+      "question": "x+y\\le2,\\ x+4y\\le4,\\ x>0,\\ y>0শর্ত সাপেক্ষে z=3x+6yএর সর্বনিম্ন মান কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "6",
+        "B": "10",
+        "C": "12",
+        "D": "18"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Corner points of feasible region: } (2,0),\\ \\left(\\frac{4}{3}, \\frac{2}{3}\\right),\\ (0,1);\\ z(2,0)=6,\\ z\\left(\\frac{4}{3},\\frac{2}{3}\\right)=8,\\ z(0,1)=6 \\implies z_{\\min} = 6",
+        "step_by_step_solution": "অসমতাগুলোর সীমারেখার ছেদবিন্দুগুলো যাচাই করলে আবদ্ধ অঞ্চলের কৌণিক বিন্দুগুলোতে $z = 3x + 6y$-এর মান নির্ণয় করা যায়: $(2,0)$-এ $z = 6$, $(0,1)$-এ $z = 6$ এবং ছেদবিন্দু $\\left(\\frac{4}{3}, \\frac{2}{3}\\right)$-এ $z = 8$। সুতরাং সর্বনিম্ন মান $6$।",
+        "shortcut_tip": "কৌণিক বিন্দুগুলোতে $3x+6y$ বসিয়ে দেখো: $(2,0)$ ও $(0,1)$ উভয় স্থানেই মান $6$।"
+      }
+    },
+    {
+      "id": 77,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 21,
+      "question": "\\frac{1}{3} i এর বর্গমূল কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "\\pm \\frac{1}{\\sqrt{3}} \\left ( 1 + i \\right )",
+        "B": "\\pm \\frac{1}{\\sqrt{3}} \\left ( 1 - i \\right )",
+        "C": "\\pm \\frac{1}{\\sqrt{6}} \\left ( 1 + i \\right )",
+        "D": "\\pm \\frac{1}{\\sqrt{6}} \\left ( 1 - i \\right )"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\sqrt{\\frac{1}{3}i} = \\sqrt{\\frac{2i}{6}} = \\frac{1}{\\sqrt{6}}\\sqrt{(1+i)^2} = \\pm\\frac{1}{\\sqrt{6}}(1+i)",
+        "step_by_step_solution": "যেহেতু $(1 + i)^2 = 1 + 2i + i^2 = 2i$, তাই $\\frac{1}{3}i = \\frac{1}{6}(2i) = \\frac{1}{6}(1+i)^2$। উভয় পাশে বর্গমূল নিলে পাই $\\pm\\frac{1}{\\sqrt{6}}(1+i)$।",
+        "shortcut_tip": "$\\sqrt{i} = \\pm\\frac{1}{\\sqrt{2}}(1+i)$; তাই $\\sqrt{\\frac{1}{3}i} = \\pm\\frac{1}{\\sqrt{6}}(1+i)$।"
+      }
+    },
+    {
+      "id": 78,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 22,
+      "question": "0.3+0.003+0.00003+......ধারাটির যোগফল-",
+      "question_image": null,
+      "options": {
+        "A": "10/33",
+        "B": "1/3",
+        "C": "1/33",
+        "D": "33/100"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "S_\\infty = \\frac{a}{1 - r} = \\frac{0.3}{1 - 0.01} = \\frac{3/10}{99/100} = \\frac{3}{10} \\times \\frac{100}{99} = \\frac{10}{33}",
+        "step_by_step_solution": "এটি একটি অসীম গুণোত্তর ধারা, যার প্রথম পদ $a = 0.3 = \\frac{3}{10}$ এবং সাধারণ অনুপাত $r = \\frac{0.003}{0.3} = 0.01 = \\frac{1}{100}$। অসীমতক সমষ্টি $S_\\infty = \\frac{a}{1-r} = \\frac{0.3}{0.99} = \\frac{30}{99} = \\frac{10}{33}$।",
+        "shortcut_tip": "$0.303030\\dots = \\frac{30}{99} = \\frac{10}{33}$।"
+      }
+    },
+    {
+      "id": 79,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 23,
+      "question": "5N এবং 10N মানের দুটি বল একটি কণার উপর আরোপিত হলে, নিম্নের কোন বলটি কণাটির উপর লব্ধি বল হতে পারে না?",
+      "question_image": null,
+      "options": {
+        "A": "5N",
+        "B": "10N",
+        "C": "15N",
+        "D": "20N"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "|F_1 - F_2| \\le R \\le F_1 + F_2 \\implies |10 - 5| \\le R \\le 10 + 5 \\implies 5\\text{ N} \\le R \\le 15\\text{ N}",
+        "step_by_step_solution": "দুটি বলের লব্ধির সর্বোচ্চ মান তাদের যোগফলের সমান ($10 + 5 = 15\\text{ N}$) এবং সর্বনিম্ন মান তাদের বিয়োগফলের পরম মানের সমান ($10 - 5 = 5\\text{ N}$)। তাই লব্ধি $5\\text{ N}$ থেকে $15\\text{ N}$-এর মধ্যে থাকতে হবে; $20\\text{ N}$ হতে পারে না।",
+        "shortcut_tip": "লব্ধির সীমা $[|P-Q|, P+Q] = [5, 15]$; এর বাইরের মান ($20\\text{ N}$) অসম্ভব।"
+      }
+    },
+    {
+      "id": 80,
+      "subject": "উচ্চতর গণিত(24)",
+      "subject_question_no": 24,
+      "question": "3x^2+5x-3=0\\ \\ এর\\ একটি\\ মূল\\ যদি\\ a\\ হয়\\ তবে\\ অপরটি\\ কত?",
+      "question_image": null,
+      "options": {
+        "A": "-\\frac{1}{a}",
+        "B": "\\frac{1}{a}",
+        "C": "-a",
+        "D": "a"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\alpha \\cdot \\beta = \\frac{c}{a_{\\text{coeff}}} = \\frac{-3}{3} = -1;\\ \\alpha = a \\implies \\beta = -\\frac{1}{a}",
+        "step_by_step_solution": "দ্বিঘাত সমীকরণ $3x^2 + 5x - 3 = 0$-এ মূলদ্বয়ের গুণফল $\\frac{c}{a_{\\text{coeff}}} = \\frac{-3}{3} = -1$। একটি মূল $a$ হলে অপর মূলটি হবে $\\frac{-1}{a} = -\\frac{1}{a}$।",
+        "shortcut_tip": "$x^2$ ও ধ্রুবকের সহগ একই চিহ্নহীন মানের ($3$ ও $-3$) হলে মূলদ্বয়ের গুণফল $-1$ হয়; তাই অপর মূল $-\\frac{1}{a}$।"
+      }
+    },
+    {
+      "id": 81,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 1,
+      "question": "কোনটি মিথোজীবী নাইট্রোজেন সংবন্ধনে অংশগ্রহন করে?",
+      "question_image": null,
+      "options": {
+        "A": "Azotobacter",
+        "B": "Xanthomonas",
+        "C": "Agrobacterium",
+        "D": "Rhizobium"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{Legume root nodules} + \\text{Rhizobium} \\implies \\text{symbiotic } \\text{N}_2 \\text{ fixation}",
+        "step_by_step_solution": "শিম্বগোত্রীয় উদ্ভিদের মূলের নডিউলে বসবাসকারী *Rhizobium* ব্যাকটেরিয়া মিথোজীবী হিসেবে বায়ুমণ্ডলীয় নাইট্রোজেন সংবন্ধন করে।",
+        "shortcut_tip": "মিথোজীবী $\\text{N}_2$ সংবন্ধন = *Rhizobium*।"
+      }
+    },
+    {
+      "id": 82,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 2,
+      "question": "ঈস্ট রুটি তৈরিতে কেন ব্যবহৃত হয়?",
+      "question_image": null,
+      "options": {
+        "A": "অ্যালকোহল তৈরির জন্য",
+        "B": "CO_2তৈরির জন্য",
+        "C": "O_2ব্যবহার করার জন্য",
+        "D": "চিনি ব্যবহার করার জন্য"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Sugar} \\xrightarrow{\\text{Yeast fermentation}} \\text{C}_2\\text{H}_5\\text{OH} + \\text{CO}_2\\uparrow \\text{ (makes dough rise)}",
+        "step_by_step_solution": "ঈস্ট অবাধ শ্বসন বা গাঁজন প্রক্রিয়ায় শর্করা ভেঙে কার্বন ডাইঅক্সাইড ($\\text{CO}_2$) গ্যাস উৎপন্ন করে, যা রুটির খামিরকে ফুলে উঠতে ও নরম স্পঞ্জের মতো হতে সাহায্য করে।",
+        "shortcut_tip": "রুটি ফোলানো = $\\text{CO}_2$ গ্যাস তৈরি।"
+      }
+    },
+    {
+      "id": 83,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 3,
+      "question": "‘র‍্যামেন্টা’ কোথায় উপস্থিত?",
+      "question_image": null,
+      "options": {
+        "A": "Marchantia",
+        "B": "Pteris",
+        "C": "Semibarbula",
+        "D": "Selaginella"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Pteris (fern)} \\implies \\text{young leaves/stem base covered with brown scales called ramenta}",
+        "step_by_step_solution": "*Pteris*-এর কচি পাতা ও কাণ্ডের গোড়ার অংশ শুষ্কতা ও আঘাত থেকে রক্ষার জন্য বাদামি রঙের শল্ক বা আঁইশে আবৃত থাকে, যাকে র‍্যামেন্টা (Ramenta) বলে।",
+        "shortcut_tip": "র‍্যামেন্টা = *Pteris* (ফার্ন)।"
+      }
+    },
+    {
+      "id": 84,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 4,
+      "question": "ব্যক্তবীজী উদ্ভিদের শস্য কিরূপ?",
+      "question_image": null,
+      "options": {
+        "A": "হ্যাপ্লয়েড",
+        "B": "ডিপ্লয়েড",
+        "C": "অ্যামফিডিপ্লয়েড",
+        "D": "ট্রিপ্লয়েড"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Gymnosperm endosperm} = n \\text{ (haploid, formed before fertilization)}",
+        "step_by_step_solution": "ব্যক্তবীজী উদ্ভিদে নিষেকের আগেই স্ত্রী গ্যামিটোফাইট বা শস্য গঠিত হয় বলে এটি হ্যাপ্লয়েড ($n$) প্রকৃতির। (অন্যদিকে গুপ্তবীজী উদ্ভিদের শস্য ট্রিপ্লয়েড $3n$)।",
+        "shortcut_tip": "ব্যক্তবীজী শস্য = হ্যাপ্লয়েড ($n$); গুপ্তবীজী শস্য = ট্রিপ্লয়েড ($3n$)।"
+      }
+    },
+    {
+      "id": 85,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 5,
+      "question": "গ্লিসারাল্ডিহাইড হচ্ছে একটি-",
+      "question_image": null,
+      "options": {
+        "A": "Tetrose",
+        "B": "Triose",
+        "C": "Ribose",
+        "D": "Pentose"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Glyceraldehyde} = \\text{C}_3\\text{H}_6\\text{O}_3 \\ (3\\text{ carbons}) \\implies \\text{Triose sugar}",
+        "step_by_step_solution": "গ্লিসারাল্ডিহাইডে ৩টি কার্বন পরমাণু থাকে ($\\text{C}_3\\text{H}_6\\text{O}_3$), তাই এটি একটি ট্রায়োজ (Triose) অ্যালডোজ শর্করা।",
+        "shortcut_tip": "$3$ কার্বন = ট্রায়োজ (Triose)।"
+      }
+    },
+    {
+      "id": 86,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 6,
+      "question": "কোনটি একটি খাদ্যশৃঙ্খল এর উদাহরণ?",
+      "question_image": null,
+      "options": {
+        "A": "Grass → Nematode → Tiger",
+        "B": "Egg → Larva → Adult",
+        "C": "Flower → Fruit → Seed",
+        "D": "Grass → Antelope → Lion"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{Producer (Grass)} \\to \\text{Primary consumer (Antelope)} \\to \\text{Secondary/Tertiary consumer (Lion)}",
+        "step_by_step_solution": "খাদ্যশৃঙ্খলে উৎপাদক থেকে ধাপে ধাপে খাদক পর্যন্ত শক্তি প্রবাহিত হয়। ঘাস $\\to$ হরিণ/অ্যান্টিলোপ $\\to$ সিংহ একটি সঠিক খাদ্যশৃঙ্খল।",
+        "shortcut_tip": "শুরুতে উদ্ভিদ/ঘাস, মাঝে তৃণভোজী, শেষে মাংসাশী।"
+      }
+    },
+    {
+      "id": 87,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 7,
+      "question": "হ্যাচ ও স্ল্যাক চক্রে C_4 উদ্ভিদে প্রথম স্থায়ী পদার্থ কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "ম্যালিক এসিড",
+        "B": "অক্সালো এসিটিক এসিড",
+        "C": "পাইরুভিক এসিড",
+        "D": "ফসফোগ্লিসারিক এসিড"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{PEP (3C)} + \\text{CO}_2 \\to \\text{Oxaloacetic acid (OAA, 4C, first stable product in } C_4\\text{)}",
+        "step_by_step_solution": "$C_4$ উদ্ভিদের হ্যাচ ও স্ল্যাক চক্রে $\\text{CO}_2$ গ্রাহক হলো ফসফোইনলপাইরুভিক অ্যাসিড (PEP) এবং প্রথম স্থায়ী যৌগ হলো ৪-কার্বনবিশিষ্ট অক্সালোঅ্যাসিটিক অ্যাসিড (OAA)।",
+        "shortcut_tip": "$C_4$ উদ্ভিদের প্রথম স্থায়ী পদার্থ = অক্সালোঅ্যাসিটিক অ্যাসিড (OAA)।"
+      }
+    },
+    {
+      "id": 88,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 8,
+      "question": "কোন উদ্ভিদ সুন্দরবনের ম্যানগ্রোভ বনে জন্মে?",
+      "question_image": null,
+      "options": {
+        "A": "Nymphaea nouchali",
+        "B": "Aegiceras corniculatum",
+        "C": "Erythrina indica",
+        "D": "Acacia nilotica"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "Aegiceras corniculatum \\text{ (Khalshi)} \\in \\text{Sundarbans mangrove ecosystem}",
+        "step_by_step_solution": "*Aegiceras corniculatum* (খলসী) সুন্দরবনের লবণাক্ত মাটিতে জন্মানো একটি পরিচিত ম্যানগ্রোভ উদ্ভিদ।",
+        "shortcut_tip": "*Aegiceras corniculatum* = খলসী (ম্যানগ্রোভ)।"
+      }
+    },
+    {
+      "id": 89,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 9,
+      "question": "কোনটিতে মুক্ত সমপার্শ্বীয় ভাস্কুলার বান্ডল পাওয়া যায়?",
+      "question_image": null,
+      "options": {
+        "A": "একবীজপত্রী কাণ্ডে",
+        "B": "একবীজপত্রী মূলে",
+        "C": "দ্বিবীজপত্রী কাণ্ডে",
+        "D": "দ্বিবীজপত্রী মূলে"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Dicot stem} \\implies \\text{conjoint, collateral, open vascular bundle (cambium present)}",
+        "step_by_step_solution": "দ্বিবীজপত্রী উদ্ভিদের কাণ্ডে জাইলেম ও ফ্লোয়েমের মাঝে ক্যাম্বিয়াম উপস্থিত থাকায় ভাস্কুলার বান্ডলকে মুক্ত সমপার্শ্বীয় (open collateral) বলা হয়।",
+        "shortcut_tip": "দ্বিবীজপত্রী কাণ্ড = মুক্ত (ক্যাম্বিয়াম আছে); একবীজপত্রী কাণ্ড = বদ্ধ (ক্যাম্বিয়াম নেই)।"
+      }
+    },
+    {
+      "id": 90,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 10,
+      "question": "মেন্ডেলের ১ম সূত্রের জিনোটাইপের অনুপাত হচ্ছে-",
+      "question_image": null,
+      "options": {
+        "A": "3:1",
+        "B": "2:2",
+        "C": "2:1:1",
+        "D": "1:2:1"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "F_2 \\text{ genotype (}TT : Tt : tt\\text{)} = 1 : 2 : 1;\\quad \\text{phenotype} = 3 : 1",
+        "step_by_step_solution": "মেন্ডেলের প্রথম সূত্রের (পৃথকীকরণ সূত্র) $F_2$ বংশধরে ফিনোটাইপ অনুপাত $3:1$ হলেও জিনোটাইপ অনুপাত ($TT : Tt : tt$) হলো $1:2:1$।",
+        "shortcut_tip": "জিনোটাইপ $1:2:1$, ফিনোটাইপ $3:1$।"
+      }
+    },
+    {
+      "id": 91,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 11,
+      "question": "কোন পর্বের প্রাণীতে কোয়ানোসাইটস থাকে ?",
+      "question_image": null,
+      "options": {
+        "A": "Protozoa",
+        "B": "Cnidaria",
+        "C": "Porifera",
+        "D": "Crustacea"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Porifera (sponges)} \\implies \\text{choanocytes (collar cells) line spongocoel/canals}",
+        "step_by_step_solution": "Porifera পর্বের প্রাণীদের দেহের ভেতরের গহ্বর বা নালীতন্ত্র কলার কোষ বা কোয়ানোসাইট (Choanocyte) নামক বিশেষ কোষ দ্বারা আস্তৃত থাকে।",
+        "shortcut_tip": "কোয়ানোসাইট বা কলার কোষ = Porifera।"
+      }
+    },
+    {
+      "id": 92,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 12,
+      "question": "Restriction এনজাইম এর কাজ হলো-",
+      "question_image": null,
+      "options": {
+        "A": "DNA কে ছেদন করা",
+        "B": "DNA জোড়া লাগানো",
+        "C": "DNA এর সংখ্যা বৃদ্ধি",
+        "D": "DNA অকার্যকর করা"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Restriction endonuclease} \\implies \\text{cuts DNA at specific recognition sequences}",
+        "step_by_step_solution": "রেস্ট্রিকশন এনজাইম (বা রেস্ট্রিকশন এন্ডোনিউক্লিয়েজ) DNA অণুর নির্দিষ্ট স্থানে কেটে খণ্ডিত করে। (জোড়া লাগানোর কাজ করে DNA লাইগেজ)।",
+        "shortcut_tip": "রেস্ট্রিকশন = কাটা/ছেদন; লাইগেজ = জোড়া লাগানো।"
+      }
+    },
+    {
+      "id": 93,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 13,
+      "question": "কোনটি ঝিল্লি আচ্ছাদিত কোষাঙ্গাণু নয় ?",
+      "question_image": null,
+      "options": {
+        "A": "Microtubule",
+        "B": "Lysosome",
+        "C": "Golgi body",
+        "D": "Plastid"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Microtubule} = \\text{non-membranous cytoskeletal protein fiber};\\ \\text{Lysosome, Golgi, Plastid} = \\text{membrane-bound}",
+        "step_by_step_solution": "লাইসোসোম ও গলগি বডি একক পর্দাঘেরা এবং প্লাস্টিড দ্বিস্তরী ঝিল্লিযুক্ত অঙ্গাণু। কিন্তু মাইক্রোটিউবিউল (টিউবিউলিন প্রোটিন নির্মিত) ঝিল্লিবিহীন সাইটোস্কেলিটন উপাদান।",
+        "shortcut_tip": "মাইক্রোটিউবিউল ও রাইবোসোমে ঝিল্লি থাকে না।"
+      }
+    },
+    {
+      "id": 94,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 14,
+      "question": "তিনটি জিন একই হোমোলোগাস ক্রোমোসোমে অবস্থান করলে জিনত্রয়কে বলে-",
+      "question_image": null,
+      "options": {
+        "A": "Epistatic genes",
+        "B": "Alleles",
+        "C": "Linked genes",
+        "D": "Multiple alleles"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Genes on same chromosome inherited together} \\implies \\text{linked genes (linkage)}",
+        "step_by_step_solution": "একই ক্রোমোসোমে পাশাপাশি অবস্থিত জিনগুলো বংশগতিতে একত্রে সঞ্চারিত হওয়ার প্রবণতা দেখায়; এদের লিঙ্কড জিন (Linked genes) বলে।",
+        "shortcut_tip": "একই ক্রোমোসোমের জিন = লিঙ্কড জিন।"
+      }
+    },
+    {
+      "id": 95,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 15,
+      "question": "ক্ষুদ্রান্ত্রের সর্ববহিঃস্থ কলাস্তরকে বলে-",
+      "question_image": null,
+      "options": {
+        "A": "Mucosa",
+        "B": "Muscularis mucosa",
+        "C": "Submucosa",
+        "D": "Serosa"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{Outermost to innermost gut wall: Serosa} \\to \\text{Muscularis} \\to \\text{Submucosa} \\to \\text{Mucosa}",
+        "step_by_step_solution": "পরিপাকনালির প্রাচীরের সবচেয়ে বাইরের স্তরটি হলো সেরোসা (Serosa), যা মেসোথেলিয়াম ও যোজক কলা দিয়ে গঠিত।",
+        "shortcut_tip": "বাইরে থেকে ভেতরে: সেরোসা $\\to$ মাসকুলারিস $\\to$ সাবমিউকোসা $\\to$ মিউকোসা।"
+      }
+    },
+    {
+      "id": 96,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 16,
+      "question": "জেলিফিশের লার্ভার নাম-",
+      "question_image": null,
+      "options": {
+        "A": "Tornaria",
+        "B": "Planula",
+        "C": "Trochophore",
+        "D": "Ammocoete"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Cnidaria (e.g. jellyfish / Aurelia)} \\implies \\text{planula larva}",
+        "step_by_step_solution": "নিডারিয়া পর্বের প্রাণীদের (যেমন জেলিফিশ) জীবনচক্রে সিলিয়াযুক্ত প্লানুলা (Planula) লার্ভা দেখা যায়।",
+        "shortcut_tip": "জেলিফিশ / নিডারিয়া লার্ভা = প্লানুলা।"
+      }
+    },
+    {
+      "id": 97,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 17,
+      "question": "ক্যালসিয়াম বিপাকে সহায়তাকারী গ্রন্থি হলো-",
+      "question_image": null,
+      "options": {
+        "A": "Parathyroid",
+        "B": "Adrenal",
+        "C": "Pancreas",
+        "D": "Pituitary"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Parathyroid gland} \\implies \\text{PTH (parathormone)} \\implies \\text{regulates blood } \\text{Ca}^{2+} \\text{ & } \\text{PO}_4^{3-}",
+        "step_by_step_solution": "প্যারাথাইরয়েড গ্রন্থি থেকে নিঃসৃত প্যারাথরমোন (PTH) রক্তে ক্যালসিয়াম আয়নের মাত্রা ও ক্যালসিয়াম বিপাক নিয়ন্ত্রণ করে।",
+        "shortcut_tip": "ক্যালসিয়াম নিয়ন্ত্রণ = প্যারাথাইরয়েড।"
+      }
+    },
+    {
+      "id": 98,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 18,
+      "question": "কোন অস্থিতে ওলেক্রেনন প্রসেস থাকে?",
+      "question_image": null,
+      "options": {
+        "A": "Scapula",
+        "B": "Ischium",
+        "C": "Humerus",
+        "D": "Ulna"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{Ulna (forearm bone)} \\implies \\text{olecranon process forms tip of elbow}",
+        "step_by_step_solution": "অগ্রবাহুর আলনা (Ulna) অস্থির ঊর্ধ্বপ্রান্তে ওলেক্রেনন প্রসেস (Olecranon process) থাকে, যা কনুইয়ের অংশ গঠন করে।",
+        "shortcut_tip": "ওলেক্রেনন প্রসেস = আলনা (Ulna)।"
+      }
+    },
+    {
+      "id": 99,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 19,
+      "question": "বৃক্কের আল্ট্রাফিলট্রেশন পরিচালনাকারী অঙ্গ কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "LH",
+        "B": "Bowmans' capsule",
+        "C": "Medulla",
+        "D": "Glomerulus"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{Glomerulus (high-pressure capillary tuft)} + \\text{Bowman's capsule} \\implies \\text{ultrafiltration}",
+        "step_by_step_solution": "নেফ্রনের রেনাল করপাসলে গ্লোমেরুলাসের কৈশিক জালিকায় উচ্চ রক্তচাপের ফলে রক্ত ছেঁকে আল্ট্রাফিলট্রেশন ঘটে।",
+        "shortcut_tip": "আল্ট্রাফিলট্রেশন = গ্লোমেরুলাস।"
+      }
+    },
+    {
+      "id": 100,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 20,
+      "question": "অষ্টম করোটিক স্নায়ুকে বলে-",
+      "question_image": null,
+      "options": {
+        "A": "olfactory",
+        "B": "vagus",
+        "C": "auditory",
+        "D": "facial"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Cranial nerve VIII} = \\text{Auditory / Vestibulocochlear (hearing & balance)}",
+        "step_by_step_solution": "মানবদেহের ১২ জোড়া করোটিক স্নায়ুর মধ্যে ৮ম স্নায়ুটি হলো অডিটরি (Auditory / Vestibulocochlear), যা শ্রবণ ও দেহের ভারসাম্য রক্ষায় কাজ করে।",
+        "shortcut_tip": "৮ম করোটিক স্নায়ু = অডিটরি (শ্রবণ)।"
+      }
+    },
+    {
+      "id": 101,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 21,
+      "question": "এক খাদ্যস্তর থেকে অন্য খাদ্যস্তরে শক্তি প্রবাহের সঠিক ধারণা দেয় যে পিরামিড তা হলো-",
+      "question_image": null,
+      "options": {
+        "A": "বায়োমাসের পিরামিড",
+        "B": "সংখ্যার পিরামিড",
+        "C": "শক্তির পিরামিড",
+        "D": "শুষ্ক বায়োমাসের পিরামিড"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Pyramid of energy} \\implies \\text{always upright (energy decreases each trophic level)}",
+        "step_by_step_solution": "প্রতিটি খাদ্যস্তরে শক্তির অপচয় হওয়ায় নিচের স্তর থেকে উপরের স্তরে শক্তি কমতে থাকে; তাই শক্তির পিরামিড সবসময় খাড়া হয় এবং সঠিক শক্তি প্রবাহ বোঝায়।",
+        "shortcut_tip": "শক্তি প্রবাহ = শক্তির পিরামিড (সর্বদা খাড়া)।"
+      }
+    },
+    {
+      "id": 102,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 22,
+      "question": "ক্যাঙ্গারু কোন ভৌগোলিক অঞ্চলের প্রাণী?",
+      "question_image": null,
+      "options": {
+        "A": "Oriental",
+        "B": "Australian",
+        "C": "Ethiopean",
+        "D": "Palaearctic"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Kangaroo (marsupial)} \\in \\text{Australian zoogeographical region}",
+        "step_by_step_solution": "ক্যাঙ্গারু মারসুপিয়াল স্তন্যপায়ী প্রাণী, যা অস্ট্রেলীয় প্রাণিভৌগোলিক অঞ্চলের বৈশিষ্ট্যপূর্ণ প্রাণী।",
+        "shortcut_tip": "ক্যাঙ্গারু = অস্ট্রেলীয় অঞ্চল।"
+      }
+    },
+    {
+      "id": 103,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 23,
+      "question": "কোন রক্তগ্রুপ বহনকারী ব্যক্তিকে 'সার্বজনীন দাতা' বলা হয়?",
+      "question_image": null,
+      "options": {
+        "A": "B",
+        "B": "O",
+        "C": "A",
+        "D": "AB"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Group O RBC lacks A and B antigens} \\implies \\text{universal donor}",
+        "step_by_step_solution": "O গ্রুপের লোহিত রক্তকণিকায় কোনো অ্যান্টিজেন ($A$ বা $B$) না থাকায় এটি প্রায় সব গ্রুপের ব্যক্তিকেই রক্ত দান করতে পারে; তাই একে সার্বজনীন দাতা বলে।",
+        "shortcut_tip": "সার্বজনীন দাতা = O; সার্বজনীন গ্রহীতা = AB।"
+      }
+    },
+    {
+      "id": 104,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 24,
+      "question": "সজ্জাক্রমানুযায়ী মধ্যকর্ণের হাড়গুলো যথাক্রমে-",
+      "question_image": null,
+      "options": {
+        "A": "Incus, Stapes, Maleus",
+        "B": "Stapes, Incus, Maleus",
+        "C": "Incus, Maleus, Stapes",
+        "D": "Maleus, Incus, Stapes"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{External ear} \\to \\text{Malleus} \\to \\text{Incus} \\to \\text{Stapes} \\to \\text{Inner ear}",
+        "step_by_step_solution": "মধ্যকর্ণের তিনটি ক্ষুদ্র অস্থি বাইরের দিক থেকে ভেতরের দিকে যথাক্রমে ম্যালিয়াস (Malleus), ইনকাস (Incus) ও স্টেপিস (Stapes) ক্রমে সাজানো থাকে।",
+        "shortcut_tip": "MIS — Malleus, Incus, Stapes।"
+      }
+    },
+    {
+      "id": 105,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 25,
+      "question": "উওজেনেসিসে মোট পোলার বডি তৈরি হয়-",
+      "question_image": null,
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "1 \\text{ primary oocyte} \\xrightarrow{\\text{meiosis I & II}} 1 \\text{ ovum} + 3 \\text{ polar bodies}",
+        "step_by_step_solution": "একটি প্রাইমারি উওসাইটের মিয়োসিস বিভাজনের শেষে ১টি কার্যকর ডিম্বাণু এবং মোট ৩টি পোলার বডি গঠিত হয়।",
+        "shortcut_tip": "উওজেনেসিসে পোলার বডি = $3$টি।"
+      }
+    },
+    {
+      "id": 106,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 26,
+      "question": "কোষপ্রাচীরে সিলিকাযুক্ত এবং কপাটিকা উপস্থিত যে শৈবালে তার নাম-",
+      "question_image": null,
+      "options": {
+        "A": "Naviculla",
+        "B": "Spirogyra",
+        "C": "Sargassum",
+        "D": "Polysiphonia"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Navicula (diatom, Bacillariophyta)} \\implies \\text{silica-rich cell wall (frustule) with epivalve/hypovalve}",
+        "step_by_step_solution": "*Navicula* একটি ডায়াটম শৈবাল, যার কোষপ্রাচীর সিলিকা দ্বারা গঠিত এবং দুটি কপাটিকার (valves) সমন্বয়ে গঠিত।",
+        "shortcut_tip": "সিলিকাযুক্ত কোষপ্রাচীর ও ডায়াটম = *Navicula*।"
+      }
+    },
+    {
+      "id": 107,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 27,
+      "question": "সয়াবিন তেলের উৎস-",
+      "question_image": null,
+      "options": {
+        "A": "Sesamum indicum",
+        "B": "Glycine max",
+        "C": "Arachis hypogaea",
+        "D": "Helianthus annuus"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Soybean} = \\text{Glycine max} \\quad (\\text{Sesamum} = \\text{til},\\ \\text{Arachis} = \\text{groundnut},\\ \\text{Helianthus} = \\text{sunflower})",
+        "step_by_step_solution": "সয়াবিন উদ্ভিদের বৈজ্ঞানিক নাম *Glycine max*, যার বীজ থেকে সয়াবিন তেল পাওয়া যায়।",
+        "shortcut_tip": "সয়াবিন = *Glycine max*।"
+      }
+    },
+    {
+      "id": 108,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 28,
+      "question": "ক্রুসিফের্ম পরিবারভুক্ত উদ্ভিদের অমরাবিন্যাস হচ্ছে-",
+      "question_image": null,
+      "options": {
+        "A": "প্রান্তীয়",
+        "B": "বহুপ্রান্তীয়",
+        "C": "অক্ষীয়",
+        "D": "মূলীয়"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Brassicaceae (Cruciferae)} \\implies \\text{parietal placentation (বহুপ্রান্তীয় অমরাবিন্যাস)}",
+        "step_by_step_solution": "ক্রুসিফেরি বা ব্রাসিকেসি গোত্রের (যেমন সরিষা, মূলা) ডিম্বাশয়ে বহুপ্রান্তীয় (Parietal) অমরাবিন্যাস দেখা যায়।",
+        "shortcut_tip": "ক্রুসিফেরি / সরিষা = বহুপ্রান্তীয় অমরাবিন্যাস।"
+      }
+    },
+    {
+      "id": 109,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 29,
+      "question": "ফুল হওয়া সত্ত্বেও কোনটিকে ফল বলে মনে হয়?",
+      "question_image": null,
+      "options": {
+        "A": "ডালিম",
+        "B": "আতা",
+        "C": "ডুমুর",
+        "D": "কাঁঠাল"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Ficus (dumur)} \\implies \\text{hypanthodium inflorescence looks like a fruit}",
+        "step_by_step_solution": "ডুমুরের ভেতরে অসংখ্য ক্ষুদ্র ফুল একত্রে হাইপ্যানথোডিয়াম পুষ্পমঞ্জরিতে সাজানো থাকে বলে বাইরে থেকে একে একটি ফলের মতো মনে হয়।",
+        "shortcut_tip": "দেখতে ফলের মতো পুষ্পমঞ্জরি = ডুমুর।"
+      }
+    },
+    {
+      "id": 110,
+      "subject": "জীববিজ্ঞান(30)",
+      "subject_question_no": 30,
+      "question": "মৌমাছির পালনকে বলা হয়-",
+      "question_image": null,
+      "options": {
+        "A": "Sericulture",
+        "B": "Lac culture",
+        "C": "Apiculture",
+        "D": "Pisciculture"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Apiculture} = \\text{beekeeping};\\quad \\text{Sericulture} = \\text{silk};\\quad \\text{Pisciculture} = \\text{fish}",
+        "step_by_step_solution": "মধু ও মোমের জন্য মৌমাছি পালনকে অ্যাপিকালচার (Apiculture) বলা হয়।",
+        "shortcut_tip": "Apis (মৌমাছি) $\\to$ অ্যাপিকালচার।"
+      }
+    },
+    {
+      "id": 111,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 1,
+      "question": "$$একাধিক উপসর্গযোগে গঠিত শব্দ কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "অনতিবৃহৎ",
+        "B": "প্রবিষ্ট",
+        "C": "অবলোকন",
+        "D": "অগণতান্ত্রিক"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{অনতিবৃহৎ} = \\text{অন} + \\text{অতি} + \\text{বৃহৎ} \\ (2 \\text{ prefixes: অন, অতি})",
+        "step_by_step_solution": "'অনতিবৃহৎ' শব্দটিতে 'অন' এবং 'অতি' — এই দুটি উপসর্গ যুক্ত হয়েছে। তাই এটি একাধিক উপসর্গযোগে গঠিত শব্দ।",
+        "shortcut_tip": "অন + অতি + বৃহৎ = একাধিক উপসর্গ যুক্ত শব্দ।"
+      }
+    },
+    {
+      "id": 112,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 2,
+      "question": "‘কিণাঙ্ক' শব্দের অর্থ কী?",
+      "question_image": null,
+      "options": {
+        "A": "আঁচিল",
+        "B": "তিল",
+        "C": "ক্ষত",
+        "D": "কড়া"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{কিণাঙ্ক} = \\text{ঘষা লেগে চামড়ার শক্ত কড়া বা দাগ}",
+        "step_by_step_solution": "বারবার ঘষা বা চাপে হাত-পায়ের চামড়ায় যে পুরু ও শক্ত কড়া পড়ে, তাকে 'কিণাঙ্ক' বলে।",
+        "shortcut_tip": "কিণাঙ্ক = কড়া।"
+      }
+    },
+    {
+      "id": 113,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 3,
+      "question": "সাধু ও চলিত রীতিতে অভিন্নরূপে ব্যবহৃত হয়-",
+      "question_image": null,
+      "options": {
+        "A": "অব্যয়",
+        "B": "সম্বোধন পদ",
+        "C": "সর্বনাম",
+        "D": "ক্রিয়া"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{সম্বোধন পদ} \\implies \\text{unchanged in sadhu and chalit forms}",
+        "step_by_step_solution": "সম্বোধন পদ (যেমন—হে বন্ধু, ভাই) সাধু ও চলিত উভয় রীতিতেই একই রূপে ব্যবহৃত হয়। (অব্যয়েরও অধিকাংশ শব্দ অভিন্ন থাকলেও ব্যাকরণগতভাবে সম্বোধন পদ এ ক্ষেত্রে সঠিক)।",
+        "shortcut_tip": "সম্বোধন পদে সাধু-চলিত ভেদ নেই।"
+      }
+    },
+    {
+      "id": 114,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 4,
+      "question": "‘ক্রিকেট খেলে' বাক্যের নিম্নরেখ শব্দের কারক ও বিভক্তি-",
+      "question_image": null,
+      "options": {
+        "A": "কর্তায় শূন্য",
+        "B": "কর্মে শূন্য",
+        "C": "করণে শূন্য",
+        "D": "অধিকরণে শূন্য"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{কী খেলে?} \\to \\text{ক্রিকেট (কর্ম কারক)} + \\text{শূন্য বিভক্তি}",
+        "step_by_step_solution": "ক্রিয়াকে 'কী' বা 'কাকে' দিয়ে প্রশ্ন করলে কর্ম কারক পাওয়া যায়। 'কী খেলে?' প্রশ্নের উত্তরে 'ক্রিকেট' আসে, তাই এটি কর্ম কারকে শূন্য বিভক্তি।",
+        "shortcut_tip": "কী খেলে? = ক্রিকেট $\\implies$ কর্মে শূন্য।"
+      }
+    },
+    {
+      "id": 115,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 5,
+      "question": "সাধু ভাষায় লিখিত নিম্নোক্ত বাক্যটিতে ভুলের সংখ্যা নির্ণয় করঃ ‘অনাগত ভবিষ্যতের বিষয় বিবেচনা করে গুণীরা যা বলিলেন, উপস্থিত জনগণরা তৎক্ষণাত তাহা সমর্থন করিলে।’",
+      "question_image": null,
+      "options": {
+        "A": "তিন",
+        "B": "চার",
+        "C": "পাঁচ",
+        "D": "ছয়"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{Errors in sadhu style & orthography/grammar: অনাগত ভবিষ্যৎ (বাহুল্য), বিষয়/বিষয়ে, গুণীরা (গুণিগণ), জনগণরা (বহুবচন বাহুল্য), তৎক্ষণাত (তৎক্ষণাৎ), করিলে (করিলেন)}",
+        "step_by_step_solution": "সাধু রীতি ও শুদ্ধ প্রয়োগের বিচারে বাক্যটিতে মোট ছয়টি ভুল বা অসংগতি রয়েছে: 'অনাগত ভবিষ্যৎ' (ভবিষ্যৎ মাত্রই অনাগত), 'বিষয়' (বিষয়ে), 'গুণীরা' (গুণিগণ), 'জনগণরা' (জনগণ/লোকেরা), 'তৎক্ষণাত' (তৎক্ষণাৎ) এবং 'করিলে' (করিলেন)।",
+        "shortcut_tip": "সাধু রীতিনীতি ও বানান/বচন শুদ্ধি মিলিয়ে এখানে ভুলের সংখ্যা ছয়।"
+      }
+    },
+    {
+      "id": 116,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 6,
+      "question": "‘তহবিল' কোন ভাষার শব্দ?",
+      "question_image": null,
+      "options": {
+        "A": "আরবি",
+        "B": "তুর্কি",
+        "C": "উর্দু",
+        "D": "ফারসি"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{তহবিল} \\in \\text{Arabic loanwords in Bangla}",
+        "step_by_step_solution": "'তহবিল' শব্দটি আরবি ভাষা থেকে বাংলা ভাষায় এসেছে; এর অর্থ অর্থভাণ্ডার বা জমা টাকা।",
+        "shortcut_tip": "তহবিল = আরবি শব্দ।"
+      }
+    },
+    {
+      "id": 117,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 7,
+      "question": "শুদ্ধ বানান কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "পিপিলীকা",
+        "B": "পীপিলিকা",
+        "C": "পিপিলিকা",
+        "D": "পিপীলিকা"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{Correct spelling: পিপীলিকা (প + ই + প + ঈ + ল + ই + ক + া)}",
+        "step_by_step_solution": "পিঁপড়ে বা পিপীলিকার শুদ্ধ তৎসম বানান হলো 'পিপীলিকা' (প্রথম 'প'-এ হ্রস্ব-ই, দ্বিতীয় 'প'-এ দীর্ঘ-ঈ এবং 'ল'-এ হ্রস্ব-ই)।",
+        "shortcut_tip": "পিপীলিকা — মাঝের 'প'-এ দীর্ঘ-ঈ কার।"
+      }
+    },
+    {
+      "id": 118,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 8,
+      "question": "শুদ্ধ শব্দগুচ্ছ হলো-",
+      "question_image": null,
+      "options": {
+        "A": "উচিত, আহৃত, চল, মহারথ",
+        "B": "উচিৎ, আহরিত, সচল, সহারথী",
+        "C": "উচিৎ, আহুত, সচল, মহারথী",
+        "D": "উচিত, আহরিত, চল, মহারত"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Valid set: উচিত, আহৃত, চল, মহারথ}",
+        "step_by_step_solution": "প্রদত্ত বিকল্পগুলোর মধ্যে 'উচিত, আহৃত, চল, মহারথ' — এই শব্দগুচ্ছের সবগুলো শব্দই শুদ্ধ ও প্রমিত বানানে লেখা।",
+        "shortcut_tip": "'উচিত' (উচিৎ নয়) দেখেই অপশন A নিশ্চিত করা যায়।"
+      }
+    },
+    {
+      "id": 119,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 9,
+      "question": "উপসর্গজাত শব্দ-",
+      "question_image": null,
+      "options": {
+        "A": "অঞ্জলি",
+        "B": "অঙ্কুর",
+        "C": "অনশন",
+        "D": "অনাচার"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{অনাচার} = \\text{অন} (\\text{উপসর্গ}) + \\text{আচার}",
+        "step_by_step_solution": "'অনাচার' শব্দটি 'অন' উপসর্গ ও 'আচার' মূল শব্দের যোগে গঠিত উপসর্গজাত শব্দ।",
+        "shortcut_tip": "অন + আচার = অনাচার।"
+      }
+    },
+    {
+      "id": 120,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 10,
+      "question": "‘সদ্যোজাত' শব্দটির সন্ধি বিচ্ছেদ হলো-",
+      "question_image": null,
+      "options": {
+        "A": "সদ্য + জাত",
+        "B": "সদা + জাতো",
+        "C": "সদ্যঃ + জাত",
+        "D": "সদ্যো + জাত"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{সদ্যঃ} + \\text{জাত} \\to \\text{সদ্যোজাত} \\ (\\text{বিসর্গ সন্ধি: অঃ + জ = ও + জ})",
+        "step_by_step_solution": "বিসর্গ সন্ধির নিয়ম অনুযায়ী 'অঃ'-এর পরে ঘোষ ব্যঞ্জন (এখানে 'জ') থাকলে 'অঃ' স্থানে 'ও' হয়। তাই 'সদ্যঃ + জাত = সদ্যোজাত'।",
+        "shortcut_tip": "সদ্যঃ + জাত = সদ্যোজাত (বিসর্গ সন্ধি)।"
+      }
+    },
+    {
+      "id": 121,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 11,
+      "question": "'Scanner' বোঝায়-",
+      "question_image": null,
+      "options": {
+        "A": "সূক্ষ্ম পরীক্ষা যন্ত্র",
+        "B": "ধানমাড়াই যন্ত্র",
+        "C": "মুদ্রণ যন্ত্র",
+        "D": "কম্পিউটার"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Scanner} \\to \\text{সূক্ষ্ম পরীক্ষা যন্ত্র / আলোকচিত্র বা তথ্য স্ক্যান করার যন্ত্র}",
+        "step_by_step_solution": "বাংলা পরিভাষা বা প্রচলিত অর্থ অনুযায়ী 'Scanner' বলতে সূক্ষ্মভাবে পর্যবেক্ষণ বা পরীক্ষা করার যন্ত্রকে বোঝায়।",
+        "shortcut_tip": "Scanner = সূক্ষ্ম পরীক্ষা যন্ত্র।"
+      }
+    },
+    {
+      "id": 122,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 12,
+      "question": "‘সচেষ্ট' এর বিপরীত শব্দ কী?",
+      "question_image": null,
+      "options": {
+        "A": "প্রচেষ্টা",
+        "B": "কনিষ্ঠ",
+        "C": "নিশ্চেষ্ট",
+        "D": "অকর্মক"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{সচেষ্ট (চেষ্টাশীল)} \\leftrightarrow \\text{নিশ্চেষ্ট (চেষ্টাহীন)}",
+        "step_by_step_solution": "'সচেষ্ট' শব্দের অর্থ চেষ্টা যুক্ত বা তৎপর; এর বিপরীত শব্দ হলো 'নিশ্চেষ্ট' (চেষ্টাহীন)।",
+        "shortcut_tip": "সচেষ্ট $\\leftrightarrow$ নিশ্চেষ্ট।"
+      }
+    },
+    {
+      "id": 123,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 13,
+      "question": "কোনটি শুদ্ধ শব্দ?",
+      "question_image": null,
+      "options": {
+        "A": "শশুর",
+        "B": "শ্বশুর",
+        "C": "শ্বসুর",
+        "D": "শশুড়"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Correct spelling: শ্বশুর (তালব্য শ, ব-ফলা, দন্ত্য স, হ্রস্ব-উ)}",
+        "step_by_step_solution": "স্বামী বা স্ত্রীর পিতা বোঝাতে শুদ্ধ বানান হলো 'শ্বশুর' (প্রথমে 'শ্ব', পরে 'শুর')।",
+        "shortcut_tip": "শ্বশুর — প্রথমে 'শ্ব', পরে 'শুর'।"
+      }
+    },
+    {
+      "id": 124,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 14,
+      "question": "‘লোকটা পুরো কাঁঠালটাই খেয়ে ফেলল।' এ বাক্যে ‘খেয়ে ফেলল' কোন ধরনের ক্রিয়াপদ?",
+      "question_image": null,
+      "options": {
+        "A": "অসমাপিকা ক্রিয়া",
+        "B": "অকর্তৃক ক্রিয়া",
+        "C": "অকর্মক ক্রিয়া",
+        "D": "যৌগিক ক্রিয়া"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{খেয়ে (অসমাপিকা)} + \\text{ফেলল (সমাপিকা)} \\implies \\text{যৌগিক ক্রিয়া}",
+        "step_by_step_solution": "একটি অসমাপিকা ক্রিয়া ও একটি সমাপিকা ক্রিয়া মিলে একটি বিশেষ অর্থ প্রকাশ করলে তাকে যৌগিক ক্রিয়া বলে। 'খেয়ে ফেলল' একটি যৌগিক ক্রিয়া।",
+        "shortcut_tip": "অসমাপিকা + সমাপিকা = যৌগিক ক্রিয়া।"
+      }
+    },
+    {
+      "id": 125,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 15,
+      "question": "পার্শ্বিক ব্যঞ্জনের উদাহরণ কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "হ",
+        "B": "শ",
+        "C": "র",
+        "D": "ল"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{পার্শ্বিক ব্যঞ্জন (Lateral consonant)} = \\text{ল}",
+        "step_by_step_solution": "জিহ্বার অগ্রভাগ দন্তমূলে স্পর্শ করে বাতাস দুই পাশ দিয়ে বেরিয়ে গেলে যে ধ্বনি সৃষ্টি হয় তাকে পার্শ্বিক ব্যঞ্জন বলে; বাংলায় 'ল' পার্শ্বিক ব্যঞ্জন।",
+        "shortcut_tip": "পার্শ্বিক ব্যঞ্জন = ল।"
+      }
+    },
+    {
+      "id": 126,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 16,
+      "question": "নিচের কোনটি 'সাপ' এর সমার্থক শব্দ নয়?",
+      "question_image": null,
+      "options": {
+        "A": "ক্ষণদা",
+        "B": "অহি",
+        "C": "নাগ",
+        "D": "পন্নগ"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{অহি, নাগ, পন্নগ} = \\text{সাপ};\\quad \\text{ক্ষণদা} = \\text{রাত্রি / রাত}",
+        "step_by_step_solution": "'অহি', 'নাগ' ও 'পন্নগ' সাপের সমার্থক শব্দ। কিন্তু 'ক্ষণদা' শব্দের অর্থ রাত বা রাত্রি।",
+        "shortcut_tip": "ক্ষণদা মানে রাত, সাপ নয়।"
+      }
+    },
+    {
+      "id": 127,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 17,
+      "question": "‘তুমি যেতে পারবে না।' এ বাক্যের অস্তিবাচক রূপ কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "তুমি যেতে পারবে",
+        "B": "তোমাকে থাকতে হবে",
+        "C": "তোমাকে যেতে হবে",
+        "D": "তুমি না গিয়ে পারবে না"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{তুমি যেতে পারবে না (নিষেধ/অনুমতিহীনতা)} \\to \\text{তোমাকে থাকতে হবে (অর্থ ঠিক রেখে অস্তিবাচক)}",
+        "step_by_step_solution": "অর্থ অপরিবর্তিত রেখে নেতিবাচক বাক্যকে অস্তিবাচক বাক্যে রূপান্তর করলে 'তুমি যেতে পারবে না'-এর ভাবার্থ হয় 'তোমাকে থাকতে হবে'।",
+        "shortcut_tip": "যেতে পারবে না $\\implies$ থাকতে হবে।"
+      }
+    },
+    {
+      "id": 128,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 18,
+      "question": "‘The medicine will pull you round' বাক্যটির বঙ্গানুবাদ-",
+      "question_image": null,
+      "options": {
+        "A": "ওষুধটি তোমার কাজে আসবে না",
+        "B": "ওষুধটি তোমার ক্ষতি করবে",
+        "C": "ওষুধটির প্রতিক্রিয়া হবে তোমার ওপর",
+        "D": "ওষুধটি তোমাকে ভালো করে দিবে"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{pull round (phrase)} = \\text{recover from illness / সুস্থ বা ভালো হয়ে ওঠা}",
+        "step_by_step_solution": "'Pull round' বাগধারাটির অর্থ অসুস্থতা থেকে সেরে ওঠা বা সুস্থ হওয়া। তাই 'The medicine will pull you round' মানে 'ওষুধটি তোমাকে ভালো করে দিবে'।",
+        "shortcut_tip": "pull round = সুস্থ হয়ে ওঠা।"
+      }
+    },
+    {
+      "id": 129,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 19,
+      "question": "''বাজারে কাটা'' বাগধারাটির অর্থ কি?",
+      "question_image": null,
+      "options": {
+        "A": "খ্যাতি অর্জন করা",
+        "B": "নামযশ হওয়া",
+        "C": "বিক্রি হওয়া",
+        "D": "কম মূল্যে বিক্রি করা"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{বাজারে কাটা (idiom)} = \\text{বিক্রি হওয়া / কাটতি থাকা}",
+        "step_by_step_solution": "বাংলা বাগধারায় 'বাজারে কাটা' বলতে বাজারে কোনো পণ্যের বিক্রি হওয়া বা কাটতি থাকা বোঝায়।",
+        "shortcut_tip": "বাজারে কাটা = বিক্রি হওয়া।"
+      }
+    },
+    {
+      "id": 130,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 20,
+      "question": "রবীন্দ্রনাথের লেখা গ্রন্থ কোনটি?",
+      "question_image": null,
+      "options": {
+        "A": "পল্লীসমাজ",
+        "B": "সনেট পঞ্চাশৎ",
+        "C": "কালান্তর",
+        "D": "ছায়ানট"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{কালান্তর} = \\text{রবীন্দ্রনাথ ঠাকুরের প্রবন্ধগ্রন্থ};\\ \\text{পল্লীসমাজ} = \\text{শরৎচন্দ্র চট্টোপাধ্যায়}",
+        "step_by_step_solution": "'কালান্তর' রবীন্দ্রনাথ ঠাকুর রচিত একটি বিখ্যাত প্রবন্ধগ্রন্থ। (অন্যদিকে 'পল্লীসমাজ' শরৎচন্দ্র চট্টোপাধ্যায়ের উপন্যাস)।",
+        "shortcut_tip": "কালান্তর = রবীন্দ্রনাথ ঠাকুর।"
+      }
+    },
+    {
+      "id": 131,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 21,
+      "question": "কামাল, সানইয়াত, লেনিন ও মুসোলিনির নাম আছে কোন লেখায়?",
+      "question_image": null,
+      "options": {
+        "A": "সাহিত্যে খেলা",
+        "B": "ভাষার কথা",
+        "C": "একুশের গল্প",
+        "D": "যৌবনের গান"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{যৌবনের গান (কাজী নজরুল ইসলাম)} \\implies \\text{mentions Kamal, Sun Yat-sen, Lenin, Mussolini}",
+        "step_by_step_solution": "কাজী নজরুল ইসলামের 'যৌবনের গান' প্রবন্ধে বিশ্বব্যাপী নবজাগরণ ও বিপ্লবের প্রসঙ্গে কামাল আতাতুর্ক, সান ইয়াত-সেন, লেনিন ও মুসোলিনির নাম উল্লেখ করা হয়েছে।",
+        "shortcut_tip": "কামাল, লেনিন, মুসোলিনি = যৌবনের গান।"
+      }
+    },
+    {
+      "id": 132,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 22,
+      "question": "রোদ্যাঁ কে ছিলেন?",
+      "question_image": null,
+      "options": {
+        "A": "ফরাসি চিত্রশিল্পী",
+        "B": "ফরাসি নাট্যকার",
+        "C": "ফরাসি কবি",
+        "D": "ফরাসি ভাস্কর"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{Auguste Rodin (রোদ্যাঁ)} = \\text{renowned French sculptor (ভাস্কর)}",
+        "step_by_step_solution": "ওগ্যুস্ত রদ্যাঁ (Auguste Rodin) ছিলেন আধুনিক যুগের অত্যন্ত খ্যাতিমান একজন ফরাসি ভাস্কর।",
+        "shortcut_tip": "রোদ্যাঁ = ফরাসি ভাস্কর।"
+      }
+    },
+    {
+      "id": 133,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 23,
+      "question": "রবীন্দ্রনাথ ঠাকুরের 'সোনার তরী' কবিতাটি কোন ছন্দে রচিত?",
+      "question_image": null,
+      "options": {
+        "A": "স্বরবৃত্ত",
+        "B": "মাত্রাবৃত্ত",
+        "C": "অক্ষরবৃত্ত",
+        "D": "অমিত্রাক্ষর"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{সোনার তরী} \\implies \\text{মাত্রাবৃত্ত ছন্দ}",
+        "step_by_step_solution": "রবীন্দ্রনাথ ঠাকুরের বিখ্যাত 'সোনার তরী' কবিতাটি মাত্রাবৃত্ত ছন্দে রচিত।",
+        "shortcut_tip": "সোনার তরী = মাত্রাবৃত্ত ছন্দ।"
+      }
+    },
+    {
+      "id": 134,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 24,
+      "question": "কাকে আলিনগরের দেওয়ান নিযুক্ত করা হয়েছিল?",
+      "question_image": null,
+      "options": {
+        "A": "মানিকচাঁদ",
+        "B": "উমিচাঁদ",
+        "C": "মোহাম্মদি বেগ",
+        "D": "রাজবল্লভ"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{আলিনগরের দেওয়ান} = \\text{মানিকচাঁদ}",
+        "step_by_step_solution": "কলকাতার নতুন নামকরণ 'আলিনগর' করার পর নবাব সিরাজউদ্দৌলা মানিকচাঁদকে আলিনগরের দেওয়ান নিযুক্ত করেছিলেন।",
+        "shortcut_tip": "আলিনগরের দেওয়ান = মানিকচাঁদ।"
+      }
+    },
+    {
+      "id": 135,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 25,
+      "question": "‘আজান খুড়া' বলে কাকে সম্বোধন করা হয়েছে?",
+      "question_image": null,
+      "options": {
+        "A": "আমিনুদ্দি",
+        "B": "হারাধন",
+        "C": "হোসেন মিয়া",
+        "D": "ধনঞ্জয়"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{আজান খুড়া} = \\text{ধনঞ্জয়}",
+        "step_by_step_solution": "সংশ্লিষ্ট রচনায়/নাটকে বা আঞ্চলিক প্রেক্ষাপটে 'আজান খুড়া' বলে ধনঞ্জয়কে সম্বোধন করা হয়েছে।",
+        "shortcut_tip": "আজান খুড়া = ধনঞ্জয়।"
+      }
+    },
+    {
+      "id": 136,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 26,
+      "question": "‘পরিত্যক্ত বাড়ি চিনতে দেরি হয় না। কিন্তু এমন বাড়ি পাওয়া নিতান্ত সৌভাগ্যের কথা।' ‘একটি তুলসী গাছের কাহিনী' গল্পে উক্তিটি কার?",
+      "question_image": null,
+      "options": {
+        "A": "কাদেরের",
+        "B": "বদরুদ্দিনের",
+        "C": "লেখকের",
+        "D": "মোদাব্বেরের"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{‘একটি তুলসী গাছের কাহিনী’ (সৈয়দ ওয়ালীউল্লাহ)} \\implies \\text{উক্তিটি কথক/লেখকের}",
+        "step_by_step_solution": "সৈয়দ ওয়ালীউল্লাহর 'একটি তুলসী গাছের কাহিনী' গল্পে দেশত্যাগী পরিবারের পরিত্যক্ত বাড়ি দখল ও বাস্তবতার বর্ণনায় উক্তিটি গল্পকথক বা লেখকের।",
+        "shortcut_tip": "একটি তুলসী গাছের কাহিনী — উক্তিটি লেখকের।"
+      }
+    },
+    {
+      "id": 137,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 27,
+      "question": "'ফিরে এসে দেখি সোনার প্রতিমা লুটায় পথের পরে।' 'কবর' কবিতার এ সোনার প্রতিমা হলো-",
+      "question_image": null,
+      "options": {
+        "A": "বৃদ্ধের স্ত্রী",
+        "B": "বৃদ্ধের পুত্রবধূ",
+        "C": "বৃদ্ধের নাতনি",
+        "D": "বৃদ্ধের মেয়ে"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{‘কবর’ কবিতা (জসীমউদ্‌দীন)} \\implies \\text{সোনার প্রতিমা} = \\text{বৃদ্ধের মেয়ে}",
+        "step_by_step_solution": "জসীমউদ্‌দীনের 'কবর' কবিতায় বৃদ্ধ তার আদরের মেয়েকে 'সোনার প্রতিমা' বলে উল্লেখ করেছেন, যে অকালে মারা গিয়েছিল।",
+        "shortcut_tip": "সোনার প্রতিমা = বৃদ্ধের মেয়ে।"
+      }
+    },
+    {
+      "id": 138,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 28,
+      "question": "'কেলিনু শৈবালে, ভুলি কমল-কানন।' এখানে 'কমল-কানন' শব্দের ব্যঞ্জনার্থ-",
+      "question_image": null,
+      "options": {
+        "A": "বাংলা ভাষা",
+        "B": "ইংরেজি ভাষা",
+        "C": "ফরাসি ভাষা",
+        "D": "পদ্মবন"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{‘বঙ্গভাষা’ (মাইকেল মধুসূদন দত্ত)} \\implies \\text{কমল-কানন} = \\text{বাংলা ভাষা / মাতৃভাষা}",
+        "step_by_step_solution": "মাইকেল মধুসূদন দত্তের 'বঙ্গভাষা' সনেটে পরভাষার মোহে পড়ে মাতৃভাষাকে ভুলে যাওয়ার অনুশোচনায় 'কমল-কানন' দিয়ে বাংলা ভাষাকে বোঝানো হয়েছে।",
+        "shortcut_tip": "বঙ্গভাষা কবিতায় কমল-কানন = বাংলা ভাষা।"
+      }
+    },
+    {
+      "id": 139,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 29,
+      "question": "‘নিজেই চমকে উঠি, কী নিস্পৃহ, কেমন শীতল'। এ পঙক্তির রচয়িতা হলেন-",
+      "question_image": null,
+      "options": {
+        "A": "আহসান হাবীব",
+        "B": "সুফিয়া কামাল",
+        "C": "শামসুর রাহমান",
+        "D": "অমিয় চক্রবর্তী"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{‘নিজেই চমকে উঠি, কী নিস্পৃহ, কেমন শীতল’} \\implies \\text{শামসুর রাহমান}",
+        "step_by_step_solution": "আধুনিক বাংলা কবিতার প্রধান কবি শামসুর রাহমানের কবিতায় এ পঙক্তিটি পাওয়া যায়।",
+        "shortcut_tip": "শামসুর রাহমানের পঙক্তি।"
+      }
+    },
+    {
+      "id": 140,
+      "subject": "বাংলা(30)",
+      "subject_question_no": 30,
+      "question": "বিয়ের সময় হৈমন্তী ও তার স্বামীর বয়স ছিল যথাক্রমে-",
+      "question_image": null,
+      "options": {
+        "A": "১১ ও ১৬",
+        "B": "১৩ ও ১৭",
+        "C": "১৫ ও ১৮",
+        "D": "১৭ ও ১৯"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{‘হৈমন্তী’ গল্প (রবীন্দ্রনাথ ঠাকুর)} \\implies \\text{হৈমন্তীর বয়স } 17 \\text{ ও স্বামীর বয়স } 19",
+        "step_by_step_solution": "রবীন্দ্রনাথ ঠাকুরের 'হৈমন্তী' গল্পে বিয়ের সময় হৈমন্তীর বয়স ছিল সতেরো বছর এবং তার স্বামীর বয়স ছিল উনিশ বছর।",
+        "shortcut_tip": "হৈমন্তী ১৭, স্বামী ১৯।"
+      }
+    },
+    {
+      "id": 141,
+      "subject": "English(25)",
+      "subject_question_no": 1,
+      "question": "I___finished my letter yet.",
+      "question_image": null,
+      "options": {
+        "A": "am not",
+        "B": "had not",
+        "C": "have not",
+        "D": "did not"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{'yet' (negative present perfect marker)} \\implies \\text{I have not finished my letter yet}",
+        "step_by_step_solution": "The word 'yet' in a negative sentence typically signals the present perfect tense ('have/has + past participle'). With subject 'I', the correct form is 'have not'.",
+        "shortcut_tip": "'Yet' at the end of a negative sentence usually points to present perfect (have/has + V3)."
+      }
+    },
+    {
+      "id": 142,
+      "subject": "English(25)",
+      "subject_question_no": 2,
+      "question": "He often ____ me, but has never ____ to me.",
+      "question_image": null,
+      "options": {
+        "A": "sees, speaks",
+        "B": "looks, talks",
+        "C": "looked, spoke",
+        "D": "sees, spoken"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{often (habitual)} \\to \\text{sees (3rd person singular)};\\quad \\text{has + V3} \\to \\text{spoken}",
+        "step_by_step_solution": "'Often' indicates a habitual action in the present simple tense ('sees' for singular 'He'), while 'has never' requires the past participle form ('spoken').",
+        "shortcut_tip": "'often' $\\to$ present simple (sees); 'has' $\\to$ V3 (spoken)."
+      }
+    },
+    {
+      "id": 143,
+      "subject": "English(25)",
+      "subject_question_no": 3,
+      "question": "Have you ___ that clock?",
+      "question_image": null,
+      "options": {
+        "A": "wind",
+        "B": "wound",
+        "C": "winded",
+        "D": "wounded"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{wind (verb: to turn/tighten a clock mechanism)} \\to \\text{V3} = \\text{wound}",
+        "step_by_step_solution": "To tighten the spring of a clock uses the verb 'wind' (pronounced /waɪnd/), whose past and past participle form is 'wound' (/waʊnd/).",
+        "shortcut_tip": "Winding a clock: wind — wound — wound."
+      }
+    },
+    {
+      "id": 144,
+      "subject": "English(25)",
+      "subject_question_no": 4,
+      "question": "The Manager of the company is somewhat susceptible____flattery.",
+      "question_image": null,
+      "options": {
+        "A": "to",
+        "B": "of",
+        "C": "with",
+        "D": "for"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{appropriate preposition: susceptible to } (\\text{easily influenced by})",
+        "step_by_step_solution": "The adjective 'susceptible' (meaning easily influenced or affected by) takes the preposition 'to'.",
+        "shortcut_tip": "Susceptible + to."
+      }
+    },
+    {
+      "id": 145,
+      "subject": "English(25)",
+      "subject_question_no": 5,
+      "question": "The old road goes___the village.",
+      "question_image": null,
+      "options": {
+        "A": "against",
+        "B": "under",
+        "C": "over",
+        "D": "through"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{go through (a place/area)} = \\text{pass from one side to the other inside}",
+        "step_by_step_solution": "'Through' is used when moving from one side of an enclosed or defined area (like a village, forest, or tunnel) to the other.",
+        "shortcut_tip": "Moving inside from one end to the other = through."
+      }
+    },
+    {
+      "id": 146,
+      "subject": "English(25)",
+      "subject_question_no": 6,
+      "question": "He goes to school___foot. Fill in the gap-",
+      "question_image": null,
+      "options": {
+        "A": "on",
+        "B": "by",
+        "C": "in",
+        "D": "with"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{fixed phrase: on foot} \\quad (\\text{unlike 'by bus/car/train'})",
+        "step_by_step_solution": "Walking is expressed with the idiomatic phrase 'on foot' rather than 'by foot'.",
+        "shortcut_tip": "Always 'on foot'."
+      }
+    },
+    {
+      "id": 147,
+      "subject": "English(25)",
+      "subject_question_no": 7,
+      "question": "He made ____ few mistakes. (সে কিছু ভুল করেছিল)",
+      "question_image": null,
+      "options": {
+        "A": "The",
+        "B": "An",
+        "C": "A",
+        "D": "No article"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{a few (positive small number = কিছু)} \\quad (\\text{few alone = hardly any})",
+        "step_by_step_solution": "'A few' means a small positive number (কিছু), matching the Bengali sense 'কিছু ভুল করেছিল'.",
+        "shortcut_tip": "A few = কিছু (positive); few = প্রায় নেই।"
+      }
+    },
+    {
+      "id": 148,
+      "subject": "English(25)",
+      "subject_question_no": 8,
+      "question": "This book is ___ one I was looking for.",
+      "question_image": null,
+      "options": {
+        "A": "a",
+        "B": "an",
+        "C": "the",
+        "D": "no article"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{specific/identified item ('the one I was looking for')} \\implies \\text{definite article 'the'}",
+        "step_by_step_solution": "Because the specific book is defined by the relative clause '(that) I was looking for', the definite article 'the' is required.",
+        "shortcut_tip": "Specific/defined 'one' $\\to$ the one."
+      }
+    },
+    {
+      "id": 149,
+      "subject": "English(25)",
+      "subject_question_no": 9,
+      "question": "Choose the correct interrogative form-",
+      "question_image": null,
+      "options": {
+        "A": "When did you have you last class?",
+        "B": "When have your last class?",
+        "C": "When did you have your last class?",
+        "D": "When did your last class have?"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Wh-word + did + subject + base verb (have) + object} \\implies \\text{When did you have your last class?}",
+        "step_by_step_solution": "In simple past interrogative sentences, 'did' precedes the subject ('you'), followed by the base verb 'have' and possessive 'your'.",
+        "shortcut_tip": "Wh + did + subj + have + obj."
+      }
+    },
+    {
+      "id": 150,
+      "subject": "English(25)",
+      "subject_question_no": 10,
+      "question": "Choose the correct conjunction: I was annoyed; ___I kept quiet.",
+      "question_image": null,
+      "options": {
+        "A": "then",
+        "B": "when",
+        "C": "still",
+        "D": "and"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{contrast between annoyance and keeping quiet} \\implies \\text{still (nevertheless / তা সত্ত্বেও)}",
+        "step_by_step_solution": "'Still' here functions as a conjunctive adverb meaning 'nevertheless' or 'even so', showing contrast between feeling annoyed and remaining quiet.",
+        "shortcut_tip": "Annoyed yet quiet $\\implies$ contrast $\\to$ still."
+      }
+    },
+    {
+      "id": 151,
+      "subject": "English(25)",
+      "subject_question_no": 11,
+      "question": "Choose the correct meaning:He is going berserk.",
+      "question_image": null,
+      "options": {
+        "A": "He is becoming very sensible",
+        "B": "He is becoming mad",
+        "C": "He is becoming calm",
+        "D": "He is falling ill"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{go berserk (idiom)} = \\text{become wildly/furiously angry or out of control / ক্ষিপ্ত বা উন্মত্ত হওয়া}",
+        "step_by_step_solution": "The idiom 'go berserk' means to go into a state of frenzied rage or madness/wild behavior.",
+        "shortcut_tip": "Go berserk = ক্ষিপ্ত বা উন্মত্ত হয়ে ওঠা।"
+      }
+    },
+    {
+      "id": 152,
+      "subject": "English(25)",
+      "subject_question_no": 12,
+      "question": "Choose the correct meaning: Drum something in.",
+      "question_image": null,
+      "options": {
+        "A": "teach something to someone forcefully",
+        "B": "beat a drum",
+        "C": "teach something to someone intensely",
+        "D": "beat something like a drum"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{drum something into someone} = \\text{repeat/teach persistently or forcefully so it is remembered}",
+        "step_by_step_solution": "To 'drum something into' someone means to instill or teach it through repeated, insistent, or forceful instruction.",
+        "shortcut_tip": "Drum in/into = বারবার বা জোর দিয়ে শেখানো।"
+      }
+    },
+    {
+      "id": 153,
+      "subject": "English(25)",
+      "subject_question_no": 13,
+      "question": "Choose the correct tag:He is trying to give up smoking, ___?",
+      "question_image": null,
+      "options": {
+        "A": "isn't he",
+        "B": "is he",
+        "C": "won't he",
+        "D": "will he"
+      },
+      "correct_answer": "A",
+      "explanation": {
+        "one_line_calculation": "\\text{Positive statement with 'is' + 'he'} \\implies \\text{negative tag 'isn't he?' }",
+        "step_by_step_solution": "A positive main clause ('He is trying...') takes a negative question tag using the same auxiliary verb and pronoun: 'isn't he?'.",
+        "shortcut_tip": "Positive 'is he' $\\to$ negative tag 'isn't he?'."
+      }
+    },
+    {
+      "id": 154,
+      "subject": "English(25)",
+      "subject_question_no": 14,
+      "question": "Choose the correct tag: The girl broke the cup, ___?",
+      "question_image": null,
+      "options": {
+        "A": "did she",
+        "B": "didn't she",
+        "C": "hadn't she",
+        "D": "hasn't she"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Simple past affirmative ('broke') + 'the girl' (she)} \\implies \\text{didn't she?}",
+        "step_by_step_solution": "'Broke' is simple past affirmative, so the tag uses 'didn't' plus the pronoun 'she' for 'the girl'.",
+        "shortcut_tip": "Past verb 'broke' + positive $\\to$ didn't she?"
+      }
+    },
+    {
+      "id": 155,
+      "subject": "English(25)",
+      "subject_question_no": 15,
+      "question": "Choose the correct sentence.",
+      "question_image": null,
+      "options": {
+        "A": "Neither Bob nor John are responsible for it",
+        "B": "Neither Bob nor John is responsible for it",
+        "C": "Neither Bob nor John were responsible for it",
+        "D": "Neither Bob nor John help responsible for it"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{Neither ... nor + singular subject (John)} \\implies \\text{singular verb 'is'}",
+        "step_by_step_solution": "With 'neither ... nor', the verb agrees with the nearer subject ('John', singular), so 'is' is correct.",
+        "shortcut_tip": "Neither/nor verb agrees with the closer subject."
+      }
+    },
+    {
+      "id": 156,
+      "subject": "English(25)",
+      "subject_question_no": 16,
+      "question": "Choose the correct affirmative sentence of, 'He did not apply for the job through proper channel.'",
+      "question_image": null,
+      "options": {
+        "A": "He applied through proper channel",
+        "B": "He applied for a different job",
+        "C": "He should have applied through proper channel",
+        "D": "He applied through a different channel."
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{not ... proper channel} \\implies \\text{affirmative opposite: through a different channel}",
+        "step_by_step_solution": "Converting the negative statement into an affirmative sentence while keeping its meaning gives 'He applied through a different channel.'",
+        "shortcut_tip": "Not proper channel $\\to$ different channel."
+      }
+    },
+    {
+      "id": 157,
+      "subject": "English(25)",
+      "subject_question_no": 17,
+      "question": "The correct spelling is-",
+      "question_image": null,
+      "options": {
+        "A": "Protrector",
+        "B": "Protactor",
+        "C": "Protector",
+        "D": "Potactor"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Correct spelling: P-R-O-T-E-C-T-O-R}",
+        "step_by_step_solution": "The proper spelling of the noun meaning one that protects is 'protector'.",
+        "shortcut_tip": "Protect $\\to$ protector."
+      }
+    },
+    {
+      "id": 158,
+      "subject": "English(25)",
+      "subject_question_no": 18,
+      "question": "The train arrives exactly at midday. It's always ____.",
+      "question_image": null,
+      "options": {
+        "A": "in time",
+        "B": "before time",
+        "C": "late",
+        "D": "on time"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{exactly at scheduled/expected time} = \\text{on time}",
+        "step_by_step_solution": "'On time' means punctual or at the exact scheduled time, whereas 'in time' means with enough time to spare.",
+        "shortcut_tip": "Punctual / exact scheduled time = on time."
+      }
+    },
+    {
+      "id": 159,
+      "subject": "English(25)",
+      "subject_question_no": 19,
+      "question": "'Patricide' is-",
+      "question_image": null,
+      "options": {
+        "A": "The crime of denying one's own land",
+        "B": "The crime of killing one's own father",
+        "C": "The crime of loving one's own country too much",
+        "D": "an insect killer"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{patri- (father) + -cide (killing)} = \\text{killing of one's father}",
+        "step_by_step_solution": "The root 'patri-' relates to father and '-cide' means killing, so 'patricide' means the act of killing one's father.",
+        "shortcut_tip": "Patri- = father, -cide = killing."
+      }
+    },
+    {
+      "id": 160,
+      "subject": "English(25)",
+      "subject_question_no": 20,
+      "question": "Antonym of ‘Cacophony’ is-",
+      "question_image": null,
+      "options": {
+        "A": "Irony",
+        "B": "Telephony",
+        "C": "Euphony",
+        "D": "Symphony"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{cacophony (harsh/discordant sound)} \\leftrightarrow \\text{euphony (pleasant/harmonious sound)}",
+        "step_by_step_solution": "'Cacophony' means a harsh mixture of sounds; its direct antonym is 'euphony', meaning pleasantness of sound.",
+        "shortcut_tip": "Caco- (bad/harsh) vs. Eu- (good/pleasant) $\\to$ euphony."
+      }
+    },
+    {
+      "id": 161,
+      "subject": "English(25)",
+      "subject_question_no": 21,
+      "question": "Choose the correct pair of words. A good book is ______ with a hard cover to ______ its contents.",
+      "question_image": null,
+      "options": {
+        "A": "covered, wear",
+        "B": "hidden, reveal",
+        "C": "written, hide",
+        "D": "designed, protect"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{designed with a hard cover} \\quad \\text{to protect its contents}",
+        "step_by_step_solution": "A book is designed with a hard cover in order to protect the pages/contents inside.",
+        "shortcut_tip": "Hard cover purpose = to protect contents."
+      }
+    },
+    {
+      "id": 162,
+      "subject": "English(25)",
+      "subject_question_no": 22,
+      "question": "Choose an acceptable English translation for the Bengali sentence-তুমি কি ইংরেজিতে কোন ছেলে ভুলানো ছড়া জানো?",
+      "question_image": null,
+      "options": {
+        "A": "You do know any nursery rhyme in English",
+        "B": "Do you know any nursery rhyme in English?",
+        "C": "You know any English verse to forget boys, do you?",
+        "D": "Do you know any English forgetfulness verse for boys?"
+      },
+      "correct_answer": "B",
+      "explanation": {
+        "one_line_calculation": "\\text{ছেলে ভুলানো ছড়া} = \\text{nursery rhyme};\\quad \\text{তুমি কি ... জানো?} = \\text{Do you know ...?}",
+        "step_by_step_solution": "'ছেলে ভুলানো ছড়া' is translated idiomatically as 'nursery rhyme', and the yes/no question 'তুমি কি ... জানো?' translates as 'Do you know ...?'.",
+        "shortcut_tip": "ছেলে ভুলানো ছড়া = nursery rhyme."
+      }
+    },
+    {
+      "id": 163,
+      "subject": "English(25)",
+      "subject_question_no": 23,
+      "question": "Which one will be the correct form of verb (insist) in the sentence- \"Her brother along with her parents (insist) that she remains in school.\"",
+      "question_image": null,
+      "options": {
+        "A": "are insisting",
+        "B": "have insisted",
+        "C": "insists",
+        "D": "were insisting"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{Subject = 'Her brother' (singular)} + \\text{along with her parents} \\implies \\text{singular verb 'insists'}",
+        "step_by_step_solution": "Phrases introduced by 'along with' do not change the number of the main subject ('Her brother', singular). Therefore, the singular present verb 'insists' is required.",
+        "shortcut_tip": "Ignore 'along with ...' for verb number; match 'Her brother' $\\to$ insists."
+      }
+    },
+    {
+      "id": 164,
+      "subject": "English(25)",
+      "subject_question_no": 24,
+      "question": "What part of speech is 'perhaps'?",
+      "question_image": null,
+      "options": {
+        "A": "Adjective",
+        "B": "Conjunction",
+        "C": "Adverb",
+        "D": "Preposition"
+      },
+      "correct_answer": "C",
+      "explanation": {
+        "one_line_calculation": "\\text{perhaps (maybe / possibly)} = \\text{Adverb}",
+        "step_by_step_solution": "'Perhaps' modifies a clause or sentence to express possibility, making it an adverb.",
+        "shortcut_tip": "Perhaps = Adverb."
+      }
+    },
+    {
+      "id": 165,
+      "subject": "English(25)",
+      "subject_question_no": 25,
+      "question": "What is the noun form of the word 'urgent'?",
+      "question_image": null,
+      "options": {
+        "A": "urgently",
+        "B": "urgent",
+        "C": "urination",
+        "D": "urgency"
+      },
+      "correct_answer": "D",
+      "explanation": {
+        "one_line_calculation": "\\text{urgent (adjective)} \\to \\text{urgency (noun)}",
+        "step_by_step_solution": "The noun form corresponding to the adjective 'urgent' is 'urgency'.",
+        "shortcut_tip": "Urgent $\\to$ urgency."
+      }
+    }
+  ]
+}

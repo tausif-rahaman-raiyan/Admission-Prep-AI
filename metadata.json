@@ -1,0 +1,6 @@
+{
+  "name": "Admission Question Bank & AI Exam Simulator",
+  "description": "Comprehensive university admission question bank, strict timed exam simulator, and AI Tutor powered by Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,2359 @@
+[
+  {
+    "id": "du-20-21-mcq-q001",
+    "number": 1,
+    "subjectNumber": 1,
+    "subject": "Physics",
+    "question": "a এর মান কত হলে $\\vec{A}=2\\hat{i}+2\\hat{j}-\\hat{k}$ এবং $\\vec{B}=a\\hat{i}+\\hat{j}$ ভেক্টরদ্বয় পরস্পর লম্ব হবে?",
+    "options": [
+      "-1",
+      "7/4",
+      "0",
+      "2"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $\\vec{A} \\cdot \\vec{B} = 0 \\implies 2a + 2(1) + (-1)(0) = 0 \\implies a = -1$\n\n📐 **ধাপে ধাপে সমাধান:** দুটি ভেক্টর $\\vec{A}$ এবং $\\vec{B}$ পরস্পর লম্ব হওয়ার শর্ত হলো এদের ডট গুণন শূন্য হবে।\n$\\vec{A} \\cdot \\vec{B} = (2)(a) + (2)(1) + (-1)(0) = 0$\n$\\implies 2a + 2 = 0 \\implies 2a = -2 \\implies a = -1$।\n\n⚡ **শর্টকাট টিপস:** ডট গুণনে $i, j, k$ এর সহগ গুণ করে যোগফল ০ বসাও: $2a + 2 = 0 \\Rightarrow a = -1$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "$\\vec{A} \\cdot \\vec{B} = 0 \\implies 2a + 2(1) + (-1)(0) = 0 \\implies a = -1$",
+      "step_by_step_solution": "দুটি ভেক্টর $\\vec{A}$ এবং $\\vec{B}$ পরস্পর লম্ব হওয়ার শর্ত হলো এদের ডট গুণন শূন্য হবে।\n$\\vec{A} \\cdot \\vec{B} = (2)(a) + (2)(1) + (-1)(0) = 0$\n$\\implies 2a + 2 = 0 \\implies 2a = -2 \\implies a = -1$।",
+      "shortcut_tip": "ডট গুণনে $i, j, k$ এর সহগ গুণ করে যোগফল ০ বসাও: $2a + 2 = 0 \\Rightarrow a = -1$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q002",
+    "number": 2,
+    "subjectNumber": 2,
+    "subject": "Physics",
+    "question": "কত বেগে চললে একটি রকেটের গতিশীল দৈর্ঘ্য এর নিশ্চল দৈর্ঘ্যের অর্ধেক হবে?",
+    "options": [
+      "1/2 c",
+      "√3/2 c",
+      "3/√2",
+      "3/4 c"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $L = L_0 \\sqrt{1 - v^2/c^2} \\implies \\frac{1}{2} = \\sqrt{1 - v^2/c^2} \\implies v = \\frac{\\sqrt{3}}{2}c$\n\n📐 **ধাপে ধাপে সমাধান:** দৈর্ঘ্য সংকোচন সূত্রানুসারে, $L = L_0 \\sqrt{1 - v^2/c^2}$।\nপ্রশ্নমতে, $L = \\frac{L_0}{2}$।\nতাহলে, $\\frac{L_0}{2} = L_0 \\sqrt{1 - v^2/c^2} \\implies \\frac{1}{4} = 1 - \\frac{v^2}{c^2} \\implies \\frac{v^2}{c^2} = \\frac{3}{4} \\implies v = \\frac{\\sqrt{3}}{2}c$।\n\n⚡ **শর্টকাট টিপস:** দৈর্ঘ্য $1/n$ গুণ হলে $v = c\\sqrt{1 - (1/n)^2}$। এখানে $n=2$, তাই $v = c\\sqrt{1 - 1/4} = \\frac{\\sqrt{3}}{2}c$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "$L = L_0 \\sqrt{1 - v^2/c^2} \\implies \\frac{1}{2} = \\sqrt{1 - v^2/c^2} \\implies v = \\frac{\\sqrt{3}}{2}c$",
+      "step_by_step_solution": "দৈর্ঘ্য সংকোচন সূত্রানুসারে, $L = L_0 \\sqrt{1 - v^2/c^2}$।\nপ্রশ্নমতে, $L = \\frac{L_0}{2}$।\nতাহলে, $\\frac{L_0}{2} = L_0 \\sqrt{1 - v^2/c^2} \\implies \\frac{1}{4} = 1 - \\frac{v^2}{c^2} \\implies \\frac{v^2}{c^2} = \\frac{3}{4} \\implies v = \\frac{\\sqrt{3}}{2}c$।",
+      "shortcut_tip": "দৈর্ঘ্য $1/n$ গুণ হলে $v = c\\sqrt{1 - (1/n)^2}$। এখানে $n=2$, তাই $v = c\\sqrt{1 - 1/4} = \\frac{\\sqrt{3}}{2}c$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q003",
+    "number": 3,
+    "subjectNumber": 3,
+    "subject": "Physics",
+    "question": "একটি m ভরের বস্তু ঘর্ষণবিহীন একটি তলে v বেগে চলার সময় একটি স্প্রিং-এর সাথে ধাক্কা লেগে স্প্রিংটিকে সংকুচিত করল। স্প্রিংটির বল-ধ্রুবক k হলে স্প্রিংটি কতটুকু সংকুচিত হবে?",
+    "options": [
+      "$\\sqrt{\\frac{m}{k}} v$",
+      "$\\sqrt{\\frac{k}{m}} v$",
+      "$\\sqrt{k v}$",
+      "$\\sqrt{m v}$"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\frac{1}{2} m v^2 = \\frac{1}{2} k x^2 \\implies x = \\sqrt{\\frac{m}{k}} v\n\n📐 **ধাপে ধাপে সমাধান:** শক্তি সংরক্ষণশীলতা নীতি অনুসারে, বস্তুর গতিশক্তি = স্প্রিংয়ের বিভব শক্তি।\n$\\frac{1}{2} m v^2 = \\frac{1}{2} k x^2 \\implies m v^2 = k x^2 \\implies x^2 = \\frac{m v^2}{k} \\implies x = \\sqrt{\\frac{m}{k}} v$।\n\n⚡ **শর্টকাট টিপস:** গতিশক্তি ও স্প্রিং বিভব শক্তি সমান ধরে $x = v \\sqrt{m/k}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\frac{1}{2} m v^2 = \\frac{1}{2} k x^2 \\implies x = \\sqrt{\\frac{m}{k}} v",
+      "step_by_step_solution": "শক্তি সংরক্ষণশীলতা নীতি অনুসারে, বস্তুর গতিশক্তি = স্প্রিংয়ের বিভব শক্তি।\n$\\frac{1}{2} m v^2 = \\frac{1}{2} k x^2 \\implies m v^2 = k x^2 \\implies x^2 = \\frac{m v^2}{k} \\implies x = \\sqrt{\\frac{m}{k}} v$।",
+      "shortcut_tip": "গতিশক্তি ও স্প্রিং বিভব শক্তি সমান ধরে $x = v \\sqrt{m/k}$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q004",
+    "number": 4,
+    "subjectNumber": 4,
+    "subject": "Physics",
+    "question": "একটি বস্তু 12 m ব্যাসার্ধের একটি বৃত্তাকার পথে চলমান আছে। একটি মুহূর্তে বৃত্তাকার পথে এর দ্রুতি 6ms^-1 এবং এটি 4ms^-2 হারে বৃদ্ধি পাচ্ছে। ঐ মুহূর্তে বস্তুটির ত্বরণের মান কত?",
+    "options": [
+      "2m/s^2",
+      "3m/s^2",
+      "4m/s^2",
+      "5m/s^2"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** a_c = \\frac{v^2}{r} = \\frac{36}{12} = 3\\text{ m/s}^2; a = \\sqrt{a_c^2 + a_t^2} = \\sqrt{3^2 + 4^2} = 5\\text{ m/s}^2\n\n📐 **ধাপে ধাপে সমাধান:** কেন্দ্রমুখী ত্বরণ, $a_c = \\frac{v^2}{r} = \\frac{6^2}{12} = 3\\text{ m/s}^2$।\nস্পর্শকীয় ত্বরণ, $a_t = 4\\text{ m/s}^2$।\nলব্ধি ত্বরণ, $a = \\sqrt{a_c^2 + a_t^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = 5\\text{ m/s}^2$।\n\n⚡ **শর্টকাট টিপস:** ৩ এবং ৪ এর পিথাগোরীয় ট্রিপ্লেট হলো ৫!",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "a_c = \\frac{v^2}{r} = \\frac{36}{12} = 3\\text{ m/s}^2; a = \\sqrt{a_c^2 + a_t^2} = \\sqrt{3^2 + 4^2} = 5\\text{ m/s}^2",
+      "step_by_step_solution": "কেন্দ্রমুখী ত্বরণ, $a_c = \\frac{v^2}{r} = \\frac{6^2}{12} = 3\\text{ m/s}^2$।\nস্পর্শকীয় ত্বরণ, $a_t = 4\\text{ m/s}^2$।\nলব্ধি ত্বরণ, $a = \\sqrt{a_c^2 + a_t^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = 5\\text{ m/s}^2$।",
+      "shortcut_tip": "৩ এবং ৪ এর পিথাগোরীয় ট্রিপ্লেট হলো ৫!"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q005",
+    "number": 5,
+    "subjectNumber": 5,
+    "subject": "Physics",
+    "question": "অভীকর্ষীয় ত্বরণ g বনাম পৃথিবী পৃষ্ঠ হতে গভীরতা h এর লেখচিত্র কোনটি?",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $g' = g\\left(1 - \\frac{h}{R}\\right) \\implies g'$ বনাম $h$ লেখচিত্রটি একটি ঋণাত্মক ঢালবিশিষ্ট সরলরেখা।\n\n📐 **ধাপে ধাপে সমাধান:** পৃথিবী পৃষ্ঠ হতে $h$ গভীরতায় অভীকর্ষজ ত্বরণ $g' = g\\left(1 - \\frac{h}{R}\\right) = g - \\frac{g}{R} h$।\nএটি $y = mx + c$ ধরনের সরলরেখার সমীকরণ নির্দেশ করে যেখানে ঢাল ঋণাত্মক ($-\\frac{g}{R}$)। ফলে $h$ বাড়লে $g'$ রৈখিকভাবে হ্রাস পায়।\n\n⚡ **শর্টকাট টিপস:** গভীরতা বাড়লে $g$ রৈখিকভাবে কমে, তাই লেখচিত্রটি সোজা নিচের দিকে নামবে (A)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "$g' = g\\left(1 - \\frac{h}{R}\\right) \\implies g'$ বনাম $h$ লেখচিত্রটি একটি ঋণাত্মক ঢালবিশিষ্ট সরলরেখা।",
+      "step_by_step_solution": "পৃথিবী পৃষ্ঠ হতে $h$ গভীরতায় অভীকর্ষজ ত্বরণ $g' = g\\left(1 - \\frac{h}{R}\\right) = g - \\frac{g}{R} h$।\nএটি $y = mx + c$ ধরনের সরলরেখার সমীকরণ নির্দেশ করে যেখানে ঢাল ঋণাত্মক ($-\\frac{g}{R}$)। ফলে $h$ বাড়লে $g'$ রৈখিকভাবে হ্রাস পায়।",
+      "shortcut_tip": "গভীরতা বাড়লে $g$ রৈখিকভাবে কমে, তাই লেখচিত্রটি সোজা নিচের দিকে নামবে (A)।"
+    },
+    "questionImageUrls": [
+      "data/DU/du-20-21-mcq/images/q005_q1.png"
+    ],
+    "optionImageUrls": [
+      [
+        "data/DU/du-20-21-mcq/images/q005_q1.png"
+      ],
+      [
+        "data/DU/du-20-21-mcq/images/q005_optB.png"
+      ],
+      [
+        "data/DU/du-20-21-mcq/images/q005_optC.png"
+      ],
+      [
+        "data/DU/du-20-21-mcq/images/q005_optD.png"
+      ]
+    ]
+  },
+  {
+    "id": "du-20-21-mcq-q006",
+    "number": 6,
+    "subjectNumber": 6,
+    "subject": "Physics",
+    "question": "ইয়ং এর দ্বি-চির পরীক্ষণের চিরদ্বয়ের মধ্যবর্তী দূরত্ব হলো d এবং চিরদ্বয় থেকে পর্দা D দূরত্বে অবস্থিত। পর্দার উপর প্রতি একক প্রস্থে ডোরা সংখ্যা হলো-",
+    "options": [
+      "$\\frac{D}{d \\lambda}$",
+      "$\\frac{d}{D \\lambda}$",
+      "$\\frac{\\lambda}{D d}$",
+      "$\\frac{d^{2}}{\\lambda D^{3}}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** ডোরার প্রস্থ $\\Delta x = \\frac{\\lambda D}{d} \\implies$ একক প্রস্থে ডোরার সংখ্যা $N = \\frac{1}{\\Delta x} = \\frac{d}{D\\lambda}$\n\n📐 **ধাপে ধাপে সমাধান:** একটি ডোরা প্রস্থ $\\Delta x = \\frac{\\lambda D}{d}$।\nপ্রতি একক প্রস্থে ডোরা সংখ্যা হবে $N = \\frac{1}{\\Delta x} = \\frac{d}{D \\lambda}$।\n\n⚡ **শর্টকাট টিপস:** ডোরা প্রস্থের বিপরীত রাশিই হলো একক দৈর্ঘ্যে ডোরা সংখ্যা: $\\frac{d}{\\lambda D}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "ডোরার প্রস্থ $\\Delta x = \\frac{\\lambda D}{d} \\implies$ একক প্রস্থে ডোরার সংখ্যা $N = \\frac{1}{\\Delta x} = \\frac{d}{D\\lambda}$",
+      "step_by_step_solution": "একটি ডোরা প্রস্থ $\\Delta x = \\frac{\\lambda D}{d}$।\nপ্রতি একক প্রস্থে ডোরা সংখ্যা হবে $N = \\frac{1}{\\Delta x} = \\frac{d}{D \\lambda}$।",
+      "shortcut_tip": "ডোরা প্রস্থের বিপরীত রাশিই হলো একক দৈর্ঘ্যে ডোরা সংখ্যা: $\\frac{d}{\\lambda D}$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q007",
+    "number": 7,
+    "subjectNumber": 7,
+    "subject": "Physics",
+    "question": "একটি সরল দোলকের দোলনকাল 50% বাড়াতে এর কার্যকর দৈর্ঘ্যের পরিবর্তন কত হবে?",
+    "options": [
+      "25%",
+      "100%",
+      "125%",
+      "67%"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $T_2 = 1.5 T_1 \\implies L_2 = (1.5)^2 L_1 = 2.25 L_1 \\implies \\Delta L = 125\\%$\n\n📐 **ধাপে ধাপে সমাধান:** আমরা জানি $T \\propto \\sqrt{L} \\implies \\frac{L_2}{L_1} = \\left(\\frac{T_2}{T_1}\\right)^2$।\nদোলনকাল ৫০% বাড়ালে $T_2 = 1.5 T_1$।\n$\\therefore \\frac{L_2}{L_1} = (1.5)^2 = 2.25 \\implies L_2 = 225\\% L_1$।\nদৈর্ঘ্যের পরিবর্তন (বৃদ্ধি) $= 225\\% - 100\\% = 125\\%$।\n\n⚡ **শর্টকাট টিপস:** $T$ ১.৫ গুণ হলে $L$ হবে $(১.৫)^২ = ২.২৫$ গুণ, অর্থাৎ ১২৫% বৃদ্ধি।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "$T_2 = 1.5 T_1 \\implies L_2 = (1.5)^2 L_1 = 2.25 L_1 \\implies \\Delta L = 125\\%$",
+      "step_by_step_solution": "আমরা জানি $T \\propto \\sqrt{L} \\implies \\frac{L_2}{L_1} = \\left(\\frac{T_2}{T_1}\\right)^2$।\nদোলনকাল ৫০% বাড়ালে $T_2 = 1.5 T_1$।\n$\\therefore \\frac{L_2}{L_1} = (1.5)^2 = 2.25 \\implies L_2 = 225\\% L_1$।\nদৈর্ঘ্যের পরিবর্তন (বৃদ্ধি) $= 225\\% - 100\\% = 125\\%$।",
+      "shortcut_tip": "$T$ ১.৫ গুণ হলে $L$ হবে $(১.৫)^২ = ২.২৫$ গুণ, অর্থাৎ ১২৫% বৃদ্ধি।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q008",
+    "number": 8,
+    "subjectNumber": 8,
+    "subject": "Physics",
+    "question": "কোনো আদর্শ গ্যাসের তাপমাত্রা কেলভিন স্কেলে 4 গুণ হলে তার অণুগুলোর মূল গড় বর্গবেগ কত গুণ বৃদ্ধি পায়?",
+    "options": [
+      "4",
+      "1/2",
+      "2.3",
+      "2"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $C_{rms} \\propto \\sqrt{T} \\implies C_2 = \\sqrt{4 T_1} = 2 C_1$\n\n📐 **ধাপে ধাপে সমাধান:** মূল গড় বর্গবেগ $C_{rms} = \\sqrt{\\frac{3RT}{M}}$।\nযেহেতু $C_{rms} \\propto \\sqrt{T}$, তাই $T$ ৪ গুণ করা হলে $C_{rms}$ হবে $\\sqrt{4} = 2$ গুণ।\n\n⚡ **শর্টকাট টিপস:** তাপমাত্রা ৪ গুণ হলে বেগ $\\sqrt{4} = 2$ গুণ হয়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "$C_{rms} \\propto \\sqrt{T} \\implies C_2 = \\sqrt{4 T_1} = 2 C_1$",
+      "step_by_step_solution": "মূল গড় বর্গবেগ $C_{rms} = \\sqrt{\\frac{3RT}{M}}$।\nযেহেতু $C_{rms} \\propto \\sqrt{T}$, তাই $T$ ৪ গুণ করা হলে $C_{rms}$ হবে $\\sqrt{4} = 2$ গুণ।",
+      "shortcut_tip": "তাপমাত্রা ৪ গুণ হলে বেগ $\\sqrt{4} = 2$ গুণ হয়।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q009",
+    "number": 9,
+    "subjectNumber": 9,
+    "subject": "Physics",
+    "question": "একটি সমান্তরাল পাত ধারককে চার্জিত করার পর ব্যাটারি খুলে ফেলা হলো। এ অবস্থায় ধারকটিতে সঞ্চিত শক্তির পরিমাণ U_0 । পাত দুটির দূরত্ব যদি দ্বিগুণ করা হয়, তবে ধারকে সঞ্চিত শক্তি কত গুণ হবে?",
+    "options": [
+      "U_0/2",
+      "U_0/4",
+      "2U_0",
+      "4U_0"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $C = \\frac{\\epsilon_0 A}{d} \\implies C' = \\frac{C}{2}$; $U = \\frac{Q^2}{2C} \\implies U' = 2U_0$\n\n📐 **ধাপে ধাপে সমাধান:** ব্যাটারি খুলে ফেলার কারণে আধান $Q$ ধ্রুব থাকবে।\nদূরত্ব $d$ দ্বিগুণ করলে ধারকত্ব $C = \\frac{\\epsilon_0 A}{d}$ অর্ধেক হবে ($C' = \\frac{C}{2}$)।\nসঞ্চিত শক্তি $U = \\frac{Q^2}{2C}$।\nনতুন সঞ্চিত শক্তি $U' = \\frac{Q^2}{2(C/2)} = 2 \\cdot \\frac{Q^2}{2C} = 2U_0$।\n\n⚡ **শর্টকাট টিপস:** ব্যাটারি বিচ্ছিন্ন থাকলে $Q$ স্থির: $C$ অর্ধেক $\\implies U$ দ্বিগুণ ($2U_0$)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "$C = \\frac{\\epsilon_0 A}{d} \\implies C' = \\frac{C}{2}$; $U = \\frac{Q^2}{2C} \\implies U' = 2U_0$",
+      "step_by_step_solution": "ব্যাটারি খুলে ফেলার কারণে আধান $Q$ ধ্রুব থাকবে।\nদূরত্ব $d$ দ্বিগুণ করলে ধারকত্ব $C = \\frac{\\epsilon_0 A}{d}$ অর্ধেক হবে ($C' = \\frac{C}{2}$)।\nসঞ্চিত শক্তি $U = \\frac{Q^2}{2C}$।\nনতুন সঞ্চিত শক্তি $U' = \\frac{Q^2}{2(C/2)} = 2 \\cdot \\frac{Q^2}{2C} = 2U_0$।",
+      "shortcut_tip": "ব্যাটারি বিচ্ছিন্ন থাকলে $Q$ স্থির: $C$ অর্ধেক $\\implies U$ দ্বিগুণ ($2U_0$)।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q010",
+    "number": 10,
+    "subjectNumber": 10,
+    "subject": "Physics",
+    "question": "q আধান বিশিষ্ট একটি গোলককে একটি অপরিবাহী সূতার একপ্রান্ত বেঁধে $\\omega$ কৌণিক বেগে ঘোরানো হচ্ছে। ঘূর্ণায়মান আধানটি কী পরিমাণ বিদ্যুৎ উৎপন্ন করবে?",
+    "options": [
+      "ωq",
+      "2πωq",
+      "q/ω",
+      "qω/2π"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** $I = \\frac{q}{T} = \\frac{q}{2\\pi / \\omega} = \\frac{q \\omega}{2\\pi}$\n\n📐 **ধাপে ধাপে সমাধান:** বিদ্যুৎ প্রবাহ $I = \\frac{q}{T}$।\nপর্যায়কাল $T = \\frac{2\\pi}{\\omega}$।\nমান বসিয়ে পাই, $I = \\frac{q}{\\frac{2\\pi}{\\omega}} = \\frac{q\\omega}{2\\pi}$।\n\n⚡ **শর্টকাট টিপস:** $I = qf = q \\left(\\frac{\\omega}{2\\pi}\\right) = \\frac{q\\omega}{2\\pi}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "$I = \\frac{q}{T} = \\frac{q}{2\\pi / \\omega} = \\frac{q \\omega}{2\\pi}$",
+      "step_by_step_solution": "বিদ্যুৎ প্রবাহ $I = \\frac{q}{T}$।\nপর্যায়কাল $T = \\frac{2\\pi}{\\omega}$।\nমান বসিয়ে পাই, $I = \\frac{q}{\\frac{2\\pi}{\\omega}} = \\frac{q\\omega}{2\\pi}$।",
+      "shortcut_tip": "$I = qf = q \\left(\\frac{\\omega}{2\\pi}\\right) = \\frac{q\\omega}{2\\pi}$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q011",
+    "number": 11,
+    "subjectNumber": 11,
+    "subject": "Physics",
+    "question": "স্থিতিস্থাপক গুণাংকের মাত্রা কী?",
+    "options": [
+      "MLT^-1",
+      "ML^-1T^-2",
+      "MLT^-2",
+      "ML^2T^-2"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\text{মাত্রা} = \\frac{\\text{পীড়ন}}{\\text{বিকৃতি}} = \\frac{[ML^{-1}T^{-2}]}{1} = [ML^{-1}T^{-2}]\n\n📐 **ধাপে ধাপে সমাধান:** স্থিতিস্থাপক গুণাঙ্ক $= \\frac{\\text{পীড়ন}}{\\text{বিকৃতি}}$।\nবিকৃতির কোনো মাত্রা নেই।\nপীড়ন $= \\frac{\\text{বল}}{\\text{ক্ষেত্রফল}} = \\frac{[MLT^{-2}]}{[L^2]} = [ML^{-1}T^{-2}]$।\nঅতএব, স্থিতিস্থাপক গুণাঙ্কের মাত্রা $[ML^{-1}T^{-2}]$।\n\n⚡ **শর্টকাট টিপস:** স্থিতিস্থাপক গুণাঙ্কের মাত্রা ও চাপের মাত্রা একই: $[ML^{-1}T^{-2}]$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\text{মাত্রা} = \\frac{\\text{পীড়ন}}{\\text{বিকৃতি}} = \\frac{[ML^{-1}T^{-2}]}{1} = [ML^{-1}T^{-2}]",
+      "step_by_step_solution": "স্থিতিস্থাপক গুণাঙ্ক $= \\frac{\\text{পীড়ন}}{\\text{বিকৃতি}}$।\nবিকৃতির কোনো মাত্রা নেই।\nপীড়ন $= \\frac{\\text{বল}}{\\text{ক্ষেত্রফল}} = \\frac{[MLT^{-2}]}{[L^2]} = [ML^{-1}T^{-2}]$।\nঅতএব, স্থিতিস্থাপক গুণাঙ্কের মাত্রা $[ML^{-1}T^{-2}]$।",
+      "shortcut_tip": "স্থিতিস্থাপক গুণাঙ্কের মাত্রা ও চাপের মাত্রা একই: $[ML^{-1}T^{-2}]$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q012",
+    "number": 12,
+    "subjectNumber": 12,
+    "subject": "Physics",
+    "question": "${}^{27}_{13}\\text{Al} + {}^{4}_{2}\\text{He} \\rightarrow {}^{30}_{14}\\text{Si} + X$ নিউক্লীয় বিক্রিয়াটিতে অনুপস্থিত কণাটি হলো-",
+    "options": [
+      "আলফা কণা",
+      "ইলেক্ট্রন",
+      "প্রোটন",
+      "নিউট্রন"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Z = (13+2) - 14 = 1; A = (27+4) - 30 = 1 \\implies {}^{1}_{1}H\\text{ (প্রোটন)}\n\n📐 **ধাপে ধাপে সমাধান:** বামপাশের মোট ভর সংখ্যা $= 27 + 4 = 31$।\nবামপাশের মোট পারমাণবিক সংখ্যা $= 13 + 2 = 15$।\nডানপাশের ভর সংখ্যা $= 30 + A_X \\implies A_X = 1$।\nডানপাশের পারমাণবিক সংখ্যা $= 14 + Z_X \\implies Z_X = 1$।\n${}^{1}_{1}X$ হলো একটি প্রোটন (${}^{1}_{1}p$ বা ${}^{1}_{1}H$)।\n\n⚡ **শর্টকাট টিপস:** পারমাণবিক সংখ্যা ১৫-১৪ = ১ এবং ভরসংখ্যা ৩১-৩০ = ১, যা প্রোটন নির্দেশ করে।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Z = (13+2) - 14 = 1; A = (27+4) - 30 = 1 \\implies {}^{1}_{1}H\\text{ (প্রোটন)}",
+      "step_by_step_solution": "বামপাশের মোট ভর সংখ্যা $= 27 + 4 = 31$।\nবামপাশের মোট পারমাণবিক সংখ্যা $= 13 + 2 = 15$।\nডানপাশের ভর সংখ্যা $= 30 + A_X \\implies A_X = 1$।\nডানপাশের পারমাণবিক সংখ্যা $= 14 + Z_X \\implies Z_X = 1$।\n${}^{1}_{1}X$ হলো একটি প্রোটন (${}^{1}_{1}p$ বা ${}^{1}_{1}H$)।",
+      "shortcut_tip": "পারমাণবিক সংখ্যা ১৫-১৪ = ১ এবং ভরসংখ্যা ৩১-৩০ = ১, যা প্রোটন নির্দেশ করে।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q013",
+    "number": 13,
+    "subjectNumber": 13,
+    "subject": "Physics",
+    "question": "14 মিনিট পরে একটি তেজস্ক্রিয় মৌলের 1/16 অংশ অবশিষ্ট থাকে। এর অর্ধায়ু হবে-",
+    "options": [
+      "7/8 min",
+      "7/4 min",
+      "7/2 min",
+      "14/3 min"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\frac{1}{16} = \\left(\\frac{1}{2}\\right)^4 \\implies n = 4; T_{1/2} = \\frac{14}{4} = \\frac{7}{2}\\text{ min}\n\n📐 **ধাপে ধাপে সমাধান:** অবশিষ্ট অংশ $\\frac{N}{N_0} = \\frac{1}{16} = \\left(\\frac{1}{2}\\right)^4$।\nএখানে অর্ধায়ুর সংখ্যা $n = 4$।\nমোট সময় $t = n \\times T_{1/2} \\implies 14 = 4 \\times T_{1/2} \\implies T_{1/2} = \\frac{14}{4} = \\frac{7}{2}\\text{ মিনিট}$।\n\n⚡ **শর্টকাট টিপস:** ১/১৬ অংশ হতে ৪টি অর্ধায়ু অতিক্রম করে, তাই অর্ধায়ু $= ১৪/৪ = ৭/২$ মিনিট।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\frac{1}{16} = \\left(\\frac{1}{2}\\right)^4 \\implies n = 4; T_{1/2} = \\frac{14}{4} = \\frac{7}{2}\\text{ min}",
+      "step_by_step_solution": "অবশিষ্ট অংশ $\\frac{N}{N_0} = \\frac{1}{16} = \\left(\\frac{1}{2}\\right)^4$।\nএখানে অর্ধায়ুর সংখ্যা $n = 4$।\nমোট সময় $t = n \\times T_{1/2} \\implies 14 = 4 \\times T_{1/2} \\implies T_{1/2} = \\frac{14}{4} = \\frac{7}{2}\\text{ মিনিট}$।",
+      "shortcut_tip": "১/১৬ অংশ হতে ৪টি অর্ধায়ু অতিক্রম করে, তাই অর্ধায়ু $= ১৪/৪ = ৭/২$ মিনিট।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q014",
+    "number": 14,
+    "subjectNumber": 14,
+    "subject": "Physics",
+    "question": "কোনো দিক পরিবর্তী তড়িচ্চালক বলের গড়বর্গের বর্গমূল মান 10 volt। তড়িচ্চালক বলের শীর্ষমান হলো-",
+    "options": [
+      "10.00 volt",
+      "14.14 volt",
+      "5.00 volt",
+      "1.41 volt"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** E_0 = E_{rms} \\times \\sqrt{2} = 10 \\times 1.414 = 14.14\\text{ V}\n\n📐 **ধাপে ধাপে সমাধান:** আমরা জানি, $E_{rms} = \\frac{E_0}{\\sqrt{2}}$।\n$\\therefore E_0 = E_{rms} \\times \\sqrt{2} = 10 \\times \\sqrt{2} \\approx 10 \\times 1.414 = 14.14\\text{ volt}$।\n\n⚡ **শর্টকাট টিপস:** শীর্ষমান $= RMS \\times \\sqrt{2} = 10 \\times 1.414 = 14.14\\text{ V}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "E_0 = E_{rms} \\times \\sqrt{2} = 10 \\times 1.414 = 14.14\\text{ V}",
+      "step_by_step_solution": "আমরা জানি, $E_{rms} = \\frac{E_0}{\\sqrt{2}}$।\n$\\therefore E_0 = E_{rms} \\times \\sqrt{2} = 10 \\times \\sqrt{2} \\approx 10 \\times 1.414 = 14.14\\text{ volt}$।",
+      "shortcut_tip": "শীর্ষমান $= RMS \\times \\sqrt{2} = 10 \\times 1.414 = 14.14\\text{ V}$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q015",
+    "number": 15,
+    "subjectNumber": 15,
+    "subject": "Physics",
+    "question": "কোন ত্রুটি দূরীকরণে উত্তল লেন্স ব্যবহার করা হয়?",
+    "options": [
+      "ক্ষীণ দৃষ্টি",
+      "দূর দৃষ্টি",
+      "চালশে",
+      "বিষম দৃষ্টি"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (দূর দৃষ্টি)\n\n📐 **ধাপে ধাপে সমাধান:** দূর দৃষ্টি বা হাইপারমেট্রোপিয়া ত্রুটিতে কাছের বস্তু স্পষ্ট দেখা যায় না। এই ত্রুটি দূর করার জন্য ধনাত্মক ক্ষমতার উত্তল লেন্স ব্যবহার করা হয়।\n\n⚡ **শর্টকাট টিপস:** দূর দৃষ্টি সংশোধন $\\rightarrow$ উত্তল লেন্স (Convex Lens)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (দূর দৃষ্টি)",
+      "step_by_step_solution": "দূর দৃষ্টি বা হাইপারমেট্রোপিয়া ত্রুটিতে কাছের বস্তু স্পষ্ট দেখা যায় না। এই ত্রুটি দূর করার জন্য ধনাত্মক ক্ষমতার উত্তল লেন্স ব্যবহার করা হয়।",
+      "shortcut_tip": "দূর দৃষ্টি সংশোধন $\\rightarrow$ উত্তল লেন্স (Convex Lens)।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q016",
+    "number": 16,
+    "subjectNumber": 1,
+    "subject": "Chemistry",
+    "question": "NaCl এর সাথে H₂O যোগ করলে কোনটি ঘটে?",
+    "options": [
+      "NaOH+HCl",
+      "H^++OH^-",
+      "Na^+(H_2O)+Cl^-(H_2O)",
+      "NaOCl+H_2"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** NaCl(s) + H_2O(l) \\rightarrow Na^+(aq) + Cl^-(aq)\n\n📐 **ধাপে ধাপে সমাধান:** পানিতে $NaCl$ দ্রবীভূত হলে তা আয়নিত হয়ে হাইড্রেটেড আয়নে পরিণত হয়: $Na^+(H_2O)$ এবং $Cl^-(H_2O)$।\n\n⚡ **শর্টকাট টিপস:** লবণ পানিতে দ্রবীভূত হলে আয়নসমূহ হাইড্রেটেড হয়ে যায়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "NaCl(s) + H_2O(l) \\rightarrow Na^+(aq) + Cl^-(aq)",
+      "step_by_step_solution": "পানিতে $NaCl$ দ্রবীভূত হলে তা আয়নিত হয়ে হাইড্রেটেড আয়নে পরিণত হয়: $Na^+(H_2O)$ এবং $Cl^-(H_2O)$।",
+      "shortcut_tip": "লবণ পানিতে দ্রবীভূত হলে আয়নসমূহ হাইড্রেটেড হয়ে যায়।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q017",
+    "number": 17,
+    "subjectNumber": 2,
+    "subject": "Chemistry",
+    "question": "নিম্নের বিক্রিয়াগুলো হতে কার্বনের প্রমাণ দহন তাপ নির্ণয় কর:\ni. $C(s) + \\frac{1}{2}O_2(g) \\rightarrow CO(g); \\Delta H\\degree = -111.0\\text{ kJ mol}^{-1}$\nii. $CO(g) + \\frac{1}{2}O_2(g) \\rightarrow CO_2(g); \\Delta H\\degree = -283.0\\text{ kJ mol}^{-1}$",
+    "options": [
+      "$-173.0\\text{ kJ mol}^{-1}$",
+      "$-394.0\\text{ kJ mol}^{-1}$",
+      "$373.0\\text{ kJ mol}^{-1}$",
+      "$394.0\\text{ kJ mol}^{-1}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\Delta H = (-111.0) + (-283.0) = -394.0\\text{ kJ/mol}\n\n📐 **ধাপে ধাপে সমাধান:** কার্বনের দহন বিক্রিয়া: $C(s) + O_2(g) \\rightarrow CO_2(g)$।\nসমীকরণ (i) ও (ii) যোগ করে পাই:\n$C(s) + O_2(g) \\rightarrow CO_2(g)$\n$\\Delta H\\degree = (-111.0) + (-283.0) = -394.0\\text{ kJ mol}^{-1}$।\n\n⚡ **শর্টকাট টিপস:** দুটি ধাপ যোগ করলে সম্পূর্ণ দহন এনথালপি পাওয়া যায়: $-১১১ - ২৮৩ = -৩৯৪$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\Delta H = (-111.0) + (-283.0) = -394.0\\text{ kJ/mol}",
+      "step_by_step_solution": "কার্বনের দহন বিক্রিয়া: $C(s) + O_2(g) \\rightarrow CO_2(g)$।\nসমীকরণ (i) ও (ii) যোগ করে পাই:\n$C(s) + O_2(g) \\rightarrow CO_2(g)$\n$\\Delta H\\degree = (-111.0) + (-283.0) = -394.0\\text{ kJ mol}^{-1}$।",
+      "shortcut_tip": "দুটি ধাপ যোগ করলে সম্পূর্ণ দহন এনথালপি পাওয়া যায়: $-১১১ - ২৮৩ = -৩৯৪$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q018",
+    "number": 18,
+    "subjectNumber": 3,
+    "subject": "Chemistry",
+    "question": "As এর কয়টি যোজন ইলেকট্রন আছে?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** As (33): [Ar] 3d^{10} 4s^2 4p^3 \\implies \\text{যোজন ইলেকট্রন} = 2 + 3 = 5\n\n📐 **ধাপে ধাপে সমাধান:** আর্সেনিক ($As$, পারমাণবিক সংখ্যা ৩৩) ১৫ নং গ্রুপের মৌল।\nএর ইলেকট্রন বিন্যাস: $[Ar] 3d^{10} 4s^2 4p^3$।\nসর্ববহিঃস্থ শক্তিস্তরে ($n=4$) মোট ইলেকট্রন সংখ্যা $= 2 + 3 = 5$।\n\n⚡ **শর্টকাট টিপস:** গ্রুপ ১৫ এর মৌলসমূহের (N, P, As) যোজন ইলেকট্রন সংখ্যা ৫।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "As (33): [Ar] 3d^{10} 4s^2 4p^3 \\implies \\text{যোজন ইলেকট্রন} = 2 + 3 = 5",
+      "step_by_step_solution": "আর্সেনিক ($As$, পারমাণবিক সংখ্যা ৩৩) ১৫ নং গ্রুপের মৌল।\nএর ইলেকট্রন বিন্যাস: $[Ar] 3d^{10} 4s^2 4p^3$।\nসর্ববহিঃস্থ শক্তিস্তরে ($n=4$) মোট ইলেকট্রন সংখ্যা $= 2 + 3 = 5$।",
+      "shortcut_tip": "গ্রুপ ১৫ এর মৌলসমূহের (N, P, As) যোজন ইলেকট্রন সংখ্যা ৫।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q019",
+    "number": 19,
+    "subjectNumber": 4,
+    "subject": "Chemistry",
+    "question": "অ্যালকাইল হ্যালাইডের $E_2$ অপসারণ বিক্রিয়ায়, অ্যালকোহলিক KOH/NaOH এর ভূমিকা হলো-",
+    "options": [
+      "ক্ষার",
+      "দ্রাবক",
+      "অনুঘটক",
+      "নিউক্লিওফাইল"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: A (ক্ষার)\n\n📐 **ধাপে ধাপে সমাধান:** $E_2$ অপসারণ বিক্রিয়ায় অ্যালকোহলিক $KOH$ বা $NaOH$ থেকে উৎপন্ন $OH^-$ আয়ন একটি শক্তিশালী ক্ষার হিসেবে কাজ করে প্রোটন ($H^+$) অপসারণ করে।\n\n⚡ **শর্টকাট টিপস:** অপসারণ বিক্রিয়ায় অ্যালকোহলিক $KOH$ তীব্র ক্ষার হিসেবে প্রোটন গ্রহণ করে।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: A (ক্ষার)",
+      "step_by_step_solution": "$E_2$ অপসারণ বিক্রিয়ায় অ্যালকোহলিক $KOH$ বা $NaOH$ থেকে উৎপন্ন $OH^-$ আয়ন একটি শক্তিশালী ক্ষার হিসেবে কাজ করে প্রোটন ($H^+$) অপসারণ করে।",
+      "shortcut_tip": "অপসারণ বিক্রিয়ায় অ্যালকোহলিক $KOH$ তীব্র ক্ষার হিসেবে প্রোটন গ্রহণ করে।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q020",
+    "number": 20,
+    "subjectNumber": 5,
+    "subject": "Chemistry",
+    "question": "হাইড্রোনিয়াম আয়নে কোন কোন বন্ধন বিদ্যমান?",
+    "options": [
+      "আয়নিক ও সমযোজী",
+      "সমযোজী ও সন্নিবেশ",
+      "আয়নিক ও সন্নিবেশ",
+      "আয়নিক ও হাইড্রোজেন বন্ধন"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (সমযোজী ও সন্নিবেশ)\n\n📐 **ধাপে ধাপে সমাধান:** হাইড্রোনিয়াম আয়ন ($H_3O^+$)-এ $H_2O$ অণুর ভেতরে দুটি $O-H$ বন্ধন সমযোজী এবং মুক্তজোড় ইলেকট্রন দিয়ে $H^+$ এর সাথে গঠিত বন্ধনটি সন্নিবেশ সমযোজী বন্ধন।\n\n⚡ **শর্টকাট টিপস:** $H_3O^+$ = সমযোজী + সন্নিবেশ সমযোজী।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (সমযোজী ও সন্নিবেশ)",
+      "step_by_step_solution": "হাইড্রোনিয়াম আয়ন ($H_3O^+$)-এ $H_2O$ অণুর ভেতরে দুটি $O-H$ বন্ধন সমযোজী এবং মুক্তজোড় ইলেকট্রন দিয়ে $H^+$ এর সাথে গঠিত বন্ধনটি সন্নিবেশ সমযোজী বন্ধন।",
+      "shortcut_tip": "$H_3O^+$ = সমযোজী + সন্নিবেশ সমযোজী।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q021",
+    "number": 21,
+    "subjectNumber": 6,
+    "subject": "Chemistry",
+    "question": "নিচের কোনটি সত্য নয়?",
+    "options": [
+      "K_W = 1×10^-14",
+      "pK_W=14",
+      "[H_3O^+][OH^-]=K_W",
+      "K_W=1×10^-14M"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** K_W = [H^+][OH^-] \\implies \\text{একক } M^2, \\text{ তাই } K_W = 1 \\times 10^{-14} M \\text{ তথ্যটি ভুল।}\n\n📐 **ধাপে ধাপে সমাধান:** পানির আয়নিক গুণফল $K_w = [H^+][OH^-] = (10^{-7} M)(10^{-7} M) = 10^{-14} M^2$।\nD অপশনে একক হিসেবে $M$ দেয়া আছে, যা সঠিক নয়।\n\n⚡ **শর্টকাট টিপস:** $K_w$ এর একক $M^2$ (বা এককহীন মাত্রায় লেখা হয়), শুধু $M$ ভুল।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "K_W = [H^+][OH^-] \\implies \\text{একক } M^2, \\text{ তাই } K_W = 1 \\times 10^{-14} M \\text{ তথ্যটি ভুল।}",
+      "step_by_step_solution": "পানির আয়নিক গুণফল $K_w = [H^+][OH^-] = (10^{-7} M)(10^{-7} M) = 10^{-14} M^2$।\nD অপশনে একক হিসেবে $M$ দেয়া আছে, যা সঠিক নয়।",
+      "shortcut_tip": "$K_w$ এর একক $M^2$ (বা এককহীন মাত্রায় লেখা হয়), শুধু $M$ ভুল।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q022",
+    "number": 22,
+    "subjectNumber": 7,
+    "subject": "Chemistry",
+    "question": "ক্রোমিক এসিড দ্বারা কাঁচপাত্র পরিষ্কার করার সময় কোন ধরনের বিক্রিয়া ঘটে?",
+    "options": [
+      "বিজারণ",
+      "প্রতিস্থাপন",
+      "প্রশমণ",
+      "জারণ"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: D (জারণ)\n\n📐 **ধাপে ধাপে সমাধান:** ক্রোমিক এসিড মিশ্রণ একটি শক্তিশালী জারক পদার্থ। এটি কাঁচপাত্রের গায়ে লেগে থাকা তৈলাক্ত বা জৈব ময়লাকে জারিত করে পরিষ্কার করে।\n\n⚡ **শর্টকাট টিপস:** ক্রোমিক এসিড শক্তিশালী জারক $\\rightarrow$ জারণ বিক্রিয়া।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: D (জারণ)",
+      "step_by_step_solution": "ক্রোমিক এসিড মিশ্রণ একটি শক্তিশালী জারক পদার্থ। এটি কাঁচপাত্রের গায়ে লেগে থাকা তৈলাক্ত বা জৈব ময়লাকে জারিত করে পরিষ্কার করে।",
+      "shortcut_tip": "ক্রোমিক এসিড শক্তিশালী জারক $\\rightarrow$ জারণ বিক্রিয়া।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q023",
+    "number": 23,
+    "subjectNumber": 8,
+    "subject": "Chemistry",
+    "question": "বিশুদ্ধ পানিতে OH^- এবং H^+ এর মোলার ঘনমাত্রার অনুপাত কত?",
+    "options": [
+      "7",
+      "10^-7",
+      "0",
+      "1"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\frac{[OH^-]}{[H^+]} = \\frac{10^{-7} M}{10^{-7} M} = 1\n\n📐 **ধাপে ধাপে সমাধান:** বিশুদ্ধ পানিতে $[H^+] = 10^{-7}\\text{ M}$ এবং $[OH^-] = 10^{-7}\\text{ M}$।\nঅতএব, অনুপাত $= \\frac{10^{-7}}{10^{-7}} = 1$।\n\n⚡ **শর্টকাট টিপস:** বিশুদ্ধ পানি নিরপেক্ষ, তাই $[H^+] = [OH^-] \\implies$ অনুপাত ১।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\frac{[OH^-]}{[H^+]} = \\frac{10^{-7} M}{10^{-7} M} = 1",
+      "step_by_step_solution": "বিশুদ্ধ পানিতে $[H^+] = 10^{-7}\\text{ M}$ এবং $[OH^-] = 10^{-7}\\text{ M}$।\nঅতএব, অনুপাত $= \\frac{10^{-7}}{10^{-7}} = 1$।",
+      "shortcut_tip": "বিশুদ্ধ পানি নিরপেক্ষ, তাই $[H^+] = [OH^-] \\implies$ অনুপাত ১।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q024",
+    "number": 24,
+    "subjectNumber": 9,
+    "subject": "Chemistry",
+    "question": "অষ্টক সম্প্রসারণ এর উদাহরণ কোনটি?",
+    "options": [
+      "BeCl_2",
+      "PCl_5",
+      "BCl_3",
+      "Cl_2"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** PCl_5 \\text{ এ কেন্দ্রীয় atom } P \\text{ এর চারপাশে ১০টি ইলেকট্রন বিদ্যমান।}\n\n📐 **ধাপে ধাপে সমাধান:** $PCl_5$ যৌগে কেন্দ্রীয় ফসফরাস পরমাণু ৫টি ক্লোরিন পরমাণুর সাথে ৫টি সমযোজী বন্ধন তৈরি করে। ফলে ফসফরাসের সর্ববহিঃস্থ স্তরে মোট ১০টি ইলেকট্রন থাকে, যা অষ্টক সম্প্রসারণের উদাহরণ।\n\n⚡ **শর্টকাট টিপস:** $PCl_5 = 10 e^- \\rightarrow$ অষ্টক সম্প্রসারণ।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "PCl_5 \\text{ এ কেন্দ্রীয় atom } P \\text{ এর চারপাশে ১০টি ইলেকট্রন বিদ্যমান।}",
+      "step_by_step_solution": "$PCl_5$ যৌগে কেন্দ্রীয় ফসফরাস পরমাণু ৫টি ক্লোরিন পরমাণুর সাথে ৫টি সমযোজী বন্ধন তৈরি করে। ফলে ফসফরাসের সর্ববহিঃস্থ স্তরে মোট ১০টি ইলেকট্রন থাকে, যা অষ্টক সম্প্রসারণের উদাহরণ।",
+      "shortcut_tip": "$PCl_5 = 10 e^- \\rightarrow$ অষ্টক সম্প্রসারণ।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q025",
+    "number": 25,
+    "subjectNumber": 10,
+    "subject": "Chemistry",
+    "question": "নিচের কোন তড়িৎদ্বারটির প্রমাণ বিজারণ বিভবের মান সবচেয়ে কম?",
+    "options": [
+      "H^+(aq)/H2(g). Pt",
+      "Cu^+(aq)/Cu(s)",
+      "Na^+(aq)/Na(s)",
+      "Pt(s)/F(g)/F^-(aq)"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** E\\degree(Na^+/Na) = -2.71\\text{ V} \\text{ (সর্বনিম্ন)}\n\n📐 **ধাপে ধাপে সমাধান:** তড়িৎ রাসায়নিক সারিতে লিথিয়াম, সোডিয়াম ধাতুগুলো শীর্ষে থাকে যার কারণে এদের জারণ বিভব অত্যন্ত বেশি কিন্তু প্রমাণ বিজারণ বিভবের মান অত্যন্ত ঋণাত্মক ($Na^+/Na = -2.71\\text{ V}$)।\n\n⚡ **শর্টকাট টিপস:** সক্রিয় ধাতু সোডিয়ামের ($Na$) বিজারণ বিভব ঋণাত্মক ও সর্বনিম্ন।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "E\\degree(Na^+/Na) = -2.71\\text{ V} \\text{ (সর্বনিম্ন)}",
+      "step_by_step_solution": "তড়িৎ রাসায়নিক সারিতে লিথিয়াম, সোডিয়াম ধাতুগুলো শীর্ষে থাকে যার কারণে এদের জারণ বিভব অত্যন্ত বেশি কিন্তু প্রমাণ বিজারণ বিভবের মান অত্যন্ত ঋণাত্মক ($Na^+/Na = -2.71\\text{ V}$)।",
+      "shortcut_tip": "সক্রিয় ধাতু সোডিয়ামের ($Na$) বিজারণ বিভব ঋণাত্মক ও সর্বনিম্ন।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q026",
+    "number": 26,
+    "subjectNumber": 11,
+    "subject": "Chemistry",
+    "question": "aA → bB বিক্রিয়াটির ক্ষেত্রে কোনটি বিক্রিয়ার হার নির্দেশ করে?",
+    "options": [
+      "$-\\frac{d[A]}{d t}$",
+      "$-\\frac{1}{a} \\frac{d[A]}{d t}$",
+      "$-\\frac{d[B]}{d t}$",
+      "$-\\frac{1}{b} \\frac{d[A]}{d t}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\text{বিক্রিয়ার হার} = -\\frac{1}{a} \\frac{d[A]}{dt} = +\\frac{1}{b} \\frac{d[B]}{dt}\n\n📐 **ধাপে ধাপে সমাধান:** বিক্রিয়কের ঘনমাত্রা হ্রাসের হারকে সহগ দ্বারা ভাগ করলে বিক্রিয়ার হার পাওয়া যায়।\nযেহেতু A বিক্রিয়ক, তাই এর ঘনমাত্রার পরিবর্তন ঋণাত্মক: $-\\frac{1}{a} \\frac{d[A]}{dt}$।\n\n⚡ **শর্টকাট টিপস:** বিক্রিয়কের ক্ষেত্রে ঋণাত্মক চিহ্ন ও সহগ নিচে বসবে: $-\\frac{1}{a}\\frac{d[A]}{dt}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\text{বিক্রিয়ার হার} = -\\frac{1}{a} \\frac{d[A]}{dt} = +\\frac{1}{b} \\frac{d[B]}{dt}",
+      "step_by_step_solution": "বিক্রিয়কের ঘনমাত্রা হ্রাসের হারকে সহগ দ্বারা ভাগ করলে বিক্রিয়ার হার পাওয়া যায়।\nযেহেতু A বিক্রিয়ক, তাই এর ঘনমাত্রার পরিবর্তন ঋণাত্মক: $-\\frac{1}{a} \\frac{d[A]}{dt}$।",
+      "shortcut_tip": "বিক্রিয়কের ক্ষেত্রে ঋণাত্মক চিহ্ন ও সহগ নিচে বসবে: $-\\frac{1}{a}\\frac{d[A]}{dt}$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q027",
+    "number": 27,
+    "subjectNumber": 12,
+    "subject": "Chemistry",
+    "question": "দুধের প্রধান প্রোটিন হলো -",
+    "options": [
+      "ক্যারোটিন",
+      "লিপিড",
+      "ক্যাসিন",
+      "ল্যাকটালবুমিন"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: C (ক্যাসিন)\n\n📐 **ধাপে ধাপে সমাধান:** দুধের প্রধান প্রোটিন হলো ক্যাসিন (Casein), যা দুধে থাকা প্রোটিনের প্রায় ৮০% অংশ গঠন করে।\n\n⚡ **শর্টকাট টিপস:** দুধের প্রধান প্রোটিন = ক্যাসিন (Casein)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: C (ক্যাসিন)",
+      "step_by_step_solution": "দুধের প্রধান প্রোটিন হলো ক্যাসিন (Casein), যা দুধে থাকা প্রোটিনের প্রায় ৮০% অংশ গঠন করে।",
+      "shortcut_tip": "দুধের প্রধান প্রোটিন = ক্যাসিন (Casein)।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q028",
+    "number": 28,
+    "subjectNumber": 13,
+    "subject": "Chemistry",
+    "question": "নিচের কোন যৌগটি সিলভার দর্পণ পরীক্ষা দেয়?",
+    "options": [
+      "প্রোপানোন",
+      "প্রপিন",
+      "প্রপানল",
+      "প্রপান্যাল"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: D (প্রপান্যাল)\n\n📐 **ধাপে ধাপে সমাধান:** অ্যালডিহাইডসমূহ টলেন বিকারকের সাথে বিক্রিয়া করে ধাতব সিলভারের অধঃক্ষেপ (সিলভার দর্পণ) সৃষ্টি করে। অপশনগুলোর মধ্যে প্রপান্যাল একটি অ্যালডিহাইড।\n\n⚡ **শর্টকাট টিপস:** অ্যালডিহাইড (প্রপান্যাল) = সিলভার দর্পণ পরীক্ষা প্রদান করে।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: D (প্রপান্যাল)",
+      "step_by_step_solution": "অ্যালডিহাইডসমূহ টলেন বিকারকের সাথে বিক্রিয়া করে ধাতব সিলভারের অধঃক্ষেপ (সিলভার দর্পণ) সৃষ্টি করে। অপশনগুলোর মধ্যে প্রপান্যাল একটি অ্যালডিহাইড।",
+      "shortcut_tip": "অ্যালডিহাইড (প্রপান্যাল) = সিলভার দর্পণ পরীক্ষা প্রদান করে।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q029",
+    "number": 29,
+    "subjectNumber": 14,
+    "subject": "Chemistry",
+    "question": "বেনজিন বলয় সক্রিয়কারী মূলক কোনটি?",
+    "options": [
+      "-NH_2",
+      "- NO_2",
+      "-CHО",
+      "- SO_3H"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: A (-NH_2)\n\n📐 **ধাপে ধাপে সমাধান:** যে সকল মূলক বেনজিন বলয়ে ইলেকট্রন ঘনত্ব বৃদ্ধি করে সেগুলোকে সক্রিয়কারী মূলক বলে। $-NH_2$ মূলকের নাইট্রোজেনে মুক্তজোড় ইলেকট্রন থাকায় এটি রেজোন্যান্সের মাধ্যমে বলয় সক্রিয় করে (অর্থো-প্যারা নির্দেশক)।\n\n⚡ **শর্টকাট টিপস:** মুক্তজোড় ইলেকট্রনযুক্ত মূলক (যেমন $-NH_2$) বলয় সক্রিয়কারী।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: A (-NH_2)",
+      "step_by_step_solution": "যে সকল মূলক বেনজিন বলয়ে ইলেকট্রন ঘনত্ব বৃদ্ধি করে সেগুলোকে সক্রিয়কারী মূলক বলে। $-NH_2$ মূলকের নাইট্রোজেনে মুক্তজোড় ইলেকট্রন থাকায় এটি রেজোন্যান্সের মাধ্যমে বলয় সক্রিয় করে (অর্থো-প্যারা নির্দেশক)।",
+      "shortcut_tip": "মুক্তজোড় ইলেকট্রনযুক্ত মূলক (যেমন $-NH_2$) বলয় সক্রিয়কারী।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q030",
+    "number": 30,
+    "subjectNumber": 15,
+    "subject": "Chemistry",
+    "question": "R_H রিডবার্গ ধ্রুবক হলে, হাইড্রোজেন পরমাণুর বর্ণালিতে বামার সিরিজের জন্য সর্বনিম্ন কত তরঙ্গ সংখ্যার রশ্মি বিকিরিত হয়?",
+    "options": [
+      "$\\frac{3}{5}R_H$",
+      "$\\frac{5}{36}R_H$",
+      "$\\frac{3}{16}R_H$",
+      "$\\frac{9}{144}R_H$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\bar{\\nu} = R_H \\left(\\frac{1}{2^2} - \\frac{1}{3^2}\\right) = R_H \\left(\\frac{1}{4} - \\frac{1}{9}\\right) = \\frac{5}{36}R_H\n\n📐 **ধাপে ধাপে সমাধান:** বামার সিরিজের জন্য $n_1 = 2$।\nসর্বনিম্ন তরঙ্গসংখ্যা হবে প্রথম লাইনের জন্য (যখন $n_2 = 3$)।\n$\\bar{\\nu} = R_H \\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right) = R_H \\left(\\frac{1}{2^2} - \\frac{1}{3^2}\\right) = R_H \\left(\\frac{1}{4} - \\frac{1}{9}\\right) = \\frac{5}{36} R_H$।\n\n⚡ **শর্টকাট টিপস:** বামার সিরিজের ১ম লাইন ($n_2=3$): $\\frac{1}{4} - \\frac{1}{9} = \\frac{5}{36}R_H$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\bar{\\nu} = R_H \\left(\\frac{1}{2^2} - \\frac{1}{3^2}\\right) = R_H \\left(\\frac{1}{4} - \\frac{1}{9}\\right) = \\frac{5}{36}R_H",
+      "step_by_step_solution": "বামার সিরিজের জন্য $n_1 = 2$।\nসর্বনিম্ন তরঙ্গসংখ্যা হবে প্রথম লাইনের জন্য (যখন $n_2 = 3$)।\n$\\bar{\\nu} = R_H \\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right) = R_H \\left(\\frac{1}{2^2} - \\frac{1}{3^2}\\right) = R_H \\left(\\frac{1}{4} - \\frac{1}{9}\\right) = \\frac{5}{36} R_H$।",
+      "shortcut_tip": "বামার সিরিজের ১ম লাইন ($n_2=3$): $\\frac{1}{4} - \\frac{1}{9} = \\frac{5}{36}R_H$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q031",
+    "number": 31,
+    "subjectNumber": 1,
+    "subject": "Mathematics",
+    "question": "পোলার স্থানাংকে $r^{2} - 2r\\sin\\theta = 3$ একটি বৃত্তের সমীকরণ। বৃত্তটির ব্যাসার্ধ কত?",
+    "options": [
+      "2 একক",
+      "3 একক",
+      "4 একক",
+      "6 একক"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** x^2 + y^2 - 2y = 3 \\implies x^2 + (y-1)^2 = 2^2 \\implies R = 2\n\n📐 **ধাপে ধাপে সমাধান:** কার্তেসীয় স্থানাঙ্কে রূপান্তর করি: $x = r\\cos\\theta, y = r\\sin\\theta, r^2 = x^2 + y^2$।\nসমীকরণ: $x^2 + y^2 - 2y = 3 \\implies x^2 + y^2 - 2y + 1 = 4 \\implies x^2 + (y-1)^2 = 2^2$।\nএটি একটি বৃত্ত যার ব্যাসার্ধ $R = 2$ একক।\n\n⚡ **শর্টকাট টিপস:** $r^2 - 2r\\sin\\theta = 3 \\Rightarrow x^2+y^2-2y-3=0 \\Rightarrow r = \\sqrt{0^2 + 1^2 - (-3)} = \\sqrt{4} = 2$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "x^2 + y^2 - 2y = 3 \\implies x^2 + (y-1)^2 = 2^2 \\implies R = 2",
+      "step_by_step_solution": "কার্তেসীয় স্থানাঙ্কে রূপান্তর করি: $x = r\\cos\\theta, y = r\\sin\\theta, r^2 = x^2 + y^2$।\nসমীকরণ: $x^2 + y^2 - 2y = 3 \\implies x^2 + y^2 - 2y + 1 = 4 \\implies x^2 + (y-1)^2 = 2^2$।\nএটি একটি বৃত্ত যার ব্যাসার্ধ $R = 2$ একক।",
+      "shortcut_tip": "$r^2 - 2r\\sin\\theta = 3 \\Rightarrow x^2+y^2-2y-3=0 \\Rightarrow r = \\sqrt{0^2 + 1^2 - (-3)} = \\sqrt{4} = 2$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q032",
+    "number": 32,
+    "subjectNumber": 2,
+    "subject": "Mathematics",
+    "question": "$\\lim_{x \\to 0} \\frac{1 - \\cos x}{\\sin^2 2x}$ - এর মান কোনটি?",
+    "options": [
+      "$\\frac{2}{25}$",
+      "$\\frac{49}{6}$",
+      "$\\frac{1}{8}$",
+      "tan x"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\lim_{x \\to 0} \\frac{2\\sin^2(x/2)}{\\sin^2 2x} = \\frac{2 (1/4)}{4} = \\frac{1}{8}\n\n📐 **ধাপে ধাপে সমাধান:** $\\lim_{x \\to 0} \\frac{1-\\cos x}{\\sin^2 2x} = \\lim_{x \\to 0} \\frac{2\\sin^2(x/2)}{\\sin^2 2x} = 2 \\lim_{x \\to 0} \\frac{\\frac{\\sin^2(x/2)}{(x/2)^2} \\cdot \\frac{x^2}{4}}{\\frac{\\sin^2 2x}{(2x)^2} \\cdot 4x^2} = 2 \\times \\frac{1/4}{4} = \\frac{2}{16} = \\frac{1}{8}$।\n\n⚡ **শর্টকাট টিপস:** L'Hospital এর নিয়ম বা সরাসরি সহগ অনুপাত: $\\frac{1/2}{2^2} = \\frac{1}{8}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\lim_{x \\to 0} \\frac{2\\sin^2(x/2)}{\\sin^2 2x} = \\frac{2 (1/4)}{4} = \\frac{1}{8}",
+      "step_by_step_solution": "$\\lim_{x \\to 0} \\frac{1-\\cos x}{\\sin^2 2x} = \\lim_{x \\to 0} \\frac{2\\sin^2(x/2)}{\\sin^2 2x} = 2 \\lim_{x \\to 0} \\frac{\\frac{\\sin^2(x/2)}{(x/2)^2} \\cdot \\frac{x^2}{4}}{\\frac{\\sin^2 2x}{(2x)^2} \\cdot 4x^2} = 2 \\times \\frac{1/4}{4} = \\frac{2}{16} = \\frac{1}{8}$।",
+      "shortcut_tip": "L'Hospital এর নিয়ম বা সরাসরি সহগ অনুপাত: $\\frac{1/2}{2^2} = \\frac{1}{8}$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q033",
+    "number": 33,
+    "subjectNumber": 3,
+    "subject": "Mathematics",
+    "question": "3N ও 2N মানের দুইটি বলের লব্ধি R। প্রথম বলের মান দ্বিগুণ করলে লব্ধির মানও দ্বিগুণ হয়। বলদ্বয়ের মধ্যবর্তী কোণের মান হবে-",
+    "options": [
+      "30°",
+      "45°",
+      "65°",
+      "120°"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** R^2 = 3^2+2^2+2(3)(2)\\cos\\alpha; (2R)^2 = 6^2+2^2+2(6)(2)\\cos\\alpha \\implies \\cos\\alpha = -1/2 \\implies \\alpha = 120^\\circ\n\n📐 **ধাপে ধাপে সমাধান:** ১ম ক্ষেত্রে: $R^2 = 9 + 4 + 12\\cos\\alpha = 13 + 12\\cos\\alpha$\n২য় ক্ষেত্রে (প্রথম বল ৬N হলে): $4R^2 = 36 + 4 + 24\\cos\\alpha = 40 + 24\\cos\\alpha$\nএখন, $4(13 + 12\\cos\\alpha) = 40 + 24\\cos\\alpha \\implies 52 + 48\\cos\\alpha = 40 + 24\\cos\\alpha$\n$\\implies 24\\cos\\alpha = -12 \\implies \\cos\\alpha = -1/2 \\implies \\alpha = 120^\\circ$।\n\n⚡ **শর্টকাট টিপস:** সমীকরণ সমাধান করে $\\cos\\alpha = -1/2 \\implies \\alpha = 120^\\circ$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "R^2 = 3^2+2^2+2(3)(2)\\cos\\alpha; (2R)^2 = 6^2+2^2+2(6)(2)\\cos\\alpha \\implies \\cos\\alpha = -1/2 \\implies \\alpha = 120^\\circ",
+      "step_by_step_solution": "১ম ক্ষেত্রে: $R^2 = 9 + 4 + 12\\cos\\alpha = 13 + 12\\cos\\alpha$\n২য় ক্ষেত্রে (প্রথম বল ৬N হলে): $4R^2 = 36 + 4 + 24\\cos\\alpha = 40 + 24\\cos\\alpha$\nএখন, $4(13 + 12\\cos\\alpha) = 40 + 24\\cos\\alpha \\implies 52 + 48\\cos\\alpha = 40 + 24\\cos\\alpha$\n$\\implies 24\\cos\\alpha = -12 \\implies \\cos\\alpha = -1/2 \\implies \\alpha = 120^\\circ$।",
+      "shortcut_tip": "সমীকরণ সমাধান করে $\\cos\\alpha = -1/2 \\implies \\alpha = 120^\\circ$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q034",
+    "number": 34,
+    "subjectNumber": 4,
+    "subject": "Mathematics",
+    "question": "2u আদিবেগ এবং অনুভূমিকের সাথে লম্বভাবে প্রক্ষিপ্ত বস্তুর সর্বোচ্চ উচ্চতা হবে-",
+    "options": [
+      "u^2/2g",
+      "2u^2/g",
+      "$\\frac{u^{2}}{2 g} \\sin \\alpha$",
+      "$\\frac{u^{2}}{2 g} \\cos \\alpha$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** H = \\frac{U^2}{2g} = \\frac{(2u)^2}{2g} = \\frac{4u^2}{2g} = \\frac{2u^2}{g}\n\n📐 **ধাপে ধাপে সমাধান:** উলম্বভাবে প্রক্ষিপ্ত বস্তুর সর্বোচ্চ উচ্চতা $H = \\frac{U^2}{2g}$।\nএখানে আদিবেগ $U = 2u$।\n$\\therefore H = \\frac{(2u)^2}{2g} = \\frac{4u^2}{2g} = \\frac{2u^2}{g}$।\n\n⚡ **শর্টকাট টিপস:** আদিবেগ দ্বিগুণ হলে উচ্চতা চারগুণ হবে: $4 \\times \\frac{u^2}{2g} = \\frac{2u^2}{g}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "H = \\frac{U^2}{2g} = \\frac{(2u)^2}{2g} = \\frac{4u^2}{2g} = \\frac{2u^2}{g}",
+      "step_by_step_solution": "উলম্বভাবে প্রক্ষিপ্ত বস্তুর সর্বোচ্চ উচ্চতা $H = \\frac{U^2}{2g}$।\nএখানে আদিবেগ $U = 2u$।\n$\\therefore H = \\frac{(2u)^2}{2g} = \\frac{4u^2}{2g} = \\frac{2u^2}{g}$।",
+      "shortcut_tip": "আদিবেগ দ্বিগুণ হলে উচ্চতা চারগুণ হবে: $4 \\times \\frac{u^2}{2g} = \\frac{2u^2}{g}$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q035",
+    "number": 35,
+    "subjectNumber": 5,
+    "subject": "Mathematics",
+    "question": "$\\frac{d}{d x}\\left(\\cos ^{2}(\\ln x)\\right)=?$",
+    "options": [
+      "$-\\frac{\\sin (2 \\ln x)}{2}$",
+      "$-\\frac{2 \\cos (\\ln x)}{x}$",
+      "$-\\frac{\\sin (2 \\ln x)}{x}$",
+      "$-2x\\cos(\\ln x)\\sin(\\ln x)$"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\frac{d}{dx}[\\cos^2(\\ln x)] = 2\\cos(\\ln x) \\cdot [-\\sin(\\ln x)] \\cdot \\frac{1}{x} = -\\frac{\\sin(2\\ln x)}{x}\n\n📐 **ধাপে ধাপে সমাধান:** চেইন রুল ব্যবহার করে:\n$\\frac{d}{dx}[\\cos^2(\\ln x)] = 2\\cos(\\ln x) \\frac{d}{dx}[\\cos(\\ln x)]$\n$= 2\\cos(\\ln x) \\cdot [-\\sin(\\ln x)] \\cdot \\frac{d}{dx}(\\ln x)$\n$= -2\\sin(\\ln x)\\cos(\\ln x) \\cdot \\frac{1}{x} = -\\frac{\\sin(2\\ln x)}{x}$।\n\n⚡ **শর্টকাট টিপস:** $2\n\nsin A \\cos A = \\sin 2A$ সূত্র প্রয়োগ করে $-\\frac{\\sin(2\\ln x)}{x}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\frac{d}{dx}[\\cos^2(\\ln x)] = 2\\cos(\\ln x) \\cdot [-\\sin(\\ln x)] \\cdot \\frac{1}{x} = -\\frac{\\sin(2\\ln x)}{x}",
+      "step_by_step_solution": "চেইন রুল ব্যবহার করে:\n$\\frac{d}{dx}[\\cos^2(\\ln x)] = 2\\cos(\\ln x) \\frac{d}{dx}[\\cos(\\ln x)]$\n$= 2\\cos(\\ln x) \\cdot [-\\sin(\\ln x)] \\cdot \\frac{d}{dx}(\\ln x)$\n$= -2\\sin(\\ln x)\\cos(\\ln x) \\cdot \\frac{1}{x} = -\\frac{\\sin(2\\ln x)}{x}$।",
+      "shortcut_tip": "$2\n\nsin A \\cos A = \\sin 2A$ সূত্র প্রয়োগ করে $-\\frac{\\sin(2\\ln x)}{x}$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q036",
+    "number": 36,
+    "subjectNumber": 6,
+    "subject": "Mathematics",
+    "question": "তিনটি ছক্কা একবার নিক্ষেপ করা হলে তিনটিতেই একই সংখ্যা পাওয়ার সম্ভাবনা কত?",
+    "options": [
+      "1/18",
+      "1/6",
+      "1/216",
+      "1/36"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\text{অনুকূল ঘটনা} = 6, \\text{মোট ঘটনা} = 6^3 = 216 \\implies P = \\frac{6}{216} = \\frac{1}{36}\n\n📐 **ধাপে ধাপে সমাধান:** তিনটি ছক্কা নিক্ষেপে মোট নমুনা ক্ষেত্র $n(S) = 6 \\times 6 \\times 6 = 216$।\nতিনটিতেই একই সংখ্যা ওঠার অনুকূল ঘটনা: $(1,1,1), (2,2,2), (3,3,3), (4,4,4), (5,5,5), (6,6,6)$ অর্থাৎ $n(E) = 6$টি।\n$\\therefore P(E) = \\frac{6}{216} = \\frac{1}{36}$।\n\n⚡ **শর্টকাট টিপস:** ১ম ছক্কায় যেকোনো সংখ্যা ওঠার পর বাকি ২টিতে মিল থাকার সম্ভাবনা $= 1 \\times \\frac{1}{6} \\times \\frac{1}{6} = \\frac{1}{36}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\text{অনুকূল ঘটনা} = 6, \\text{মোট ঘটনা} = 6^3 = 216 \\implies P = \\frac{6}{216} = \\frac{1}{36}",
+      "step_by_step_solution": "তিনটি ছক্কা নিক্ষেপে মোট নমুনা ক্ষেত্র $n(S) = 6 \\times 6 \\times 6 = 216$।\nতিনটিতেই একই সংখ্যা ওঠার অনুকূল ঘটনা: $(1,1,1), (2,2,2), (3,3,3), (4,4,4), (5,5,5), (6,6,6)$ অর্থাৎ $n(E) = 6$টি।\n$\\therefore P(E) = \\frac{6}{216} = \\frac{1}{36}$।",
+      "shortcut_tip": "১ম ছক্কায় যেকোনো সংখ্যা ওঠার পর বাকি ২টিতে মিল থাকার সম্ভাবনা $= 1 \\times \\frac{1}{6} \\times \\frac{1}{6} = \\frac{1}{36}$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q037",
+    "number": 37,
+    "subjectNumber": 7,
+    "subject": "Mathematics",
+    "question": "$x^2-2x+1 = 0$ সমীকরণটির মূলদ্বয়ের ত্রিঘাত এর সমষ্টি হলো-",
+    "options": [
+      "2",
+      "3",
+      "-2",
+      "-3"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** (x-1)^2 = 0 \\implies x = 1, 1; 1^3 + 1^3 = 2\n\n📐 **ধাপে ধাপে সমাধান:** $x^2 - 2x + 1 = 0 \\implies (x-1)^2 = 0 \\implies x = 1, 1$।\nমূল দুটি হলো $\\alpha = 1$ এবং $\\beta = 1$।\nমূলদ্বয়ের ঘন বা ত্রিঘাতের সমষ্টি $= \\alpha^3 + \\beta^3 = 1^3 + 1^3 = 1 + 1 = 2$।\n\n⚡ **শর্টকাট টিপস:** সমীকরণের মূল দুটি ১ ও ১। তাই ঘন করে যোগ করলে ১+১ = ২।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "(x-1)^2 = 0 \\implies x = 1, 1; 1^3 + 1^3 = 2",
+      "step_by_step_solution": "$x^2 - 2x + 1 = 0 \\implies (x-1)^2 = 0 \\implies x = 1, 1$।\nমূল দুটি হলো $\\alpha = 1$ এবং $\\beta = 1$।\nমূলদ্বয়ের ঘন বা ত্রিঘাতের সমষ্টি $= \\alpha^3 + \\beta^3 = 1^3 + 1^3 = 1 + 1 = 2$।",
+      "shortcut_tip": "সমীকরণের মূল দুটি ১ ও ১। তাই ঘন করে যোগ করলে ১+১ = ২।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q038",
+    "number": 38,
+    "subjectNumber": 8,
+    "subject": "Mathematics",
+    "question": "$(1 + x)^7 (1 - x)^8$ এর বিস্তৃতিতে $x^7$ এর সহগ কত?",
+    "options": [
+      "30",
+      "32",
+      "35",
+      "40"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** (1-x^2)^7 (1-x) \\text{ এ } x^7 \\text{ এর সহগ} = (-1) \\times {}^{7}C_3 (-1)^3 = 35\n\n📐 **ধাপে ধাপে সমাধান:** $(1+x)^7 (1-x)^8 = [(1+x)(1-x)]^7 (1-x) = (1-x^2)^7 (1-x)$\n$= (1-x^2)^7 - x(1-x^2)^7$\nএখানে $x^7$ পদটি আসবে দ্বিতীয় পদ $-x(1-x^2)^7$ থেকে যেখানে $(1-x^2)^7$ এর $x^6$ এর সহগ প্রয়োজন।\n$(1-x^2)^7$ এ $x^6$ এর পদ $= {}^{7}C_3 (-x^2)^3 = -35 x^6$।\nঅতএব, $-x(-35x^6) = 35x^7$ $\\implies x^7$ এর সহগ $35$।\n\n⚡ **শর্টকাট টিপস:** বীজগাণিতিক রাশি রূপান্তর করে সহগ নির্ণয় করলে মান দাঁড়ায় ৩৫।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "(1-x^2)^7 (1-x) \\text{ এ } x^7 \\text{ এর সহগ} = (-1) \\times {}^{7}C_3 (-1)^3 = 35",
+      "step_by_step_solution": "$(1+x)^7 (1-x)^8 = [(1+x)(1-x)]^7 (1-x) = (1-x^2)^7 (1-x)$\n$= (1-x^2)^7 - x(1-x^2)^7$\nএখানে $x^7$ পদটি আসবে দ্বিতীয় পদ $-x(1-x^2)^7$ থেকে যেখানে $(1-x^2)^7$ এর $x^6$ এর সহগ প্রয়োজন।\n$(1-x^2)^7$ এ $x^6$ এর পদ $= {}^{7}C_3 (-x^2)^3 = -35 x^6$।\nঅতএব, $-x(-35x^6) = 35x^7$ $\\implies x^7$ এর সহগ $35$।",
+      "shortcut_tip": "বীজগাণিতিক রাশি রূপান্তর করে সহগ নির্ণয় করলে মান দাঁড়ায় ৩৫।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q039",
+    "number": 39,
+    "subjectNumber": 9,
+    "subject": "Mathematics",
+    "question": "$2x = y^2 + 8y + 22$ পরাবৃত্তের শীর্ষবিন্দুর স্থানাঙ্ক হবে-",
+    "options": [
+      "(3,-4)",
+      "(-3,4)",
+      "(-3,-4)",
+      "(3,4)"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** (y+4)^2 = 2(x-3) \\implies \\text{শীর্ষবিন্দু } (3, -4)\n\n📐 **ধাপে ধাপে সমাধান:** সমীকরণটিকে প্রমিত রূপে সাজাই:\n$y^2 + 8y + 16 + 6 = 2x$\n$\\implies (y+4)^2 = 2x - 6 = 2(x-3)$\nএটি $(Y)^2 = 4a(X)$ আকারের, যেখানে $X = x-3$ এবং $Y = y+4$।\nশীর্ষবিন্দুর জন্য $X = 0, Y = 0 \\implies x = 3, y = -4$।\n$\\therefore$ শীর্ষবিন্দু $(3, -4)$।\n\n⚡ **শর্টকাট টিপস:** y এর সাপেক্ষে অন্তরীকরণ: $2y+8=0 \nrightarrow y=-4$; মান বসিয়ে $2x = 16-32+22 = 6 \nrightarrow x=3$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "(y+4)^2 = 2(x-3) \\implies \\text{শীর্ষবিন্দু } (3, -4)",
+      "step_by_step_solution": "সমীকরণটিকে প্রমিত রূপে সাজাই:\n$y^2 + 8y + 16 + 6 = 2x$\n$\\implies (y+4)^2 = 2x - 6 = 2(x-3)$\nএটি $(Y)^2 = 4a(X)$ আকারের, যেখানে $X = x-3$ এবং $Y = y+4$।\nশীর্ষবিন্দুর জন্য $X = 0, Y = 0 \\implies x = 3, y = -4$।\n$\\therefore$ শীর্ষবিন্দু $(3, -4)$।",
+      "shortcut_tip": "y এর সাপেক্ষে অন্তরীকরণ: $2y+8=0 \nrightarrow y=-4$; মান বসিয়ে $2x = 16-32+22 = 6 \nrightarrow x=3$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q040",
+    "number": 40,
+    "subjectNumber": 10,
+    "subject": "Mathematics",
+    "question": "$\\int_{0}^{2}|x-1| \\mathrm{dx}=?$",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "$\\frac{1}{2}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\int_0^1 (1-x) dx + \\int_1^2 (x-1) dx = \\frac{1}{2} + \\frac{1}{2} = 1\n\n📐 **ধাপে ধাপে সমাধান:** পরমমানের সীমানা ভেঙে পাই:\n$\\int_{0}^{2}|x-1| dx = \\int_{0}^{1}(1-x) dx + \\int_{1}^{2}(x-1) dx$\n$= [x - \\frac{x^2}{2}]_0^1 + [\\frac{x^2}{2} - x]_1^2$\n$= (1 - \\frac{1}{2}) + [(2 - 2) - (\\frac{1}{2} - 1)] = \\frac{1}{2} + \\frac{1}{2} = 1$।\n\n⚡ **শর্টকাট টিপস:** লেখচিত্র থেকে দুটি ত্রিভুজের ক্ষেত্রফল: $\\frac{1}{2}(1)(1) + \\frac{1}{2}(1)(1) = 1$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\int_0^1 (1-x) dx + \\int_1^2 (x-1) dx = \\frac{1}{2} + \\frac{1}{2} = 1",
+      "step_by_step_solution": "পরমমানের সীমানা ভেঙে পাই:\n$\\int_{0}^{2}|x-1| dx = \\int_{0}^{1}(1-x) dx + \\int_{1}^{2}(x-1) dx$\n$= [x - \\frac{x^2}{2}]_0^1 + [\\frac{x^2}{2} - x]_1^2$\n$= (1 - \\frac{1}{2}) + [(2 - 2) - (\\frac{1}{2} - 1)] = \\frac{1}{2} + \\frac{1}{2} = 1$।",
+      "shortcut_tip": "লেখচিত্র থেকে দুটি ত্রিভুজের ক্ষেত্রফল: $\\frac{1}{2}(1)(1) + \\frac{1}{2}(1)(1) = 1$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q041",
+    "number": 41,
+    "subjectNumber": 11,
+    "subject": "Mathematics",
+    "question": "$f(x) = \\sqrt{3 - \\sqrt{x - 2}}$ ফাংশনটির ডোমেন কত?",
+    "options": [
+      "x≤3",
+      "x ≥ 2",
+      "$2 \\le x \\le 11$",
+      "2 ≤x≤3"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** x-2 \\ge 0 \\implies x \\ge 2 \\text{ এবং } 3 - \\sqrt{x-2} \\ge 0 \\implies x-2 \\le 9 \\implies x \\le 11 \\implies 2 \\le x \\le 11\n\n📐 **ধাপে ধাপে সমাধান:** ১ম শর্ত: বর্গমূলের ভেতরের অংশ $x - 2 \\ge 0 \\implies x \\ge 2$।\n২য় শর্ত: বাইরের বর্গমূলের জন্য $3 - \\sqrt{x - 2} \\ge 0 \\implies \\sqrt{x - 2} \\le 3 \\implies x - 2 \\le 9 \\implies x \\le 11$।\nদুটি শর্ত একত্রে বিচার করলে ডোমেন দাঁড়ায়: $2 \\le x \\le 11$।\n\n⚡ **শর্টকাট টিপস:** বর্গমূলের ভেতরের মান অঋণাত্মক ধরে পাই $2 \\le x \\le 11$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "x-2 \\ge 0 \\implies x \\ge 2 \\text{ এবং } 3 - \\sqrt{x-2} \\ge 0 \\implies x-2 \\le 9 \\implies x \\le 11 \\implies 2 \\le x \\le 11",
+      "step_by_step_solution": "১ম শর্ত: বর্গমূলের ভেতরের অংশ $x - 2 \\ge 0 \\implies x \\ge 2$।\n২য় শর্ত: বাইরের বর্গমূলের জন্য $3 - \\sqrt{x - 2} \\ge 0 \\implies \\sqrt{x - 2} \\le 3 \\implies x - 2 \\le 9 \\implies x \\le 11$।\nদুটি শর্ত একত্রে বিচার করলে ডোমেন দাঁড়ায়: $2 \\le x \\le 11$।",
+      "shortcut_tip": "বর্গমূলের ভেতরের মান অঋণাত্মক ধরে পাই $2 \\le x \\le 11$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q042",
+    "number": 42,
+    "subjectNumber": 12,
+    "subject": "Mathematics",
+    "question": "$\\csc \\theta + \\cot \\theta = \\sqrt{3} \\ (0 < \\theta < \\pi)$ হলে $\\theta$ এর মান হবে-",
+    "options": [
+      "$\\frac{\\pi}{2}$",
+      "$\\frac{\\pi}{3}$",
+      "$\\frac{\\pi}{4}$",
+      "$\\frac{\\pi}{6}$"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\cot(\\theta/2) = \\sqrt{3} \\implies \\frac{\\theta}{2} = 30^\\circ \\implies \\theta = 60^\\circ = \\frac{\\pi}{3}\n\n📐 **ধাপে ধাপে সমাধান:** আমরা জানি $\\csc\\theta + \\cot\\theta = \\frac{1+\\cos\\theta}{\\sin\\theta} = \\cot(\\frac{\\theta}{2})$।\nপ্রশ্নমতে, $\\cot(\\frac{\\theta}{2}) = \\sqrt{3} = \\cot(30^\\circ)$\n$\\implies \\frac{\\theta}{2} = 30^\\circ \\implies \\theta = 60^\\circ = \\frac{\\pi}{3}$ rad।\n\n⚡ **শর্টকাট টিপস:** অপশন টেস্ট: $\\theta = 60^\\circ$ বসালে $\\csc 60^\\circ + \\cot 60^\\circ = \\frac{2}{\\sqrt{3}} + \\frac{1}{\\sqrt{3}} = \\sqrt{3}$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\cot(\\theta/2) = \\sqrt{3} \\implies \\frac{\\theta}{2} = 30^\\circ \\implies \\theta = 60^\\circ = \\frac{\\pi}{3}",
+      "step_by_step_solution": "আমরা জানি $\\csc\\theta + \\cot\\theta = \\frac{1+\\cos\\theta}{\\sin\\theta} = \\cot(\\frac{\\theta}{2})$।\nপ্রশ্নমতে, $\\cot(\\frac{\\theta}{2}) = \\sqrt{3} = \\cot(30^\\circ)$\n$\\implies \\frac{\\theta}{2} = 30^\\circ \\implies \\theta = 60^\\circ = \\frac{\\pi}{3}$ rad।",
+      "shortcut_tip": "অপশন টেস্ট: $\\theta = 60^\\circ$ বসালে $\\csc 60^\\circ + \\cot 60^\\circ = \\frac{2}{\\sqrt{3}} + \\frac{1}{\\sqrt{3}} = \\sqrt{3}$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q043",
+    "number": 43,
+    "subjectNumber": 13,
+    "subject": "Mathematics",
+    "question": "যদি A, B, C ম্যাট্রিক্স তিনটির আকার যথাক্রমে $4 \\times 5$, $5 \\times 4$ এবং $4 \\times 2$ হয়, তবে $(A^T + B)C$ ম্যাট্রিক্সটির আকার কী?",
+    "options": [
+      "4×2",
+      "5x4",
+      "2 x5",
+      "5 x 2"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** A^T_{(5 \\times 4)} + B_{(5 \\times 4)} = D_{(5 \\times 4)}; D_{(5 \\times 4)} \\times C_{(4 \\times 2)} = X_{(5 \\times 2)}\n\n📐 **ধাপে ধাপে সমাধান:** $A$ ম্যাট্রিক্সের আকার $4 \\times 5$ হলে $A^T$ এর আকার হবে $5 \\times 4$।\n$A^T + B$ ম্যাট্রিক্সের আকার হবে $5 \\times 4$ (যেহেতু $B$ এর আকার $5 \\times 4$)।\nএখন, $(5 \\times 4)$ আকারের ম্যাট্রিক্সকে $C(4 \\times 2)$ দ্বারা গুণ করলে গুণফল ম্যাট্রিক্সটির আকার হবে $5 \\times 2$।\n\n⚡ **শর্টকাট টিপস:** রুপান্তরিত আকার $(5 \\times 4) \\times (4 \\times 2) \\rightarrow (5 \\times 2)$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "A^T_{(5 \\times 4)} + B_{(5 \\times 4)} = D_{(5 \\times 4)}; D_{(5 \\times 4)} \\times C_{(4 \\times 2)} = X_{(5 \\times 2)}",
+      "step_by_step_solution": "$A$ ম্যাট্রিক্সের আকার $4 \\times 5$ হলে $A^T$ এর আকার হবে $5 \\times 4$।\n$A^T + B$ ম্যাট্রিক্সের আকার হবে $5 \\times 4$ (যেহেতু $B$ এর আকার $5 \\times 4$)।\nএখন, $(5 \\times 4)$ আকারের ম্যাট্রিক্সকে $C(4 \\times 2)$ দ্বারা গুণ করলে গুণফল ম্যাট্রিক্সটির আকার হবে $5 \\times 2$।",
+      "shortcut_tip": "রুপান্তরিত আকার $(5 \\times 4) \\times (4 \\times 2) \\rightarrow (5 \\times 2)$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q044",
+    "number": 44,
+    "subjectNumber": 14,
+    "subject": "Mathematics",
+    "question": "যদি $y = kx (2x + \\sqrt{3})$ বক্ররেখার মূলবিন্দুতে স্পর্শকটি x-অক্ষের সাথে $30^\\circ$ কোণ উৎপন্ন করে তাহলে k-এর মান হবে-",
+    "options": [
+      "$\\frac{1}{3}$",
+      "$\\sqrt{3}$",
+      "$\\frac{1}{\\sqrt{3}}$",
+      "$\\frac{1}{2}$"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** \\left.\\frac{dy}{dx}\\right|_{(0,0)} = k\\sqrt{3} = \\tan 30^\\circ = \\frac{1}{\\sqrt{3}} \\implies k = \\frac{1}{3}\n\n📐 **ধাপে ধাপে সমাধান:** বক্ররেখার সমীকরণ: $y = 2kx^2 + \\sqrt{3}kx$।\nঢাল $\\frac{dy}{dx} = 4kx + \\sqrt{3}k$।\nমূলবিন্দুতে $(0,0)$ ঢাল $m = \\sqrt{3}k$।\nপ্রশ্নমতে, $m = \\tan 30^\\circ \\implies \\sqrt{3}k = \\frac{1}{\\sqrt{3}} \\implies k = \\frac{1}{3}$।\n\n⚡ **শর্টকাট টিপস:** মূলবিন্দুতে স্পর্শকের ঢাল $x$ এর সহগের সমান: $\\sqrt{3}k = \\tan 30^\\circ = 1/\\sqrt{3} \\implies k = 1/3$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "\\left.\\frac{dy}{dx}\\right|_{(0,0)} = k\\sqrt{3} = \\tan 30^\\circ = \\frac{1}{\\sqrt{3}} \\implies k = \\frac{1}{3}",
+      "step_by_step_solution": "বক্ররেখার সমীকরণ: $y = 2kx^2 + \\sqrt{3}kx$।\nঢাল $\\frac{dy}{dx} = 4kx + \\sqrt{3}k$।\nমূলবিন্দুতে $(0,0)$ ঢাল $m = \\sqrt{3}k$।\nপ্রশ্নমতে, $m = \\tan 30^\\circ \\implies \\sqrt{3}k = \\frac{1}{\\sqrt{3}} \\implies k = \\frac{1}{3}$।",
+      "shortcut_tip": "মূলবিন্দুতে স্পর্শকের ঢাল $x$ এর সহগের সমান: $\\sqrt{3}k = \\tan 30^\\circ = 1/\\sqrt{3} \\implies k = 1/3$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q045",
+    "number": 45,
+    "subjectNumber": 15,
+    "subject": "Mathematics",
+    "question": "$x = a \\cos \\theta + b \\sin \\theta, y = a \\sin \\theta - b \\cos \\theta$ কোন কনিকের সমীকরণ?",
+    "options": [
+      "ellipse",
+      "parabola",
+      "circle",
+      "hyperbola"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** x^2 + y^2 = (a^2+b^2)(\\cos^2\\theta + \\sin^2\\theta) = a^2+b^2 \\implies \\text{বৃত্তের সমীকরণ}\n\n📐 **ধাপে ধাপে সমাধান:** বর্গ করে যোগ করি:\n$x^2 = a^2\\cos^2\\theta + b^2\\sin^2\\theta + 2ab\\sin\\theta\\cos\\theta$\n$y^2 = a^2\\sin^2\\theta + b^2\\cos^2\\theta - 2ab\\sin\\theta\\cos\\theta$\n$\\implies x^2 + y^2 = a^2(\\cos^2\\theta + \\sin^2\\theta) + b^2(\\sin^2\\theta + \\cos^2\\theta) = a^2 + b^2$\nএটি একটি বৃত্তের সমীকরণ নির্দেশ করে।\n\n⚡ **শর্টকাট টিপস:** বর্গ করে যোগ করলে $\\theta$ অপসারিত হয়ে $x^2 + y^2 = r^2$ (বৃত্ত) আকৃতি পায়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "x^2 + y^2 = (a^2+b^2)(\\cos^2\\theta + \\sin^2\\theta) = a^2+b^2 \\implies \\text{বৃত্তের সমীকরণ}",
+      "step_by_step_solution": "বর্গ করে যোগ করি:\n$x^2 = a^2\\cos^2\\theta + b^2\\sin^2\\theta + 2ab\\sin\\theta\\cos\\theta$\n$y^2 = a^2\\sin^2\\theta + b^2\\cos^2\\theta - 2ab\\sin\\theta\\cos\\theta$\n$\\implies x^2 + y^2 = a^2(\\cos^2\\theta + \\sin^2\\theta) + b^2(\\sin^2\\theta + \\cos^2\\theta) = a^2 + b^2$\nএটি একটি বৃত্তের সমীকরণ নির্দেশ করে।",
+      "shortcut_tip": "বর্গ করে যোগ করলে $\\theta$ অপসারিত হয়ে $x^2 + y^2 = r^2$ (বৃত্ত) আকৃতি পায়।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q046",
+    "number": 46,
+    "subjectNumber": 1,
+    "subject": "Biology",
+    "question": "কোন ব্যাকটেরিয়ার একটি মাত্র ফ্লাজেলাম থাকে?",
+    "options": [
+      "Spirillum minus",
+      "Vibrio cholerae",
+      "Pseudomonas fluorescens",
+      "Bacillus subtilis"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (Vibrio cholerae)\n\n📐 **ধাপে ধাপে সমাধান:** যে ব্যাকটেরিয়ার এক প্রান্তে একটিমাত্র ফ্লাজেলা থাকে তাকে মনোট্রিকাস (Monotrichous) বলে। *Vibrio cholerae* একটি মনোট্রিকাস ব্যাকটেরিয়ার উদাহরণ।\n\n⚡ **শর্টকাট টিপস:** এক ফ্লাজেলাযুক্ত ব্যাকটেরিয়া (Monotrichous) = *Vibrio cholerae*।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (Vibrio cholerae)",
+      "step_by_step_solution": "যে ব্যাকটেরিয়ার এক প্রান্তে একটিমাত্র ফ্লাজেলা থাকে তাকে মনোট্রিকাস (Monotrichous) বলে। *Vibrio cholerae* একটি মনোট্রিকাস ব্যাকটেরিয়ার উদাহরণ।",
+      "shortcut_tip": "এক ফ্লাজেলাযুক্ত ব্যাকটেরিয়া (Monotrichous) = *Vibrio cholerae*।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q047",
+    "number": 47,
+    "subjectNumber": 2,
+    "subject": "Biology",
+    "question": "উদ্ভিদের রোম অথবা ট্রাইকোম কোনটির অংশ?",
+    "options": [
+      "ত্বক",
+      "অধঃত্বক",
+      "কর্টেক্স",
+      "অন্তঃত্বক"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: A (ত্বক)\n\n📐 **ধাপে ধাপে সমাধান:** উদ্ভিদের ত্বকীয় টিস্যুতন্ত্রের (Epidermal tissue system) বহিরাঙ্গ অঙ্গসংস্থানিক বৃদ্ধি হিসেবে রোম বা ট্রাইকোম (Trichome) সৃষ্টি হয়।\n\n⚡ **শর্টকাট টিপস:** ট্রাইকোম বা রোম হলো ত্বক (Epidermis) এর উপবৃদ্ধি।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: A (ত্বক)",
+      "step_by_step_solution": "উদ্ভিদের ত্বকীয় টিস্যুতন্ত্রের (Epidermal tissue system) বহিরাঙ্গ অঙ্গসংস্থানিক বৃদ্ধি হিসেবে রোম বা ট্রাইকোম (Trichome) সৃষ্টি হয়।",
+      "shortcut_tip": "ট্রাইকোম বা রোম হলো ত্বক (Epidermis) এর উপবৃদ্ধি।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q048",
+    "number": 48,
+    "subjectNumber": 3,
+    "subject": "Biology",
+    "question": "প্রোফেজ-১ এর কোন পর্যায়ে কায়জমা সৃষ্টি হয়?",
+    "options": [
+      "লেপ্টোটিন",
+      "জাইগোটিন",
+      "প্যাকাইটিন",
+      "ডিপ্লোটিন"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: C (প্যাকাইটিন)\n\n📐 **ধাপে ধাপে সমাধান:** মিয়োসিস-১ এর প্রোফেজ-১ এর প্যাকাইটিন উপপর্যায়ে কায়জমা (Chiasma) সৃষ্টি হয় এবং ক্রসিং ওভার ঘটে।\n\n⚡ **শর্টকাট টিপস:** প্যাকাইটিন = ক্রসিং ওভার ও কায়জমা গঠন।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: C (প্যাকাইটিন)",
+      "step_by_step_solution": "মিয়োসিস-১ এর প্রোফেজ-১ এর প্যাকাইটিন উপপর্যায়ে কায়জমা (Chiasma) সৃষ্টি হয় এবং ক্রসিং ওভার ঘটে।",
+      "shortcut_tip": "প্যাকাইটিন = ক্রসিং ওভার ও কায়জমা গঠন।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q049",
+    "number": 49,
+    "subjectNumber": 4,
+    "subject": "Biology",
+    "question": "দ্বৈত প্রচ্ছন্ন এপিস্ট্যাসিসের অনুপাত কত?",
+    "options": [
+      "১৩ : ৩",
+      "৯ : ৭",
+      "৩ : ১",
+      "২ : ১"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (৯ : ৭)\n\n📐 **ধাপে ধাপে সমাধান:** দ্বৈত প্রচ্ছন্ন এপিস্ট্যাসিসের (Duplicate recessive epistasis) ক্ষেত্রে ফিনোটাইপিক অনুপাত পরিবর্তন হয়ে ৯:৭ হয়। (প্রকট এপিস্ট্যাসিস ১৩:৩)।\n\n⚡ **শর্টকাট টিপস:** দ্বৈত প্রচ্ছন্ন এপিস্ট্যাসিস = ৯ : ৭।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (৯ : ৭)",
+      "step_by_step_solution": "দ্বৈত প্রচ্ছন্ন এপিস্ট্যাসিসের (Duplicate recessive epistasis) ক্ষেত্রে ফিনোটাইপিক অনুপাত পরিবর্তন হয়ে ৯:৭ হয়। (প্রকট এপিস্ট্যাসিস ১৩:৩)।",
+      "shortcut_tip": "দ্বৈত প্রচ্ছন্ন এপিস্ট্যাসিস = ৯ : ৭।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q050",
+    "number": 50,
+    "subjectNumber": 5,
+    "subject": "Biology",
+    "question": "ম্যান্টল কোন পর্বের প্রাণির বৈশিষ্ট্য?",
+    "options": [
+      "Protozoa",
+      "Arthropoda",
+      "Echinodermata",
+      "Mollusca"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: D (Mollusca)\n\n📐 **ধাপে ধাপে সমাধান:** মলাস্কা (Mollusca) পর্বের প্রাণীদের নরম দেহটি ক্ষরিত একটি পাতলা নরম আবরণে আবৃত থাকে যাকে ম্যান্টল (Mantle) বলে।\n\n⚡ **শর্টকাট টিপস:** ম্যান্টল পর্দা ও কম্বোজ দেহ = Mollusca পর্ব।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: D (Mollusca)",
+      "step_by_step_solution": "মলাস্কা (Mollusca) পর্বের প্রাণীদের নরম দেহটি ক্ষরিত একটি পাতলা নরম আবরণে আবৃত থাকে যাকে ম্যান্টল (Mantle) বলে।",
+      "shortcut_tip": "ম্যান্টল পর্দা ও কম্বোজ দেহ = Mollusca পর্ব।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q051",
+    "number": 51,
+    "subjectNumber": 6,
+    "subject": "Biology",
+    "question": "পতঙ্গের সম্পূর্ণ রূপান্তর নিম্নলিখিত কোন্ ধাপগুলো নিয়ে গঠিত?",
+    "options": [
+      "ডিম-নিম্ফ-পূর্ণাঙ্গ পতঙ্গ",
+      "ডিম-লার্ভা-পূর্ণাঙ্গ পতঙ্গ",
+      "ডিম-পিউপা-লাঙা-পূর্ণাঙ্গ পতঙ্গ",
+      "ডিম-লার্ভা-পিউপা-পূর্ণাঙ্গ পতঙ্গ"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: D (ডিম-লার্ভা-পিউপা-পূর্ণাঙ্গ পতঙ্গ)\n\n📐 **ধাপে ধাপে সমাধান:** সম্পূর্ণ রূপান্তরে ৪টি ধাপ থাকে: ডিম (Egg) $\\rightarrow$ লার্ভা (Larva) $\\rightarrow$ পিউপা (Pupa) $\\rightarrow$ পূর্ণাঙ্গ পতঙ্গ (Imago)।\n\n⚡ **শর্টকাট টিপস:** সম্পূর্ণ রূপান্তর = ৪টি ধাপ (ডিম $\\rightarrow$ লার্ভা $\\rightarrow$ পিউপা $\\rightarrow$ পূর্ণাঙ্গ)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: D (ডিম-লার্ভা-পিউপা-পূর্ণাঙ্গ পতঙ্গ)",
+      "step_by_step_solution": "সম্পূর্ণ রূপান্তরে ৪টি ধাপ থাকে: ডিম (Egg) $\\rightarrow$ লার্ভা (Larva) $\\rightarrow$ পিউপা (Pupa) $\\rightarrow$ পূর্ণাঙ্গ পতঙ্গ (Imago)।",
+      "shortcut_tip": "সম্পূর্ণ রূপান্তর = ৪টি ধাপ (ডিম $\\rightarrow$ লার্ভা $\\rightarrow$ পিউপা $\\rightarrow$ পূর্ণাঙ্গ)।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q052",
+    "number": 52,
+    "subjectNumber": 7,
+    "subject": "Biology",
+    "question": "মানবদেহে স্টেম কোষ কোথায় অবস্থিত?",
+    "options": [
+      "অগ্ন্যাশয়ে",
+      "যকৃতে",
+      "অস্থিমজ্জায়",
+      "হৃৎপিন্ডে"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: C (অস্থিমজ্জায়)\n\n📐 **ধাপে ধাপে সমাধান:** মানবদেহে রক্তকণিকা সৃষ্টিকারী প্রধান লাল অস্থিমজ্জায় (Bone marrow) হেমাটোপয়েটিক স্টেম কোষ অবস্থান করে।\n\n⚡ **শর্টকাট টিপস:** রক্তকণিকা উৎপাদক স্টেম সেল = অস্থিমজ্জা।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: C (অস্থিমজ্জায়)",
+      "step_by_step_solution": "মানবদেহে রক্তকণিকা সৃষ্টিকারী প্রধান লাল অস্থিমজ্জায় (Bone marrow) হেমাটোপয়েটিক স্টেম কোষ অবস্থান করে।",
+      "shortcut_tip": "রক্তকণিকা উৎপাদক স্টেম সেল = অস্থিমজ্জা।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q053",
+    "number": 53,
+    "subjectNumber": 8,
+    "subject": "Biology",
+    "question": "মানবদেহের কটিদেশীয় অঞ্চলে কশেরুকার সংখ্যা কত?",
+    "options": [
+      "৪ টি",
+      "৫ টি",
+      "৭ টি",
+      "১২ টি"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (৫ টি)\n\n📐 **ধাপে ধাপে সমাধান:** মানব মেরুদণ্ডে কটিদেশীয় (Lumbar) কশেরুকার সংখ্যা ৫টি ($L_1 - L_5$)। (গ্রীবাদেশীয়-৭, বক্ষদেশীয়-১২)।\n\n⚡ **শর্টকাট টিপস:** লাম্বার বা কটিদেশীয় কশেরুকা = ৫ টি।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (৫ টি)",
+      "step_by_step_solution": "মানব মেরুদণ্ডে কটিদেশীয় (Lumbar) কশেরুকার সংখ্যা ৫টি ($L_1 - L_5$)। (গ্রীবাদেশীয়-৭, বক্ষদেশীয়-১২)।",
+      "shortcut_tip": "লাম্বার বা কটিদেশীয় কশেরুকা = ৫ টি।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q054",
+    "number": 54,
+    "subjectNumber": 9,
+    "subject": "Biology",
+    "question": "নিচের কোনটিতে একিনিটি এবং হেটারোসিস্ট পাওয়া যায়?",
+    "options": [
+      "Escherichia",
+      "Nostoc",
+      "Zygnema",
+      "Chlorella"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (Nostoc)\n\n📐 **ধাপে ধাপে সমাধান:** *Nostoc* নামক সায়ানোব্যাকটেরিয়ায় (নীলাভ-সবুজ শৈবাল) নাইট্রোজেন সংবন্ধনের জন্য হেটারোসিস্ট এবং প্রতিকূল পরিবেশে বেঁচে থাকার জন্য একিনিটি নামক বিশেষ কোষ দেখা যায়।\n\n⚡ **শর্টকাট টিপস:** হেটারোসিস্ট ও একিনিটি = *Nostoc*।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (Nostoc)",
+      "step_by_step_solution": "*Nostoc* নামক সায়ানোব্যাকটেরিয়ায় (নীলাভ-সবুজ শৈবাল) নাইট্রোজেন সংবন্ধনের জন্য হেটারোসিস্ট এবং প্রতিকূল পরিবেশে বেঁচে থাকার জন্য একিনিটি নামক বিশেষ কোষ দেখা যায়।",
+      "shortcut_tip": "হেটারোসিস্ট ও একিনিটি = *Nostoc*।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q055",
+    "number": 55,
+    "subjectNumber": 10,
+    "subject": "Biology",
+    "question": "কোরালয়েড মূল দেখা যায়-",
+    "options": [
+      "Cycas",
+      "Pinus",
+      "Fern",
+      "Gnetum"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: A (Cycas)\n\n📐 **ধাপে ধাপে সমাধান:** *Cycas* উদ্ভিদের মূলে অণুজীব সংক্রমণের ফলে এটি প্রবালের মতো রূপ ধারণ করে, যাকে কোরালয়েড মূল বলে।\n\n⚡ **শর্টকাট টিপস:** কোরালয়েড মূল = *Cycas*।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: A (Cycas)",
+      "step_by_step_solution": "*Cycas* উদ্ভিদের মূলে অণুজীব সংক্রমণের ফলে এটি প্রবালের মতো রূপ ধারণ করে, যাকে কোরালয়েড মূল বলে।",
+      "shortcut_tip": "কোরালয়েড মূল = *Cycas*।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q056",
+    "number": 56,
+    "subjectNumber": 11,
+    "subject": "Biology",
+    "question": "জলাভূমির উদ্ভিদ কোনটি?",
+    "options": [
+      "Tectoma grandis",
+      "Barringtonia acutangula",
+      "Shorea robusta",
+      "Pistia stratiotes"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (Barringtonia acutangula)\n\n📐 **ধাপে ধাপে সমাধান:** *Barringtonia acutangula* (হিজল) বাংলাদেশের হাওড় বা জলাভূমির অন্যতম প্রধান বৃক্ষ।\n\n⚡ **শর্টকাট টিপস:** হিজলগাছ (*Barringtonia acutangula*) = জলাভূমির উদ্ভিদ।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (Barringtonia acutangula)",
+      "step_by_step_solution": "*Barringtonia acutangula* (হিজল) বাংলাদেশের হাওড় বা জলাভূমির অন্যতম প্রধান বৃক্ষ।",
+      "shortcut_tip": "হিজলগাছ (*Barringtonia acutangula*) = জলাভূমির উদ্ভিদ।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q057",
+    "number": 57,
+    "subjectNumber": 12,
+    "subject": "Biology",
+    "question": "নিচের কোন অ্যান্টিবডি বুকের দুধের মাধ্যমে প্রবাহিত হয়?",
+    "options": [
+      "IgG",
+      "IgA",
+      "IgM",
+      "IgE"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (IgA)\n\n📐 **ধাপে ধাপে সমাধান:** মায়ের বুকের দুধে (শালদুধে) প্রচুর পরিমাণে $IgA$ অ্যান্টিবডি থাকে যা নবজাতককে প্রতিরক্ষা প্রদান করে। (অমরা অতিক্রম করে $IgG$)।\n\n⚡ **শর্টকাট টিপস:** বুকের দুধ বা ক্ষরণজাত অ্যান্টিবডি = $IgA$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (IgA)",
+      "step_by_step_solution": "মায়ের বুকের দুধে (শালদুধে) প্রচুর পরিমাণে $IgA$ অ্যান্টিবডি থাকে যা নবজাতককে প্রতিরক্ষা প্রদান করে। (অমরা অতিক্রম করে $IgG$)।",
+      "shortcut_tip": "বুকের দুধ বা ক্ষরণজাত অ্যান্টিবডি = $IgA$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q058",
+    "number": 58,
+    "subjectNumber": 13,
+    "subject": "Biology",
+    "question": "চ্যাপ্টা কৃমির বৈজ্ঞানিক নাম কী?",
+    "options": [
+      "Loa loa",
+      "Fasciola hepatica",
+      "Ascaris lumbricoides",
+      "None of them"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (Fasciola hepatica)\n\n📐 **ধাপে ধাপে সমাধান:** যকৃত কৃমি বা চ্যাপ্টা কৃমির বৈজ্ঞানিক নাম হলো *Fasciola hepatica* (পর্ব: Platyhelminthes)।\n\n⚡ **শর্টকাট টিপস:** চ্যাপ্টা যকৃত কৃমি = *Fasciola hepatica*।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (Fasciola hepatica)",
+      "step_by_step_solution": "যকৃত কৃমি বা চ্যাপ্টা কৃমির বৈজ্ঞানিক নাম হলো *Fasciola hepatica* (পর্ব: Platyhelminthes)।",
+      "shortcut_tip": "চ্যাপ্টা যকৃত কৃমি = *Fasciola hepatica*।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q059",
+    "number": 59,
+    "subjectNumber": 14,
+    "subject": "Biology",
+    "question": "কোন কোডনটি কোনো অ্যামাইনো অ্যাসিড নির্দেশ করে না?",
+    "options": [
+      "CCU",
+      "ACU",
+      "UGA",
+      "AAG"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: C (UGA)\n\n📐 **ধাপে ধাপে সমাধান:** $UAA, UAG, UGA$ হলো সমাপ্তি কোডন (Stop codons) যা কোনো অ্যামাইনো এসিড কোড করে না।\n\n⚡ **শর্টকাট টিপস:** স্টপ কোডন = UAA, UAG, UGA।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: C (UGA)",
+      "step_by_step_solution": "$UAA, UAG, UGA$ হলো সমাপ্তি কোডন (Stop codons) যা কোনো অ্যামাইনো এসিড কোড করে না।",
+      "shortcut_tip": "স্টপ কোডন = UAA, UAG, UGA।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q060",
+    "number": 60,
+    "subjectNumber": 15,
+    "subject": "Biology",
+    "question": "মানবদেহে রক্তের প্লাজমার স্বাভাবিক pH কত?",
+    "options": [
+      "7.0",
+      "7.4",
+      "7.6",
+      "7.8"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (7.4)\n\n📐 **ধাপে ধাপে সমাধান:** মানব রক্তের প্লাজমার স্বাভাবিক $pH$ সামান্য ক্ষারীয়, যা গড়ে ৭.৪০ (পরিসর: ৭.৩৫ - ৭.৪৫)।\n\n⚡ **শর্টকাট টিপস:** রক্তের গড় $pH = 7.4$।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (7.4)",
+      "step_by_step_solution": "মানব রক্তের প্লাজমার স্বাভাবিক $pH$ সামান্য ক্ষারীয়, যা গড়ে ৭.৪০ (পরিসর: ৭.৩৫ - ৭.৪৫)।",
+      "shortcut_tip": "রক্তের গড় $pH = 7.4$।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q061",
+    "number": 61,
+    "subjectNumber": 1,
+    "subject": "Bangla",
+    "question": "\"চিত্রময় বর্ণনার বাণী''- কবি কোথা থেকে কুড়িয়ে আনেন?",
+    "options": [
+      "প্রকৃতির ঐকতান সাত থেকে",
+      "ভ্রমণ বৃত্তান্ত থেকে",
+      "মানুষের কীর্তি থেকে",
+      "কবিতা থেকে"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (ভ্রমণ বৃত্তান্ত থেকে)\n\n📐 **ধাপে ধাপে সমাধান:** রবীন্দ্রনাথ ঠাকুরের 'ঐকতান' কবিতায় কবি বলেছেন: \"পাই নানা কবিদলে চিত্রপটের নানা বাণী/ পাই ভ্রমণ বৃত্তান্ত হতে চিত্রময় বর্ণনার বাণী।\"\n\n⚡ **শর্টকাট টিপস:** ভ্রমণ বৃত্তান্ত হতে চিত্রময় বর্ণনার বাণী।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (ভ্রমণ বৃত্তান্ত থেকে)",
+      "step_by_step_solution": "রবীন্দ্রনাথ ঠাকুরের 'ঐকতান' কবিতায় কবি বলেছেন: \"পাই নানা কবিদলে চিত্রপটের নানা বাণী/ পাই ভ্রমণ বৃত্তান্ত হতে চিত্রময় বর্ণনার বাণী।\"",
+      "shortcut_tip": "ভ্রমণ বৃত্তান্ত হতে চিত্রময় বর্ণনার বাণী।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q062",
+    "number": 62,
+    "subjectNumber": 2,
+    "subject": "Bangla",
+    "question": "সালামের হাত থেকে কিসের মতো অবিনাশী বর্ণমালা ঝরে?",
+    "options": [
+      "কৃষ্ণচূড়ার মতো",
+      "রক্তের বুদবুদের মতো",
+      "বিপ্লবের মতো",
+      "নক্ষত্রের মতো"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: D (নক্ষত্রের মতো)\n\n📐 **ধাপে ধাপে সমাধান:** শামসুর রাহমানের 'ফেব্রুয়ারি ১৯৬৯' কবিতায় বলা হয়েছে: \"সালামের হাত থেকে নক্ষত্রের মতো/ ঝরে অবিনাশী বর্ণমালা...।\"\n\n⚡ **শর্টকাট টিপস:** সালামের হাত হতে ঝরে = নক্ষত্রের মতো বর্ণমালা।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: D (নক্ষত্রের মতো)",
+      "step_by_step_solution": "শামসুর রাহমানের 'ফেব্রুয়ারি ১৯৬৯' কবিতায় বলা হয়েছে: \"সালামের হাত থেকে নক্ষত্রের মতো/ ঝরে অবিনাশী বর্ণমালা...।\"",
+      "shortcut_tip": "সালামের হাত হতে ঝরে = নক্ষত্রের মতো বর্ণমালা।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q063",
+    "number": 63,
+    "subjectNumber": 3,
+    "subject": "Bangla",
+    "question": "স্থির শব্দের বিপরীত শব্দ হলো-",
+    "options": [
+      "জঙ্গম",
+      "কোলাহল",
+      "উচ্চরব",
+      "নিশ্চল"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: A (জঙ্গম)\n\n📐 **ধাপে ধাপে সমাধান:** 'স্থাবর' বা 'স্থির' শব্দের সঠিক বিপরীতার্থক শব্দ হলো 'জঙ্গম' (যা গতিশীল বা যা চলে)।\n\n⚡ **শর্টকাট টিপস:** স্থাবর/স্থির $\\leftrightarrow$ জঙ্গম।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: A (জঙ্গম)",
+      "step_by_step_solution": "'স্থাবর' বা 'স্থির' শব্দের সঠিক বিপরীতার্থক শব্দ হলো 'জঙ্গম' (যা গতিশীল বা যা চলে)।",
+      "shortcut_tip": "স্থাবর/স্থির $\\leftrightarrow$ জঙ্গম।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q064",
+    "number": 64,
+    "subjectNumber": 4,
+    "subject": "Bangla",
+    "question": "বেগম রোকেয়া সাখাওয়াত হোসেন সভ্যতার সঙ্গে দারিদ্র্য বৃদ্ধির কারণ নির্দেশ করেছেন?",
+    "options": [
+      "অলসতা",
+      "বিলাসিতা",
+      "অসততা",
+      "অজ্ঞতা"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (বিলাসিতা)\n\n📐 **ধাপে ধাপে সমাধান:** বেগম রোকেয়া তাঁর 'চাষার দুক্ষু' প্রবন্ধে দেখিয়েছেন যে সভ্যতার বৃদ্ধির সাথে সাথে বিলাসিতাও বাড়ে, যা চাষীদের দারিদ্র্য বৃদ্ধির মূল কারণ।\n\n⚡ **শর্টকাট টিপস:** সভ্যতার সাথে দারিদ্র্য বাড়ে বিলাসিতার কারণে।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (বিলাসিতা)",
+      "step_by_step_solution": "বেগম রোকেয়া তাঁর 'চাষার দুক্ষু' প্রবন্ধে দেখিয়েছেন যে সভ্যতার বৃদ্ধির সাথে সাথে বিলাসিতাও বাড়ে, যা চাষীদের দারিদ্র্য বৃদ্ধির মূল কারণ।",
+      "shortcut_tip": "সভ্যতার সাথে দারিদ্র্য বাড়ে বিলাসিতার কারণে।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q065",
+    "number": 65,
+    "subjectNumber": 5,
+    "subject": "Bangla",
+    "question": "কাজী নজরুল ইসলামের মতে, কিসের মধ্য দিয়ে সত্যকে পাওয়া যায়?",
+    "options": [
+      "মনুষ্যত্ব",
+      "ধর্ম",
+      "সংগ্রাম",
+      "ভুল"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: D (ভুল)\n\n📐 **ধাপে ধাপে সমাধান:** 'আমার পথ' প্রবন্ধে নজরুল লিখেছেন: \"ভুলের মধ্য দিয়েই গিয়েই সত্যকে পাওয়া যায়। ভুল বুঝতে পারলেই মানুষ সত্যকে উপলব্ধি করতে পারে।\"\n\n⚡ **শর্টকাট টিপস:** ভুলের মধ্য দিয়েই সত্যকে পাওয়া যায়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: D (ভুল)",
+      "step_by_step_solution": "'আমার পথ' প্রবন্ধে নজরুল লিখেছেন: \"ভুলের মধ্য দিয়েই গিয়েই সত্যকে পাওয়া যায়। ভুল বুঝতে পারলেই মানুষ সত্যকে উপলব্ধি করতে পারে।\"",
+      "shortcut_tip": "ভুলের মধ্য দিয়েই সত্যকে পাওয়া যায়।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q066",
+    "number": 66,
+    "subjectNumber": 6,
+    "subject": "Bangla",
+    "question": "বৃক্ষ কেবল বৃদ্ধির ইশারা নয়, মোতাহের হোসেন চৌধুরী বলেছেন, তা আরো কিছুর ইঙ্গিত; সেটি কী?",
+    "options": [
+      "বিবেচনাবোধ",
+      "প্রশান্তি",
+      "ধৈর্যশীলতা",
+      "গতিময়তা"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (প্রশান্তি)\n\n📐 **ধাপে ধাপে সমাধান:** 'জীবন ও বৃক্ষ' প্রবন্ধে মোতাহের হোসেন চৌধুরী বলেছেন, বৃক্ষ কেবল বৃদ্ধির ইশারা নয়, তা প্রশান্তিরও ইঙ্গিত।\n\n⚡ **শর্টকাট টিপস:** বৃক্ষ বৃদ্ধির পাশাপাশি প্রশান্তির ইঙ্গিত।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (প্রশান্তি)",
+      "step_by_step_solution": "'জীবন ও বৃক্ষ' প্রবন্ধে মোতাহের হোসেন চৌধুরী বলেছেন, বৃক্ষ কেবল বৃদ্ধির ইশারা নয়, তা প্রশান্তিরও ইঙ্গিত।",
+      "shortcut_tip": "বৃক্ষ বৃদ্ধির পাশাপাশি প্রশান্তির ইঙ্গিত।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q067",
+    "number": 67,
+    "subjectNumber": 7,
+    "subject": "Bangla",
+    "question": "কোনটি পর্তুগিজ শব্দ নয়?",
+    "options": [
+      "আলকাতরা",
+      "আলপিন",
+      "আলবোলা",
+      "আলমারি"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: C (আলবোলা)\n\n📐 **ধাপে ধাপে সমাধান:** আলকাতরা, আলপিন, আলমারি পর্তুগিজ শব্দ। কিন্তু 'আলবোলা' শব্দটি ফারসি শব্দ।\n\n⚡ **শর্টকাট টিপস:** আলবোলা পর্তুগিজ শব্দ নয় (এটি ফারসি)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: C (আলবোলা)",
+      "step_by_step_solution": "আলকাতরা, আলপিন, আলমারি পর্তুগিজ শব্দ। কিন্তু 'আলবোলা' শব্দটি ফারসি শব্দ।",
+      "shortcut_tip": "আলবোলা পর্তুগিজ শব্দ নয় (এটি ফারসি)।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q068",
+    "number": 68,
+    "subjectNumber": 8,
+    "subject": "Bangla",
+    "question": "'যে ভবিষ্যৎ না ভেবেই কাজ করে' এক কথায় হবে -",
+    "options": [
+      "অবিমৃষ্যকারী",
+      "অবিচারী",
+      "অনাচারী",
+      "অবিবেচক"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: A (অবিমৃষ্যকারী)\n\n📐 **ধাপে ধাপে সমাধান:** বাক্যসংকোচন: যে না ভেবে কাজ করে = অবিমৃষ্যকারী। (আর যে ভেবেচিন্তে কাজ করে = বিমৃষ্যকারী)।\n\n⚡ **শর্টকাট টিপস:** না ভেবে কাজ করে $\\rightarrow$ অবিমৃষ্যকারী।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: A (অবিমৃষ্যকারী)",
+      "step_by_step_solution": "বাক্যসংকোচন: যে না ভেবে কাজ করে = অবিমৃষ্যকারী। (আর যে ভেবেচিন্তে কাজ করে = বিমৃষ্যকারী)।",
+      "shortcut_tip": "না ভেবে কাজ করে $\\rightarrow$ অবিমৃষ্যকারী।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q069",
+    "number": 69,
+    "subjectNumber": 9,
+    "subject": "Bangla",
+    "question": "নিচের কোনটি উত্তম পুরুষের ক্রিয়াপদের উদাহরণ?",
+    "options": [
+      "করেছ",
+      "করেছি",
+      "করেছিস",
+      "করেছেন"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (করেছি)\n\n📐 **ধাপে ধাপে সমাধান:** উত্তম পুরুষ হলো 'আমি/আমরা'। আমি কাজ 'করেছি' - তাই 'করেছি' হলো উত্তম পুরুষের ক্রিয়াপদ।\n\n⚡ **শর্টকাট টিপস:** আমি করেছি $\\rightarrow$ উত্তম পুরুষ।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (করেছি)",
+      "step_by_step_solution": "উত্তম পুরুষ হলো 'আমি/আমরা'। আমি কাজ 'করেছি' - তাই 'করেছি' হলো উত্তম পুরুষের ক্রিয়াপদ।",
+      "shortcut_tip": "আমি করেছি $\\rightarrow$ উত্তম পুরুষ।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q070",
+    "number": 70,
+    "subjectNumber": 10,
+    "subject": "Bangla",
+    "question": "ণ-ত্ব বিধান অনুসারে ভুল বানান আছে কোন গুচ্ছে?",
+    "options": [
+      "ধরন, পুরোনো",
+      "নেত্রকোনা, গৃহকোণ",
+      "ক্ষণকাল, বর্ষণ",
+      "মূল্যায়ণ, নিরূপন"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: D (মূল্যায়ণ, নিরূপন)\n\n📐 **ধাপে ধাপে সমাধান:** সঠিক বানান দুটি হলো 'মূল্যায়ন' (ন) এবং 'নিরূপণ' (ণ)। অপশন D তে ভুলভাবে 'মূল্যায়ণ' (ণ) এবং 'নিরূপন' (ন) লেখা হয়েছে।\n\n⚡ **শর্টকাট টিপস:** মূল্যায়ন (ন-কার) এবং নিরূপণ (ণ-কার)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: D (মূল্যায়ণ, নিরূপন)",
+      "step_by_step_solution": "সঠিক বানান দুটি হলো 'মূল্যায়ন' (ন) এবং 'নিরূপণ' (ণ)। অপশন D তে ভুলভাবে 'মূল্যায়ণ' (ণ) এবং 'নিরূপন' (ন) লেখা হয়েছে।",
+      "shortcut_tip": "মূল্যায়ন (ন-কার) এবং নিরূপণ (ণ-কার)।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q071",
+    "number": 71,
+    "subjectNumber": 11,
+    "subject": "Bangla",
+    "question": "কোনটি অপপ্রয়োগ?",
+    "options": [
+      "একক",
+      "একত্র",
+      "একত্রিত",
+      "একতা"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: C (একত্রিত)\n\n📐 **ধাপে ধাপে সমাধান:** বাংলা ভাষায় 'একত্র' শব্দটি নিজেই বিশেষণ। তাই পুনরায় প্রত্যয় যুক্ত করে 'একত্রিত' শব্দটি ব্যবহার করা অপপ্রয়োগ।\n\n⚡ **শর্টকাট টিপস:** একত্র শুদ্ধ, 'একত্রিত' অপপ্রয়োগ।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: C (একত্রিত)",
+      "step_by_step_solution": "বাংলা ভাষায় 'একত্র' শব্দটি নিজেই বিশেষণ। তাই পুনরায় প্রত্যয় যুক্ত করে 'একত্রিত' শব্দটি ব্যবহার করা অপপ্রয়োগ।",
+      "shortcut_tip": "একত্র শুদ্ধ, 'একত্রিত' অপপ্রয়োগ।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q072",
+    "number": 72,
+    "subjectNumber": 12,
+    "subject": "Bangla",
+    "question": "'এবারের সংগ্রাম স্বাধীনতার সংগ্রাম'-এখানে কারক-বিভক্তি বিচারে 'স্বাধীনতার' হলো-",
+    "options": [
+      "নিমিত্তার্থে ৭মী",
+      "কর্মে ৬ষ্ঠী",
+      "নিমিত্তার্থে ৬ষ্ঠী",
+      "অপাদানে ৭মী"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: C (নিমিত্তার্থে ৬ষ্ঠী)\n\n📐 **ধাপে ধাপে সমাধান:** 'স্বাধীনতার জন্য সংগ্রাম' বুঝাতে জন্য/নিমিত্ত অর্থে ৬ষ্ঠী বিভক্তি ('র') যুক্ত হয়ে 'স্বাধীনতার' শব্দটি গঠিত হয়েছে। এটি নিমিত্তার্থে ৬ষ্ঠী।\n\n⚡ **শর্টকাট টিপস:** স্বাধীনতার জন্য সংগ্রাম = নিমিত্তার্থে ৬ষ্ঠী।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: C (নিমিত্তার্থে ৬ষ্ঠী)",
+      "step_by_step_solution": "'স্বাধীনতার জন্য সংগ্রাম' বুঝাতে জন্য/নিমিত্ত অর্থে ৬ষ্ঠী বিভক্তি ('র') যুক্ত হয়ে 'স্বাধীনতার' শব্দটি গঠিত হয়েছে। এটি নিমিত্তার্থে ৬ষ্ঠী।",
+      "shortcut_tip": "স্বাধীনতার জন্য সংগ্রাম = নিমিত্তার্থে ৬ষ্ঠী।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q073",
+    "number": 73,
+    "subjectNumber": 13,
+    "subject": "Bangla",
+    "question": "'অনাবৃষ্টির দিনে ফুলের কুঁড়িটির মতো মেয়ের বিমর্ষ মুখ।' -কোন রচনার বাক্য?",
+    "options": [
+      "রেইনকোট",
+      "অপরিচিতা",
+      "মহাজাগতিক কিউরেটর",
+      "চাষার দুক্ষু"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (অপরিচিতা)\n\n📐 **ধাপে ধাপে সমাধান:** রবীন্দ্রনাথ ঠাকুরের 'অপরিচিতা' গল্পে কল্যাণী ও তার বাবার ট্রেনে উঠার পর অনুপম এভাবেই বর্ণনা করেছিল।\n\n⚡ **শর্টকাট টিপস:** মেয়ের বিমর্ষ মুখ বর্ণনা = 'অপরিচিতা' গল্প।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (অপরিচিতা)",
+      "step_by_step_solution": "রবীন্দ্রনাথ ঠাকুরের 'অপরিচিতা' গল্পে কল্যাণী ও তার বাবার ট্রেনে উঠার পর অনুপম এভাবেই বর্ণনা করেছিল।",
+      "shortcut_tip": "মেয়ের বিমর্ষ মুখ বর্ণনা = 'অপরিচিতা' গল্প।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q074",
+    "number": 74,
+    "subjectNumber": 14,
+    "subject": "Bangla",
+    "question": "নিচের কোন কবিতায় ট্রয় নগরীর প্রসঙ্গ আছে?",
+    "options": [
+      "সাম্যবাদী",
+      "বিভীষণের প্রতি মেঘনাদ",
+      "সেই অস্ত্র",
+      "ঐকতান"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: C (সেই অস্ত্র)\n\n📐 **ধাপে ধাপে সমাধান:** আহসান হাবীবের 'সেই অস্ত্র' কবিতায় বলা হয়েছে: \"যে অস্ত্র গ্রাস করেছিল ট্রয় নগরীকে...।\"\n\n⚡ **শর্টকাট টিপস:** ট্রয় নগরীর ধ্বংসাত্মক অস্ত্রের উল্লেখ = 'সেই অস্ত্র' কবিতা।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: C (সেই অস্ত্র)",
+      "step_by_step_solution": "আহসান হাবীবের 'সেই অস্ত্র' কবিতায় বলা হয়েছে: \"যে অস্ত্র গ্রাস করেছিল ট্রয় নগরীকে...।\"",
+      "shortcut_tip": "ট্রয় নগরীর ধ্বংসাত্মক অস্ত্রের উল্লেখ = 'সেই অস্ত্র' কবিতা।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q075",
+    "number": 75,
+    "subjectNumber": 15,
+    "subject": "Bangla",
+    "question": "'সাম্যবাদী' কবিতায় উল্লেখকৃত ‘জেন্দাবেস্তা' কী?",
+    "options": [
+      "একপ্রকারের খাদ্য",
+      "পারস্যের অগ্নি উপাসকদের ধর্মগ্রন্থ ও ভাষা",
+      "ধর্ম বিশেষ",
+      "উড়িষ্যের একটি স্থান"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: B (পারস্যের অগ্নি উপাসকদের ধর্মগ্রন্থ ও ভাষা)\n\n📐 **ধাপে ধাপে সমাধান:** 'জেন্দাবেস্তা' হলো পারস্যের প্রাচীন জোরাস্ট্রিয়ান বা অগ্নি উপাসকদের পবিত্র ধর্মগ্রন্থ ও ভাষার নাম।\n\n⚡ **শর্টকাট টিপস:** জেন্দাবেস্তা = অগ্নি উপাসকদের গ্রন্থ।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: B (পারস্যের অগ্নি উপাসকদের ধর্মগ্রন্থ ও ভাষা)",
+      "step_by_step_solution": "'জেন্দাবেস্তা' হলো পারস্যের প্রাচীন জোরাস্ট্রিয়ান বা অগ্নি উপাসকদের পবিত্র ধর্মগ্রন্থ ও ভাষার নাম।",
+      "shortcut_tip": "জেন্দাবেস্তা = অগ্নি উপাসকদের গ্রন্থ।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q076",
+    "number": 76,
+    "subjectNumber": 1,
+    "subject": "English",
+    "question": "____ his alert and vigilant presence, all predatory animals were said to have been kept within bounds.",
+    "options": [
+      "Hence",
+      "However",
+      "in addition to",
+      "Because of"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** সঠিক উত্তর: D (Because of)\n\n📐 **ধাপে ধাপে সমাধান:** The sentence expresses a cause-and-effect relationship. 'Because of' is used before a noun phrase ('his alert and vigilant presence') to show reason.\n\n⚡ **শর্টকাট টিপস:** Because of + Noun Phrase (কারণ বোঝাতে)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "সঠিক উত্তর: D (Because of)",
+      "step_by_step_solution": "The sentence expresses a cause-and-effect relationship. 'Because of' is used before a noun phrase ('his alert and vigilant presence') to show reason.",
+      "shortcut_tip": "Because of + Noun Phrase (কারণ বোঝাতে)।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q077",
+    "number": 77,
+    "subjectNumber": 2,
+    "subject": "English",
+    "question": "Complete the following sentence using the most suitable option given below:\nIf I had a car, ____",
+    "options": [
+      "I took you to a long drive",
+      "I would have been taken you to a long drive",
+      "I would have taken you to a long drive.",
+      "I would take you to a long drive."
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Second Conditional: If + Past Simple (had), Subject + would + V1\n\n📐 **ধাপে ধাপে সমাধান:** Here 'had' is the main verb in past simple tense (2nd conditional). The structure for second conditional is: If + Past Simple, S + would/could/might + base form of verb.\n\n⚡ **শর্টকাট টিপস:** If + V2 $\\rightarrow$ would + V1।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Second Conditional: If + Past Simple (had), Subject + would + V1",
+      "step_by_step_solution": "Here 'had' is the main verb in past simple tense (2nd conditional). The structure for second conditional is: If + Past Simple, S + would/could/might + base form of verb.",
+      "shortcut_tip": "If + V2 $\\rightarrow$ would + V1।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q078",
+    "number": 78,
+    "subjectNumber": 3,
+    "subject": "English",
+    "question": "Complete the sentence with the most appropriate option below: \"The organization helps _____ elderly.\"",
+    "options": [
+      "the",
+      "an",
+      "a",
+      "no article"
+    ],
+    "correctAnswer": 0,
+    "sourceAnswer": "A",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** The + Adjective = Plural Noun (The elderly = elderly people)\n\n📐 **ধাপে ধাপে সমাধান:** When 'the' is placed before an adjective like 'elderly', it represents the entire class of people ('elderly people'). Thus 'the elderly' is correct.\n\n⚡ **শর্টকাট টিপস:** The + adjective $\\rightarrow$ সমগ্র সম্প্রদায়।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "The + Adjective = Plural Noun (The elderly = elderly people)",
+      "step_by_step_solution": "When 'the' is placed before an adjective like 'elderly', it represents the entire class of people ('elderly people'). Thus 'the elderly' is correct.",
+      "shortcut_tip": "The + adjective $\\rightarrow$ সমগ্র সম্প্রদায়।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q079",
+    "number": 79,
+    "subjectNumber": 4,
+    "subject": "English",
+    "question": "Do you get ......... well ....... your sister?",
+    "options": [
+      "by, to",
+      "on, with",
+      "into, with",
+      "in, to"
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Phrasal Verb: 'Get on well with' (কারো সাথে ভালো সম্পর্ক রাখা)\n\n📐 **ধাপে ধাপে সমাধান:** The phrasal verb 'get on well with someone' means to have a harmonious relationship with someone. Therefore, 'on, with' is the correct pair.\n\n⚡ **শর্টকাট টিপস:** Get on well with = সুসম্পর্ক থাকা।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Phrasal Verb: 'Get on well with' (কারো সাথে ভালো সম্পর্ক রাখা)",
+      "step_by_step_solution": "The phrasal verb 'get on well with someone' means to have a harmonious relationship with someone. Therefore, 'on, with' is the correct pair.",
+      "shortcut_tip": "Get on well with = সুসম্পর্ক থাকা।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q080",
+    "number": 80,
+    "subjectNumber": 5,
+    "subject": "English",
+    "question": "Don't make so much noise. Shibli ___ to study for his admission test!",
+    "options": [
+      "try",
+      "tries",
+      "tried",
+      "is trying"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Imperative sentence indicator $\\rightarrow$ Present Continuous Tense\n\n📐 **ধাপে ধাপে সমাধান:** The command 'Don't make so much noise' indicates an action happening right now. Hence, Present Continuous Tense ('is trying') should be used.\n\n⚡ **শর্টকাট টিপস:** Don't make noise / Look! $\\rightarrow$ Present Continuous Tense.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Imperative sentence indicator $\\rightarrow$ Present Continuous Tense",
+      "step_by_step_solution": "The command 'Don't make so much noise' indicates an action happening right now. Hence, Present Continuous Tense ('is trying') should be used.",
+      "shortcut_tip": "Don't make noise / Look! $\\rightarrow$ Present Continuous Tense."
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q081",
+    "number": 81,
+    "subjectNumber": 6,
+    "subject": "English",
+    "question": "Would you mind ........ a cup of coffee with me?",
+    "options": [
+      "drink",
+      "having to drink",
+      "having",
+      "to drink"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Would you mind + Verb-ing\n\n📐 **ধাপে ধাপে সমাধান:** After the phrase 'Would you mind', the verb always takes the gerund form (V-ing). 'having' means drinking/consuming here.\n\n⚡ **শর্টকাট টিপস:** Would you mind + V-ing.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Would you mind + Verb-ing",
+      "step_by_step_solution": "After the phrase 'Would you mind', the verb always takes the gerund form (V-ing). 'having' means drinking/consuming here.",
+      "shortcut_tip": "Would you mind + V-ing."
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q082",
+    "number": 82,
+    "subjectNumber": 7,
+    "subject": "English",
+    "question": "Bangladesh is ......... huge inland open water resources.",
+    "options": [
+      "equipped with",
+      "submerged by",
+      "blessed by",
+      "blessed with"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Appropriate Preposition: 'Blessed with' (বিনিয়ামত প্রাপ্ত/ধন্য)\n\n📐 **ধাপে ধাপে সমাধান:** The appropriate preposition after 'blessed' when referring to natural gifts/qualities is 'with'. Thus, 'blessed with' is correct.\n\n⚡ **শর্টকাট টিপস:** Blessed with = প্রাকৃতিকভাবে সমৃদ্ধ।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Appropriate Preposition: 'Blessed with' (বিনিয়ামত প্রাপ্ত/ধন্য)",
+      "step_by_step_solution": "The appropriate preposition after 'blessed' when referring to natural gifts/qualities is 'with'. Thus, 'blessed with' is correct.",
+      "shortcut_tip": "Blessed with = প্রাকৃতিকভাবে সমৃদ্ধ।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q083",
+    "number": 83,
+    "subjectNumber": 8,
+    "subject": "English",
+    "question": "By this time next year, I ____ all my exams.",
+    "options": [
+      "will taken",
+      "have taken",
+      "will have taken",
+      "took"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** By + future time indicator $\\rightarrow$ Future Perfect Tense (will have + V3)\n\n📐 **ধাপে ধাপে সমাধান:** Phrases like 'By this time next year' indicate a completed action in the future, requiring the Future Perfect Tense ('will have taken').\n\n⚡ **শর্টকাট টিপস:** By + future time $\\rightarrow$ Future Perfect (will have + V3)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "By + future time indicator $\\rightarrow$ Future Perfect Tense (will have + V3)",
+      "step_by_step_solution": "Phrases like 'By this time next year' indicate a completed action in the future, requiring the Future Perfect Tense ('will have taken').",
+      "shortcut_tip": "By + future time $\\rightarrow$ Future Perfect (will have + V3)।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q084",
+    "number": 84,
+    "subjectNumber": 9,
+    "subject": "English",
+    "question": "The synonym of 'Incompatible' is-",
+    "options": [
+      "disqualified",
+      "incomprehensible",
+      "unsuitable",
+      "incompetent"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Incompatible = Unsuitable (বেখাপ্পা / অনুপযোগী)\n\n📐 **ধাপে ধাপে সমাধান:** 'Incompatible' means not harmonious or not suitable to exist together. Its exact synonym is 'unsuitable'.\n\n⚡ **শর্টকাট টিপস:** Incompatible = Unsuitable.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Incompatible = Unsuitable (বেখাপ্পা / অনুপযোগী)",
+      "step_by_step_solution": "'Incompatible' means not harmonious or not suitable to exist together. Its exact synonym is 'unsuitable'.",
+      "shortcut_tip": "Incompatible = Unsuitable."
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q085",
+    "number": 85,
+    "subjectNumber": 10,
+    "subject": "English",
+    "question": "If you are skeptical you are-",
+    "options": [
+      "credulous",
+      "villainous",
+      "philosophical",
+      "doubtful"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Skeptical = Doubtful (সন্দেহপ্রবণ)\n\n📐 **ধাপে ধাপে সমাধান:** 'Skeptical' means having doubts or reservations. Therefore, a skeptical person is 'doubtful'.\n\n⚡ **শর্টকাট টিপস:** Skeptical = Doubtful.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Skeptical = Doubtful (সন্দেহপ্রবণ)",
+      "step_by_step_solution": "'Skeptical' means having doubts or reservations. Therefore, a skeptical person is 'doubtful'.",
+      "shortcut_tip": "Skeptical = Doubtful."
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q086",
+    "number": 86,
+    "subjectNumber": 11,
+    "subject": "English",
+    "question": "Change the voice of this sentence: \"He does not like people laughing at him\".",
+    "options": [
+      "People laughing at him are not liked by him",
+      "He does not like being laughed at.",
+      "To be laughed at by people are not like by him.",
+      "He does not like him being laughed at by people."
+    ],
+    "correctAnswer": 1,
+    "sourceAnswer": "B",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Passive of Gerund: like + object + V-ing $\\rightarrow$ like + being + V3\n\n📐 **ধাপে ধাপে সমাধান:** When changing the voice of sentences with gerund objects after verbs like 'like/hate', the pattern becomes: Subject + verb + being + V3. So, 'He does not like being laughed at' is correct.\n\n⚡ **শর্টকাট টিপস:** Like + people + V-ing $\\rightarrow$ Like + being + V3.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Passive of Gerund: like + object + V-ing $\\rightarrow$ like + being + V3",
+      "step_by_step_solution": "When changing the voice of sentences with gerund objects after verbs like 'like/hate', the pattern becomes: Subject + verb + being + V3. So, 'He does not like being laughed at' is correct.",
+      "shortcut_tip": "Like + people + V-ing $\\rightarrow$ Like + being + V3."
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q087",
+    "number": 87,
+    "subjectNumber": 12,
+    "subject": "English",
+    "question": "The noun of 'bore' is-",
+    "options": [
+      "boring",
+      "bores",
+      "bored",
+      "boredom"
+    ],
+    "correctAnswer": 3,
+    "sourceAnswer": "D",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Verb: Bore $\\rightarrow$ Abstract Noun: Boredom\n\n📐 **ধাপে ধাপে সমাধান:** 'Bore' is a verb. Its abstract noun form created with the suffix '-dom' is 'boredom' (একঘেয়েমি).\n\n⚡ **শর্টকাট টিপস:** Bore (Verb) $\\rightarrow$ Boredom (Noun)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Verb: Bore $\\rightarrow$ Abstract Noun: Boredom",
+      "step_by_step_solution": "'Bore' is a verb. Its abstract noun form created with the suffix '-dom' is 'boredom' (একঘেয়েমি).",
+      "shortcut_tip": "Bore (Verb) $\\rightarrow$ Boredom (Noun)।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q088",
+    "number": 88,
+    "subjectNumber": 13,
+    "subject": "English",
+    "question": "Whose book is that?",
+    "options": [
+      "It's of Mita's",
+      "it's Mitas'",
+      "It's Mita's",
+      "Its Mita's"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** It's = It is; Mita's = Possessive Noun\n\n📐 **ধাপে ধাপে সমাধান:** 'It's' stands for 'It is'. 'Mita's' is the possessive form indicating ownership of the book. So, \"It's Mita's\" is the grammatically correct answer.\n\n⚡ **শর্টকাট টিপস:** It's (It is) + Mita's (মিথার)।",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "It's = It is; Mita's = Possessive Noun",
+      "step_by_step_solution": "'It's' stands for 'It is'. 'Mita's' is the possessive form indicating ownership of the book. So, \"It's Mita's\" is the grammatically correct answer.",
+      "shortcut_tip": "It's (It is) + Mita's (মিথার)।"
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q089",
+    "number": 89,
+    "subjectNumber": 14,
+    "subject": "English",
+    "question": "The antonym of the word ' malignant' is-",
+    "options": [
+      "safe",
+      "harmful",
+      "benign",
+      "difficult"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Malignant (ক্ষতিকর/ঘাতক) $\\leftrightarrow$ Benign (অক্ষতিকর/সৌমা)\n\n📐 **ধাপে ধাপে সমাধান:** 'Malignant' means harmful or infectious (especially of a tumor). Its direct antonym in medical and general terminology is 'benign' (harmless).\n\n⚡ **শর্টকাট টিপস:** Malignant $\\leftrightarrow$ Benign.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Malignant (ক্ষতিকর/ঘাতক) $\\leftrightarrow$ Benign (অক্ষতিকর/সৌমা)",
+      "step_by_step_solution": "'Malignant' means harmful or infectious (especially of a tumor). Its direct antonym in medical and general terminology is 'benign' (harmless).",
+      "shortcut_tip": "Malignant $\\leftrightarrow$ Benign."
+    }
+  },
+  {
+    "id": "du-20-21-mcq-q090",
+    "number": 90,
+    "subjectNumber": 15,
+    "subject": "English",
+    "question": "Choose the correctly spelled word.",
+    "options": [
+      "Synonymus",
+      "Hippopotamous",
+      "Hypocrisy",
+      "Antonymus"
+    ],
+    "correctAnswer": 2,
+    "sourceAnswer": "C",
+    "answerVerified": true,
+    "explanation": "🎯 **এক লাইনে হিসাব:** Correct Spelling: Hypocrisy (ভণ্ডামি)\n\n📐 **ধাপে ধাপে সমাধান:** The correct spelling is 'Hypocrisy'. The others are incorrect: Anonymous/Synonymous (ending in -ous), Hippopotamus (without 'o').\n\n⚡ **শর্টকাট টিপস:** H-y-p-o-c-r-i-s-y = Hypocrisy.",
+    "explanationSource": "source",
+    "questionType": "MCQ",
+    "institution": "DU",
+    "session": "20-21",
+    "explanationParts": {
+      "one_line_calculation": "Correct Spelling: Hypocrisy (ভণ্ডামি)",
+      "step_by_step_solution": "The correct spelling is 'Hypocrisy'. The others are incorrect: Anonymous/Synonymous (ending in -ous), Hippopotamus (without 'o').",
+      "shortcut_tip": "H-y-p-o-c-r-i-s-y = Hypocrisy."
+    }
+  }
+]

@@ -1,0 +1,238 @@
+{
+  "papers": {
+    "du-09-10": {
+      "institution": "DU",
+      "path": "data/DU/du-09-10/questions.json",
+      "questions": 161,
+      "withExplanation": 161,
+      "unverified": 0,
+      "images": 8,
+      "updated": "2026-11-15"
+    },
+    "du-17-18": {
+      "institution": "DU",
+      "path": "data/DU/du-17-18/questions.json",
+      "questions": 170,
+      "withExplanation": 170,
+      "unverified": 0,
+      "images": 18,
+      "updated": "2026-11-15"
+    },
+    "du-21-22-mcq": {
+      "institution": "DU",
+      "path": "data/DU/du-21-22-mcq/questions.json",
+      "questions": 90,
+      "withExplanation": 90,
+      "unverified": 0,
+      "images": 0,
+      "updated": "2026-11-15"
+    },
+    "du-23-24-mcq": {
+      "institution": "DU",
+      "path": "data/DU/du-23-24-mcq/questions.json",
+      "questions": 90,
+      "withExplanation": 90,
+      "unverified": 0,
+      "images": 0,
+      "updated": "2026-11-15"
+    },
+    "du-24-25-mcq": {
+      "institution": "DU",
+      "path": "data/DU/du-24-25-mcq/questions.json",
+      "questions": 90,
+      "withExplanation": 90,
+      "unverified": 0,
+      "images": 8,
+      "updated": "2026-11-15"
+    },
+    "du-25-26-mcq": {
+      "institution": "DU",
+      "path": "data/DU/du-25-26-mcq/questions.json",
+      "questions": 90,
+      "withExplanation": 90,
+      "unverified": 0,
+      "images": 5,
+      "updated": "2026-11-15"
+    },
+    "du-00-01": {
+      "institution": "DU",
+      "path": "data/DU/du-00-01/questions.json",
+      "questions": 137,
+      "withExplanation": 137,
+      "unverified": 0,
+      "images": 0,
+      "updated": "2026-11-15"
+    },
+    "du-01-02": {
+      "institution": "DU",
+      "path": "data/DU/du-01-02/questions.json",
+      "questions": 141,
+      "withExplanation": 141,
+      "unverified": 0,
+      "images": 6,
+      "updated": "2026-11-15"
+    },
+    "du-02-03": {
+      "institution": "DU",
+      "path": "data/DU/du-02-03/questions.json",
+      "questions": 148,
+      "withExplanation": 148,
+      "unverified": 0,
+      "images": 1,
+      "updated": "2026-11-15"
+    },
+    "du-03-04": {
+      "institution": "DU",
+      "path": "data/DU/du-03-04/questions.json",
+      "questions": 168,
+      "withExplanation": 168,
+      "unverified": 0,
+      "images": 2,
+      "updated": "2026-11-15"
+    },
+    "du-04-05": {
+      "institution": "DU",
+      "path": "data/DU/du-04-05/questions.json",
+      "questions": 170,
+      "withExplanation": 170,
+      "unverified": 0,
+      "images": 1,
+      "updated": "2026-11-15"
+    },
+    "du-05-06": {
+      "institution": "DU",
+      "path": "data/DU/du-05-06/questions.json",
+      "questions": 170,
+      "withExplanation": 170,
+      "unverified": 0,
+      "images": 10,
+      "updated": "2026-11-15"
+    },
+    "du-06-07": {
+      "institution": "DU",
+      "path": "data/DU/du-06-07/questions.json",
+      "questions": 165,
+      "withExplanation": 165,
+      "unverified": 0,
+      "images": 6,
+      "updated": "2026-11-15"
+    },
+    "du-07-08": {
+      "institution": "DU",
+      "path": "data/DU/du-07-08/questions.json",
+      "questions": 161,
+      "withExplanation": 161,
+      "unverified": 0,
+      "images": 6,
+      "updated": "2026-11-15"
+    },
+    "du-08-09": {
+      "institution": "DU",
+      "path": "data/DU/du-08-09/questions.json",
+      "questions": 159,
+      "withExplanation": 159,
+      "unverified": 0,
+      "images": 1,
+      "updated": "2026-11-15"
+    },
+    "du-10-11": {
+      "institution": "DU",
+      "path": "data/DU/du-10-11/questions.json",
+      "questions": 163,
+      "withExplanation": 163,
+      "unverified": 0,
+      "images": 5,
+      "updated": "2026-11-15"
+    },
+    "du-11-12": {
+      "institution": "DU",
+      "path": "data/DU/du-11-12/questions.json",
+      "questions": 164,
+      "withExplanation": 164,
+      "unverified": 0,
+      "images": 16,
+      "updated": "2026-11-15"
+    },
+    "du-12-13": {
+      "institution": "DU",
+      "path": "data/DU/du-12-13/questions.json",
+      "questions": 164,
+      "withExplanation": 164,
+      "unverified": 0,
+      "images": 2,
+      "updated": "2026-11-15"
+    },
+    "du-13-14": {
+      "institution": "DU",
+      "path": "data/DU/du-13-14/questions.json",
+      "questions": 168,
+      "withExplanation": 168,
+      "unverified": 0,
+      "images": 3,
+      "updated": "2026-11-15"
+    },
+    "du-14-15": {
+      "institution": "DU",
+      "path": "data/DU/du-14-15/questions.json",
+      "questions": 164,
+      "withExplanation": 164,
+      "unverified": 0,
+      "images": 9,
+      "updated": "2026-11-15"
+    },
+    "du-15-16": {
+      "institution": "DU",
+      "path": "data/DU/du-15-16/questions.json",
+      "questions": 165,
+      "withExplanation": 165,
+      "unverified": 0,
+      "images": 6,
+      "updated": "2026-11-15"
+    },
+    "du-16-17": {
+      "institution": "DU",
+      "path": "data/DU/du-16-17/questions.json",
+      "questions": 167,
+      "withExplanation": 167,
+      "unverified": 0,
+      "images": 2,
+      "updated": "2026-11-15"
+    },
+    "du-18-19": {
+      "institution": "DU",
+      "path": "data/DU/du-18-19/questions.json",
+      "questions": 175,
+      "withExplanation": 175,
+      "unverified": 0,
+      "images": 11,
+      "updated": "2026-11-15"
+    },
+    "du-a-19-20-mcq": {
+      "institution": "DU",
+      "path": "data/DU/du-a-19-20-mcq/questions.json",
+      "questions": 90,
+      "withExplanation": 90,
+      "unverified": 0,
+      "images": 0,
+      "updated": "2026-11-15"
+    },
+    "du-20-21-mcq": {
+      "institution": "DU",
+      "path": "data/DU/du-20-21-mcq/questions.json",
+      "questions": 90,
+      "withExplanation": 90,
+      "unverified": 0,
+      "images": 5,
+      "updated": "2026-11-15"
+    },
+    "du-22-23-mcq": {
+      "institution": "DU",
+      "path": "data/DU/du-22-23-mcq/questions.json",
+      "questions": 90,
+      "withExplanation": 90,
+      "unverified": 0,
+      "images": 0,
+      "updated": "2026-11-15"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+.font-serif {
+  font-family: 'Noto Serif Bengali', Georgia, Cambria, 'Times New Roman', serif;
+}
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+.font-bryndan {
+  font-family: 'Bryndan Write', 'Patrick Hand', 'Caveat', 'Atma', 'Segoe Print', cursive, sans-serif;
+}

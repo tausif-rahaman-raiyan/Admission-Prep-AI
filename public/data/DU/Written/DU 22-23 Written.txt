@@ -1,0 +1,75 @@
+﻿EXAM: DU 22-23 Written
+
+PAGE: https://chorcha.net/read/bAFddVQA2d5jooXx
+
+EXTRACTED: 22 | MCQ: 0 | WRITTEN: 22
+
+
+
+[Physics] WRITTEN 1 (1.)
+1. ভেক্টর $\vec{a} = \alpha\hat{i} + 2\hat{j} + \beta \hat{k}$ , ভেক্টর $\vec{b} = \hat{i} + \hat{j}$ এবং $\vec{c} = \hat{j} + \hat{k}$ এর সাথে সমান কোন $\theta$ তৈরি করে এবং $\vec{b}$ ও $\vec{c}$ এর সাথে একই সমতলে অবস্থান করে । $\alpha$ ও $\beta$ এর মান নির্ণয় কর।
+
+[Physics] WRITTEN 2 (2.)
+2. নিচের বর্তনীতে $E=9 \mathrm{~V}, R_{0}=2 \Omega, R_{1}=6 \Omega, R_{2}=4 \Omega, R_{3}=8 \Omega$ হলে, বর্তনীতে বিদ্যুৎ প্রবাহ $i_{0}$ . $i_{1}$ এবং $i_{23}$ কত হবে?
+IMAGE URLS:
+- https://assets.chorcha.net/OGjeZFIa_NJU6yB-M3T2a.png
+
+[Physics] WRITTEN 3 (3.)
+3. m ভরের একটি মিটার স্কেল । সমদ্রুতিতে এর দৈর্ঘ্য বরাবর চলমান। স্কেলটির আপেক্ষিক দৈর্ঘ্য 60 cm এবং আপেক্ষিক ভরবেগ 8 Joule / c (যেখানে শূন্য মাধ্যমে আলোর বেগ) হলে, মিটার স্কেলটির আপেক্ষিক শক্তি কত?
+
+[Physics] WRITTEN 4 (4.)
+4. একটি সরল দোল গতিসম্পন্ন বস্তুর ব্যবকলনীয় সমীকরণ লিখ। দেখাও যে, $x = A \sin(\omega t + \varphi)$ উক্ত সমীকরণের একটি সমাধান।
+
+[Chemistry] WRITTEN 5 (1.)
+1. (a) অনুবন্ধী এসিড ও অনুবন্ধী ক্ষার কী? উদাহরণসহ ব্যাখ্যা কর। (b) পানির বিশুদ্ধতার তিনটি মানদণ্ড লিখ।
+
+[Chemistry] WRITTEN 6 (2.)
+2. বাফার দ্রবণ কী? $CH_3COOH$ এবং $CH_3COONa$ এর সমমোলার দ্রবণ কীভাবে বাফার হিসেবে কাজ করে? এ দ্রবণের জন্য প্রযোজ্য হেন্ডারসন হ্যাসেলবাখ সমীকরণ লিখ।
+
+[Chemistry] WRITTEN 7 (3.)
+3. (a) নিচের বিক্রিয়াগুলি পূর্ণ কর $\mathrm{C}_{6} \mathrm{H}_{6} \stackrel{?}{\longrightarrow} \mathrm{C}_{6} \mathrm{H}_{5} \mathrm{NO}_{2} \stackrel{\mathrm{Sn+HCl}}{\longrightarrow}$ ? $\stackrel{\mathrm{NaNO}_{2}, \text { HCl. } 0^{*} \mathrm{C}}{\longrightarrow}$ ? $\stackrel{\text { ? }}{\longrightarrow} \mathrm{C}_{6} \mathrm{H}_{5} \mathrm{OH}$ (b) $S_{N} 1$ এবং $S_{\mathrm{N}} 2$ দ্বারা তুমি কী বুঝ?
+
+[Chemistry] WRITTEN 8 (4.)
+4. (a) জ্যামিতিক সমাণুতার শর্তসমূহ কী কী? 2-বিউটিনের সমাণুসমূহের গাঠনিক কাঠামো আঁক।(b) আন্তঃআণবিক ও অন্তঃআণবিক হাইড্রোজেন বন্ধনের উদাহরণ দাও।
+
+[Math] WRITTEN 9 (1.)
+1. p এর কোন মানের জন্য ( 4,4) বিন্দুটি $x^2 - 8x + py + 7 =0$ পরাবৃত্তের উপকেন্দ্র হবে?
+
+[Math] WRITTEN 10 (2.)
+2. $y=\cos x \ln \left(\frac{1}{\sec x+\tan x}\right)$ হলে, $\frac{d^{2} y}{d x^{2}}+y$ এর মান নির্ণয় কর।
+
+[Math] WRITTEN 11 (3.)
+3. $3x^2 - 6x + 2 = 0$ সমীকরণটির মূলদ্বয় m এবং n হলে $m + \frac{1}{n}$ এবং $n + \frac{1}{m}$ মূলবিশিষ্ট সমীকরণটি নির্ণয় কর।
+
+[Math] WRITTEN 12 (4.)
+4. যদি $a \cos \alpha + b \sin \alpha = a \cos \beta + b \sin \beta$ হয়, তবে দেখাও যে, $\cos^2 \frac{\alpha+\beta}{2} - \sin^2 \frac{\alpha+\beta}{2} = \frac{a^2-b^2}{a^2+b^2}$
+
+[Biology] WRITTEN 13 (1.)
+1. Poaceae গোত্রের পাঁচটি প্রধান শনাক্তকারী বৈশিষ্ট্য লিখ।
+
+[Biology] WRITTEN 14 (2.)
+2. ভাজক কলা ও স্থায়ী কলার মধ্যে পাঁচটি প্রধান পার্থক্য লিখ।
+
+[Biology] WRITTEN 15 (3.)
+3. হার্ট অ্যাটাকের পাঁচটি লক্ষণ উল্লেখ কর।DU A 22-23
+
+[Biology] WRITTEN 16 (4.)
+4. নিচের প্রাণীগুলোর বৈজ্ঞানিক নাম লিখ। (a) গৃহ মাছি (b) গোলকৃমি (c) রুই মাছ (d) দোয়েল (e) গোখরা সাপ
+
+[Bangla] WRITTEN 17 (1.)
+1. নিচের শব্দগুলির মাধ্যমে বাক্য রচনা কর: পাণ্ডুর; তপোবন; মহাকাল; সাম্যবাদ; কিংবদন্তি
+
+[Bangla] WRITTEN 18 (2.)
+2. 'প্লাস্টিক দূষণ' বিষয়ে পাঁচটি বাক্যে একটি অনুচ্ছেদ রচনা কর।
+
+[Bangla] WRITTEN 19 (3.)
+3. ভাবসম্প্রসারণ কর: "পরের অভাব মনে করিলে চিন্তন আপন অভাব ক্ষোভ থাকে কতক্ষণ?"
+
+[English] WRITTEN 20 (1.)
+1. Make meaningful sentences with the following words:dissolve, proactive, bibliophile, perverse, rattling
+
+[English] WRITTEN 21 (2.)
+2. Read the following extract, and answer the questions that follow:I will arise and go now, and go to Innisfree,And a small cabin build there, of clay and wattles made;Nine bean rows will I have there, a hive for the honey-bee,And live alone in the bee-loud glade.And I shall have some peace there, for peace comes dropping slow,Dropping from the veils of the morning to where the cricket sings;There midnight's all a glimmer, and noon a purple glow,And evening full of the linnet's wings.(a) What image has been used to describe peace?(b) What are the living creatures mentioned in the poem?
+
+[English] WRITTEN 22 (3.)
+3. Write a well-organized paragraph on "The use and abuse of advertisements" in the space provided, keeping in mind the elements of a paragraph, such as a topic sentence, supporting detail sentences and a conclusion.
