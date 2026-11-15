@@ -61,7 +61,7 @@ class MathErrorBoundary extends Component<{ children: ReactNode; raw: string }, 
   }
 }
 
-export const MathText: React.FC<MarkdownMathProps> = ({ content, className = '', fontSize }) => (
+export const MathText = React.memo<MarkdownMathProps>(({ content, className = '', fontSize }) => (
   <MathErrorBoundary raw={content}>
     <div className={`math-text prose dark:prose-invert max-w-none text-slate-800 dark:text-slate-200 leading-relaxed ${className}`} style={fontSize ? { fontSize: `${fontSize}px` } : undefined}>
       <ReactMarkdown
@@ -72,6 +72,7 @@ export const MathText: React.FC<MarkdownMathProps> = ({ content, className = '',
       </ReactMarkdown>
     </div>
   </MathErrorBoundary>
-);
+));
+MathText.displayName = 'MathText';
 
 export const MarkdownMath = MathText;
