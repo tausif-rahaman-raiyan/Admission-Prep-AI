@@ -87,7 +87,7 @@ async function directGemini(prompt: string, apiKey: string, signal: AbortSignal,
 }
 
 export async function streamTutorResponse(prompt: string, apiKey: string, signal: AbortSignal, cb: Callbacks) {
-  const apiBase = import.meta.env.VITE_API_URL?.trim().replace(/\\/$/, '');
+  const apiBase = import.meta.env.VITE_API_URL?.trim().replace(/\/$/, '');
   if (apiBase) {
     cb.onModel('Express API', true);
     return expressStream(`${apiBase}/api/ai/tutor`, prompt, apiKey, signal, cb);
