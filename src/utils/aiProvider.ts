@@ -6,7 +6,7 @@ type Callbacks = {
 };
 
 function parseData(block: string): string | null {
-  const data = block.split(/\\r?\\n/).find(line => line.startsWith('data:'))?.slice(5).trim();
+  const data = block.split(/\r?\n/).find(line => line.startsWith('data:'))?.slice(5).trim();
   return !data || data === '[DONE]' ? null : data;
 }
 
@@ -25,7 +25,7 @@ async function expressStream(url: string, prompt: string, apiKey: string, signal
     const { done, value } = await reader.read();
     if (done) break;
     buffer += decoder.decode(value, { stream: true });
-    const blocks = buffer.split(/\\r?\\n\\r?\\n/);
+    const blocks = buffer.split(/\r?\n\r?\n/);
     buffer = blocks.pop() || '';
     for (const block of blocks) {
       const raw = parseData(block);
@@ -65,7 +65,7 @@ async function directGemini(prompt: string, apiKey: string, signal: AbortSignal,
         const { done, value } = await reader.read();
         if (done) break;
         buffer += decoder.decode(value, { stream: true });
-        const blocks = buffer.split(/\\r?\\n\\r?\\n/);
+        const blocks = buffer.split(/\r?\n\r?\n/);
         buffer = blocks.pop() || '';
         for (const block of blocks) {
           const raw = parseData(block);
