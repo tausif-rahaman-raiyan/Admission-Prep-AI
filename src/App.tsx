@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Home } from './components/Home';
 import { QuestionBank } from './components/QuestionBank';
@@ -12,20 +12,63 @@ import { siteConfig } from './data/siteConfig';
 import { MathTestPage } from './components/MathTestPage';
 import { SessionItem, sessions } from './data/sessions';
 import { storage, UiSettings } from './utils/storage';
-import { GraduationCap, Heart, Github, Instagram, Shield, FileText } from 'lucide-react';
+import { Github, Instagram } from 'lucide-react';
+
+const validViews = ['home', 'questionBank', 'exam', 'analytics', 'admissionRules'] as const;
+type AppView = typeof validViews[number];
+
+const BASE_PREFIX = (import.meta.env.BASE_URL || '/').replace(/\/+$/, '');
+
+function getRouteFromLocation(): { view: AppView; isMathTest: boolean; hadHashOrRoot: boolean } {
+  const hashRoute = window.location.hash.replace(/^#\/?/, '').replace(/\/+$/, '');
+  if (hashRoute) {
+    if (hashRoute === 'math-test') return { view: 'home', isMathTest: true, hadHashOrRoot: true };
+    if (validViews.includes(hashRoute as AppView)) {
+      return { view: hashRoute as AppView, isMathTest: false, hadHashOrRoot: true };
+    }
+  }
+
+  let pathname = window.location.pathname;
+  if (BASE_PREFIX && pathname.startsWith(BASE_PREFIX)) {
+    pathname = pathname.slice(BASE_PREFIX.length);
+  }
+  const cleanSegment = pathname.replace(/^\/+|\/+$/g, '');
+  if (cleanSegment === 'math-test') {
+    return { view: 'home', isMathTest: true, hadHashOrRoot: false };
+  }
+  if (validViews.includes(cleanSegment as AppView)) {
+    return { view: cleanSegment as AppView, isMathTest: false, hadHashOrRoot: false };
+  }
+  return { view: 'home', isMathTest: false, hadHashOrRoot: cleanSegment === '' };
+}
+
+function buildPathForRoute(route: string): string {
+  const clean = route.replace(/^\/+/, '');
+  return `${BASE_PREFIX}/${clean}` || `/${clean}`;
+}
 
 export default function App() {
-  const validViews = ['home', 'questionBank', 'exam', 'analytics', 'admissionRules'] as const;
-  type AppView = typeof validViews[number];
-  const [currentView, setCurrentView] = useState<AppView>(() => {
-    const route = window.location.hash.replace(/^#\//, '') as AppView;
-    return validViews.includes(route) ? route : 'home';
-  });
-  const [isMathTest, setIsMathTest] = useState(() => window.location.hash === '#/math-test');
   const [selectedSession, setSelectedSession] = useState<SessionItem | null>(() => {
     try { const id = localStorage.getItem('admission_app_selected_session'); return sessions.find(session => session.id === id) || null; }
     catch { return null; }
   });
+  const initialRoute = getRouteFromLocation();
+  const [currentView, setCurrentView] = useState<AppView>(() => {
+    if ((initialRoute.view === 'exam' || initialRoute.view === 'questionBank') && !selectedSession) {
+      return 'home';
+    }
+    if (initialRoute.view === 'exam' && selectedSession) {
+      try {
+        const raw = localStorage.getItem('admission_app_exam_' + selectedSession.id);
+        const saved = raw ? JSON.parse(raw) : null;
+        if (saved?.paused) return 'home';
+      } catch {}
+    }
+    return initialRoute.view;
+  });
+  const [isMathTest, setIsMathTest] = useState(() => initialRoute.isMathTest);
+  const [examPromptResume, setExamPromptResume] = useState(false);
+  const [examLaunchKey, setExamLaunchKey] = useState(0);
 
   // Theme state
   const [theme, setTheme] = useState<'dark' | 'light'>(() => storage.getTheme());
@@ -41,8 +84,8 @@ export default function App() {
     if (univId && univId !== 'ALL') {
       setRulesModalUniv(univId);
     }
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     setCurrentView('admissionRules');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Filter states
@@ -55,15 +98,38 @@ export default function App() {
 
   useEffect(() => { try { localStorage.setItem('admission_app_selected_university', selectedInstitution); } catch {} }, [selectedInstitution]);
   useEffect(() => {
-    const syncHash = () => {
-      const hash = window.location.hash;
-      setIsMathTest(hash === '#/math-test');
-      if (hash !== '#/math-test') { const route = hash.replace(/^#\//, '') as AppView; if (validViews.includes(route)) setCurrentView(route); }
-    };
-    window.addEventListener('hashchange', syncHash);
-    return () => window.removeEventListener('hashchange', syncHash);
+    const targetPath = buildPathForRoute(isMathTest ? 'math-test' : currentView);
+    const currentFull = window.location.pathname + window.location.hash;
+    if (currentFull !== targetPath) {
+      window.history.replaceState(null, '', targetPath);
+    }
   }, []);
-  useEffect(() => { if (!isMathTest && window.location.hash !== '#/' + currentView) window.location.hash = '#/' + currentView; }, [currentView, isMathTest]);
+
+  useEffect(() => {
+    const syncRoute = () => {
+      const next = getRouteFromLocation();
+      setIsMathTest(next.isMathTest);
+      setExamPromptResume(false);
+      if (!next.isMathTest) {
+        if ((next.view === 'exam' || next.view === 'questionBank') && !selectedSession) {
+          setCurrentView('home');
+        } else {
+          setCurrentView(next.view);
+        }
+      }
+    };
+    window.addEventListener('popstate', syncRoute);
+    return () => window.removeEventListener('popstate', syncRoute);
+  }, [selectedSession]);
+
+  useEffect(() => {
+    if (isMathTest) return;
+    const targetPath = buildPathForRoute(currentView);
+    if (window.location.pathname !== targetPath || window.location.hash) {
+      window.history.pushState(null, '', targetPath);
+    }
+  }, [currentView, isMathTest]);
+
   useEffect(() => { try { if (selectedSession) localStorage.setItem('admission_app_selected_session', selectedSession.id); else localStorage.removeItem('admission_app_selected_session'); } catch {} }, [selectedSession]);
 
   // Load manifest.json at startup
@@ -103,17 +169,25 @@ export default function App() {
     storage.setUiSettings(uiSettings);
   }, [uiSettings]);
 
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [currentView, selectedSession?.id]);
+
   const handleNavigate = (view: 'home' | 'questionBank' | 'exam' | 'analytics' | 'admissionRules') => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     setCurrentView(view);
   };
 
   const handleStartExam = (session: SessionItem) => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    setExamPromptResume(true);
+    setExamLaunchKey(k => k + 1);
     setSelectedSession(session);
     setCurrentView('exam');
   };
 
   const handleOpenQuestionBank = (session: SessionItem) => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     setSelectedSession(session);
     setCurrentView('questionBank');
   };
@@ -162,10 +236,15 @@ export default function App() {
 
         {currentView === 'exam' && selectedSession && (
           <ExamView
+            key={`${selectedSession.id}-${examLaunchKey}`}
             session={selectedSession}
-            onBack={() => setCurrentView('home')}
+            onBack={() => {
+              setExamPromptResume(false);
+              setCurrentView('home');
+            }}
             uiSettings={uiSettings}
             onOpenApiKeyModal={() => setApiKeyModalOpen(true)}
+            promptResumeOnStart={examPromptResume}
           />
         )}
 
@@ -190,8 +269,12 @@ export default function App() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-indigo-600/10 dark:bg-indigo-500/10 border border-indigo-300 dark:border-indigo-500/40 flex items-center justify-center text-indigo-600 dark:text-sky-400">
-                  <GraduationCap className="w-5 h-5" />
+                <div className="w-12 h-10 rounded-xl overflow-hidden border border-indigo-300 dark:border-indigo-500/40 bg-slate-900 flex items-center justify-center shrink-0">
+                  <img
+                    src={`${import.meta.env.BASE_URL}assets/aistudio/image_d4f71793.png`}
+                    alt="Admission Prep AI icon"
+                    className="w-full h-full object-cover object-center"
+                  />
                 </div>
                 <div>
                   <div className="text-base font-extrabold text-slate-900 dark:text-slate-100">{siteConfig.footer.brand}</div>

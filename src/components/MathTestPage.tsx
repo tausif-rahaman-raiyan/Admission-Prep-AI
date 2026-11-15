@@ -38,7 +38,7 @@ export const MathTestPage: React.FC = () => (
   <main className="mx-auto max-w-5xl space-y-5 px-4 py-8">
     <header className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 dark:border-indigo-900 dark:bg-[#0B152C]">
       <h1 className="text-xl font-black">MathText regression test</h1>
-      <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">৩০টি formula / Markdown sample — #/math-test</p>
+      <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">৩০টি formula / Markdown sample — /math-test</p>
     </header>
     <div className="grid gap-3">
       {cases.map((sample, index) => <section key={index} className="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-[#080E1E]">

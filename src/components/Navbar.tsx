@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { BookOpen, BarChart3, Settings as SettingsIcon, Menu, X, Sparkles, GraduationCap, School } from 'lucide-react';
+import { BookOpen, BarChart3, Settings as SettingsIcon, Menu, X, School } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 
 interface NavbarProps {
@@ -39,8 +39,12 @@ export const Navbar: React.FC<NavbarProps> = ({
           onClick={() => onNavigate('home')}
           className="flex items-center gap-3 cursor-pointer group shrink-0"
         >
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-indigo-600/10 dark:bg-indigo-500/10 border border-indigo-300 dark:border-indigo-500/40 flex items-center justify-center text-indigo-600 dark:text-sky-400 group-hover:scale-105 transition-transform shadow-xs">
-            <GraduationCap className="w-6 h-6" />
+          <div className="w-12 h-10 sm:w-14 sm:h-11 rounded-xl overflow-hidden border border-indigo-300 dark:border-indigo-500/40 bg-slate-900 flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs shrink-0">
+            <img
+              src={`${import.meta.env.BASE_URL}assets/aistudio/image_d4f71793.png`}
+              alt="Admission Prep AI icon"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
           <div>
             <div className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useMemo } from 'react';
 import { ArrowLeft, Search, Sparkles, Check, HelpCircle, BookOpen, Key, AlertCircle } from 'lucide-react';
 import { SessionItem } from '../data/sessions';
 import { getSubjectTheme } from '../data/subjects';
@@ -36,6 +36,10 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
   const [bilingualLang, setBilingualLang] = useState<'bn' | 'en'>('bn');
   const [openAiTutorId, setOpenAiTutorId] = useState<string | null>(null);
   const [apiKeyToast, setApiKeyToast] = useState(false);
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [session.id]);
 
   useEffect(() => {
     async function loadQuestions() {
@@ -312,7 +316,12 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                     <span className={`text-[10px] font-black px-2.5 py-1 rounded-lg ${q.type === 'Written' ? 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300' : 'bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300'}`}>{q.type || 'MCQ'}</span>
                   </div>
 
-                  {q.answerVerified === false || q.correctAnswer < 0 ? (
+                  {q.type === 'Written' && q.explanation?.trim() ? (
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-sky-300 border border-indigo-300 dark:border-indigo-800 flex items-center gap-1">
+                      <BookOpen className="w-3.5 h-3.5" />
+                      <span>Step-by-Step Solution</span>
+                    </span>
+                  ) : q.answerVerified === false || q.correctAnswer < 0 ? (
                     <span className="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 border border-amber-300">
                       Unverified
                     </span>

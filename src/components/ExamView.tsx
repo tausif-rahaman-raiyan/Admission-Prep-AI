@@ -15,25 +15,73 @@ interface ExamViewProps {
   onBack: () => void;
   uiSettings: UiSettings;
   onOpenApiKeyModal: () => void;
+  promptResumeOnStart?: boolean;
 }
 
-function readSavedExam(sessionId: string): { answers?: Record<string, number>; endTimestamp?: number; started?: boolean } | null {
-  try { const raw = localStorage.getItem('admission_app_exam_' + sessionId); return raw ? JSON.parse(raw) : null; } catch { return null; }
+type WrittenSelfCheck = 'correct' | 'partial' | 'review';
+
+interface SavedExamState {
+  answers?: Record<string, number>;
+  writtenSolved?: Record<string, boolean>;
+  writtenSelfChecks?: Record<string, WrittenSelfCheck>;
+  lockedQuestions?: Record<string, boolean>;
+  flaggedQuestions?: Record<string, boolean>;
+  remainingSeconds?: number;
+  endTimestamp?: number;
+  started?: boolean;
+  paused?: boolean;
+  selectedSubjects?: string[];
+  ruOptionChoice?: 'RU_COMBINED' | 'RU_MATH' | 'RU_BIO' | null;
+  savedAt?: string;
+}
+
+function readSavedExam(sessionId: string): SavedExamState | null {
+  try {
+    const raw = localStorage.getItem('admission_app_exam_' + sessionId);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+function getSavedRemainingSeconds(saved: SavedExamState | null, defaultMinutes: number): number {
+  if (!saved) return defaultMinutes * 60;
+  if (typeof saved.remainingSeconds === 'number') {
+    return Math.max(0, Math.ceil(saved.remainingSeconds));
+  }
+  if (typeof saved.endTimestamp === 'number') {
+    return Math.max(0, Math.ceil((saved.endTimestamp - Date.now()) / 1000));
+  }
+  return defaultMinutes * 60;
 }
 
 export const ExamView: React.FC<ExamViewProps> = ({
   session,
   onBack,
   uiSettings,
-  onOpenApiKeyModal
+  onOpenApiKeyModal,
+  promptResumeOnStart = false
 }) => {
   const admissionRule: UniversityAdmissionRule = useMemo(() => {
     return getAdmissionRule(session.institution, session.unit);
   }, [session.institution, session.unit]);
 
-  // Modal for full admission rules
+  const initialSavedExam = useMemo(() => readSavedExam(session.id), [session.id]);
+  const hasResumableExam = Boolean(
+    initialSavedExam &&
+    initialSavedExam.started &&
+    getSavedRemainingSeconds(initialSavedExam, session.durationMinutes) > 0
+  );
+  const shouldShowResumePrompt = Boolean(promptResumeOnStart && hasResumableExam);
+  const shouldRestoreActiveExam = Boolean(!promptResumeOnStart && hasResumableExam && initialSavedExam);
+  const initialRemainingSeconds = shouldRestoreActiveExam && initialSavedExam
+    ? Math.max(1, getSavedRemainingSeconds(initialSavedExam, session.durationMinutes))
+    : session.durationMinutes * 60;
+
+  // Modal for full admission rules & exit/resume prompts
   const [rulesModalOpen, setRulesModalOpen] = useState(false);
   const [exitPromptOpen, setExitPromptOpen] = useState(false);
+  const [resumePromptOpen, setResumePromptOpen] = useState<boolean>(shouldShowResumePrompt);
 
   // Initial subjects setup based on admission rule
   const compulsoryNames = useMemo(() => {
@@ -43,37 +91,57 @@ export const ExamView: React.FC<ExamViewProps> = ({
   // Selected subjects state: ONLY compulsory subjects are pre-selected!
   // Optional subjects start UNSELECTED as requested: "ঐচ্ছিক বিষয় নির্বাচন - age theke select kore dio na"
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>(() => {
-    if (readSavedExam(session.id)?.started) {
-      try {
-        const saved = localStorage.getItem(`admission_app_selected_subjects_${session.institution}_v2`);
-        if (saved) {
-          const parsed = JSON.parse(saved);
-          if (Array.isArray(parsed) && parsed.every((value: unknown) => typeof value === 'string')) return parsed;
-        }
-      } catch {}
+    if (shouldRestoreActiveExam && Array.isArray(initialSavedExam?.selectedSubjects) && initialSavedExam.selectedSubjects.length > 0) {
+      return initialSavedExam.selectedSubjects;
     }
     return admissionRule.compulsorySubjects.map(s => s.name);
   });
 
   // Selected RU option if mode === 'ru_c_groups': null by default (unselected)
-  const [ruOptionChoice, setRuOptionChoice] = useState<'RU_COMBINED' | 'RU_MATH' | 'RU_BIO' | null>(null);
+  const [ruOptionChoice, setRuOptionChoice] = useState<'RU_COMBINED' | 'RU_MATH' | 'RU_BIO' | null>(() => {
+    return shouldRestoreActiveExam ? (initialSavedExam?.ruOptionChoice ?? null) : null;
+  });
 
-  const [examStarted, setExamStarted] = useState(() => readSavedExam(session.id)?.started ?? !session.subjectPickMode);
+  const [examStarted, setExamStarted] = useState(() => {
+    if (shouldRestoreActiveExam) return true;
+    return !shouldShowResumePrompt && !session.subjectPickMode;
+  });
 
   // Questions and Exam State
   const [questions, setQuestions] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
-  const [answers, setAnswers] = useState<Record<string, number>>(() => readSavedExam(session.id)?.answers || {}); // qId -> optionIndex
-  const [lockedQuestions, setLockedQuestions] = useState<Record<string, boolean>>({}); // qId -> true once answered
+  const [answers, setAnswers] = useState<Record<string, number>>(() => {
+    return shouldRestoreActiveExam ? (initialSavedExam?.answers || {}) : {};
+  }); // qId -> optionIndex
+  const [writtenSolved, setWrittenSolved] = useState<Record<string, boolean>>(() => {
+    return shouldRestoreActiveExam ? (initialSavedExam?.writtenSolved || {}) : {};
+  }); // qId -> solved on paper
+  const [writtenSelfChecks, setWrittenSelfChecks] = useState<Record<string, WrittenSelfCheck>>(() => {
+    return shouldRestoreActiveExam ? (initialSavedExam?.writtenSelfChecks || {}) : {};
+  });
+  const [lockedQuestions, setLockedQuestions] = useState<Record<string, boolean>>(() => {
+    if (!shouldRestoreActiveExam) return {};
+    const restoredLocked: Record<string, boolean> = { ...(initialSavedExam?.lockedQuestions || {}) };
+    Object.keys(initialSavedExam?.answers || {}).forEach(qId => {
+      restoredLocked[qId] = true;
+    });
+    return restoredLocked;
+  }); // qId -> true once answered
   const [submitted, setSubmitted] = useState(false);
-  const [endTimestamp, setEndTimestamp] = useState(() => readSavedExam(session.id)?.endTimestamp || Date.now() + session.durationMinutes * 60_000);
-  const [timeRemaining, setTimeRemaining] = useState(() => Math.max(0, Math.ceil(((readSavedExam(session.id)?.endTimestamp || Date.now() + session.durationMinutes * 60_000) - Date.now()) / 1000)));
+  const [endTimestamp, setEndTimestamp] = useState(() => Date.now() + initialRemainingSeconds * 1000);
+  const [timeRemaining, setTimeRemaining] = useState(() => initialRemainingSeconds);
   const [activeSubjectTab, setActiveSubjectTab] = useState<string>('ALL');
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
-  const [flaggedQuestions, setFlaggedQuestions] = useState<Record<string, boolean>>({});
+  const [flaggedQuestions, setFlaggedQuestions] = useState<Record<string, boolean>>(() => {
+    return shouldRestoreActiveExam ? (initialSavedExam?.flaggedQuestions || {}) : {};
+  });
   const [openAiTutorId, setOpenAiTutorId] = useState<string | null>(null);
   const [apiKeyToast, setApiKeyToast] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [examStarted, resumePromptOpen]);
 
   // Load questions
   useEffect(() => {
@@ -114,7 +182,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
 
   // Absolute end timestamp keeps the timer accurate when the tab sleeps.
   useEffect(() => {
-    if (!examStarted || submitted || loading || exitPromptOpen) return;
+    if (resumePromptOpen || !examStarted || submitted || loading || exitPromptOpen) return;
     const tick = () => {
       const remaining = Math.max(0, Math.ceil((endTimestamp - Date.now()) / 1000));
       setTimeRemaining(remaining);
@@ -123,39 +191,57 @@ export const ExamView: React.FC<ExamViewProps> = ({
     tick();
     const timer = window.setInterval(tick, 1000);
     return () => window.clearInterval(timer);
-  }, [examStarted, submitted, loading, endTimestamp, exitPromptOpen]);
+  }, [resumePromptOpen, examStarted, submitted, loading, endTimestamp, exitPromptOpen]);
 
   useEffect(() => {
-    if (submitted) return;
-    try { localStorage.setItem('admission_app_exam_' + session.id, JSON.stringify({ answers, endTimestamp, started: examStarted })); } catch {}
-  }, [answers, endTimestamp, examStarted, submitted, session.id]);
+    if (resumePromptOpen || submitted || !examStarted) return;
+    const remaining = Math.max(0, Math.ceil((endTimestamp - Date.now()) / 1000));
+    try {
+      localStorage.setItem('admission_app_exam_' + session.id, JSON.stringify({
+        answers,
+        writtenSolved,
+        writtenSelfChecks,
+        lockedQuestions,
+        flaggedQuestions,
+        remainingSeconds: remaining,
+        started: true,
+        paused: false,
+        selectedSubjects,
+        ruOptionChoice,
+        savedAt: new Date().toISOString()
+      }));
+    } catch {}
+  }, [resumePromptOpen, answers, writtenSolved, writtenSelfChecks, lockedQuestions, flaggedQuestions, endTimestamp, examStarted, submitted, selectedSubjects, ruOptionChoice, session.id]);
 
   useEffect(() => {
-    if (!examStarted || submitted || loading) return;
-    const warnBeforeExit = (event: BeforeUnloadEvent) => {
+    if (resumePromptOpen || !examStarted || submitted || loading) return;
+    const saveCurrentExamProgress = () => {
       const remaining = Math.max(0, Math.ceil((endTimestamp - Date.now()) / 1000));
       try {
         localStorage.setItem('admission_app_exam_' + session.id, JSON.stringify({
           answers,
-          endTimestamp: Date.now() + remaining * 1000,
-          started: true
+          writtenSolved,
+          writtenSelfChecks,
+          lockedQuestions,
+          flaggedQuestions,
+          remainingSeconds: remaining,
+          started: true,
+          paused: false,
+          selectedSubjects,
+          ruOptionChoice,
+          savedAt: new Date().toISOString()
         }));
       } catch {}
-      event.preventDefault();
-      event.returnValue = '';
     };
-    const restoreTimerIfExitWasCancelled = () => {
-      try {
-        localStorage.setItem('admission_app_exam_' + session.id, JSON.stringify({ answers, endTimestamp, started: true }));
-      } catch {}
-    };
-    window.addEventListener('beforeunload', warnBeforeExit);
-    window.addEventListener('focus', restoreTimerIfExitWasCancelled);
+    window.addEventListener('beforeunload', saveCurrentExamProgress);
+    window.addEventListener('pagehide', saveCurrentExamProgress);
+    window.addEventListener('focus', saveCurrentExamProgress);
     return () => {
-      window.removeEventListener('beforeunload', warnBeforeExit);
-      window.removeEventListener('focus', restoreTimerIfExitWasCancelled);
+      window.removeEventListener('beforeunload', saveCurrentExamProgress);
+      window.removeEventListener('pagehide', saveCurrentExamProgress);
+      window.removeEventListener('focus', saveCurrentExamProgress);
     };
-  }, [examStarted, submitted, loading, answers, endTimestamp, session.id]);
+  }, [resumePromptOpen, examStarted, submitted, loading, answers, writtenSolved, writtenSelfChecks, lockedQuestions, flaggedQuestions, endTimestamp, selectedSubjects, ruOptionChoice, session.id]);
 
   const formatTimer = (secs: number) => {
     const m = Math.floor(secs / 60);
@@ -217,7 +303,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
     setExitPromptOpen(false);
     setSubmitted(true);
     try { localStorage.removeItem('admission_app_exam_' + session.id); } catch {}
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 
     // Compute score based on university format
     const mcqQuestions = questions.filter(q => q.options && q.options.length > 0 && q.correctAnswer >= 0);
@@ -266,13 +352,15 @@ export const ExamView: React.FC<ExamViewProps> = ({
 
   const handleRetake = () => {
     setAnswers({});
+    setWrittenSolved({});
+    setWrittenSelfChecks({});
     setLockedQuestions({});
     setSubmitted(false);
     setEndTimestamp(Date.now() + session.durationMinutes * 60_000);
     setTimeRemaining(session.durationMinutes * 60);
     try { localStorage.removeItem('admission_app_exam_' + session.id); } catch {}
     setOpenAiTutorId(null);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   };
 
   // Subjects present in current exam questions
@@ -290,7 +378,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
   useEffect(() => { setActiveQuestionIndex(0); }, [activeSubjectTab]);
 
   useEffect(() => {
-    if (submitted || loading) return;
+    if (resumePromptOpen || !examStarted || exitPromptOpen || submitted || loading) return;
     const onKeyDown = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement | null;
       if (target?.tagName === 'INPUT' || target?.tagName === 'TEXTAREA') return;
@@ -303,10 +391,10 @@ export const ExamView: React.FC<ExamViewProps> = ({
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [filteredQuestions, activeQuestionIndex, submitted, loading]);
+  }, [resumePromptOpen, examStarted, exitPromptOpen, filteredQuestions, activeQuestionIndex, submitted, loading]);
 
 
-  const answeredCount = Object.keys(answers).length;
+  const answeredCount = Object.keys(answers).length + Object.values(writtenSolved).filter(Boolean).length;
 
   const requestExit = () => {
     if (submitted) { onBack(); return; }
@@ -322,13 +410,78 @@ export const ExamView: React.FC<ExamViewProps> = ({
   };
 
   const saveAndExit = () => {
-    const pausedEnd = Date.now() + timeRemaining * 1000;
+    const finalRemaining = Math.max(0, timeRemaining);
     try {
-      localStorage.setItem('admission_app_exam_' + session.id, JSON.stringify({ answers, endTimestamp: pausedEnd, started: true }));
+      localStorage.setItem('admission_app_exam_' + session.id, JSON.stringify({
+        answers,
+        writtenSolved,
+        writtenSelfChecks,
+        lockedQuestions,
+        flaggedQuestions,
+        remainingSeconds: finalRemaining,
+        started: true,
+        paused: true,
+        selectedSubjects,
+        ruOptionChoice,
+        savedAt: new Date().toISOString()
+      }));
     } catch {}
-    setEndTimestamp(pausedEnd);
     setExitPromptOpen(false);
     onBack();
+  };
+
+  const handleResumeSavedExam = () => {
+    const saved = readSavedExam(session.id);
+    if (!saved) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      setResumePromptOpen(false);
+      setExamStarted(!session.subjectPickMode);
+      return;
+    }
+    const savedAnswers = saved.answers || {};
+    const restoredLocked: Record<string, boolean> = { ...(saved.lockedQuestions || {}) };
+    Object.keys(savedAnswers).forEach(qId => {
+      restoredLocked[qId] = true;
+    });
+    const remainingSecs = Math.max(1, getSavedRemainingSeconds(saved, session.durationMinutes));
+    const restoredSubjects = Array.isArray(saved.selectedSubjects) && saved.selectedSubjects.length > 0
+      ? saved.selectedSubjects
+      : admissionRule.compulsorySubjects.map(s => s.name);
+
+    setAnswers(savedAnswers);
+    setWrittenSolved(saved.writtenSolved || {});
+    setWrittenSelfChecks(saved.writtenSelfChecks || {});
+    setLockedQuestions(restoredLocked);
+    setFlaggedQuestions(saved.flaggedQuestions || {});
+    setSelectedSubjects(restoredSubjects);
+    setRuOptionChoice(saved.ruOptionChoice ?? null);
+    setTimeRemaining(remainingSecs);
+    setEndTimestamp(Date.now() + remainingSecs * 1000);
+    setActiveSubjectTab('ALL');
+    setActiveQuestionIndex(0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    setResumePromptOpen(false);
+    setExamStarted(true);
+  };
+
+  const handleStartFreshExam = () => {
+    try {
+      localStorage.removeItem('admission_app_exam_' + session.id);
+    } catch {}
+    setAnswers({});
+    setWrittenSolved({});
+    setWrittenSelfChecks({});
+    setLockedQuestions({});
+    setFlaggedQuestions({});
+    setSelectedSubjects(admissionRule.compulsorySubjects.map(s => s.name));
+    setRuOptionChoice(null);
+    setActiveSubjectTab('ALL');
+    setActiveQuestionIndex(0);
+    setTimeRemaining(session.durationMinutes * 60);
+    setEndTimestamp(Date.now() + session.durationMinutes * 60_000);
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    setResumePromptOpen(false);
+    setExamStarted(!session.subjectPickMode);
   };
 
   // Eligibility evaluation based on selected subjects
@@ -414,6 +567,83 @@ export const ExamView: React.FC<ExamViewProps> = ({
     }
     return 'Start Examination';
   };
+
+  // ==========================================
+  // RESUME OR START NEW PROMPT SCREEN
+  // ==========================================
+  if (resumePromptOpen && initialSavedExam) {
+    const savedAnsCount =
+      Object.keys(initialSavedExam.answers || {}).length +
+      Object.values(initialSavedExam.writtenSolved || {}).filter(Boolean).length;
+    const savedRemSecs = getSavedRemainingSeconds(initialSavedExam, session.durationMinutes);
+    const savedSubjs = Array.isArray(initialSavedExam.selectedSubjects) ? initialSavedExam.selectedSubjects : [];
+
+    return (
+      <div className="min-h-screen bg-slate-50 dark:bg-[#050811] px-4 py-10 flex items-center justify-center">
+        <div className="w-full max-w-lg rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-2xl dark:border-indigo-900/70 dark:bg-[#0A1224] space-y-6 animate-in fade-in duration-200">
+          <div className="flex items-center justify-between border-b border-slate-200 dark:border-indigo-950 pb-4">
+            <button
+              onClick={onBack}
+              className="px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-[#0F172A] hover:bg-slate-200 dark:hover:bg-[#16223B] text-slate-700 dark:text-slate-200 font-bold text-xs flex items-center gap-2 cursor-pointer transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Sessions</span>
+            </button>
+            <span className="text-xs font-extrabold text-amber-700 dark:text-amber-300">
+              Paused Exam Found
+            </span>
+          </div>
+
+          <div className="flex items-start gap-3.5">
+            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-indigo-100 text-indigo-700 dark:bg-indigo-950/70 dark:text-sky-300">
+              <Clock className="h-6 w-6" />
+            </div>
+            <div className="space-y-1">
+              <h2 className="text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                Resume Previous Exam?
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                You exited <span className="font-bold text-slate-900 dark:text-white">{session.title}</span> before submitting. Would you like to continue where you left off or start a new attempt?
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 p-4 space-y-2">
+            <div className="flex items-center justify-between text-sm font-bold text-slate-800 dark:text-slate-200">
+              <span>Saved Answers</span>
+              <span className="font-mono text-indigo-600 dark:text-sky-400">{savedAnsCount} answered</span>
+            </div>
+            <div className="flex items-center justify-between text-xs font-semibold text-slate-600 dark:text-slate-300">
+              <span>Time Remaining</span>
+              <span className="font-mono font-bold">{formatTimer(savedRemSecs)}</span>
+            </div>
+            {savedSubjs.length > 0 && (
+              <div className="pt-1 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400">
+                Subjects: <span className="font-bold text-slate-700 dark:text-slate-200">{savedSubjs.join(' · ')}</span>
+              </div>
+            )}
+          </div>
+
+          <div className="flex flex-col gap-2.5">
+            <button
+              onClick={handleResumeSavedExam}
+              className="w-full min-h-12 rounded-xl bg-indigo-600 hover:bg-indigo-500 px-5 py-3 text-sm font-black text-white shadow-md shadow-indigo-600/20 flex items-center justify-center gap-2 cursor-pointer transition-colors"
+            >
+              <span>Resume from Where I Left Off</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+            <button
+              onClick={handleStartFreshExam}
+              className="w-full min-h-12 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0F172A] hover:bg-slate-100 dark:hover:bg-[#16223B] px-5 py-3 text-sm font-bold text-slate-700 dark:text-slate-200 flex items-center justify-center gap-2 cursor-pointer transition-colors"
+            >
+              <RefreshCcw className="w-4 h-4" />
+              <span>Start New Exam{session.subjectPickMode ? ' (Choose Subjects)' : ''}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // ==========================================
   // SUBJECT PICK MODAL SCREEN (§8.1)
@@ -621,6 +851,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
                 try {
                   localStorage.setItem(`admission_app_selected_subjects_${session.institution}_v2`, JSON.stringify(selectedSubjects));
                 } catch {}
+                window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
                 setEndTimestamp(Date.now() + session.durationMinutes * 60_000);
                 setTimeRemaining(session.durationMinutes * 60);
                 setExamStarted(true);
@@ -782,6 +1013,11 @@ export const ExamView: React.FC<ExamViewProps> = ({
               const passed = passRequirement && mcqCount > 0 ? score >= passRequirement.required && subjectMinimumsPassed : null;
               const accuracy = (correct + wrong) > 0 ? Number(((correct / (correct + wrong)) * 100).toFixed(1)) : 0;
 
+              const writtenCorrectCount = questions.filter(q => !(q.options && q.options.length > 0 && q.correctAnswer >= 0) && writtenSelfChecks[q.id] === 'correct').length;
+              const writtenPartialCount = questions.filter(q => !(q.options && q.options.length > 0 && q.correctAnswer >= 0) && writtenSelfChecks[q.id] === 'partial').length;
+              const writtenReviewCount = questions.filter(q => !(q.options && q.options.length > 0 && q.correctAnswer >= 0) && writtenSelfChecks[q.id] === 'review').length;
+              const writtenPaperSolvedCount = questions.filter(q => !(q.options && q.options.length > 0 && q.correctAnswer >= 0) && writtenSolved[q.id]).length;
+
               return (
                 <div className="space-y-3">
                 {passRequirement && mcqCount > 0 && (
@@ -793,43 +1029,86 @@ export const ExamView: React.FC<ExamViewProps> = ({
                     <span className={`text-xs font-black px-3 py-1.5 rounded-lg ${passed ? 'bg-emerald-600 text-white' : 'bg-rose-600 text-white'}`}>{passed ? 'QUALIFIED' : 'BELOW PASS MARK'}</span>
                   </div>
                 )}
-                {passRequirement && mcqCount === 0 && <div className="rounded-2xl border border-amber-300 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/30 p-4 text-xs font-semibold text-amber-800 dark:text-amber-300">Written-only paper: automatic pass evaluation is unavailable because written answers require manual marking. Pass requirement: {passRequirement.required} / {totalPossible}.</div>}
-                <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
-                  <div className="p-4 rounded-2xl bg-indigo-50 dark:bg-[#121B33] border border-indigo-200 dark:border-indigo-800 text-center space-y-1">
-                    <div className="text-xl sm:text-2xl font-black text-indigo-700 dark:text-sky-300 font-mono">
-                      {score} <span className="text-xs text-slate-400">/ {totalPossible}</span>
+                {mcqCount === 0 ? (
+                  <>
+                    <div className="rounded-2xl border border-indigo-200 bg-indigo-50/70 dark:border-indigo-800/70 dark:bg-indigo-950/30 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                      <div>
+                        <div className="text-sm font-black text-indigo-900 dark:text-sky-300">
+                          Written Paper Practice — Self-Check Solutions Unlocked
+                        </div>
+                        <div className="text-xs text-slate-600 dark:text-slate-300 mt-1">
+                          নিচে প্রতিটি প্রশ্নের ধাপে ধাপে হাতে-কলমে সমাধান মিলিয়ে আপনার খাতার উত্তর Self-Check করুন। {passRequirement ? `Pass requirement: ${passRequirement.required} / ${totalPossible}.` : ''}
+                        </div>
+                      </div>
+                      <span className="text-xs font-black px-3 py-1.5 rounded-lg bg-indigo-600 text-white shrink-0">
+                        {writtenCorrectCount + writtenPartialCount + writtenReviewCount} / {questions.length} Checked
+                      </span>
                     </div>
-                    <div className="text-[10px] font-black uppercase text-indigo-600 dark:text-sky-400">Final Score</div>
-                  </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                      <div className="p-4 rounded-2xl bg-indigo-50 dark:bg-[#121B33] border border-indigo-200 dark:border-indigo-800 text-center space-y-1">
+                        <div className="text-xl sm:text-2xl font-black text-indigo-700 dark:text-sky-300 font-mono">
+                          {writtenPaperSolvedCount} <span className="text-xs text-slate-400">/ {questions.length}</span>
+                        </div>
+                        <div className="text-[10px] font-black uppercase text-indigo-600 dark:text-sky-400">Solved on Paper</div>
+                      </div>
+                      <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-[#07241A] border border-emerald-200 dark:border-emerald-800 text-center space-y-1">
+                        <div className="text-xl sm:text-2xl font-black text-emerald-700 dark:text-emerald-300 font-mono">
+                          {writtenCorrectCount}
+                        </div>
+                        <div className="text-[10px] font-black uppercase text-emerald-600 dark:text-emerald-400">Self-Check Correct</div>
+                      </div>
+                      <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-center space-y-1">
+                        <div className="text-xl sm:text-2xl font-black text-amber-700 dark:text-amber-300 font-mono">
+                          {writtenPartialCount}
+                        </div>
+                        <div className="text-[10px] font-black uppercase text-amber-600 dark:text-amber-400">Partial Credit</div>
+                      </div>
+                      <div className="p-4 rounded-2xl bg-rose-50 dark:bg-[#2B0E14] border border-rose-200 dark:border-rose-800 text-center space-y-1">
+                        <div className="text-xl sm:text-2xl font-black text-rose-700 dark:text-rose-300 font-mono">
+                          {writtenReviewCount}
+                        </div>
+                        <div className="text-[10px] font-black uppercase text-rose-600 dark:text-rose-400">Needs Review</div>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                    <div className="p-4 rounded-2xl bg-indigo-50 dark:bg-[#121B33] border border-indigo-200 dark:border-indigo-800 text-center space-y-1">
+                      <div className="text-xl sm:text-2xl font-black text-indigo-700 dark:text-sky-300 font-mono">
+                        {score} <span className="text-xs text-slate-400">/ {totalPossible}</span>
+                      </div>
+                      <div className="text-[10px] font-black uppercase text-indigo-600 dark:text-sky-400">Final Score</div>
+                    </div>
 
-                  <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-[#07241A] border border-emerald-200 dark:border-emerald-800 text-center space-y-1">
-                    <div className="text-xl sm:text-2xl font-black text-emerald-700 dark:text-emerald-300 font-mono">
-                      {correct}
+                    <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-[#07241A] border border-emerald-200 dark:border-emerald-800 text-center space-y-1">
+                      <div className="text-xl sm:text-2xl font-black text-emerald-700 dark:text-emerald-300 font-mono">
+                        {correct}
+                      </div>
+                      <div className="text-[10px] font-black uppercase text-emerald-600 dark:text-emerald-400">Correct</div>
                     </div>
-                    <div className="text-[10px] font-black uppercase text-emerald-600 dark:text-emerald-400">Correct</div>
-                  </div>
 
-                  <div className="p-4 rounded-2xl bg-rose-50 dark:bg-[#2B0E14] border border-rose-200 dark:border-rose-800 text-center space-y-1">
-                    <div className="text-xl sm:text-2xl font-black text-rose-700 dark:text-rose-300 font-mono">
-                      {wrong}
+                    <div className="p-4 rounded-2xl bg-rose-50 dark:bg-[#2B0E14] border border-rose-200 dark:border-rose-800 text-center space-y-1">
+                      <div className="text-xl sm:text-2xl font-black text-rose-700 dark:text-rose-300 font-mono">
+                        {wrong}
+                      </div>
+                      <div className="text-[10px] font-black uppercase text-rose-600 dark:text-rose-400">Wrong (–{(wrong * negative * perMark).toFixed(2)})</div>
                     </div>
-                    <div className="text-[10px] font-black uppercase text-rose-600 dark:text-rose-400">Wrong (–{(wrong * negative * perMark).toFixed(2)})</div>
-                  </div>
 
-                  <div className="p-4 rounded-2xl bg-slate-100 dark:bg-[#0E172A] border border-slate-200 dark:border-indigo-950 text-center space-y-1">
-                    <div className="text-xl sm:text-2xl font-black text-slate-700 dark:text-slate-300 font-mono">
-                      {skipped}
+                    <div className="p-4 rounded-2xl bg-slate-100 dark:bg-[#0E172A] border border-slate-200 dark:border-indigo-950 text-center space-y-1">
+                      <div className="text-xl sm:text-2xl font-black text-slate-700 dark:text-slate-300 font-mono">
+                        {skipped}
+                      </div>
+                      <div className="text-[10px] font-black uppercase text-slate-500">Skipped</div>
                     </div>
-                    <div className="text-[10px] font-black uppercase text-slate-500">Skipped</div>
-                  </div>
 
-                  <div className="p-4 rounded-2xl bg-purple-50 dark:bg-[#1F0F33] border border-purple-200 dark:border-purple-800 text-center space-y-1 col-span-2 sm:col-span-1">
-                    <div className="text-xl sm:text-2xl font-black text-purple-700 dark:text-purple-300 font-mono">
-                      {accuracy}%
+                    <div className="p-4 rounded-2xl bg-purple-50 dark:bg-[#1F0F33] border border-purple-200 dark:border-purple-800 text-center space-y-1 col-span-2 sm:col-span-1">
+                      <div className="text-xl sm:text-2xl font-black text-purple-700 dark:text-purple-300 font-mono">
+                        {accuracy}%
+                      </div>
+                      <div className="text-[10px] font-black uppercase text-purple-600 dark:text-purple-400">Accuracy</div>
                     </div>
-                    <div className="text-[10px] font-black uppercase text-purple-600 dark:text-purple-400">Accuracy</div>
                   </div>
-                </div>
+                )}
                 </div>
               );
             })()}
@@ -878,6 +1157,8 @@ export const ExamView: React.FC<ExamViewProps> = ({
             const isLocked = lockedQuestions[q.id] || isAnswered;
             const hasOptions = q.options && q.options.length > 0;
             const isCorrect = isAnswered && chosenOpt === q.correctAnswer;
+            const isPaperSolved = Boolean(writtenSolved[q.id]);
+            const selfCheck = writtenSelfChecks[q.id];
             const theme = getSubjectTheme(q.subject);
 
             return (
@@ -885,12 +1166,20 @@ export const ExamView: React.FC<ExamViewProps> = ({
                 key={q.id || qIndex}
                 className={`question-card p-5 sm:p-6 rounded-3xl border-2 transition-all space-y-4 ${
                   submitted
-                    ? isCorrect
-                      ? 'bg-emerald-50 dark:bg-[#07241A] border-emerald-400 dark:border-emerald-600/80 shadow-md shadow-emerald-500/5'
-                      : isAnswered
-                        ? 'bg-rose-50 dark:bg-[#2B0E14] border-rose-400 dark:border-rose-600/80 shadow-md shadow-rose-500/5'
-                        : 'bg-white dark:bg-[#080E1E] border-slate-200 dark:border-indigo-950'
-                    : `${theme.bgClass} ${theme.border} ${isLocked ? 'ring-1 ring-indigo-500/20' : ''}`
+                    ? !hasOptions
+                      ? selfCheck === 'correct'
+                        ? 'bg-emerald-50 dark:bg-[#07241A] border-emerald-400 dark:border-emerald-600/80 shadow-md shadow-emerald-500/5'
+                        : selfCheck === 'partial'
+                          ? 'bg-amber-50/80 dark:bg-amber-950/30 border-amber-400 dark:border-amber-600/80 shadow-md shadow-amber-500/5'
+                          : selfCheck === 'review'
+                            ? 'bg-rose-50 dark:bg-[#2B0E14] border-rose-400 dark:border-rose-600/80 shadow-md shadow-rose-500/5'
+                            : 'bg-white dark:bg-[#080E1E] border-slate-200 dark:border-indigo-950'
+                      : isCorrect
+                        ? 'bg-emerald-50 dark:bg-[#07241A] border-emerald-400 dark:border-emerald-600/80 shadow-md shadow-emerald-500/5'
+                        : isAnswered
+                          ? 'bg-rose-50 dark:bg-[#2B0E14] border-rose-400 dark:border-rose-600/80 shadow-md shadow-rose-500/5'
+                          : 'bg-white dark:bg-[#080E1E] border-slate-200 dark:border-indigo-950'
+                    : `${theme.bgClass} ${theme.border} ${(isLocked || isPaperSolved) ? 'ring-1 ring-indigo-500/20' : ''}`
                 }`}
               >
                 {/* Header row: Question #, Subject badge, status */}
@@ -906,14 +1195,38 @@ export const ExamView: React.FC<ExamViewProps> = ({
                   </div>
 
                   <div className="flex items-center gap-2">
-                    {!submitted && <button onClick={() => setFlaggedQuestions(previous => ({ ...previous, [q.id]: !previous[q.id] }))} className={`min-h-9 rounded-lg px-2.5 text-[10px] font-black ${flaggedQuestions[q.id] ? 'bg-amber-500 text-white' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>{flaggedQuestions[q.id] ? 'Flagged' : 'Flag for review'}</button>}
+                    {!submitted && <button onClick={() => setFlaggedQuestions(previous => ({ ...previous, [q.id]: !previous[q.id] }))} className={`min-h-9 rounded-lg px-2.5 text-[10px] font-black whitespace-nowrap ${flaggedQuestions[q.id] ? 'bg-amber-500 text-white' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>{flaggedQuestions[q.id] ? 'Flagged' : 'Flag for review'}</button>}
                     {!submitted && isLocked && (
                       <span className="px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-sky-300 border border-indigo-200 dark:border-indigo-800 text-[10px] font-black uppercase">
                         Locked
                       </span>
                     )}
 
-                    {submitted && (() => {
+                    {submitted && !hasOptions && (
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase ${
+                        selfCheck === 'correct'
+                          ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300'
+                          : selfCheck === 'partial'
+                            ? 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300'
+                            : selfCheck === 'review'
+                              ? 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300'
+                              : isPaperSolved
+                                ? 'bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-sky-300'
+                                : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'
+                      }`}>
+                        {selfCheck === 'correct'
+                          ? 'Self-Check: Correct'
+                          : selfCheck === 'partial'
+                            ? 'Self-Check: Partial'
+                            : selfCheck === 'review'
+                              ? 'Needs Review'
+                              : isPaperSolved
+                                ? 'Solved on Paper'
+                                : 'Pending Self-Check'}
+                      </span>
+                    )}
+
+                    {submitted && hasOptions && (() => {
                       const mcqCount = questions.filter(qq => qq.options && qq.options.length > 0 && qq.correctAnswer >= 0).length;
                       const { perMark } = getExamScoring(mcqCount);
                       const negative = session.negativeMarking || admissionRule.negativeMarking || 0.25;
@@ -1001,11 +1314,25 @@ export const ExamView: React.FC<ExamViewProps> = ({
                       );
                     })}
                   </div>
-                ) : (
-                  <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-xs font-bold text-amber-800 dark:text-amber-300">
-                    ✍️ Written Question — Solve step-by-step on paper, then inspect the official verified solution below after submitting.
+                ) : !submitted ? (
+                  <div className="p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/70 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div className="text-xs font-semibold text-amber-900 dark:text-amber-200 leading-relaxed">
+                      খাতায় ধাপে ধাপে সমাধান করুন। Submit করার পর প্রতিটি প্রশ্নের হাতের হিসাবসহ সমাধান খুলে যাবে।
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setWrittenSolved(prev => ({ ...prev, [q.id]: !prev[q.id] }))}
+                      className={`min-h-10 px-4 py-2 rounded-xl text-xs font-black whitespace-nowrap flex items-center justify-center gap-2 transition-colors cursor-pointer shrink-0 ${
+                        isPaperSolved
+                          ? 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm'
+                          : 'bg-white dark:bg-[#0B1325] hover:bg-slate-100 dark:hover:bg-[#15223E] text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-indigo-800'
+                      }`}
+                    >
+                      <Check className="w-3.5 h-3.5" />
+                      <span>{isPaperSolved ? 'Solved on Paper' : 'Mark Solved on Paper'}</span>
+                    </button>
                   </div>
-                )}
+                ) : null}
 
                 {/* Solution & Explanation (Shown after submit) */}
                 {submitted && q.explanation && (
@@ -1013,12 +1340,55 @@ export const ExamView: React.FC<ExamViewProps> = ({
                     <div className="p-4 rounded-2xl bg-emerald-50/70 dark:bg-[#061814] border border-emerald-200 dark:border-emerald-800/60 space-y-2">
                       <div className="text-xs font-black text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
                         <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                        <span>Official Solution & Explanation</span>
+                        <span>Official Step-by-Step Solution</span>
                       </div>
                       <div style={{ fontSize: `${uiSettings.explanationFontPx}px` }} className="text-slate-800 dark:text-slate-200 leading-relaxed">
                         <MathText content={q.explanation} />
                       </div>
                     </div>
+
+                    {!hasOptions && (
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 p-3.5 rounded-2xl bg-slate-50 dark:bg-[#0B1325] border border-slate-200 dark:border-indigo-900/70">
+                        <span className="text-xs font-extrabold text-slate-700 dark:text-slate-200">
+                          খাতার উত্তরের সাথে মিলিয়ে Self-Check করুন:
+                        </span>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={() => setWrittenSelfChecks(prev => ({ ...prev, [q.id]: 'correct' }))}
+                            className={`min-h-9 px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition-colors cursor-pointer ${
+                              selfCheck === 'correct'
+                                ? 'bg-emerald-600 text-white shadow-xs'
+                                : 'bg-white dark:bg-[#0F172A] text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 hover:border-emerald-500'
+                            }`}
+                          >
+                            Correct
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setWrittenSelfChecks(prev => ({ ...prev, [q.id]: 'partial' }))}
+                            className={`min-h-9 px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition-colors cursor-pointer ${
+                              selfCheck === 'partial'
+                                ? 'bg-amber-500 text-white shadow-xs'
+                                : 'bg-white dark:bg-[#0F172A] text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 hover:border-amber-500'
+                            }`}
+                          >
+                            Partial
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setWrittenSelfChecks(prev => ({ ...prev, [q.id]: 'review' }))}
+                            className={`min-h-9 px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition-colors cursor-pointer ${
+                              selfCheck === 'review'
+                                ? 'bg-rose-600 text-white shadow-xs'
+                                : 'bg-white dark:bg-[#0F172A] text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 hover:border-rose-500'
+                            }`}
+                          >
+                            Needs Review
+                          </button>
+                        </div>
+                      </div>
+                    )}
 
                     {/* AI Tutor Toggle Button */}
                     <div className="pt-1">
@@ -1078,12 +1448,85 @@ export const ExamView: React.FC<ExamViewProps> = ({
       )}
 
       {exitPromptOpen && !submitted && (
-        <div className="fixed inset-0 z-[120] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-sm">
-          <div role="dialog" aria-modal="true" aria-labelledby="exit-exam-title" className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl dark:border-slate-700 dark:bg-[#0A1224] space-y-4">
-            <div className="flex items-center gap-3"><div className="grid h-11 w-11 place-items-center rounded-2xl bg-amber-100 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300"><ShieldAlert className="h-5 w-5" /></div><div><h2 id="exit-exam-title" className="text-lg font-black text-slate-900 dark:text-white">পরীক্ষা থেকে বের হতে চান?</h2><p className="text-xs text-slate-500 dark:text-slate-400">আপনার উত্তরগুলো সংরক্ষিত থাকবে।</p></div></div>
-            <div className="rounded-2xl bg-slate-50 p-4 dark:bg-slate-900/70"><div className="text-sm font-bold text-slate-800 dark:text-slate-200">Answered: {answeredCount} / {questions.length}</div><div className="mt-1 text-xs text-slate-500">বাকি সময়: {formatTimer(timeRemaining)}</div></div>
-            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">বের হলে পরীক্ষাটি বিরতি অবস্থায় থাকবে। পরে আবার খুললে একই উত্তর ও বাকি সময় থেকে চালিয়ে যেতে পারবেন।</p>
-            <div className="flex flex-col-reverse gap-2 sm:flex-row sm:justify-end"><button onClick={continueExam} className="min-h-11 rounded-xl bg-indigo-600 px-5 text-sm font-black text-white hover:bg-indigo-500">না, পরীক্ষা চালিয়ে যাব</button><button onClick={saveAndExit} className="min-h-11 rounded-xl border border-slate-300 px-5 text-sm font-bold text-slate-700 dark:border-slate-700 dark:text-slate-200">হ্যাঁ, বের হব</button></div>
+        <div className="fixed inset-0 z-[120] flex items-center justify-center bg-slate-950/75 p-4 backdrop-blur-sm animate-in fade-in duration-150">
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="exit-exam-title"
+            className="w-full max-w-md overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-700/80 dark:bg-[#0A1224]"
+          >
+            {/* Modal Header */}
+            <div className="flex items-start justify-between gap-3 border-b border-slate-100 bg-slate-50/80 px-6 py-4 dark:border-slate-800 dark:bg-[#0F172A]/70">
+              <div className="flex items-center gap-3">
+                <div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-rose-100 text-rose-600 dark:bg-rose-950/60 dark:text-rose-400 border border-rose-200 dark:border-rose-800/70">
+                  <ShieldAlert className="h-5 w-5" />
+                </div>
+                <div>
+                  <h2 id="exit-exam-title" className="text-lg font-black text-slate-900 dark:text-white leading-tight">
+                    Exit Exam?
+                  </h2>
+                  <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5">
+                    Your progress will be saved safely.
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={continueExam}
+                aria-label="Close exit dialog"
+                className="rounded-xl p-1.5 text-slate-400 hover:bg-slate-200/70 hover:text-slate-700 dark:hover:bg-slate-800 dark:hover:text-slate-200 transition-colors cursor-pointer"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <div className="p-6 space-y-4">
+              <div className="text-xs font-bold text-indigo-600 dark:text-sky-400 truncate">
+                {session.title}
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3.5 dark:border-slate-800 dark:bg-slate-900/70">
+                  <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+                    <span>Answered</span>
+                  </div>
+                  <div className="mt-1 text-lg font-black font-mono text-slate-900 dark:text-white">
+                    {answeredCount} <span className="text-xs font-bold text-slate-400">/ {questions.length}</span>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3.5 dark:border-slate-800 dark:bg-slate-900/70">
+                  <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    <Clock className="h-3.5 w-3.5 text-indigo-600 dark:text-sky-400" />
+                    <span>Time Left</span>
+                  </div>
+                  <div className="mt-1 text-lg font-black font-mono text-slate-900 dark:text-white">
+                    {formatTimer(timeRemaining)}
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-amber-200/80 bg-amber-50/70 px-4 py-3 text-xs sm:text-sm leading-relaxed text-amber-900 dark:border-amber-900/60 dark:bg-amber-950/30 dark:text-amber-200">
+                Exiting pauses the timer and keeps your answers saved. When you return later, you can resume from here or start a new exam.
+              </div>
+
+              {/* Action Buttons: Yes Exit in red box first, No Continue at the last */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                <button
+                  onClick={saveAndExit}
+                  className="min-h-12 w-full rounded-xl border-2 border-rose-600 bg-rose-600 px-4 py-2.5 text-sm font-black text-white shadow-md shadow-rose-600/20 hover:bg-rose-500 hover:border-rose-500 transition-colors cursor-pointer"
+                >
+                  Yes, Exit Exam
+                </button>
+                <button
+                  onClick={continueExam}
+                  className="min-h-12 w-full rounded-xl border-2 border-indigo-600 bg-indigo-600 px-4 py-2.5 text-sm font-black text-white shadow-md shadow-indigo-600/20 hover:bg-indigo-500 hover:border-indigo-500 transition-colors cursor-pointer"
+                >
+                  No, Continue Exam
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}

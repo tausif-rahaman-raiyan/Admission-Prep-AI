@@ -52,6 +52,7 @@ jobs:
           BASE_PATH="${{ steps.pages.outputs.base_path }}"
           BASE_PATH="${BASE_PATH%/}/"
           VITE_BASE_PATH="$BASE_PATH" npm run build
+          cp dist/index.html dist/404.html
           touch dist/.nojekyll
 
       - name: Upload Pages artifact

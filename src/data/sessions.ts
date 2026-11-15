@@ -647,10 +647,10 @@ export const sessions: Session[] = [
     "session": "25-26",
     "questionType": "Written",
     "durationMinutes": 45,
-    "totalQuestions": 22,
+    "totalQuestions": 36,
     "totalMarks": 55,
     "negativeMarking": 0,
-    "description": "DU A 25-26 Written: ৪৫ মিনিট • মোট ২২টি প্রশ্ন • মোট ৫৫ মার্কস।",
+    "description": "DU A 25-26 Written: ৪৫ মিনিট • মোট ৩৬টি প্রশ্ন • মোট ৫৫ মার্কস।",
     "subjectPickMode": true
   },
   {
@@ -675,10 +675,10 @@ export const sessions: Session[] = [
     "session": "24-25",
     "questionType": "Written",
     "durationMinutes": 45,
-    "totalQuestions": 22,
+    "totalQuestions": 25,
     "totalMarks": 40,
     "negativeMarking": 0,
-    "description": "DU 24-25 Written: ৪৫ মিনিট • মোট ২২টি প্রশ্ন • মোট ৪০ মার্কস।",
+    "description": "DU 24-25 Written: ৪৫ মিনিট • মোট ২৫টি প্রশ্ন • মোট ৪০ মার্কস।",
     "subjectPickMode": true
   },
   {
@@ -703,10 +703,10 @@ export const sessions: Session[] = [
     "session": "23-24",
     "questionType": "Written",
     "durationMinutes": 30,
-    "totalQuestions": 22,
+    "totalQuestions": 29,
     "totalMarks": 40,
     "negativeMarking": 0,
-    "description": "DU 23-24 Written: ৩০ মিনিট • মোট ২২টি প্রশ্ন • মোট ৪০ মার্কস।",
+    "description": "DU 23-24 Written: ৩০ মিনিট • মোট ২৯টি প্রশ্ন • মোট ৪০ মার্কস।",
     "subjectPickMode": true
   },
   {
@@ -759,10 +759,10 @@ export const sessions: Session[] = [
     "session": "21-22",
     "questionType": "Written",
     "durationMinutes": 30,
-    "totalQuestions": 22,
+    "totalQuestions": 26,
     "totalMarks": 40,
     "negativeMarking": 0,
-    "description": "DU 21-22 Written: ৩০ মিনিট • মোট ২২টি প্রশ্ন • মোট ৪০ মার্কস।",
+    "description": "DU 21-22 Written: ৩০ মিনিট • মোট ২৬টি প্রশ্ন • মোট ৪০ মার্কস।",
     "subjectPickMode": true
   },
   {
