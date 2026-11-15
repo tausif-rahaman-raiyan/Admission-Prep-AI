@@ -115,10 +115,30 @@ export const ExamView: React.FC<ExamViewProps> = ({
 
   useEffect(() => {
     if (!examStarted || submitted || loading) return;
-    const warnBeforeExit = (event: BeforeUnloadEvent) => { event.preventDefault(); event.returnValue = ''; };
+    const warnBeforeExit = (event: BeforeUnloadEvent) => {
+      const remaining = Math.max(0, Math.ceil((endTimestamp - Date.now()) / 1000));
+      try {
+        localStorage.setItem('admission_app_exam_' + session.id, JSON.stringify({
+          answers,
+          endTimestamp: Date.now() + remaining * 1000,
+          started: true
+        }));
+      } catch {}
+      event.preventDefault();
+      event.returnValue = '';
+    };
+    const restoreTimerIfExitWasCancelled = () => {
+      try {
+        localStorage.setItem('admission_app_exam_' + session.id, JSON.stringify({ answers, endTimestamp, started: true }));
+      } catch {}
+    };
     window.addEventListener('beforeunload', warnBeforeExit);
-    return () => window.removeEventListener('beforeunload', warnBeforeExit);
-  }, [examStarted, submitted, loading]);
+    window.addEventListener('focus', restoreTimerIfExitWasCancelled);
+    return () => {
+      window.removeEventListener('beforeunload', warnBeforeExit);
+      window.removeEventListener('focus', restoreTimerIfExitWasCancelled);
+    };
+  }, [examStarted, submitted, loading, answers, endTimestamp, session.id]);
 
   const formatTimer = (secs: number) => {
     const m = Math.floor(secs / 60);
