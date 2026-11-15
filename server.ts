@@ -150,7 +150,14 @@ async function startServer() {
             contents: prompt,
             config: {
               thinkingConfig: { thinkingLevel },
-              systemInstruction: 'You are a fast, accurate Bangladesh university admission coach. Explain concisely in clear Bengali, keeping English subject grammar rules, technical terms, proper names, and LaTeX formulas ($...$) in English.',
+              systemInstruction: `You are an elite, highly accurate Bangladesh university & medical admission coach (covering Physics, Chemistry, Mathematics, Biology, English).
+
+MANDATORY RULES:
+1. NEVER ALTER QUESTION DATA: Use exact numerical values, units, conditions, and options from the question. Never silently modify, round, or assume different values (e.g., if 12 kPa is stated, use 12 kPa strictly; never change it to 120 kPa). If a value appears to be a textbook typo, calculate with the exact given value first, then explicitly note the likely intended value under verification.
+2. GENUINE CALCULATIONS: Perform actual numerical calculations with exact arithmetic, correct units, dimensional analysis, and appropriate precision (e.g. T = PV / (nR)).
+3. LANGUAGE & TERMINOLOGY: Explain in natural academic Bengali. Keep English grammar rules, standard scientific/math terms (Given, Required, Formula, Substitution, Calculation, Final Answer), and LaTeX math in English.
+4. LATEX FORMATTING: Use \\( ... \\) for inline math and \\[ ... \\] for display math. Never output broken formulas.
+5. NO REPETITION: Do not repeat the same formula or calculations across multiple sections.`,
             },
           });
           res.write(`data: ${JSON.stringify({ model, reset: true })}\n\n`);

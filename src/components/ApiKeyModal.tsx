@@ -77,6 +77,27 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ isOpen, onClose, onKey
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <button
               type="button"
+              onClick={() => setProviderMode('personal')}
+              className={`p-3.5 rounded-2xl border-2 text-left transition-all cursor-pointer flex flex-col gap-1 ${
+                providerMode === 'personal'
+                  ? 'border-indigo-600 bg-indigo-50/80 dark:bg-indigo-950/50 text-indigo-950 dark:text-indigo-200 shadow-sm'
+                  : 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#070D1D] text-slate-700 dark:text-slate-300'
+              }`}
+            >
+              <div className="flex items-center justify-between font-bold text-xs">
+                <span className="flex items-center gap-1.5">
+                  <Shield className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                  Personal Gemini Key
+                </span>
+                {providerMode === 'personal' && <CheckCircle2 className="w-4 h-4 text-indigo-600 dark:text-sky-400" />}
+              </div>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug">
+                Uses your own Gemini key stored in browser localStorage.
+              </p>
+            </button>
+
+            <button
+              type="button"
               onClick={() => setProviderMode('proxy')}
               className={`p-3.5 rounded-2xl border-2 text-left transition-all cursor-pointer flex flex-col gap-1 ${
                 providerMode === 'proxy'
@@ -93,27 +114,6 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ isOpen, onClose, onKey
               </div>
               <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug">
                 Uses Cloud Run backend server key. Never exposes keys to browser.
-              </p>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setProviderMode('personal')}
-              className={`p-3.5 rounded-2xl border-2 text-left transition-all cursor-pointer flex flex-col gap-1 ${
-                providerMode === 'personal'
-                  ? 'border-indigo-600 bg-indigo-50/80 dark:bg-indigo-950/50 text-indigo-950 dark:text-indigo-200 shadow-sm'
-                  : 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#070D1D] text-slate-700 dark:text-slate-300'
-              }`}
-            >
-              <div className="flex items-center justify-between font-bold text-xs">
-                <span className="flex items-center gap-1.5">
-                  <Shield className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  Personal Gemini Key
-                </span>
-                {providerMode === 'personal' && <CheckCircle2 className="w-4 h-4 text-indigo-600 dark:text-sky-400" />}
-              </div>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug">
-                Uses your own Gemini key stored securely in browser localStorage.
               </p>
             </button>
           </div>

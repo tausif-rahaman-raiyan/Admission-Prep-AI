@@ -27,24 +27,55 @@ function wrapBareMath(segment: string): string {
 }
 
 export function preprocessMathText(input: string): string {
-  let text = String(input ?? '')
-    .replace(/\\\(/g, '$')
-    .replace(/\\\)/g, '$')
-    .replace(/\\\[/g, '$$')
-    .replace(/\\\]/g, '$$');
+  if (!input) return '';
+  let text = String(input);
 
+  // Preserve Bangladeshi currency symbols like ৳$
   text = text.replace(/৳\$/g, '৳\\$');
-  const dollarMatches = [...text.matchAll(/(?<!\\)\$/g)];
-  if (dollarMatches.length % 2 === 1) {
-    const last = dollarMatches[dollarMatches.length - 1];
-    const index = last.index ?? -1;
-    if (index >= 0) text = `${text.slice(0, index)}\\${text.slice(index)}`;
+
+  // Streaming balance for \[ and \]
+  const openBracketMatches = (text.match(/\\\[/g) || []).length;
+  const closeBracketMatches = (text.match(/\\\]/g) || []).length;
+  if (openBracketMatches > closeBracketMatches) {
+    text += '\\]';
+  }
+
+  // Streaming balance for \( and \)
+  const openParenMatches = (text.match(/\\\(/g) || []).length;
+  const closeParenMatches = (text.match(/\\\)/g) || []).length;
+  if (openParenMatches > closeParenMatches) {
+    text += '\\)';
+  }
+
+  // Convert standard LaTeX delimiters: \[ \] to $$ $$, and \( \) to $ $
+  text = text
+    .replace(/\\\[([\s\S]*?)\\\]/g, (_, inner) => `\n$$\n${inner}\n$$\n`)
+    .replace(/\\\(([\s\S]*?)\\\)/g, (_, inner) => `$${inner}$`);
+
+  // Streaming balance for $$ (display math)
+  const doubleDollarMatches = (text.match(/\$\$/g) || []).length;
+  if (doubleDollarMatches % 2 !== 0) {
+    text += '$$';
+  }
+
+  // Streaming balance for standalone $ (inline math)
+  const placeholder = '___DOUBLE_DOLLAR_ESC___';
+  const tokenized = text.replace(/\$\$/g, placeholder);
+  const singleDollarMatches = (tokenized.match(/(?<!\\)\$/g) || []).length;
+  if (singleDollarMatches % 2 !== 0) {
+    text += '$';
   }
 
   const parts = text.split(/(\$\$[\s\S]*?\$\$|\$[^$\n]+\$)/g);
   return parts.map(part => {
-    if (part.startsWith('$$') && part.endsWith('$$')) return `$$${normalizeMathDigits(part.slice(2, -2)).replace(/(?<!d)\\frac/g, '\\dfrac')}$$`;
-    if (part.startsWith('$') && part.endsWith('$')) return `$${normalizeMathDigits(part.slice(1, -1))}$`;
+    if (part.startsWith('$$') && part.endsWith('$$')) {
+      const inner = part.slice(2, -2).trim();
+      return `\n$$\n${normalizeMathDigits(inner).replace(/(?<!d)\\frac/g, '\\dfrac')}\n$$\n`;
+    }
+    if (part.startsWith('$') && part.endsWith('$')) {
+      const inner = part.slice(1, -1);
+      return `$${normalizeMathDigits(inner)}$`;
+    }
     return wrapBareMath(part);
   }).join('');
 }

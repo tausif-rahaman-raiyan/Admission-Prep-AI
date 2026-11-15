@@ -81,10 +81,9 @@ export const storage = {
     try {
       const mode = localStorage.getItem(`${PREFIX}_ai_provider_mode`);
       if (mode === 'personal' || mode === 'proxy') return mode;
-      // Default: if user has key stored, use personal, otherwise proxy if server URL exists
-      return storage.getApiKey() ? 'personal' : 'proxy';
+      return 'personal';
     } catch {
-      return 'proxy';
+      return 'personal';
     }
   },
   setAiProviderMode(mode: 'personal' | 'proxy') {
