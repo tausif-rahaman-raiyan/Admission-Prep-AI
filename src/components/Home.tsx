@@ -1,4 +1,5 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
+import Fuse from 'fuse.js';
 import { Search, Sparkles, Key, BookOpen, Clock, Award, CheckCircle, ArrowRight, Layers, FileText, Info } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { institutions } from '../data/institutions';
@@ -89,6 +90,17 @@ export const Home: React.FC<HomeProps> = ({
   onOpenApiKeyModal,
   onOpenRulesModal
 }) => {
+  const [showUniversitySheet, setShowUniversitySheet] = useState(false);
+  const [universitySearch, setUniversitySearch] = useState('');
+  const universityFuse = useMemo(() => new Fuse(institutions, {
+    keys: [{ name: 'nameBn', weight: 2 }, { name: 'nameEn', weight: 1 }, { name: 'code', weight: 1.5 }],
+    threshold: 0.34,
+    ignoreLocation: true,
+  }), []);
+  const searchableUniversities = universitySearch.trim()
+    ? universityFuse.search(universitySearch).map(result => result.item)
+    : institutions;
+
 
   const currentUniversity = getUniversity(selectedInstitution);
   const availableUnits = useMemo(() => {
@@ -203,6 +215,9 @@ export const Home: React.FC<HomeProps> = ({
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
             Select an institution card below to filter admission papers & question banks
           </p>
+          <button onClick={() => setShowUniversitySheet(true)} className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-xl border border-indigo-200 bg-indigo-50 px-4 py-2 text-xs font-extrabold text-indigo-700 dark:border-indigo-900 dark:bg-indigo-950/40 dark:text-sky-300">
+            <Layers className="h-4 w-4" /> সব বিশ্ববিদ্যালয়
+          </button>
         </div>
 
         <div className="space-y-5">
@@ -344,6 +359,33 @@ export const Home: React.FC<HomeProps> = ({
         )}
       </section>
 
+      {showUniversitySheet && (
+        <div className="fixed inset-0 z-[100]">
+          <button aria-label="Close university list" className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onClick={() => setShowUniversitySheet(false)} />
+          <section role="dialog" aria-modal="true" aria-label="সব বিশ্ববিদ্যালয়" className="absolute inset-x-0 bottom-0 mx-auto flex max-h-[90dvh] w-full max-w-2xl flex-col rounded-t-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-800 dark:bg-[#0A1224] pb-[env(safe-area-inset-bottom)]">
+            <div className="mx-auto mt-3 h-1.5 w-12 rounded-full bg-slate-300 dark:bg-slate-700" />
+            <header className="flex items-center justify-between gap-3 border-b border-slate-200 px-5 py-4 dark:border-slate-800">
+              <div><h2 className="text-lg font-black">সব বিশ্ববিদ্যালয়</h2><p className="text-xs text-slate-500">বাংলা বা ইংরেজি নামে খুঁজুন</p></div>
+              <button onClick={() => setShowUniversitySheet(false)} className="min-h-11 min-w-11 rounded-xl bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200">✕</button>
+            </header>
+            <div className="p-4">
+              <input value={universitySearch} onChange={event => setUniversitySearch(event.target.value)} placeholder="বিশ্ববিদ্যালয়ের নাম লিখুন..." className="min-h-12 w-full rounded-xl border border-slate-300 bg-slate-50 px-4 text-sm outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900" />
+            </div>
+            <div className="min-h-0 flex-1 overflow-y-auto px-4 pb-5">
+              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                {searchableUniversities.map(uni => (
+                  <button key={uni.id} onClick={() => { onSelectInstitution(uni.id); onSelectUnit(null); setShowUniversitySheet(false); setUniversitySearch(''); }} className={`flex min-h-14 items-center gap-3 rounded-xl border p-3 text-left ${selectedInstitution === uni.id ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950/40' : 'border-slate-200 dark:border-slate-800'}`}>
+                    <span className="grid h-10 w-12 shrink-0 place-items-center rounded-xl text-[10px] font-black text-white" style={{ background: 'linear-gradient(135deg, ' + (getUniversity(uni.id)?.brand[0] || '#475569') + ', ' + (getUniversity(uni.id)?.brand[1] || '#94a3b8') + ')' }}>{uni.code}</span>
+                    <span className="min-w-0 flex-1"><span className="block truncate text-sm font-bold">{uni.nameBn}</span><span className="block truncate text-[11px] text-slate-500">{uni.nameEn}</span></span>
+                    <span className={`shrink-0 text-[10px] font-bold ${uni.hasQuestions ? 'text-emerald-600' : 'text-slate-400'}`}>{uni.hasQuestions ? 'প্রশ্ন আছে' : 'শীঘ্রই আসছে'}</span>
+                  </button>
+                ))}
+                {searchableUniversities.length === 0 && <p className="col-span-full py-8 text-center text-sm text-slate-500">কোনো বিশ্ববিদ্যালয় পাওয়া যায়নি।</p>}
+              </div>
+            </div>
+          </section>
+        </div>
+      )}
 
     </div>
   );
