@@ -22,3 +22,10 @@
 @media (max-width: 640px) { .math-text .katex { font-size: 0.94em; } .math-text .katex-display { font-size: 0.9em; } }
 html, body, #root { max-width: 100%; min-height: 100%; }
 body { overflow-x: hidden; }
+
+/* Keep long question lists responsive on low-power devices. */
+.question-card { content-visibility: auto; contain-intrinsic-size: 1px 420px; }
+.question-card img { height: auto; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
