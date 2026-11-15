@@ -291,6 +291,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                     <span className={`text-xs font-extrabold px-3 py-1 rounded-xl ${theme.badgeBg}`}>
                       {q.subject}
                     </span>
+                    <span className={`text-[10px] font-black px-2.5 py-1 rounded-lg ${q.type === 'Written' ? 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300' : 'bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300'}`}>{q.type || 'MCQ'}</span>
                   </div>
 
                   {q.answerVerified === false || q.correctAnswer < 0 ? (
