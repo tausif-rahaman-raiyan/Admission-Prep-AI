@@ -2,11 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 const root = path.resolve('public/data');
 const repairs = [
-  [new RegExp(String.raw`(?<!\\\\)\\\\f(?=rac)`, 'g'), String.raw`\\\\f`],
-  [new RegExp(String.raw`(?<!\\\\)\\\\t(?=ext|imes|heta)`, 'g'), String.raw`\\\\t`],
-  [new RegExp(String.raw`(?<!\\\\)\\\\b(?=eta)`, 'g'), String.raw`\\\\b`],
-  [new RegExp(String.raw`(?<!\\\\)\\\\n(?=eq)`, 'g'), String.raw`\\\\n`],
-  [new RegExp(String.raw`(?<!\\\\)\\\\r(?=ightarrow)`, 'g'), String.raw`\\\\r`],
+  [new RegExp(String.raw`(?<!\\)\\f(?=rac)`, 'g'), String.raw`\\f`],
+  [new RegExp(String.raw`(?<!\\)\\t(?=ext|imes|heta)`, 'g'), String.raw`\\t`],
+  [new RegExp(String.raw`(?<!\\)\\b(?=eta)`, 'g'), String.raw`\\b`],
+  [new RegExp(String.raw`(?<!\\)\\n(?=eq)`, 'g'), String.raw`\\n`],
+  [new RegExp(String.raw`(?<!\\)\\r(?=ightarrow)`, 'g'), String.raw`\\r`],
 ];
 let changed = 0;
 function walk(dir) {
