@@ -39,6 +39,14 @@ jobs:
             npm install --legacy-peer-deps
           fi
 
+      - name: Repair and validate question data
+        run: |
+          npm run repair:data
+          npm run test:data
+
+      - name: Type check
+        run: npm run lint
+
       - name: Build static site
         run: |
           BASE_PATH="${{ steps.pages.outputs.base_path }}"
