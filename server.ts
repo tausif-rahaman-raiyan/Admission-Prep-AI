@@ -8,9 +8,24 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const aiClientCache = new Map<string, GoogleGenAI>();
 const MODELS_TO_TRY: Array<{ model: string; thinkingLevel: ThinkingLevel }> = [
   { model: 'gemini-3.1-flash-lite', thinkingLevel: ThinkingLevel.MINIMAL },
-  { model: 'gemini-4-hydrogen', thinkingLevel: ThinkingLevel.LOW },
+  { model: 'gemini-2.5-flash-lite', thinkingLevel: ThinkingLevel.LOW },
 ];
 let preferredModelIndex = 0;
+
+// Simple in-memory IP rate limiter (max 30 requests per minute per IP)
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  let record = rateLimitMap.get(ip);
+  if (!record || now > record.resetAt) {
+    record = { count: 1, resetAt: now + 60_000 };
+    rateLimitMap.set(ip, record);
+    return true;
+  }
+  record.count++;
+  if (record.count > 30) return false;
+  return true;
+}
 
 function getAiClient(apiKey: string): GoogleGenAI {
   let client = aiClientCache.get(apiKey);
@@ -39,7 +54,8 @@ async function warmUpstreamSocket() {
 
 async function startServer() {
   const app = express();
-  app.use(express.json({ limit: '10mb' }));
+  app.use(express.json({ limit: '1mb' }));
+  app.set('trust proxy', true);
 
   // CORS middleware for production Cloud Run + GitHub Pages + local dev
   app.use((req, res, next) => {
@@ -75,28 +91,43 @@ async function startServer() {
   app.get('/api/ai/warmup', async (_req, res) => {
     await warmUpstreamSocket();
     res.setHeader('Cache-Control', 'no-store');
-    res.json({ ok: true, hasServerKey: Boolean(process.env.GEMINI_API_KEY?.trim()) });
+    res.json({ ok: true });
   });
 
   // API endpoint for AI Tutor streaming coach
   app.post('/api/ai/tutor', async (req, res) => {
+    const clientIp = req.ip || req.socket.remoteAddress || 'unknown';
+    if (!checkRateLimit(clientIp)) {
+      return res.status(429).json({
+        code: 'RATE_LIMIT_EXCEEDED',
+        error: 'Too many requests. Please wait a moment before trying again.',
+      });
+    }
+
     let clientClosed = false;
     res.on('close', () => {
       if (!res.writableEnded) clientClosed = true;
     });
 
     try {
-      const { prompt, userApiKey } = req.body;
-      const apiKey = (userApiKey && userApiKey.trim().length > 10) ? userApiKey.trim() : process.env.GEMINI_API_KEY;
+      const { prompt } = req.body;
+      if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
+        return res.status(400).json({ code: 'INVALID_PROMPT', error: 'Prompt is required.' });
+      }
+      if (prompt.length > 12000) {
+        return res.status(400).json({ code: 'PROMPT_TOO_LONG', error: 'Prompt exceeds maximum length limit.' });
+      }
 
-      if (!apiKey) {
-        return res.status(400).json({
-          code: 'MISSING_API_KEY',
-          error: 'Gemini API key not configured. Please add your API key in Settings.',
+      const apiKey = process.env.GEMINI_API_KEY;
+
+      if (!apiKey || !apiKey.trim()) {
+        return res.status(500).json({
+          code: 'MISSING_SERVER_API_KEY',
+          error: 'Hosted backend Gemini API key is not configured.',
         });
       }
 
-      const ai = getAiClient(apiKey);
+      const ai = getAiClient(apiKey.trim());
       const orderedIndices = [
         preferredModelIndex,
         ...MODELS_TO_TRY.map((_, idx) => idx).filter(idx => idx !== preferredModelIndex),

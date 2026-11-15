@@ -152,6 +152,9 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ isOpen, onClose, onKey
                 placeholder="Paste your personal API key here..."
                 className="w-full px-3.5 py-3 rounded-xl bg-slate-50 dark:bg-[#070D1D] border border-slate-300 dark:border-indigo-900 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 font-mono"
               />
+              <p className="text-[11px] text-amber-700 dark:text-amber-400 mt-1.5 leading-relaxed">
+                ⚠️ <strong className="font-bold">Security Notice:</strong> Browser <code className="font-mono text-xs">localStorage</code> is not encrypted. Keys stored here may be accessible to other scripts running on this origin or browser extensions, and should only be used on trusted personal devices.
+              </p>
             </div>
           </div>
         )}

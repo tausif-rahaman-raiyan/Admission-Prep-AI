@@ -42,11 +42,14 @@ export function canUseServerTutorEndpoint(): boolean {
 }
 
 export function hasAvailableAiKey(localKey?: string): boolean {
-  const userKey = (localKey ?? storage.getApiKey()).trim();
-  if (userKey.length > 10) return true;
+  const mode = storage.getAiProviderMode();
+  if (mode === 'personal') {
+    const userKey = (localKey ?? storage.getApiKey()).trim();
+    return userKey.length > 10;
+  }
+  // Mode B: Proxy
   if (!canUseServerTutorEndpoint()) return false;
-  if (serverTutorAvailable === false || serverHasKey === false) return false;
-  return true;
+  return serverTutorAvailable !== false;
 }
 
 export function warmAiConnection(force = false): void {
@@ -54,6 +57,9 @@ export function warmAiConnection(force = false): void {
   const now = Date.now();
   if (!force && now - lastWarmupAt < 45_000) return;
   lastWarmupAt = now;
+
+  const mode = storage.getAiProviderMode();
+  if (mode === 'personal') return; // No backend warm-up needed for direct client Gemini API calls
 
   const apiBase = import.meta.env.VITE_API_URL?.trim().replace(/\/$/, '');
   const warmupUrl = apiBase ? `${apiBase}/api/ai/warmup` : canUseServerTutorEndpoint() && serverTutorAvailable !== false ? '/api/ai/warmup' : null;
@@ -63,35 +69,28 @@ export function warmAiConnection(force = false): void {
         const ct = res.headers.get('content-type') || '';
         if (!res.ok || !ct.includes('application/json')) {
           serverTutorAvailable = false;
-          serverHasKey = false;
           return;
         }
         const data = await res.json().catch(() => null);
         if (data?.ok) {
           serverTutorAvailable = true;
-          serverHasKey = typeof data.hasServerKey === 'boolean' ? data.hasServerKey : true;
         } else {
           serverTutorAvailable = false;
-          serverHasKey = false;
         }
       })
       .catch(() => {
         serverTutorAvailable = false;
-        serverHasKey = false;
       });
   }
   // Pre-warm DNS/TCP/TLS socket to Gemini REST host without sending any API key or using quota.
   fetch('https://generativelanguage.googleapis.com/generate_204', { mode: 'no-cors', keepalive: true }).catch(() => {});
 }
 
-async function expressStream(url: string, prompt: string, apiKey: string, signal: AbortSignal, cb: Callbacks) {
-  const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ prompt, userApiKey: apiKey }), signal });
+async function expressStream(url: string, prompt: string, signal: AbortSignal, cb: Callbacks) {
+  // Send ONLY prompt to hosted proxy backend (never send personal API key to backend)
+  const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ prompt }), signal });
   if (!response.ok) {
     const body = await response.json().catch(() => ({}));
-    if (response.status === 400 && body?.code === 'MISSING_API_KEY') {
-      serverHasKey = false;
-      throw makeMissingKeyError(body.error);
-    }
     const err = new Error(body.error || `AI server returned ${response.status}`) as AiProviderError;
     if (body?.code) err.code = body.code;
     throw err;
@@ -99,10 +98,6 @@ async function expressStream(url: string, prompt: string, apiKey: string, signal
   const contentType = response.headers.get('content-type') || '';
   if (!contentType.includes('text/event-stream')) {
     serverTutorAvailable = false;
-    serverHasKey = false;
-    if (apiKey.trim().length <= 10) {
-      throw makeMissingKeyError();
-    }
     throw new Error('AI server endpoint is not streaming SSE');
   }
   if (!response.body) throw new Error('AI server returned an empty stream');
@@ -224,7 +219,7 @@ export async function streamTutorResponse(prompt: string, apiKey: string, signal
   if (proxyUrl) {
     try {
       // Do not send personal key when using hosted backend proxy mode
-      const result = await expressStream(proxyUrl, prompt, '', signal, cb);
+      const result = await expressStream(proxyUrl, prompt, signal, cb);
       serverTutorAvailable = true;
       return result;
     } catch (error) {

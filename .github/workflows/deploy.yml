@@ -48,6 +48,8 @@ jobs:
         run: npm run lint
 
       - name: Build static site
+        env:
+          VITE_API_URL: ${{ secrets.VITE_API_URL || vars.VITE_API_URL }}
         run: |
           BASE_PATH="${{ steps.pages.outputs.base_path }}"
           BASE_PATH="${BASE_PATH%/}/"
