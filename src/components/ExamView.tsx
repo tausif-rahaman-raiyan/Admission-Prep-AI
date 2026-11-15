@@ -7,6 +7,8 @@ import { AiTutorPanel } from './AiTutorPanel';
 import { storage, UiSettings, ExamAttempt } from '../utils/storage';
 import { getAdmissionRule, UniversityAdmissionRule } from '../data/admissionLogic';
 import { AdmissionLogicModal } from './AdmissionLogicModal';
+import { normalizeQuestionData } from '../utils/questionData';
+import { QuestionImage } from './QuestionImage';
 
 interface ExamViewProps {
   session: SessionItem;
@@ -84,8 +86,15 @@ export const ExamView: React.FC<ExamViewProps> = ({
         if (!res.ok) {
           throw new Error('Questions file not found. No sample questions will be substituted.');
         }
-        let data = await res.json();
-        data = Array.isArray(data) ? data.map((question: any) => ({ ...question, uniId: session.institution === 'KhU' ? 'KU' : session.institution, unit: question.unit ?? session.unit, year: question.year ?? session.session, type: question.type ?? question.questionType ?? session.questionType })) : [];
+        const payload = await res.json();
+        const rows = Array.isArray(payload) ? payload : Array.isArray(payload?.questions) ? payload.questions : [];
+        let data = rows.map((question: any, index: number) => ({
+          ...normalizeQuestionData(question, index),
+          uniId: session.institution === 'KhU' ? 'KU' : session.institution,
+          unit: question.unit ?? session.unit,
+          year: question.year ?? session.session,
+          type: question.type ?? question.questionType ?? session.questionType
+        }));
 
         // If subjectPickMode, filter by picked subjects
         if (session.subjectPickMode && selectedSubjects.length > 0) {
@@ -205,6 +214,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
 
   const handleSubmitExam = () => {
     if (submitted) return;
+    setExitPromptOpen(false);
     setSubmitted(true);
     try { localStorage.removeItem('admission_app_exam_' + session.id); } catch {}
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -299,6 +309,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
   const answeredCount = Object.keys(answers).length;
 
   const requestExit = () => {
+    if (submitted) { onBack(); return; }
     const remaining = Math.max(0, Math.ceil((endTimestamp - Date.now()) / 1000));
     setTimeRemaining(remaining);
     setEndTimestamp(Date.now() + remaining * 1000);
@@ -642,7 +653,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
         <div className="max-w-7xl mx-auto h-16 px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <button
-              onClick={requestExit}
+              onClick={submitted ? onBack : requestExit}
               className="p-2 rounded-xl bg-slate-100 dark:bg-[#0F172A] text-slate-700 dark:text-slate-200 hover:bg-slate-200 transition-colors cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -872,7 +883,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
             return (
               <div
                 key={q.id || qIndex}
-                className={`p-5 sm:p-6 rounded-3xl border-2 transition-all space-y-4 ${
+                className={`question-card p-5 sm:p-6 rounded-3xl border-2 transition-all space-y-4 ${
                   submitted
                     ? isCorrect
                       ? 'bg-emerald-50 dark:bg-[#07241A] border-emerald-400 dark:border-emerald-600/80 shadow-md shadow-emerald-500/5'
@@ -931,14 +942,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
                 {q.questionImageUrls && q.questionImageUrls.length > 0 && (
                   <div className="flex flex-wrap gap-3 pt-1">
                     {q.questionImageUrls.map((url: string, i: number) => (
-                      <img
-                        key={i}
-                        src={url.startsWith('http') ? url : `${import.meta.env.BASE_URL}${url}`}
-                        alt="Question diagram"
-                        loading="lazy"
-                        referrerPolicy="no-referrer"
-                        className="max-h-60 rounded-xl border border-slate-200 dark:border-indigo-900 bg-white p-1 shadow-sm object-contain"
-                      />
+                      <QuestionImage key={i} src={url} alt="Question diagram" className="max-h-60" />
                     ))}
                   </div>
                 )}
@@ -984,18 +988,11 @@ export const ExamView: React.FC<ExamViewProps> = ({
                             {optionLabel}
                           </span>
                           <div className="flex-1 leading-snug space-y-2">
-                            {opt && <MathText content={opt} />}
+                            {opt.trim() ? <MathText content={opt} /> : optImgs.length > 0 ? <span className="text-[10px] font-bold uppercase tracking-wide text-slate-500">চিত্রভিত্তিক বিকল্প</span> : <span className="text-xs text-amber-700 dark:text-amber-300">বিকল্পের তথ্য পাওয়া যায়নি</span>}
                             {optImgs.length > 0 && (
-                              <div className="flex flex-wrap gap-2">
+                              <div className="flex flex-wrap items-start gap-3">
                                 {optImgs.map((imgUrl: string, imgI: number) => (
-                                  <img
-                                    key={imgI}
-                                    src={imgUrl.startsWith('http') ? imgUrl : `${import.meta.env.BASE_URL}${imgUrl}`}
-                                    alt={`Option ${optionLabel}`}
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer"
-                                    className="max-h-36 rounded-lg border border-slate-200 dark:border-indigo-900 bg-white p-1 object-contain"
-                                  />
+                                  <QuestionImage key={imgI} src={imgUrl} alt={`Option ${optionLabel}`} className="max-h-52 sm:max-h-64" />
                                 ))}
                               </div>
                             )}
@@ -1080,7 +1077,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
         </div>
       )}
 
-      {exitPromptOpen && (
+      {exitPromptOpen && !submitted && (
         <div className="fixed inset-0 z-[120] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-sm">
           <div role="dialog" aria-modal="true" aria-labelledby="exit-exam-title" className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl dark:border-slate-700 dark:bg-[#0A1224] space-y-4">
             <div className="flex items-center gap-3"><div className="grid h-11 w-11 place-items-center rounded-2xl bg-amber-100 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300"><ShieldAlert className="h-5 w-5" /></div><div><h2 id="exit-exam-title" className="text-lg font-black text-slate-900 dark:text-white">পরীক্ষা থেকে বের হতে চান?</h2><p className="text-xs text-slate-500 dark:text-slate-400">আপনার উত্তরগুলো সংরক্ষিত থাকবে।</p></div></div>
