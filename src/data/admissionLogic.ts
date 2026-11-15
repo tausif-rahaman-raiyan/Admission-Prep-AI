@@ -30,6 +30,8 @@ export interface UniversityAdmissionRule {
   totalQuestions: number;
   markPerQuestion: number | string;
   negativeMarking: number;
+  passCriteriaByUnit?: Record<string, { overallPassMark: number; totalMarks: number; mcqPassMark?: number; writtenPassMark?: number; subjectMinimums?: Record<string, number> }>;
+  eligibilityDetailsBn?: string[];
   mode:
     | 'du_pick_two'
     | 'ru_c_groups'
@@ -140,6 +142,8 @@ export const admissionComparisonTable = [
 export const universityAdmissionRules: Record<string, UniversityAdmissionRule> = {
   DU: {
     id: "DU",
+    passCriteriaByUnit: {"A":{"overallPassMark":40,"totalMarks":100,"mcqPassMark":24,"writtenPassMark":12}},
+    eligibilityDetailsBn: ["আবেদন যোগ্যতা: SSC ও HSC (৪র্থ বিষয়সহ) মিলিয়ে ন্যূনতম GPA 8.00; উভয় পরীক্ষায় আলাদাভাবে ন্যূনতম GPA 3.50।","পরীক্ষা: মোট ১০০ নম্বর—MCQ ৬০ (পদার্থ ১৫, রসায়ন ১৫, জীববিজ্ঞান ১৫, উচ্চতর গণিত ১৫) এবং Written ৪০ (প্রতিটি বিষয়ে ১০)।","পদার্থবিজ্ঞান ও রসায়ন আবশ্যিক। HSC-এর ৪র্থ বিষয়ের পরিবর্তে বাংলা অথবা ইংরেজি উত্তর করা যায়; বিভাগভিত্তিক শর্ত প্রযোজ্য।","পাশ: MCQ-তে ৬০-এর মধ্যে ২৪, Written-এ ৪০-এর মধ্যে ১২ এবং দুই অংশ মিলিয়ে ১০০-এর মধ্যে ৪০।","প্রধান ক্ষেত্র: বিজ্ঞান, জীববিজ্ঞান, ফার্মেসি, ইঞ্জিনিয়ারিং ও টেকনোলজি, আর্থ অ্যান্ড এনভায়রনমেন্টাল সায়েন্সেস।"],
     code: "DU",
     nameBn: "ঢাকা বিশ্ববিদ্যালয়",
     nameEn: "University of Dhaka",
@@ -238,6 +242,8 @@ export const universityAdmissionRules: Record<string, UniversityAdmissionRule> =
 
   RU: {
     id: "RU",
+    passCriteriaByUnit: {"C":{"overallPassMark":40,"totalMarks":100}},
+    eligibilityDetailsBn: ["আবেদন যোগ্যতা: SSC ও HSC (৪র্থ বিষয়সহ) মোট GPA 8.00; উভয় পরীক্ষায় আলাদাভাবে ন্যূনতম GPA 3.50।","MCQ: মোট ১০০ নম্বর। আবশ্যিক শাখা ৬৮.৭৫—পদার্থ ২৫ প্রশ্ন/৩১.২৫, রসায়ন ২৫/৩১.২৫, ICT ৫/৬.২৫।","ঐচ্ছিক শাখা ৩১.২৫: গণিত অথবা জীববিজ্ঞান অথবা জীববিজ্ঞান+গণিত (১৩+১২ প্রশ্ন) থেকে নির্ধারিত বিকল্প।","পাশ: মোট ১০০-এর মধ্যে ৪০। প্রতি ভুল উত্তরে ০.২৫ নম্বর কর্তন।","প্রধান ক্ষেত্র: বিজ্ঞান, জীববিজ্ঞান, কৃষি, প্রকৌশল, ভূ-বিজ্ঞান ও ফিশারিজ।"],
     code: "RU",
     nameBn: "রাজশাহী বিশ্ববিদ্যালয়",
     nameEn: "University of Rajshahi",
@@ -325,6 +331,8 @@ export const universityAdmissionRules: Record<string, UniversityAdmissionRule> =
 
   JU: {
     id: "JU",
+    passCriteriaByUnit: {"A":{"overallPassMark":36,"totalMarks":80},"D":{"overallPassMark":36,"totalMarks":80}},
+    eligibilityDetailsBn: ["আবেদন যোগ্যতা: SSC ও HSC-তে আলাদাভাবে GPA 3.50; মোট GPA বিভাগভেদে A ইউনিটে 7.50–8.50 এবং D ইউনিটে 8.00–9.00।","A ইউনিট (৮০ MCQ): গণিত ২২, পদার্থ ২২, রসায়ন ২২, বাংলা ৩, ইংরেজি ৩, ICT ৮—সব আবশ্যিক।","D ইউনিট (৮০ MCQ): জীববিজ্ঞান ৪৪, রসায়ন ২৪, বাংলা ও ইংরেজি ৮, IQ ৪—সব আবশ্যিক।","পাশ: A ও D উভয় ইউনিটে ৮০-এর মধ্যে ন্যূনতম ৩৬ (৪৫%)। প্রতি ভুল উত্তরে ০.২০ নম্বর কর্তন।","প্রধান ক্ষেত্র: A—গাণিতিক ও পদার্থবিষয়ক অনুষদ/IIT; D—জীববিজ্ঞান অনুষদের বিভাগসমূহ।"],
     code: "JU",
     nameBn: "জাহাঙ্গীরনগর বিশ্ববিদ্যালয়",
     nameEn: "Jahangirnagar University",
@@ -365,6 +373,8 @@ export const universityAdmissionRules: Record<string, UniversityAdmissionRule> =
 
   CU: {
     id: "CU",
+    passCriteriaByUnit: {"A":{"overallPassMark":40,"totalMarks":100,"subjectMinimums":{"Bangla":3,"English":4}}},
+    eligibilityDetailsBn: ["আবেদন যোগ্যতা: SSC ও HSC (৪র্থ বিষয়সহ) মোট GPA 8.00; উভয় পরীক্ষায় আলাদাভাবে ন্যূনতম GPA 3.50।","MCQ: মোট ১০০। বাংলা ১০ ও ইংরেজি ১৫ আবশ্যিক; পদার্থ, রসায়ন, উচ্চতর গণিত ও জীববিজ্ঞানের মধ্যে যেকোনো ৩টি (প্রতিটি ২৫) উত্তর করতে হবে।","পাশ: বাংলায় ন্যূনতম ৩, ইংরেজিতে ন্যূনতম ৪ এবং মোট ১০০-এর মধ্যে ৪০। ভুল উত্তরে ০.২৫ কর্তন।","প্রধান ক্ষেত্র: বিজ্ঞান, জীববিজ্ঞান, ইঞ্জিনিয়ারিং এবং মেরিন সায়েন্সেস অ্যান্ড ফিশারিজ।"],
     code: "CU",
     nameBn: "চট্টগ্রাম বিশ্ববিদ্যালয়",
     nameEn: "University of Chittagong",
@@ -461,6 +471,8 @@ export const universityAdmissionRules: Record<string, UniversityAdmissionRule> =
 
   GST: {
     id: "GST",
+    passCriteriaByUnit: {"A":{"overallPassMark":30,"totalMarks":100}},
+    eligibilityDetailsBn: ["আবেদন যোগ্যতা: SSC ও HSC-তে আলাদাভাবে GPA 3.50 এবং মোট GPA 8.00।","MCQ: মোট ১০০। পদার্থ ২৫ ও রসায়ন ২৫ আবশ্যিক; উচ্চতর গণিত, জীববিজ্ঞান, বাংলা ও ইংরেজি থেকে যেকোনো ২টি (প্রতিটি ২৫) নির্বাচন।","ইঞ্জিনিয়ারিং ও ফার্মেসির জন্য সংশ্লিষ্ট গণিত/জীববিজ্ঞান বিষয়ের শর্ত প্রযোজ্য।","পাশ: মোট ১০০-এর মধ্যে ৩০। প্রতি ভুল উত্তরে ০.২৫ কর্তন।","অংশগ্রহণকারী GST বিশ্ববিদ্যালয়গুলোর বিজ্ঞান ও প্রকৌশল অনুষদে বিভাগ বরাদ্দের নিজস্ব শর্তও প্রযোজ্য।"],
     code: "GST",
     nameBn: "জিএসটি গুচ্ছ (GST Cluster)",
     nameEn: "GST Cluster (19+ Universities)",
@@ -553,6 +565,8 @@ export const universityAdmissionRules: Record<string, UniversityAdmissionRule> =
 
   CoU: {
     id: "CoU",
+    passCriteriaByUnit: {"A":{"overallPassMark":33,"totalMarks":100}},
+    eligibilityDetailsBn: ["আবেদন যোগ্যতা: SSC ও HSC-তে আলাদাভাবে GPA 3.50 এবং মোট GPA 8.00।","মানবণ্টন: ইংরেজি ১৫, বাংলা ১০, পদার্থ ২৫, রসায়ন ২৫ এবং গণিত অথবা জীববিজ্ঞান ২৫।","পদার্থ, রসায়ন, বাংলা ও ইংরেজি আবশ্যিক; গণিত ও জীববিজ্ঞানের মধ্যে একটি ঐচ্ছিক।","পাশ: প্রদত্ত তথ্য অনুযায়ী ৩৩–৪০/১০০ (সার্কুলারভেদে পরিবর্তনশীল); প্রতি ভুল উত্তরে ০.২৫ কর্তন।","প্রধান বিভাগ: CSE, ICT, গণিত, পদার্থ, রসায়ন, পরিসংখ্যান ও ফার্মেসি।"],
     code: "CoU",
     nameBn: "কুমিল্লা বিশ্ববিদ্যালয়",
     nameEn: "Comilla University",
@@ -631,6 +645,8 @@ export const universityAdmissionRules: Record<string, UniversityAdmissionRule> =
 
   JnU: {
     id: "JnU",
+    passCriteriaByUnit: {"A":{"overallPassMark":29,"totalMarks":72}},
+    eligibilityDetailsBn: ["আবেদন যোগ্যতা: SSC ও HSC (৪র্থ বিষয়সহ) মোট GPA 7.50; উভয় পরীক্ষায় আলাদাভাবে GPA 3.50।","ভর্তি পরীক্ষা ৭২ নম্বর (MCQ + Written সমন্বিত); SSC/HSC GPA থেকে অতিরিক্ত ২৮ নম্বর।","পদার্থ ২৪ ও রসায়ন ২৪ আবশ্যিক; উচ্চতর গণিত অথবা জীববিজ্ঞান ২৪ ঐচ্ছিক।","পাশ: ভর্তি পরীক্ষার ৭২-এর মধ্যে ন্যূনতম ৪০% (প্রায় ২৯)। প্রতি ভুল উত্তরে ০.২৫ কর্তন।","প্রধান ক্ষেত্র: বিজ্ঞান, লাইফ অ্যান্ড আর্থ সায়েন্স এবং সংশ্লিষ্ট CSE, ফার্মেসি ও জীববিজ্ঞান বিভাগ।"],
     code: "JnU",
     nameBn: "জগন্নাথ বিশ্ববিদ্যালয়",
     nameEn: "Jagannath University",
@@ -700,6 +716,8 @@ export const universityAdmissionRules: Record<string, UniversityAdmissionRule> =
 
   KhU: {
     id: "KhU",
+    passCriteriaByUnit: {"A":{"overallPassMark":40,"totalMarks":100},"B":{"overallPassMark":40,"totalMarks":100}},
+    eligibilityDetailsBn: ["আবেদন যোগ্যতা: SSC ও HSC (৪র্থ বিষয়সহ) মোট GPA 8.00; উভয় পরীক্ষায় আলাদাভাবে GPA 3.50।","A ইউনিট: পদার্থ ২৫, রসায়ন ২৫, গণিত ২৫, ইংরেজি ১০ ও ICT ১৫; মোট ১০০ (MCQ ও Written)।","B ইউনিট: জীববিজ্ঞান ৩০, রসায়ন ২৫, পদার্থ ২০, ইংরেজি ১৫ ও ICT ১০; মোট ১০০ (MCQ ও Written)।","পাশ: A ও B উভয় ইউনিটে মোট ১০০-এর মধ্যে ৪০।","প্রধান ক্ষেত্র: A—বিজ্ঞান, প্রকৌশল ও প্রযুক্তি; B—জীববিজ্ঞান স্কুলের বিভাগসমূহ।"],
     code: "KhU",
     nameBn: "খুলনা বিশ্ববিদ্যালয়",
     nameEn: "Khulna University",
@@ -738,6 +756,8 @@ export const universityAdmissionRules: Record<string, UniversityAdmissionRule> =
 
   AGRI: {
     id: "AGRI",
+    passCriteriaByUnit: {"AGRI":{"overallPassMark":40,"totalMarks":100}},
+    eligibilityDetailsBn: ["আবেদন যোগ্যতা: SSC ও HSC-তে ৪র্থ বিষয় ব্যতীত আলাদাভাবে GPA 4.00 এবং মোট GPA 8.50; HSC-তে পদার্থ, রসায়ন, গণিত ও জীববিজ্ঞান থাকতে হবে।","MCQ: ইংরেজি ১০, প্রাণিবিজ্ঞান ১৫, উদ্ভিদবিজ্ঞান ১৫, পদার্থ ২০, রসায়ন ২০, গণিত ২০—মোট ১০০; সব বিষয় আবশ্যিক।","পাশ: মোট ১০০-এর মধ্যে ৪০; বিষয়ভিত্তিক আলাদা পাশ নম্বর নেই। প্রতি ভুল উত্তরে ০.২৫ কর্তন।","প্রধান ডিগ্রি: Agriculture, DVM, Animal Husbandry, Fisheries, Agricultural Economics, Agricultural Engineering, Food Engineering ও Bioinformatics।"],
     code: "AGRI",
     nameBn: "কৃষি ভর্তি প্রশ্নব্যাংক ও গুচ্ছ",
     nameEn: "Agricultural Cluster (GST-Agri, BAU, SAU, CVASU, GAU, SYLAU)",
