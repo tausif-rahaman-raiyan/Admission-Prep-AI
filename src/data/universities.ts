@@ -20,7 +20,30 @@ const make = (id: string, short: string, nameBn: string, nameEn: string, group: 
 
 const allUniversities: Uni[] = [
   make('DU','DU','ঢাকা বিশ্ববিদ্যালয়','University of Dhaka','general',['#2563eb','#06b6d4'],{units:[{unit:'A',label:'A Unit (Science)',year:'২০২৫-২৬',compulsory:[{subject:'পদার্থবিজ্ঞান',marks:25},{subject:'রসায়ন',marks:25}],optionalPick:{count:2,from:['উচ্চতর গণিত','জীববিজ্ঞান','বাংলা','ইংরেজি'],note:'পদার্থ ও রসায়ন ছাড়াও আবশ্যিকভাবে যেকোনো ২টি ঐচ্ছিক বিষয় নির্বাচন করুন (মোট ৪টি বিষয়)'},totalSubjects:4,verified:true}],years:'A Unit • 2000-01 to 2025-26',hasQuestions:true,dataIds:['DU']}),
-  make('RU','RU','রাজশাহী বিশ্ববিদ্যালয়','University of Rajshahi','general',['#d97706','#fbbf24'],{years:'2010-11 to 2025-26',hasQuestions:true,dataIds:['RU']}),
+  make('RU','RU','রাজশাহী বিশ্ববিদ্যালয়','University of Rajshahi','general',['#d97706','#fbbf24'],{
+    units: [
+      {
+        unit: 'C',
+        label: 'C Unit (Science)',
+        year: '২০২৫-২৬',
+        compulsory: [
+          { subject: 'পদার্থবিজ্ঞান', marks: 31.25 },
+          { subject: 'রসায়ন', marks: 31.25 },
+          { subject: 'আইসিটি', marks: 6.25 },
+        ],
+        optionalPick: {
+          count: 1,
+          from: ['উচ্চতর গণিত', 'জীববিজ্ঞান', 'জীববিজ্ঞান ও গণিত যৌথ'],
+          note: '৩১.২৫ নম্বরের ঐচ্ছিক শাখা (গণিত, জীববিজ্ঞান অথবা গণিত+জীববিজ্ঞান যৌথ)',
+        },
+        totalSubjects: 4,
+        verified: true,
+      },
+    ],
+    years: 'C Unit • 2010-11 to 2025-26',
+    hasQuestions: true,
+    dataIds: ['RU'],
+  }),
   make('JU','JU','জাহাঙ্গীরনগর বিশ্ববিদ্যালয়','Jahangirnagar University','general',['#7c3aed','#c084fc'],{units:[todo('A'),todo('D')],years:'A & D Units • Set-wise papers',hasQuestions:true,dataIds:['JU']}),
   make('CU','CU','চট্টগ্রাম বিশ্ববিদ্যালয়','University of Chittagong','general',['#0891b2','#67e8f9'],{units:[todo('A')],years:'A Unit • 2010-11 to 2025-26',hasQuestions:true,dataIds:['CU']}),
   make('GST','GST','জিএসটি গুচ্ছ','GST Cluster','general',['#c026d3','#f0abfc'],{units:[todo('A')],years:'A Unit • 2020-21 to 2025-26',hasQuestions:true,dataIds:['GST']}),

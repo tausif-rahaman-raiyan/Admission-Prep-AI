@@ -253,7 +253,7 @@ export const Home: React.FC<HomeProps> = ({
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3">
           {[
             {id:'DU',code:'DU',name:'ঢাকা বিশ্ববিদ্যালয়',desc:'A Unit • 2000-01 to 2025-26'},
-            {id:'RU',code:'RU',name:'রাজশাহী বিশ্ববিদ্যালয়',desc:'2010-11 to 2025-26'},
+            {id:'RU',code:'RU',name:'রাজশাহী বিশ্ববিদ্যালয়',desc:'C Unit • 2010-11 to 2025-26'},
             {id:'JU',code:'JUA • D',name:'জাহাঙ্গীরনগর বিশ্ববিদ্যালয়',desc:'A & D Units • Set-wise papers'},
             {id:'CU',code:'CU',name:'চট্টগ্রাম বিশ্ববিদ্যালয়',desc:'A Unit • 2010-11 to 2025-26'},
             {id:'GST',code:'GST',name:'জিএসটি গুচ্ছ',desc:'A Unit • 2020-21 to 2025-26'},
