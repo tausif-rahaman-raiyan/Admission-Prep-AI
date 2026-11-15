@@ -104,7 +104,7 @@ export const Home: React.FC<HomeProps> = ({
 
   const currentUniversity = getUniversity(selectedInstitution);
   const availableUnits = useMemo(() => {
-    const rules = currentUniversity?.units.map(rule => rule.unit) || [];
+    const rules = currentUniversity?.units.filter(rule => rule.unit !== 'যাচাই করা হয়নি').map(rule => rule.unit) || [];
     const papers = sessions.filter(session => (currentUniversity?.dataIds || [selectedInstitution]).includes(session.institution))
       .map(session => session.unit).filter((unit): unit is string => Boolean(unit));
     return Array.from(new Set([...rules, ...papers]));
