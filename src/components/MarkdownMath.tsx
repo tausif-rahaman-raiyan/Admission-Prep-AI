@@ -67,6 +67,9 @@ export const MathText = React.memo<MarkdownMathProps>(({ content, className = ''
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[[rehypeKatex, { strict: 'ignore', throwOnError: false, trust: false, output: 'htmlAndMathml' }]]}
+        components={{
+          img: ({ src, alt }) => <img src={src} alt={alt || 'Question image'} loading="lazy" decoding="async" referrerPolicy="no-referrer" className="my-2 max-h-72 max-w-full rounded-xl border border-slate-200 bg-white p-1 object-contain dark:border-indigo-900" />
+        }}
       >
         {preprocessMathText(content)}
       </ReactMarkdown>
