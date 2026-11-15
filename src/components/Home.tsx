@@ -108,6 +108,12 @@ export const Home: React.FC<HomeProps> = ({
 
 
   const currentUniversity = getUniversity(selectedInstitution);
+  useEffect(() => {
+    if (!currentUniversity) {
+      onSelectInstitution('DU');
+      onSelectUnit(null);
+    }
+  }, [currentUniversity, onSelectInstitution, onSelectUnit]);
   const availableUnits = useMemo(() => {
     const rules = currentUniversity?.units.filter(rule => rule.unit !== 'যাচাই করা হয়নি').map(rule => rule.unit) || [];
     const papers = sessions.filter(session => (currentUniversity?.dataIds || [selectedInstitution]).includes(session.institution))
