@@ -298,10 +298,8 @@ Note the point: the AI must **solve independently** and not trust the stored `co
 - `new GoogleGenAI({ apiKey })` → `ai.models.generateContentStream({ model, contents, config })`; stream chunks and append `chunk.text`, update UI on every chunk; support abort (AbortController) when the panel closes or the question changes.
 - **Image support**: for each question image and option image URL, `fetch` it → if SVG, send the first 10,000 chars as a fenced `xml` text block labelled "[Attached SVG Diagram for …]"; otherwise convert to base64 `inlineData {data, mimeType}` and send as a user message `parts: [...imageParts, {text: prompt}]`. Failures are silently skipped.
 - **Model fallback chain** (try in order, first that starts streaming wins; keep these in ONE editable constant file `aiModels.ts`):
-  - with images/SVG: `["gemini-3.8-flash","gemini-4-argon","gemini-2.5-flash"]`
-  - follow-up question: `["gemini-4-argon","gemini-3.8-flash","gemini-2.5-pro","gemini-2.5-flash"]`
-  - first explanation: `["gemini-3.8-flash","gemini-4-argon","gemini-2.5-flash"]`
-  - For the first two model names set `thinkingConfig.thinkingLevel = LOW` (first explanation) or `MEDIUM` (follow-up). Show the winning model name in the "Best Model" badge.
+  - Use one fallback chain for all tutor requests: `["gemini-3.8-flash","gemini-3.1-flash-lite","gemini-2.5-flash"]`.
+  - Try each model in order; continue to the next only if the current model fails. Show the model that produced the final answer in the model badge.
   - (These model IDs are copied from the original site; if any is not available in the API at build time, replace with currently available Gemini Flash/Pro model IDs.)
 - Errors: no key → message (§10.1); all models fail → "Could not generate an answer. Please check your API Key in Settings."
 - Auto-run the first explanation when the panel opens (once per question + key), and re-run if the key changes.
