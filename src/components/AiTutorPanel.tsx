@@ -215,7 +215,7 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
               key={idx}
               className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#070D1D] border border-indigo-100 dark:border-indigo-900/60 shadow-xs"
             >
-              <MarkdownMath content={sec} fontSize={explanationFontSize} />
+              <MathText content={sec} fontSize={explanationFontSize} />
             </div>
           ))}
         </div>
@@ -247,7 +247,7 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
                       : 'bg-white dark:bg-[#0C152B] border border-indigo-200 dark:border-indigo-800 text-slate-800 dark:text-slate-200 rounded-bl-xs'
                   }`}
                 >
-                  <MarkdownMath content={msg.text} fontSize={explanationFontSize} />
+                  <MathText content={msg.text} fontSize={explanationFontSize} />
                 </div>
                 {msg.role === 'user' && (
                   <div className="w-7 h-7 rounded-full bg-slate-700 text-white flex items-center justify-center shrink-0">
