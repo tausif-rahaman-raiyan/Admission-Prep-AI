@@ -49,26 +49,26 @@ async function startServer() {
               systemInstruction: 'You are an accurate admission coach. Independently solve every question and verify the correct option. Reply in clear Bengali mixed with standard English scientific terms. Put mathematical expressions and fractions in LaTeX enclosed by $...$ or $$...$$. Start an initial solution with ✅ **সঠিক উত্তর:** and then concise numbered sections.',
             },
           });
-          res.write(`data: ${JSON.stringify({ model, reset: true })}\\n\\n`);
+          res.write(`data: ${JSON.stringify({ model, reset: true })}\n\n`);
           let emittedText = false;
           for await (const chunk of streamResult) {
             if (res.destroyed || res.writableEnded) return;
             const text = chunk.text || '';
             if (text) {
               emittedText = true;
-              res.write(`data: ${JSON.stringify({ text })}\\n\\n`);
+              res.write(`data: ${JSON.stringify({ text })}\n\n`);
             }
           }
           if (!emittedText) throw new Error('Model returned an empty response');
-          res.write('data: [DONE]\\n\\n');
+          res.write('data: [DONE]\n\n');
           return res.end();
         } catch (error: any) {
           failures.push(`${model}: ${error?.message || 'request failed'}`);
           console.warn(`Gemini model ${model} failed; moving to the next configured model.`, error?.message);
         }
       }
-      res.write(`data: ${JSON.stringify({ error: `সব Gemini মডেল ব্যর্থ হয়েছে। ${failures.join(' | ')}` })}\\n\\n`);
-      res.write('data: [DONE]\\n\\n');
+      res.write(`data: ${JSON.stringify({ error: `সব Gemini মডেল ব্যর্থ হয়েছে। ${failures.join(' | ')}` })}\n\n`);
+      res.write('data: [DONE]\n\n');
       res.end();
 
     } catch (error: any) {
