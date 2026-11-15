@@ -15,7 +15,7 @@ export type Uni = {
 };
 const todo = (unit: string): UnitRule => ({ unit, label: unit + ' Unit', year: 'যাচাই করা হয়নি', compulsory: [], totalSubjects: 0, verified: false });
 const make = (id: string, short: string, nameBn: string, nameEn: string, group: UniversityGroup, brand: [string,string], extra: Partial<Uni> = {}): Uni => ({
-  id, short, nameBn, nameEn, group, brand, units: [], hasQuestions: false, ...extra
+  id, short, nameBn, nameEn, group, brand, units: [todo('যাচাই করা হয়নি')], hasQuestions: false, ...extra
 });
 
 export const universities: Uni[] = [
