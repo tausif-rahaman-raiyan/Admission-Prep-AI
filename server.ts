@@ -2,7 +2,7 @@ import express from 'express';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
-import { GoogleGenAI, ThinkingLevel } from '@google/genai';
+import { GoogleGenAI } from '@google/genai';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -32,54 +32,45 @@ async function startServer() {
         },
       });
 
-      const modelsToTry = ['gemini-4-argon', 'gemini-3.8-flash', 'gemini-2.5-flash'];
-      let streamResult = null;
-      let usedModel = '';
+      const modelsToTry = ['gemini-3.8-flash', 'gemini-3.1-flash-lite', 'gemini-2.5-flash'];
+      res.setHeader('Content-Type', 'text/event-stream; charset=utf-8');
+      res.setHeader('Cache-Control', 'no-cache, no-transform');
+      res.setHeader('Connection', 'keep-alive');
+      res.setHeader('X-Accel-Buffering', 'no');
 
+      const failures: string[] = [];
       for (const model of modelsToTry) {
+        if (res.destroyed || res.writableEnded) return;
         try {
-          const config: any = {
-            systemInstruction: 'You are an elite, fast, and accurate admission coach (AI Tutor Admission Coach). Independently solve every question and verify which option is right—never blindly trust a pre-selected answer. Write concisely in clear Bengali mixed with standard English scientific terms. Always format mathematical formulas, fractions (\\frac{a}{b}), and variables in LaTeX enclosed in dollar signs ($...$ for inline and $$...$$ for standalone equations). Always begin your initial solution with the exact first line: ✅ **সঠিক উত্তর:** followed by the AI-determined answer, then the 3 numbered sections (1. 🎯, 2. 📐, 3. ⚡).'
-          };
-
-          if (model === 'gemini-4-argon') {
-            config.thinkingConfig = { thinkingLevel: ThinkingLevel.MEDIUM };
-          } else if (model === 'gemini-3.8-flash') {
-            config.thinkingConfig = { thinkingLevel: ThinkingLevel.LOW };
-          }
-
-          streamResult = await ai.models.generateContentStream({
+          const streamResult = await ai.models.generateContentStream({
             model,
             contents: prompt,
-            config,
+            config: {
+              systemInstruction: 'You are an accurate admission coach. Independently solve every question and verify the correct option. Reply in clear Bengali mixed with standard English scientific terms. Put mathematical expressions and fractions in LaTeX enclosed by $...$ or $$...$$. Start an initial solution with ✅ **সঠিক উত্তর:** and then concise numbered sections.',
+            },
           });
-          usedModel = model;
-          break;
-        } catch (e: any) {
-          console.warn(`Model ${model} failed, trying next:`, e?.message);
+          res.write(`data: ${JSON.stringify({ model, reset: true })}\\n\\n`);
+          let emittedText = false;
+          for await (const chunk of streamResult) {
+            if (res.destroyed || res.writableEnded) return;
+            const text = chunk.text || '';
+            if (text) {
+              emittedText = true;
+              res.write(`data: ${JSON.stringify({ text })}\\n\\n`);
+            }
+          }
+          if (!emittedText) throw new Error('Model returned an empty response');
+          res.write('data: [DONE]\\n\\n');
+          return res.end();
+        } catch (error: any) {
+          failures.push(`${model}: ${error?.message || 'request failed'}`);
+          console.warn(`Gemini model ${model} failed; moving to the next configured model.`, error?.message);
         }
       }
-
-      if (!streamResult) {
-        return res.status(500).json({ error: 'Failed to generate AI Tutor response from all available models.' });
-      }
-
-      res.setHeader('Content-Type', 'text/event-stream');
-      res.setHeader('Cache-Control', 'no-cache');
-      res.setHeader('Connection', 'keep-alive');
-
-      // Send metadata first
-      res.write(`data: ${JSON.stringify({ model: usedModel })}\n\n`);
-
-      for await (const chunk of streamResult) {
-        const text = chunk.text || '';
-        if (text) {
-          res.write(`data: ${JSON.stringify({ text })}\n\n`);
-        }
-      }
-
-      res.write(`data: [DONE]\n\n`);
+      res.write(`data: ${JSON.stringify({ error: `সব Gemini মডেল ব্যর্থ হয়েছে। ${failures.join(' | ')}` })}\\n\\n`);
+      res.write('data: [DONE]\\n\\n');
       res.end();
+
     } catch (error: any) {
       console.error('AI Tutor API error:', error);
       if (!res.headersSent) {
