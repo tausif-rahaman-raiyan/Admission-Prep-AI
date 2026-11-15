@@ -43,7 +43,7 @@ export function preprocessMathText(input: string): string {
 
   const parts = text.split(/(\$\$[\s\S]*?\$\$|\$[^$\n]+\$)/g);
   return parts.map(part => {
-    if (part.startsWith('$$') && part.endsWith('$$')) return `$${normalizeMathDigits(part.slice(2, -2)).replace(/(?<!d)\\frac/g, '\\dfrac')}$`;
+    if (part.startsWith('$$') && part.endsWith('$$')) return `$$${normalizeMathDigits(part.slice(2, -2)).replace(/(?<!d)\\frac/g, '\\dfrac')}$$`;
     if (part.startsWith('$') && part.endsWith('$')) return `$${normalizeMathDigits(part.slice(1, -1))}$`;
     return wrapBareMath(part);
   }).join('');
