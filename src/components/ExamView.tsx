@@ -737,7 +737,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
               });
 
               const rawScore = (correct * perMark) - (wrong * negative * perMark);
-              const score = Math.max(0, Number(rawScore.toFixed(2)));
+              const score = Number(rawScore.toFixed(2));
               const accuracy = (correct + wrong) > 0 ? Number(((correct / (correct + wrong)) * 100).toFixed(1)) : 0;
 
               return (
@@ -829,16 +829,14 @@ export const ExamView: React.FC<ExamViewProps> = ({
             return (
               <div
                 key={q.id || qIndex}
-                className={`p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#080E1E] border-2 transition-all space-y-4 ${
+                className={`p-5 sm:p-6 rounded-3xl border-2 transition-all space-y-4 ${
                   submitted
                     ? isCorrect
-                      ? 'border-emerald-400 dark:border-emerald-600/80 shadow-md shadow-emerald-500/5'
+                      ? 'bg-emerald-50 dark:bg-[#07241A] border-emerald-400 dark:border-emerald-600/80 shadow-md shadow-emerald-500/5'
                       : isAnswered
-                        ? 'border-rose-400 dark:border-rose-600/80 shadow-md shadow-rose-500/5'
-                        : 'border-slate-200 dark:border-indigo-950'
-                    : isLocked
-                      ? 'border-indigo-400 dark:border-indigo-600/80 shadow-md shadow-indigo-500/5'
-                      : 'border-slate-200 dark:border-indigo-950'
+                        ? 'bg-rose-50 dark:bg-[#2B0E14] border-rose-400 dark:border-rose-600/80 shadow-md shadow-rose-500/5'
+                        : 'bg-white dark:bg-[#080E1E] border-slate-200 dark:border-indigo-950'
+                    : `${theme.bgClass} ${theme.border} ${isLocked ? 'ring-1 ring-indigo-500/20' : ''}`
                 }`}
               >
                 {/* Header row: Question #, Subject badge, status */}
