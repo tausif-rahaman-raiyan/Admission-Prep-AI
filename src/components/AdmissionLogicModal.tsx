@@ -170,6 +170,15 @@ export const AdmissionLogicModal: React.FC<AdmissionLogicModalProps> = ({
                   </div>
                 </div>
 
+                {currentRule.eligibilityDetailsBn && (
+                  <div className="p-4 rounded-2xl bg-sky-50/70 dark:bg-[#0A1B2D] border border-sky-200 dark:border-sky-900/70 space-y-2">
+                    <div className="font-black text-sky-900 dark:text-sky-300 text-sm">আবেদন যোগ্যতা, মানবণ্টন ও পাশের শর্ত</div>
+                    <ul className="list-disc pl-5 space-y-2 text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                      {currentRule.eligibilityDetailsBn.map((item, index) => <li key={index}>{item}</li>)}
+                    </ul>
+                  </div>
+                )}
+
                 {/* Key Bullet Points */}
                 <div className="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
                   <div className="font-black text-slate-900 dark:text-slate-100">গুরুত্বপূর্ণ নির্দেশনাবলী:</div>
