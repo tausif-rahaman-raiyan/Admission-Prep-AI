@@ -15,6 +15,10 @@ interface ExamViewProps {
   onOpenApiKeyModal: () => void;
 }
 
+function readSavedExam(sessionId: string): { answers?: Record<string, number>; endTimestamp?: number; started?: boolean } | null {
+  try { const raw = localStorage.getItem('admission_app_exam_' + sessionId); return raw ? JSON.parse(raw) : null; } catch { return null; }
+}
+
 export const ExamView: React.FC<ExamViewProps> = ({
   session,
   onBack,
@@ -42,15 +46,18 @@ export const ExamView: React.FC<ExamViewProps> = ({
   // Selected RU option if mode === 'ru_c_groups': null by default (unselected)
   const [ruOptionChoice, setRuOptionChoice] = useState<'RU_COMBINED' | 'RU_MATH' | 'RU_BIO' | null>(null);
 
-  const [examStarted, setExamStarted] = useState(!session.subjectPickMode);
+  const [examStarted, setExamStarted] = useState(() => readSavedExam(session.id)?.started ?? !session.subjectPickMode);
+  const [resumedFromSave, setResumedFromSave] = useState(() => Boolean(readSavedExam(session.id)?.started));
 
   // Questions and Exam State
   const [questions, setQuestions] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [answers, setAnswers] = useState<Record<string, number>>({}); // qId -> optionIndex
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [answers, setAnswers] = useState<Record<string, number>>(() => readSavedExam(session.id)?.answers || {}); // qId -> optionIndex
   const [lockedQuestions, setLockedQuestions] = useState<Record<string, boolean>>({}); // qId -> true once answered
   const [submitted, setSubmitted] = useState(false);
-  const [timeRemaining, setTimeRemaining] = useState(session.durationMinutes * 60);
+  const [endTimestamp, setEndTimestamp] = useState(() => readSavedExam(session.id)?.endTimestamp || Date.now() + session.durationMinutes * 60_000);
+  const [timeRemaining, setTimeRemaining] = useState(() => Math.max(0, Math.ceil(((readSavedExam(session.id)?.endTimestamp || Date.now() + session.durationMinutes * 60_000) - Date.now()) / 1000)));
   const [activeSubjectTab, setActiveSubjectTab] = useState<string>('ALL');
   const [openAiTutorId, setOpenAiTutorId] = useState<string | null>(null);
   const [apiKeyToast, setApiKeyToast] = useState(false);
@@ -59,14 +66,15 @@ export const ExamView: React.FC<ExamViewProps> = ({
   useEffect(() => {
     async function loadExamQuestions() {
       setLoading(true);
+      setLoadError(null);
       try {
         const url = `${import.meta.env.BASE_URL}data/${session.institution}/${session.id}/questions.json`;
         const res = await fetch(url);
         if (!res.ok) {
-          throw new Error(`Questions file not found. Loading fallback sample paper.`);
+          throw new Error('Questions file not found. No sample questions will be substituted.');
         }
         let data = await res.json();
-        data = Array.isArray(data) ? data : [];
+        data = Array.isArray(data) ? data.map((question: any) => ({ ...question, uniId: session.institution === 'KhU' ? 'KU' : session.institution, unit: question.unit ?? session.unit, year: question.year ?? session.session, type: question.type ?? question.questionType ?? session.questionType })) : [];
 
         // If subjectPickMode, filter by picked subjects
         if (session.subjectPickMode && selectedSubjects.length > 0) {
@@ -75,18 +83,8 @@ export const ExamView: React.FC<ExamViewProps> = ({
         setQuestions(data);
       } catch (err: any) {
         console.warn(err);
-        // Fallback sample questions if file missing
-        const fallback = [
-          { id: "sample-1", number: 1, subject: "Physics", question: "একটি সরল দোলকের দৈর্ঘ্য 4 গুণ বাড়ালে এর দোলনকাল কত গুণ হবে?", options: ["2 গুণ", "4 গুণ", "8 গুণ", "অপরিবর্তিত থাকবে"], correctAnswer: 0, explanation: "T proportional to sqrt(l), so 4 times length means 2 times period." },
-          { id: "sample-2", number: 2, subject: "Chemistry", question: "নিচের কোন যৌগটি SN1 বিক্রিয়ায় সবচেয়ে দ্রুত বিক্রিয়া দেয়?", options: ["CH3Cl", "(CH3)2CHCl", "(CH3)3CCl", "CH3CH2Cl"], correctAnswer: 2, explanation: "Tertiary carbocation is most stable in SN1." },
-          { id: "sample-3", number: 3, subject: "Mathematics", question: "যদি f(x) = ln(tan x) হয়, তবে df/dx এর মান কত যখন x = pi/4?", options: ["0", "1", "2", "e"], correctAnswer: 2, explanation: "df/dx = 2/sin(2x) = 2 at pi/4." },
-          { id: "sample-4", number: 4, subject: "Biology", question: "কোন উদ্ভিদের মূলে মিথোজীবী নাইট্রোজেন সংবন্ধন ঘটে?", options: ["ধান", "মটরশুঁটি", "আম", "শাপলা"], correctAnswer: 1, explanation: "Leguminous plants fix nitrogen via Rhizobium." }
-        ];
-        // Filter fallback if subjectPickMode
-        const filtered = session.subjectPickMode && selectedSubjects.length > 0
-          ? fallback.filter(q => selectedSubjects.includes(q.subject))
-          : fallback;
-        setQuestions(filtered.length > 0 ? filtered : fallback);
+        setQuestions([]);
+        setLoadError(err?.message || 'এই সেশনের প্রশ্ন পাওয়া যায়নি।');
       } finally {
         setLoading(false);
       }
@@ -94,20 +92,29 @@ export const ExamView: React.FC<ExamViewProps> = ({
     loadExamQuestions();
   }, [session, selectedSubjects, examStarted]);
 
-  // Timer countdown
+  // Absolute end timestamp keeps the timer accurate when the tab sleeps.
   useEffect(() => {
     if (!examStarted || submitted || loading) return;
-    const timer = setInterval(() => {
-      setTimeRemaining(prev => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          handleSubmitExam();
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
+    const tick = () => {
+      const remaining = Math.max(0, Math.ceil((endTimestamp - Date.now()) / 1000));
+      setTimeRemaining(remaining);
+      if (remaining === 0) handleSubmitExam();
+    };
+    tick();
+    const timer = window.setInterval(tick, 1000);
+    return () => window.clearInterval(timer);
+  }, [examStarted, submitted, loading, endTimestamp]);
+
+  useEffect(() => {
+    if (submitted) return;
+    try { localStorage.setItem('admission_app_exam_' + session.id, JSON.stringify({ answers, endTimestamp, started: examStarted })); } catch {}
+  }, [answers, endTimestamp, examStarted, submitted, session.id]);
+
+  useEffect(() => {
+    if (!examStarted || submitted || loading) return;
+    const warnBeforeExit = (event: BeforeUnloadEvent) => { event.preventDefault(); event.returnValue = ''; };
+    window.addEventListener('beforeunload', warnBeforeExit);
+    return () => window.removeEventListener('beforeunload', warnBeforeExit);
   }, [examStarted, submitted, loading]);
 
   const formatTimer = (secs: number) => {
@@ -123,8 +130,6 @@ export const ExamView: React.FC<ExamViewProps> = ({
 
   const handleSelectOption = (qId: string, optIdx: number) => {
     if (submitted) return;
-    if (lockedQuestions[qId]) return; // Auto-lock rule: cannot change once selected
-
     setAnswers(prev => ({ ...prev, [qId]: optIdx }));
     setLockedQuestions(prev => ({ ...prev, [qId]: true }));
   };
@@ -149,6 +154,8 @@ export const ExamView: React.FC<ExamViewProps> = ({
   const handleSubmitExam = () => {
     if (submitted) return;
     setSubmitted(true);
+    try { localStorage.removeItem('admission_app_exam_' + session.id); } catch {}
+    setResumedFromSave(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     // Compute score based on university format
@@ -174,7 +181,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
     });
 
     const rawScore = (correct * perMark) - (wrong * negative * perMark);
-    const finalScore = Math.max(0, Number(rawScore.toFixed(2)));
+    const finalScore = Number(rawScore.toFixed(2));
 
     // Save attempt to history
     const attempt: ExamAttempt = {
@@ -200,7 +207,10 @@ export const ExamView: React.FC<ExamViewProps> = ({
     setAnswers({});
     setLockedQuestions({});
     setSubmitted(false);
+    setEndTimestamp(Date.now() + session.durationMinutes * 60_000);
     setTimeRemaining(session.durationMinutes * 60);
+    setResumedFromSave(false);
+    try { localStorage.removeItem('admission_app_exam_' + session.id); } catch {}
     setOpenAiTutorId(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -560,6 +570,8 @@ export const ExamView: React.FC<ExamViewProps> = ({
                 try {
                   localStorage.setItem(`admission_app_selected_subjects_${session.institution}_v2`, JSON.stringify(selectedSubjects));
                 } catch {}
+                setEndTimestamp(Date.now() + session.durationMinutes * 60_000);
+                setTimeRemaining(session.durationMinutes * 60);
                 setExamStarted(true);
               }}
               className="flex-1 sm:flex-initial px-8 py-3.5 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-black rounded-xl text-xs sm:text-sm shadow-md shadow-indigo-600/30 flex items-center justify-center gap-2 cursor-pointer transition-all"
@@ -646,6 +658,9 @@ export const ExamView: React.FC<ExamViewProps> = ({
       {/* Main Content Area */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-8">
         
+        {resumedFromSave && !submitted && <div className="rounded-xl border border-sky-200 bg-sky-50 px-4 py-3 text-sm font-semibold text-sky-900 dark:border-sky-900 dark:bg-sky-950/30 dark:text-sky-200">আগের পরীক্ষাটি পুনরায় চালু হয়েছে — উত্তর ও বাকি সময় পুনরুদ্ধার করা হয়েছে। <button onClick={() => setResumedFromSave(false)} className="ml-3 underline">ঠিক আছে</button></div>}
+        {loadError && !loading && !submitted && <div className="rounded-2xl border border-amber-300 bg-amber-50 p-6 text-center text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200"><h3 className="font-bold">প্রশ্ন লোড করা যায়নি</h3><p className="mt-2 text-sm">{loadError}</p><button onClick={onBack} className="mt-4 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-bold text-white">ফিরে যান</button></div>}
+
         {/* SUBMITTED RESULT REPORT CARD (§8.3) */}
         {submitted && (
           <div className="p-6 rounded-3xl bg-white dark:bg-[#080E1E] border-2 border-indigo-200 dark:border-indigo-900/80 shadow-xl space-y-6 animate-in fade-in zoom-in-95 duration-200">
