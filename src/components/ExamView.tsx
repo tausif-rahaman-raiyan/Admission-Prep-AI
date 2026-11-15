@@ -756,7 +756,19 @@ export const ExamView: React.FC<ExamViewProps> = ({
               const rawScore = (correct * perMark) - (wrong * negative * perMark);
               const score = Number(rawScore.toFixed(2));
               const passRequirement = getPassRequirement(totalPossible);
-              const passed = passRequirement ? score >= passRequirement.required : null;
+              let subjectMinimumsPassed = true;
+              const unitKey = (session.unit || '').toUpperCase().replace(' UNIT', '');
+              const subjectMinimums = admissionRule.passCriteriaByUnit?.[unitKey]?.subjectMinimums || {};
+              Object.entries(subjectMinimums).forEach(([subjectName, minimum]) => {
+                const subjectQuestions = mcqQuestions.filter(q => String(q.subject || '').toLowerCase() === subjectName.toLowerCase());
+                if (subjectQuestions.length) {
+                  const subjectCorrect = subjectQuestions.filter(q => answers[q.id] === q.correctAnswer).length;
+                  const subjectWrong = subjectQuestions.filter(q => answers[q.id] !== undefined && answers[q.id] !== q.correctAnswer).length;
+                  const subjectScore = subjectCorrect * perMark - subjectWrong * negative * perMark;
+                  if (subjectScore < minimum) subjectMinimumsPassed = false;
+                }
+              });
+              const passed = passRequirement ? score >= passRequirement.required && subjectMinimumsPassed : null;
               const accuracy = (correct + wrong) > 0 ? Number(((correct / (correct + wrong)) * 100).toFixed(1)) : 0;
 
               return (
