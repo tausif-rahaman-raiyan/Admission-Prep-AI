@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Fuse from 'fuse.js';
-import { Search, Sparkles, Key, BookOpen, ArrowRight, Layers, FileText, Info, X } from 'lucide-react';
+import { Search, Sparkles, Key, BookOpen, ArrowRight, Layers, FileText, Info } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { institutions } from '../data/institutions';
 import { sessions, SessionItem } from '../data/sessions';
