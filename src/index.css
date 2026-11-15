@@ -13,3 +13,12 @@
 .font-bryndan {
   font-family: 'Bryndan Write', 'Patrick Hand', 'Caveat', 'Atma', 'Segoe Print', cursive, sans-serif;
 }
+
+
+/* Responsive KaTeX and horizontal overflow guard. */
+.math-text { min-width: 0; overflow-wrap: anywhere; }
+.math-text .katex-display { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 0.25rem 0; }
+.math-text .katex { font-size: 1em; }
+@media (max-width: 640px) { .math-text .katex { font-size: 0.94em; } .math-text .katex-display { font-size: 0.9em; } }
+html, body, #root { max-width: 100%; min-height: 100%; }
+body { overflow-x: hidden; }
