@@ -4,7 +4,7 @@ import { Search, Sparkles, Key, BookOpen, ArrowRight, Layers, FileText, Info } f
 import { siteConfig } from '../data/siteConfig';
 import { institutions } from '../data/institutions';
 import { sessions, SessionItem } from '../data/sessions';
-import { getUniversity, universities } from '../data/universities';
+import { getUniversity } from '../data/universities';
 
 interface HomeProps {
   manifestPapers: Record<string, any>;
@@ -140,7 +140,7 @@ export const Home: React.FC<HomeProps> = ({
       }
     } else if (selectedInstitution === 'ALL') {
       const ids = filteredOtherUniversities.map(item => item.id);
-      source = source.filter(session => ids.includes(session.institution));
+      source = source.filter(session => ids.includes(session.institution) && !/medical|mbbs|^med$/i.test(session.institution));
     } else {
       if (!currentUniversity?.hasQuestions) return [];
       source = source.filter(session => (currentUniversity.dataIds || [currentUniversity.id]).includes(session.institution));
