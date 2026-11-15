@@ -314,16 +314,18 @@ export const Home: React.FC<HomeProps> = ({
                 {/* Action Buttons */}
                 <div className="pt-2 flex items-center gap-2">
                   <button
+                    disabled={!hasQuestions}
                     onClick={() => onOpenQuestionBank(session)}
-                    className={`flex-1 py-2.5 px-3 rounded-xl font-extrabold text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer ${palette.seeBtn}`}
+                    className={`flex-1 py-2.5 px-3 rounded-xl font-extrabold text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer ${palette.seeBtn} disabled:opacity-40 disabled:cursor-not-allowed`}
                   >
                     <BookOpen className="w-3.5 h-3.5" />
                     <span>See question</span>
                   </button>
 
                   <button
+                    disabled={!hasQuestions}
                     onClick={() => onStartExam(session)}
-                    className={`flex-1 py-2.5 px-3 rounded-xl font-extrabold text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-sm ${palette.startBtn}`}
+                    className={`flex-1 py-2.5 px-3 rounded-xl font-extrabold text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-sm ${palette.startBtn} disabled:opacity-40 disabled:cursor-not-allowed`}
                   >
                     <span>Start Exam</span>
                   </button>
