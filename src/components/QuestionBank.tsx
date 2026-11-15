@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { ArrowLeft, Search, Sparkles, Check, HelpCircle, BookOpen, Key, AlertCircle } from 'lucide-react';
 import { SessionItem } from '../data/sessions';
 import { getSubjectTheme } from '../data/subjects';
-import { MarkdownMath } from './MarkdownMath';
+import { MathText } from './MarkdownMath';
 import { AiTutorPanel } from './AiTutorPanel';
 import { storage, UiSettings } from '../utils/storage';
 
@@ -307,7 +307,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
 
                 {/* Question Stem */}
                 <div className="text-slate-900 dark:text-slate-100 font-medium">
-                  <MarkdownMath content={q.question} fontSize={uiSettings.questionFontPx} />
+                  <MathText content={q.question} fontSize={uiSettings.questionFontPx} />
                 </div>
 
                 {/* Question Images if any */}
