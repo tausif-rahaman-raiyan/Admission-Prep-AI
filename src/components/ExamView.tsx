@@ -768,12 +768,12 @@ export const ExamView: React.FC<ExamViewProps> = ({
                   if (subjectScore < minimum) subjectMinimumsPassed = false;
                 }
               });
-              const passed = passRequirement ? score >= passRequirement.required && subjectMinimumsPassed : null;
+              const passed = passRequirement && mcqCount > 0 ? score >= passRequirement.required && subjectMinimumsPassed : null;
               const accuracy = (correct + wrong) > 0 ? Number(((correct / (correct + wrong)) * 100).toFixed(1)) : 0;
 
               return (
                 <div className="space-y-3">
-                {passRequirement && (
+                {passRequirement && mcqCount > 0 && (
                   <div className={`rounded-2xl border p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 ${passed ? 'border-emerald-300 bg-emerald-50 dark:border-emerald-800 dark:bg-emerald-950/30' : 'border-rose-300 bg-rose-50 dark:border-rose-800 dark:bg-rose-950/30'}`}>
                     <div>
                       <div className={`text-sm font-black ${passed ? 'text-emerald-800 dark:text-emerald-300' : 'text-rose-800 dark:text-rose-300'}`}>{passed ? 'PASS — পাশ করেছেন' : 'NOT PASSED — পাশের শর্ত পূরণ হয়নি'}</div>
@@ -782,6 +782,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
                     <span className={`text-xs font-black px-3 py-1.5 rounded-lg ${passed ? 'bg-emerald-600 text-white' : 'bg-rose-600 text-white'}`}>{passed ? 'QUALIFIED' : 'BELOW PASS MARK'}</span>
                   </div>
                 )}
+                {passRequirement && mcqCount === 0 && <div className="rounded-2xl border border-amber-300 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/30 p-4 text-xs font-semibold text-amber-800 dark:text-amber-300">Written-only paper: automatic pass evaluation is unavailable because written answers require manual marking. Pass requirement: {passRequirement.required} / {totalPossible}.</div>}
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
                   <div className="p-4 rounded-2xl bg-indigo-50 dark:bg-[#121B33] border border-indigo-200 dark:border-indigo-800 text-center space-y-1">
                     <div className="text-xl sm:text-2xl font-black text-indigo-700 dark:text-sky-300 font-mono">
