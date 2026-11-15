@@ -33,7 +33,7 @@ export const AdmissionRulesPage: React.FC<AdmissionRulesPageProps> = ({
 
         <div className="flex items-center gap-2">
           <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs font-black uppercase tracking-wider">
-            ২০২৫-২৬ শিক্ষাবর্ষের আনুষ্ঠানিক ভর্তি নীতিমালা
+            ভর্তি নির্দেশিকা • সংশ্লিষ্ট সার্কুলার যাচাই করুন
           </span>
         </div>
       </div>
@@ -313,6 +313,15 @@ export const AdmissionRulesPage: React.FC<AdmissionRulesPageProps> = ({
                 </div>
               </div>
             </div>
+
+            {currentRule.eligibilityDetailsBn && (
+              <div className="p-5 rounded-2xl bg-sky-50/70 dark:bg-[#0A1B2D] border border-sky-200 dark:border-sky-900/70 space-y-3">
+                <div className="font-black text-sky-900 dark:text-sky-300 text-sm sm:text-base">আবেদন যোগ্যতা, মানবণ্টন ও পাশের শর্ত</div>
+                <ul className="list-disc pl-5 space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                  {currentRule.eligibilityDetailsBn.map((item, index) => <li key={index}>{item}</li>)}
+                </ul>
+              </div>
+            )}
 
             {/* University Details List */}
             <div className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
