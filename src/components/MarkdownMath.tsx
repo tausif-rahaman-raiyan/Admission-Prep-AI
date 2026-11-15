@@ -22,7 +22,7 @@ function normalizeMathDigits(value: string): string {
 function wrapBareMath(segment: string): string {
   return segment.replace(
     /(?<!\\)(\\(?:frac|dfrac|tfrac|sqrt)\s*\{[^{}]*\}(?:\s*\{[^{}]*\})?|\b[A-Za-z0-9)\]]+\s*(?:\^|_)\s*\{?[-+A-Za-z0-9{}]+\}?)/g,
-    match => \`$\${normalizeMathDigits(match)}$\`,
+    match => `$${normalizeMathDigits(match)}$`,
   );
 }
 
@@ -38,13 +38,13 @@ export function preprocessMathText(input: string): string {
   if (dollarMatches.length % 2 === 1) {
     const last = dollarMatches[dollarMatches.length - 1];
     const index = last.index ?? -1;
-    if (index >= 0) text = \`\${text.slice(0, index)}\\\${text.slice(index)}\`;
+    if (index >= 0) text = `${text.slice(0, index)}\\${text.slice(index)}`;
   }
 
   const parts = text.split(/(\$\$[\s\S]*?\$\$|\$[^$\n]+\$)/g);
   return parts.map(part => {
-    if (part.startsWith('$$') && part.endsWith('$$')) return \`$$\${normalizeMathDigits(part.slice(2, -2))}$$\`;
-    if (part.startsWith('$') && part.endsWith('$')) return \`$\${normalizeMathDigits(part.slice(1, -1))}$\`;
+    if (part.startsWith('$$') && part.endsWith('$$')) return `$$${normalizeMathDigits(part.slice(2, -2))}$$`;
+    if (part.startsWith('$') && part.endsWith('$')) return `$${normalizeMathDigits(part.slice(1, -1))}$`;
     return wrapBareMath(part);
   }).join('');
 }
@@ -63,7 +63,7 @@ class MathErrorBoundary extends Component<{ children: ReactNode; raw: string }, 
 
 export const MarkdownMath: React.FC<MarkdownMathProps> = ({ content, className = '', fontSize }) => (
   <MathErrorBoundary raw={content}>
-    <div className={\`math-text prose dark:prose-invert max-w-none text-slate-800 dark:text-slate-200 leading-relaxed \${className}\`} style={fontSize ? { fontSize: \`\${fontSize}px\` } : undefined}>
+    <div className={`math-text prose dark:prose-invert max-w-none text-slate-800 dark:text-slate-200 leading-relaxed ${className}`} style={fontSize ? { fontSize: `${fontSize}px` } : undefined}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[[rehypeKatex, { strict: 'ignore', throwOnError: false, trust: false, output: 'htmlAndMathml' }]]}
