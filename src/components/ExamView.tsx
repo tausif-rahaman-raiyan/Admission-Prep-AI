@@ -918,7 +918,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
                             {optionLabel}
                           </span>
                           <div className="flex-1 leading-snug space-y-2">
-                            {opt && <MarkdownMath content={opt} />}
+                            {opt && <MathText content={opt} />}
                             {optImgs.length > 0 && (
                               <div className="flex flex-wrap gap-2">
                                 {optImgs.map((imgUrl: string, imgI: number) => (
@@ -953,7 +953,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
                         <span>Official Solution & Explanation</span>
                       </div>
                       <div style={{ fontSize: `${uiSettings.explanationFontPx}px` }} className="text-slate-800 dark:text-slate-200 leading-relaxed">
-                        <MarkdownMath content={q.explanation} />
+                        <MathText content={q.explanation} />
                       </div>
                     </div>
 
