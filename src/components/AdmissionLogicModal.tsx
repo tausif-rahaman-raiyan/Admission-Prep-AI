@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { X, BookOpen, CheckCircle2, AlertTriangle, ShieldCheck, HelpCircle, Layers, ArrowRight } from 'lucide-react';
 import { admissionComparisonTable, universityAdmissionRules, UniversityAdmissionRule } from '../data/admissionLogic';
 
@@ -19,6 +19,14 @@ export const AdmissionLogicModal: React.FC<AdmissionLogicModalProps> = ({
   const [selectedUnivId, setSelectedUnivId] = useState<string>(
     initialUniversityId && universityAdmissionRules[initialUniversityId] ? initialUniversityId : 'DU'
   );
+
+  // When the criteria dialog opens from an exam result, always show that exam's university.
+  useEffect(() => {
+    if (!isOpen) return;
+    const selected = initialUniversityId && universityAdmissionRules[initialUniversityId] ? initialUniversityId : 'DU';
+    setSelectedUnivId(selected);
+    setActiveTab('details');
+  }, [isOpen, initialUniversityId]);
 
   if (!isOpen) return null;
 
