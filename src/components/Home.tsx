@@ -1,10 +1,10 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Fuse from 'fuse.js';
-import { Search, Sparkles, Key, BookOpen, Clock, Award, CheckCircle, ArrowRight, Layers, FileText, Info } from 'lucide-react';
+import { Search, Sparkles, Key, BookOpen, ArrowRight, Layers, FileText, Info, X } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { institutions } from '../data/institutions';
 import { sessions, SessionItem } from '../data/sessions';
-import { getUniversity, universityGroups } from '../data/universities';
+import { getUniversity } from '../data/universities';
 
 interface HomeProps {
   manifestPapers: Record<string, any>;
@@ -19,6 +19,8 @@ interface HomeProps {
   onOpenApiKeyModal: () => void;
   onOpenRulesModal: (univId?: string) => void;
 }
+
+const MAIN_UNIVERSITIES = ['DU', 'RU', 'JU', 'CU', 'GST', 'CoU', 'JnU', 'KU'];
 
 const PALETTES = [
   {
@@ -92,14 +94,17 @@ export const Home: React.FC<HomeProps> = ({
 }) => {
   const [showUniversitySheet, setShowUniversitySheet] = useState(false);
   const [universitySearch, setUniversitySearch] = useState('');
+  const sessionSectionRef = useRef<HTMLElement>(null);
+  const firstRender = useRef(true);
   const universityFuse = useMemo(() => new Fuse(institutions, {
     keys: [{ name: 'nameBn', weight: 2 }, { name: 'nameEn', weight: 1 }, { name: 'code', weight: 1.5 }],
     threshold: 0.34,
     ignoreLocation: true,
   }), []);
+  const otherUniversities = useMemo(() => institutions.filter(uni => !MAIN_UNIVERSITIES.includes(uni.id)), []);
   const searchableUniversities = universitySearch.trim()
-    ? universityFuse.search(universitySearch).map(result => result.item)
-    : institutions;
+    ? universityFuse.search(universitySearch).map(result => result.item).filter(item => !MAIN_UNIVERSITIES.includes(item.id))
+    : otherUniversities;
 
 
   const currentUniversity = getUniversity(selectedInstitution);
@@ -126,6 +131,23 @@ export const Home: React.FC<HomeProps> = ({
   const firstAvailableSession = useMemo(() => {
     return filteredSessions.find(s => manifestPapers[s.id]);
   }, [filteredSessions, manifestPapers]);
+
+  useEffect(() => {
+    if (firstRender.current) { firstRender.current = false; return; }
+    requestAnimationFrame(() => {
+      const section = sessionSectionRef.current;
+      if (!section) return;
+      const targetTop = section.getBoundingClientRect().top + window.scrollY - window.innerHeight * 0.32;
+      window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+    });
+  }, [selectedInstitution]);
+
+  const selectUniversity = (id: string) => {
+    onSelectInstitution(id);
+    onSelectUnit(null);
+    setShowUniversitySheet(false);
+    setUniversitySearch('');
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
@@ -205,67 +227,31 @@ export const Home: React.FC<HomeProps> = ({
         </div>
       </section>
 
-      {/* Institution Selector Grid */}
+      {/* Compact university selector */}
       <section className="space-y-4">
-        <div>
-          <h2 className="text-lg sm:text-2xl font-black text-slate-900 dark:text-slate-100 flex items-center gap-2">
-            <Layers className="w-5 h-5 text-indigo-600 dark:text-sky-400" />
-            <span>বিশ্ববিদ্যালয় ও ইউনিট নির্বাচন করুন</span>
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-            Select an institution card below to filter admission papers & question banks
-          </p>
-          <button onClick={() => setShowUniversitySheet(true)} className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-xl border border-indigo-200 bg-indigo-50 px-4 py-2 text-xs font-extrabold text-indigo-700 dark:border-indigo-900 dark:bg-indigo-950/40 dark:text-sky-300">
-            <Layers className="h-4 w-4" /> সব বিশ্ববিদ্যালয়
-          </button>
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+          <div>
+            <h2 className="text-lg sm:text-2xl font-black text-slate-900 dark:text-slate-100 flex items-center gap-2"><Layers className="w-5 h-5 text-indigo-600 dark:text-sky-400" /><span>বিশ্ববিদ্যালয় নির্বাচন করুন</span></h2>
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">বিশ্ববিদ্যালয় নির্বাচন করে ভর্তি পরীক্ষার প্রশ্ন দেখুন</p>
+          </div>
+          <button onClick={() => setShowUniversitySheet(true)} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-indigo-300 bg-indigo-50 px-4 py-2 text-xs font-extrabold text-indigo-700 hover:bg-indigo-100 dark:border-indigo-900 dark:bg-indigo-950/40 dark:text-sky-300"><Layers className="h-4 w-4" /> Other Uni</button>
         </div>
 
-        <div className="space-y-5">
-          {universityGroups.map(group => {
-            const groupInstitutions = institutions.filter(inst => getUniversity(inst.id)?.group === group.id);
-            if (!groupInstitutions.length) return null;
-            return <section key={group.id} className="space-y-2"><h3 className="text-sm font-black text-slate-700 dark:text-slate-300">{group.label}</h3><div className="flex gap-3 overflow-x-auto pb-2 snap-x sm:grid sm:grid-cols-3 lg:grid-cols-5 sm:overflow-visible">{groupInstitutions.map(inst => {
-            const isSelected = selectedInstitution === inst.id;
-            return (
-              <div
-                key={inst.id}
-                onClick={() => {
-                  onSelectInstitution(inst.id);
-                  onSelectUnit(null);
-                }}
-                style={{ boxShadow: isSelected ? `0 0 0 2px ${getUniversity(inst.id)?.brand[0]}55, 0 10px 28px ${getUniversity(inst.id)?.brand[1]}30` : undefined }}
-                className={`min-w-[220px] snap-start sm:min-w-0 p-3.5 sm:p-4 rounded-2xl border-2 min-h-[112px] sm:min-h-[126px] flex flex-col justify-between cursor-pointer transition-all relative ${
-                  isSelected
-                    ? 'bg-indigo-100/90 dark:bg-gradient-to-br dark:from-indigo-900/90 dark:via-[#112046] dark:to-[#0A1329] border-indigo-600 dark:border-sky-400 shadow-lg scale-[1.01]'
-                    : 'border-slate-200 dark:border-indigo-950 bg-white dark:bg-[#0B1325] hover:border-indigo-400 dark:hover:border-indigo-700'
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <span style={{ background: `linear-gradient(135deg, ${getUniversity(inst.id)?.brand[0] || '#475569'}, ${getUniversity(inst.id)?.brand[1] || '#94a3b8'})` }} className="text-xs sm:text-sm font-black px-2.5 py-1.5 rounded-xl uppercase tracking-wider text-white shadow-sm ring-1 ring-white/30">{inst.code}</span>
-                  <span className={`text-[10px] font-black px-2 py-0.5 rounded-full ${inst.hasQuestions ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'}`}>{inst.hasQuestions ? 'প্রশ্ন আছে' : 'শীঘ্রই আসছে'}</span>
-                </div>
-
-                <div>
-                  <h3 className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-slate-100 line-clamp-1">
-                    {inst.nameBn}
-                  </h3>
-                  <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5 font-medium">
-                    {inst.desc}
-                  </p>
-                </div>
-
-              </div>
-            );
-          })}
-              </div>
-            </section>;
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {institutions.filter(inst => MAIN_UNIVERSITIES.includes(inst.id)).map(inst => {
+            const uni = getUniversity(inst.id);
+            const active = selectedInstitution === inst.id;
+            return <button key={inst.id} type="button" onClick={() => selectUniversity(inst.id)} aria-pressed={active} className={"min-h-[82px] rounded-2xl border-2 p-3 text-left transition-all " + (active ? "border-indigo-500 bg-indigo-50 shadow-md dark:border-sky-400 dark:bg-indigo-950/60" : "border-slate-200 bg-white hover:border-indigo-300 dark:border-slate-800 dark:bg-[#0B1325] dark:hover:border-indigo-700")}>
+              <div className="flex items-center justify-between gap-2"><span className="rounded-lg px-2.5 py-1 text-xs font-black text-white" style={{ background: "linear-gradient(135deg, " + (uni?.brand[0] || "#475569") + ", " + (uni?.brand[1] || "#94a3b8") + ")" }}>{inst.code}</span><span className={"text-[9px] font-bold " + (inst.hasQuestions ? "text-emerald-600 dark:text-emerald-400" : "text-slate-400")}>{inst.hasQuestions ? "প্রশ্ন আছে" : ""}</span></div>
+              <div className="mt-2 text-xs sm:text-sm font-extrabold text-slate-900 dark:text-slate-100 line-clamp-1">{inst.nameBn}</div>
+            </button>;
           })}
         </div>
 
         {availableUnits.length > 1 && (
-          <div className="flex flex-wrap items-center gap-2 pt-2" aria-label="University unit selector">
+          <div className="flex flex-wrap items-center gap-2 pt-1" aria-label="University unit selector">
             <span className="text-xs font-bold text-slate-500">ইউনিট</span>
-            {availableUnits.map(unit => <button key={unit} onClick={() => onSelectUnit(selectedUnit === unit ? null : unit)} aria-pressed={selectedUnit === unit} className={`min-h-10 px-4 py-2 rounded-xl text-xs font-bold ${selectedUnit === unit ? 'bg-indigo-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700'}`}>{unit} Unit</button>)}
+            {availableUnits.map(unit => <button key={unit} onClick={() => onSelectUnit(selectedUnit === unit ? null : unit)} aria-pressed={selectedUnit === unit} className={"min-h-10 px-4 py-2 rounded-xl text-xs font-bold " + (selectedUnit === unit ? "bg-indigo-600 text-white" : "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700")}>{unit} Unit</button>)}
           </div>
         )}
 
@@ -279,7 +265,7 @@ export const Home: React.FC<HomeProps> = ({
               {(() => {
                 const rule = currentUniversity.units.find(unit => unit.unit === (selectedUnit || currentUniversity.units[0].unit));
                 if (!rule?.verified) return <p className="text-xs text-amber-700 dark:text-amber-300">এই ইউনিটের বিষয় ও নম্বর বণ্টন যাচাই করা হয়নি।</p>;
-                return <div className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed"><b className="text-emerald-700 dark:text-emerald-400">আবশ্যিক: </b>{rule.compulsory.map(subject => subject.subject + ' (' + subject.marks + ')').join(', ')} <b className="ml-2 text-purple-700 dark:text-purple-400">ঐচ্ছিক: </b>{rule.optionalPick?.note || 'প্রযোজ্য নয়'}</div>;
+                return <div className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed"><b className="text-emerald-700 dark:text-emerald-400">আবশ্যিক: </b>{rule.compulsory.map(subject => subject.subject + " (" + subject.marks + ")").join(", ")} <b className="ml-2 text-purple-700 dark:text-purple-400">ঐচ্ছিক: </b>{rule.optionalPick?.note || "প্রযোজ্য নয়"}</div>;
               })()}
             </div>
             <button onClick={() => onOpenRulesModal(selectedInstitution)} className="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold rounded-xl text-xs flex items-center gap-2 cursor-pointer"><Info className="w-3.5 h-3.5" />সম্পূর্ণ মানবণ্টন নির্দেশিকা দেখুন</button>
@@ -288,8 +274,8 @@ export const Home: React.FC<HomeProps> = ({
       </section>
 
       {/* University session list */}
-      <section className="space-y-6">
-        <div className="flex justify-end text-xs font-extrabold text-slate-600 dark:text-slate-300">Total sessions: <span className="ml-1 text-indigo-600 dark:text-sky-400">{filteredSessions.length}</span></div>
+      <section ref={sessionSectionRef} className="scroll-mt-24 space-y-6">
+        <div className="flex items-center justify-between gap-3"><h2 className="text-base sm:text-lg font-black text-slate-900 dark:text-slate-100">{currentUniversity?.nameBn || 'ভর্তি পরীক্ষার প্রশ্ন'}</h2>{selectedUnit && <span className="rounded-lg bg-indigo-100 px-2.5 py-1 text-xs font-bold text-indigo-700 dark:bg-indigo-950 dark:text-sky-300">{selectedUnit} Unit</span>}</div>
 
         {/* Session Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
@@ -362,10 +348,10 @@ export const Home: React.FC<HomeProps> = ({
       {showUniversitySheet && (
         <div className="fixed inset-0 z-[100]">
           <button aria-label="Close university list" className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onClick={() => setShowUniversitySheet(false)} />
-          <section role="dialog" aria-modal="true" aria-label="সব বিশ্ববিদ্যালয়" className="absolute inset-x-0 bottom-0 mx-auto flex max-h-[90dvh] w-full max-w-2xl flex-col rounded-t-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-800 dark:bg-[#0A1224] pb-[env(safe-area-inset-bottom)]">
+          <section role="dialog" aria-modal="true" aria-label="Other universities" className="absolute inset-x-0 bottom-0 mx-auto flex max-h-[90dvh] w-full max-w-2xl flex-col rounded-t-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-800 dark:bg-[#0A1224] pb-[env(safe-area-inset-bottom)]">
             <div className="mx-auto mt-3 h-1.5 w-12 rounded-full bg-slate-300 dark:bg-slate-700" />
             <header className="flex items-center justify-between gap-3 border-b border-slate-200 px-5 py-4 dark:border-slate-800">
-              <div><h2 className="text-lg font-black">সব বিশ্ববিদ্যালয়</h2><p className="text-xs text-slate-500">বাংলা বা ইংরেজি নামে খুঁজুন</p></div>
+              <div><h2 className="text-lg font-black">Other Universities</h2><p className="text-xs text-slate-500">বাংলা বা ইংরেজি নামে খুঁজুন</p></div>
               <button onClick={() => setShowUniversitySheet(false)} className="min-h-11 min-w-11 rounded-xl bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200">✕</button>
             </header>
             <div className="p-4">
@@ -374,10 +360,10 @@ export const Home: React.FC<HomeProps> = ({
             <div className="min-h-0 flex-1 overflow-y-auto px-4 pb-5">
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                 {searchableUniversities.map(uni => (
-                  <button key={uni.id} onClick={() => { onSelectInstitution(uni.id); onSelectUnit(null); setShowUniversitySheet(false); setUniversitySearch(''); }} className={`flex min-h-14 items-center gap-3 rounded-xl border p-3 text-left ${selectedInstitution === uni.id ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950/40' : 'border-slate-200 dark:border-slate-800'}`}>
+                  <button key={uni.id} onClick={() => selectUniversity(uni.id)} className={`flex min-h-14 items-center gap-3 rounded-xl border p-3 text-left ${selectedInstitution === uni.id ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950/40' : 'border-slate-200 dark:border-slate-800'}`}>
                     <span className="grid h-10 w-12 shrink-0 place-items-center rounded-xl text-[10px] font-black text-white" style={{ background: 'linear-gradient(135deg, ' + (getUniversity(uni.id)?.brand[0] || '#475569') + ', ' + (getUniversity(uni.id)?.brand[1] || '#94a3b8') + ')' }}>{uni.code}</span>
                     <span className="min-w-0 flex-1"><span className="block truncate text-sm font-bold">{uni.nameBn}</span><span className="block truncate text-[11px] text-slate-500">{uni.nameEn}</span></span>
-                    <span className={`shrink-0 text-[10px] font-bold ${uni.hasQuestions ? 'text-emerald-600' : 'text-slate-400'}`}>{uni.hasQuestions ? 'প্রশ্ন আছে' : 'শীঘ্রই আসছে'}</span>
+                    <span className={`shrink-0 text-[10px] font-bold ${uni.hasQuestions ? 'text-emerald-600' : 'text-slate-400'}`}>{uni.hasQuestions ? 'প্রশ্ন আছে' : 'Soon'}</span>
                   </button>
                 ))}
                 {searchableUniversities.length === 0 && <p className="col-span-full py-8 text-center text-sm text-slate-500">কোনো বিশ্ববিদ্যালয় পাওয়া যায়নি।</p>}
