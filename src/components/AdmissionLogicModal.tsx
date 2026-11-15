@@ -32,7 +32,7 @@ export const AdmissionLogicModal: React.FC<AdmissionLogicModalProps> = ({
             <div>
               <div className="flex items-center gap-2">
                 <span className="px-2.5 py-0.5 rounded-full bg-indigo-600 text-white text-[10px] sm:text-xs font-black uppercase tracking-wider">
-                  2025–26 Official
+                  Admission Guide
                 </span>
                 <span className="text-xs text-slate-500 dark:text-slate-400 font-bold hidden sm:inline">
                   Subject Choice & Mark Distribution Logic
