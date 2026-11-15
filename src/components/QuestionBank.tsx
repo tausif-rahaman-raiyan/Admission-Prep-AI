@@ -7,6 +7,8 @@ import { AiTutorPanel } from './AiTutorPanel';
 import { storage, UiSettings } from '../utils/storage';
 
 import { getAdmissionRule } from '../data/admissionLogic';
+import { normalizeQuestionData } from '../utils/questionData';
+import { QuestionImage } from './QuestionImage';
 
 interface QuestionBankProps {
   session: SessionItem;
@@ -45,8 +47,15 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
         if (!res.ok) {
           throw new Error(`Questions file not found (404). This session may be coming soon.`);
         }
-        const data = await res.json();
-        const tagged = Array.isArray(data) ? data.map((question: any) => ({ ...question, uniId: session.institution === 'KhU' ? 'KU' : session.institution, unit: question.unit ?? session.unit, year: question.year ?? session.session, type: question.type ?? question.questionType ?? session.questionType })) : [];
+        const payload = await res.json();
+        const rows = Array.isArray(payload) ? payload : Array.isArray(payload?.questions) ? payload.questions : [];
+        const tagged = rows.map((question: any, index: number) => ({
+          ...normalizeQuestionData(question, index),
+          uniId: session.institution === 'KhU' ? 'KU' : session.institution,
+          unit: question.unit ?? session.unit,
+          year: question.year ?? session.session,
+          type: question.type ?? question.questionType ?? session.questionType
+        }));
         setQuestions(tagged);
       } catch (err: any) {
         console.error(err);
@@ -280,7 +289,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
             return (
               <div
                 key={q.id || idx}
-                className={`p-5 sm:p-6 rounded-3xl ${theme.border} ${theme.bgClass} shadow-md space-y-5 transition-all`}
+                className={`question-card p-5 sm:p-6 rounded-3xl ${theme.border} ${theme.bgClass} shadow-sm space-y-5 transition-colors`}
               >
                 {/* Question Header */}
                 <div className="flex items-center justify-between gap-3 flex-wrap">
@@ -315,14 +324,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                 {q.questionImageUrls && q.questionImageUrls.length > 0 && (
                   <div className="flex flex-wrap gap-3 pt-1">
                     {q.questionImageUrls.map((url: string, i: number) => (
-                      <img
-                        key={i}
-                        src={url.startsWith('http') ? url : `${import.meta.env.BASE_URL}${url}`}
-                        alt="Question diagram"
-                        loading="lazy"
-                        referrerPolicy="no-referrer"
-                        className="max-h-60 rounded-xl border border-slate-200 dark:border-indigo-900 shadow-sm object-contain"
-                      />
+                      <QuestionImage key={i} src={url} alt="Question diagram" className="max-h-60" />
                     ))}
                   </div>
                 )}
@@ -351,18 +353,11 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                             {label}
                           </span>
                           <div className="flex-1 text-slate-800 dark:text-slate-200 space-y-2">
-                            {opt && <MathText content={opt} />}
+                            {opt.trim() ? <MathText content={opt} /> : optImgs.length > 0 ? <span className="text-[10px] font-bold uppercase tracking-wide text-slate-500">চিত্রভিত্তিক বিকল্প</span> : <span className="text-xs text-amber-700 dark:text-amber-300">বিকল্পের তথ্য পাওয়া যায়নি</span>}
                             {optImgs.length > 0 && (
-                              <div className="flex flex-wrap gap-2">
+                              <div className="flex flex-wrap items-start gap-3">
                                 {optImgs.map((imgUrl: string, imgI: number) => (
-                                  <img
-                                    key={imgI}
-                                    src={imgUrl.startsWith('http') ? imgUrl : `${import.meta.env.BASE_URL}${imgUrl}`}
-                                    alt={`Option ${label}`}
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer"
-                                    className="max-h-36 rounded-lg border border-slate-200 dark:border-indigo-900 bg-white p-1 object-contain"
-                                  />
+                                  <QuestionImage key={imgI} src={imgUrl} alt={`Option ${label}`} className="max-h-52 sm:max-h-64" />
                                 ))}
                               </div>
                             )}
