@@ -627,9 +627,9 @@ export const ExamView: React.FC<ExamViewProps> = ({
 
             {/* Timer Chip */}
             <div className={`px-3.5 py-1.5 rounded-xl border font-mono font-extrabold text-xs sm:text-sm flex items-center gap-2 ${
-              timeRemaining < 300
+              timeRemaining < 120
                 ? 'bg-rose-50 text-rose-600 border-rose-300 dark:bg-rose-950/60 dark:text-rose-400 dark:border-rose-700 animate-pulse'
-                : 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-[#121933] dark:text-sky-300 dark:border-indigo-800'
+                : timeRemaining < 600 ? 'bg-amber-50 text-amber-700 border-amber-300 dark:bg-amber-950/50 dark:text-amber-300 dark:border-amber-700' : 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-[#121933] dark:text-sky-300 dark:border-indigo-800'
             }`}>
               <Clock className="w-4 h-4" />
               <span>{formatTimer(timeRemaining)}</span>
