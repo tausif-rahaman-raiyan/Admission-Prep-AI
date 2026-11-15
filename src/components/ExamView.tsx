@@ -57,7 +57,6 @@ export const ExamView: React.FC<ExamViewProps> = ({
   const [ruOptionChoice, setRuOptionChoice] = useState<'RU_COMBINED' | 'RU_MATH' | 'RU_BIO' | null>(null);
 
   const [examStarted, setExamStarted] = useState(() => readSavedExam(session.id)?.started ?? !session.subjectPickMode);
-  const [resumedFromSave, setResumedFromSave] = useState(() => Boolean(readSavedExam(session.id)?.started));
 
   // Questions and Exam State
   const [questions, setQuestions] = useState<any[]>([]);
@@ -166,6 +165,27 @@ export const ExamView: React.FC<ExamViewProps> = ({
     setLockedQuestions(prev => ({ ...prev, [qId]: true }));
   };
 
+  const getPassRequirement = (totalPossible: number) => {
+    const unitKey = (session.unit || (session.institution === 'AGRI' ? 'AGRI' : 'A')).toUpperCase().replace(' UNIT', '');
+    const criteria = admissionRule.passCriteriaByUnit?.[unitKey]
+      || admissionRule.passCriteriaByUnit?.[admissionRule.id]
+      || admissionRule.passCriteriaByUnit?.A;
+    if (!criteria) return null;
+    let required = criteria.overallPassMark;
+    if (admissionRule.id === 'DU') {
+      if (session.questionType === 'MCQ' && totalPossible <= 60) required = criteria.mcqPassMark || 24;
+      else if (session.questionType === 'Written' && totalPossible <= 40) required = criteria.writtenPassMark || 12;
+    }
+    return {
+      required: Number((required * (totalPossible / criteria.totalMarks)).toFixed(2)),
+      label: admissionRule.id === 'DU' && session.questionType === 'MCQ' && totalPossible <= 60
+        ? 'MCQ pass mark (24/60)'
+        : admissionRule.id === 'DU' && session.questionType === 'Written' && totalPossible <= 40
+          ? 'Written pass mark (12/40)'
+          : `Overall pass mark (${criteria.overallPassMark}/${criteria.totalMarks})`
+    };
+  };
+
   const getExamScoring = (mcqCount: number) => {
     if (admissionRule.id === 'RU') {
       const perMark = 1.25;
@@ -187,7 +207,6 @@ export const ExamView: React.FC<ExamViewProps> = ({
     if (submitted) return;
     setSubmitted(true);
     try { localStorage.removeItem('admission_app_exam_' + session.id); } catch {}
-    setResumedFromSave(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     // Compute score based on university format
@@ -241,7 +260,6 @@ export const ExamView: React.FC<ExamViewProps> = ({
     setSubmitted(false);
     setEndTimestamp(Date.now() + session.durationMinutes * 60_000);
     setTimeRemaining(session.durationMinutes * 60);
-    setResumedFromSave(false);
     try { localStorage.removeItem('admission_app_exam_' + session.id); } catch {}
     setOpenAiTutorId(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -680,7 +698,6 @@ export const ExamView: React.FC<ExamViewProps> = ({
       {/* Main Content Area */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-8">
         
-        {resumedFromSave && !submitted && <div className="rounded-xl border border-sky-200 bg-sky-50 px-4 py-3 text-sm font-semibold text-sky-900 dark:border-sky-900 dark:bg-sky-950/30 dark:text-sky-200">আগের পরীক্ষাটি পুনরায় চালু হয়েছে — উত্তর ও বাকি সময় পুনরুদ্ধার করা হয়েছে। <button onClick={() => setResumedFromSave(false)} className="ml-3 underline">ঠিক আছে</button></div>}
         {loadError && !loading && !submitted && <div className="rounded-2xl border border-amber-300 bg-amber-50 p-6 text-center text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200"><h3 className="font-bold">প্রশ্ন লোড করা যায়নি</h3><p className="mt-2 text-sm">{loadError}</p><button onClick={onBack} className="mt-4 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-bold text-white">ফিরে যান</button></div>}
 
         {/* SUBMITTED RESULT REPORT CARD (§8.3) */}
@@ -738,9 +755,21 @@ export const ExamView: React.FC<ExamViewProps> = ({
 
               const rawScore = (correct * perMark) - (wrong * negative * perMark);
               const score = Number(rawScore.toFixed(2));
+              const passRequirement = getPassRequirement(totalPossible);
+              const passed = passRequirement ? score >= passRequirement.required : null;
               const accuracy = (correct + wrong) > 0 ? Number(((correct / (correct + wrong)) * 100).toFixed(1)) : 0;
 
               return (
+                <div className="space-y-3">
+                {passRequirement && (
+                  <div className={`rounded-2xl border p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 ${passed ? 'border-emerald-300 bg-emerald-50 dark:border-emerald-800 dark:bg-emerald-950/30' : 'border-rose-300 bg-rose-50 dark:border-rose-800 dark:bg-rose-950/30'}`}>
+                    <div>
+                      <div className={`text-sm font-black ${passed ? 'text-emerald-800 dark:text-emerald-300' : 'text-rose-800 dark:text-rose-300'}`}>{passed ? 'PASS — পাশ করেছেন' : 'NOT PASSED — পাশের শর্ত পূরণ হয়নি'}</div>
+                      <div className="text-xs text-slate-600 dark:text-slate-300 mt-1">{passRequirement.label} • প্রয়োজন {passRequirement.required} / {totalPossible}</div>
+                    </div>
+                    <span className={`text-xs font-black px-3 py-1.5 rounded-lg ${passed ? 'bg-emerald-600 text-white' : 'bg-rose-600 text-white'}`}>{passed ? 'QUALIFIED' : 'BELOW PASS MARK'}</span>
+                  </div>
+                )}
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
                   <div className="p-4 rounded-2xl bg-indigo-50 dark:bg-[#121B33] border border-indigo-200 dark:border-indigo-800 text-center space-y-1">
                     <div className="text-xl sm:text-2xl font-black text-indigo-700 dark:text-sky-300 font-mono">
@@ -776,6 +805,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
                     </div>
                     <div className="text-[10px] font-black uppercase text-purple-600 dark:text-purple-400">Accuracy</div>
                   </div>
+                </div>
                 </div>
               );
             })()}
