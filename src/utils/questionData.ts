@@ -30,15 +30,18 @@ function normalizeOptionImages(value: unknown): string[][] {
 }
 
 function normalizeLegacyImageTokens(value: string): string {
-  return value.replace(
-    /\[IMAGE:\s*EXTERNAL_IMAGE_URL:\s*(https?:\/\/[^\]\s]+)\]/gi,
-    (_match, url: string) => '\n\n![Question image](' + url + ')\n\n',
-  );
+  return value
+    .replace(
+      /\[IMAGE:\s*EXTERNAL_IMAGE_URL:\s*(https?:\/\/[^\]\s]+)\]/gi,
+      (_match, url: string) => '\n\n![Question image](' + url + ')\n\n',
+    )
+    .replace(/\[IMAGE:\s*(?!EXTERNAL_IMAGE_URL:)([^\]]+)\]/gi, 'চিত্র সংযুক্ত নেই: $1');
 }
 
 function normalizeOptionText(value: unknown): string {
   const text = typeof value === 'string' ? value : value == null ? '' : String(value);
-  const missingImage = text.match(/^\[image:\s*([^\]]+)\]$/i);
+  const missingImage = text.match(/^\[image:\s*([^\]]+)\]$/i)
+    || text.match(/^(Q?\d+_OPT[A-E]_\d+\.(?:png|jpe?g|svg|webp))$/i);
   return missingImage ? 'চিত্র সংযুক্ত নেই: ' + missingImage[1] : normalizeLegacyImageTokens(text);
 }
 
