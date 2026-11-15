@@ -41,6 +41,13 @@ export const ExamView: React.FC<ExamViewProps> = ({
   // Selected subjects state: ONLY compulsory subjects are pre-selected!
   // Optional subjects start UNSELECTED as requested: "ঐচ্ছিক বিষয় নির্বাচন - age theke select kore dio na"
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>(() => {
+    try {
+      const saved = localStorage.getItem(`admission_app_selected_subjects_${session.institution}_v2`);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.every((value: unknown) => typeof value === 'string')) return parsed;
+      }
+    } catch {}
     return admissionRule.compulsorySubjects.map(s => s.name);
   });
 
