@@ -29,6 +29,11 @@ function normalizeOptionImages(value: unknown): string[][] {
   return [];
 }
 
+function normalizeOptionText(value: unknown): string {
+  const text = typeof value === 'string' ? value : value == null ? '' : String(value);
+  return text.replace(/^\\[image:\\s*([^\\]]+)\\]$/i, 'চিত্র সংযুক্ত নেই: $1');
+}
+
 function normalizeOptions(value: unknown): string[] {
   let entries: unknown[] = [];
   if (Array.isArray(value)) entries = value;
@@ -39,17 +44,24 @@ function normalizeOptions(value: unknown): string[] {
   }
 
   return entries.map(option => {
-    if (typeof option === 'string') return option;
+    if (typeof option === 'string') return normalizeOptionText(option);
     if (option && typeof option === 'object') {
       const item = option as Record<string, unknown>;
-      return String(item.text ?? item.label ?? item.value ?? '');
+      return normalizeOptionText(item.text ?? item.label ?? item.value ?? '');
     }
-    return option == null ? '' : String(option);
+    return normalizeOptionText(option);
   });
 }
 
+function normalizeLegacyImageTokens(value: string): string {
+  return value.replace(
+    /\\[IMAGE:\\s*EXTERNAL_IMAGE_URL:\\s*(https?:\\/\\/[^\\]\\s]+)\\]/gi,
+    (_match, url: string) => `\\n\\n![Question image](${url})\\n\\n`,
+  );
+}
+
 function normalizeExplanation(value: unknown): string {
-  if (typeof value === 'string') return value;
+  if (typeof value === 'string') return normalizeLegacyImageTokens(value);
   if (value && typeof value === 'object') {
     const item = value as Record<string, unknown>;
     return [
@@ -81,7 +93,7 @@ export function normalizeQuestionData(raw: any, index = 0): NormalizedQuestion {
     ...raw,
     id: String(raw?.id ?? raw?.questionId ?? `question-${index + 1}`),
     number: Number(raw?.number ?? raw?.questionNumber ?? index + 1),
-    question: typeof question === 'string' ? question : String(question ?? ''),
+    question: normalizeLegacyImageTokens(typeof question === 'string' ? question : String(question ?? '')),
     options,
     optionImageUrls,
     questionImageUrls,
