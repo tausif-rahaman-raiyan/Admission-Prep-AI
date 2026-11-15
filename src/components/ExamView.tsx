@@ -490,14 +490,18 @@ export const ExamView: React.FC<ExamViewProps> = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {admissionRule.optionalRule.options.map(opt => {
                   const isSelected = selectedSubjects.includes(opt.id);
+                  const selectedOptionalCount = selectedSubjects.filter(subject => !compulsoryNames.includes(subject)).length;
+                  const optionalLimit = admissionRule.mode === 'cu_pick_three' ? 3 : admissionRule.mode === 'jnu_pick_one' ? 1 : 2;
+                  const isDisabled = !isSelected && selectedOptionalCount >= optionalLimit;
                   return (
                     <div
                       key={opt.id}
-                      onClick={() => handleToggleOptionalSubject(opt.id)}
-                      className={`p-4 rounded-2xl border-2 cursor-pointer transition-all flex flex-col justify-between space-y-2 ${
+                      aria-disabled={isDisabled}
+                      onClick={() => { if (!isDisabled) handleToggleOptionalSubject(opt.id); }}
+                      className={`p-4 rounded-2xl border-2 transition-all flex flex-col justify-between space-y-2 ${isDisabled ? 'cursor-not-allowed opacity-40 grayscale bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800' : 'cursor-pointer'} ${
                         isSelected
                           ? 'bg-purple-100/90 dark:bg-purple-950/70 border-purple-600 dark:border-purple-400 shadow-md ring-2 ring-purple-400/30'
-                          : 'bg-white dark:bg-[#0B1325] border-slate-200 dark:border-indigo-950 hover:border-purple-400'
+                          : !isDisabled ? 'bg-white dark:bg-[#0B1325] border-slate-200 dark:border-indigo-950 hover:border-purple-400' : ''
                       }`}
                     >
                       <div className="flex items-start justify-between gap-2">
@@ -526,65 +530,10 @@ export const ExamView: React.FC<ExamViewProps> = ({
           </div>
         )}
 
-        {/* SECTION C: REAL-TIME DEPARTMENTAL ELIGIBILITY PREVIEW WIDGET */}
-        <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/70 dark:bg-[#1E1405] border border-amber-200 dark:border-amber-800/60 space-y-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-amber-900 dark:text-amber-300 font-black text-xs sm:text-sm">
-              <ShieldCheck className="w-4 h-4 text-amber-600" />
-              <span>অনুষদ ও বিভাগীয় ভর্তি যোগ্যতা পূর্বাভাস (Departmental Eligibility Preview)</span>
-            </div>
-            <span className="text-[10px] text-slate-400 font-medium hidden sm:inline">
-              Updates live with your subject choices
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            {/* Engineering Status */}
-            <div className={`p-3 rounded-xl border flex items-start gap-2.5 ${
-              eligibilityStatus.engineering
-                ? 'bg-emerald-50 dark:bg-[#07241A] border-emerald-300 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200'
-                : 'bg-rose-50 dark:bg-[#2B0E14] border-rose-300 dark:border-rose-900 text-rose-900 dark:text-rose-200'
-            }`}>
-              {eligibilityStatus.engineering ? (
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-              ) : (
-                <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
-              )}
-              <div>
-                <div className="font-black text-xs">
-                  ইঞ্জিনিয়ারিং ও প্রযুক্তি অনুষদ (Engineering, CSE, EEE): {eligibilityStatus.engineering ? '✅ উপযুক্ত (Eligible)' : '❌ অনুপযুক্ত (Not Eligible)'}
-                </div>
-                <div className="text-[11px] mt-0.5 opacity-90 leading-tight">
-                  {eligibilityStatus.engineering
-                    ? 'উচ্চতর গণিত ও পদার্থবিজ্ঞান উত্তর করায় সকল প্রকৌশল অনুষদে আবেদনের জন্য বিবেচনা করা হবে।'
-                    : 'উচ্চতর গণিত উত্তর না করায় সিএসই, ইইই বা প্রকৌশল অনুষদে ভর্তির সুযোগ থাকবে না।'}
-                </div>
-              </div>
-            </div>
-
-            {/* Life Science Status */}
-            <div className={`p-3 rounded-xl border flex items-start gap-2.5 ${
-              eligibilityStatus.biology
-                ? 'bg-emerald-50 dark:bg-[#07241A] border-emerald-300 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200'
-                : 'bg-amber-50 dark:bg-[#241706] border-amber-300 dark:border-amber-800 text-amber-900 dark:text-amber-200'
-            }`}>
-              {eligibilityStatus.biology ? (
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-              ) : (
-                <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-              )}
-              <div>
-                <div className="font-black text-xs">
-                  জীববিজ্ঞান ও ফার্মেসি অনুষদ (Pharmacy, Biology): {eligibilityStatus.biology ? '✅ উপযুক্ত (Eligible)' : '⚠️ সীমিত/অনুপযুক্ত (Restricted)'}
-                </div>
-                <div className="text-[11px] mt-0.5 opacity-90 leading-tight">
-                  {eligibilityStatus.biology
-                    ? 'জীববিজ্ঞান ও রসায়ন উত্তর করায় ফার্মেসি, অণুজীববিজ্ঞান ও কৃষি অনুষদে বিবেচিত হবেন।'
-                    : 'জীববিজ্ঞান উত্তর না করায় ফার্মেসি বা জীবন বিজ্ঞান অনুষদ পাওয়া যাবে না।'}
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* Compact eligibility summary */}
+        <div className="flex flex-wrap gap-2 text-[11px] font-bold">
+          <span className={`rounded-xl border px-3 py-2 ${eligibilityStatus.engineering ? 'border-indigo-300 bg-indigo-50 text-indigo-800 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-200' : 'border-slate-200 bg-slate-100 text-slate-500 dark:border-slate-800 dark:bg-slate-900'}`}>Engineering: {eligibilityStatus.engineering ? 'Eligible' : 'Not selected'}</span>
+          <span className={`rounded-xl border px-3 py-2 ${eligibilityStatus.biology ? 'border-purple-300 bg-purple-50 text-purple-800 dark:border-purple-800 dark:bg-purple-950/40 dark:text-purple-200' : 'border-slate-200 bg-slate-100 text-slate-500 dark:border-slate-800 dark:bg-slate-900'}`}>Biology / Pharmacy: {eligibilityStatus.biology ? 'Eligible' : 'Not selected'}</span>
         </div>
 
         {/* SECTION D: SUMMARY & START EXAMINATION BUTTON */}
