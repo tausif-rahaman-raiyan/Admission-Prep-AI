@@ -269,10 +269,10 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
           <p className="text-xs text-slate-500 max-w-md mx-auto">{errorMsg}</p>
           <div className="pt-2">
             <button
-              onClick={onStartExam}
+              onClick={onBack}
               className="px-5 py-2.5 bg-indigo-600 text-white font-bold rounded-xl text-xs cursor-pointer shadow-sm"
             >
-              Try DU 25-26 MCQ (Fully Loaded Sample)
+              Back to Sessions
             </button>
           </div>
         </div>
@@ -281,6 +281,15 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
       {/* Question Cards List */}
       {!loading && !errorMsg && (
         <div className="space-y-6">
+          <div className="text-xs font-semibold text-slate-500 dark:text-slate-400">Showing {filteredQuestions.length} of {questions.length} questions</div>
+          {filteredQuestions.length === 0 && (
+            <div className="rounded-2xl border border-slate-200 bg-white px-5 py-10 text-center dark:border-slate-800 dark:bg-[#080E1E]">
+              <BookOpen className="mx-auto h-9 w-9 text-slate-400" />
+              <p className="mt-3 text-sm font-bold text-slate-800 dark:text-slate-200">কোনো প্রশ্ন পাওয়া যায়নি</p>
+              <p className="mt-1 text-xs text-slate-500">Search text বা subject filter পরিবর্তন করে আবার চেষ্টা করুন।</p>
+              <button onClick={() => { setSearchQuery(''); setSelectedSubject('ALL'); }} className="mt-4 rounded-xl bg-indigo-600 px-4 py-2 text-xs font-bold text-white">Clear filters</button>
+            </div>
+          )}
           {filteredQuestions.map((q, idx) => {
             const theme = getSubjectTheme(q.subject);
             const isAiOpen = openAiTutorId === q.id;
