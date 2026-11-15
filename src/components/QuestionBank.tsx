@@ -46,7 +46,8 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
           throw new Error(`Questions file not found (404). This session may be coming soon.`);
         }
         const data = await res.json();
-        setQuestions(Array.isArray(data) ? data : []);
+        const tagged = Array.isArray(data) ? data.map((question: any) => ({ ...question, uniId: session.institution === 'KhU' ? 'KU' : session.institution, unit: question.unit ?? session.unit, year: question.year ?? session.session, type: question.type ?? question.questionType ?? session.questionType })) : [];
+        setQuestions(tagged);
       } catch (err: any) {
         console.error(err);
         setErrorMsg(err.message || 'Failed to load question bank');
