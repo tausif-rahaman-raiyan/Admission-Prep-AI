@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Sparkles, X, Copy, Check, Send, Bot, User, AlertCircle, Key } from 'lucide-react';
 import { MarkdownMath } from './MarkdownMath';
 import { storage } from '../utils/storage';
+import { streamTutorResponse, GEMINI_MODEL_FALLBACKS } from '../utils/aiProvider';
 
 interface AiTutorPanelProps {
   question: any;
@@ -24,7 +25,8 @@ export const AiTutorPanel: React.FC<AiTutorPanelProps> = ({
   const [apiKey, setApiKey] = useState(storage.getApiKey());
   const [loading, setLoading] = useState(false);
   const [streamedText, setStreamedText] = useState('');
-  const [modelName, setModelName] = useState('gemini-4-argon');
+  const [modelName, setModelName] = useState<string>(GEMINI_MODEL_FALLBACKS[0]);
+  const abortController = useRef<AbortController | null>(null);
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
   const [followUpInput, setFollowUpInput] = useState('');
   const [copied, setCopied] = useState(false);
@@ -63,54 +65,26 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
 
 3. ⚡ **এডমিশন শর্টকাট ও ট্রিকস:** the fastest 10-second calculator-free exam-hall trick (ratio, unit check, mental math or memory cue) and 1 common trap to avoid.`}`;
 
-      const response = await fetch('/api/ai/tutor', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt, userApiKey: keyToUse })
-      });
-
-      if (!response.ok) {
-        const errData = await response.json();
-        throw new Error(errData.error || 'Failed to connect to AI server');
-      }
-
-      const reader = response.body?.getReader();
-      if (!reader) throw new Error('Response body reader not available');
-
-      const decoder = new TextDecoder();
-      let buffer = '';
+      abortController.current?.abort();
+      const controller = new AbortController();
+      abortController.current = controller;
       let fullResponseText = '';
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split('\n\n');
-        buffer = lines.pop() || '';
-
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const dataStr = line.slice(6);
-            if (dataStr === '[DONE]') break;
-            try {
-              const parsed = JSON.parse(dataStr);
-              if (parsed.model) {
-                setModelName(parsed.model);
-              }
-              if (parsed.text) {
-                fullResponseText += parsed.text;
-                setStreamedText(fullResponseText);
-              }
-            } catch {}
-          }
-        }
-      }
+      await streamTutorResponse(prompt, keyToUse, controller.signal, {
+        onModel: (model, reset) => {
+          setModelName(model);
+          if (reset) { fullResponseText = ''; setStreamedText(''); }
+        },
+        onText: chunk => {
+          fullResponseText += chunk;
+          setStreamedText(fullResponseText);
+        },
+      });
 
       if (followUp) {
         setChatMessages(prev => [...prev, { role: 'ai', text: fullResponseText }]);
       }
     } catch (err: any) {
+      if (err?.name === 'AbortError') return;
       console.error(err);
       if (!followUp) {
         setStreamedText(`❌ **Error:** ${err.message || 'Could not generate AI explanation. Please verify your Gemini API key in Settings.'}`);
@@ -119,6 +93,7 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
       }
     } finally {
       setLoading(false);
+      abortController.current = null;
     }
   };
 
@@ -195,6 +170,7 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
         </div>
 
         <div className="flex items-center gap-2">
+          {loading && <button onClick={() => abortController.current?.abort()} className="px-2.5 py-1.5 rounded-lg bg-rose-600 text-white text-[11px] font-bold" type="button">Stop</button>}
           {streamedText && (
             <button
               onClick={copyToClipboard}
