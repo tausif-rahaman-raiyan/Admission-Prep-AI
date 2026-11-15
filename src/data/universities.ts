@@ -18,7 +18,7 @@ const make = (id: string, short: string, nameBn: string, nameEn: string, group: 
   id, short, nameBn, nameEn, group, brand, units: [todo('যাচাই করা হয়নি')], hasQuestions: false, ...extra
 });
 
-export const universities: Uni[] = [
+const allUniversities: Uni[] = [
   make('DU','DU','ঢাকা বিশ্ববিদ্যালয়','University of Dhaka','general',['#2563eb','#06b6d4'],{units:[{unit:'A',label:'A Unit (Science)',year:'২০২৫-২৬',compulsory:[{subject:'পদার্থবিজ্ঞান',marks:25},{subject:'রসায়ন',marks:25}],optionalPick:{count:2,from:['উচ্চতর গণিত','জীববিজ্ঞান','বাংলা','ইংরেজি'],note:'পদার্থ ও রসায়ন ছাড়াও আবশ্যিকভাবে যেকোনো ২টি ঐচ্ছিক বিষয় নির্বাচন করুন (মোট ৪টি বিষয়)'},totalSubjects:4,verified:true}],years:'A Unit • 2000-01 to 2025-26',hasQuestions:true,dataIds:['DU']}),
   make('RU','RU','রাজশাহী বিশ্ববিদ্যালয়','University of Rajshahi','general',['#d97706','#fbbf24'],{years:'2010-11 to 2025-26',hasQuestions:true,dataIds:['RU']}),
   make('JU','JU','জাহাঙ্গীরনগর বিশ্ববিদ্যালয়','Jahangirnagar University','general',['#7c3aed','#c084fc'],{units:[todo('A'),todo('D')],years:'A & D Units • Set-wise papers',hasQuestions:true,dataIds:['JU']}),
@@ -100,4 +100,6 @@ export const universityGroups: { id: UniversityGroup; label: string }[] = [
   { id: 'agri', label: 'কৃষি' },
   { id: 'other', label: 'অন্যান্য' },
 ];
+const HIDDEN_PLACEHOLDER_UNIVERSITIES = new Set(['NU', 'BOU', 'IAU', 'BMU', 'CMU', 'RMU', 'SMU', 'SHMU', 'MarU', 'BSMRAAU']);
+export const universities: Uni[] = allUniversities.filter(uni => !HIDDEN_PLACEHOLDER_UNIVERSITIES.has(uni.id));
 export const getUniversity = (id: string) => universities.find(uni => uni.id === id);
