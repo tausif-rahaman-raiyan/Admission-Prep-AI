@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { ArrowLeft, ArrowRight, Clock, CheckCircle2, RefreshCcw, Award, Check, X, ShieldAlert, Sparkles, Key, HelpCircle, Info } from 'lucide-react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
+import { ArrowLeft, ArrowRight, Clock, CheckCircle2, RefreshCcw, Award, Check, X, ShieldAlert, Sparkles, HelpCircle, Info } from 'lucide-react';
 import { SessionItem } from '../data/sessions';
 import { getSubjectTheme } from '../data/subjects';
 import { MathText } from './MarkdownMath';
 import { AiTutorPanel } from './AiTutorPanel';
+import { ApiKeyMissingToast } from './ApiKeyMissingToast';
 import { storage, UiSettings, ExamAttempt } from '../utils/storage';
 import { getAdmissionRule, UniversityAdmissionRule } from '../data/admissionLogic';
 import { AdmissionLogicModal } from './AdmissionLogicModal';
 import { normalizeQuestionData } from '../utils/questionData';
 import { QuestionImage } from './QuestionImage';
-import { canUseServerTutorEndpoint } from '../utils/aiProvider';
+import { hasAvailableAiKey, warmAiConnection } from '../utils/aiProvider';
 
 interface ExamViewProps {
   session: SessionItem;
@@ -139,10 +140,37 @@ export const ExamView: React.FC<ExamViewProps> = ({
   });
   const [openAiTutorIds, setOpenAiTutorIds] = useState<Record<string, boolean>>({});
   const [apiKeyToast, setApiKeyToast] = useState(false);
+  const apiKeyToastTimerRef = useRef<number | null>(null);
+
+  const showApiKeyToast = () => {
+    setApiKeyToast(true);
+    if (apiKeyToastTimerRef.current) window.clearTimeout(apiKeyToastTimerRef.current);
+    apiKeyToastTimerRef.current = window.setTimeout(() => setApiKeyToast(false), 7000);
+  };
+
+  useEffect(() => {
+    const clearToastIfKeyAdded = () => {
+      if (hasAvailableAiKey()) setApiKeyToast(false);
+    };
+    window.addEventListener('admission-api-key-updated', clearToastIfKeyAdded);
+    return () => {
+      window.removeEventListener('admission-api-key-updated', clearToastIfKeyAdded);
+      if (apiKeyToastTimerRef.current) window.clearTimeout(apiKeyToastTimerRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [examStarted, resumePromptOpen]);
+
+  useEffect(() => {
+    if (!submitted) return;
+    warmAiConnection(true);
+    const keepAlive = window.setInterval(() => {
+      if (!document.hidden) warmAiConnection();
+    }, 50_000);
+    return () => window.clearInterval(keepAlive);
+  }, [submitted]);
 
   // Load questions
   useEffect(() => {
@@ -1395,10 +1423,8 @@ export const ExamView: React.FC<ExamViewProps> = ({
                     <div className="pt-1">
                       <button
                         onClick={() => {
-                          const key = storage.getApiKey();
-                          if ((!key || key.trim().length <= 10) && !canUseServerTutorEndpoint()) {
-                            setApiKeyToast(true);
-                            setTimeout(() => setApiKeyToast(false), 6000);
+                          if (!openAiTutorIds[q.id] && !hasAvailableAiKey()) {
+                            showApiKeyToast();
                             return;
                           }
                           setOpenAiTutorIds(prev => ({ ...prev, [q.id]: !prev[q.id] }));
@@ -1415,6 +1441,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
                             question={q}
                             onClose={() => setOpenAiTutorIds(prev => ({ ...prev, [q.id]: false }))}
                             onOpenApiKeyModal={onOpenApiKeyModal}
+                            onMissingApiKey={showApiKeyToast}
                             explanationFontSize={uiSettings.explanationFontPx}
                           />
                         </div>
@@ -1430,23 +1457,11 @@ export const ExamView: React.FC<ExamViewProps> = ({
       </div>
 
       {/* API Key Missing Toast */}
-      {apiKeyToast && (
-        <div className="fixed bottom-6 right-6 z-50 p-4 rounded-2xl bg-slate-900 text-white shadow-2xl flex items-center gap-3 border border-indigo-500 animate-in slide-in-from-bottom duration-200">
-          <Key className="w-5 h-5 text-indigo-400" />
-          <div className="text-xs">
-            <span className="font-bold">API Key Required:</span> Configure Gemini key for AI coaching.
-          </div>
-          <button
-            onClick={() => { setApiKeyToast(false); onOpenApiKeyModal(); }}
-            className="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs"
-          >
-            Add Key
-          </button>
-          <button onClick={() => setApiKeyToast(false)} className="text-slate-400 hover:text-white">
-            <X className="w-4 h-4" />
-          </button>
-        </div>
-      )}
+      <ApiKeyMissingToast
+        visible={apiKeyToast}
+        onSetApiKey={onOpenApiKeyModal}
+        onDismiss={() => setApiKeyToast(false)}
+      />
 
       {exitPromptOpen && !submitted && (
         <div className="fixed inset-0 z-[120] flex items-center justify-center bg-slate-950/75 p-4 backdrop-blur-sm animate-in fade-in duration-150">

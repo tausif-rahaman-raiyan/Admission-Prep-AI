@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Key, X, ExternalLink, Trash2 } from 'lucide-react';
 import { storage } from '../utils/storage';
 
@@ -12,23 +12,35 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ isOpen, onClose, onKey
   const [keyValue, setKeyValue] = useState(storage.getApiKey());
   const [savedSuccess, setSavedSuccess] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      setKeyValue(storage.getApiKey());
+      setSavedSuccess(false);
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
+
+  const notifyKeyChange = () => {
+    window.dispatchEvent(new Event('admission-api-key-updated'));
+    onKeyUpdated();
+  };
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
     storage.setApiKey(keyValue);
     setSavedSuccess(true);
-    onKeyUpdated();
+    notifyKeyChange();
     setTimeout(() => {
       setSavedSuccess(false);
       onClose();
-    }, 1000);
+    }, 600);
   };
 
   const handleRemove = () => {
     setKeyValue('');
     storage.setApiKey('');
-    onKeyUpdated();
+    notifyKeyChange();
     onClose();
   };
 

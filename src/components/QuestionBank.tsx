@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useLayoutEffect, useMemo } from 'react';
-import { ArrowLeft, Search, Sparkles, Check, HelpCircle, BookOpen, Key, AlertCircle } from 'lucide-react';
+import React, { useState, useEffect, useLayoutEffect, useMemo, useRef } from 'react';
+import { ArrowLeft, Search, Sparkles, Check, BookOpen } from 'lucide-react';
 import { SessionItem } from '../data/sessions';
 import { getSubjectTheme } from '../data/subjects';
 import { MathText } from './MarkdownMath';
 import { AiTutorPanel } from './AiTutorPanel';
-import { storage, UiSettings } from '../utils/storage';
+import { ApiKeyMissingToast } from './ApiKeyMissingToast';
+import { UiSettings } from '../utils/storage';
 
 import { getAdmissionRule } from '../data/admissionLogic';
 import { normalizeQuestionData } from '../utils/questionData';
 import { QuestionImage } from './QuestionImage';
-import { canUseServerTutorEndpoint } from '../utils/aiProvider';
+import { hasAvailableAiKey, warmAiConnection } from '../utils/aiProvider';
 
 interface QuestionBankProps {
   session: SessionItem;
@@ -37,11 +38,37 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
   const [bilingualLang, setBilingualLang] = useState<'bn' | 'en'>('bn');
   const [openAiTutorIds, setOpenAiTutorIds] = useState<Record<string, boolean>>({});
   const [apiKeyToast, setApiKeyToast] = useState(false);
+  const apiKeyToastTimerRef = useRef<number | null>(null);
+
+  const showApiKeyToast = () => {
+    setApiKeyToast(true);
+    if (apiKeyToastTimerRef.current) window.clearTimeout(apiKeyToastTimerRef.current);
+    apiKeyToastTimerRef.current = window.setTimeout(() => setApiKeyToast(false), 7000);
+  };
 
   useLayoutEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     setOpenAiTutorIds({});
   }, [session.id]);
+
+  useEffect(() => {
+    const clearToastIfKeyAdded = () => {
+      if (hasAvailableAiKey()) setApiKeyToast(false);
+    };
+    window.addEventListener('admission-api-key-updated', clearToastIfKeyAdded);
+    return () => {
+      window.removeEventListener('admission-api-key-updated', clearToastIfKeyAdded);
+      if (apiKeyToastTimerRef.current) window.clearTimeout(apiKeyToastTimerRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    warmAiConnection(true);
+    const keepAlive = window.setInterval(() => {
+      if (!document.hidden) warmAiConnection();
+    }, 50_000);
+    return () => window.clearInterval(keepAlive);
+  }, []);
 
   useEffect(() => {
     async function loadQuestions() {
@@ -97,10 +124,8 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
   }, [questions, selectedSubject, searchQuery]);
 
   const handleToggleAiTutor = (qId: string) => {
-    const key = storage.getApiKey();
-    if ((!key || key.trim().length <= 10) && !canUseServerTutorEndpoint()) {
-      setApiKeyToast(true);
-      setTimeout(() => setApiKeyToast(false), 6000);
+    if (!openAiTutorIds[qId] && !hasAvailableAiKey()) {
+      showApiKeyToast();
       return;
     }
     setOpenAiTutorIds(prev => ({ ...prev, [qId]: !prev[qId] }));
@@ -234,31 +259,12 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
         </div>
       </div>
 
-      {/* API Key Toast Warning */}
-      {apiKeyToast && (
-        <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/60 border-2 border-amber-300 dark:border-amber-700 text-amber-900 dark:text-amber-200 flex items-center justify-between gap-4 animate-in fade-in duration-200">
-          <div className="flex items-center gap-3">
-            <AlertCircle className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" />
-            <div className="text-xs sm:text-sm font-bold">
-              To use AI Tutor, first add your Gemini API Key from Settings.
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={onOpenApiKeyModal}
-              className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl text-xs shadow-sm cursor-pointer"
-            >
-              Add API Key
-            </button>
-            <button
-              onClick={() => setApiKeyToast(false)}
-              className="p-1.5 text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900 rounded-lg"
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
+      {/* Floating API Key Notification Toast */}
+      <ApiKeyMissingToast
+        visible={apiKeyToast}
+        onSetApiKey={onOpenApiKeyModal}
+        onDismiss={() => setApiKeyToast(false)}
+      />
 
       {/* Loading & Error States */}
       {loading && (
@@ -417,6 +423,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                     question={q}
                     onClose={() => setOpenAiTutorIds(prev => ({ ...prev, [q.id]: false }))}
                     onOpenApiKeyModal={onOpenApiKeyModal}
+                    onMissingApiKey={showApiKeyToast}
                     explanationFontSize={uiSettings.explanationFontPx}
                   />
                 )}

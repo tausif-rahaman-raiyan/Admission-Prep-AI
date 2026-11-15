@@ -5,6 +5,37 @@ import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI, ThinkingLevel } from '@google/genai';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const aiClientCache = new Map<string, GoogleGenAI>();
+const MODELS_TO_TRY: Array<{ model: string; thinkingLevel: ThinkingLevel }> = [
+  { model: 'gemini-3.1-flash-lite', thinkingLevel: ThinkingLevel.MINIMAL },
+  { model: 'gemini-4-hydrogen', thinkingLevel: ThinkingLevel.LOW },
+];
+let preferredModelIndex = 0;
+
+function getAiClient(apiKey: string): GoogleGenAI {
+  let client = aiClientCache.get(apiKey);
+  if (!client) {
+    client = new GoogleGenAI({
+      apiKey,
+      httpOptions: {
+        headers: {
+          'User-Agent': 'aistudio-build',
+        },
+      },
+    });
+    if (aiClientCache.size > 16) aiClientCache.clear();
+    aiClientCache.set(apiKey, client);
+  }
+  return client;
+}
+
+async function warmUpstreamSocket() {
+  try {
+    await fetch('https://generativelanguage.googleapis.com/generate_204', { method: 'HEAD' });
+  } catch {
+    // Ignore connectivity probe failures
+  }
+}
 
 async function startServer() {
   const app = express();
@@ -13,33 +44,37 @@ async function startServer() {
   const PORT = process.env.PORT || 3000;
   const isProd = process.env.NODE_ENV === 'production';
 
+  // Zero-quota connection warm-up endpoint (no Gemini API call / no token usage)
+  app.get('/api/ai/warmup', async (_req, res) => {
+    await warmUpstreamSocket();
+    res.setHeader('Cache-Control', 'no-store');
+    res.json({ ok: true, hasServerKey: Boolean(process.env.GEMINI_API_KEY?.trim()) });
+  });
+
   // API endpoint for AI Tutor streaming coach
   app.post('/api/ai/tutor', async (req, res) => {
     let clientClosed = false;
-    req.on('close', () => { clientClosed = true; });
-    res.on('close', () => { clientClosed = true; });
+    res.on('close', () => {
+      if (!res.writableEnded) clientClosed = true;
+    });
 
     try {
       const { prompt, userApiKey } = req.body;
       const apiKey = (userApiKey && userApiKey.trim().length > 10) ? userApiKey.trim() : process.env.GEMINI_API_KEY;
 
       if (!apiKey) {
-        return res.status(400).json({ error: 'Gemini API key not configured. Please add your API key in Settings.' });
+        return res.status(400).json({
+          code: 'MISSING_API_KEY',
+          error: 'Gemini API key not configured. Please add your API key in Settings.',
+        });
       }
 
-      const ai = new GoogleGenAI({
-        apiKey,
-        httpOptions: {
-          headers: {
-            'User-Agent': 'aistudio-build',
-          },
-        },
-      });
-
-      const modelsToTry: Array<{ model: string; thinkingLevel: ThinkingLevel }> = [
-        { model: 'gemini-3.1-flash-lite', thinkingLevel: ThinkingLevel.MINIMAL },
-        { model: 'gemini-4-hydrogen', thinkingLevel: ThinkingLevel.LOW },
+      const ai = getAiClient(apiKey);
+      const orderedIndices = [
+        preferredModelIndex,
+        ...MODELS_TO_TRY.map((_, idx) => idx).filter(idx => idx !== preferredModelIndex),
       ];
+
       res.setHeader('Content-Type', 'text/event-stream; charset=utf-8');
       res.setHeader('Cache-Control', 'no-cache, no-transform');
       res.setHeader('Connection', 'keep-alive');
@@ -48,15 +83,16 @@ async function startServer() {
       res.write(': stream-open\n\n');
 
       const failures: string[] = [];
-      for (const { model, thinkingLevel } of modelsToTry) {
+      for (const idx of orderedIndices) {
         if (clientClosed || res.destroyed || res.writableEnded) return;
+        const { model, thinkingLevel } = MODELS_TO_TRY[idx];
         try {
           const streamResult = await ai.models.generateContentStream({
             model,
             contents: prompt,
             config: {
               thinkingConfig: { thinkingLevel },
-              systemInstruction: 'You are a fast, accurate admission coach. Independently solve every question and verify the correct option. Reply in clear Bengali mixed with standard English scientific terms. Put mathematical expressions and fractions in LaTeX enclosed by $...$ or $$...$$. Start an initial solution with ✅ **সঠিক উত্তর:** and then concise numbered sections.',
+              systemInstruction: 'You are a fast, accurate Bangladesh university admission coach. Explain concisely in clear Bengali, keeping English subject grammar rules, technical terms, proper names, and LaTeX formulas ($...$) in English.',
             },
           });
           res.write(`data: ${JSON.stringify({ model, reset: true })}\n\n`);
@@ -70,6 +106,7 @@ async function startServer() {
             }
           }
           if (!emittedText) throw new Error('Model returned an empty response');
+          preferredModelIndex = idx;
           res.write('data: [DONE]\n\n');
           return res.end();
         } catch (error: any) {
