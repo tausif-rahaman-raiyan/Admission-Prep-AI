@@ -310,7 +310,7 @@ export const Home: React.FC<HomeProps> = ({
           </div>
         )}
 
-        {availableUnits.length > 1 && !['AGRI','ALL'].includes(selectedInstitution) && <div className="flex flex-wrap items-center gap-2 pt-1" aria-label="University unit selector"><span className="text-xs font-bold text-slate-500">ইউনিট</span>{availableUnits.map(unit => <button key={unit} onClick={() => onSelectUnit(selectedUnit === unit ? null : unit)} aria-pressed={selectedUnit === unit} className={`min-h-10 px-4 py-2 rounded-xl text-xs font-bold ${selectedUnit === unit ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700'}`}>{unit} Unit</button>)}</div>}
+        {availableUnits.length > 1 && !['AGRI','ALL','RU'].includes(selectedInstitution) && <div className="flex flex-wrap items-center gap-2 pt-1" aria-label="University unit selector"><span className="text-xs font-bold text-slate-500">ইউনিট</span>{availableUnits.map(unit => <button key={unit} onClick={() => onSelectUnit(selectedUnit === unit ? null : unit)} aria-pressed={selectedUnit === unit} className={`min-h-10 px-4 py-2 rounded-xl text-xs font-bold ${selectedUnit === unit ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700'}`}>{unit} Unit</button>)}</div>}
 
         {currentUniversity?.hasQuestions && currentUniversity.units.length > 0 && (
           <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-indigo-50/90 via-sky-50/60 to-white dark:from-[#0B152C] dark:via-[#091122] dark:to-[#070D1A] border border-indigo-200 dark:border-indigo-900/70 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
