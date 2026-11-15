@@ -29,9 +29,17 @@ function normalizeOptionImages(value: unknown): string[][] {
   return [];
 }
 
+function normalizeLegacyImageTokens(value: string): string {
+  return value.replace(
+    /\[IMAGE:\s*EXTERNAL_IMAGE_URL:\s*(https?:\/\/[^\]\s]+)\]/gi,
+    (_match, url: string) => '\n\n![Question image](' + url + ')\n\n',
+  );
+}
+
 function normalizeOptionText(value: unknown): string {
   const text = typeof value === 'string' ? value : value == null ? '' : String(value);
-  return text.replace(/^\\[image:\\s*([^\\]]+)\\]$/i, 'চিত্র সংযুক্ত নেই: $1');
+  const missingImage = text.match(/^\[image:\s*([^\]]+)\]$/i);
+  return missingImage ? 'চিত্র সংযুক্ত নেই: ' + missingImage[1] : normalizeLegacyImageTokens(text);
 }
 
 function normalizeOptions(value: unknown): string[] {
@@ -53,22 +61,15 @@ function normalizeOptions(value: unknown): string[] {
   });
 }
 
-function normalizeLegacyImageTokens(value: string): string {
-  return value.replace(
-    /\\[IMAGE:\\s*EXTERNAL_IMAGE_URL:\\s*(https?:\\/\\/[^\\]\\s]+)\\]/gi,
-    (_match, url: string) => `\\n\\n![Question image](${url})\\n\\n`,
-  );
-}
-
 function normalizeExplanation(value: unknown): string {
   if (typeof value === 'string') return normalizeLegacyImageTokens(value);
   if (value && typeof value === 'object') {
     const item = value as Record<string, unknown>;
     return [
-      item.one_line_calculation && String(item.one_line_calculation),
-      item.step_by_step_solution && String(item.step_by_step_solution),
-      item.shortcut_tip && String(item.shortcut_tip),
-    ].filter(Boolean).join('\n\n');
+      item.one_line_calculation,
+      item.step_by_step_solution,
+      item.shortcut_tip,
+    ].filter(Boolean).map(part => normalizeLegacyImageTokens(String(part))).join('\n\n');
   }
   return '';
 }
@@ -91,7 +92,7 @@ export function normalizeQuestionData(raw: any, index = 0): NormalizedQuestion {
   const question = raw?.question ?? raw?.questionText ?? raw?.stem ?? '';
   return {
     ...raw,
-    id: String(raw?.id ?? raw?.questionId ?? `question-${index + 1}`),
+    id: String(raw?.id ?? raw?.questionId ?? 'question-' + (index + 1)),
     number: Number(raw?.number ?? raw?.questionNumber ?? index + 1),
     question: normalizeLegacyImageTokens(typeof question === 'string' ? question : String(question ?? '')),
     options,
@@ -108,12 +109,12 @@ export function resolveQuestionAssetUrl(value: string): string {
   if (/^(https?:|data:|blob:)/i.test(url)) return url;
 
   const base = String(import.meta.env.BASE_URL || '/');
-  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  const normalizedBase = base.endsWith('/') ? base : base + '/';
   const cleanUrl = url.replace(/^\.\//, '').replace(/^\/+/, '');
   const baseWithoutSlashes = normalizedBase.replace(/^\/+|\/+$/g, '');
 
-  if (baseWithoutSlashes && (cleanUrl === baseWithoutSlashes || cleanUrl.startsWith(`${baseWithoutSlashes}/`))) {
-    return `/${cleanUrl}`;
+  if (baseWithoutSlashes && (cleanUrl === baseWithoutSlashes || cleanUrl.startsWith(baseWithoutSlashes + '/'))) {
+    return '/' + cleanUrl;
   }
-  return `${normalizedBase}${cleanUrl}`;
+  return normalizedBase + cleanUrl;
 }
