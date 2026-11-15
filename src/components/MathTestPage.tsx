@@ -1,5 +1,5 @@
 import React from 'react';
-import { MarkdownMath } from './MarkdownMath';
+import { MathText } from './MarkdownMath';
 
 const cases = [
   'Inline fraction: $\\frac{1}{2} + \\frac{3}{4} = \\frac{5}{4}$.',
@@ -43,7 +43,7 @@ export const MathTestPage: React.FC = () => (
     <div className="grid gap-3">
       {cases.map((sample, index) => <section key={index} className="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-[#080E1E]">
         <div className="mb-2 text-xs font-bold text-slate-500">CASE {index + 1}</div>
-        <MarkdownMath content={sample} />
+        <MathText content={sample} />
       </section>)}
     </div>
   </main>
