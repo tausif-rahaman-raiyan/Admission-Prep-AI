@@ -444,6 +444,24 @@ ${hasOptions
                 </div>
               </div>
             )}
+
+            {/* Show Full Steps Action Button */}
+            {!loading && (
+              <div className="flex justify-end pt-1">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const userQ = 'Please provide the full detailed step-by-step derivation, intermediate calculations, and complete mathematical breakdown for this question.';
+                    setChatMessages(prev => [...prev, { role: 'user', text: 'Show Full Steps' }]);
+                    fetchAiExplanation(apiKey, userQ);
+                  }}
+                  className="px-4 py-2 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/60 dark:hover:bg-indigo-900/60 border border-indigo-200 dark:border-indigo-800/80 text-indigo-700 dark:text-sky-300 font-extrabold rounded-xl text-xs flex items-center gap-1.5 shadow-xs cursor-pointer transition-colors"
+                >
+                  <Calculator className="w-3.5 h-3.5 text-indigo-600 dark:text-sky-400" />
+                  <span>Show Full Steps & Derivation</span>
+                </button>
+              </div>
+            )}
           </div>
         ) : null}
 

@@ -77,6 +77,22 @@ export const storage = {
     } catch {}
   },
 
+  getAiProviderMode(): 'personal' | 'proxy' {
+    try {
+      const mode = localStorage.getItem(`${PREFIX}_ai_provider_mode`);
+      if (mode === 'personal' || mode === 'proxy') return mode;
+      // Default: if user has key stored, use personal, otherwise proxy if server URL exists
+      return storage.getApiKey() ? 'personal' : 'proxy';
+    } catch {
+      return 'proxy';
+    }
+  },
+  setAiProviderMode(mode: 'personal' | 'proxy') {
+    try {
+      localStorage.setItem(`${PREFIX}_ai_provider_mode`, mode);
+    } catch {}
+  },
+
   getExamHistory(): ExamAttempt[] {
     try {
       const v = localStorage.getItem(`${PREFIX}_exam_history_v1`);

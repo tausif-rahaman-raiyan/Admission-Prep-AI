@@ -207,13 +207,24 @@ async function directGemini(prompt: string, apiKey: string, signal: AbortSignal,
 }
 
 export async function streamTutorResponse(prompt: string, apiKey: string, signal: AbortSignal, cb: Callbacks) {
-  const apiBase = import.meta.env.VITE_API_URL?.trim().replace(/\/$/, '');
-  if (apiBase) {
-    return expressStream(`${apiBase}/api/ai/tutor`, prompt, apiKey, signal, cb);
+  const mode = storage.getAiProviderMode();
+
+  // Mode A: Personal Gemini API Key -> call Gemini directly from browser without sending key to backend
+  if (mode === 'personal') {
+    if (!apiKey || apiKey.trim().length <= 10) {
+      throw makeMissingKeyError('Personal Gemini API key is required. Please set your key in Settings.');
+    }
+    return directGemini(prompt, apiKey.trim(), signal, cb);
   }
-  if (canUseServerTutorEndpoint() && serverTutorAvailable !== false) {
+
+  // Mode B: Hosted Backend Proxy -> call backend proxy using server-side API key
+  const apiBase = import.meta.env.VITE_API_URL?.trim().replace(/\/$/, '');
+  const proxyUrl = apiBase ? `${apiBase}/api/ai/tutor` : canUseServerTutorEndpoint() && serverTutorAvailable !== false ? '/api/ai/tutor' : null;
+
+  if (proxyUrl) {
     try {
-      const result = await expressStream('/api/ai/tutor', prompt, apiKey, signal, cb);
+      // Do not send personal key when using hosted backend proxy mode
+      const result = await expressStream(proxyUrl, prompt, '', signal, cb);
       serverTutorAvailable = true;
       return result;
     } catch (error) {
@@ -224,13 +235,14 @@ export async function streamTutorResponse(prompt: string, apiKey: string, signal
         serverTutorAvailable = false;
         serverHasKey = false;
       }
-      if (apiKey.trim().length <= 10) {
-        throw makeMissingKeyError(msg);
-      }
+      throw error;
     }
   }
-  if (apiKey.trim().length <= 10) {
-    throw makeMissingKeyError();
+
+  // Fallback to direct Gemini if proxy is unavailable and personal key exists
+  if (apiKey && apiKey.trim().length > 10) {
+    return directGemini(prompt, apiKey.trim(), signal, cb);
   }
-  return directGemini(prompt, apiKey, signal, cb);
+
+  throw makeMissingKeyError('Hosted backend proxy is unavailable and no personal Gemini API key is configured.');
 }

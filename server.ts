@@ -41,8 +41,35 @@ async function startServer() {
   const app = express();
   app.use(express.json({ limit: '10mb' }));
 
-  const PORT = process.env.PORT || 3000;
-  const isProd = process.env.NODE_ENV === 'production';
+  // CORS middleware for production Cloud Run + GitHub Pages + local dev
+  app.use((req, res, next) => {
+    const origin = req.headers.origin;
+    const allowedOrigins = [
+      'https://tausif-rahaman-raiyan.github.io',
+      'http://localhost:3000',
+      'http://127.0.0.1:3000',
+      'http://localhost:5173',
+      'http://127.0.0.1:5173',
+    ];
+    if (origin && (allowedOrigins.includes(origin) || origin.endsWith('.github.io') || origin.endsWith('.run.app') || origin.endsWith('.aistudio.google.com'))) {
+      res.setHeader('Access-Control-Allow-Origin', origin);
+    }
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    if (req.method === 'OPTIONS') {
+      return res.sendStatus(200);
+    }
+    next();
+  });
+
+  const PORT = process.env.PORT || 8080;
+  const isProd = process.env.NODE_ENV === 'production' || process.env.PORT !== undefined;
+
+  // Health check endpoint for Cloud Run and keep-alive pings
+  app.get('/health', (_req, res) => {
+    res.setHeader('Cache-Control', 'no-store');
+    res.json({ status: 'healthy', service: 'admission-prep-ai', timestamp: Date.now() });
+  });
 
   // Zero-quota connection warm-up endpoint (no Gemini API call / no token usage)
   app.get('/api/ai/warmup', async (_req, res) => {
