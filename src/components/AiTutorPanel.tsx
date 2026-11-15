@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Sparkles, X, Copy, Check, Send, Bot, User, AlertCircle, Key } from 'lucide-react';
-import { MarkdownMath } from './MarkdownMath';
+import { MathText } from './MarkdownMath';
 import { storage } from '../utils/storage';
 import { streamTutorResponse, GEMINI_MODEL_FALLBACKS } from '../utils/aiProvider';
 
@@ -204,7 +204,7 @@ ${followUp ? `Student's follow-up question: "${followUp}"\nGive a direct, compac
         {/* Answer Highlight Pill */}
         {answerLine && (
           <div className="p-3 rounded-xl bg-gradient-to-r from-indigo-600 to-sky-500 text-white font-extrabold text-xs sm:text-sm shadow-md flex items-center gap-2">
-            <MarkdownMath content={answerLine} />
+            <MathText content={answerLine} />
           </div>
         )}
 
