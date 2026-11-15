@@ -1,0 +1,12 @@
+{
+  "name": "Admission Prep AI",
+  "short_name": "Admission Prep",
+  "description": "Bangladesh university admission question bank and exam simulator",
+  "lang": "bn",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#060913",
+  "theme_color": "#312e81",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
