@@ -59,6 +59,8 @@ export const ExamView: React.FC<ExamViewProps> = ({
   const [endTimestamp, setEndTimestamp] = useState(() => readSavedExam(session.id)?.endTimestamp || Date.now() + session.durationMinutes * 60_000);
   const [timeRemaining, setTimeRemaining] = useState(() => Math.max(0, Math.ceil(((readSavedExam(session.id)?.endTimestamp || Date.now() + session.durationMinutes * 60_000) - Date.now()) / 1000)));
   const [activeSubjectTab, setActiveSubjectTab] = useState<string>('ALL');
+  const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
+  const [flaggedQuestions, setFlaggedQuestions] = useState<Record<string, boolean>>({});
   const [openAiTutorId, setOpenAiTutorId] = useState<string | null>(null);
   const [apiKeyToast, setApiKeyToast] = useState(false);
 
@@ -226,6 +228,25 @@ export const ExamView: React.FC<ExamViewProps> = ({
     if (activeSubjectTab === 'ALL') return questions;
     return questions.filter(q => q.subject === activeSubjectTab);
   }, [questions, activeSubjectTab]);
+
+  useEffect(() => { setActiveQuestionIndex(0); }, [activeSubjectTab]);
+
+  useEffect(() => {
+    if (submitted || loading) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (target?.tagName === 'INPUT' || target?.tagName === 'TEXTAREA') return;
+      if (event.key === 'ArrowRight') setActiveQuestionIndex(index => Math.min(filteredQuestions.length - 1, index + 1));
+      if (event.key === 'ArrowLeft') setActiveQuestionIndex(index => Math.max(0, index - 1));
+      const current = filteredQuestions[activeQuestionIndex];
+      if (!current) return;
+      if (event.key.toLowerCase() === 'f') setFlaggedQuestions(previous => ({ ...previous, [current.id]: !previous[current.id] }));
+      if (/^[1-4]$/.test(event.key)) handleSelectOption(current.id, Number(event.key) - 1);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [filteredQuestions, activeQuestionIndex, submitted, loading]);
+
 
   const answeredCount = Object.keys(answers).length;
 
@@ -779,7 +800,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
               return (
                 <button
                   key={subj}
-                  onClick={() => setActiveSubjectTab(subj)}
+                  onClick={() => { setActiveSubjectTab(subj); setActiveQuestionIndex(0); }}
                   className={`px-4 py-2 rounded-xl text-xs font-black transition-all cursor-pointer ${
                     isSelected
                       ? 'bg-indigo-600 text-white shadow-sm'
@@ -793,6 +814,12 @@ export const ExamView: React.FC<ExamViewProps> = ({
           </div>
         )}
 
+        {/* Mobile one-question navigation; desktop keeps the full review list. */}
+        {!submitted && <div className="flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-[#080E1E] sm:hidden">
+          <button disabled={activeQuestionIndex === 0} onClick={() => setActiveQuestionIndex(index => Math.max(0, index - 1))} className="min-h-11 rounded-xl bg-slate-100 px-4 text-sm font-bold disabled:opacity-40 dark:bg-slate-800">আগেরটি</button>
+          <span className="text-sm font-black tabular-nums">{Math.min(activeQuestionIndex + 1, filteredQuestions.length)} / {filteredQuestions.length}</span>
+          <button disabled={activeQuestionIndex >= filteredQuestions.length - 1} onClick={() => setActiveQuestionIndex(index => Math.min(filteredQuestions.length - 1, index + 1))} className="min-h-11 rounded-xl bg-indigo-600 px-4 text-sm font-bold text-white disabled:opacity-40">পরেরটি</button>
+        </div>}
         {/* Question Cards List */}
         <div className="space-y-6">
           {filteredQuestions.map((q, qIndex) => {
@@ -806,7 +833,7 @@ export const ExamView: React.FC<ExamViewProps> = ({
             return (
               <div
                 key={q.id || qIndex}
-                className={`p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#080E1E] border-2 transition-all space-y-4 ${
+                className={`${!submitted && qIndex !== activeQuestionIndex ? 'hidden sm:block' : ''} p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#080E1E] border-2 transition-all space-y-4 ${
                   submitted
                     ? isCorrect
                       ? 'border-emerald-400 dark:border-emerald-600/80 shadow-md shadow-emerald-500/5'
@@ -827,9 +854,11 @@ export const ExamView: React.FC<ExamViewProps> = ({
                     <span className={`px-2.5 py-0.5 rounded-lg text-[11px] font-black uppercase tracking-wider ${theme.badgeBg}`}>
                       {q.subject || 'General'}
                     </span>
+                    <span className={`rounded-md px-2 py-1 text-[10px] font-black ${q.type === 'Written' ? 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300' : 'bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300'}`}>{q.type || 'MCQ'}</span>
                   </div>
 
                   <div className="flex items-center gap-2">
+                    {!submitted && <button onClick={() => setFlaggedQuestions(previous => ({ ...previous, [q.id]: !previous[q.id] }))} className={`min-h-9 rounded-lg px-2.5 text-[10px] font-black ${flaggedQuestions[q.id] ? 'bg-amber-500 text-white' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>{flaggedQuestions[q.id] ? 'Flagged' : 'Flag for review'}</button>}
                     {!submitted && isLocked && (
                       <span className="px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-sky-300 border border-indigo-200 dark:border-indigo-800 text-[10px] font-black uppercase">
                         Locked
